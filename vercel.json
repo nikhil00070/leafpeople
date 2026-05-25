@@ -29,9 +29,9 @@
       ]
     },
     {
-      "source": "/(the-leaf|field-guide)/manifest.json",
+      "source": "/(.*)\\.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300" }
+        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
       ]
     }
   ]

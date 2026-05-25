@@ -1,0 +1,47 @@
+{
+  "site": "https://leafpeople.app",
+  "title": "Leaf People — Stories",
+  "updated": "2026-05-25",
+  "count": 3,
+  "items": [
+    {
+      "id": "the-leaf/petiole-tells-the-truth",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "petiole-tells-the-truth",
+      "title": "The Petiole Doesn't Lie",
+      "category": "Field Skills",
+      "description": "Before you buy, before you pot, before you name it — read the petiole. A collector's guide to what stems reveal about species identity.",
+      "date": "2026-05-25",
+      "url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth",
+      "data_url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth/_data.json",
+      "image": "https://leafpeople.app/images/plants/field-skills.jpg"
+    },
+    {
+      "id": "the-leaf/grown-where-they-shouldnt-exist",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "grown-where-they-shouldnt-exist",
+      "title": "Grown Where They Shouldn't Exist",
+      "category": "Collector Culture",
+      "description": "Inside the obsession of raising equatorial aroids — velvet philodendrons, anthuriums, rare hoyas — in climates that should kill them.",
+      "date": "2026-05-24",
+      "url": "https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist",
+      "data_url": "https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist/_data.json",
+      "image": "https://leafpeople.app/images/plants/collector-culture.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-beginners",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-beginners",
+      "title": "Five Philodendrons Worth Starting With",
+      "category": "Philodendron",
+      "description": "Five approachable philodendrons that teach you the genus — from a bulletproof heartleaf to a velvet climber worth chasing.",
+      "date": "2026-05-24",
+      "url": "https://leafpeople.app/field-guide/philodendron-beginners",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-beginners/_data.json",
+      "image": "https://leafpeople.app/images/plants/philodendron.jpg"
+    }
+  ]
+}

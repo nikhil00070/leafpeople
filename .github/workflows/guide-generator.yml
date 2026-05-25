@@ -29,6 +29,7 @@ jobs:
           cd pipeline
           python generate_guide.py
           python generate_sitemap.py
+          python generate_feed.py
 
       - name: Commit & push
         run: |

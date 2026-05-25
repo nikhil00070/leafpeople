@@ -32,6 +32,7 @@ jobs:
           cd pipeline
           python regenerate.py "${{ inputs.section }}"
           python generate_sitemap.py
+          python generate_feed.py
 
       - name: Commit & push
         run: |
