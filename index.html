@@ -64,7 +64,7 @@
     100% { transform: rotateY(-15deg) rotateZ(4deg) translateY(0); }
   }
   .glass-chip {
-    position: absolute; left: -16px; bottom: 13%; z-index: 3; width: 236px;
+    position: absolute; right: -18px; top: 13%; z-index: 3; width: 236px;
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     background: rgba(15,20,17,.62);
     border: 1px solid var(--border-strong); border-radius: 16px; padding: .95rem 1.05rem;
@@ -154,6 +154,7 @@
     .compare { grid-template-columns: 1fr; }
     .compare .vs { display: none; }
     .metrics { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .glass-chip { display: none; }
   }
 </style>
 </head>
