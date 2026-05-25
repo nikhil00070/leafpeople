@@ -1,9 +1,10 @@
 name: Generate Field Guide
 
-# Practical genus guides — daily on weekdays (10:15 AM ET ≈ 15:15 UTC).
+# Practical genus guides — weekdays at 6:10 AM Pacific ≈ 13:10 UTC during PDT
+# (staggered 10 min after Understory to avoid a push race on Mon/Wed/Fri).
 on:
   schedule:
-    - cron: "15 15 * * 1-5"
+    - cron: "10 13 * * 1-5"
   workflow_dispatch: {}
 
 jobs:

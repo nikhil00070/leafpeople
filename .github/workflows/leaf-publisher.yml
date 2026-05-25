@@ -1,6 +1,6 @@
 name: Publish The Leaf
 
-# Long-form editorial — three a week (Mon/Wed/Fri, 8:00 AM ET ≈ 13:00 UTC).
+# Long-form editorial — three a week (Mon/Wed/Fri, 6:00 AM Pacific ≈ 13:00 UTC during PDT).
 on:
   schedule:
     - cron: "0 13 * * 1,3,5"
