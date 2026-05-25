@@ -1,0 +1,39 @@
+{
+  "meta_title": "Five Philodendrons Worth Starting With",
+  "meta_description": "The rare-leaning Philodendrons that forgive a beginner's mistakes and still turn heads — with care notes for each.",
+  "genus": "Philodendron",
+  "title": "Five Philodendrons Worth Starting With",
+  "deck": "Rare-leaning, forgiving, and genuinely beautiful — the Philodendrons that reward a new collector instead of punishing them.",
+  "stat_number": "5",
+  "stat_label": "beginner-friendly species, ranked by how much abuse they'll tolerate while you learn the genus.",
+  "picks": [
+    {
+      "name": "Philodendron 'Birkin'",
+      "location": "Self-heading · pinstripe variegation",
+      "description": "The gateway rare. Creamy pinstripes on dark green, a compact habit, and a tolerance for ordinary indoor light. It tells you when it's thirsty and shrugs off the occasional missed watering.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Philodendron 'Painted Lady'",
+      "location": "Climber · neon new growth",
+      "description": "Chartreuse leaves on pink-speckled petioles. It wants a moss pole and bright indirect light, but it grows fast enough to make a beginner feel like a pro.",
+      "tag": "Fast reward"
+    },
+    {
+      "name": "Philodendron verrucosum",
+      "location": "Climber · velvet leaf",
+      "description": "Your first real velvet. It asks for higher humidity and an airy mix, but it's far tougher than its reputation — and the heart-shaped, hairy-petioled leaves are a genuine step into the deep end.",
+      "tag": "First velvet"
+    }
+  ],
+  "body_sections": [
+    {
+      "heading": "Before you buy any of them",
+      "paragraphs": [
+        "Get the substrate right first. Philodendrons rot in dense potting soil; they want a chunky, airy mix that drains fast and dries between waterings. Nail that one thing and most beginner losses disappear.",
+        "Then track the basics in one place — water, humidity, and the occasional foliar feed. Consistency, not heroics, is what grows a collection."
+      ]
+    }
+  ],
+  "slug": "philodendron-beginners"
+}

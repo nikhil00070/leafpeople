@@ -10,6 +10,7 @@ and marks the item published.
 """
 
 import datetime as dt
+import json
 
 import common
 import manifest_helpers
@@ -110,12 +111,15 @@ def main() -> int:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    thumb = GENUS_THUMB.get(item["genus"], DEFAULT_THUMB)
-    html = render("guide-canonical.html", og_image=thumb, **article)
+    hero = common.guide_hero(article["genus"])
+    html = render("guide-canonical.html", hero=hero, og_image=hero, **article)
 
     out_dir = common.SITE_ROOT / "field-guide" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
+    (out_dir / "_data.json").write_text(
+        json.dumps({**article, "slug": item["slug"], "hero": hero}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8")
     print(f"[guide] wrote {out_dir / 'index.html'}")
 
     today = dt.date.today().isoformat()
@@ -126,7 +130,7 @@ def main() -> int:
         "description": article["meta_description"],
         "url": f"/field-guide/{item['slug']}",
         "date": today,
-        "thumb": thumb,
+        "thumb": hero,
     })
 
     queue[idx]["status"] = "published"

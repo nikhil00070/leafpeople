@@ -10,6 +10,7 @@ updates the manifest, and marks the queue item published.
 """
 
 import datetime as dt
+import json
 from pathlib import Path
 
 import common
@@ -83,14 +84,14 @@ def main() -> int:
         return 1
 
     # Render
-    html = render(
-        "leaf-canonical.html",
-        og_image=item.get("thumb", DEFAULT_THUMB),
-        **article,
-    )
+    hero = common.leaf_hero(article["category"])
+    html = render("leaf-canonical.html", hero=hero, og_image=hero, **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
+    (out_dir / "_data.json").write_text(
+        json.dumps({**article, "slug": item["slug"], "hero": hero}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8")
     print(f"[leaf] wrote {out_dir / 'index.html'}")
 
     # Manifest
@@ -102,7 +103,7 @@ def main() -> int:
         "description": article["meta_description"],
         "url": f"/the-leaf/{item['slug']}",
         "date": today,
-        "thumb": item.get("thumb", DEFAULT_THUMB),
+        "thumb": hero,
     })
 
     # Mark published

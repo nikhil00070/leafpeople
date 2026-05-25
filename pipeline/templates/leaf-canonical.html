@@ -8,6 +8,7 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ meta_description }}">
 <meta property="og:image" content="{{ og_image }}">
+<meta property="og:type" content="article">
 <meta name="theme-color" content="#0B0F0D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,33 +27,68 @@
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
 
-<div class="page-wrap">
-  <nav class="breadcrumb"><a href="/">Home</a> / <a href="/the-leaf">The Leaf</a> / {{ title }}</nav>
-
-  <span class="eyebrow">{{ category }}</span>
-  <h1 style="font-size:clamp(2rem,5vw,3rem);margin:.6rem 0;">{{ title }}</h1>
-  <p class="deck">{{ deck | md }}</p>
-
-  <article class="prose">
-    {% for section in sections %}
-    <h2>{{ section.heading }}</h2>
-    {% for para in section.paragraphs %}
-    <p>{{ para | md }}</p>
-    {% endfor %}
-    {% if loop.index == 1 and pull_quote %}
-    <p class="pull-quote">{{ pull_quote | md }}</p>
-    {% endif %}
-    {% endfor %}
-  </article>
-
-  <div class="news">
-    <h3>One plant, one story, every week.</h3>
-    <p>The Leaf — no fluff, just the rare ones worth knowing.</p>
-    <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
-      <input type="email" name="email" placeholder="your@email.com" required>
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
+<header class="art-band">
+  <div class="art-band-bg"><img src="{{ hero }}" alt=""></div>
+  <div class="art-band-inner">
+    <nav class="breadcrumb"><a href="/">Home</a> › <a href="/the-leaf">The Leaf</a> › {{ category }}</nav>
+    <h1 class="art-h1">{{ title }}</h1>
+    <div class="art-meta">
+      <span class="art-badge">{{ category }}</span>
+      <span>The Leaf · Leaf People</span>
+    </div>
   </div>
+</header>
+
+<div class="art-main">
+  <div class="art-content">
+    <p class="deck">{{ deck | md }}</p>
+
+    <figure class="art-hero"><img src="{{ hero }}" alt="{{ title }}" loading="lazy"></figure>
+
+    <article class="prose">
+      {% for para in intro|default([]) %}
+      <p>{{ para | md }}</p>
+      {% endfor %}
+      {% for section in sections %}
+      <h2 id="s{{ loop.index }}">{{ section.heading }}</h2>
+      {% for para in section.paragraphs %}
+      <p>{{ para | md }}</p>
+      {% endfor %}
+      {% if loop.index == 1 and pull_quote %}
+      <p class="pull-quote">{{ pull_quote | md }}</p>
+      {% endif %}
+      {% endfor %}
+    </article>
+
+    <div class="news">
+      <h3>One plant, one story, every week.</h3>
+      <p>The Leaf — no fluff, just the rare ones worth knowing.</p>
+      <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <aside class="art-rail">
+    <div class="art-rail-inner">
+      {% if sections %}
+      <div class="rail-card">
+        <div class="rail-head">In this story</div>
+        <div class="rail-list">
+          {% for section in sections %}
+          <a class="rail-item" href="#s{{ loop.index }}"><span class="rail-num">{{ "%02d"|format(loop.index) }}</span><span class="t">{{ section.heading }}</span></a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="rail-card rail-cta">
+        <h4>Get Leaf People</h4>
+        <p>Field guide, care tracker &amp; collector's marketplace for rare aroids.</p>
+        <a href="/#get" class="btn btn-sm">Get the App →</a>
+      </div>
+    </div>
+  </aside>
 </div>
 
 <footer class="footer">

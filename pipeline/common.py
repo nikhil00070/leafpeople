@@ -95,3 +95,33 @@ def next_queued(queue: list):
         if item.get("status", "queued") == "queued":
             return i, item
     return None, None
+
+
+# --- per-article hero / card imagery (committed plant photos) ------------------
+# One photo per genus (Field Guide) and per editorial category (The Leaf); the
+# same image is used for the header band, the inline hero, and the index card.
+
+_PLANTS = "/images/plants"
+
+GUIDE_HERO = {
+    "Philodendron": f"{_PLANTS}/philodendron.jpg",
+    "Anthurium": f"{_PLANTS}/anthurium.jpg",
+    "Monstera": f"{_PLANTS}/monstera.jpg",
+    "Begonia": f"{_PLANTS}/begonia.jpg",
+    "Hoya": f"{_PLANTS}/hoya.jpg",
+}
+GUIDE_HERO_DEFAULT = f"{_PLANTS}/aroid.jpg"
+
+LEAF_HERO = {
+    "Collector Culture": f"{_PLANTS}/collector-culture.jpg",
+    "Field Skills": f"{_PLANTS}/field-skills.jpg",
+}
+LEAF_HERO_DEFAULT = f"{_PLANTS}/the-leaf.jpg"
+
+
+def guide_hero(genus: str) -> str:
+    return GUIDE_HERO.get((genus or "").strip(), GUIDE_HERO_DEFAULT)
+
+
+def leaf_hero(category: str) -> str:
+    return LEAF_HERO.get((category or "").strip(), LEAF_HERO_DEFAULT)

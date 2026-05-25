@@ -8,16 +8,17 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ meta_description }}">
 <meta property="og:image" content="{{ og_image }}">
+<meta property="og:type" content="article">
 <meta name="theme-color" content="#0B0F0D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/site.css">
 <style>
-  .stat-pull { display: flex; align-items: baseline; gap: 1rem; margin: 1rem 0 2rem; }
-  .stat-pull .n { font-family: var(--font-display); font-weight: 800; font-size: 3rem; color: var(--green); }
+  .stat-pull { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 2.2rem; }
+  .stat-pull .n { font-family: var(--font-display); font-weight: 800; font-size: 3rem; color: var(--green); line-height: 1; }
   .stat-pull .l { color: var(--text-dim); font-size: 1rem; }
-  .pick { display: grid; grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.4rem 0; border-top: 1px solid var(--border); }
+  .pick { display: grid; grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); scroll-margin-top: 90px; }
   .pick .num { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--green); }
   .pick h3 { font-size: 1.25rem; margin-bottom: .2rem; }
   .pick .loc { font-size: .85rem; color: var(--text-faint); margin-bottom: .6rem; }
@@ -37,47 +38,79 @@
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
 
-<div class="page-wrap">
-  <nav class="breadcrumb"><a href="/field-guide">Field Guide</a> › {{ genus }}</nav>
-
-  <span class="eyebrow">Field Guide · {{ genus }}</span>
-  <h1 style="font-size:clamp(2rem,5vw,3rem);margin:.6rem 0;">{{ title }}</h1>
-  <p class="deck">{{ deck | md }}</p>
-
-  <div class="stat-pull">
-    <span class="n">{{ stat_number }}</span>
-    <span class="l">{{ stat_label | md }}</span>
-  </div>
-
-  {% for pick in picks %}
-  <div class="pick">
-    <div class="num">{{ "%02d"|format(loop.index) }}</div>
-    <div>
-      <h3>{{ pick.name }}</h3>
-      <div class="loc">{{ pick.location }}</div>
-      <p>{{ pick.description | md }}</p>
-      <span class="tag">{{ pick.tag }}</span>
+<header class="art-band">
+  <div class="art-band-bg"><img src="{{ hero }}" alt=""></div>
+  <div class="art-band-inner">
+    <nav class="breadcrumb"><a href="/">Home</a> › <a href="/field-guide">Field Guide</a> › {{ genus }}</nav>
+    <h1 class="art-h1">{{ title }}</h1>
+    <div class="art-meta">
+      <span class="art-badge">{{ genus }}</span>
+      <span>Field Guide · Leaf People</span>
     </div>
   </div>
-  {% endfor %}
+</header>
 
-  <div class="body prose" style="margin-top:2rem;">
-    {% for section in body_sections %}
-    <h2>{{ section.heading }}</h2>
-    {% for para in section.paragraphs %}
-    <p>{{ para | md }}</p>
+<div class="art-main">
+  <div class="art-content">
+    <p class="deck">{{ deck | md }}</p>
+
+    <figure class="art-hero"><img src="{{ hero }}" alt="{{ title }}" loading="lazy"></figure>
+
+    <div class="stat-pull">
+      <span class="n">{{ stat_number }}</span>
+      <span class="l">{{ stat_label | md }}</span>
+    </div>
+
+    {% for pick in picks %}
+    <div class="pick" id="p{{ loop.index }}">
+      <div class="num">{{ "%02d"|format(loop.index) }}</div>
+      <div>
+        <h3>{{ pick.name }}</h3>
+        <div class="loc">{{ pick.location }}</div>
+        <p>{{ pick.description | md }}</p>
+        <span class="tag">{{ pick.tag }}</span>
+      </div>
+    </div>
     {% endfor %}
-    {% endfor %}
+
+    <div class="body prose" style="margin-top:2.5rem;">
+      {% for section in body_sections %}
+      <h2>{{ section.heading }}</h2>
+      {% for para in section.paragraphs %}
+      <p>{{ para | md }}</p>
+      {% endfor %}
+      {% endfor %}
+    </div>
+
+    <div class="news">
+      <h3>New guides, by genus, every week.</h3>
+      <p>The Field Guide from Leaf People.</p>
+      <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button class="btn" type="submit">Get Updates</button>
+      </form>
+    </div>
   </div>
 
-  <div class="news">
-    <h3>New guides, by genus, every week.</h3>
-    <p>The Field Guide from Leaf People.</p>
-    <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
-      <input type="email" name="email" placeholder="your@email.com" required>
-      <button class="btn" type="submit">Get Updates</button>
-    </form>
-  </div>
+  <aside class="art-rail">
+    <div class="art-rail-inner">
+      {% if picks %}
+      <div class="rail-card">
+        <div class="rail-head">The picks</div>
+        <div class="rail-list">
+          {% for pick in picks %}
+          <a class="rail-item" href="#p{{ loop.index }}"><span class="rail-num">{{ "%02d"|format(loop.index) }}</span><span class="t">{{ pick.name }}<span class="rail-tag">{{ pick.tag }}</span></span></a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="rail-card rail-cta">
+        <h4>Get Leaf People</h4>
+        <p>Care tracker &amp; field guide for {{ genus }} and 1,000+ rare aroids.</p>
+        <a href="/#get" class="btn btn-sm">Get the App →</a>
+      </div>
+    </div>
+  </aside>
 </div>
 
 <footer class="footer">
