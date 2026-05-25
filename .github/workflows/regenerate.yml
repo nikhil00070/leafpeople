@@ -1,0 +1,46 @@
+name: Regenerate Articles
+
+# Manually re-render already-published posts at the current prompt depth/design.
+on:
+  workflow_dispatch:
+    inputs:
+      section:
+        description: "Which to regenerate"
+        type: choice
+        default: "all"
+        options: ["all", "the-leaf", "field-guide"]
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Regenerate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd pipeline
+          python regenerate.py "${{ inputs.section }}"
+          python generate_sitemap.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Regenerate articles at current depth/design"
+            git push
+          fi
