@@ -55,6 +55,8 @@ def build_prompt(item: dict) -> str:
         f"Working title / angle: {item['title_hint']}\n"
         f"Category label to use: {item.get('category', 'The Leaf')}\n"
         "Produce 3-5 sections, each with a heading and 2-4 paragraphs, plus one pull quote.\n"
+        "Write meta_title as the bare headline only — do not append 'The Leaf', "
+        "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
     )
 
@@ -68,6 +70,7 @@ def main() -> int:
 
     print(f"[leaf] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
+    article["meta_title"] = common.clean_meta_title(article["meta_title"])
 
     # Slop gate
     texts = [article["title"], article["deck"], article["pull_quote"]]
@@ -97,7 +100,7 @@ def main() -> int:
         "title": article["title"],
         "category": article["category"],
         "description": article["meta_description"],
-        "url": f"/the-leaf/{item['slug']}/",
+        "url": f"/the-leaf/{item['slug']}",
         "date": today,
         "thumb": item.get("thumb", DEFAULT_THUMB),
     })

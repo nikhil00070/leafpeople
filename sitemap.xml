@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://leafpeople.app/</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/the-leaf</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/field-guide</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/privacy</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/support</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/the-leaf/petiole-tells-the-truth/</loc>
-    <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist/</loc>
     <lastmod>2026-05-24</lastmod>
   </url>
   <url>
-    <loc>https://leafpeople.app/field-guide/philodendron-beginners/</loc>
+    <loc>https://leafpeople.app/the-leaf</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/field-guide</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/privacy</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/support</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/the-leaf/petiole-tells-the-truth</loc>
+    <lastmod>2026-05-25</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://leafpeople.app/field-guide/philodendron-beginners</loc>
     <lastmod>2026-05-24</lastmod>
   </url>
 </urlset>

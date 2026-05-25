@@ -81,6 +81,8 @@ def build_prompt(item: dict) -> str:
         "each with a short location/habit note, a 2-3 sentence description, and a 1-3 word tag), "
         "plus 1-2 body sections with practical care guidance.\n"
         "The `location` field is the plant's habit/type (e.g. 'Climber · velvet leaf'), not a place.\n"
+        "Write meta_title as the bare headline only — do not append 'Field Guide', "
+        "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
     )
 
@@ -94,6 +96,7 @@ def main() -> int:
 
     print(f"[guide] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
+    article["meta_title"] = common.clean_meta_title(article["meta_title"])
 
     # Slop gate
     texts = [article["title"], article["deck"], article["stat_label"]]
@@ -121,7 +124,7 @@ def main() -> int:
         "title": article["title"],
         "category": article["genus"],
         "description": article["meta_description"],
-        "url": f"/field-guide/{item['slug']}/",
+        "url": f"/field-guide/{item['slug']}",
         "date": today,
         "thumb": thumb,
     })

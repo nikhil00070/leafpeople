@@ -64,6 +64,23 @@ def inline_md(text: str) -> str:
     return out
 
 
+# Strip any trailing brand suffix the model bakes into meta_title — the page
+# templates already append " — <Section> | Leaf People", so without this the
+# brand doubles up in the <title>.
+_BRAND_SUFFIX = re.compile(
+    r"\s*[|–—-]\s*(the leaf|field guide|leaf people)\s*$", re.IGNORECASE
+)
+
+
+def clean_meta_title(s: str) -> str:
+    s = s.strip()
+    prev = None
+    while prev != s:
+        prev = s
+        s = _BRAND_SUFFIX.sub("", s).strip()
+    return s
+
+
 def load_queue(path: Path) -> list:
     return json.loads(path.read_text(encoding="utf-8"))
 
