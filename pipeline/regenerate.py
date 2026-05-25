@@ -55,7 +55,7 @@ def regen_leaf(post: Path):
         texts.append(s["heading"]); texts.extend(s["paragraphs"])
     if slop_repair.check_article(texts):
         print("  slop detected — keeping existing version"); return
-    hero = common.leaf_hero(article["category"])
+    hero = data.get("hero") or common.assign_hero(post.name, common.used_heroes())
     _write(post, article, hero)
     manifest = common.SITE_ROOT / "the-leaf" / "manifest.json"
     manifest_helpers.upsert(manifest, {
@@ -77,7 +77,7 @@ def regen_guide(post: Path):
         texts.append(s["heading"]); texts.extend(s["paragraphs"])
     if slop_repair.check_article(texts):
         print("  slop detected — keeping existing version"); return
-    hero = common.guide_hero(article["genus"])
+    hero = data.get("hero") or common.assign_hero(post.name, common.used_heroes(), genus=article["genus"])
     _write(post, article, hero)
     manifest = common.SITE_ROOT / "field-guide" / "manifest.json"
     manifest_helpers.upsert(manifest, {

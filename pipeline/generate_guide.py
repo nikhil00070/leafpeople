@@ -112,7 +112,7 @@ def main() -> int:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    hero = common.guide_hero(article["genus"])
+    hero = common.assign_hero(item["slug"], common.used_heroes(), genus=article["genus"])
     html = render("guide-canonical.html", hero=hero, og_image=hero, **article)
 
     out_dir = common.SITE_ROOT / "field-guide" / item["slug"]

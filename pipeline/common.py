@@ -1,5 +1,6 @@
 """Shared helpers for the Leaf People content pipeline."""
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -125,3 +126,35 @@ def guide_hero(genus: str) -> str:
 
 def leaf_hero(category: str) -> str:
     return LEAF_HERO.get((category or "").strip(), LEAF_HERO_DEFAULT)
+
+
+# --- unique hero assignment: no two articles (either section) share an image ---
+
+_GENUS_FILES = set(GUIDE_HERO.values())
+
+
+def used_heroes() -> set:
+    """Every hero/thumb already assigned across both sections."""
+    used = set()
+    for section in ("the-leaf", "field-guide"):
+        path = SITE_ROOT / section / "manifest.json"
+        if path.exists():
+            for item in json.loads(path.read_text(encoding="utf-8")):
+                if item.get("thumb"):
+                    used.add(item["thumb"])
+    return used
+
+
+def assign_hero(slug: str, used=None, genus: str = None) -> str:
+    """Pick a hero image unique across all articles. Field Guide prefers its genus
+    photo while it's still free; otherwise draw a distinct one from the general
+    pool (deterministic per slug, so re-runs are stable)."""
+    used = set(used or ())
+    if genus:
+        g = GUIDE_HERO.get((genus or "").strip())
+        if g and g not in used:
+            return g
+    pool = sorted(f"/images/plants/{p.name}" for p in (SITE_ROOT / "images" / "plants").glob("*.jpg"))
+    general = [p for p in pool if p not in _GENUS_FILES] or pool
+    unused = [p for p in general if p not in used] or general
+    return unused[int(hashlib.md5(slug.encode("utf-8")).hexdigest(), 16) % len(unused)]

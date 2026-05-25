@@ -88,7 +88,7 @@ def main() -> int:
         return 1
 
     # Render
-    hero = common.leaf_hero(article["category"])
+    hero = common.assign_hero(item["slug"], common.used_heroes())
     html = render("leaf-canonical.html", hero=hero, og_image=hero, **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
