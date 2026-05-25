@@ -17,5 +17,41 @@
     "title_hint": "How to vet a seller and a plant before you pay",
     "category": "The Market",
     "status": "queued"
+  },
+  {
+    "slug": "reading-aroid-venation",
+    "title_hint": "How to read leaf venation — primary, secondary and tertiary veins, geometry and color — to tell rare aroids apart",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "anatomy-of-an-aroid-inflorescence",
+    "title_hint": "Spadix, spathe and peduncle: how an aroid inflorescence works and what pollinating one actually involves",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "cataphylls-and-maturity",
+    "title_hint": "Cataphylls, juvenile foliage and growth phases: how to tell where an aroid is in its maturity",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "decoding-listing-abbreviations",
+    "title_hint": "Decoding the abbreviations and shorthand in rare-aroid sale listings (BVEF, NSE, F2, self, and more)",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "filial-generations-explained",
+    "title_hint": "F1, F2 and selfing: what hybrid generation labels really mean for what you're buying",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "light-for-velvet-aroids",
+    "title_hint": "Getting light right for velvet-leaf aroids — intensity, distance and reading the plant's signals",
+    "category": "Field Skills",
+    "status": "queued"
   }
 ]
