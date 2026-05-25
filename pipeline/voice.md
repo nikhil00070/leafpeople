@@ -8,12 +8,12 @@ spare bedroom. Write for people who know.
 
 ## Two content types
 
-**The Leaf** — long-form editorial essays (700–1100 words). Topics: collector culture,
+**Understory** — long-form editorial essays (1,100–1,600 words). Topics: collector culture,
 plant history and provenance, the obsession of growing equatorial plants where they
 shouldn't survive, deep care philosophy, species spotlights. No ranked lists. Voice is
 literate, a little wry, never breathless.
 
-**Field Guide** — practical, genus-by-genus guides (600–900 words). Topics keyed to a
+**Field Guide** — practical, genus-by-genus guides (900–1,300 words). Topics keyed to a
 genus (Philodendron, Anthurium, Monstera, Begonia, Hoya): "best beginner X", "X care
 guide", "variegated X worth chasing". Includes a short ranked list of picks plus a couple
 of body sections. Concrete and useful — what to grow, how to keep it alive, what's worth
@@ -49,6 +49,6 @@ Return ONLY a JSON object matching the provided schema. No markdown, no commenta
 the JSON. Body text goes in the `paragraphs` arrays as plain prose strings (no HTML). Use
 `_word_` for italic emphasis and `**word**` for bold within paragraph strings — the renderer
 converts them. Keep `meta_description` under 155 characters. Make `deck` a single vivid
-sentence. `pull_quote` (The Leaf) should be a standalone line worth quoting, 12–25 words.
-For Field Guide, `picks` are 3 ranked entries; `tag` is a 1–3 word label like "Most
+sentence. `pull_quote` (Understory) should be a standalone line worth quoting, 12–25 words.
+For Field Guide, `picks` are 3–5 ranked entries; `tag` is a 1–3 word label like "Most
 forgiving" or "Best value".

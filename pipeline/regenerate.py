@@ -47,7 +47,7 @@ def _write(post: Path, article: dict, hero: str):
 
 def regen_leaf(post: Path):
     data = json.loads((post / "_data.json").read_text(encoding="utf-8"))
-    item = {"slug": post.name, "title_hint": data["title"], "category": data.get("category", "The Leaf")}
+    item = {"slug": post.name, "title_hint": data["title"], "category": data.get("category", "Understory")}
     print(f"[regen] the-leaf/{post.name}")
     article = common.generate(common.voice(), L.build_prompt(item), L.SCHEMA)
     texts = [article["title"], article["deck"], article["pull_quote"], *article.get("intro", [])]

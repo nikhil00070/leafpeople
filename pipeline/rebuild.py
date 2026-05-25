@@ -57,7 +57,7 @@ def _one(html_text, pat):
 def extract_leaf(h: str) -> dict:
     intro, sections, pull = _split_prose(_one(h, r'<article class="prose">(.*?)</article>'))
     return {
-        "meta_title": _derender(_one(h, r"<title>(.*?) — The Leaf \| Leaf People</title>")),
+        "meta_title": _derender(_one(h, r"<title>(.*?) — (?:Understory|The Leaf) \| Leaf People</title>")),
         "meta_description": _derender(_one(h, r'<meta name="description" content="(.*?)">')),
         "category": _derender(_one(h, r'<span class="eyebrow">(.*?)</span>')),
         "title": _derender(_one(h, r"<h1[^>]*>(.*?)</h1>")),

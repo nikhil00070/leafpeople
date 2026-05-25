@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the next queued 'The Leaf' editorial article and write it to the site.
+"""Generate the next queued 'Understory' editorial article and write it to the site.
 
 Usage:
     ANTHROPIC_API_KEY=... python generate_leaf.py
@@ -53,14 +53,14 @@ SCHEMA = {
 
 def build_prompt(item: dict) -> str:
     return (
-        "Write one article for The Leaf (long-form editorial, 1100-1600 words) — the depth "
+        "Write one article for Understory (long-form editorial, 1100-1600 words) — the depth "
         "and texture of a great magazine feature, not a blog post.\n"
         f"Working title / angle: {item['title_hint']}\n"
-        f"Category label to use: {item.get('category', 'The Leaf')}\n"
+        f"Category label to use: {item.get('category', 'Understory')}\n"
         "Open with `intro`: 1-2 scene-setting paragraphs before the first heading. Then 5-7 "
         "sections, each with a heading and 2-4 substantial paragraphs, plus one pull quote. "
         "Be concrete: name real species, cultivars, places, and techniques.\n"
-        "Write meta_title as the bare headline only — do not append 'The Leaf', "
+        "Write meta_title as the bare headline only — do not append 'Understory', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
     )

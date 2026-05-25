@@ -68,7 +68,7 @@ def inline_md(text: str) -> str:
 # templates already append " — <Section> | Leaf People", so without this the
 # brand doubles up in the <title>.
 _BRAND_SUFFIX = re.compile(
-    r"\s*[|–—-]\s*(the leaf|field guide|leaf people)\s*$", re.IGNORECASE
+    r"\s*[|–—-]\s*(understory|the leaf|field guide|leaf people)\s*$", re.IGNORECASE
 )
 
 
@@ -98,7 +98,7 @@ def next_queued(queue: list):
 
 
 # --- per-article hero / card imagery (committed plant photos) ------------------
-# One photo per genus (Field Guide) and per editorial category (The Leaf); the
+# One photo per genus (Field Guide) and per editorial category (Understory); the
 # same image is used for the header band, the inline hero, and the index card.
 
 _PLANTS = "/images/plants"

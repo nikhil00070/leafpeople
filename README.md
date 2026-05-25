@@ -14,7 +14,7 @@ App Store: https://apps.apple.com/us/app/leaf-people-rare-plant-guide/id67606273
 ├── css/site.css            # design system (palette, type, components)
 ├── js/site.js              # nav, reveals, count-ups, care bars
 ├── images/app/             # app screenshots (shot-01 … shot-10)
-├── the-leaf/               # The Leaf — long-form editorial (Dish equivalent)
+├── the-leaf/               # Understory — long-form editorial (Dish equivalent)
 │   ├── index.html          #   manifest-driven index
 │   ├── manifest.json       #   article list (generated)
 │   └── <slug>/index.html   #   article pages (generated)

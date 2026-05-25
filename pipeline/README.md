@@ -1,6 +1,6 @@
 # Content Pipeline
 
-Generates the two article sections — **The Leaf** (editorial) and **Field Guide** (genus
+Generates the two article sections — **Understory** (editorial) and **Field Guide** (genus
 care guides) — with Claude, and renders them to static HTML.
 
 ## How it works
@@ -28,7 +28,7 @@ usage including `cache_read` so you can confirm hits.
 pip install -r requirements.txt
 export ANTHROPIC_API_KEY=sk-ant-...
 cd pipeline
-python generate_leaf.py     # publishes next queued The Leaf article
+python generate_leaf.py     # publishes next queued Understory article
 python generate_guide.py    # publishes next queued Field Guide article
 python generate_sitemap.py  # rebuild sitemap.xml
 ```
@@ -47,5 +47,5 @@ Set the `ANTHROPIC_API_KEY` secret in the repo. Both also support manual
 
 ## Adding topics
 
-Append objects to the queue files. The Leaf items use `{slug, title_hint, category}`;
+Append objects to the queue files. Understory items use `{slug, title_hint, category}`;
 Field Guide items use `{slug, genus, title_hint}`. New items default to `status: "queued"`.
