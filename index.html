@@ -20,7 +20,8 @@
 <style>
   /* ---- Hero ---- */
   .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 6rem; }
-  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; max-width: 1240px; margin: 0 auto; width: 100%; padding: 0 2rem; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
+  .hero-text { max-width: 600px; }
   .hero h1 { font-size: clamp(2.6rem, 6.5vw, 5rem); font-weight: 900; letter-spacing: -.04em; line-height: .98; margin: 1.4rem 0; }
   .hero .sub { font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 500; line-height: 1.5; color: var(--text-dim); max-width: 34ch; margin-bottom: 2rem; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; }
@@ -40,7 +41,6 @@
 
   /* ---- Phone mockup (device frame baked into the screenshot; corners transparent) ---- */
   .phone-stage { display: flex; justify-content: center; align-items: center; position: relative; perspective: 1500px; }
-  .phone-stage:has(.phone-wrap) { justify-content: flex-end; padding-right: 6px; }
   .phone-stage::before {
     content: ""; position: absolute; width: 112%; height: 112%; z-index: 0;
     background: radial-gradient(ellipse at center, rgba(91,209,122,.20) 0%, rgba(46,125,246,.12) 38%, transparent 66%);
@@ -65,7 +65,7 @@
     100% { transform: rotateY(-15deg) rotateZ(4deg) translateY(0); }
   }
   .glass-chip {
-    position: absolute; right: -34px; top: 6%; z-index: 3; width: 226px;
+    position: absolute; right: -24px; top: 8%; z-index: 3; width: 224px;
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     background: rgba(15,20,17,.62);
     border: 1px solid var(--border-strong); border-radius: 16px; padding: .95rem 1.05rem;
@@ -156,7 +156,7 @@
     .compare .vs { display: none; }
     .metrics { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .glass-chip { display: none; }
-    .phone-stage:has(.phone-wrap) { justify-content: center; padding-right: 0; }
+    .hero-text { margin: 0 auto; }
   }
 </style>
 </head>
