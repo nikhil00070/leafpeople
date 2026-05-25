@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Guide — Rare Aroid Care Guides by Genus | Leaf People</title>
+<meta name="description" content="The Leaf People Field Guide: practical, genus-by-genus care guides and roundups for Philodendron, Anthurium, Monstera, Begonia and Hoya.">
+<meta name="theme-color" content="#0B0F0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+  .chips { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 2.5rem; }
+  .chip {
+    padding: .5rem 1.1rem; border-radius: var(--r-pill); border: 1px solid var(--border-strong);
+    background: transparent; color: var(--text-dim); font-size: .85rem; font-weight: 600; cursor: pointer;
+    font-family: var(--font-body); transition: all .2s;
+  }
+  .chip:hover { color: var(--text); }
+  .chip.active { background: var(--grad); color: #06140C; border-color: transparent; }
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a href="/" class="nav-brand"><span class="mark">🌿</span> Leaf<span class="leaf">People</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/the-leaf">The Leaf</a></li>
+    <li><a href="/field-guide" class="nav-section">Field Guide</a></li>
+    <li><a href="/#get" class="btn btn-sm">Get the App →</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</nav>
+
+<header class="container" style="padding-top:8rem;">
+  <span class="eyebrow">Leaf People · Field Guide</span>
+  <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin:.8rem 0;">Care guides by genus. <span class="accent">No fluff.</span></h1>
+  <p style="color:var(--text-dim);font-size:1.15rem;max-width:60ch;">Practical, genus-by-genus guides — what to grow, how to keep it alive, and which species are worth chasing.</p>
+  <div class="chips" id="chips">
+    <button class="chip active" data-cat="All">All</button>
+    <button class="chip" data-cat="Philodendron">Philodendron</button>
+    <button class="chip" data-cat="Anthurium">Anthurium</button>
+    <button class="chip" data-cat="Monstera">Monstera</button>
+    <button class="chip" data-cat="Begonia">Begonia</button>
+    <button class="chip" data-cat="Hoya">Hoya</button>
+  </div>
+</header>
+
+<main class="container" style="padding:1rem 2rem 5rem;">
+  <div class="article-grid" id="grid"></div>
+  <p id="empty" style="color:var(--text-faint);display:none;">New guides are on the way. Check back soon.</p>
+</main>
+
+<footer class="footer">
+  <div class="brand"><span class="mark" style="width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#06140C;">🌿</span> Leaf People</div>
+  <div class="links">
+    <a href="/the-leaf">The Leaf</a>
+    <a href="/field-guide">Field Guide</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+  </div>
+  <div class="copy">© 2026 Percent Earth Collective</div>
+</footer>
+
+<script>
+  let ALL = [];
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+
+  function render(cat) {
+    const items = (cat === "All" ? ALL : ALL.filter((a) => a.category === cat))
+      .sort((a, b) => (a.date < b.date ? 1 : -1));
+    if (!items.length) { grid.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    grid.innerHTML = items
+      .map(
+        (a) => `
+      <a class="article-card" href="${a.url}">
+        <div class="thumb" style="background-image:url('${a.thumb}')"></div>
+        <div class="body">
+          <div class="tag">${a.category || "Field Guide"}</div>
+          <h3>${a.title}</h3>
+          <div class="meta">${new Date(a.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</div>
+        </div>
+      </a>`
+      )
+      .join("");
+  }
+
+  document.getElementById("chips").addEventListener("click", (e) => {
+    const btn = e.target.closest(".chip");
+    if (!btn) return;
+    document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+    btn.classList.add("active");
+    render(btn.dataset.cat);
+  });
+
+  fetch("/field-guide/manifest.json")
+    .then((r) => r.json())
+    .then((items) => { ALL = items; render("All"); })
+    .catch(() => { empty.style.display = "block"; });
+</script>
+<script src="/js/site.js"></script>
+</body>
+</html>

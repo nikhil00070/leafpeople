@@ -1,0 +1,42 @@
+name: Publish The Leaf
+
+# Long-form editorial — three a week (Mon/Wed/Fri, 8:00 AM ET ≈ 13:00 UTC).
+on:
+  schedule:
+    - cron: "0 13 * * 1,3,5"
+  workflow_dispatch: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Generate next article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd pipeline
+          python generate_leaf.py
+          python generate_sitemap.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to publish."
+          else
+            git commit -m "The Leaf: publish next queued article"
+            git push
+          fi

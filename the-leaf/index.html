@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Leaf — Stories from Leaf People</title>
+<meta name="description" content="The Leaf: long-form stories on rare aroids, collector culture, and the plants grown where they shouldn't exist.">
+<meta name="theme-color" content="#0B0F0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a href="/" class="nav-brand"><span class="mark">🌿</span> Leaf<span class="leaf">People</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/the-leaf" class="nav-section">The Leaf</a></li>
+    <li><a href="/field-guide">Field Guide</a></li>
+    <li><a href="/#get" class="btn btn-sm">Get the App →</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</nav>
+
+<header class="container" style="padding-top:8rem;">
+  <span class="eyebrow">Leaf People · The Leaf</span>
+  <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin:.8rem 0;">Stories for people who grow <span class="accent">the rare ones.</span></h1>
+  <p style="color:var(--text-dim);font-size:1.15rem;max-width:60ch;">Long-form essays on rare aroids, collector culture, and the plants grown where they shouldn't exist.</p>
+</header>
+
+<main class="container" style="padding:3rem 2rem 5rem;">
+  <div class="article-grid" id="grid"></div>
+  <p id="empty" style="color:var(--text-faint);display:none;">New stories are on the way. Check back soon.</p>
+</main>
+
+<footer class="footer">
+  <div class="brand"><span class="mark" style="width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#06140C;">🌿</span> Leaf People</div>
+  <div class="links">
+    <a href="/the-leaf">The Leaf</a>
+    <a href="/field-guide">Field Guide</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+  </div>
+  <div class="copy">© 2026 Percent Earth Collective</div>
+</footer>
+
+<script>
+  fetch("/the-leaf/manifest.json")
+    .then((r) => r.json())
+    .then((items) => {
+      const grid = document.getElementById("grid");
+      if (!items.length) { document.getElementById("empty").style.display = "block"; return; }
+      grid.innerHTML = items
+        .sort((a, b) => (a.date < b.date ? 1 : -1))
+        .map(
+          (a) => `
+        <a class="article-card" href="${a.url}">
+          <div class="thumb" style="background-image:url('${a.thumb}')"></div>
+          <div class="body">
+            <div class="tag">${a.category || "The Leaf"}</div>
+            <h3>${a.title}</h3>
+            <div class="meta">${new Date(a.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</div>
+          </div>
+        </a>`
+        )
+        .join("");
+    })
+    .catch(() => { document.getElementById("empty").style.display = "block"; });
+</script>
+<script src="/js/site.js"></script>
+</body>
+</html>

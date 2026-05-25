@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "anthurium-velvet-care",
+    "genus": "Anthurium",
+    "title_hint": "Caring for velvet-leaf Anthuriums",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-variegated-worth-it",
+    "genus": "Monstera",
+    "title_hint": "Which variegated Monsteras are actually worth the price",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-for-beginners",
+    "genus": "Hoya",
+    "title_hint": "Beginner-friendly Hoyas that still impress",
+    "status": "queued"
+  },
+  {
+    "slug": "begonia-rex-care",
+    "genus": "Begonia",
+    "title_hint": "Keeping rhizomatous and rex Begonias alive",
+    "status": "queued"
+  }
+]
