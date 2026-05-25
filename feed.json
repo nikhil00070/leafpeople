@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-25",
-  "count": 3,
+  "count": 4,
   "items": [
     {
       "id": "the-leaf/petiole-tells-the-truth",
@@ -16,6 +16,19 @@
       "url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth",
       "data_url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth/_data.json",
       "image": "https://leafpeople.app/images/plants/field-skills.jpg"
+    },
+    {
+      "id": "the-leaf/the-velvet-anthurium-problem",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "the-velvet-anthurium-problem",
+      "title": "The Velvet Problem: Why Dark Anthuriums Resist Every Attempt at a Name",
+      "category": "Collector Culture",
+      "description": "Velvet anthurium IDs collapse under close inspection. Here's why even experienced collectors can't agree on what's in their pots.",
+      "date": "2026-05-25",
+      "url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem",
+      "data_url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem/_data.json",
+      "image": "https://leafpeople.app/images/plants/collector-culture.jpg"
     },
     {
       "id": "the-leaf/grown-where-they-shouldnt-exist",
