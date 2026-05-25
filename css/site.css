@@ -187,6 +187,10 @@ h1, h2, h3, h4, .display {
 .nav-section { color: var(--text) !important; }
 .nav-divider { width: 1px; height: 20px; background: var(--border-strong); }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+/* "Stories" label sitting above the section tabs (The Leaf / Field Guide) */
+.nav-stories { display: inline-flex; flex-direction: column; align-items: flex-start; gap: .15rem; }
+.nav-stories .tag { font-size: .56rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #FA2A52; line-height: 1; }
+.nav-stories .tabs { display: flex; align-items: center; gap: 1.6rem; }
 
 /* ------------------------------------------------------------------ Cinematic layers */
 .cine { position: relative; overflow: hidden; }
