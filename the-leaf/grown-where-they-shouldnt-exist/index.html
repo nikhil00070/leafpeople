@@ -12,10 +12,12 @@
 <meta name="theme-color" content="#0B0F0D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+
+<div class="read-progress" id="readProgress"></div>
 
 <nav class="nav scrolled" id="nav">
   <a href="/" class="nav-brand"><span class="mark">🌿</span> Leaf<span class="leaf">People</span></a>
@@ -29,93 +31,71 @@
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
 
-<header class="art-band">
-  <div class="art-band-bg"><img src="/images/plants/collector-culture.jpg" alt=""></div>
-  <div class="art-band-inner">
-    <nav class="breadcrumb"><a href="/">Home</a> › <a href="/the-leaf">The Leaf</a> › Collector Culture</nav>
-    <h1 class="art-h1">Grown Where They Shouldn&#39;t Exist</h1>
-    <div class="art-meta">
-      <span class="art-badge">Collector Culture</span>
-      <span>The Leaf · Leaf People</span>
-    </div>
-  </div>
-</header>
+<div class="leaf-wrap">
+  <nav class="breadcrumb"><a href="/">Home</a> › <a href="/the-leaf">The Leaf</a> › Collector Culture</nav>
 
-<div class="art-main">
-  <div class="art-content">
-    <p class="deck">A velvet anthurium belongs on a cloud-forest slope in Panama. So why is it thriving under a grow light in a Philadelphia row home?</p>
-
-    <figure class="art-hero"><img src="/images/plants/collector-culture.jpg" alt="Grown Where They Shouldn&#39;t Exist" loading="lazy"></figure>
-
-    <article class="prose">
-      
-      <p>The plants that define the rare-aroid hobby evolved in places most of their keepers will never visit — the understory of Ecuadorian cloud forest, the limestone karsts of Borneo, the dripping ravines of western Colombia. They want humidity that fogs a camera lens and air that never stops moving. By every reasonable measure, they should not survive a forced-air apartment in a temperate city.</p>
-      
-      <p>And yet a generation of growers has decided that "should not" is a challenge, not a verdict.</p>
-      
-      
-      <h2 id="s1">The obsession is the point</h2>
-      
-      <p>Ask a collector why they chase an <strong>Anthurium dressleri</strong> or a velvet <strong>Philodendron</strong> and you rarely get a tidy answer. It is part botany, part hunt, part the small daily ritual of checking a new leaf as it unfurls. The rarer the plant, the more the care becomes a relationship — a humidity number you defend, a substrate you mix by feel, a watering rhythm you learn the hard way.</p>
-      
-      <p>That stubbornness is exactly why generic plant apps fail this hobby. A tool that confidently labels every dark, heart-shaped leaf "an Anthurium" is worse than no tool at all — it flattens the precise distinctions the whole pursuit is built on.</p>
-      
-      
-      <p class="pull-quote">"You are not decorating a room. You are running a tiny, stubborn piece of a rainforest."</p>
-      
-      
-      <h2 id="s2">Why specificity matters</h2>
-      
-      <p>The difference between an <em>Ace of Spades</em> and a true <em>dressleri</em> is not trivia. It changes what the plant costs, how it should be grown, and whether the label on a seller's listing can be trusted at all. Collectors live in those margins. The good ones learn to read a petiole the way a sommelier reads a glass.</p>
-      
-      <p>That is the bet behind Leaf People: that depth beats breadth. A guide that knows five genera intimately is more useful to a serious grower than one that knows ten thousand species superficially.</p>
-      
-      
-      
-      <h2 id="s3">The quiet reward</h2>
-      
-      <p>There is a specific satisfaction in the moment a plant that "shouldn't" survive pushes out a new leaf bigger than the last. It is proof that attention compounds — that the humidity you held, the airflow you fixed, the watering you finally got right all added up to something living.</p>
-      
-      <p>Grown where they shouldn't exist. That is not a problem to solve. For the people who keep these plants, it is the entire point.</p>
-      
-      
-      
-    </article>
-
-    <div class="news">
-      <h3>One plant, one story, every week.</h3>
-      <p>The Leaf — no fluff, just the rare ones worth knowing.</p>
-      <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
+  <div class="leaf-hero">
+    <div class="leaf-hero-img" style="background-image:url('/images/plants/collector-culture.jpg')"></div>
+    <div class="leaf-hero-grade"></div>
+    <div class="hero-grain"></div>
+    <span class="leaf-badge">Collector Culture</span>
+    <div class="leaf-hero-content">
+      <div class="hero-eyebrow">The Leaf</div>
+      <h1 class="hero-title">Grown Where They Shouldn&#39;t Exist</h1>
     </div>
   </div>
 
-  <aside class="art-rail">
-    <div class="art-rail-inner">
-      
-      <div class="rail-card">
-        <div class="rail-head">In this story</div>
-        <div class="rail-list">
-          
-          <a class="rail-item" href="#s1"><span class="rail-num">01</span><span class="t">The obsession is the point</span></a>
-          
-          <a class="rail-item" href="#s2"><span class="rail-num">02</span><span class="t">Why specificity matters</span></a>
-          
-          <a class="rail-item" href="#s3"><span class="rail-num">03</span><span class="t">The quiet reward</span></a>
-          
-        </div>
-      </div>
-      
-      <div class="rail-card rail-cta">
-        <h4>Get Leaf People</h4>
-        <p>Field guide, care tracker &amp; collector's marketplace for rare aroids.</p>
-        <a href="/#get" class="btn btn-sm">Get the App →</a>
-      </div>
-    </div>
-  </aside>
+  <p class="deck">A velvet anthurium belongs on a cloud-forest slope in Panama. So why is it thriving under a grow light in a Philadelphia row home?</p>
+
+  <article class="prose">
+    
+    <p>The plants that define the rare-aroid hobby evolved in places most of their keepers will never visit — the understory of Ecuadorian cloud forest, the limestone karsts of Borneo, the dripping ravines of western Colombia. They want humidity that fogs a camera lens and air that never stops moving. By every reasonable measure, they should not survive a forced-air apartment in a temperate city.</p>
+    
+    <p>And yet a generation of growers has decided that "should not" is a challenge, not a verdict.</p>
+    
+    
+    <h2 id="s1">The obsession is the point</h2>
+    
+    <p>Ask a collector why they chase an <strong>Anthurium dressleri</strong> or a velvet <strong>Philodendron</strong> and you rarely get a tidy answer. It is part botany, part hunt, part the small daily ritual of checking a new leaf as it unfurls. The rarer the plant, the more the care becomes a relationship — a humidity number you defend, a substrate you mix by feel, a watering rhythm you learn the hard way.</p>
+    
+    <p>That stubbornness is exactly why generic plant apps fail this hobby. A tool that confidently labels every dark, heart-shaped leaf "an Anthurium" is worse than no tool at all — it flattens the precise distinctions the whole pursuit is built on.</p>
+    
+    
+    <p class="pull-quote">"You are not decorating a room. You are running a tiny, stubborn piece of a rainforest."</p>
+    
+    
+    <h2 id="s2">Why specificity matters</h2>
+    
+    <p>The difference between an <em>Ace of Spades</em> and a true <em>dressleri</em> is not trivia. It changes what the plant costs, how it should be grown, and whether the label on a seller's listing can be trusted at all. Collectors live in those margins. The good ones learn to read a petiole the way a sommelier reads a glass.</p>
+    
+    <p>That is the bet behind Leaf People: that depth beats breadth. A guide that knows five genera intimately is more useful to a serious grower than one that knows ten thousand species superficially.</p>
+    
+    
+    
+    <h2 id="s3">The quiet reward</h2>
+    
+    <p>There is a specific satisfaction in the moment a plant that "shouldn't" survive pushes out a new leaf bigger than the last. It is proof that attention compounds — that the humidity you held, the airflow you fixed, the watering you finally got right all added up to something living.</p>
+    
+    <p>Grown where they shouldn't exist. That is not a problem to solve. For the people who keep these plants, it is the entire point.</p>
+    
+    
+    
+  </article>
+
+  <div class="news">
+    <h3>One plant, one story, every week.</h3>
+    <p>The Leaf — no fluff, just the rare ones worth knowing.</p>
+    <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div>
 </div>
+
+<section class="related">
+  <div class="related-label">More from The Leaf</div>
+  <div class="related-grid" id="relatedGrid"></div>
+</section>
 
 <footer class="footer">
   <div class="brand"><span class="mark" style="width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#06140C;">🌿</span> Leaf People</div>

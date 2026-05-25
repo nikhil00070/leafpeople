@@ -31,6 +31,7 @@ SCHEMA = {
         "category": {"type": "string"},
         "title": {"type": "string"},
         "deck": {"type": "string"},
+        "intro": {"type": "array", "items": {"type": "string"}},
         "pull_quote": {"type": "string"},
         "sections": {
             "type": "array",
@@ -46,16 +47,19 @@ SCHEMA = {
         },
     },
     "required": ["meta_title", "meta_description", "category", "title", "deck",
-                 "pull_quote", "sections"],
+                 "intro", "pull_quote", "sections"],
 }
 
 
 def build_prompt(item: dict) -> str:
     return (
-        "Write one article for The Leaf (long-form editorial, 700-1100 words).\n"
+        "Write one article for The Leaf (long-form editorial, 1100-1600 words) — the depth "
+        "and texture of a great magazine feature, not a blog post.\n"
         f"Working title / angle: {item['title_hint']}\n"
         f"Category label to use: {item.get('category', 'The Leaf')}\n"
-        "Produce 3-5 sections, each with a heading and 2-4 paragraphs, plus one pull quote.\n"
+        "Open with `intro`: 1-2 scene-setting paragraphs before the first heading. Then 5-7 "
+        "sections, each with a heading and 2-4 substantial paragraphs, plus one pull quote. "
+        "Be concrete: name real species, cultivars, places, and techniques.\n"
         "Write meta_title as the bare headline only — do not append 'The Leaf', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
@@ -74,7 +78,7 @@ def main() -> int:
     article["meta_title"] = common.clean_meta_title(article["meta_title"])
 
     # Slop gate
-    texts = [article["title"], article["deck"], article["pull_quote"]]
+    texts = [article["title"], article["deck"], article["pull_quote"], *article.get("intro", [])]
     for s in article["sections"]:
         texts.append(s["heading"])
         texts.extend(s["paragraphs"])

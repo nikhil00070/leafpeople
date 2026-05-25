@@ -76,4 +76,50 @@
     );
     barObs.observe(bars);
   }
+
+  // Reading-progress bar (article pages)
+  const prog = document.getElementById("readProgress");
+  if (prog) {
+    const onProg = () => {
+      const d = document.documentElement;
+      const max = d.scrollHeight - d.clientHeight;
+      prog.style.width = (max > 0 ? (d.scrollTop / max) * 100 : 0) + "%";
+    };
+    window.addEventListener("scroll", onProg, { passive: true });
+    onProg();
+  }
+
+  // "More from…" related cards (article pages) — pulled from the section manifest
+  const relGrid = document.getElementById("relatedGrid");
+  if (relGrid) {
+    const path = location.pathname.replace(/\/$/, "");
+    const section = path.indexOf("/field-guide/") !== -1 ? "field-guide" : "the-leaf";
+    const slug = path.split("/").pop();
+    const fmtDate = (d) =>
+      new Date(d).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    const hideRelated = () => {
+      const s = relGrid.closest(".related");
+      if (s) s.style.display = "none";
+    };
+    fetch("/" + section + "/manifest.json")
+      .then((r) => r.json())
+      .then((items) => {
+        const others = items.filter((a) => a.slug !== slug).slice(0, 4);
+        if (!others.length) return hideRelated();
+        relGrid.innerHTML = others
+          .map(
+            (a) => `
+        <a class="related-card" href="${a.url}">
+          <div class="rc-thumb" style="background-image:url('${a.thumb}')"></div>
+          <div class="rc-body">
+            <div class="rc-tag">${a.category || ""}</div>
+            <div class="rc-title">${a.title}</div>
+            <div class="rc-meta">${fmtDate(a.date)}</div>
+          </div>
+        </a>`
+          )
+          .join("");
+      })
+      .catch(hideRelated);
+  }
 })();

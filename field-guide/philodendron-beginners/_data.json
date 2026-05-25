@@ -24,6 +24,18 @@
       "location": "Climber · velvet leaf",
       "description": "Your first real velvet. It asks for higher humidity and an airy mix, but it's far tougher than its reputation — and the heart-shaped, hairy-petioled leaves are a genuine step into the deep end.",
       "tag": "First velvet"
+    },
+    {
+      "name": "Philodendron hederaceum micans",
+      "location": "Trailer · velvet heart leaves",
+      "description": "The cheapest way into velvet. Bronze-to-emerald heart-shaped leaves with a suede sheen on a vining habit that's almost impossible to kill. Bright indirect light deepens the color, and it forgives a missed watering without sulking.",
+      "tag": "Velvet on a budget"
+    },
+    {
+      "name": "Philodendron 'Brasil'",
+      "location": "Trailer · lime variegation",
+      "description": "A hederaceum sport splashed with lime-green down the center of each leaf. Fast, tolerant of average light and humidity, and happy to trail off a shelf — the plant that convinces a beginner they have a green thumb.",
+      "tag": "Most unkillable"
     }
   ],
   "body_sections": [

@@ -75,12 +75,13 @@ SCHEMA = {
 
 def build_prompt(item: dict) -> str:
     return (
-        "Write one Field Guide article (600-900 words) for the genus "
+        "Write one Field Guide article (900-1300 words) for the genus "
         f"{item['genus']}.\n"
         f"Working title / angle: {item['title_hint']}\n"
-        "Include exactly 3 ranked picks (real, well-known species/cultivars in this genus, "
-        "each with a short location/habit note, a 2-3 sentence description, and a 1-3 word tag), "
-        "plus 1-2 body sections with practical care guidance.\n"
+        "Include 3-5 ranked picks (real, well-known species/cultivars in this genus, each with a "
+        "short location/habit note, a 3-4 sentence description, and a 1-3 word tag), plus 2-3 body "
+        "sections of specific care guidance (substrate, light, water & humidity, common mistakes).\n"
+        "If the title names a count (e.g. 'Five ...'), the number of picks MUST match it.\n"
         "The `location` field is the plant's habit/type (e.g. 'Climber · velvet leaf'), not a place.\n"
         "Write meta_title as the bare headline only — do not append 'Field Guide', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"

@@ -12,21 +12,12 @@
 <meta name="theme-color" content="#0B0F0D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/site.css">
-<style>
-  .stat-pull { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 2.2rem; }
-  .stat-pull .n { font-family: var(--font-display); font-weight: 800; font-size: 3rem; color: var(--green); line-height: 1; }
-  .stat-pull .l { color: var(--text-dim); font-size: 1rem; }
-  .pick { display: grid; grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); scroll-margin-top: 90px; }
-  .pick .num { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--green); }
-  .pick h3 { font-size: 1.25rem; margin-bottom: .2rem; }
-  .pick .loc { font-size: .85rem; color: var(--text-faint); margin-bottom: .6rem; }
-  .pick p { font-family: var(--font-serif); color: #E7ECE7; line-height: 1.75; }
-  .pick .tag { display: inline-block; margin-top: .6rem; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
-</style>
 </head>
 <body>
+
+<div class="read-progress" id="readProgress"></div>
 
 <nav class="nav scrolled" id="nav">
   <a href="/" class="nav-brand"><span class="mark">🌿</span> Leaf<span class="leaf">People</span></a>
@@ -40,106 +31,104 @@
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
 
-<header class="art-band">
-  <div class="art-band-bg"><img src="/images/plants/philodendron.jpg" alt=""></div>
-  <div class="art-band-inner">
+<header class="guide-hero">
+  <img class="guide-hero-img" src="/images/plants/philodendron.jpg" alt="">
+  <div class="hero-grain"></div>
+  <div class="guide-hero-overlay"></div>
+  <div class="guide-hero-content">
     <nav class="breadcrumb"><a href="/">Home</a> › <a href="/field-guide">Field Guide</a> › Philodendron</nav>
-    <h1 class="art-h1">Five Philodendrons Worth Starting With</h1>
-    <div class="art-meta">
-      <span class="art-badge">Philodendron</span>
-      <span>Field Guide · Leaf People</span>
-    </div>
+    <div class="hero-eyebrow">Field Guide · Philodendron</div>
+    <h1 class="hero-title">Five Philodendrons Worth Starting With</h1>
+    <div class="hero-meta"><span class="art-badge">Philodendron</span></div>
   </div>
 </header>
 
-<div class="art-main">
-  <div class="art-content">
-    <p class="deck">Rare-leaning, forgiving, and genuinely beautiful — the Philodendrons that reward a new collector instead of punishing them.</p>
-
-    <figure class="art-hero"><img src="/images/plants/philodendron.jpg" alt="Five Philodendrons Worth Starting With" loading="lazy"></figure>
-
-    <div class="stat-pull">
-      <span class="n">5</span>
-      <span class="l">beginner-friendly species, ranked by how much abuse they'll tolerate while you learn the genus.</span>
-    </div>
-
-    
-    <div class="pick" id="p1">
-      <div class="num">01</div>
-      <div>
-        <h3>Philodendron &#39;Birkin&#39;</h3>
-        <div class="loc">Self-heading · pinstripe variegation</div>
-        <p>The gateway rare. Creamy pinstripes on dark green, a compact habit, and a tolerance for ordinary indoor light. It tells you when it's thirsty and shrugs off the occasional missed watering.</p>
-        <span class="tag">Most forgiving</span>
-      </div>
-    </div>
-    
-    <div class="pick" id="p2">
-      <div class="num">02</div>
-      <div>
-        <h3>Philodendron &#39;Painted Lady&#39;</h3>
-        <div class="loc">Climber · neon new growth</div>
-        <p>Chartreuse leaves on pink-speckled petioles. It wants a moss pole and bright indirect light, but it grows fast enough to make a beginner feel like a pro.</p>
-        <span class="tag">Fast reward</span>
-      </div>
-    </div>
-    
-    <div class="pick" id="p3">
-      <div class="num">03</div>
-      <div>
-        <h3>Philodendron verrucosum</h3>
-        <div class="loc">Climber · velvet leaf</div>
-        <p>Your first real velvet. It asks for higher humidity and an airy mix, but it's far tougher than its reputation — and the heart-shaped, hairy-petioled leaves are a genuine step into the deep end.</p>
-        <span class="tag">First velvet</span>
-      </div>
-    </div>
-    
-
-    <div class="body prose" style="margin-top:2.5rem;">
-      
-      <h2>Before you buy any of them</h2>
-      
-      <p>Get the substrate right first. Philodendrons rot in dense potting soil; they want a chunky, airy mix that drains fast and dries between waterings. Nail that one thing and most beginner losses disappear.</p>
-      
-      <p>Then track the basics in one place — water, humidity, and the occasional foliar feed. Consistency, not heroics, is what grows a collection.</p>
-      
-      
-    </div>
-
-    <div class="news">
-      <h3>New guides, by genus, every week.</h3>
-      <p>The Field Guide from Leaf People.</p>
-      <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <button class="btn" type="submit">Get Updates</button>
-      </form>
-    </div>
+<div class="guide-wrap">
+  <div class="stat-pull">
+    <span class="stat-num">5</span>
+    <span class="stat-label">beginner-friendly species, ranked by how much abuse they'll tolerate while you learn the genus.</span>
   </div>
 
-  <aside class="art-rail">
-    <div class="art-rail-inner">
-      
-      <div class="rail-card">
-        <div class="rail-head">The picks</div>
-        <div class="rail-list">
-          
-          <a class="rail-item" href="#p1"><span class="rail-num">01</span><span class="t">Philodendron &#39;Birkin&#39;<span class="rail-tag">Most forgiving</span></span></a>
-          
-          <a class="rail-item" href="#p2"><span class="rail-num">02</span><span class="t">Philodendron &#39;Painted Lady&#39;<span class="rail-tag">Fast reward</span></span></a>
-          
-          <a class="rail-item" href="#p3"><span class="rail-num">03</span><span class="t">Philodendron verrucosum<span class="rail-tag">First velvet</span></span></a>
-          
-        </div>
-      </div>
-      
-      <div class="rail-card rail-cta">
-        <h4>Get Leaf People</h4>
-        <p>Care tracker &amp; field guide for Philodendron and 1,000+ rare aroids.</p>
-        <a href="/#get" class="btn btn-sm">Get the App →</a>
-      </div>
+  <p class="deck">Rare-leaning, forgiving, and genuinely beautiful — the Philodendrons that reward a new collector instead of punishing them.</p>
+
+  <div class="picks-label">The picks</div>
+  
+  <div class="pick" id="p1">
+    <div class="pick-num">01</div>
+    <div class="pick-body">
+      <div class="pick-name">Philodendron &#39;Birkin&#39;</div>
+      <div class="pick-location">Self-heading · pinstripe variegation</div>
+      <p class="pick-desc">The gateway rare. Creamy pinstripes on dark green, a compact habit, and a tolerance for ordinary indoor light. It tells you when it's thirsty and shrugs off the occasional missed watering.</p>
+      <span class="pick-tag">Most forgiving</span>
     </div>
-  </aside>
+  </div>
+  
+  <div class="pick" id="p2">
+    <div class="pick-num">02</div>
+    <div class="pick-body">
+      <div class="pick-name">Philodendron &#39;Painted Lady&#39;</div>
+      <div class="pick-location">Climber · neon new growth</div>
+      <p class="pick-desc">Chartreuse leaves on pink-speckled petioles. It wants a moss pole and bright indirect light, but it grows fast enough to make a beginner feel like a pro.</p>
+      <span class="pick-tag">Fast reward</span>
+    </div>
+  </div>
+  
+  <div class="pick" id="p3">
+    <div class="pick-num">03</div>
+    <div class="pick-body">
+      <div class="pick-name">Philodendron verrucosum</div>
+      <div class="pick-location">Climber · velvet leaf</div>
+      <p class="pick-desc">Your first real velvet. It asks for higher humidity and an airy mix, but it's far tougher than its reputation — and the heart-shaped, hairy-petioled leaves are a genuine step into the deep end.</p>
+      <span class="pick-tag">First velvet</span>
+    </div>
+  </div>
+  
+  <div class="pick" id="p4">
+    <div class="pick-num">04</div>
+    <div class="pick-body">
+      <div class="pick-name">Philodendron hederaceum micans</div>
+      <div class="pick-location">Trailer · velvet heart leaves</div>
+      <p class="pick-desc">The cheapest way into velvet. Bronze-to-emerald heart-shaped leaves with a suede sheen on a vining habit that's almost impossible to kill. Bright indirect light deepens the color, and it forgives a missed watering without sulking.</p>
+      <span class="pick-tag">Velvet on a budget</span>
+    </div>
+  </div>
+  
+  <div class="pick" id="p5">
+    <div class="pick-num">05</div>
+    <div class="pick-body">
+      <div class="pick-name">Philodendron &#39;Brasil&#39;</div>
+      <div class="pick-location">Trailer · lime variegation</div>
+      <p class="pick-desc">A hederaceum sport splashed with lime-green down the center of each leaf. Fast, tolerant of average light and humidity, and happy to trail off a shelf — the plant that convinces a beginner they have a green thumb.</p>
+      <span class="pick-tag">Most unkillable</span>
+    </div>
+  </div>
+  
+
+  <div class="prose" style="margin-top:2.5rem;">
+    
+    <h2>Before you buy any of them</h2>
+    
+    <p>Get the substrate right first. Philodendrons rot in dense potting soil; they want a chunky, airy mix that drains fast and dries between waterings. Nail that one thing and most beginner losses disappear.</p>
+    
+    <p>Then track the basics in one place — water, humidity, and the occasional foliar feed. Consistency, not heroics, is what grows a collection.</p>
+    
+    
+  </div>
+
+  <div class="news">
+    <h3>New guides, by genus, every week.</h3>
+    <p>The Field Guide from Leaf People.</p>
+    <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button class="btn" type="submit">Get Updates</button>
+    </form>
+  </div>
 </div>
+
+<section class="related related--narrow">
+  <div class="related-label">More from the Field Guide</div>
+  <div class="related-grid" id="relatedGrid"></div>
+</section>
 
 <footer class="footer">
   <div class="brand"><span class="mark" style="width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#06140C;">🌿</span> Leaf People</div>
