@@ -182,15 +182,15 @@ h1, h2, h3, h4, .display {
   background: var(--grad); display: grid; place-items: center; color: #06140C; font-size: 1rem;
 }
 .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
-.nav-links a { font-size: .9rem; font-weight: 500; color: var(--text-dim); transition: color .2s; }
+.nav-links a { font-size: .8rem; font-weight: 500; letter-spacing: .02em; color: var(--text-dim); transition: color .2s; }
 .nav-links a:hover { color: var(--text); }
 .nav-section { color: var(--text) !important; }
 .nav-divider { width: 1px; height: 20px; background: var(--border-strong); }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 /* "Stories" label sitting above the section tabs (The Leaf / Field Guide) */
-.nav-stories { display: inline-flex; flex-direction: column; align-items: flex-start; gap: .15rem; }
-.nav-stories .tag { font-size: .56rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #FA2A52; line-height: 1; }
-.nav-stories .tabs { display: flex; align-items: center; gap: 1.6rem; }
+.nav-stories { position: relative; display: inline-flex; align-items: center; padding: .35rem .9rem; border: 1px solid var(--border-strong); border-radius: 100px; }
+.nav-stories .tag { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: var(--bg); padding: 0 6px; font-size: .5rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #FA2A52; line-height: 1; }
+.nav-stories .tabs { display: flex; align-items: center; gap: 1.2rem; }
 
 /* ------------------------------------------------------------------ Cinematic layers */
 .cine { position: relative; overflow: hidden; }
@@ -315,7 +315,7 @@ section { position: relative; padding: 6rem 0; }
   background: linear-gradient(to top, var(--bg) 3%, rgba(11,15,13,.55) 55%, rgba(11,15,13,.25) 100%); }
 .art-band-inner { position: relative; z-index: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 7.5rem 2rem 2.2rem; }
 .art-band .breadcrumb { margin-bottom: .8rem; }
-.art-h1 { font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.03em; line-height: 1.05; margin: 0 0 .9rem; max-width: 22ch; }
+.art-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.02; margin: 0 0 .9rem; max-width: 22ch; }
 .art-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .7rem; font-size: .82rem; color: var(--text-dim); }
 .art-badge { display: inline-flex; align-items: center; padding: .25rem .7rem; border-radius: var(--r-pill);
   background: var(--grad-soft); border: 1px solid var(--border-strong);
