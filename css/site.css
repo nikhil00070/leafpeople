@@ -176,7 +176,7 @@ h1, h2, h3, h4, .display {
   border-bottom-color: var(--border);
 }
 .nav-brand { display: flex; align-items: center; gap: .6rem; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
-.nav-brand .leaf { color: var(--green); }
+.nav-brand .leaf { color: var(--green); margin-left: -0.45rem; }
 .nav-brand .mark {
   width: 30px; height: 30px; border-radius: 9px;
   background: var(--grad); display: grid; place-items: center; color: #06140C; font-size: 1rem;
