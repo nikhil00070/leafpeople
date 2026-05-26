@@ -6,3 +6,9 @@ venv/
 node_modules/
 .vercel
 .env
+
+# Source material — kept locally, never committed (too big)
+*.pages
+Leaf People Book.pdf
+Foliology*.pdf
+Screenshot 2026*.png
