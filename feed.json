@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-26",
-  "count": 5,
+  "count": 6,
   "items": [
     {
       "id": "field-guide/anthurium-velvet-care",
@@ -16,6 +16,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-velvet-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-velvet-care/_data.json",
       "image": "https://leafpeople.app/images/plants/plant-12.jpg"
+    },
+    {
+      "id": "field-guide/monstera-variegated-worth-it",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "monstera-variegated-worth-it",
+      "title": "Variegated Monsteras Worth the Price",
+      "category": "Monstera",
+      "description": "Not every variegated Monstera earns its price tag. Here's which cultivars deliver on leaf, growth habit, and long-term value.",
+      "date": "2026-05-26",
+      "url": "https://leafpeople.app/field-guide/monstera-variegated-worth-it",
+      "data_url": "https://leafpeople.app/field-guide/monstera-variegated-worth-it/_data.json",
+      "image": "https://leafpeople.app/images/plants/monstera.jpg"
     },
     {
       "id": "the-leaf/petiole-tells-the-truth",
