@@ -351,6 +351,7 @@ section { position: relative; padding: 6rem 0; }
 .our-story .deck { max-width: 56ch; }
 .byline { font-size: .82rem; color: var(--text-faint); letter-spacing: .04em; margin: .4rem 0 1.5rem; }
 .byline strong { color: var(--text-dim); font-weight: 700; }
+.subscribe-thanks { margin: 1rem 0 0; padding: .9rem 1rem; border-radius: 12px; background: rgba(74,222,128,.08); border: 1px solid rgba(74,222,128,.22); color: var(--text-dim); font-size: .95rem; }
 .book-row { display: grid; grid-template-columns: 320px 1fr; gap: 3rem; align-items: start; margin: 2.5rem 0 2rem; padding: 1.5rem 0; }
 .book-display { perspective: 1400px; padding: 1rem 0 2rem; }
 .book-cover { position: relative; transform: rotateY(-10deg) rotate(-1.5deg); transform-style: preserve-3d;

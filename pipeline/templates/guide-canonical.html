@@ -87,7 +87,9 @@
   <div class="news">
     <h3>New guides, by genus — every weekday.</h3>
     <p>The Field Guide from Leaf People.</p>
-    <form action="https://formsubmit.co/hello@percentearth.co" method="POST">
+    <form action="https://formsubmit.co/ajax/hello@percentearth.co" method="POST" data-subscribe-form>
+      <input type="hidden" name="_subject" value="New Leaf People interest">
+      <input type="hidden" name="_captcha" value="false">
       <input type="email" name="email" placeholder="your@email.com" required>
       <button class="btn" type="submit">Get Updates</button>
     </form>

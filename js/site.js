@@ -122,4 +122,26 @@
       })
       .catch(hideRelated);
   }
+
+  // Subscribe forms — AJAX submit, inline thanks, no page navigation.
+  // Sends an email to hello@percentearth.co via FormSubmit; nothing else is stored.
+  document.querySelectorAll("form[data-subscribe-form]").forEach((form) => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector("button[type=submit]");
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        await fetch(form.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data),
+        });
+      } catch (_) { /* still show thanks — request was attempted */ }
+      const thanks = document.createElement("p");
+      thanks.className = "subscribe-thanks";
+      thanks.textContent = "Thanks — we'll be in touch.";
+      form.replaceWith(thanks);
+    });
+  });
 })();
