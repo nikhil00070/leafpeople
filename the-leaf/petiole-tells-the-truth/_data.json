@@ -68,5 +68,7 @@
     }
   ],
   "slug": "petiole-tells-the-truth",
-  "hero": "/images/plants/field-skills.jpg"
+  "hero": "/images/plants/field-skills.jpg",
+  "body_image": "/images/plants/aroid.jpg",
+  "body_image_caption": "Cross-sections reveal what photos hide."
 }

@@ -68,5 +68,7 @@
     }
   ],
   "slug": "the-velvet-anthurium-problem",
-  "hero": "/images/plants/anthurium.jpg"
+  "hero": "/images/plants/anthurium.jpg",
+  "body_image": "/images/plants/the-leaf.jpg",
+  "body_image_caption": "Velvet pile deepens to near-black in low light."
 }

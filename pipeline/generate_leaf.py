@@ -33,6 +33,7 @@ SCHEMA = {
         "deck": {"type": "string"},
         "intro": {"type": "array", "items": {"type": "string"}},
         "pull_quote": {"type": "string"},
+        "body_image_caption": {"type": "string"},
         "sections": {
             "type": "array",
             "items": {
@@ -47,7 +48,7 @@ SCHEMA = {
         },
     },
     "required": ["meta_title", "meta_description", "category", "title", "deck",
-                 "intro", "pull_quote", "sections"],
+                 "intro", "pull_quote", "sections", "body_image_caption"],
 }
 
 
@@ -62,6 +63,8 @@ def build_prompt(item: dict) -> str:
         "Be concrete: name real species, cultivars, places, and techniques.\n"
         "Write meta_title as the bare headline only — do not append 'Understory', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"
+        "Also write `body_image_caption`: one short editorial-feeling caption "
+        "(5-10 words) for an inset photo placed mid-article.\n"
         "Return JSON only, matching the schema."
     )
 
@@ -78,7 +81,7 @@ def main() -> int:
     article["meta_title"] = common.clean_meta_title(article["meta_title"])
 
     # Slop gate
-    texts = [article["title"], article["deck"], article["pull_quote"], *article.get("intro", [])]
+    texts = [article["title"], article["deck"], article["pull_quote"], article.get("body_image_caption", ""), *article.get("intro", [])]
     for s in article["sections"]:
         texts.append(s["heading"])
         texts.extend(s["paragraphs"])
@@ -87,14 +90,16 @@ def main() -> int:
         print(f"[leaf] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    # Render
-    hero = common.assign_hero(item["slug"], common.used_heroes())
-    html = render("leaf-canonical.html", hero=hero, og_image=hero, **article)
+    # Render — assign a hero AND a unique body image (different from hero, and from any used)
+    used = common.used_images()
+    hero = common.assign_hero(item["slug"], used)
+    body_image = common.assign_hero(item["slug"] + "-body", used | {hero})
+    html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     (out_dir / "_data.json").write_text(
-        json.dumps({**article, "slug": item["slug"], "hero": hero}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps({**article, "slug": item["slug"], "hero": hero, "body_image": body_image}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
     print(f"[leaf] wrote {out_dir / 'index.html'}")
 

@@ -55,6 +55,7 @@ SCHEMA = {
                 "required": ["name", "location", "description", "tag"],
             },
         },
+        "body_image_caption": {"type": "string"},
         "body_sections": {
             "type": "array",
             "items": {
@@ -69,7 +70,7 @@ SCHEMA = {
         },
     },
     "required": ["meta_title", "meta_description", "genus", "title", "deck",
-                 "stat_number", "stat_label", "picks", "body_sections"],
+                 "stat_number", "stat_label", "picks", "body_sections", "body_image_caption"],
 }
 
 
@@ -83,6 +84,8 @@ def build_prompt(item: dict) -> str:
         "sections of specific care guidance (substrate, light, water & humidity, common mistakes).\n"
         "If the title names a count (e.g. 'Five ...'), the number of picks MUST match it.\n"
         "The `location` field is the plant's habit/type (e.g. 'Climber · velvet leaf'), not a place.\n"
+        "Also write `body_image_caption`: one short editorial-feeling caption "
+        "(5-10 words) for an inset photo placed mid-article.\n"
         "Write meta_title as the bare headline only — do not append 'Field Guide', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
@@ -101,7 +104,7 @@ def main() -> int:
     article["meta_title"] = common.clean_meta_title(article["meta_title"])
 
     # Slop gate
-    texts = [article["title"], article["deck"], article["stat_label"]]
+    texts = [article["title"], article["deck"], article["stat_label"], article.get("body_image_caption", "")]
     for p in article["picks"]:
         texts.extend([p["description"], p["tag"]])
     for s in article["body_sections"]:
@@ -112,14 +115,16 @@ def main() -> int:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    hero = common.assign_hero(item["slug"], common.used_heroes(), genus=article["genus"])
-    html = render("guide-canonical.html", hero=hero, og_image=hero, **article)
+    used = common.used_images()
+    hero = common.assign_hero(item["slug"], used, genus=article["genus"])
+    body_image = common.assign_hero(item["slug"] + "-body", used | {hero})
+    html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
 
     out_dir = common.SITE_ROOT / "field-guide" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     (out_dir / "_data.json").write_text(
-        json.dumps({**article, "slug": item["slug"], "hero": hero}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps({**article, "slug": item["slug"], "hero": hero, "body_image": body_image}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
     print(f"[guide] wrote {out_dir / 'index.html'}")
 

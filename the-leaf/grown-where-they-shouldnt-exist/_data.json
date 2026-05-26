@@ -68,5 +68,7 @@
     }
   ],
   "slug": "grown-where-they-shouldnt-exist",
-  "hero": "/images/plants/collector-culture.jpg"
+  "hero": "/images/plants/collector-culture.jpg",
+  "body_image": "/images/plants/plant-01.jpg",
+  "body_image_caption": "A grow cabinet at 78% humidity, late morning."
 }

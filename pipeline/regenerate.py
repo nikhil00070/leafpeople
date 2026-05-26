@@ -32,15 +32,21 @@ def _keep_date(manifest_path: Path, slug: str) -> str:
     return TODAY
 
 
-def _write(post: Path, article: dict, hero: str):
+def _write(post: Path, article: dict, hero: str, body_image: str = None):
     article["meta_title"] = common.clean_meta_title(article["meta_title"])
+    extras = {"hero": hero, "og_image": hero}
+    if body_image:
+        extras["body_image"] = body_image
     html = render(
         "leaf-canonical.html" if post.parent.name == "the-leaf" else "guide-canonical.html",
-        hero=hero, og_image=hero, **article,
+        **extras, **article,
     )
     (post / "index.html").write_text(html, encoding="utf-8")
+    payload = {**article, "slug": post.name, "hero": hero}
+    if body_image:
+        payload["body_image"] = body_image
     (post / "_data.json").write_text(
-        json.dumps({**article, "slug": post.name, "hero": hero}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
 
@@ -55,8 +61,10 @@ def regen_leaf(post: Path):
         texts.append(s["heading"]); texts.extend(s["paragraphs"])
     if slop_repair.check_article(texts):
         print("  slop detected — keeping existing version"); return
-    hero = data.get("hero") or common.assign_hero(post.name, common.used_heroes())
-    _write(post, article, hero)
+    used = common.used_images()
+    hero = data.get("hero") or common.assign_hero(post.name, used)
+    body_image = data.get("body_image") or common.assign_hero(post.name + "-body", used | {hero})
+    _write(post, article, hero, body_image)
     manifest = common.SITE_ROOT / "the-leaf" / "manifest.json"
     manifest_helpers.upsert(manifest, {
         "slug": post.name, "title": article["title"], "category": article["category"],
@@ -77,8 +85,10 @@ def regen_guide(post: Path):
         texts.append(s["heading"]); texts.extend(s["paragraphs"])
     if slop_repair.check_article(texts):
         print("  slop detected — keeping existing version"); return
-    hero = data.get("hero") or common.assign_hero(post.name, common.used_heroes(), genus=article["genus"])
-    _write(post, article, hero)
+    used = common.used_images()
+    hero = data.get("hero") or common.assign_hero(post.name, used, genus=article["genus"])
+    body_image = data.get("body_image") or common.assign_hero(post.name + "-body", used | {hero})
+    _write(post, article, hero, body_image)
     manifest = common.SITE_ROOT / "field-guide" / "manifest.json"
     manifest_helpers.upsert(manifest, {
         "slug": post.name, "title": article["title"], "category": article["genus"],

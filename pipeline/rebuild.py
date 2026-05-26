@@ -97,8 +97,8 @@ def extract_guide(h: str) -> dict:
 
 
 SECTIONS = {
-    "the-leaf": ("leaf-canonical.html", extract_leaf, lambda d: common.assign_hero(d["slug"], common.used_heroes())),
-    "field-guide": ("guide-canonical.html", extract_guide, lambda d: common.assign_hero(d["slug"], common.used_heroes(), genus=d["genus"])),
+    "the-leaf": ("leaf-canonical.html", extract_leaf, lambda d: common.assign_hero(d["slug"], common.used_images())),
+    "field-guide": ("guide-canonical.html", extract_guide, lambda d: common.assign_hero(d["slug"], common.used_images(), genus=d["genus"])),
 }
 
 

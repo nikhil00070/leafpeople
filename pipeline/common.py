@@ -133,8 +133,8 @@ def leaf_hero(category: str) -> str:
 _GENUS_FILES = set(GUIDE_HERO.values())
 
 
-def used_heroes() -> set:
-    """Every hero/thumb already assigned across both sections."""
+def used_images() -> set:
+    """Every hero AND body image already assigned across both sections — for uniqueness."""
     used = set()
     for section in ("the-leaf", "field-guide"):
         path = SITE_ROOT / section / "manifest.json"
@@ -142,6 +142,15 @@ def used_heroes() -> set:
             for item in json.loads(path.read_text(encoding="utf-8")):
                 if item.get("thumb"):
                     used.add(item["thumb"])
+        for d in (SITE_ROOT / section).glob("*/_data.json"):
+            try:
+                data = json.loads(d.read_text(encoding="utf-8"))
+                for k in ("hero", "body_image"):
+                    v = data.get(k)
+                    if v:
+                        used.add(v)
+            except Exception:
+                pass
     return used
 
 

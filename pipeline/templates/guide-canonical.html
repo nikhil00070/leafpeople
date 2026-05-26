@@ -69,6 +69,13 @@
   </div>
   {% endfor %}
 
+  {% if body_image %}
+  <figure class="art-body-img">
+    <img src="{{ body_image }}" alt="{{ body_image_caption or '' }}" loading="lazy">
+    {% if body_image_caption %}<figcaption class="img-caption">{{ body_image_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
   <div class="prose" style="margin-top:2.5rem;">
     {% for section in body_sections %}
     <h2>{{ section.heading }}</h2>
