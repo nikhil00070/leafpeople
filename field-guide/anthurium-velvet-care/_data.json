@@ -1,0 +1,69 @@
+{
+  "meta_title": "Caring for Velvet-Leaf Anthuriums",
+  "meta_description": "Species, substrate, humidity, and common mistakes for growing velvet-leaf anthuriums — a practical guide for serious collectors.",
+  "genus": "Anthurium",
+  "title": "Caring for Velvet-Leaf Anthuriums",
+  "deck": "The genus rewards precision: get the substrate, airflow, and humidity right and these equatorial velvets will push leaves that stop people mid-sentence.",
+  "stat_number": "85%",
+  "stat_label": "Minimum relative humidity most velvet-leaf anthuriums need to hold leaf texture without crisping",
+  "picks": [
+    {
+      "name": "Anthurium crystallinum",
+      "location": "Terrestrial to hemi-epiphytic · velvet leaf",
+      "description": "The benchmark species. Leaves emerge a deep bronze, maturing to near-black green with silver-white primary venation that catches light like stitching. Petioles are D-shaped in cross-section — a reliable field character that separates it from close lookalikes. In stable conditions above 80% RH it grows steadily and recovers from minor neglect better than most velvet species, making it the natural starting point for anyone new to the group.",
+      "tag": "Best starting point"
+    },
+    {
+      "name": "Anthurium magnificum",
+      "location": "Terrestrial · velvet leaf",
+      "description": "Where _crystallinum_ has graceful venation, _magnificum_ goes architectural: leaves can exceed 60 cm on mature plants, with pale green to white veins quilted into thick, matte dark-green tissue. The petiole is distinctly four-winged, which immediately separates it from _crystallinum_ in a mixed collection. It grows slower than most collectors expect — one substantial leaf every six to eight weeks under good conditions — but the payoff per leaf is hard to argue with.",
+      "tag": "Most architectural"
+    },
+    {
+      "name": "Anthurium warocqueanum",
+      "location": "Epiphytic · pendant velvet leaf",
+      "description": "_Warocqueanum_ is the species collectors describe as \"the queen\" without irony: mature leaves reach a meter or more, pendant, with fine silver venation on a dark ground that deepens with age. It is also genuinely demanding — it wants to root into an airy epiphytic mix, resents waterlogging entirely, and sulks in humidity below 85%. Grow it mounted on a plaque or in a coarse bark-dominant mix with near-constant airflow and it will eventually justify every inconvenience.",
+      "tag": "High commitment"
+    },
+    {
+      "name": "Anthurium forgetii",
+      "location": "Epiphytic · velvet leaf",
+      "description": "_Forgetii_ lacks the typical sinus at the base of the leaf, giving it a teardrop outline that reads as quietly unusual rather than showy. Venation is silver to pale green, and the back surface is a contrasting pale matte — a detail that matters in hanging or mounted specimens where the undersides show. It is compact relative to _crystallinum_, making it workable in smaller growing spaces, and it adapts to mounted culture without the drama that _warocqueanum_ demands.",
+      "tag": "Space-efficient"
+    },
+    {
+      "name": "Anthurium dressleri",
+      "location": "Epiphytic · velvet leaf",
+      "description": "Rarer in collections than the previous four, _dressleri_ has narrow, elongated leaves with a deep velvety surface and venation that runs close and parallel, giving the blade an almost ribbed appearance. It originates from humid lowland forest in Panama and wants warmth year-round — a night temperature drop below 18 °C is enough to stall it. Sourcing a verified specimen takes effort, but tissue-culture material has improved availability without the provenance uncertainty that attached to wild-collected plants a decade ago.",
+      "tag": "Worth the search"
+    }
+  ],
+  "body_sections": [
+    {
+      "heading": "Substrate and Roots",
+      "paragraphs": [
+        "Velvet-leaf anthuriums fail more often in the pot than anywhere else. Most species in this group are epiphytic or grow in leaf-litter accumulations over rocky substrate in the wild — they have never evolved for dense, moisture-retaining soil, and they will tell you so quickly if you pot them in it. Roots need to exchange gas between waterings; compaction or prolonged saturation causes rapid rot at the root-stem junction, often before any above-ground symptoms appear.",
+        "A workable base mix is roughly equal parts coarse perlite, orchid-grade bark (12–18 mm), and either chunky coco husk chips or coarse pumice. The goal is a mix that drains freely within seconds of watering and retains just enough moisture to stay damp — not wet — at the core for 24 to 48 hours. If you push a finger an inch into the mix and it feels wet rather than cool-damp, wait another day before watering again.",
+        "For species like _warocqueanum_ and _dressleri_ that are strongly epiphytic in nature, mounted culture on a tree-fern slab or cork board with sphagnum packed around the root ball outperforms any container mix. Mounts dry faster, which forces more frequent misting but eliminates the rot risk almost entirely. The trade-off is that mounted plants in low-humidity environments will crisp at the leaf margins faster than potted ones — manage accordingly."
+      ]
+    },
+    {
+      "heading": "Light and Temperature",
+      "paragraphs": [
+        "Velvet texture is produced by papillate epidermal cells that scatter light rather than reflecting it directly. Those same cells are delicate: direct sun for even an hour will bleach and scar a leaf irreversibly. Bright, indirect light — the kind that comes from a north- or east-facing window with no direct beam, or from a grow light positioned 30–40 cm above the canopy at 10,000–15,000 lux — is the correct range. Under supplemental lighting, a 12-hour photoperiod is adequate; longer periods do not accelerate growth meaningfully and can increase substrate dry-out.",
+        "Temperature matters more for this group than most collectors account for. The majority of velvet-leaf species originate from lowland or mid-elevation humid forest between 15° N and 10° S latitude, where night temperatures rarely fall below 18–20 °C. _Crystallinum_ and _magnificum_ tolerate brief dips to 15 °C without lasting damage, but _warocqueanum_ and _dressleri_ will stall growth and become susceptible to root stress at those temperatures. If your growing space drops below 18 °C overnight in winter, a small ceramic heat mat under the pots will protect roots without heating the foliage.",
+        "One overlooked variable is airflow. Still, humid air is not the same as the humid moving air these plants experience at the forest edge. A small fan running on low, oscillating across the growing area rather than directly at plants, keeps the boundary layer of air around leaves from becoming a site for fungal infection — especially relevant after misting or in enclosed cabinets where humidity is dialed high."
+      ]
+    },
+    {
+      "heading": "Watering, Humidity, and Common Mistakes",
+      "paragraphs": [
+        "The most common mistake with velvet anthuriums is treating them like tropical foliage plants that want consistent moisture. They want consistent humidity — around the leaves — and inconsistent moisture at the roots, meaning the substrate should wet thoroughly and then be allowed to approach dryness before the next watering. A pot that stays evenly moist all week is a pot that is building toward root rot.",
+        "Humidity targets: 75% RH is a survivable floor for most species; 85–90% is where velvet texture develops fully and new leaves unfurl without edge damage. If you are not running an enclosed cabinet or greenhouse shelf, a simple ultrasonic humidifier on a hygrostat achieves this without constant manual intervention. Measure at canopy level, not at a wall sensor across the room — the reading can differ by 15 percentage points.",
+        "Two other mistakes appear often in grower forums. First, fertilizing at full label strength: velvet anthuriums in chunky, fast-draining mix respond better to quarter- or half-strength balanced fertilizer applied at every other watering during the growing season. Over-fertilization presents as brown leaf-tip burn that looks deceptively like humidity damage. Second, repotting prematurely — these plants grow with more confidence when slightly root-bound and resent having their roots disturbed into a larger volume of fresh mix before they have colonized the current container. Wait until roots are visibly circling the base or escaping the drainage holes before moving up a pot size."
+      ]
+    }
+  ],
+  "slug": "anthurium-velvet-care",
+  "hero": "/images/plants/plant-12.jpg"
+}

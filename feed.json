@@ -1,9 +1,22 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-05-25",
-  "count": 4,
+  "updated": "2026-05-26",
+  "count": 5,
   "items": [
+    {
+      "id": "field-guide/anthurium-velvet-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-velvet-care",
+      "title": "Caring for Velvet-Leaf Anthuriums",
+      "category": "Anthurium",
+      "description": "Species, substrate, humidity, and common mistakes for growing velvet-leaf anthuriums — a practical guide for serious collectors.",
+      "date": "2026-05-26",
+      "url": "https://leafpeople.app/field-guide/anthurium-velvet-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-velvet-care/_data.json",
+      "image": "https://leafpeople.app/images/plants/plant-12.jpg"
+    },
     {
       "id": "the-leaf/petiole-tells-the-truth",
       "section": "the-leaf",
