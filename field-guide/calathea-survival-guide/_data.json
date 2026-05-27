@@ -74,6 +74,8 @@
     }
   ],
   "slug": "calathea-survival-guide",
-  "hero": "/images/plants/field-skills.jpg",
-  "body_image": "/images/plants/plant-16.jpg"
+  "hero": "/images/source/stock/calathea-survival-guide-hero.jpg",
+  "body_image": "/images/source/stock/calathea-survival-guide-body.jpg",
+  "body_image_attribution": "Dr. Alexey Yakovlev / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Dr. Alexey Yakovlev / iNaturalist (CC BY 4.0)"
 }

@@ -69,6 +69,8 @@
     }
   ],
   "slug": "hoya-leaf-based-id",
-  "hero": "/images/plants/plant-03.jpg",
-  "body_image": "/images/plants/plant-02.jpg"
+  "hero": "/images/source/stock/hoya-leaf-based-id-hero.jpg",
+  "body_image": "/images/source/stock/hoya-leaf-based-id-body.jpg",
+  "body_image_attribution": "luluchouette / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "luluchouette / iNaturalist (CC BY 4.0)"
 }

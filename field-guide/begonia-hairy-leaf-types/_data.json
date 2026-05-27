@@ -76,6 +76,8 @@
     }
   ],
   "slug": "begonia-hairy-leaf-types",
-  "hero": "/images/plants/plant-12.jpg",
-  "body_image": "/images/plants/plant-18.jpg"
+  "hero": "/images/source/stock/begonia-hairy-leaf-types-hero.jpg",
+  "body_image": "/images/source/stock/begonia-hairy-leaf-types-body.jpg",
+  "body_image_attribution": "Yoannis Domínguez / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Yoannis Domínguez / iNaturalist (CC BY 4.0)"
 }

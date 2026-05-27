@@ -65,7 +65,9 @@
     }
   ],
   "slug": "philodendron-beginners",
-  "hero": "/images/plants/philodendron.jpg",
-  "body_image": "/images/plants/plant-04.jpg",
-  "body_image_caption": "A 'Birkin' settling in under bright indirect light."
+  "hero": "/images/source/stock/philodendron-beginners-hero.jpg",
+  "body_image": "/images/source/stock/philodendron-beginners-body.jpg",
+  "body_image_caption": "A 'Birkin' settling in under bright indirect light.",
+  "body_image_attribution": "Alison Guerra / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Alison Guerra / iNaturalist (CC BY 4.0)"
 }

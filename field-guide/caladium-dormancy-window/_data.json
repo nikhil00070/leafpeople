@@ -66,6 +66,8 @@
     }
   ],
   "slug": "caladium-dormancy-window",
-  "hero": "/images/plants/plant-03.jpg",
-  "body_image": "/images/plants/plant-06.jpg"
+  "hero": "/images/source/stock/caladium-dormancy-window-hero.jpg",
+  "body_image": "/images/source/stock/caladium-dormancy-window-body.jpg",
+  "body_image_attribution": "Helio Lourencini / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Greg III Espera / iNaturalist (CC BY 4.0)"
 }

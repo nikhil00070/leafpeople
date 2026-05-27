@@ -61,6 +61,8 @@
     }
   ],
   "slug": "amydrium-medium-care",
-  "hero": "/images/plants/plant-01.jpg",
-  "body_image": "/images/plants/plant-13.jpg"
+  "hero": "/images/source/stock/amydrium-medium-care-hero.jpg",
+  "body_image": "/images/source/stock/amydrium-medium-care-body.jpg",
+  "body_image_attribution": "Isaac Krone / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "胡正恆(Jackson Hu) / iNaturalist (CC BY 4.0)"
 }

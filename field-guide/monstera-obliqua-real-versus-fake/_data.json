@@ -61,6 +61,8 @@
     }
   ],
   "slug": "monstera-obliqua-real-versus-fake",
-  "hero": "/images/plants/plant-17.jpg",
-  "body_image": "/images/plants/plant-13.jpg"
+  "hero": "/images/source/stock/monstera-obliqua-real-versus-fake-hero.jpg",
+  "body_image": "/images/source/stock/monstera-obliqua-real-versus-fake-body.jpg",
+  "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)"
 }

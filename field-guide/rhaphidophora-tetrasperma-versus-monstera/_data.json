@@ -68,6 +68,8 @@
     }
   ],
   "slug": "rhaphidophora-tetrasperma-versus-monstera",
-  "hero": "/images/plants/plant-06.jpg",
-  "body_image": "/images/plants/plant-06.jpg"
+  "hero": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-hero.jpg",
+  "body_image": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-body.jpg",
+  "body_image_attribution": "Zac Peterson / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Zac Peterson / iNaturalist (CC BY 4.0)"
 }

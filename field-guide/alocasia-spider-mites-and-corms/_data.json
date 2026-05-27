@@ -66,6 +66,8 @@
     }
   ],
   "slug": "alocasia-spider-mites-and-corms",
-  "hero": "/images/plants/plant-16.jpg",
-  "body_image": "/images/plants/aroid.jpg"
+  "hero": "/images/source/stock/alocasia-spider-mites-and-corms-hero.jpg",
+  "body_image": "/images/source/stock/alocasia-spider-mites-and-corms-body.jpg",
+  "body_image_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Greg III Espera / iNaturalist (CC BY 4.0)"
 }

@@ -61,6 +61,8 @@
     }
   ],
   "slug": "philodendron-gloriosum-versus-mamei",
-  "hero": "/images/plants/plant-03.jpg",
-  "body_image": "/images/plants/plant-10.jpg"
+  "hero": "/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg",
+  "body_image": "/images/source/stock/philodendron-gloriosum-versus-mamei-body.jpg",
+  "body_image_attribution": "Kevin Faccenda / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Kevin Faccenda / iNaturalist (CC BY 4.0)"
 }

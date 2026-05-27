@@ -68,6 +68,8 @@
     }
   ],
   "slug": "begonia-rex-care",
-  "hero": "/images/plants/begonia.jpg",
-  "body_image": "/images/plants/plant-18.jpg"
+  "hero": "/images/source/stock/begonia-rex-care-hero.jpg",
+  "body_image": "/images/source/stock/begonia-rex-care-body.jpg",
+  "body_image_attribution": "Yoannis Domínguez / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Yoannis Domínguez / iNaturalist (CC BY 4.0)"
 }

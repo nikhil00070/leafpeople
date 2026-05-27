@@ -67,6 +67,8 @@
     }
   ],
   "slug": "aglaonema-collector-cultivars",
-  "hero": "/images/plants/plant-06.jpg",
-  "body_image": "/images/plants/plant-02.jpg"
+  "hero": "/images/source/stock/aglaonema-collector-cultivars-hero.jpg",
+  "body_image": "/images/source/stock/aglaonema-collector-cultivars-body.jpg",
+  "body_image_attribution": "Kevin Faccenda / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Kevin Faccenda / iNaturalist (CC BY 4.0)"
 }

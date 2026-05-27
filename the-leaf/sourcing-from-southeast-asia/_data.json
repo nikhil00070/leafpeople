@@ -61,6 +61,8 @@
     }
   ],
   "slug": "sourcing-from-southeast-asia",
-  "hero": "/images/plants/plant-14.jpg",
-  "body_image": "/images/plants/plant-17.jpg"
+  "hero": "/images/source/stock/sourcing-from-southeast-asia-hero.jpg",
+  "body_image": "/images/source/stock/sourcing-from-southeast-asia-body.jpg",
+  "body_image_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Caleb Catto / iNaturalist (CC BY 4.0)"
 }

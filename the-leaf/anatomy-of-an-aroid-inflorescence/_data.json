@@ -60,6 +60,8 @@
     }
   ],
   "slug": "anatomy-of-an-aroid-inflorescence",
-  "hero": "/images/plants/plant-08.jpg",
-  "body_image": "/images/plants/plant-15.jpg"
+  "hero": "/images/source/stock/anatomy-of-an-aroid-inflorescence-hero.jpg",
+  "body_image": "/images/source/stock/anatomy-of-an-aroid-inflorescence-body.jpg",
+  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)"
 }
