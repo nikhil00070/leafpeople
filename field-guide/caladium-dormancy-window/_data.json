@@ -69,5 +69,7 @@
   "hero": "/images/source/stock/caladium-dormancy-window-hero.jpg",
   "body_image": "/images/source/stock/caladium-dormancy-window-body.jpg",
   "body_image_attribution": "Helio Lourencini / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 106515006,
+  "body_image_inat_id": 263495023
 }

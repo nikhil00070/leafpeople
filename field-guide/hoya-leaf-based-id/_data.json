@@ -72,5 +72,7 @@
   "hero": "/images/source/stock/hoya-leaf-based-id-hero.jpg",
   "body_image": "/images/source/stock/hoya-leaf-based-id-body.jpg",
   "body_image_attribution": "luluchouette / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "zebedeugalinha / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "zebedeugalinha / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 474745803,
+  "body_image_inat_id": 260992534
 }

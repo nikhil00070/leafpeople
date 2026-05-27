@@ -69,5 +69,7 @@
   "hero": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg",
   "body_image": "/images/source/stock/epipremnum-fenestration-timeline-body.jpg",
   "body_image_attribution": "Jacy Chen / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Jacy Chen / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "Jacy Chen / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 111838555,
+  "body_image_inat_id": 111838528
 }

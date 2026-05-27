@@ -70,5 +70,7 @@
   "hero": "/images/source/stock/aglaonema-collector-cultivars-hero.jpg",
   "body_image": "/images/source/stock/aglaonema-collector-cultivars-body.jpg",
   "body_image_attribution": "Maria Janeiro / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Maria Janeiro / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "Maria Janeiro / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 245114141,
+  "body_image_inat_id": 245114116
 }

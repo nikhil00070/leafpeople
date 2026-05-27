@@ -71,5 +71,7 @@
   "hero": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-hero.jpg",
   "body_image": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-body.jpg",
   "body_image_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 363589862,
+  "body_image_inat_id": 363589872
 }

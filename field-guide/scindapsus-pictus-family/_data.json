@@ -64,5 +64,7 @@
   "hero": "/images/source/stock/scindapsus-pictus-family-hero.jpg",
   "body_image": "/images/source/stock/scindapsus-pictus-family-body.jpg",
   "body_image_attribution": "Alexis Murray / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Alexis Murray / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "Alexis Murray / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 37736036,
+  "body_image_inat_id": 37736046
 }

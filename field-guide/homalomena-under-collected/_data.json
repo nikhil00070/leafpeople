@@ -69,5 +69,7 @@
   "hero": "/images/source/stock/homalomena-under-collected-hero.jpg",
   "body_image": "/images/source/stock/homalomena-under-collected-body.jpg",
   "body_image_attribution": "Feo Marshmallow / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Greg III Espera / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "Greg III Espera / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 100627438,
+  "body_image_inat_id": 284013127
 }

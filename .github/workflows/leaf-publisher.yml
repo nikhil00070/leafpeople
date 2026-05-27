@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +31,24 @@ jobs:
           python generate_sitemap.py
           python generate_feed.py
 
+      - name: Detect generated article
+        id: gen
+        run: |
+          slug=$(git status --porcelain the-leaf/ | grep '^?? the-leaf/' | head -1 | sed 's|^?? the-leaf/||' | sed 's|/.*||')
+          if [ -n "$slug" ] && [ -f "the-leaf/$slug/_data.json" ]; then
+            title=$(python3 -c "import json; print(json.load(open('the-leaf/$slug/_data.json'))['title'])")
+            hero=$(python3 -c "import json; print(json.load(open('the-leaf/$slug/_data.json')).get('hero',''))")
+            category=$(python3 -c "import json; print(json.load(open('the-leaf/$slug/_data.json')).get('category',''))")
+            deck=$(python3 -c "import json; print(json.load(open('the-leaf/$slug/_data.json')).get('deck',''))")
+            echo "slug=$slug" >> $GITHUB_OUTPUT
+            echo "title=$title" >> $GITHUB_OUTPUT
+            echo "hero=$hero" >> $GITHUB_OUTPUT
+            echo "category=$category" >> $GITHUB_OUTPUT
+            echo "deck<<EOF" >> $GITHUB_OUTPUT
+            echo "$deck" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit & push
         run: |
           git config user.name "leaf-people-bot"
@@ -38,6 +57,35 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing to publish."
           else
-            git commit -m "The Leaf: publish next queued article"
+            git commit -m "The Leaf: draft article (pending review)"
             git push
           fi
+
+      - name: Create review issue
+        if: steps.gen.outputs.slug != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          slug="${{ steps.gen.outputs.slug }}"
+          title="${{ steps.gen.outputs.title }}"
+          category="${{ steps.gen.outputs.category }}"
+          hero="${{ steps.gen.outputs.hero }}"
+          deck="${{ steps.gen.outputs.deck }}"
+          gh issue create \
+            --title "Review: $title" \
+            --label "review-queue" \
+            --body "**Section:** Understory · **${category}**
+          **Slug:** \`the-leaf/${slug}\`
+
+          ${deck}
+
+          ![hero](https://leafpeople.app${hero})
+
+          ### Next step
+
+          1. [**Open the review queue →**](https://leafpeople.app/review)
+          2. Inspect the hero + body images and caption
+          3. Use the [Publish workflow](https://github.com/${{ github.repository }}/actions/workflows/publish.yml) with slug \`the-leaf/${slug}\` to publish, or pick reject
+
+          ---
+          _Auto-created by leaf-publisher cron. Closing this issue does not publish — use the Publish workflow._" || echo "Issue create failed (non-fatal)"

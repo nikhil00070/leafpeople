@@ -71,5 +71,7 @@
   "hero": "/images/source/stock/begonia-rex-care-hero.jpg",
   "body_image": "/images/source/stock/begonia-rex-care-body.jpg",
   "body_image_attribution": "Juan Cruzado Cortés / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 66924168,
+  "body_image_inat_id": 583136390
 }

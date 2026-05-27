@@ -63,6 +63,8 @@
   "slug": "the-collectors-lexicon",
   "hero": "/images/source/stock/the-collectors-lexicon-hero.jpg",
   "body_image": "/images/source/stock/the-collectors-lexicon-body.jpg",
-  "hero_attribution": "Kevin Faccenda / iNaturalist (CC BY 4.0)",
-  "body_image_attribution": "Alexis Murray / iNaturalist (CC BY 4.0)"
+  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "body_image_attribution": "scallions / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 329292905,
+  "body_image_inat_id": 294303314
 }

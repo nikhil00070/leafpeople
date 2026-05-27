@@ -56,3 +56,32 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Close matching review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Find issues labeled 'review-queue' whose title matches this slug's article
+          slug="${{ inputs.slug }}"
+          art_slug="${slug##*/}"
+          # Look up the article title from manifest
+          section="${slug%/*}"
+          title=$(python3 -c "
+          import json
+          for e in json.load(open('${section}/manifest.json')):
+              if e['slug'] == '${art_slug}': print(e['title']); break
+          " 2>/dev/null || echo "")
+          if [ -n "$title" ]; then
+            # Find issue with matching title and close
+            issue_number=$(gh issue list --label "review-queue" --state open --json number,title \
+              --jq ".[] | select(.title == \"Review: $title\") | .number" | head -1)
+            if [ -n "$issue_number" ]; then
+              ACTION="${{ inputs.action }}"
+              if [ "$ACTION" = "reject" ]; then
+                gh issue close "$issue_number" --comment "Rejected via publish workflow."
+              else
+                gh issue close "$issue_number" --comment "Published to live."
+              fi
+              echo "Closed issue #$issue_number"
+            fi
+          fi || echo "Issue close failed (non-fatal)"

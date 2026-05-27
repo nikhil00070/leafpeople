@@ -62,6 +62,8 @@
   "slug": "anatomy-of-an-aroid-inflorescence",
   "hero": "/images/source/stock/anatomy-of-an-aroid-inflorescence-hero.jpg",
   "body_image": "/images/source/stock/anatomy-of-an-aroid-inflorescence-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "hero_attribution": "Rafael Medina / iNaturalist (CC BY 4.0)"
+  "body_image_attribution": "Kai Squires / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
+  "hero_inat_id": 80194737,
+  "body_image_inat_id": 175086639
 }
