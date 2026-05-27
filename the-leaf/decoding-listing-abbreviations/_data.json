@@ -61,6 +61,8 @@
     }
   ],
   "slug": "decoding-listing-abbreviations",
-  "hero": "/images/source/book/decoding-listing-abbreviations-hero.jpg",
-  "body_image": "/images/source/book/decoding-listing-abbreviations-body.jpg"
+  "hero": "/images/source/stock/decoding-listing-abbreviations-hero.jpg",
+  "body_image": "/images/source/stock/decoding-listing-abbreviations-body.jpg",
+  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "body_image_attribution": "zebedeugalinha / iNaturalist (CC BY 4.0)"
 }

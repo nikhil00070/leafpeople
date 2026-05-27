@@ -60,7 +60,8 @@
     }
   ],
   "slug": "variegation-genetics-plain-english",
-  "hero": "/images/source/book/variegation-genetics-plain-english-hero.jpg",
+  "hero": "/images/source/stock/variegation-genetics-plain-english-hero.jpg",
   "body_image": "/images/source/stock/variegation-genetics-plain-english-body.jpg",
-  "body_image_attribution": "zebedeugalinha / iNaturalist (CC BY 4.0)"
+  "body_image_attribution": "Robert Taylor / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "zebedeugalinha / iNaturalist (CC BY 4.0)"
 }

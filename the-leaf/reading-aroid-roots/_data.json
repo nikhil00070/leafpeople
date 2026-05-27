@@ -61,6 +61,8 @@
     }
   ],
   "slug": "reading-aroid-roots",
-  "hero": "/images/source/book/reading-aroid-roots-hero.jpg",
-  "body_image": "/images/source/book/reading-aroid-roots-body.jpg"
+  "hero": "/images/source/stock/reading-aroid-roots-hero.jpg",
+  "body_image": "/images/source/stock/reading-aroid-roots-body.jpg",
+  "hero_attribution": "no rights reserved / iNaturalist (CC BY 4.0)",
+  "body_image_attribution": "no rights reserved / iNaturalist (CC BY 4.0)"
 }

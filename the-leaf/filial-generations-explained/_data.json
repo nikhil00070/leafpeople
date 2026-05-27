@@ -61,6 +61,8 @@
     }
   ],
   "slug": "filial-generations-explained",
-  "hero": "/images/source/book/filial-generations-explained-hero.jpg",
-  "body_image": "/images/source/book/filial-generations-explained-body.jpg"
+  "hero": "/images/source/stock/filial-generations-explained-hero.jpg",
+  "body_image": "/images/source/stock/filial-generations-explained-body.jpg",
+  "hero_attribution": "Trevor Van Loon / iNaturalist (CC BY 4.0)",
+  "body_image_attribution": "no rights reserved / iNaturalist (CC BY 4.0)"
 }

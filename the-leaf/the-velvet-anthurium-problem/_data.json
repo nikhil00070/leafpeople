@@ -69,6 +69,7 @@
   ],
   "slug": "the-velvet-anthurium-problem",
   "hero": "/images/source/book/the-velvet-anthurium-problem-hero.jpg",
-  "body_image": "/images/source/book/the-velvet-anthurium-problem-body.jpg",
-  "body_image_caption": "Velvet pile deepens to near-black in low light."
+  "body_image": "/images/source/stock/the-velvet-anthurium-problem-body.jpg",
+  "body_image_caption": "Velvet pile deepens to near-black in low light.",
+  "body_image_attribution": "Attila Oláh / iNaturalist (CC BY 4.0)"
 }

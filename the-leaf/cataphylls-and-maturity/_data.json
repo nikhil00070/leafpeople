@@ -61,6 +61,8 @@
     }
   ],
   "slug": "cataphylls-and-maturity",
-  "hero": "/images/source/book/cataphylls-and-maturity-hero.jpg",
-  "body_image": "/images/source/book/cataphylls-and-maturity-body.jpg"
+  "hero": "/images/source/stock/cataphylls-and-maturity-hero.jpg",
+  "body_image": "/images/source/stock/cataphylls-and-maturity-body.jpg",
+  "hero_attribution": "Attila Oláh / iNaturalist (CC BY 4.0)",
+  "body_image_attribution": "Nicolás Baresch Uribe / iNaturalist (CC BY 4.0)"
 }

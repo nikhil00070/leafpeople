@@ -69,6 +69,7 @@
   ],
   "slug": "petiole-tells-the-truth",
   "hero": "/images/source/book/petiole-tells-the-truth-hero.jpg",
-  "body_image": "/images/source/book/petiole-tells-the-truth-body.jpg",
-  "body_image_caption": "Cross-sections reveal what photos hide."
+  "body_image": "/images/source/stock/petiole-tells-the-truth-body.jpg",
+  "body_image_caption": "Cross-sections reveal what photos hide.",
+  "body_image_attribution": "Nicolás Baresch Uribe / iNaturalist (CC BY 4.0)"
 }

@@ -69,7 +69,8 @@
     }
   ],
   "slug": "inspecting-a-stem-cut",
-  "hero": "/images/source/book/inspecting-a-stem-cut-hero.jpg",
+  "hero": "/images/source/stock/inspecting-a-stem-cut-hero.jpg",
   "body_image": "/images/source/stock/inspecting-a-stem-cut-body.jpg",
-  "body_image_attribution": "Monica Ventrice / iNaturalist (CC BY 4.0)"
+  "body_image_attribution": "Henrique Nogueira / iNaturalist (CC BY 4.0)",
+  "hero_attribution": "Monica Ventrice / iNaturalist (CC BY 4.0)"
 }
