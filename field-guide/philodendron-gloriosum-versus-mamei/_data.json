@@ -1,0 +1,66 @@
+{
+  "meta_title": "Telling Gloriosum from Mamei, Dean McDowell, and Pastazanum",
+  "meta_description": "A collector's key to four creeping velvet philodendrons that confuse even seasoned growers — by leaf, petiole, and crawl.",
+  "genus": "Philodendron",
+  "title": "Telling Gloriosum from Mamei, Dean McDowell, and Pastazanum",
+  "deck": "Four creeping velvet philodendrons, four ways to tell them apart before you spend rare-plant money on a mislabeled cutting.",
+  "stat_number": "4",
+  "stat_label": "crawlers, constantly confused",
+  "picks": [
+    {
+      "name": "Philodendron gloriosum",
+      "location": "Crawler · velvet leaf",
+      "description": "The benchmark. Heart-shaped, matte velvet blades with crisp white or pale pink primary veins and a fine pink margin on fresh leaves. Petiole is round in cross-section, slightly grooved on top, and usually shorter than the leaf is long. Native to Colombia; stays a true terrestrial crawler with a thick, horizontal rhizome.",
+      "tag": "The benchmark"
+    },
+    {
+      "name": "Philodendron mamei",
+      "location": "Crawler · silver-dappled",
+      "description": "Easy tell: silver dappling across the leaf surface, like someone flicked aluminum paint at it. The blade is broader and more rounded than _gloriosum_, with a more deeply quilted texture. Petiole is conspicuously winged and ruffled along its length — the single most reliable ID feature. Ecuadorian, vigorous, and faster than _gloriosum_ in a warm greenhouse.",
+      "tag": "Look at the petiole"
+    },
+    {
+      "name": "Philodendron 'Dean McDowell'",
+      "location": "Crawler · hybrid vigor",
+      "description": "A _pastazanum_ × _gloriosum_ hybrid, and it shows. Larger and glossier than _gloriosum_, with a sub-velvet sheen rather than true matte velvet, and broader lobes at the sinus. Petiole is round, smooth, and noticeably longer than either parent's. Holds leaves more upright and grows faster than either parent under the same conditions.",
+      "tag": "The hybrid"
+    },
+    {
+      "name": "Philodendron pastazanum",
+      "location": "Crawler · glossy leaf",
+      "description": "Glossy, not velvet — that alone rules out _gloriosum_ and _mamei_. Leaves are wider than long in mature plants, with a deep, almost closed basal sinus and bold, sunken secondary veins. Petiole is round and smooth. The rhizome runs flat along the substrate and will happily walk off the side of a pot.",
+      "tag": "Gloss, not velvet"
+    }
+  ],
+  "body_image_caption": "Two petioles, side by side — winged versus round.",
+  "body_sections": [
+    {
+      "heading": "A working key, in the order you should actually look",
+      "paragraphs": [
+        "Start with the leaf surface, because it eliminates half the field in one glance. _Gloriosum_ and _mamei_ are velvet — light sinks into the blade. _Pastazanum_ and most 'Dean McDowell' clones are glossy or sub-velvet — light bounces. If a seller's photo shows a hard highlight running across the blade, it isn't _gloriosum_, no matter what the tag says.",
+        "Next, look at the petiole in cross-section and along its length. _Mamei_ has a distinctly winged, often ruffled petiole — run a finger along it and you'll feel the ridges. _Gloriosum_, _pastazanum_, and 'Dean McDowell' all have essentially round petioles, sometimes with a shallow adaxial groove. Petiole length relative to leaf length is the next cut: _gloriosum_ short, _pastazanum_ roughly equal, 'Dean McDowell' noticeably longer.",
+        "Finally, check the venation and sinus. _Gloriosum_ shows narrow, brilliantly contrasting white-pink primary veins on a dark blade. _Mamei_ shows the same vein pattern but the surface itself is variegated with silver. _Pastazanum_ has bold, evenly spaced secondary veins that sink into the leaf, with a deep, often overlapping basal sinus. 'Dean McDowell' splits the difference — vein contrast like _gloriosum_, sinus depth and leaf shape closer to _pastazanum_.",
+        "One more thing worth saying out loud: all four are **crawlers**, not climbers. If you see a plant of any of these names trained up a pole and producing dramatically larger leaves at each node, something is wrong with the ID. Crawling philodendrons put out leaves of roughly the same size along a horizontal rhizome. A vertical, size-escalating growth habit points to _P. plowmanii_, _P. mcdowell_ sellers confusing things, or an unrelated climber entirely."
+      ]
+    },
+    {
+      "heading": "Substrate and the rhizome problem",
+      "paragraphs": [
+        "These four want airy, chunky, moisture-retentive media — and they want the rhizome on top of it, not buried. A mix I've used for years: roughly 40% coarse orchid bark, 30% coco chips or coco husk, 20% perlite or pumice, 10% worm castings, with a handful of horticultural charcoal. The goal is a substrate that holds moisture around the roots for a day or two then dries to barely damp, never wet.",
+        "Pot wide and shallow. A rhizome that's 18 inches long needs a tray-shaped pot, not a deep nursery pot — depth is wasted and stays soggy at the bottom. Lay the rhizome flat on the surface with the growth point clear of the media, and let the feeder roots dig down on their own. Burying the rhizome to 'anchor' the plant is the single fastest way to rot a _gloriosum_.",
+        "Water when the top inch is dry to the touch and the pot has lost noticeable weight. _Pastazanum_ and 'Dean McDowell' tolerate more frequent watering than _gloriosum_; _mamei_ sits in between. All four sulk in cold, wet feet — keep media temperature above about 65°F (18°C) and you'll avoid most rot problems before they start."
+      ]
+    },
+    {
+      "heading": "Light, humidity, and the mistakes that kill them",
+      "paragraphs": [
+        "Bright indirect light, measured: 150–300 µmol/m²/s at the leaf, or a north-facing window in summer, an east window year-round, or a south/west window with sheer diffusion. Velvet leaves scorch fast in direct sun — the matte surface that makes them beautiful is also what cooks. Glossy _pastazanum_ takes a little more, but not much.",
+        "Humidity above 60% keeps new leaves opening cleanly without crispy margins; 70–80% is where these plants actually look like themselves. Pair humidity with airflow — a small clip fan on low, moving air across the canopy, prevents the fungal issues that high humidity invites. Stagnant 85% humidity is worse than dry 50% with a breeze.",
+        "The recurring mistakes I see: pots too deep and too small; rhizome buried; peat-heavy mixes that stay wet; moss poles forced on crawlers that don't climb; fertilizer at full label strength (use quarter to half strength weekly, weakly); and buying from photos alone. For any of these four, ask for a current top-down shot of the rhizome and a side shot of the petiole before you pay. If a seller can't or won't provide that, the ID isn't reliable, and rare-aroid money on an unreliable ID is just an expensive lesson."
+      ]
+    }
+  ],
+  "slug": "philodendron-gloriosum-versus-mamei",
+  "hero": "/images/plants/plant-03.jpg",
+  "body_image": "/images/plants/plant-10.jpg"
+}

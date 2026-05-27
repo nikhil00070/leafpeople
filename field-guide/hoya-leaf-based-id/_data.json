@@ -1,0 +1,74 @@
+{
+  "meta_title": "Hoya ID by Leaf Alone",
+  "meta_description": "Telling carnosa from obovata, kerrii from callistophylla, and parsing the splash-leaf complex — a collector's field key for Hoya identification.",
+  "genus": "Hoya",
+  "title": "Hoya ID by Leaf Alone",
+  "deck": "A working key to four anchor species and the splash-leaf tangle that confuses even experienced growers.",
+  "stat_number": "500+",
+  "stat_label": "described Hoya species",
+  "picks": [
+    {
+      "name": "Hoya carnosa",
+      "location": "Climber · waxy elliptic leaf",
+      "description": "The reference point for the entire genus. Leaves are 5–8 cm, elliptic to ovate, thick and waxy, with a faintly visible midrib and almost no secondary venation showing through. New growth flushes red-bronze before hardening to deep green. If a leaf looks like a generic Hoya, it is probably _carnosa_ or one of its sports — 'Krimson Queen', 'Krimson Princess', 'Compacta'.",
+      "tag": "Reference species"
+    },
+    {
+      "name": "Hoya obovata",
+      "location": "Climber · round splash leaf",
+      "description": "Almost circular leaves, 7–12 cm across, thick enough to feel like a coaster. The cream or silver flecking is usually concentrated near the midrib and fades toward the margin — not the even peppering of the _pubicalyx_-type splash. Petioles are short and stout, and the leaf base is rounded rather than tapered. A mature vine puts out leaves the size of a hand.",
+      "tag": "Easiest splash"
+    },
+    {
+      "name": "Hoya kerrii",
+      "location": "Climber · cordate succulent leaf",
+      "description": "The sweetheart Hoya, but past the single-leaf cutting stage it is a serious vine. Leaves are obcordate — heart-shaped with the notch at the tip, not the base — 6–10 cm wide, very thick, and stiff. Plain green, variegated (inner or outer), and 'Splash' forms exist; the splash form keeps the heart shape, which is the giveaway. Slow until rooted, then surprisingly vigorous.",
+      "tag": "Unmistakable shape"
+    },
+    {
+      "name": "Hoya callistophylla",
+      "location": "Climber · strap leaf, dark venation",
+      "description": "Long lanceolate leaves, 15–25 cm, with bold dark green venation pressed into a paler olive-yellow background. The pattern is reticulate and reaches the margin, which distinguishes it from _finlaysonii_ (veins thinner, more web-like) and _macrophylla_ (raised veins, no color contrast). Borneo native, wants warmth and consistent humidity. Leaves harden into something close to leather.",
+      "tag": "Best venation"
+    },
+    {
+      "name": "Hoya pubicalyx",
+      "location": "Climber · narrow splash leaf",
+      "description": "Often confused with splashy _carnosa_ relatives, but the leaf is narrower, longer (10–15 cm), and more pointed, with silver flecking distributed evenly across the blade rather than pooled near the midrib. 'Royal Hawaiian Purple', 'Silver Pink', and 'Splash' are all this species. Fast, forgiving, and the gateway into the splash-leaf complex.",
+      "tag": "Splash gateway"
+    }
+  ],
+  "body_image_caption": "Obovata, left; pubicalyx, right — splash distribution tells.",
+  "body_sections": [
+    {
+      "heading": "Reading a Hoya leaf",
+      "paragraphs": [
+        "Start with shape. Is the leaf round (_obovata_), heart-notched at the tip (_kerrii_), elliptic and medium (_carnosa_), or long and strap-like (_callistophylla_, _finlaysonii_, _macrophylla_)? Shape alone narrows the genus to a handful of groups before you ever look at color or venation.",
+        "Then check thickness. _Kerrii_ and _obovata_ are succulent — you can feel the water in them. _Carnosa_ is waxy but thinner. The strap-leafed Bornean species (_callistophylla_, _finlaysonii_) are thinner still and feel more like a true leaf than a stem in disguise. Thickness correlates with drought tolerance and tells you how the plant wants to be watered.",
+        "Finally, venation. Most Hoyas have invisible secondary veins. The exceptions — _callistophylla_, _finlaysonii_, _macrophylla_, _clemensiorum_ — make the venation the entire visual identity of the leaf. If you see dramatic reticulation, you are in that group, and the next question is whether the veins are colored (callistophylla, finlaysonii) or raised (macrophylla).",
+        "The splash-leaf complex is the trap. _Carnosa_, _pubicalyx_, _obovata_, _verticillata_, and several _memoria_-adjacent species all produce silver flecking from specialized epidermal cells. The species ID is in the underlying leaf — shape, size, thickness — not the splash pattern, which varies plant to plant and even leaf to leaf on the same vine."
+      ]
+    },
+    {
+      "heading": "Substrate, light, and water",
+      "paragraphs": [
+        "Hoyas are epiphytes or semi-epiphytes. They want a substrate that drains immediately and dries between waterings. A working mix is roughly equal parts orchid bark, perlite or pumice, and coco chunks, with a small fraction of worm castings or fine bark for moisture buffering. Sphagnum-only works for small cuttings and for growers who water on a strict schedule; in a pot of bark, it will rot.",
+        "Light should be bright and indirect to slightly direct. East windows are ideal; an unobstructed south window through a sheer is fine for the succulent-leafed species (_kerrii_, _obovata_, _carnosa_). Under LEDs, aim for 150–250 µmol·m⁻²·s⁻¹ at leaf height. Hoyas grown in genuinely low light will survive for years and never bloom — light, not age, is usually what gates the first peduncle.",
+        "Water when the mix is dry to the bottom of the pot. The succulent species can go a week or more between drinks indoors; the thinner-leafed Bornean species prefer a shorter interval and higher humidity, ideally 60–70%. Do not let any Hoya sit in standing water. Roots are fine and rot quickly in saturated bark.",
+        "Fertilize lightly and often during active growth — a balanced synthetic at quarter strength every watering, or a dilute organic top-dress refreshed each month. Hoyas are not heavy feeders, and salt accumulation in a chunky mix shows up as crispy leaf margins before it shows up anywhere else."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "Repotting too often. Hoyas bloom from peduncles — the short, knobby spurs that persist on old growth — and they prefer to be slightly rootbound. Disturbing the root ball resets the plant. Pot up only when roots are circling the drainage holes and the mix has broken down.",
+        "Cutting off spent peduncles. Those spurs re-bloom, sometimes for years. The flowers look dead; the structure is not. Leave them.",
+        "Misreading the splash. A new collector buys a 'rare' splash Hoya and discovers a year later it is a well-grown _pubicalyx_ cutting. Before paying a premium, check the leaf shape and size against the species, not against another splashy photo. The splash pattern on a juvenile cutting rarely predicts the mature leaf.",
+        "Overwatering the succulent-leafed species. _Kerrii_ in particular will look fine for weeks after the roots have rotted, because the leaves are storing enough water to mask the failure. If a thick-leafed Hoya suddenly drops a leaf with a black petiole, the roots went first. Unpot, cut back to firm tissue, and restart in barely-damp perlite."
+      ]
+    }
+  ],
+  "slug": "hoya-leaf-based-id",
+  "hero": "/images/plants/plant-03.jpg",
+  "body_image": "/images/plants/plant-02.jpg"
+}

@@ -1,0 +1,72 @@
+{
+  "meta_title": "Aglaonema color forms worth collecting",
+  "meta_description": "A collector's guide to the pink, red, and silver Aglaonema cultivars worth growing — plus the rarer Pictum complex from Sumatra.",
+  "genus": "Aglaonema",
+  "title": "The Aglaonema color forms worth collecting",
+  "deck": "Pink, red, silver, and the camouflage-leafed _Pictum_ complex — where the genus gets interesting.",
+  "stat_number": "24°C",
+  "stat_label": "Minimum comfortable night temp",
+  "picks": [
+    {
+      "name": "Aglaonema pictum tricolor",
+      "location": "Terrestrial · Sumatran understory",
+      "description": "The one most collectors mean when they say _pictum_. Three tones of green arranged in irregular camouflage blotches, with new leaves emerging almost minty before settling. Wild-collected lineages from Sumatra and surrounding islands vary wildly — some forms hold tight rosettes, others stretch. Slower and fussier than the hybrid Aglaonemas, and worth every bit of the wait.",
+      "tag": "Holy grail"
+    },
+    {
+      "name": "Aglaonema 'Pink Dalmatian'",
+      "location": "Clumping · bushy habit",
+      "description": "Deep green leaves freckled with bubblegum-pink splashes, no two leaves alike. Stable, vigorous, and far more forgiving than its looks suggest — it tolerates ordinary indoor humidity and a missed watering. The variegation holds in moderate light rather than demanding the brightest spot in the room. A reasonable entry point into the pink end of the genus.",
+      "tag": "Best pink"
+    },
+    {
+      "name": "Aglaonema 'Red Valentine'",
+      "location": "Upright · compact",
+      "description": "A Thai hybrid leaning hard into red and rose, with green margins keeping the leaf from looking like cheap plastic. New growth flushes almost coral before the green edges develop. Wants warmth — below about 18°C the color flattens and growth stalls. One of the better reds for indoor light levels rather than greenhouse conditions.",
+      "tag": "Best red"
+    },
+    {
+      "name": "Aglaonema 'Silver Bay'",
+      "location": "Clumping · large leaf",
+      "description": "The workhorse silver. Broad lance-shaped leaves with a wide silver-green central zone and dark green margins, reliably producing offsets at the base. Handles low light without losing pattern and shrugs off the dry air most homes deliver in winter. If you want one Aglaonema that will look good in five years with minimal intervention, this is it.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Aglaonema pictum 'Bunglon'",
+      "location": "Terrestrial · color-shifting",
+      "description": "A _pictum_ form named for the Indonesian word for chameleon, and earned: leaves emerge one pattern and shift as they mature, sometimes darkening, sometimes losing camouflage entirely. Less common in cultivation than straight tricolor and prized by _pictum_ specialists. Treat it like the species — cool nights, an airy mix, and patience.",
+      "tag": "For specialists"
+    }
+  ],
+  "body_image_caption": "New _pictum_ leaf hardening off under T5s.",
+  "body_sections": [
+    {
+      "heading": "Substrate and pots",
+      "paragraphs": [
+        "Aglaonemas in the hybrid camp — your Silver Bays, Pink Dalmatians, Red Valentines — are happy in a chunky aroid mix: roughly two parts orchid bark, one part perlite, one part coco coir or peat, with a handful of horticultural charcoal. They want moisture-retentive but draining; the roots are fleshier than a Philodendron's and rot quickly in dense potting soil straight from the bag.",
+        "The _Pictum_ complex is a different animal. These are montane plants from Sumatra and nearby islands, growing in leaf litter over volcanic soil at elevation. They want a leaner, airier mix — more bark and perlite, less peat — and they sulk in heavy substrate. Many _pictum_ growers run a pumice-heavy semi-hydro setup or a bark-and-perlite blend with sphagnum only at the surface.",
+        "Terracotta works well for the hybrids if you're a heavy waterer; plastic or glazed ceramic is fine if you're not. For _pictum_, plastic nursery pots with extra slits punched in the sides give the airflow the roots want without letting the medium dry out in an afternoon."
+      ]
+    },
+    {
+      "heading": "Light, water, and humidity",
+      "paragraphs": [
+        "Hybrid Aglaonemas evolved as understory plants and read accordingly: bright indirect light keeps the color saturated, but they will hold a pattern in genuinely dim corners where most aroids would etiolate. The pink and red cultivars want more light than the silvers to keep their pigment — an east window or a few feet back from a south one is the sweet spot. Direct midday sun bleaches them.",
+        "Water when the top third of the pot has dried. These are not plants that want to sit wet, and they are not plants that want to bone-dry between waterings either. In winter, with cooler temperatures and shorter days, stretch the interval — overwatering in January kills more Aglaonemas than anything else.",
+        "Humidity above 50% is plenty for the hybrids; they tolerate 35% without complaint, though leaf edges may crisp. _Pictum_ is stricter: 70% and up, with steady airflow. A sealed glass cabinet with a small fan is the standard setup, and it's the difference between a thriving plant and one that throws a leaf every six months and slowly declines."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Cold damage.** Aglaonemas, and _pictum_ especially, are intolerant of temperatures below about 15°C. A windowsill that drops to 10°C on a January night will produce black blotches that look like fungal infection but are simply chill burn. Move plants off cold glass in winter.",
+        "**Treating _pictum_ like a hybrid.** New collectors buy a _pictum tricolor_, pot it in the same mix as their Silver Bay, water it on the same schedule, and watch it rot. Acknowledge that it is a different plant from a different habitat and adjust substrate, humidity, and airflow accordingly.",
+        "**Chasing pink at the cost of the plant.** The most heavily pink-and-white variegated cultivars on the market — some of the newer Thai imports — have so little chlorophyll that they barely photosynthesize. They survive in tissue culture and on grow shelves under strong LEDs; in an average living room they fade and decline. If you want pink that lasts, buy cultivars with a clear green base and pink as the accent, not the other way around.",
+        "**Repotting too often.** Aglaonemas like to be slightly rootbound and resent disturbance. Repot every two to three years, in spring, going up one pot size at most. A plant that suddenly stops producing new leaves after a repot is usually telling you it would rather have been left alone."
+      ]
+    }
+  ],
+  "slug": "aglaonema-collector-cultivars",
+  "hero": "/images/plants/plant-06.jpg",
+  "body_image": "/images/plants/plant-02.jpg"
+}

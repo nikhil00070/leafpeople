@@ -1,0 +1,79 @@
+{
+  "meta_title": "Why Calatheas and Goeppertias Crash",
+  "meta_description": "A field guide to keeping Calathea and Goeppertia alive: water chemistry, humidity floors, substrate, and what leaf curl actually means.",
+  "genus": "Calathea",
+  "title": "Why Calatheas and Goeppertias Crash",
+  "deck": "Most prayer plants don't die of neglect — they die of tap water, dry air, and the wrong substrate, in roughly that order.",
+  "stat_number": "60%",
+  "stat_label": "Minimum humidity most Goeppertias tolerate without edge burn",
+  "picks": [
+    {
+      "name": "Goeppertia orbifolia",
+      "location": "Clumping understory · broad round leaves",
+      "description": "Still sold as _Calathea orbifolia_, this Bolivian species is the most forgiving of the silver-banded crowd. Leaves run 20–30 cm across with pale, almost pewter striping over deep green. It wants rainwater, 60% humidity, and a chunky mix — give it those three things and it stops sulking. The size also helps: bigger leaves desiccate more slowly than the thin-tissued species.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Goeppertia lancifolia (rattlesnake plant)",
+      "location": "Upright clumper · narrow wavy leaves",
+      "description": "The rattlesnake is the species to grow if you've killed three others. Long lance-shaped leaves with dark blotches handle ambient room humidity in the 50s better than almost any relative, and it recovers from a missed watering without permanent crisping. Maroon undersides flash when the leaves move at night. A genuinely good plant, not a consolation prize.",
+      "tag": "Best beginner"
+    },
+    {
+      "name": "Goeppertia warszewiczii",
+      "location": "Tall clumper · velvet leaf, cream undersides",
+      "description": "Velvet-textured dark green leaves with a feathered fishbone pattern, cream below, and small white-to-purple flower bracts when mature. It's vigorous for the genus and tolerates household conditions better than the thin-leaved silvers. Needs warmth — below 15°C it stalls and starts dropping older foliage. Worth a wide pot; it spreads by rhizome.",
+      "tag": "Underrated"
+    },
+    {
+      "name": "Calathea (Goeppertia) white fusion",
+      "location": "Compact clumper · variegated",
+      "description": "The hardest plant on this list and the one everyone wants. Pink, white, and green sectors mean reduced chlorophyll, so it needs brighter indirect light than its plain cousins, plus humidity above 65% and rainwater only. New leaves emerge translucent and burn at the slightest mineral stress. Buy one acclimated, not freshly tissue-cultured.",
+      "tag": "For the obsessed"
+    },
+    {
+      "name": "Goeppertia ornata 'Sanderiana'",
+      "location": "Upright · pinstripe leaves",
+      "description": "Dark olive leaves with hairline pink stripes that fade to cream as the leaf ages. It's a moderate-difficulty plant — fussier than lancifolia, easier than white fusion — and rewards consistent watering with new leaves every few weeks in summer. Crisped tips almost always trace back to tap water rather than humidity.",
+      "tag": "Classic pick"
+    }
+  ],
+  "body_image_caption": "New leaf unfurling on a well-watered _G. orbifolia_.",
+  "body_sections": [
+    {
+      "heading": "The water problem is real, and it's mostly fluoride and salts",
+      "paragraphs": [
+        "Almost every Calathea (now mostly reclassified as _Goeppertia_) crash starts at the tap. These are plants from the leaf-litter layer of Central and South American forests, watered by rain that runs through bromeliad tanks and rotting wood before it ever reaches their roots. The dissolved solids in that water are negligible. Municipal tap, by contrast, typically carries 150–400 ppm of minerals plus fluoride and chloramine, and prayer plants register every bit of it as edge burn, brown tips, and eventually leaf loss from the oldest foliage upward.",
+        "The fix is not complicated. Use rainwater, distilled, or RO water. If you can't, run tap through a basic carbon filter and let it sit overnight — this won't remove fluoride but will offgas chloramine and warm the water to room temperature, which matters more than people think. Cold tap water on a 22°C rootball is its own kind of shock.",
+        "Fertilize lightly. A quarter-strength balanced feed every third or fourth watering in growing months is plenty. These plants are not heavy feeders, and salt accumulation in the substrate produces the exact symptoms — crisped margins, pale new growth — that most owners mistake for low humidity and try to fix by misting, which makes nothing better."
+      ]
+    },
+    {
+      "heading": "Substrate, light, and the humidity floor",
+      "paragraphs": [
+        "Build the mix airy. A workable recipe is roughly 50% peat or coco coir, 25% fine orchid bark, 15% perlite, and 10% worm castings. The goal is something that holds even moisture without going anaerobic — these are not aroids and don't want a fully chunky aroid mix, but they also rot in straight peat. Repot annually if you can; the fine roots resent compaction, and old substrate accumulates the salts you've been trying to avoid.",
+        "Light should be bright and indirect. East-facing windows are ideal; a north window works for the green species but slows variegated cultivars to a crawl. Direct sun bleaches the patterning within days and burns velvet-textured leaves like _G. warszewiczii_ almost immediately. If your plant's markings are fading to uniform green, that's too much light, not too little.",
+        "Humidity is the non-negotiable. Aim for a floor of 60% for the green species, 65–75% for variegated and thin-leaved ones. Misting does essentially nothing — the humidity bump lasts minutes. A small ultrasonic humidifier on a hygrostat, or a grow tent, is what actually works. Pebble trays are decoration. If your room sits at 35% in winter, no amount of attentive watering will compensate, and you'll watch the plant decline through January regardless of what you do."
+      ]
+    },
+    {
+      "heading": "What leaf curl actually means",
+      "paragraphs": [
+        "Leaf curl in this genus is misread constantly. The leaves move on a circadian rhythm — open flat by day, folded up at night — and that nyctinastic motion is normal and healthy. Stress curl is different: leaves stay rolled inward during the day, often with the petioles still upright. That posture means the plant is conserving water, and the cause is almost always one of three things, in this order: dry roots, root damage from overwatering and rot, or low humidity combined with warm air movement (a heating vent, a fan blowing directly on the plant).",
+        "Check the rootball before anything else. If it's dry, water thoroughly with tepid rainwater and the leaves should relax within a few hours. If it's soaked and the petioles feel soft at the base, unpot immediately — root rot in prayer plants progresses fast, and a plant that's collapsed at the crown rarely comes back. Healthy roots are white to pale tan and firm; mushy brown roots get trimmed off with clean scissors, and the plant goes back into fresh, barely-moist substrate.",
+        "Crisp brown edges, separately, are a different signal — that's cumulative damage from water chemistry or humidity, and once a leaf has crisped, it won't heal. Trim the brown along the natural leaf shape with sharp scissors, fix the underlying condition, and judge the plant by the next leaf it produces. New growth is the only honest verdict on whether your conditions are working."
+      ]
+    },
+    {
+      "heading": "The common mistakes, briefly",
+      "paragraphs": [
+        "Misting instead of humidifying. It feels like care; it's not care. Wet leaves with stagnant air invite fungal spotting, particularly on velvet species.",
+        "Watering on a schedule. These plants want to stay evenly moist but not wet, and that interval changes with the season, the pot, and the substrate's age. Check by weight or with a finger an inch down.",
+        "Buying a stressed plant and hoping. A Calathea with already-crisped leaves and yellowing lower foliage at the shop is a project, not a houseplant. Buy ones with taut, fully expanded new leaves and no brown margins — the price of a healthy specimen is always lower than the cost of nursing a sick one back."
+      ]
+    }
+  ],
+  "slug": "calathea-survival-guide",
+  "hero": "/images/plants/field-skills.jpg",
+  "body_image": "/images/plants/plant-16.jpg"
+}

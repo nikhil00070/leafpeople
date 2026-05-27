@@ -1,0 +1,66 @@
+{
+  "meta_title": "The Scindapsus pictus family, sorted",
+  "meta_description": "A working guide to Exotica, Silvery Ann, Trebii, and Treubii Moonlight — what each one is, how to keep it, and which is worth your shelf space.",
+  "genus": "Scindapsus",
+  "title": "The Scindapsus pictus family, sorted",
+  "deck": "Four silver-flecked climbers that get lumped together, separated by leaf shape, sheen, and how they actually behave in a pot.",
+  "stat_number": "4",
+  "stat_label": "cultivars worth knowing",
+  "picks": [
+    {
+      "name": "Scindapsus pictus 'Exotica'",
+      "location": "Climber · large silver-blotched leaf",
+      "description": "The one most people picture when they hear satin pothos. Leaves are broad, gently asymmetrical, and dressed in irregular silver patches that catch light like brushed metal. Mature foliage on a moss pole can run 15–20 cm long, with a soft matte finish rather than the high gloss of _epipremnum_. It's the easiest of the four to find and the most forgiving of average apartment humidity.",
+      "tag": "Best all-rounder"
+    },
+    {
+      "name": "Scindapsus pictus 'Silvery Ann'",
+      "location": "Climber · heavy silver wash",
+      "description": "Smaller-leaved than Exotica with a much higher proportion of silver — some leaves come out nearly entirely pewter with only a thin green margin. The variegation is stable and doesn't revert the way pale _epipremnum_ cultivars do, though high-silver leaves photosynthesize less and grow slower. Give it brighter light than Exotica to hold the contrast. A good pick if you want the silver look without hunting down something rare.",
+      "tag": "Most silver"
+    },
+    {
+      "name": "Scindapsus treubii 'Dark Form'",
+      "location": "Climber · thick, near-black leaf",
+      "description": "Often miscalled 'Trebii'. A different species from _pictus_ entirely — leaves are narrow, lance-shaped, leathery, and so deeply green they read black under low light. No silver, no flecking, just substance. Slower than _pictus_ and pricier, but the foliage is essentially indestructible once established and it tolerates lower humidity than its reputation suggests.",
+      "tag": "Collector pick"
+    },
+    {
+      "name": "Scindapsus treubii 'Moonlight'",
+      "location": "Climber · pale silver-green leaf",
+      "description": "The pale sibling of Dark Form, with the same narrow leaf shape but a soft satin-silver surface that looks almost matte-painted. Growth is the slowest of the four — expect one new leaf every four to six weeks in good conditions. Worth it for the color, which doesn't really exist elsewhere in the genus. Keep it warm; it sulks below about 18 °C.",
+      "tag": "Slowest, prettiest"
+    }
+  ],
+  "body_image_caption": "Treubii Moonlight pushing a new leaf on sphagnum.",
+  "body_sections": [
+    {
+      "heading": "Substrate and the pot",
+      "paragraphs": [
+        "All four want the same thing underground: a chunky, airy mix that drains in seconds and dries from the top down. A workable blend is roughly one part coco coir or peat, two parts orchid bark (fine to medium), one part perlite or pumice, and a handful of horticultural charcoal. If your tap water is hard, lean toward pumice over perlite — it doesn't break down and crust as quickly.",
+        "Scindapsus roots are thin and exploratory rather than thick and storage-oriented like _monstera_. They rot fast in dense, wet media and they hate sitting in a saucer. Plastic nursery pots with generous drainage are fine; terracotta works if you're a heavy waterer. Pot size should be modest — these plants vine outward, not downward, and a too-big pot just holds wet substrate around starved roots.",
+        "Repot every two years or when you can lift the rootball out as a single piece. Moss poles or flat coir boards are worth setting up early. Climbing leaves get measurably larger and hold their silver better than leaves on a trailing plant; an Exotica left to dangle off a shelf will keep producing the same juvenile-size foliage for years."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect light is the honest answer for all four, but the cultivars have preferences. Exotica and Silvery Ann hold their silver best with two to three hours of gentle direct sun — early morning east, or filtered south. Treubii Dark Form tolerates the dimmest conditions of the group and will still push leaves a meter back from a window. Moonlight is the fussiest; it wants brightness but scorches faster than the others, so a sheer curtain in front of a south or west window is about right.",
+        "Water when the top third of the mix is dry. Stick a finger or a wooden skewer in — don't trust the surface. _Pictus_ leaves tell on you: they cup downward and feel slightly soft when thirsty, then plump back up within hours of a drink. If leaves yellow from the bottom and the petioles go mushy, you've gone the other direction and the roots are gone. Stop watering, unpot, cut the rot, and reroot what's healthy in damp sphagnum.",
+        "Humidity above 50% is plenty. These are not high-humidity plants in the _anthurium_ sense. What they actually want is airflow — a small fan on low across the room does more for them than a humidifier. Stagnant warm air is where you get fungal spotting on the silver leaves, and once those marks are there, they don't heal."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Overpotting.** Moving a four-inch plant straight into an eight-inch pot is the single fastest way to kill any of these. Step up one size at a time.",
+        "**Mistaking treubii for pictus.** They're sold side by side and treated as interchangeable, but _treubii_ is slower, prefers slightly drier conditions, and resents the heavier watering schedule a thirsty Exotica will tolerate. If you bought a Dark Form and you're watering it like a pothos, ease off.",
+        "**Chasing variegation with low light.** Silvery Ann in a dim corner will still grow — it'll just produce greener, smaller leaves and lose the trait you paid for. The silver is a structural feature of the epidermis, not pigment, but it only develops fully on leaves grown in adequate light.",
+        "**Letting them trail forever.** It looks fine on Instagram. The plant disagrees. Even a short totem — 60 cm of sphagnum-wrapped pole — will transform leaf size within a year. If you only do one thing on this list, do that one."
+      ]
+    }
+  ],
+  "slug": "scindapsus-pictus-family",
+  "hero": "/images/plants/plant-17.jpg",
+  "body_image": "/images/plants/plant-08.jpg"
+}

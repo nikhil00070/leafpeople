@@ -1,0 +1,66 @@
+{
+  "meta_title": "Monstera obliqua: Real, Fake, and What It Takes",
+  "meta_description": "How to tell a true Monstera obliqua from adansonii sold under its name — and what keeping one actually demands.",
+  "genus": "Monstera",
+  "title": "The obliqua Problem",
+  "deck": "Most plants sold as _Monstera obliqua_ are not. Here is how to read the leaf, and what owning the real thing costs you in patience.",
+  "stat_number": "~90%",
+  "stat_label": "leaf surface that is hole, not tissue, in true Peru form obliqua",
+  "picks": [
+    {
+      "name": "Monstera obliqua 'Peru'",
+      "location": "Climber · paper-thin perforate leaf",
+      "description": "The form that started the obsession. Leaves are tissue-thin, sometimes more hole than blade, with a matte, almost translucent finish. It creeps rather than climbs aggressively, throws stolons that wander for months before leafing out, and resents any disturbance of the rootball. Confirmed wild collections trace to a narrow stretch of Peruvian Amazon, and nursery stock with verifiable lineage remains scarce.",
+      "tag": "The real one"
+    },
+    {
+      "name": "Monstera adansonii (narrow form)",
+      "location": "Climber · thick perforate leaf",
+      "description": "The plant you almost certainly own if a tag says obliqua. Leaves are firm, glossy, and substantial, with fenestrations occupying maybe 30–50% of the blade. It grows fast, roots from any node, and tolerates the kind of neglect that would kill a true obliqua in a week. A genuinely good plant — just not the one some sellers claim it is.",
+      "tag": "The stand-in"
+    },
+    {
+      "name": "Monstera adansonii 'Archipelago'",
+      "location": "Climber · variegated sectoral",
+      "description": "A sectorally variegated adansonii with cream-to-mint blocks that hold well under bright indirect light. Vigor is closer to standard adansonii than to obliqua, which makes it forgiving for a variegate. Watch for full-white leaves and prune back to a green node to keep the plant feeding itself. Provenance varies; buy from growers who can show the mother.",
+      "tag": "Variegated value"
+    },
+    {
+      "name": "Monstera obliqua 'Bolivia'",
+      "location": "Climber · fewer fenestrations",
+      "description": "A less hole-punched form of true obliqua, sometimes mistaken for adansonii by the unfamiliar but giving itself away in petiole, texture, and habit. Leaves are still thin and matte, the plant still stoloniferous and slow. Useful as a reference plant if you are trying to learn obliqua by feel rather than by photograph.",
+      "tag": "Reference form"
+    }
+  ],
+  "body_image_caption": "A true Peru obliqua leaf, backlit against frosted glass.",
+  "body_sections": [
+    {
+      "heading": "Reading the leaf: obliqua vs adansonii",
+      "paragraphs": [
+        "Start with thickness. A true _M. obliqua_ leaf feels like wet rice paper — you can see your fingers through it when backlit, and it tears if you handle it like a normal houseplant. _M. adansonii_ feels like a leaf. Glossy, firm, almost rubbery in mature growth. If the plant in front of you has substance, it is adansonii, regardless of how many holes it has.",
+        "Next, look at the ratio of hole to tissue. The Peru form of obliqua famously runs around 90% perforation; the remaining blade is a lacework frame. Adansonii fenestrations are large but the leaf is mostly leaf. Hole shape matters too: obliqua fenestrations are elongated, sometimes nearly slit-like and reaching close to the margin. Adansonii holes are rounder and sit well inside the blade.",
+        "Then watch the plant move. Obliqua produces long, naked stolons — runners with scale leaves and no foliage — that crawl for weeks before deciding to leaf out. Adansonii puts out a leaf at almost every node as it climbs. If your 'obliqua' is bushing up and rooting eagerly into the moss pole, it is adansonii. This is the single most reliable tell at home, and it costs nothing but time."
+      ]
+    },
+    {
+      "heading": "What the real plant needs",
+      "paragraphs": [
+        "**Substrate.** Open and bark-heavy. A working mix is roughly half orchid bark, a quarter perlite or pumice, and a quarter chopped sphagnum, with a handful of charcoal. The goal is a medium that holds moisture at the root surface without ever going anaerobic. Obliqua roots are fine and intolerant of stagnant wet; they want air against them as much as water.",
+        "**Light.** Bright indirect, filtered. Think dappled forest floor with a hole in the canopy overhead — strong ambient light, no direct sun on the leaf. Under grow lights, 80–150 µmol/m²/s at the canopy is plenty. The leaves are so thin they scorch quickly, and recovery is slow because the plant grows slowly to begin with.",
+        "**Water and humidity.** Humidity should sit at 80% or higher, consistently. This is not a plant for an open shelf in a heated apartment. Most serious keepers grow obliqua in a sealed cabinet, terrarium, or IKEA glass case with a small fan for airflow. Water when the surface sphagnum is approaching dry but the bark layer is still cool to the touch. Rainwater, RO, or distilled — tap minerals burn the leaf margins."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "Buying on a photo. A single backlit shot of a fenestrated leaf tells you almost nothing; ask for a video that pans the whole plant, shows the stolons, and shows a new leaf unfurling. Reputable sellers expect this.",
+        "Treating it like adansonii. People bring home a true obliqua, pot it in standard aroid mix, hang it in a bright window, and watch it crisp inside a month. The plant does not forgive low humidity or dry roots, and it will not bounce back the way a tougher Monstera will.",
+        "Repotting too soon, or too often. Obliqua resents root disturbance more than almost any other Monstera. Pot it once into a small, snug container with your open mix, and leave it alone for a year or two unless something is clearly wrong. Top-dress the sphagnum as it breaks down rather than tearing the plant apart.",
+        "Paying obliqua money for adansonii. The market has corrected somewhat, but tagged 'obliqua' plants at suspicious prices still circulate. If the seller cannot tell you which form (Peru, Bolivia, etc.), cannot show stolons, and cannot point to the mother plant's lineage, assume adansonii and price accordingly. A good adansonii is worth keeping. It is just not the same plant."
+      ]
+    }
+  ],
+  "slug": "monstera-obliqua-real-versus-fake",
+  "hero": "/images/plants/plant-17.jpg",
+  "body_image": "/images/plants/plant-13.jpg"
+}

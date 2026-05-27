@@ -1,0 +1,66 @@
+{
+  "meta_title": "Which Syngonium Cultivars Are Actually Worth Keeping",
+  "meta_description": "A working collector's take on Albo, Strawberry, Confetti and Mottled Syngonium — what holds variegation, what reverts, and what's worth the shelf space.",
+  "genus": "Syngonium",
+  "title": "Albo, Strawberry, Confetti, Mottled: Which Syngonium Cultivars Are Actually Worth Keeping",
+  "deck": "Four of the most-traded variegated Syngonium, ranked by how they actually behave in a real growing space.",
+  "stat_number": "~36",
+  "stat_label": "accepted species in genus Syngonium",
+  "picks": [
+    {
+      "name": "Syngonium podophyllum 'Albo Variegata'",
+      "location": "Climber · arrowhead leaf, white sectoral variegation",
+      "description": "The benchmark white-variegated _podophyllum_, with crisp sectoral patches that can take half a leaf at a time. It's a fast, forgiving grower once rooted, and unlike many albos it holds variegation reasonably well across cuttings if you propagate from balanced nodes. Expect the occasional all-green run; chop back to a variegated node and it usually corrects. The leaves get larger and more mature-shaped on a moss pole, which is when this plant actually earns its price.",
+      "tag": "Best overall"
+    },
+    {
+      "name": "Syngonium 'Mottled' (Mojito-type)",
+      "location": "Climber · green leaf, fine cream stippling",
+      "description": "Sometimes sold as 'Mojito', this is the stable, speckled cultivar that throws cream and pale-green flecks across every leaf rather than big sectors. Because the variegation is dispersed, it almost never reverts and almost never burns — a rare combination. Growth is slower than straight _podophyllum_ but steadier than any albo. If you've killed a Strawberry, start here.",
+      "tag": "Most stable"
+    },
+    {
+      "name": "Syngonium podophyllum 'Confetti' (Tricolor)",
+      "location": "Climber · arrowhead leaf, pink and cream freckles",
+      "description": "Confetti is the freckled one: green leaves dotted with pink and cream specks, occasionally a fully blushed leaf. Variegation is genetic rather than chimeric, so it propagates true and doesn't revert the way Albo does. It needs more light than people give it — keep it dim and the pink fades to cream and then to nothing. Bright indirect light, and the freckles come in heavy.",
+      "tag": "True from cuttings"
+    },
+    {
+      "name": "Syngonium podophyllum 'Strawberry'",
+      "location": "Climber · arrowhead leaf, pink wash",
+      "description": "The pink one everyone wants and half the people regret. New leaves emerge a saturated bubblegum pink and age toward sage with pink veining; older growth can green out almost entirely without strong light. It's the fussiest of this group about humidity and airflow — thin leaves crisp fast in dry rooms. Worth keeping if you can give it 60%+ humidity and morning sun; otherwise look at Confetti.",
+      "tag": "Light-hungry"
+    }
+  ],
+  "body_image_caption": "A maturing Albo on a damp moss pole.",
+  "body_sections": [
+    {
+      "heading": "Substrate and the pole question",
+      "paragraphs": [
+        "Syngonium are hemiepiphytic climbers from Central and South American forests. They start life on the floor, find a tree, and climb — and the leaves only reach their adult arrowhead-to-trilobed form once the plant is actually going up something. In a pot on a shelf you are growing a juvenile forever. Give them a damp sphagnum or coir pole and the leaves can triple in size within a year.",
+        "Mix accordingly. A working blend is roughly 40% chunky orchid bark, 30% coco coir or peat, 20% perlite or pumice, and 10% worm castings. The roots want air but the plant drinks heavily once established, so pure aroid mix that drains in seconds will leave a Strawberry chronically thirsty. Aim for a substrate that holds moisture for two to four days in a 6-inch pot, then dries.",
+        "Repot annually for young plants. Syngonium roots fill a pot fast and a rootbound _podophyllum_ will start dropping lower leaves and pushing smaller new ones — usually misread as a light problem."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect is the lazy answer. The honest answer: variegated Syngonium want more light than most people give them, short of direct midday sun. An east window, or a few feet back from a south or west window with a sheer, is the floor. Under LEDs, 150–250 PPFD at the leaf for 12 hours keeps pink and cream stable. Drop below that and Strawberry greens out, Confetti loses freckles, Albo throws smaller variegated patches.",
+        "Water when the top inch of mix is dry but the core is still damp. These are not succulents and they are not ferns. A 6-inch pot in average household conditions usually wants water every 5–8 days. If you're using a moss pole, soak the pole at the same time — the aerial roots will hunt into it and that's where the size jump comes from.",
+        "Humidity between 55% and 75% is the sweet spot. They survive at 40% but the new leaves get papery margins and the pink cultivars lose color faster. Airflow matters as much as the number on the hygrometer; stagnant humid air is how you get bacterial leaf spot, which Syngonium are unusually prone to. A small clip fan on low, pointed past (not at) the plants, prevents most problems."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Buying a one-leaf Albo cutting and expecting it to stay variegated.** Single-node cuttings with one half-white leaf root fine but often push their next leaf fully green, because the meristem on that node carries mostly green tissue. Buy two-node cuttings or established plants with variegated growth on multiple leaves. It's not a scam when a cutting reverts — it's chimeric math.",
+        "**Treating Strawberry and Confetti the same.** Strawberry is chimeric and unstable; Confetti's pigment is genetic and stable. If your Strawberry is greening, the fix is more light and a hard chop back to a pink node. If your Confetti is fading, the fix is just more light — you can't lose the genetics, only mute their expression.",
+        "**Letting them sprawl instead of climb.** A Syngonium grown horizontally stays in arrowhead juvenile form and slowly declines in vigor. The same plant on a 36-inch moss pole, kept damp, will produce lobed adult leaves the size of your hand within 18 months. If you only do one thing differently after reading this, stake them.",
+        "**Ignoring early bacterial spots.** Small translucent or yellow-haloed spots on Syngonium leaves spread fast in warm humid rooms. Remove the affected leaf at the petiole, sterilize the shears, increase airflow, and ease off overhead watering. Copper sprays work if you catch it early; once it's in the stem, you're propagating clean tips and discarding the rest."
+      ]
+    }
+  ],
+  "slug": "syngonium-rare-cultivars",
+  "hero": "/images/plants/plant-06.jpg",
+  "body_image": "/images/plants/plant-08.jpg"
+}

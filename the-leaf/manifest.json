@@ -25,5 +25,158 @@
     "url": "/the-leaf/grown-where-they-shouldnt-exist",
     "date": "2026-05-24",
     "thumb": "/images/plants/collector-culture.jpg"
+  },
+  {
+    "slug": "inspecting-a-stem-cut",
+    "title": "What to Look For Before You Wire Money on a Cutting",
+    "category": "The Market",
+    "description": "A collector's checklist for vetting rare aroid stem cuts: node anatomy, rot lines, cut quality, and the seller behavior that should make you walk.",
+    "url": "/the-leaf/inspecting-a-stem-cut",
+    "date": "2026-05-22",
+    "thumb": "/images/plants/plant-18.jpg"
+  },
+  {
+    "slug": "anthurium-price-history",
+    "title": "The Anthurium Boom and the Cooling After",
+    "category": "The Market",
+    "description": "How rare anthuriums went from auction obsession to oversupply, who paid for the ride, and what serious collectors are doing now.",
+    "url": "/the-leaf/anthurium-price-history",
+    "date": "2026-05-20",
+    "thumb": "/images/plants/plant-04.jpg"
+  },
+  {
+    "slug": "sourcing-from-southeast-asia",
+    "title": "The Long Way Home: Buying Rare Aroids from Southeast Asia",
+    "category": "The Market",
+    "description": "How serious collectors source rare aroids from Indonesia, Thailand and the Philippines — the sellers, the shipping, and the paperwork that makes it legal.",
+    "url": "/the-leaf/sourcing-from-southeast-asia",
+    "date": "2026-05-18",
+    "thumb": "/images/plants/plant-14.jpg"
+  },
+  {
+    "slug": "visiting-the-glasshouse",
+    "title": "The Glasshouse Visit",
+    "category": "Collector Culture",
+    "description": "What to look for, what to ask, and what to bring when a serious collector opens the glasshouse door for an afternoon.",
+    "url": "/the-leaf/visiting-the-glasshouse",
+    "date": "2026-05-15",
+    "thumb": "/images/plants/the-leaf.jpg"
+  },
+  {
+    "slug": "trades-versus-sales",
+    "title": "The Anatomy of an Even Trade",
+    "category": "Collector Culture",
+    "description": "What a fair rare-plant trade actually looks like — how to value cuttings, propose swaps, and avoid the awkward middle ground with strangers online.",
+    "url": "/the-leaf/trades-versus-sales",
+    "date": "2026-05-13",
+    "thumb": "/images/plants/plant-11.jpg"
+  },
+  {
+    "slug": "photographing-collector-plants",
+    "title": "How to Photograph Rare Aroids",
+    "category": "Collector Culture",
+    "description": "On light, angle, scale, and color accuracy — making honest photographs of rare aroids for sale, trade, or the personal archive.",
+    "url": "/the-leaf/photographing-collector-plants",
+    "date": "2026-05-11",
+    "thumb": "/images/plants/plant-16.jpg"
+  },
+  {
+    "slug": "the-collectors-lexicon",
+    "title": "The Quiet Vocabulary of the Rare Plant Room",
+    "category": "Collector Culture",
+    "description": "A field lexicon of the rare-plant trade — from jump to wet stick to pup — and what the vocabulary reveals about the people using it.",
+    "url": "/the-leaf/the-collectors-lexicon",
+    "date": "2026-05-08",
+    "thumb": "/images/plants/plant-03.jpg"
+  },
+  {
+    "slug": "reading-aroid-roots",
+    "title": "Reading Aroid Roots",
+    "category": "Field Skills",
+    "description": "How to tell a healthy aroid root from a rotting one, when to chop, when to wait, and the cheap pothos test most growers skip.",
+    "url": "/the-leaf/reading-aroid-roots",
+    "date": "2026-05-06",
+    "thumb": "/images/plants/plant-10.jpg"
+  },
+  {
+    "slug": "variegation-genetics-plain-english",
+    "title": "What You Actually Bought: Chimeric vs. Genetic Variegation",
+    "category": "Field Skills",
+    "description": "Most variegation is a chimera that can vanish overnight. Here's how to tell stable from unstable — and what it means for the plant on your shelf.",
+    "url": "/the-leaf/variegation-genetics-plain-english",
+    "date": "2026-05-04",
+    "thumb": "/images/plants/plant-14.jpg"
+  },
+  {
+    "slug": "acclimating-a-fresh-import",
+    "title": "The First Sixty Days: Acclimating a Freshly Imported Aroid",
+    "category": "Field Skills",
+    "description": "A field-tested protocol for nursing imported rare aroids back to health — sphagnum chambers, humidity ramps, and patient root recovery.",
+    "url": "/the-leaf/acclimating-a-fresh-import",
+    "date": "2026-05-01",
+    "thumb": "/images/plants/plant-18.jpg"
+  },
+  {
+    "slug": "light-for-velvet-aroids",
+    "title": "Reading the Velvet",
+    "category": "Field Skills",
+    "description": "How to read intensity, distance and the plant's own signals when growing velvet philodendrons, anthuriums, and other matte-leaf aroids indoors.",
+    "url": "/the-leaf/light-for-velvet-aroids",
+    "date": "2026-04-29",
+    "thumb": "/images/plants/plant-17.jpg"
+  },
+  {
+    "slug": "filial-generations-explained",
+    "title": "F1, F2 and Selfing: What Hybrid Generation Labels Really Mean for What You're Buying",
+    "category": "The Market",
+    "description": "What F1, F2, and selfed mean in the aroid market — and what those letters actually tell you about the plant you're about to buy.",
+    "url": "/the-leaf/filial-generations-explained",
+    "date": "2026-04-27",
+    "thumb": "/images/plants/plant-03.jpg"
+  },
+  {
+    "slug": "decoding-listing-abbreviations",
+    "title": "Reading the Code: A Field Linguist's Guide to Aroid Listings",
+    "category": "The Market",
+    "description": "BVEF, NSE, F2, selfed, OP — what the cryptic shorthand in rare-aroid sale posts actually tells you about a plant's parentage and worth.",
+    "url": "/the-leaf/decoding-listing-abbreviations",
+    "date": "2026-04-24",
+    "thumb": "/images/plants/plant-18.jpg"
+  },
+  {
+    "slug": "cataphylls-and-maturity",
+    "title": "Reading an Aroid's Age: Cataphylls, Juvenile Foliage and the Long Climb to Maturity",
+    "category": "Field Skills",
+    "description": "How to read cataphylls, juvenile leaves and growth phases to tell where a philodendron, anthurium or monstera actually is in its life.",
+    "url": "/the-leaf/cataphylls-and-maturity",
+    "date": "2026-04-22",
+    "thumb": "/images/plants/plant-02.jpg"
+  },
+  {
+    "slug": "anatomy-of-an-aroid-inflorescence",
+    "title": "Spadix, Spathe, and Peduncle: Inside an Aroid Bloom",
+    "category": "Field Skills",
+    "description": "What the parts of an aroid inflorescence actually do — and what it takes to pollinate one at home, from timing windows to thrips.",
+    "url": "/the-leaf/anatomy-of-an-aroid-inflorescence",
+    "date": "2026-04-20",
+    "thumb": "/images/plants/plant-08.jpg"
+  },
+  {
+    "slug": "reading-aroid-venation",
+    "title": "Reading the Veins",
+    "category": "Field Skills",
+    "description": "A field guide to reading primary, secondary and tertiary veins in rare aroids — geometry, color and the small tells that separate look-alike species.",
+    "url": "/the-leaf/reading-aroid-venation",
+    "date": "2026-04-17",
+    "thumb": "/images/plants/plant-06.jpg"
+  },
+  {
+    "slug": "buying-a-rare-plant-without-getting-burned",
+    "title": "How to Vet a Seller and a Plant Before You Pay",
+    "category": "The Market",
+    "description": "A collector's guide to reading vendors, photos, and cuttings before money changes hands — what to ask, what to ignore, and what to walk away from.",
+    "url": "/the-leaf/buying-a-rare-plant-without-getting-burned",
+    "date": "2026-04-15",
+    "thumb": "/images/plants/plant-16.jpg"
   }
 ]

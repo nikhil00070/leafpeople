@@ -1,0 +1,81 @@
+{
+  "meta_title": "Hairy-Leaf Begonias: The Trichome Specialists",
+  "meta_description": "A field guide to fuzzy-leaved begonias — B. listada, dietrichiana, masoniana — how their trichomes work and how to grow them well.",
+  "genus": "Begonia",
+  "title": "Hairy-Leaf Begonias: The Trichome Specialists",
+  "deck": "The fuzzy ones break the usual begonia rules — here's how to read their leaves and keep them in good condition.",
+  "stat_number": "75%",
+  "stat_label": "Minimum humidity most fuzzy begonias actually want",
+  "picks": [
+    {
+      "name": "Begonia listada",
+      "location": "Cane-like shrub · velvet bicolor leaf",
+      "description": "A Brazilian species with narrow, asymmetric leaves striped emerald and chartreuse along the midrib, the whole surface covered in short stiff trichomes that catch light like crushed felt. It throws white flowers freely under decent humidity and stays compact — 30 to 45 cm is typical indoors. Less temperamental than its reputation suggests if you give it airflow. The stripe holds best under bright, diffuse light; weak light flattens it to plain green.",
+      "tag": "Best starter"
+    },
+    {
+      "name": "Begonia dietrichiana",
+      "location": "Rhizomatous · densely hirsute leaf",
+      "description": "Less common in collections than it deserves, _dietrichiana_ has thick, slightly bullate leaves covered in long pale hairs that give the whole plant a frosted look. It grows from a creeping rhizome and stays low — a wide shallow pot suits it better than depth. It hates wet feet and rewards a chunky, mostly inorganic mix. Pink flowers on tall scapes are a bonus, not the point.",
+      "tag": "Collector pick"
+    },
+    {
+      "name": "Begonia masoniana 'Iron Cross'",
+      "location": "Rhizomatous · puckered bullate leaf",
+      "description": "The classic — a chocolate cross stamped onto a lime-green, deeply puckered leaf, every bump tipped with red bristles. Native to southern China and northern Vietnam, it tolerates slightly cooler nights than most fuzzy begonias and forgives short humidity dips. Rot is the main risk: keep the rhizome on top of the mix, never buried. The 'Rock' and 'River' selections are worth tracking down if you find the standard form too familiar.",
+      "tag": "Most iconic"
+    },
+    {
+      "name": "Begonia soli-mutata",
+      "location": "Rhizomatous · sun-reactive textured leaf",
+      "description": "The \"sun-changing begonia\" shifts from dark olive to bright lime as light intensity rises, with a finely puckered surface and short rust-colored hairs along the veins. It is one of the more forgiving hairy rhizomatous species — happy at 60% humidity, tolerant of brief drying, and quick to offset. A good gateway to the fuzzier, fussier relatives. Pair with _masoniana_ for a study in contrast.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Begonia melanobullata",
+      "location": "Rhizomatous · black-spiked bullate leaf",
+      "description": "A Vietnamese species described relatively recently, with deep green leaves studded by tall black conical bullae, each topped with a dark bristle. It looks engineered. Slower than _masoniana_ and stricter about humidity — below 70% the new leaves come in smaller and the bullae shorten. Worth the trouble if you can give it a cabinet or a well-run terrarium.",
+      "tag": "Show-stopper"
+    }
+  ],
+  "body_image_caption": "Backlit trichomes on a young _masoniana_ leaf.",
+  "body_sections": [
+    {
+      "heading": "What the hairs are actually doing",
+      "paragraphs": [
+        "Trichomes are not decoration. On a begonia leaf they do at least three useful jobs: they slow airflow across the surface, trapping a humid boundary layer that reduces transpiration; they scatter strong light before it reaches the photosynthetic tissue, which matters for understory species evolved under broken canopy; and they make the leaf physically unpleasant to chewing insects and slugs.",
+        "The trade-off is drainage. A fuzzy leaf holds water far longer than a glabrous one. In the wild, that water sits in moving air and evaporates in an hour. In a closed terrarium with stagnant air, the same droplet sits for a day, and _Botrytis_ moves in. Almost every problem people have with hairy begonias traces back to that mismatch: humidity high enough to keep the trichomes happy, airflow low enough to let standing water rot them.",
+        "The practical rule: if you can see beaded water on the leaves, you need more air movement, not less humidity. A small clip fan on the lowest setting, aimed past the plant rather than at it, is usually enough."
+      ]
+    },
+    {
+      "heading": "Substrate and watering",
+      "paragraphs": [
+        "Most hairy begonias in cultivation are rhizomatous or shallow-rooted cane types, and they share a preference for substrates that drain hard and rewet easily. A workable mix is roughly one part fine orchid bark, one part perlite or pumice, one part coarse coco chip, and a generous handful of sphagnum worked through — call it 70% inorganic, 30% organic, with no peat-heavy bagged soil at the base.",
+        "Pot wide and shallow. A rhizome wants to crawl; a deep pot just gives you a column of wet mix under the active roots. Terracotta works well for _masoniana_ and _dietrichiana_ because it pulls moisture out of the sides between waterings. Plastic is fine for _listada_ and other cane types that prefer steadier moisture.",
+        "Water when the top 2-3 cm has dried but the deeper mix is still cool to the touch. Never water onto the crown or rhizome — pour at the pot edge and let it travel. Rainwater or RO is worth the trouble; these species show tip burn from hard tap water faster than smooth-leaved begonias, possibly because mineral residue collects in the trichome bases."
+      ]
+    },
+    {
+      "heading": "Light, humidity, and the airflow problem",
+      "paragraphs": [
+        "Bright indirect is the honest answer. In PPFD terms, 100-200 µmol at the leaf is the sweet spot for most rhizomatous fuzzy species; _listada_ will take a little more and color up for it. Direct sun cooks the trichomes and the leaf beneath them — you'll see bleached patches that never recover.",
+        "Humidity wants to sit between 65% and 80%. Below 60%, new leaves come in smaller and the hairs lie flat instead of standing proud. Above 85% without airflow, you are running a petri dish. A cabinet with a small computer fan on a timer — on for ten minutes every hour — solves the problem for most growers. Open terrariums need either a vent or a daily lid-crack.",
+        "Temperature is less critical than people think. Most of these species are happy from 18 to 28°C and tolerate brief excursions either side. _Masoniana_ handles cooler nights down to 15°C without complaint. What they don't tolerate is a cold draft on wet leaves, which is the fastest route to bacterial leaf spot."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Burying the rhizome.** It belongs on top of the substrate, anchored by its own roots. Buried rhizomes rot, and the plant declines for months before you notice.",
+        "**Misting the leaves.** Beaded water on trichomes is the exact condition _Botrytis_ wants. Raise ambient humidity instead — a tray of LECA, a humidifier, a cabinet, anything that doesn't deposit droplets on the foliage.",
+        "**Over-potting.** A rhizomatous begonia in a pot three sizes too large will sulk and rot. Step up one size at a time, and only when roots are visibly circling.",
+        "**Reading dormancy as death.** Several hairy species, _masoniana_ included, slow dramatically in short-day months. Leaves may yellow and drop. Cut water by half, leave the rhizome alone, and wait. New growth resumes when day length and warmth return.",
+        "Get the airflow right and most of the rest takes care of itself. These are not difficult plants — they are specific ones, and the specificity is written on the leaf in pale stiff hairs if you know how to read it."
+      ]
+    }
+  ],
+  "slug": "begonia-hairy-leaf-types",
+  "hero": "/images/plants/plant-12.jpg",
+  "body_image": "/images/plants/plant-18.jpg"
+}

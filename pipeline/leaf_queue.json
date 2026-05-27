@@ -17,102 +17,119 @@
     "slug": "buying-a-rare-plant-without-getting-burned",
     "title_hint": "How to vet a seller and a plant before you pay",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-15"
   },
   {
     "slug": "reading-aroid-venation",
     "title_hint": "How to read leaf venation — primary, secondary and tertiary veins, geometry and color — to tell rare aroids apart",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-17"
   },
   {
     "slug": "anatomy-of-an-aroid-inflorescence",
     "title_hint": "Spadix, spathe and peduncle: how an aroid inflorescence works and what pollinating one actually involves",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-20"
   },
   {
     "slug": "cataphylls-and-maturity",
     "title_hint": "Cataphylls, juvenile foliage and growth phases: how to tell where an aroid is in its maturity",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-22"
   },
   {
     "slug": "decoding-listing-abbreviations",
     "title_hint": "Decoding the abbreviations and shorthand in rare-aroid sale listings (BVEF, NSE, F2, self, and more)",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-24"
   },
   {
     "slug": "filial-generations-explained",
     "title_hint": "F1, F2 and selfing: what hybrid generation labels really mean for what you're buying",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-27"
   },
   {
     "slug": "light-for-velvet-aroids",
     "title_hint": "Getting light right for velvet-leaf aroids — intensity, distance and reading the plant's signals",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-29"
   },
   {
     "slug": "acclimating-a-fresh-import",
     "title_hint": "How to acclimate a freshly imported rare aroid — sphagnum chambers, humidity ramp, root recovery, the first 60 days",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-01"
   },
   {
     "slug": "variegation-genetics-plain-english",
     "title_hint": "Chimeric vs. genetic variegation, plain English — why most variegation is unstable and what that means for what you bought",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-04"
   },
   {
     "slug": "reading-aroid-roots",
     "title_hint": "Reading aroid roots: healthy vs. rotting, when to chop, when to wait, and the pothos test no one teaches you",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-06"
   },
   {
     "slug": "the-collectors-lexicon",
     "title_hint": "Thirty terms that signal an experienced rare-plant collector — from 'jump' to 'pup' to 'wet stick'",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-08"
   },
   {
     "slug": "photographing-collector-plants",
     "title_hint": "How to photograph rare aroids — light, angle, scale, color accuracy — for sale, trade or the archive",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-11"
   },
   {
     "slug": "trades-versus-sales",
     "title_hint": "Trades vs. sales in the rare-plant community — what an even trade actually looks like and how to propose one",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-13"
   },
   {
     "slug": "visiting-the-glasshouse",
     "title_hint": "What to look for — and what to bring — when you visit a serious rare-aroid grower's glasshouse",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-15"
   },
   {
     "slug": "sourcing-from-southeast-asia",
     "title_hint": "Buying rare aroids from Indonesia, Thailand and the Philippines — sellers, shipping, phytosanitary realities",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-18"
   },
   {
     "slug": "anthurium-price-history",
     "title_hint": "The Anthurium price boom and the correction that followed — what drove it, who got hurt, what's next",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-20"
   },
   {
     "slug": "inspecting-a-stem-cut",
     "title_hint": "How to inspect a rare-aroid stem cut before you wire money — node health, rot lines, the cut itself",
     "category": "The Market",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-22"
   }
 ]

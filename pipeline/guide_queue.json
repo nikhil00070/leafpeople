@@ -17,102 +17,119 @@
     "slug": "hoya-for-beginners",
     "genus": "Hoya",
     "title_hint": "Beginner-friendly Hoyas that still impress",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-04-30"
   },
   {
     "slug": "begonia-rex-care",
     "genus": "Begonia",
     "title_hint": "Keeping rhizomatous and rex Begonias alive",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-01"
   },
   {
     "slug": "alocasia-spider-mites-and-corms",
     "genus": "Alocasia",
     "title_hint": "Spider mites, corm dormancy, and how to keep an Alocasia from quitting on you",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-04"
   },
   {
     "slug": "aglaonema-collector-cultivars",
     "genus": "Aglaonema",
     "title_hint": "The Aglaonema color forms worth collecting — pink, red, silver and the rarer Pictum complex",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-05"
   },
   {
     "slug": "calathea-survival-guide",
     "genus": "Calathea",
     "title_hint": "Why Calatheas and Goeppertias crash — water chemistry, humidity, and the truth about leaf curl",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-06"
   },
   {
     "slug": "scindapsus-pictus-family",
     "genus": "Scindapsus",
     "title_hint": "The Scindapsus pictus family, sorted — Exotica, Silvery Ann, Trebii, Treubii Moonlight",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-07"
   },
   {
     "slug": "rhaphidophora-tetrasperma-versus-monstera",
     "genus": "Rhaphidophora",
     "title_hint": "Rhaphidophora tetrasperma versus juvenile Monstera deliciosa — how to tell them apart and what each actually needs",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-08"
   },
   {
     "slug": "syngonium-rare-cultivars",
     "genus": "Syngonium",
     "title_hint": "Albo, Strawberry, Confetti, Mottled — which Syngonium cultivars are actually worth keeping",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-11"
   },
   {
     "slug": "homalomena-under-collected",
     "genus": "Homalomena",
     "title_hint": "Homalomena: the under-collected aroid genus — Selby, Camouflage, and the species worth tracking down",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-12"
   },
   {
     "slug": "caladium-dormancy-window",
     "genus": "Caladium",
     "title_hint": "Caladium bulb dormancy, the wake-up window, and how to get a second flush of leaves",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-13"
   },
   {
     "slug": "amydrium-medium-care",
     "genus": "Amydrium",
     "title_hint": "Amydrium medium and silver — picking the right climbing structure and getting fenestrations",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-14"
   },
   {
     "slug": "anthurium-warocqueanum-and-clarinervium",
     "genus": "Anthurium",
     "title_hint": "The warocqueanum and clarinervium complex — telling them apart and growing the dark velvets",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-15"
   },
   {
     "slug": "philodendron-gloriosum-versus-mamei",
     "genus": "Philodendron",
     "title_hint": "Telling Philodendron gloriosum from mamei (and dean mcdowell, and pastazanum) — leaf, petiole, growth habit",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-18"
   },
   {
     "slug": "begonia-hairy-leaf-types",
     "genus": "Begonia",
     "title_hint": "Hairy-leaf Begonias — listada, dietrichiana, masoniana — what makes the trichomes work and how to keep them happy",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-19"
   },
   {
     "slug": "hoya-leaf-based-id",
     "genus": "Hoya",
     "title_hint": "Hoya ID by leaf alone — carnosa, obovata, kerrii, callistophylla and the splash-leaf complex",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-20"
   },
   {
     "slug": "monstera-obliqua-real-versus-fake",
     "genus": "Monstera",
     "title_hint": "Monstera obliqua — telling a real one from adansonii sold as obliqua, and what owning one actually involves",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-21"
   },
   {
     "slug": "epipremnum-fenestration-timeline",
     "genus": "Epipremnum",
     "title_hint": "Epipremnum pinnatum and the fenestration timeline — how long it actually takes and what climbing structure changes everything",
-    "status": "queued"
+    "status": "published",
+    "published_at": "2026-05-22"
   }
 ]

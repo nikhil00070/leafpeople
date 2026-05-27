@@ -1,0 +1,72 @@
+{
+  "meta_title": "The Velvet Anthuriums: Telling warocqueanum from clarinervium",
+  "meta_description": "How to distinguish Anthurium warocqueanum, clarinervium, magnificum and crystallinum — and grow the dark velvets without losing leaves.",
+  "genus": "Anthurium",
+  "title": "The Velvet Anthuriums: Telling warocqueanum from clarinervium",
+  "deck": "Four dark-leaved Anthuriums get confused constantly. Here is how to tell them apart on the bench, and how to keep them alive once you do.",
+  "stat_number": "75%+",
+  "stat_label": "Humidity the velvets actually want",
+  "picks": [
+    {
+      "name": "Anthurium warocqueanum",
+      "location": "Pendant epiphyte · strap-leaf velvet",
+      "description": "The Queen. Leaves pendulous, elongated, often 60–120 cm on a mature plant, with primary veins picked out in pale silver against deep matte green. Petioles are terete and shorter than the blade, which is the giveaway — clarinervium's petiole is roughly the length of its leaf. Slow, sulky in dry air, magnificent when it settles.",
+      "tag": "The Queen"
+    },
+    {
+      "name": "Anthurium clarinervium",
+      "location": "Lithophytic crawler · cordate velvet",
+      "description": "Compact, cordate, with thick coriaceous leaves and bone-white venation on near-black green. Native to limestone outcrops in Chiapas, so it tolerates a chunkier, more mineral mix and slightly lower humidity than its South American cousins. Petioles are terete and about as long as the blade. The forgiving entry point to the velvets.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Anthurium magnificum",
+      "location": "Terrestrial · cordate velvet",
+      "description": "Often mistaken for clarinervium online, but the tell is in the petiole: _magnificum_ has a distinctly winged, quadrangular petiole, where clarinervium's is round. Leaves are larger, broader, more bullate at maturity, with venation that runs more silver than white. Wants warmth and steady moisture at the roots.",
+      "tag": "Bigger sibling"
+    },
+    {
+      "name": "Anthurium crystallinum",
+      "location": "Epiphyte · cordate semi-velvet",
+      "description": "Thinner, more papery leaves than clarinervium, with a faster flush rate and a pinker new leaf. Venation is bright silver, the blade more elongate-cordate. Petioles are terete. If your \"clarinervium\" pushes a new leaf every six weeks and the leaves feel like cardstock rather than felt, you have crystallinum.",
+      "tag": "Fast grower"
+    },
+    {
+      "name": "Anthurium forgetii",
+      "location": "Epiphyte · peltate velvet",
+      "description": "The oddball worth knowing because it ends the confusion: _forgetii_ is peltate, meaning the petiole attaches to the middle of the leaf rather than at a sinus. No basal lobes, no heart shape. Smaller than the others, more tolerant of intermediate conditions, and an honest way to add a velvet without committing to a warocqueanum.",
+      "tag": "Peltate outlier"
+    }
+  ],
+  "body_image_caption": "Petiole cross-sections — the fastest ID in the room.",
+  "body_sections": [
+    {
+      "heading": "Reading the plant: petiole, posture, texture",
+      "paragraphs": [
+        "Most ID mistakes happen because people look at the leaf face first. Flip the question. Start at the petiole. _A. magnificum_ has a winged, four-angled petiole you can feel with a thumbnail. _Clarinervium_, _crystallinum_, and _warocqueanum_ all have terete (round) petioles. _Forgetii_ attaches in the middle of the blade and has no sinus at all.",
+        "Then look at proportion. On _warocqueanum_, the blade is dramatically longer than the petiole, and the plant hangs. On _clarinervium_, petiole and blade are roughly equal, and the plant sits upright. _Crystallinum_ splits the difference but the leaf texture is thinner — hold it to the light and you will see more translucency than _clarinervium_ ever shows.",
+        "Finally, venation color and leaf finish. _Clarinervium_ is chalk-white veins on near-black, with a dry felt texture. _Magnificum_ is silver on green, more bullate. _Warocqueanum_ is silver-grey on a slightly glossier matte. If a seller's photo shows a strappy pendant leaf labeled clarinervium, it is not clarinervium."
+      ]
+    },
+    {
+      "heading": "Substrate and roots",
+      "paragraphs": [
+        "These are not potting-soil plants. _Clarinervium_ grows on limestone in the wild; the others are epiphytic or hemi-epiphytic on mossy trunks. The mix needs to drink fast and dry within a few days, while still holding a film of moisture against the root.",
+        "A working baseline: 40% medium orchid bark, 20% perlite or pumice, 20% coarse coco chunks or tree fern, 20% sphagnum or high-quality coco coir. For _clarinervium_ I add a handful of crushed pumice or lava and skew drier. For _warocqueanum_, more sphagnum and tree fern, because pendant strap leaves transpire hard and the roots need to find water quickly between waterings.",
+        "Repot when the mix breaks down, not on a calendar. Velvet Anthurium roots are thick, white, and brittle — work gently, and never bury the crown. If the base of the petioles sits in damp media, you will get rot at the growth point and the plant will collapse in a week."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity, and the mistakes that kill them",
+      "paragraphs": [
+        "Bright indirect is the honest answer. Roughly 150–250 µmol/m²/s at the leaf, or a north-facing window with supplemental light, or an east window filtered. Direct midday sun bleaches velvet leaves permanently — there is no recovery, you wait for the next leaf.",
+        "Water when the top inch of mix is dry but the core is still barely damp. These plants hate the swing from bone-dry to saturated. Rainwater, RO, or distilled is worth the trouble: tap water with high alkalinity scorches leaf margins on _warocqueanum_ within a few months. Fertilize lightly and constantly — quarter-strength balanced feed every watering beats a monthly dose.",
+        "Humidity is where most collections fail. _Clarinervium_ will tolerate 55–65%. _Warocqueanum_, _magnificum_, and _crystallinum_ want 70% and up, with airflow. A still, humid box is a fungal incubator; a humid cabinet with a small fan is a growing chamber. Add the fan before you add another plant.",
+        "The recurring mistakes: pots too large (roots sit wet, crown rots), media too fine (same outcome), tap water on _warocqueanum_ (margin burn, then necrosis creeping up the midrib), and crowding new leaves against glass or a neighbor (the emerging leaf deforms permanently). None of these plants are difficult once the environment is right. They are difficult when the environment is wrong, and they tell you immediately."
+      ]
+    }
+  ],
+  "slug": "anthurium-warocqueanum-and-clarinervium",
+  "hero": "/images/plants/plant-09.jpg",
+  "body_image": "/images/plants/field-skills.jpg"
+}
