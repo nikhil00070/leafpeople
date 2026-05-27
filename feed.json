@@ -1,7 +1,7 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-05-26",
+  "updated": "2026-05-27",
   "count": 40,
   "items": [
     {
@@ -15,7 +15,7 @@
       "date": "2026-05-26",
       "url": "https://leafpeople.app/field-guide/anthurium-velvet-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-velvet-care/_data.json",
-      "image": "https://leafpeople.app/images/source/p03.jpg"
+      "image": "https://leafpeople.app/images/source/book/anthurium-velvet-care-hero.jpg"
     },
     {
       "id": "field-guide/monstera-variegated-worth-it",
@@ -41,7 +41,7 @@
       "date": "2026-05-25",
       "url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth",
       "data_url": "https://leafpeople.app/the-leaf/petiole-tells-the-truth/_data.json",
-      "image": "https://leafpeople.app/images/source/p31.jpg"
+      "image": "https://leafpeople.app/images/source/book/petiole-tells-the-truth-hero.jpg"
     },
     {
       "id": "the-leaf/the-velvet-anthurium-problem",
@@ -54,7 +54,7 @@
       "date": "2026-05-25",
       "url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem",
       "data_url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem/_data.json",
-      "image": "https://leafpeople.app/images/source/p34.jpg"
+      "image": "https://leafpeople.app/images/source/book/the-velvet-anthurium-problem-hero.jpg"
     },
     {
       "id": "the-leaf/grown-where-they-shouldnt-exist",
@@ -67,7 +67,7 @@
       "date": "2026-05-24",
       "url": "https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist",
       "data_url": "https://leafpeople.app/the-leaf/grown-where-they-shouldnt-exist/_data.json",
-      "image": "https://leafpeople.app/images/source/p28.jpg"
+      "image": "https://leafpeople.app/images/source/book/grown-where-they-shouldnt-exist-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-beginners",
@@ -93,7 +93,7 @@
       "date": "2026-05-22",
       "url": "https://leafpeople.app/the-leaf/inspecting-a-stem-cut",
       "data_url": "https://leafpeople.app/the-leaf/inspecting-a-stem-cut/_data.json",
-      "image": "https://leafpeople.app/images/source/p48.jpg"
+      "image": "https://leafpeople.app/images/source/stock/inspecting-a-stem-cut-hero.jpg"
     },
     {
       "id": "field-guide/epipremnum-fenestration-timeline",
@@ -132,7 +132,7 @@
       "date": "2026-05-20",
       "url": "https://leafpeople.app/the-leaf/anthurium-price-history",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-price-history/_data.json",
-      "image": "https://leafpeople.app/images/source/p43.jpg"
+      "image": "https://leafpeople.app/images/source/book/anthurium-price-history-hero.jpg"
     },
     {
       "id": "field-guide/hoya-leaf-based-id",
@@ -197,7 +197,7 @@
       "date": "2026-05-15",
       "url": "https://leafpeople.app/the-leaf/visiting-the-glasshouse",
       "data_url": "https://leafpeople.app/the-leaf/visiting-the-glasshouse/_data.json",
-      "image": "https://leafpeople.app/images/source/p06.jpg"
+      "image": "https://leafpeople.app/images/source/stock/visiting-the-glasshouse-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-warocqueanum-and-clarinervium",
@@ -210,7 +210,7 @@
       "date": "2026-05-15",
       "url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-and-clarinervium",
       "data_url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-and-clarinervium/_data.json",
-      "image": "https://leafpeople.app/images/source/p24.jpg"
+      "image": "https://leafpeople.app/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg"
     },
     {
       "id": "field-guide/amydrium-medium-care",
@@ -236,7 +236,7 @@
       "date": "2026-05-13",
       "url": "https://leafpeople.app/the-leaf/trades-versus-sales",
       "data_url": "https://leafpeople.app/the-leaf/trades-versus-sales/_data.json",
-      "image": "https://leafpeople.app/images/source/p41.jpg"
+      "image": "https://leafpeople.app/images/source/stock/trades-versus-sales-hero.jpg"
     },
     {
       "id": "field-guide/caladium-dormancy-window",
@@ -275,7 +275,7 @@
       "date": "2026-05-11",
       "url": "https://leafpeople.app/the-leaf/photographing-collector-plants",
       "data_url": "https://leafpeople.app/the-leaf/photographing-collector-plants/_data.json",
-      "image": "https://leafpeople.app/images/source/p11.jpg"
+      "image": "https://leafpeople.app/images/source/book/photographing-collector-plants-hero.jpg"
     },
     {
       "id": "field-guide/syngonium-rare-cultivars",
@@ -301,7 +301,7 @@
       "date": "2026-05-08",
       "url": "https://leafpeople.app/the-leaf/the-collectors-lexicon",
       "data_url": "https://leafpeople.app/the-leaf/the-collectors-lexicon/_data.json",
-      "image": "https://leafpeople.app/images/source/p21.jpg"
+      "image": "https://leafpeople.app/images/source/stock/the-collectors-lexicon-hero.jpg"
     },
     {
       "id": "field-guide/rhaphidophora-tetrasperma-versus-monstera",
@@ -340,7 +340,7 @@
       "date": "2026-05-06",
       "url": "https://leafpeople.app/the-leaf/reading-aroid-roots",
       "data_url": "https://leafpeople.app/the-leaf/reading-aroid-roots/_data.json",
-      "image": "https://leafpeople.app/images/source/p38.jpg"
+      "image": "https://leafpeople.app/images/source/stock/reading-aroid-roots-hero.jpg"
     },
     {
       "id": "field-guide/calathea-survival-guide",
@@ -379,7 +379,7 @@
       "date": "2026-05-04",
       "url": "https://leafpeople.app/the-leaf/variegation-genetics-plain-english",
       "data_url": "https://leafpeople.app/the-leaf/variegation-genetics-plain-english/_data.json",
-      "image": "https://leafpeople.app/images/source/p06.jpg"
+      "image": "https://leafpeople.app/images/source/stock/variegation-genetics-plain-english-hero.jpg"
     },
     {
       "id": "field-guide/alocasia-spider-mites-and-corms",
@@ -444,7 +444,7 @@
       "date": "2026-04-29",
       "url": "https://leafpeople.app/the-leaf/light-for-velvet-aroids",
       "data_url": "https://leafpeople.app/the-leaf/light-for-velvet-aroids/_data.json",
-      "image": "https://leafpeople.app/images/source/p18.jpg"
+      "image": "https://leafpeople.app/images/source/book/light-for-velvet-aroids-hero.jpg"
     },
     {
       "id": "the-leaf/filial-generations-explained",
@@ -457,7 +457,7 @@
       "date": "2026-04-27",
       "url": "https://leafpeople.app/the-leaf/filial-generations-explained",
       "data_url": "https://leafpeople.app/the-leaf/filial-generations-explained/_data.json",
-      "image": "https://leafpeople.app/images/source/p38.jpg"
+      "image": "https://leafpeople.app/images/source/stock/filial-generations-explained-hero.jpg"
     },
     {
       "id": "the-leaf/decoding-listing-abbreviations",
@@ -470,7 +470,7 @@
       "date": "2026-04-24",
       "url": "https://leafpeople.app/the-leaf/decoding-listing-abbreviations",
       "data_url": "https://leafpeople.app/the-leaf/decoding-listing-abbreviations/_data.json",
-      "image": "https://leafpeople.app/images/source/p39.jpg"
+      "image": "https://leafpeople.app/images/source/stock/decoding-listing-abbreviations-hero.jpg"
     },
     {
       "id": "the-leaf/cataphylls-and-maturity",
@@ -483,7 +483,7 @@
       "date": "2026-04-22",
       "url": "https://leafpeople.app/the-leaf/cataphylls-and-maturity",
       "data_url": "https://leafpeople.app/the-leaf/cataphylls-and-maturity/_data.json",
-      "image": "https://leafpeople.app/images/source/p25.jpg"
+      "image": "https://leafpeople.app/images/source/stock/cataphylls-and-maturity-hero.jpg"
     },
     {
       "id": "the-leaf/anatomy-of-an-aroid-inflorescence",
@@ -509,7 +509,7 @@
       "date": "2026-04-17",
       "url": "https://leafpeople.app/the-leaf/reading-aroid-venation",
       "data_url": "https://leafpeople.app/the-leaf/reading-aroid-venation/_data.json",
-      "image": "https://leafpeople.app/images/source/p02.jpg"
+      "image": "https://leafpeople.app/images/source/stock/reading-aroid-venation-hero.jpg"
     },
     {
       "id": "the-leaf/buying-a-rare-plant-without-getting-burned",
@@ -522,7 +522,7 @@
       "date": "2026-04-15",
       "url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned",
       "data_url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned/_data.json",
-      "image": "https://leafpeople.app/images/source/p43.jpg"
+      "image": "https://leafpeople.app/images/source/stock/buying-a-rare-plant-without-getting-burned-hero.jpg"
     }
   ]
 }

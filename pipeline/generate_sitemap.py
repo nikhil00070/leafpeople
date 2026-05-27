@@ -22,6 +22,9 @@ def main() -> int:
     for section in ("the-leaf", "field-guide"):
         manifest = common.SITE_ROOT / section / "manifest.json"
         for item in manifest_helpers.load(manifest):
+            # Skip pending (unreviewed) drafts — keep them out of SEO until human approves.
+            if item.get("status", "published") != "published":
+                continue
             entries.append(url(item["url"], item.get("date", TODAY)))
 
     xml = (

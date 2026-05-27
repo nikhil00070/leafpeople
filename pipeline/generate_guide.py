@@ -130,6 +130,8 @@ def main() -> int:
     print(f"[guide] wrote {out_dir / 'index.html'}")
 
     # LP_DATE env var allows back-dating during bulk backfill.
+    # New articles enter with status="pending" — see generate_leaf.py for the
+    # full rationale. The /review page surfaces these to the human for approval.
     today = os.environ.get("LP_DATE") or dt.date.today().isoformat()
     manifest_helpers.upsert(MANIFEST, {
         "slug": item["slug"],
@@ -139,9 +141,10 @@ def main() -> int:
         "url": f"/field-guide/{item['slug']}",
         "date": today,
         "thumb": hero,
+        "status": "pending",
     })
 
-    queue[idx]["status"] = "published"
+    queue[idx]["status"] = "pending_review"
     queue[idx]["published_at"] = today
     common.save_queue(QUEUE, queue)
     print(f"[guide] published {item['slug']}")

@@ -20,6 +20,9 @@ def main() -> int:
     items = []
     for path, label in SECTIONS.items():
         for it in manifest_helpers.load(common.SITE_ROOT / path / "manifest.json"):
+            # Skip pending (unreviewed) drafts — the iOS feed shouldn't show them.
+            if it.get("status", "published") != "published":
+                continue
             url = f"{BASE}{it['url']}"
             items.append({
                 "id": f"{path}/{it['slug']}",

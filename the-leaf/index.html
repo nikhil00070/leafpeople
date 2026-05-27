@@ -56,6 +56,9 @@
     .then((r) => r.json())
     .then((items) => {
       const grid = document.getElementById("grid");
+      // Filter out pending (unreviewed) drafts — they exist on disk but the human
+      // hasn't approved them via /review yet.
+      items = items.filter((a) => (a.status || "published") === "published");
       if (!items.length) { document.getElementById("empty").style.display = "block"; return; }
       grid.innerHTML = items
         .sort((a, b) => (a.date < b.date ? 1 : -1))

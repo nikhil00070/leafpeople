@@ -104,7 +104,11 @@
 
   fetch("/field-guide/manifest.json")
     .then((r) => r.json())
-    .then((items) => { ALL = items; render("All"); })
+    .then((items) => {
+      // Filter out pending (unreviewed) drafts.
+      ALL = items.filter((a) => (a.status || "published") === "published");
+      render("All");
+    })
     .catch(() => { empty.style.display = "block"; });
 </script>
 <script src="/js/site.js"></script>

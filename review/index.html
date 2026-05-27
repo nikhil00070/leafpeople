@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Review queue — Leaf People</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0b0f0d; --card:#141a16; --border:#1f2a23; --text:#e8efe9; --dim:#b8c8bb; --faint:#8da38f; --green:#4ade80; --orange:#f97316; --red:#ef4444; --blue:#60a5fa; }
+* { box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem; }
+.wrap { max-width: 1300px; margin: 0 auto; }
+header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
+h1 { font-family: 'Geologica', sans-serif; font-weight: 900; font-size: 2rem; margin: 0; letter-spacing: -.02em; }
+.note { color: var(--faint); font-size: .9rem; max-width: 60ch; line-height: 1.45; }
+.counts { display: flex; gap: .8rem; margin: 1rem 0 1.8rem; flex-wrap: wrap; }
+.count { padding: .5rem .9rem; background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: .85rem; }
+.count strong { color: var(--orange); font-size: 1.1rem; margin-right: .3rem; font-weight: 700; }
+.empty { padding: 3rem 1rem; text-align: center; color: var(--faint); font-style: italic; }
+
+.article { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 1.4rem; overflow: hidden; }
+.art-head { padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.art-slug { font-family: ui-monospace, monospace; font-size: .72rem; color: var(--faint); letter-spacing: .03em; }
+.art-title { font-family: 'Geologica', sans-serif; font-weight: 800; font-size: 1.2rem; margin: .2rem 0 0; line-height: 1.25; }
+.art-cat { display: inline-block; padding: 2px 8px; background: rgba(74,222,128,.1); color: var(--green); border-radius: 4px; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.art-deck { color: var(--dim); font-size: .9rem; line-height: 1.5; padding: 0 1.2rem; margin: .9rem 0; }
+
+.images { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.img-cell { padding: 1rem 1.2rem; border-top: 1px solid var(--border); }
+.img-cell:first-child { border-right: 1px solid var(--border); }
+.img-label { font-size: .65rem; font-weight: 700; letter-spacing: .12em; color: var(--green); margin-bottom: .5rem; text-transform: uppercase; }
+.img-cell.body .img-label { color: var(--blue); }
+.img-cell img { width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px; display: block; }
+.img-cell .caption { font-size: .82rem; color: var(--dim); font-style: italic; margin-top: .6rem; line-height: 1.45; }
+.img-cell .attrib { font-size: .7rem; color: var(--faint); margin-top: .4rem; font-family: ui-monospace, monospace; }
+
+.actions { display: flex; gap: .6rem; padding: 1.2rem; border-top: 1px solid var(--border); background: rgba(0,0,0,.2); flex-wrap: wrap; align-items: center; }
+.btn { display: inline-block; padding: .6rem 1.1rem; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; cursor: pointer; border: 1px solid transparent; font-family: inherit; }
+.btn-publish { background: var(--green); color: #06140C; }
+.btn-publish:hover { filter: brightness(1.1); }
+.btn-reject { background: transparent; color: var(--red); border-color: var(--red); }
+.btn-reject:hover { background: rgba(239,68,68,.1); }
+.btn-secondary { background: transparent; color: var(--dim); border-color: var(--border); }
+.btn-secondary:hover { background: var(--border); }
+.cmd { font-family: ui-monospace, monospace; font-size: .78rem; background: rgba(0,0,0,.4); padding: .5rem .8rem; border-radius: 6px; color: var(--green); margin-left: auto; user-select: all; cursor: pointer; }
+.cmd:hover { background: rgba(0,0,0,.6); }
+
+.section-h { font-family: 'Geologica', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--faint); margin: 2rem 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); letter-spacing: .04em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Review queue</h1>
+  <p class="note">Articles the pipeline generated but a human hasn't approved yet. Look at the hero, body image, and caption — if anything's off (wrong species, dull photo, mismatched caption), reject. Pending articles aren't visible on the public site until you publish them here.</p>
+</header>
+
+<div class="counts" id="counts"></div>
+<div id="leafSection" style="display:none"><div class="section-h">Understory</div><div id="leafList"></div></div>
+<div id="guideSection" style="display:none"><div class="section-h">Field Guide</div><div id="guideList"></div></div>
+<div id="empty" class="empty" style="display:none">No articles pending review — queue is empty.</div>
+
+<script>
+const REPO = "nikhil00070/leafpeople";
+const PUBLISH_WORKFLOW = `https://github.com/${REPO}/actions/workflows/publish.yml`;
+
+async function loadSection(section) {
+  try {
+    const r = await fetch(`/${section}/manifest.json`);
+    const items = await r.json();
+    return items.filter(a => a.status === "pending");
+  } catch {
+    return [];
+  }
+}
+
+async function loadData(section, slug) {
+  try {
+    const r = await fetch(`/${section}/${slug}/_data.json`);
+    return await r.json();
+  } catch {
+    return {};
+  }
+}
+
+function copyCmd(el) {
+  navigator.clipboard?.writeText(el.textContent);
+  const o = el.textContent; el.textContent = "✓ copied"; setTimeout(() => el.textContent = o, 1100);
+}
+
+function articleCard(section, entry, data) {
+  const slug = `${section}/${entry.slug}`;
+  const cap = (data.body_image_caption || "").replace(/_([^_]+)_/g, "<em>$1</em>");
+  const heroAttr = data.hero_attribution || "(your own photo)";
+  const bodyAttr = data.body_image_attribution || "(your own photo)";
+  const publishUrl = `${PUBLISH_WORKFLOW}`;  // GitHub opens form; user pastes slug
+  return `
+  <article class="article" data-slug="${slug}">
+    <div class="art-head">
+      <div>
+        <div class="art-slug">${slug}</div>
+        <h2 class="art-title">${entry.title}</h2>
+      </div>
+      <span class="art-cat">${entry.category || ""}</span>
+    </div>
+    <div class="art-deck">${data.deck || entry.description || ""}</div>
+    <div class="images">
+      <div class="img-cell">
+        <div class="img-label">Hero</div>
+        <img src="${data.hero || entry.thumb}" loading="lazy">
+        <div class="attrib">${heroAttr}</div>
+      </div>
+      <div class="img-cell body">
+        <div class="img-label">Body + Caption</div>
+        <img src="${data.body_image || ''}" loading="lazy">
+        <div class="caption">"${cap}"</div>
+        <div class="attrib">${bodyAttr}</div>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-publish" href="${publishUrl}" target="_blank" rel="noopener">Publish on GitHub →</a>
+      <a class="btn btn-reject" href="${publishUrl}" target="_blank" rel="noopener">Reject (workflow → --reject)</a>
+      <a class="btn btn-secondary" href="/${slug}" target="_blank" rel="noopener">View draft article</a>
+      <span class="cmd" onclick="copyCmd(this)" title="Click to copy">python pipeline/publish.py ${slug}</span>
+    </div>
+  </article>`;
+}
+
+(async function() {
+  const [leaf, guide] = await Promise.all([loadSection("the-leaf"), loadSection("field-guide")]);
+
+  const counts = document.getElementById("counts");
+  counts.innerHTML = `
+    <div class="count"><strong>${leaf.length}</strong> Understory pending</div>
+    <div class="count"><strong>${guide.length}</strong> Field Guide pending</div>
+    <div class="count">Repo: <code style="color:var(--blue)">${REPO}</code></div>
+  `;
+  if (!leaf.length && !guide.length) {
+    document.getElementById("empty").style.display = "block";
+    return;
+  }
+  if (leaf.length) {
+    document.getElementById("leafSection").style.display = "block";
+    const cards = await Promise.all(leaf.map(async e => articleCard("the-leaf", e, await loadData("the-leaf", e.slug))));
+    document.getElementById("leafList").innerHTML = cards.join("");
+  }
+  if (guide.length) {
+    document.getElementById("guideSection").style.display = "block";
+    const cards = await Promise.all(guide.map(async e => articleCard("field-guide", e, await loadData("field-guide", e.slug))));
+    document.getElementById("guideList").innerHTML = cards.join("");
+  }
+})();
+</script>
+</body>
+</html>

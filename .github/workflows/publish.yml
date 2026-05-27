@@ -1,0 +1,58 @@
+name: Publish pending article
+
+# Promote a pending article to published, or reject it outright.
+# Triggered from the /review page or manually via Actions UI.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Article slug, e.g. the-leaf/petiole-tells-the-truth"
+        required: true
+        type: string
+      action:
+        description: "publish (flip to live) or reject (delete pending article)"
+        required: true
+        default: "publish"
+        type: choice
+        options:
+          - publish
+          - reject
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+      - name: Run publish.py
+        run: |
+          if [ "${{ inputs.action }}" = "reject" ]; then
+            python pipeline/publish.py "${{ inputs.slug }}" --reject
+          else
+            python pipeline/publish.py "${{ inputs.slug }}"
+          fi
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            ACTION="${{ inputs.action }}"
+            SLUG="${{ inputs.slug }}"
+            if [ "$ACTION" = "reject" ]; then
+              git commit -m "Review: reject $SLUG"
+            else
+              git commit -m "Review: publish $SLUG"
+            fi
+            git pull --rebase origin main
+            git push
+          fi

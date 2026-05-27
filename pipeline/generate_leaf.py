@@ -105,6 +105,9 @@ def main() -> int:
     print(f"[leaf] wrote {out_dir / 'index.html'}")
 
     # Manifest — LP_DATE env var allows back-dating during bulk backfill.
+    # New articles enter with status="pending" — they live on disk but DON'T
+    # appear in the public listing until a human reviews and approves via
+    # pipeline/publish.py (or the /review page's publish workflow).
     today = os.environ.get("LP_DATE") or dt.date.today().isoformat()
     manifest_helpers.upsert(MANIFEST, {
         "slug": item["slug"],
@@ -114,10 +117,11 @@ def main() -> int:
         "url": f"/the-leaf/{item['slug']}",
         "date": today,
         "thumb": hero,
+        "status": "pending",
     })
 
-    # Mark published
-    queue[idx]["status"] = "published"
+    # Mark in queue as pending_review (not yet published to readers)
+    queue[idx]["status"] = "pending_review"
     queue[idx]["published_at"] = today
     common.save_queue(QUEUE, queue)
     print(f"[leaf] published {item['slug']}")

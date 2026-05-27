@@ -104,6 +104,8 @@
     fetch("/" + section + "/manifest.json")
       .then((r) => r.json())
       .then((items) => {
+        // Hide pending (unreviewed) drafts from the related-cards rail too.
+        items = items.filter((a) => (a.status || "published") === "published");
         const others = items.filter((a) => a.slug !== slug).slice(0, 4);
         if (!others.length) return hideRelated();
         relGrid.innerHTML = others
