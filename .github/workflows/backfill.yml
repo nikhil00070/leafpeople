@@ -1,0 +1,56 @@
+name: Backfill archive (one-time bulk)
+
+# One-shot bulk run that fills out the archive before the social launch:
+# 17 Understory + 17 Field Guide articles, each back-dated so the archive
+# reads as a 6-week editorial history rather than a same-day dump.
+#
+# Trigger from Actions → "Backfill archive (one-time bulk)" → Run workflow.
+# Cron stays untouched; this just publishes the queued backlog faster.
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Override LP_MODEL (default: claude-opus-4-7 for quality)"
+        required: false
+        default: "claude-opus-4-7"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run bulk backfill
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LP_MODEL: ${{ inputs.model }}
+        run: python pipeline/bulk_backfill.py
+
+      - name: Rebuild manifests + sitemap + feed
+        run: |
+          cd pipeline
+          python generate_sitemap.py
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Backfill: 34 back-dated articles for launch archive"
+            git push
+          fi

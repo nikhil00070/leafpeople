@@ -2,13 +2,15 @@
 
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 
 import anthropic
 
-# Sonnet 4.6 — strong cost/quality balance for article generation.
-MODEL = "claude-sonnet-4-6"
+# Sonnet 4.6 — strong cost/quality balance for article generation. Override
+# with LP_MODEL=claude-opus-4-7 for one-off bulk runs where quality compounds.
+MODEL = os.environ.get("LP_MODEL", "claude-sonnet-4-6")
 
 ROOT = Path(__file__).resolve().parent
 SITE_ROOT = ROOT.parent

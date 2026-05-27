@@ -11,6 +11,7 @@ updates the manifest, and marks the queue item published.
 
 import datetime as dt
 import json
+import os
 from pathlib import Path
 
 import common
@@ -103,8 +104,8 @@ def main() -> int:
         encoding="utf-8")
     print(f"[leaf] wrote {out_dir / 'index.html'}")
 
-    # Manifest
-    today = dt.date.today().isoformat()
+    # Manifest — LP_DATE env var allows back-dating during bulk backfill.
+    today = os.environ.get("LP_DATE") or dt.date.today().isoformat()
     manifest_helpers.upsert(MANIFEST, {
         "slug": item["slug"],
         "title": article["title"],

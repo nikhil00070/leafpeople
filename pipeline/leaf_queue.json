@@ -54,5 +54,65 @@
     "title_hint": "Getting light right for velvet-leaf aroids — intensity, distance and reading the plant's signals",
     "category": "Field Skills",
     "status": "queued"
+  },
+  {
+    "slug": "acclimating-a-fresh-import",
+    "title_hint": "How to acclimate a freshly imported rare aroid — sphagnum chambers, humidity ramp, root recovery, the first 60 days",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "variegation-genetics-plain-english",
+    "title_hint": "Chimeric vs. genetic variegation, plain English — why most variegation is unstable and what that means for what you bought",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "reading-aroid-roots",
+    "title_hint": "Reading aroid roots: healthy vs. rotting, when to chop, when to wait, and the pothos test no one teaches you",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "the-collectors-lexicon",
+    "title_hint": "Thirty terms that signal an experienced rare-plant collector — from 'jump' to 'pup' to 'wet stick'",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "photographing-collector-plants",
+    "title_hint": "How to photograph rare aroids — light, angle, scale, color accuracy — for sale, trade or the archive",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "trades-versus-sales",
+    "title_hint": "Trades vs. sales in the rare-plant community — what an even trade actually looks like and how to propose one",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "visiting-the-glasshouse",
+    "title_hint": "What to look for — and what to bring — when you visit a serious rare-aroid grower's glasshouse",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "sourcing-from-southeast-asia",
+    "title_hint": "Buying rare aroids from Indonesia, Thailand and the Philippines — sellers, shipping, phytosanitary realities",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-price-history",
+    "title_hint": "The Anthurium price boom and the correction that followed — what drove it, who got hurt, what's next",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "inspecting-a-stem-cut",
+    "title_hint": "How to inspect a rare-aroid stem cut before you wire money — node health, rot lines, the cut itself",
+    "category": "The Market",
+    "status": "queued"
   }
 ]

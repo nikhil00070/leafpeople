@@ -24,5 +24,95 @@
     "genus": "Begonia",
     "title_hint": "Keeping rhizomatous and rex Begonias alive",
     "status": "queued"
+  },
+  {
+    "slug": "alocasia-spider-mites-and-corms",
+    "genus": "Alocasia",
+    "title_hint": "Spider mites, corm dormancy, and how to keep an Alocasia from quitting on you",
+    "status": "queued"
+  },
+  {
+    "slug": "aglaonema-collector-cultivars",
+    "genus": "Aglaonema",
+    "title_hint": "The Aglaonema color forms worth collecting — pink, red, silver and the rarer Pictum complex",
+    "status": "queued"
+  },
+  {
+    "slug": "calathea-survival-guide",
+    "genus": "Calathea",
+    "title_hint": "Why Calatheas and Goeppertias crash — water chemistry, humidity, and the truth about leaf curl",
+    "status": "queued"
+  },
+  {
+    "slug": "scindapsus-pictus-family",
+    "genus": "Scindapsus",
+    "title_hint": "The Scindapsus pictus family, sorted — Exotica, Silvery Ann, Trebii, Treubii Moonlight",
+    "status": "queued"
+  },
+  {
+    "slug": "rhaphidophora-tetrasperma-versus-monstera",
+    "genus": "Rhaphidophora",
+    "title_hint": "Rhaphidophora tetrasperma versus juvenile Monstera deliciosa — how to tell them apart and what each actually needs",
+    "status": "queued"
+  },
+  {
+    "slug": "syngonium-rare-cultivars",
+    "genus": "Syngonium",
+    "title_hint": "Albo, Strawberry, Confetti, Mottled — which Syngonium cultivars are actually worth keeping",
+    "status": "queued"
+  },
+  {
+    "slug": "homalomena-under-collected",
+    "genus": "Homalomena",
+    "title_hint": "Homalomena: the under-collected aroid genus — Selby, Camouflage, and the species worth tracking down",
+    "status": "queued"
+  },
+  {
+    "slug": "caladium-dormancy-window",
+    "genus": "Caladium",
+    "title_hint": "Caladium bulb dormancy, the wake-up window, and how to get a second flush of leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "amydrium-medium-care",
+    "genus": "Amydrium",
+    "title_hint": "Amydrium medium and silver — picking the right climbing structure and getting fenestrations",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-warocqueanum-and-clarinervium",
+    "genus": "Anthurium",
+    "title_hint": "The warocqueanum and clarinervium complex — telling them apart and growing the dark velvets",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-gloriosum-versus-mamei",
+    "genus": "Philodendron",
+    "title_hint": "Telling Philodendron gloriosum from mamei (and dean mcdowell, and pastazanum) — leaf, petiole, growth habit",
+    "status": "queued"
+  },
+  {
+    "slug": "begonia-hairy-leaf-types",
+    "genus": "Begonia",
+    "title_hint": "Hairy-leaf Begonias — listada, dietrichiana, masoniana — what makes the trichomes work and how to keep them happy",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-leaf-based-id",
+    "genus": "Hoya",
+    "title_hint": "Hoya ID by leaf alone — carnosa, obovata, kerrii, callistophylla and the splash-leaf complex",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-obliqua-real-versus-fake",
+    "genus": "Monstera",
+    "title_hint": "Monstera obliqua — telling a real one from adansonii sold as obliqua, and what owning one actually involves",
+    "status": "queued"
+  },
+  {
+    "slug": "epipremnum-fenestration-timeline",
+    "genus": "Epipremnum",
+    "title_hint": "Epipremnum pinnatum and the fenestration timeline — how long it actually takes and what climbing structure changes everything",
+    "status": "queued"
   }
 ]

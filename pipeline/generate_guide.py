@@ -11,6 +11,7 @@ and marks the item published.
 
 import datetime as dt
 import json
+import os
 
 import common
 import manifest_helpers
@@ -128,7 +129,8 @@ def main() -> int:
         encoding="utf-8")
     print(f"[guide] wrote {out_dir / 'index.html'}")
 
-    today = dt.date.today().isoformat()
+    # LP_DATE env var allows back-dating during bulk backfill.
+    today = os.environ.get("LP_DATE") or dt.date.today().isoformat()
     manifest_helpers.upsert(MANIFEST, {
         "slug": item["slug"],
         "title": article["title"],
