@@ -2,8 +2,21 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-28",
-  "count": 40,
+  "count": 41,
   "items": [
+    {
+      "id": "field-guide/anthurium-clarinervium-id-gold-standard",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-clarinervium-id-gold-standard",
+      "title": "Anthurium clarinervium: The ID Gold Standard",
+      "category": "Anthurium",
+      "description": "The velvet-leaf benchmark for serious collectors. What separates a true clarinervium from the rest, and five species worth growing alongside it.",
+      "date": "2026-05-28",
+      "url": "https://leafpeople.app/field-guide/anthurium-clarinervium-id-gold-standard",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-clarinervium-id-gold-standard/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-clarinervium-id-gold-standard-hero.jpg"
+    },
     {
       "id": "field-guide/anthurium-velvet-care",
       "section": "field-guide",
