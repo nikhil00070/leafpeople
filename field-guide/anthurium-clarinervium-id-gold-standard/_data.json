@@ -66,6 +66,8 @@
     }
   ],
   "slug": "anthurium-clarinervium-id-gold-standard",
-  "hero": "/images/source/book/anthurium-clarinervium-id-gold-standard-hero.jpg",
-  "body_image": "/images/source/book/anthurium-clarinervium-id-gold-standard-body.jpg"
+  "hero": "/images/source/stock/anthurium-clarinervium-id-gold-standard-hero.jpg",
+  "body_image": "/images/source/stock/anthurium-clarinervium-id-gold-standard-body.jpg",
+  "hero_attribution": "peganum / Flickr (CC BY-SA 2.0)",
+  "body_image_attribution": "Yercaud-elango / Wikimedia Commons (CC BY-SA 4.0)"
 }
