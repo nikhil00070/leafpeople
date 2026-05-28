@@ -38,6 +38,12 @@ jobs:
           else
             python pipeline/publish.py "${{ inputs.slug }}"
           fi
+
+      - name: Push notification (only on publish)
+        if: inputs.action == 'publish'
+        env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: python pipeline/send_push.py "${{ inputs.slug }}"
       - name: Commit & push
         run: |
           git config user.name "leaf-people-bot"
