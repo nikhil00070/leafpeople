@@ -131,5 +131,95 @@
     "title_hint": "Epipremnum pinnatum and the fenestration timeline — how long it actually takes and what climbing structure changes everything",
     "status": "published",
     "published_at": "2026-05-22"
+  },
+  {
+    "slug": "anthurium-clarinervium-id-gold-standard",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium clarinervium — the ID gold standard, and what makes a top-tier specimen",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-besseae-aff-complex",
+    "genus": "Anthurium",
+    "title_hint": "The Anthurium besseae aff. complex — the long-leaf clade and where it actually came from",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-magnificum-clarinervium-hybrids",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium magnificum × clarinervium — what their hybrids actually look like, and how to spot one in a listing",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-melanochrysum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron melanochrysum — velvet ID, climbing structure, and the leaves it eventually throws",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-spiritus-sancti-expectations",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron spiritus-sancti — what to expect when you buy one, and what the price actually buys",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-pastazanum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron pastazanum — the underrated crawler that earns its place",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-dubia-transformation",
+    "genus": "Monstera",
+    "title_hint": "Monstera dubia — the juvenile-to-mature transformation and what climbing structure triggers it",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-siltepecana-el-salvador",
+    "genus": "Monstera",
+    "title_hint": "Monstera siltepecana 'El Salvador' — the form-versus-species question",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-callistophylla-splash-leaf",
+    "genus": "Hoya",
+    "title_hint": "Hoya callistophylla — the type specimen of splash-leaf Hoyas and how to keep one",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-pubicalyx-reblooming",
+    "genus": "Hoya",
+    "title_hint": "Hoya pubicalyx — getting the peduncle to rebloom on the same spur",
+    "status": "queued"
+  },
+  {
+    "slug": "begonia-luxurians-palm-leaf",
+    "genus": "Begonia",
+    "title_hint": "Begonia luxurians — the palm-leaf Begonia for aroid-style collectors",
+    "status": "queued"
+  },
+  {
+    "slug": "spathiphyllum-reconsidered",
+    "genus": "Spathiphyllum",
+    "title_hint": "Spathiphyllum — why the basic Peace Lily still deserves its place in a serious collection",
+    "status": "queued"
+  },
+  {
+    "slug": "stromanthe-vs-calathea-id",
+    "genus": "Stromanthe",
+    "title_hint": "Stromanthe vs. Calathea/Goeppertia — telling the prayer-plant family apart by leaf and habit",
+    "status": "queued"
+  },
+  {
+    "slug": "vriesea-for-aroid-people",
+    "genus": "Vriesea",
+    "title_hint": "Vriesea — the bromeliad an aroid collector should learn first",
+    "status": "queued"
+  },
+  {
+    "slug": "pothos-cultivars-worth-shelf-space",
+    "genus": "Epipremnum",
+    "title_hint": "Pothos cultivars worth shelf space — Cebu Blue, Manjula, Neon, Snow Queen, and the ones that aren't",
+    "status": "queued"
   }
 ]

@@ -131,5 +131,95 @@
     "category": "The Market",
     "status": "published",
     "published_at": "2026-05-22"
+  },
+  {
+    "slug": "watering-rare-aroids-by-weight",
+    "title_hint": "Watering rare aroids by weight — a calibrated approach that beats schedules",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "mounting-mature-aroids-on-wood",
+    "title_hint": "Mounting mature aroids on wood — what holds, what fails, and the rig that earned its place",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "treating-leaf-spot-on-velvets",
+    "title_hint": "Treating fungal leaf-spot on velvet aroids without scarring the foliage",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "reading-new-leaf-color-in-juveniles",
+    "title_hint": "Reading new-leaf color in juvenile anthuriums — what bronze, red and brown actually mean",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "substrate-recipes-i-keep-coming-back-to",
+    "title_hint": "The four substrate recipes I keep coming back to, sorted by plant type",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "the-grower-i-trust-most",
+    "title_hint": "The grower I trust most, and why — what specifically earns the trust of an experienced buyer",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "plant-labels-what-your-handwriting-reveals",
+    "title_hint": "Plant labels: what your handwriting (and your label material) tells other collectors about you",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "what-i-throw-away-from-a-delivery-box",
+    "title_hint": "What I throw away from a rare-plant delivery box — and what I keep, and why",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "plants-i-almost-bought",
+    "title_hint": "The plants I almost bought, and what stopped me at the wire-transfer step",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "how-rare-plant-instagram-works-as-a-market",
+    "title_hint": "How rare-plant Instagram actually functions as a market — DMs, stories, the price ladder no one publishes",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "wholesale-vs-retail-in-the-aroid-trade",
+    "title_hint": "Wholesale vs. retail in the rare-aroid trade — who really sets the price you pay",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "the-first-plant-i-sold",
+    "title_hint": "The first rare plant I sold, and what it taught me about pricing",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "customs-phyto-certs-paperwork",
+    "title_hint": "Customs, phytosanitary certificates, and the paperwork no one explains until you've lost a shipment",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "when-same-plant-three-prices",
+    "title_hint": "When the same plant is sold at three different prices in one week — what's actually different",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "pricing-a-plant-nobody-else-has",
+    "title_hint": "Pricing a plant nobody else has — the framework I use when there's no comparison",
+    "category": "The Market",
+    "status": "queued"
   }
 ]
