@@ -116,16 +116,20 @@ def main() -> int:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    used = common.used_images()
-    hero = common.assign_hero(item["slug"], used, genus=article["genus"])
-    body_image = common.assign_hero(item["slug"] + "-body", used | {hero})
+    # Source on-topic, globally-unique photos from iNaturalist (species-matched,
+    # deduped against every image already on the site). Falls back to a flagged
+    # placeholder if iNat can't supply two unique usable shots — caught at /review.
+    import source_images
+    imgs = source_images.source_for_article("field-guide", item["slug"], article["genus"], article["title"])
+    hero = imgs["hero"]
+    body_image = imgs["body_image"]
     html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
 
     out_dir = common.SITE_ROOT / "field-guide" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     (out_dir / "_data.json").write_text(
-        json.dumps({**article, "slug": item["slug"], "hero": hero, "body_image": body_image}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps({**article, "slug": item["slug"], **imgs}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
     print(f"[guide] wrote {out_dir / 'index.html'}")
 

@@ -91,16 +91,21 @@ def main() -> int:
         print(f"[leaf] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    # Render — assign a hero AND a unique body image (different from hero, and from any used)
-    used = common.used_images()
-    hero = common.assign_hero(item["slug"], used)
-    body_image = common.assign_hero(item["slug"] + "-body", used | {hero})
+    # Source on-topic, globally-unique photos from iNaturalist. Understory is
+    # editorial (no single species), so default the genus to Anthurium — the
+    # brand's signature — while still honoring any species named in the title.
+    # Deduped against every image already on the site; flagged placeholder if
+    # iNat can't supply two unique shots, caught at /review.
+    import source_images
+    imgs = source_images.source_for_article("the-leaf", item["slug"], "Anthurium", article["title"])
+    hero = imgs["hero"]
+    body_image = imgs["body_image"]
     html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     (out_dir / "_data.json").write_text(
-        json.dumps({**article, "slug": item["slug"], "hero": hero, "body_image": body_image}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps({**article, "slug": item["slug"], **imgs}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
     print(f"[leaf] wrote {out_dir / 'index.html'}")
 
