@@ -1,0 +1,67 @@
+{
+  "meta_title": "Hoya callistophylla and the splash-leaf lineage",
+  "meta_description": "A field guide to Hoya callistophylla, the original splash-leaf hoya, with care notes and four related picks worth growing.",
+  "genus": "Hoya",
+  "title": "Hoya callistophylla and the splash-leaf lineage",
+  "deck": "The Bornean type specimen of vein-painted hoyas, plus four relatives that earn their shelf space.",
+  "stat_number": "85%",
+  "stat_label": "target daytime humidity for callistophylla",
+  "picks": [
+    {
+      "name": "Hoya callistophylla",
+      "location": "Climber · stiff strap leaves",
+      "description": "Native to Sabah and Sarawak, where it climbs sandstone hills in lower montane forest. The leaves are long, leathery, and held almost flat, with dark green lateral veins painted across a paler field — the trait every other splash-leaf hoya is measured against. Flowers are pale yellow with a maroon corona, lightly fragrant at night. A slow starter that rewards a tall trellis and patience.",
+      "tag": "The benchmark"
+    },
+    {
+      "name": "Hoya finlaysonii",
+      "location": "Climber · thick veined leaves",
+      "description": "From peninsular Thailand and Malaysia, often confused with callistophylla in juvenile form. The veins are heavier, the leaf shorter and more rounded, and mature foliage develops a quilted texture you can feel with a fingertip. Several clones circulate; the wide-vein 'Big Leaf' form is the one most collectors actually want. Blooms more readily than callistophylla under the same conditions.",
+      "tag": "Easier sibling"
+    },
+    {
+      "name": "Hoya clemensiorum",
+      "location": "Climber · pendulous strap leaves",
+      "description": "A Bornean species with long, pendant leaves marked by reddish reticulated veining that darkens with sun. Wants more light than the others on this list and sulks in stagnant air. Mature specimens throw stiff peduncles that rebloom for years, so never cut them off. Best grown long on a hanging mount rather than wrestled onto a pole.",
+      "tag": "Light hungry"
+    },
+    {
+      "name": "Hoya meredithii",
+      "location": "Climber · glossy splash leaves",
+      "description": "Also Bornean, with shorter, glossier leaves and an almost lacquered vein pattern. Faster than callistophylla and more tolerant of average room humidity, which makes it the realistic gateway into this group. Flowers are chartreuse with a red center and smell faintly of citrus. Pinch the growing tip once it puts on a meter to encourage branching.",
+      "tag": "Best gateway"
+    }
+  ],
+  "body_image_caption": "Mature callistophylla leaves under morning glasshouse light.",
+  "body_sections": [
+    {
+      "heading": "What callistophylla actually wants",
+      "paragraphs": [
+        "_Hoya callistophylla_ grows on the lower slopes of Bornean hill forest, often on sandstone with thin organic litter, in air that rarely drops below 70% humidity. Translate that honestly to a home and you get the care sheet: a coarse, fast-draining mix; bright filtered light; warmth in the seventies; and moving air. It will survive less, but it will not show you those painted veins.",
+        "Substrate is where most growers fail this species. Peat-heavy aroid mixes hold too much water against the root crown and the species rots from the base up. A working recipe is roughly two parts medium orchid bark, one part perlite or pumice, and one part chunky coco husk, with a handful of charcoal. The mix should be almost dry within four or five days in a six-inch pot. If it is still damp at day seven, repot before you water again.",
+        "Light should be bright and diffused — think 150 to 250 µmol on the leaf, or an unobstructed east window with a sheer. Direct midday sun bleaches the green field and the vein contrast collapses. Too little light and the new leaves come in narrow, pale, and slow, with the splash pattern muted. The plant tells you which way it is wrong within two leaves."
+      ]
+    },
+    {
+      "heading": "Water, humidity, and the airflow problem",
+      "paragraphs": [
+        "Water thoroughly, then let the mix approach dry. In a chunky substrate that usually means a full flush every five to ten days in active growth, less in winter. Rainwater or RO is worth the trouble; callistophylla shows tip burn from hard tap water faster than most hoyas, and the damage stays on the leaf for its entire life.",
+        "Humidity is the lever that actually moves the needle on leaf quality. Aim for 70–85% during the day with a drop at night. A cabinet or IKEA-style greenhouse is the simplest path; misting a room does almost nothing past the first ten minutes. But high humidity without airflow is how you breed sooty mold and fungal spotting on those flat horizontal leaves. Run a small clip fan on low, aimed across the foliage rather than at it, and the problem disappears.",
+        "Feed lightly and constantly rather than in heavy doses. A balanced fertilizer at quarter strength every watering, with a monthly flush of plain water, suits the slow metabolism of this species. Once peduncles form, leave them alone — every bloom cycle comes off the same spur, sometimes for a decade."
+      ]
+    },
+    {
+      "heading": "Common mistakes worth avoiding",
+      "paragraphs": [
+        "**Repotting too often.** Hoyas in general, and this species in particular, flower better slightly rootbound. If the mix is still structurally sound, top-dress rather than repot. A two-year cycle is reasonable; annual repotting sets the plant back every spring.",
+        "**Cutting peduncles.** They look like dead twigs between blooms. They are not. Removing them costs you future flowers and forces the plant to build new spurs from scratch.",
+        "**Buying a small cutting and expecting splash.** Juvenile leaves on callistophylla and finlaysonii are often plain green or only faintly veined. The full pattern develops as the vine matures and starts climbing — usually after the third or fourth leaf on a new growth point, and only with adequate light. A rooted two-node cutting is not a failure; it is a three-year project.",
+        "**Mounting it flat against a wall.** This is a climber that wants to angle its leaves toward light from above. A vertical pole or a tilted slab works; a flat wall mount leaves the foliage shaded by its own stem and the new growth comes in stunted."
+      ]
+    }
+  ],
+  "slug": "hoya-callistophylla-splash-leaf",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

@@ -1,0 +1,72 @@
+{
+  "meta_title": "Monstera siltepecana 'El Salvador': Form or Species?",
+  "meta_description": "Is 'El Salvador' a juvenile-stuck form of M. siltepecana or something distinct? A collector's guide to the plant, its rivals, and how to grow it.",
+  "genus": "Monstera",
+  "title": "Monstera siltepecana 'El Salvador' and the form-versus-species question",
+  "deck": "A small-leafed silver climber with an identity problem — and four other Monstera worth your shelf space.",
+  "stat_number": "~70%",
+  "stat_label": "humidity where silver venation holds best",
+  "picks": [
+    {
+      "name": "Monstera siltepecana 'El Salvador'",
+      "location": "Climber · silver juvenile leaf",
+      "description": "The plant that started the argument. Leaves stay smaller, thicker, and more deeply silvered than typical _siltepecana_, with a darker green field between veins. Whether it's a locality form, a stabilized cultivar, or just slow-to-mature _siltepecana_ is unsettled — most serious growers treat it as a distinct clone with its own habit. Climbs eagerly on a damp pole and fenestrates less reliably than the straight species.",
+      "tag": "The contender"
+    },
+    {
+      "name": "Monstera siltepecana (standard)",
+      "location": "Climber · silver juvenile, fenestrate adult",
+      "description": "The species proper, ranging from Mexico to Panama. Juvenile leaves are lance-shaped with silver banding along the midrib; mature leaves lose most of the silver and develop oblong fenestrations on a sturdy pole. It's the reference point for the 'El Salvador' debate — grow both and the differences in leaf thickness and silver retention are obvious within a year.",
+      "tag": "The reference"
+    },
+    {
+      "name": "Monstera dubia",
+      "location": "Shingler · juvenile, then dramatic adult",
+      "description": "Starts as a flat shingling vine pressed against bark, with silver-mottled cordate leaves no bigger than a thumbnail. Given a wide cork slab and steady humidity, it eventually shifts to a fenestrated adult form that looks like a different plant entirely. The metamorphosis is the whole point; if you stall it on a moss pole, you get juvenile leaves forever.",
+      "tag": "Best transformation"
+    },
+    {
+      "name": "Monstera adansonii (narrow form)",
+      "location": "Climber · perforated leaf",
+      "description": "The workhorse. The narrow-leaf form from Central America has elongated, heavily fenestrated leaves and tolerates household conditions better than almost any other _Monstera_. Useful as a sanity check: if your _adansonii_ is suffering, your siltepecana group will suffer worse. Cheap, fast, and a good early read on your room.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Monstera deliciosa 'Thai Constellation'",
+      "location": "Climber · variegated, stable",
+      "description": "A lab-originated, stable variegate with creamy-yellow sectoring that doesn't revert the way _albo_ cuttings do. Slower than the green species and prone to sunburn on the pale sectors, but rewarding for growers who want variegation without the gambling. Pair it with a thick pole — the leaves get heavy.",
+      "tag": "Stable variegate"
+    }
+  ],
+  "body_image_caption": "Juvenile silver leaf against a damp sphagnum pole.",
+  "body_sections": [
+    {
+      "heading": "So is 'El Salvador' actually different?",
+      "paragraphs": [
+        "The short answer: probably yes, functionally — taxonomically, no one has formally separated it. _Monstera siltepecana_ as described ranges across Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, and Panama. Plants from different parts of that range look different, the way any wide-ranging species does. 'El Salvador' entered the trade as a locality-labeled clone and stuck around because growers noticed the leaves stayed small, thick, and strongly silvered even on mature climbing plants.",
+        "Put a cutting of each on identical poles in identical conditions and the standard species pushes longer, thinner, paler leaves and starts fenestrating sooner. 'El Salvador' tends to hold its juvenile look much longer and produces a denser, more compact vine. That's enough of a horticultural difference to justify keeping the name on the tag, even if a botanist would shrug and call it all _siltepecana_.",
+        "Treat it as a cultivar-level distinction and you won't go wrong. Don't pay _Anthurium_ money for it — it's a nice form of a common species, not a unicorn."
+      ]
+    },
+    {
+      "heading": "Substrate, pole, and light",
+      "paragraphs": [
+        "Both forms want an airy, chunky mix that drains fast and never goes anaerobic. A workable blend is roughly equal parts coarse orchid bark, perlite or pumice, and a coir or peat component, with a handful of horticultural charcoal. The goal is a substrate you can flush heavily and have water running out within seconds.",
+        "Give it something to climb. A damp sphagnum or coir pole is non-negotiable if you want the silver to stay vivid and the leaves to size up. On a stake or trellis with no moisture, _siltepecana_ will live but the leaves stay small and the silver dulls. Mist the pole, don't mist the leaves — wet foliage in still air invites bacterial spotting.",
+        "Bright indirect light, the kind that throws a soft-edged shadow. Direct midday sun bleaches the silver banding and scorches thinner leaves; deep shade collapses the variegation into flat green. East-facing windows or a few feet back from a south window with a sheer are reliable. Under LEDs, aim for around 150–250 µmol/m²/s at leaf height for 12 hours."
+      ]
+    },
+    {
+      "heading": "Water, humidity, and the mistakes people make",
+      "paragraphs": [
+        "Water when the top inch of substrate is dry but the core is still barely damp. In a chunky mix that usually means a thorough flush once the pot feels noticeably lighter — every 5 to 10 days indoors, depending on pot size and airflow. Let it dry too far and the aerial roots crisp; keep it wet and you'll lose roots to rot before you see leaf symptoms.",
+        "Humidity in the 60–75% range keeps the silver crisp and encourages aerial roots to grab the pole. 'El Salvador' tolerates lower humidity than _M. dubia_ but rewards higher with thicker leaves. Pair humidity with airflow — a small clip fan on low, aimed at the wall, not the plant. Stagnant humid air is how you get _Erwinia_ blowing through a collection in a weekend.",
+        "The common mistakes, in order of frequency: a bone-dry pole, so the plant never matures past tiny juvenile leaves; overpotting into dense peat, which sours after a month; chasing fenestrations by starving the plant of light when the actual problem is that it has nothing to climb; and buying 'El Salvador' at a premium when a standard _siltepecana_ cutting from a friend would have taught the same lessons for the price of a coffee."
+      ]
+    }
+  ],
+  "slug": "monstera-siltepecana-el-salvador",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

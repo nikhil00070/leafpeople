@@ -1,0 +1,79 @@
+{
+  "meta_title": "The Anthurium besseae aff. complex, untangled",
+  "meta_description": "What the besseae aff. long-leaf clade actually is, where it came from, and which plants in the complex are worth growing.",
+  "genus": "Anthurium",
+  "title": "The _Anthurium besseae aff._ complex — the long-leaf clade and where it actually came from",
+  "deck": "A field guide to the most misunderstood group in modern anthurium collecting, with picks that earn their keep.",
+  "stat_number": "~15",
+  "stat_label": "named forms circulating under besseae aff.",
+  "picks": [
+    {
+      "name": "_Anthurium besseae_ (true)",
+      "location": "Terrestrial climber · matte leaf",
+      "description": "The species the rest of the complex gets compared to. Described from Bolivia, with a comparatively short, ovate-cordate blade, prominent pale primary veins, and a matte surface that never glosses up. Slow, fussy about root rot, and almost never the plant you bought labeled 'besseae aff.' True material is uncommon in the trade and worth confirming before you pay species prices.",
+      "tag": "The reference"
+    },
+    {
+      "name": "_Anthurium_ 'besseae aff. Tarapoto'",
+      "location": "Climber · long velvet blade",
+      "description": "The form most collectors actually mean when they say 'besseae aff.' Long, narrow, deeply cordate blades with a soft velvet surface and bright white primary venation that holds into maturity. Sourced from the Tarapoto region of San Martín, Peru, almost certainly an undescribed species rather than a true _besseae_ variant. Faster and more tractable than the real species, which is part of why it spread.",
+      "tag": "Best all-rounder"
+    },
+    {
+      "name": "_Anthurium_ 'besseae aff. Rio Cenepa'",
+      "location": "Climber · elongated velvet",
+      "description": "A narrower, more strap-like blade than the Tarapoto form, with venation that runs closer to the midrib and a darker green ground color. Plants traced to the Cenepa drainage in Amazonas, Peru, where humidity sits high year-round. It wants more airflow than you'd guess and resents stagnant warmth. The clearest 'long-leaf' look in the complex.",
+      "tag": "Long-leaf type"
+    },
+    {
+      "name": "_Anthurium_ 'besseae aff. white stripe'",
+      "location": "Climber · contrast venation",
+      "description": "A selection (or possibly a separate population) prized for unusually wide, chalk-white primary veins against a near-black blade. Leaves are intermediate in length between the Tarapoto and Cenepa forms. Coloration intensifies under higher light than the rest of the clade tolerates, around 200–250 µmol. Often confused with juvenile _papillilaminum_ × _besseae_ hybrids, which it is not.",
+      "tag": "Show plant"
+    },
+    {
+      "name": "_Anthurium_ 'besseae aff.' × _papillilaminum_",
+      "location": "Climber · hybrid vigor",
+      "description": "The hybrid that quietly outperforms most of its parents in cultivation. Inherits the long blade and white venation from the besseae aff. side and the heavier substance and pebbled cuticle from _papillilaminum_. Grows faster, takes household humidity in the 60s, and roots more readily from nodes. A reasonable entry point if you want the look without the husbandry.",
+      "tag": "Easiest entry"
+    }
+  ],
+  "body_image_caption": "Juvenile Tarapoto form throwing its first adult blade.",
+  "body_sections": [
+    {
+      "heading": "What 'besseae aff.' actually means",
+      "paragraphs": [
+        "The label is shorthand, not a taxon. _Anthurium besseae_ was described by Croat in 1991 from material in Bolivia: a modest, matte-leafed climber with white venation. Years later, plants started arriving from northern Peru — Tarapoto, the Cenepa, scattered sites in San Martín and Amazonas — that resembled _besseae_ in venation pattern but differed in blade length, texture, and growth habit. Exporters and early collectors tagged them 'besseae aff.' (affinis, meaning related to) as a placeholder. The placeholder stuck.",
+        "Most plants sold as 'besseae aff.' today are almost certainly one or more undescribed species in the same broad clade, not geographic variants of true _besseae_. That matters for two reasons. First, husbandry: the Peruvian long-leaf forms grow noticeably faster and tolerate slightly drier roots than Bolivian _besseae_. Second, provenance: when you buy a 'besseae aff. Tarapoto,' you're buying a specific population, and seed-grown sibling crosses from that population are genetically a different thing than divisions of the original mother plant. Ask sellers which they have.",
+        "The long-leaf forms — Tarapoto, Cenepa, and the various 'white stripe' selections — share a few traits: cordate-sagittate blades that elongate with maturity, velvet to sub-velvet cuticles, and primary veins that stay bright rather than fading to green as the leaf hardens. Juvenile plants look almost identical across forms. You won't reliably tell them apart until the third or fourth adult leaf."
+      ]
+    },
+    {
+      "heading": "Substrate and roots",
+      "paragraphs": [
+        "Every plant in this complex is a hemiepiphytic climber with thick, oxygen-hungry roots. The standard failure mode is a peaty mix that holds water against the rhizome until it collapses. Build airy. A working ratio: 40% medium orchid bark, 20% perlite or pumice, 20% coco chunks or chopped tree fern, 10% sphagnum, 10% horticultural charcoal. Anything that drains in under ten seconds when you flush the pot is in the right neighborhood.",
+        "Mount or pole? Both work. A damp sphagnum-wrapped slab gives you the cleanest root run and the fastest growth, but it dries fast and demands twice-daily attention in winter. A coir or tree-fern pole in a tall net pot is the compromise most collectors land on. Whatever you choose, the rhizome itself should sit at or just above the substrate line. Burying it is the second most common way people kill these plants."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Light should be bright but diffused: roughly 150–250 µmol/m²/s at the leaf, which translates to a few feet off a strong east window or under a mid-tier LED bar. Direct sun bleaches the velvet within a week. Too little light, and the new leaves come in narrow, pale, and on stretched petioles — a look people sometimes mistake for the Cenepa form, which it is not.",
+        "Water when the substrate is approaching dry but hasn't gotten there. These plants don't want a true dry-down; they want a brief rest between soakings. Rainwater or RO is worth the trouble — anthurium leaves pit and brown at the margins under hard tap water faster than almost any other aroid. Humidity in the 70–85% range with steady airflow is the sweet spot. Above 90% with stagnant air, you'll get bacterial blight; below 50%, the velvet dulls and new leaves emerge crinkled.",
+        "Airflow is the variable most people underweight. A small clip fan running 24/7 in the grow space does more for these plants than another humidifier. The Cenepa form especially resents still air."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Paying species money for unverified material.** True _besseae_ is genuinely scarce. If a 'besseae aff.' plant has long, glossy-velvet blades and aggressive growth, it's almost certainly Peruvian long-leaf material, not the Bolivian species. Both are worth growing — they just shouldn't be priced the same.",
+        "**Treating the complex as one plant.** The Tarapoto form will sulk in conditions the hybrid eats up, and the Cenepa form wants more air than either. Learn which form you have before you copy someone else's care sheet.",
+        "**Overpotting.** These are slow-rooting climbers. A 6-inch plant belongs in a 4-inch net pot, not a gallon nursery container. Roots that can't find the edge of the medium quickly start rotting from the center out. Repot up one size at a time, and only when roots are circling the existing pot."
+      ]
+    }
+  ],
+  "slug": "anthurium-besseae-aff-complex",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

@@ -10,6 +10,206 @@
     "status": "published"
   },
   {
+    "slug": "anthurium-besseae-aff-complex",
+    "title": "The _Anthurium besseae aff._ complex — the long-leaf clade and where it actually came from",
+    "category": "Anthurium",
+    "description": "What the besseae aff. long-leaf clade actually is, where it came from, and which plants in the complex are worth growing.",
+    "url": "/field-guide/anthurium-besseae-aff-complex",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-magnificum-clarinervium-hybrids",
+    "title": "Anthurium magnificum × clarinervium: Reading the Hybrid",
+    "category": "Anthurium",
+    "description": "How to identify true magnificum × clarinervium hybrids in listings — petioles, venation, leaf shape, and the tells sellers miss.",
+    "url": "/field-guide/anthurium-magnificum-clarinervium-hybrids",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-melanochrysum-care",
+    "title": "Philodendron _melanochrysum_: velvet ID, climbing structure, and the leaves it eventually throws",
+    "category": "Philodendron",
+    "description": "How to identify true Philodendron melanochrysum, give it a pole worth climbing, and coax the meter-long velvet leaves out of it.",
+    "url": "/field-guide/philodendron-melanochrysum-care",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-spiritus-sancti-expectations",
+    "title": "Philodendron spiritus-sancti: what the price actually buys",
+    "category": "Philodendron",
+    "description": "A buyer's guide to Philodendron spiritus-sancti — provenance, what to expect from a young plant, and three related climbers worth owning instead.",
+    "url": "/field-guide/philodendron-spiritus-sancti-expectations",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-pastazanum-care",
+    "title": "Philodendron pastazanum — the underrated crawler that earns its place",
+    "category": "Philodendron",
+    "description": "A field guide to Philodendron pastazanum and its closest crawling cousins — what to grow, how to root them flat, and what actually keeps them alive indoors.",
+    "url": "/field-guide/philodendron-pastazanum-care",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-dubia-transformation",
+    "title": "Monstera dubia and the Climb That Changes Everything",
+    "category": "Monstera",
+    "description": "How to grow Monstera dubia through its shingling juvenile phase to fenestrated maturity — picks, substrate, light, and the climbing structure that triggers the shift.",
+    "url": "/field-guide/monstera-dubia-transformation",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-siltepecana-el-salvador",
+    "title": "Monstera siltepecana 'El Salvador' and the form-versus-species question",
+    "category": "Monstera",
+    "description": "Is 'El Salvador' a juvenile-stuck form of M. siltepecana or something distinct? A collector's guide to the plant, its rivals, and how to grow it.",
+    "url": "/field-guide/monstera-siltepecana-el-salvador",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-callistophylla-splash-leaf",
+    "title": "Hoya callistophylla and the splash-leaf lineage",
+    "category": "Hoya",
+    "description": "A field guide to Hoya callistophylla, the original splash-leaf hoya, with care notes and four related picks worth growing.",
+    "url": "/field-guide/hoya-callistophylla-splash-leaf",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-pubicalyx-reblooming",
+    "title": "Hoya pubicalyx: Getting the Peduncle to Rebloom on the Same Spur",
+    "category": "Hoya",
+    "description": "How to coax Hoya pubicalyx to flower again from the same spur — light, watering rhythm, and the cultivars worth growing for repeat bloom.",
+    "url": "/field-guide/hoya-pubicalyx-reblooming",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-luxurians-palm-leaf",
+    "title": "Begonia luxurians — the palm-leaf Begonia for aroid-style collectors",
+    "category": "Begonia",
+    "description": "A field guide to Begonia luxurians and four other cane and shrub begonias that earn space in a serious aroid collection.",
+    "url": "/field-guide/begonia-luxurians-palm-leaf",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "spathiphyllum-reconsidered",
+    "title": "Spathiphyllum — why the basic Peace Lily still deserves its place in a serious collection",
+    "category": "Spathiphyllum",
+    "description": "A field guide to Spathiphyllum for collectors — the species worth growing, real care, and why the supermarket staple still earns shelf space.",
+    "url": "/field-guide/spathiphyllum-reconsidered",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "stromanthe-vs-calathea-id",
+    "title": "Stromanthe vs. Calathea/Goeppertia: Reading the Prayer-Plant Family",
+    "category": "Stromanthe",
+    "description": "How to distinguish Stromanthe from Goeppertia and Calathea by leaf, habit, and inflorescence — plus four species worth growing.",
+    "url": "/field-guide/stromanthe-vs-calathea-id",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "vriesea-for-aroid-people",
+    "title": "Vriesea — the Bromeliad an Aroid Collector Should Learn First",
+    "category": "Vriesea",
+    "description": "A field guide to Vriesea — the architectural, low-fuss bromeliad genus that belongs in any serious aroid grower's collection.",
+    "url": "/field-guide/vriesea-for-aroid-people",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "pothos-cultivars-worth-shelf-space",
+    "title": "Pothos cultivars worth shelf space",
+    "category": "Epipremnum",
+    "description": "A collector's take on which Epipremnum are worth growing — Cebu Blue, Manjula, Neon, Snow Queen — and which ones disappoint.",
+    "url": "/field-guide/pothos-cultivars-worth-shelf-space",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-crystallinum-vs-clarinervium",
+    "title": "Anthurium crystallinum vs. clarinervium — the two everyone confuses, told apart for good",
+    "category": "Anthurium",
+    "description": "Two velvet anthuriums, endlessly confused at sales. Here's how to tell crystallinum from clarinervium by leaf, petiole, and habit — and grow either well.",
+    "url": "/field-guide/anthurium-crystallinum-vs-clarinervium",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-regale",
+    "title": "Anthurium regale — the giant silver-veined heart, and what it asks of you",
+    "category": "Anthurium",
+    "description": "A grower's guide to Anthurium regale and four other big-leaf velvet anthuriums — what they want, what they refuse, and what to grow alongside.",
+    "url": "/field-guide/anthurium-regale",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-verrucosum",
+    "title": "Philodendron verrucosum: The Fuzzy-Petiole Velvet Worth the Fuss",
+    "category": "Philodendron",
+    "description": "A field guide to growing Philodendron verrucosum and its closest velvet relatives — substrate, humidity, and the forms worth chasing.",
+    "url": "/field-guide/philodendron-verrucosum",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "alocasia-cuprea",
+    "title": "Alocasia cuprea: the mirror-finish jewel that refuses to be ignored",
+    "category": "Alocasia",
+    "description": "A field guide to Alocasia cuprea and its cousins — picks worth growing, plus substrate, light, and humidity advice that actually keeps them alive.",
+    "url": "/field-guide/alocasia-cuprea",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-standleyana",
+    "title": "Monstera standleyana, the easy climber collectors overlook",
+    "category": "Monstera",
+    "description": "Why Monstera standleyana deserves a spot in serious collections — plus four climbing Monsteras worth growing on a moss pole.",
+    "url": "/field-guide/monstera-standleyana",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rhaphidophora-decursiva",
+    "title": "Rhaphidophora decursiva — The Big-Leaf Climber That Earns a Pole",
+    "category": "Rhaphidophora",
+    "description": "A field guide to Rhaphidophora decursiva and four climbing relatives — what to grow, how to mount them, and the substrate and light they actually want.",
+    "url": "/field-guide/rhaphidophora-decursiva",
+    "date": "2026-05-28",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "anthurium-velvet-care",
     "title": "Caring for Velvet-Leaf Anthuriums",
     "category": "Anthurium",

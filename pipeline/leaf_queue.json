@@ -136,120 +136,140 @@
     "slug": "watering-rare-aroids-by-weight",
     "title_hint": "Watering rare aroids by weight — a calibrated approach that beats schedules",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "mounting-mature-aroids-on-wood",
     "title_hint": "Mounting mature aroids on wood — what holds, what fails, and the rig that earned its place",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "treating-leaf-spot-on-velvets",
     "title_hint": "Treating fungal leaf-spot on velvet aroids without scarring the foliage",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "reading-new-leaf-color-in-juveniles",
     "title_hint": "Reading new-leaf color in juvenile anthuriums — what bronze, red and brown actually mean",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "substrate-recipes-i-keep-coming-back-to",
     "title_hint": "The four substrate recipes I keep coming back to, sorted by plant type",
     "category": "Field Skills",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "the-grower-i-trust-most",
     "title_hint": "The grower I trust most, and why — what specifically earns the trust of an experienced buyer",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "plant-labels-what-your-handwriting-reveals",
     "title_hint": "Plant labels: what your handwriting (and your label material) tells other collectors about you",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "what-i-throw-away-from-a-delivery-box",
     "title_hint": "What I throw away from a rare-plant delivery box — and what I keep, and why",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "plants-i-almost-bought",
     "title_hint": "The plants I almost bought, and what stopped me at the wire-transfer step",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "how-rare-plant-instagram-works-as-a-market",
     "title_hint": "How rare-plant Instagram actually functions as a market — DMs, stories, the price ladder no one publishes",
     "category": "Collector Culture",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "wholesale-vs-retail-in-the-aroid-trade",
     "title_hint": "Wholesale vs. retail in the rare-aroid trade — who really sets the price you pay",
     "category": "The Market",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "the-first-plant-i-sold",
     "title_hint": "The first rare plant I sold, and what it taught me about pricing",
     "category": "The Market",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "customs-phyto-certs-paperwork",
     "title_hint": "Customs, phytosanitary certificates, and the paperwork no one explains until you've lost a shipment",
     "category": "The Market",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "when-same-plant-three-prices",
     "title_hint": "When the same plant is sold at three different prices in one week — what's actually different",
     "category": "The Market",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "pricing-a-plant-nobody-else-has",
     "title_hint": "Pricing a plant nobody else has — the framework I use when there's no comparison",
     "category": "The Market",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "quarantine-protocol",
     "category": "Field Skills",
     "title_hint": "The 30-day quarantine protocol that's saved my collection — pests, fungus, and the isolation shelf",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "pollinating-aroids-at-home",
     "category": "Field Skills",
     "title_hint": "Pollinating aroids at home — reading the spadix, timing the bloom, and the patience it takes",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "the-myth-of-the-perfect-leaf",
     "category": "Collector Culture",
     "title_hint": "The myth of the perfect leaf — why collectors chase flawless foliage and what actually matters",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "the-plant-that-taught-me-most",
     "category": "Collector Culture",
     "title_hint": "The plant that taught me the most — and nearly died teaching me",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   },
   {
     "slug": "when-to-walk-away-from-a-deal",
     "category": "The Market",
     "title_hint": "When to walk away from a rare-plant deal — the red flags in the final DMs before you pay",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-05-28"
   }
 ]

@@ -1,0 +1,73 @@
+{
+  "meta_title": "Monstera dubia and the Climb That Changes Everything",
+  "meta_description": "How to grow Monstera dubia through its shingling juvenile phase to fenestrated maturity — picks, substrate, light, and the climbing structure that triggers the shift.",
+  "genus": "Monstera",
+  "title": "Monstera dubia and the Climb That Changes Everything",
+  "deck": "The shingler that becomes a different plant entirely — if you give it the right wall to climb.",
+  "stat_number": "3–5 ft",
+  "stat_label": "climb before mature leaves appear",
+  "picks": [
+    {
+      "name": "Monstera dubia",
+      "location": "Shingler · dimorphic",
+      "description": "The reason you're here. Juvenile leaves press flat to bark in a tight overlapping shingle, dark green with silvery variegation along the veins. Given a wide, flat, moisture-holding climbing surface and several feet of vertical run, leaves enlarge dramatically and develop the fenestrations and lobes of a true _Monstera_. Without that, it shingles politely and never grows up.",
+      "tag": "The transformer"
+    },
+    {
+      "name": "Monstera deliciosa",
+      "location": "Climber · large fenestrate",
+      "description": "The familiar one, and still worth growing well. On a moss pole with adequate light it produces leaves over two feet across with deep lobes and clean oval fenestrations. Tolerates more abuse than most _Monstera_ but rewards humidity above 60% and a chunky aroid mix with bigger, glossier foliage. Don't confuse it with the smaller _M. adansonii_.",
+      "tag": "The classic"
+    },
+    {
+      "name": "Monstera adansonii",
+      "location": "Climber · narrow fenestrate",
+      "description": "Smaller-leafed, faster, and more forgiving than _dubia_. Leaves are asymmetrical with elongated oval holes; the wide form (sometimes sold as 'Friedrichsthalii') is the one most collectors want. Climbs eagerly on a damp pole and will produce noticeably larger, more fenestrated leaves once attached. Hangs acceptably but never reaches mature form trailing.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Monstera siltepecana",
+      "location": "Creeper · silver juvenile",
+      "description": "Another dimorphic species worth knowing if _dubia_ tests your patience. Juvenile leaves are lance-shaped with silver between dark green veins; mature leaves lose the silver and gain fenestrations. Less demanding about climbing surface than _dubia_ and faster to bulk up, though the transformation is less theatrical.",
+      "tag": "Underrated"
+    },
+    {
+      "name": "Monstera standleyana",
+      "location": "Climber · entire leaf",
+      "description": "The odd one out — narrow, glossy, undivided leaves even at maturity, with occasional white or yellow variegation in the albo form. Useful as a steady, well-behaved climber that fills a pole quickly and asks little. Buy it for what it is, not in hopes of fenestration that won't come.",
+      "tag": "Steady grower"
+    }
+  ],
+  "body_image_caption": "A juvenile dubia mid-shingle, climbing damp cork.",
+  "body_sections": [
+    {
+      "heading": "The climbing surface is the whole game",
+      "paragraphs": [
+        "Most _Monstera_ will tolerate a thin moss pole and produce respectable leaves. _Monstera dubia_ will not. The juvenile phase is obligately appressed — the petioles are short, the leaves want to lie flat against something, and the plant reads its environment through the surface it's gripping. A skinny pole gives it nothing to flatten against, so it sulks, shingles weakly, and never triggers the morphological shift to adult leaves.",
+        "Give it a **wide, flat, moisture-retentive surface**. A cork plank at least four to six inches wide works. A cedar or hardwood board wrapped in sphagnum and held with fishing line works better. Some growers build a moss-stuffed wire frame against a wall. Whatever you use, it needs to stay damp — not wet — and it needs vertical runway. Three to five feet is the realistic minimum before mature leaves appear, and some plants want more.",
+        "Pin the first few nodes directly to the surface with floral pins or bent wire until aerial roots take hold. Once the plant grips on its own, it climbs surprisingly fast. The transformation from coin-sized shingles to fenestrated foot-long leaves usually happens gradually over a season or two, with each new leaf noticeably larger than the last."
+      ]
+    },
+    {
+      "heading": "Substrate, water, and humidity",
+      "paragraphs": [
+        "_M. dubia_ is an aroid like its cousins and wants the same airy, chunky mix: roughly equal parts orchid bark, perlite or pumice, and coco chips, with a handful of horticultural charcoal and maybe 10–15% sphagnum to hold a little moisture. Skip dense peat-heavy potting soil. The root system is modest because the plant is meant to feed largely through aerial roots gripping the climb — which is another reason the climbing surface matters more than the pot.",
+        "Water when the top inch of mix is dry. The climbing substrate (the moss or cork) should be misted or soaked separately so aerial roots stay active; a dry pole means a stalled plant. Humidity above 60% is where _dubia_ stops looking grumpy and starts pushing growth. Below 50%, leaf edges crisp and new shingles emerge smaller than the last.",
+        "Bright indirect light — the kind that throws a soft shadow — is correct. Direct midday sun bleaches the silver variegation and scorches the thin juvenile leaves. East-facing windows, a few feet back from a south window, or a grow light running 10–12 hours at moderate intensity all work. Temperatures from 65–85°F suit it; avoid cold drafts and anything below 55°F."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Hanging it in a basket.** This is the single most common error. _Dubia_ sold in nurseries often arrives in a hanging pot with vines dangling, because that's how growers ship them. Trailing _dubia_ will live, but it will shingle backward into smaller, sadder leaves and never mature. Mount it or potted-and-poled within the first month you own it.",
+        "**Using a standard moss pole.** A three-inch cylindrical pole doesn't give the leaves enough flat surface to press against. The plant will climb, but the shingling stays loose and the morphological trigger never trips. Width matters more than height for the first few feet.",
+        "**Letting the mount dry out.** Aerial roots that desiccate stop functioning, and the plant loses its grip — literally and developmentally. If your climbing surface dries within a day, either the medium isn't holding enough water or your ambient humidity is too low to support the species. Fix the environment before blaming the plant.",
+        "**Expecting overnight transformation.** Even a well-mounted _dubia_ in ideal conditions takes months between juvenile and intermediate leaves, and intermediate leaves — bigger, slightly lobed, still mostly flat — come before true mature foliage. The reward is real, but it's a multi-year project. That's the deal you make when you buy this plant."
+      ]
+    }
+  ],
+  "slug": "monstera-dubia-transformation",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

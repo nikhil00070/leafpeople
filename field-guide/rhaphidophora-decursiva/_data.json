@@ -1,0 +1,73 @@
+{
+  "meta_title": "Rhaphidophora decursiva: The Big-Leaf Climber That Earns a Pole",
+  "meta_description": "A field guide to Rhaphidophora decursiva and four climbing relatives — what to grow, how to mount them, and the substrate and light they actually want.",
+  "genus": "Rhaphidophora",
+  "title": "Rhaphidophora decursiva — The Big-Leaf Climber That Earns a Pole",
+  "deck": "Give it a slab and humidity, and a juvenile lance leaf splits into a meter-wide pinnate sail.",
+  "stat_number": "90%",
+  "stat_label": "Humidity where decursiva morphs hardest",
+  "picks": [
+    {
+      "name": "Rhaphidophora decursiva",
+      "location": "Hemiepiphyte · pinnate when mature",
+      "description": "Found from the eastern Himalayas through southern China and into Vietnam, where it ascends rainforest trunks on thick adhesive roots. Juvenile leaves are simple lances; mature foliage pinnatifies dramatically, with deep splits and individual segments running 30–60 cm long. It needs vertical real estate — a tall moss pole or cedar slab — to trigger the morph. Without something to climb, it sulks and stays juvenile indefinitely.",
+      "tag": "The benchmark"
+    },
+    {
+      "name": "Rhaphidophora tetrasperma",
+      "location": "Slender climber · fenestrate",
+      "description": "The mini-monstera lookalike from southern Thailand and Malaysia, with palm-sized leaves that fenestrate readily once mounted. It moves fast — a healthy plant can throw a new leaf every ten days in summer — and tolerates lower humidity than most of the genus. Variegated forms exist but stability is uneven; the plain green is the workhorse. Train it young, because the stems lignify quickly and don't like being repositioned.",
+      "tag": "Fastest grower"
+    },
+    {
+      "name": "Rhaphidophora cryptantha",
+      "location": "Shingler · flat-pressed leaves",
+      "description": "A New Guinea native that presses its juvenile leaves flat against bark like roof tiles, with pale green venation against a darker blade. It demands a flat mounting surface — a cork or wood plank, not a round pole — and consistently high humidity above 75%. The shingling habit is the entire point; let it climb and the magic appears within a few nodes. Mature leaves are larger and lobed, but most growers keep it juvenile for the pattern.",
+      "tag": "For shinglers"
+    },
+    {
+      "name": "Rhaphidophora hayi",
+      "location": "Shingler · stiff narrow leaves",
+      "description": "Another shingler, this one from northern Queensland and New Guinea, with stiffer, more elongated leaves than _cryptantha_ and a cleaner geometric overlap. It's more forgiving of moderate humidity — 60–70% works — and grows steadily on cork bark or a flat cedar plank. The leaves are a deep matte green with a subtle midrib. A reliable shingler for people who've killed _cryptantha_ once already.",
+      "tag": "Easier shingler"
+    },
+    {
+      "name": "Rhaphidophora korthalsii",
+      "location": "Hemiepiphyte · dimorphic",
+      "description": "Wide-ranging across Southeast Asia and the Pacific, with juvenile leaves that often shingle and mature leaves that become enormous and deeply pinnate. The transition is gradual and rewarding to watch over a few years on a tall pole. It accepts a chunkier mix than the shinglers and handles brief humidity dips better than _cryptantha_. Less common in collections than it deserves to be.",
+      "tag": "Underrated"
+    }
+  ],
+  "body_image_caption": "Aerial roots gripping cedar after eight weeks mounted.",
+  "body_sections": [
+    {
+      "heading": "Substrate and mounting",
+      "paragraphs": [
+        "_Rhaphidophora_ are hemiepiphytes. In the wild they germinate on the forest floor, find a trunk, and climb — shedding terrestrial roots and committing to bark. Potting them in dense soil is the single most common reason they stall.",
+        "Mix chunky and airy: roughly 40% orchid bark (medium grade), 30% perlite or pumice, 20% coco chunks or coir husk, and 10% sphagnum to hold pockets of moisture. For _decursiva_ and _korthalsii_, a slightly heavier hand on sphagnum is fine because they drink hard once established. For the shinglers (_cryptantha_, _hayi_), skip the pot question entirely — mount them on cork bark or a flat cedar plank with a sphagnum pad behind the rhizome.",
+        "The pole matters as much as the mix. A sphagnum-stuffed pole that you can keep damp will pull aerial roots in within a few weeks, and that's when leaves start to size up. Coir poles dry too fast and rarely trigger the morph. For a mature _decursiva_, plan on a pole at least 120 cm tall and 10 cm wide — anything smaller and the plant outgrows it before it shows you what it can do."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect is the honest answer: 200–400 µmol on a quantum meter, or a spot a meter back from an unobstructed east or filtered south window. _Tetrasperma_ tolerates more direct sun than the rest and will color up slightly in stronger light. The shinglers want it dimmer — too much light bleaches the venation pattern that's the whole reason you bought the plant.",
+        "Water when the top third of the mix has dried. These are not plants that want to sit wet, but they also resent going bone dry — a chronically parched _decursiva_ will drop its lower leaves and refuse to pinnatify on new growth. If the pole is damp and the mix is airy, you can water generously and let it drain.",
+        "Humidity is where people lose them. _Tetrasperma_ is genuinely happy at 50–60%. _Decursiva_ wants 65% minimum to develop full pinnation, and pushes hardest at 80–90%. _Cryptantha_ will not shingle below 75% — it'll grow, but the leaves stand off the bark and the effect is ruined. A cabinet or IKEA Milsbo with a small fan is the realistic answer for the shinglers in most homes."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Refusing to mount.** A _decursiva_ in a 6-inch nursery pot with a thin bamboo stake will stay juvenile forever. The morph is mechanical — aerial roots have to attach to a damp vertical surface — and no amount of fertilizer substitutes for that.",
+        "**Repotting too often.** Aroid roots resent disturbance, and the _Rhaphidophora_ aerial root system in particular is slow to rebuild once torn off a pole. Pot up only when roots are circling hard at the drainage holes, and try to move the whole plant — pole and all — rather than untangling it.",
+        "**Confusing _tetrasperma_ with _Monstera minima_.** They're not the same plant, despite what eBay listings say, and the care isn't identical either. _Tetrasperma_ runs warmer and drier than most true _Monstera_ and grows roughly twice as fast.",
+        "**Cutting back the climbing stem.** If you behead a _decursiva_ to make it bushier, the cutting will root but the mother plant rarely pushes a leader as vigorous as the original. Let it climb. The whole genus is built to go up, and the leaves are the payoff for letting it."
+      ]
+    }
+  ],
+  "slug": "rhaphidophora-decursiva",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

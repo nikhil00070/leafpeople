@@ -1,0 +1,73 @@
+{
+  "meta_title": "Anthurium regale: the giant silver-veined heart",
+  "meta_description": "A grower's guide to Anthurium regale and four other big-leaf velvet anthuriums — what they want, what they refuse, and what to grow alongside.",
+  "genus": "Anthurium",
+  "title": "Anthurium regale — the giant silver-veined heart, and what it asks of you",
+  "deck": "A Peruvian giant with cathedral venation, plus four companion anthuriums that ask similar things of a grower.",
+  "stat_number": "4 ft",
+  "stat_label": "Mature leaf length on a happy regale",
+  "picks": [
+    {
+      "name": "Anthurium regale",
+      "location": "Terrestrial · velvet, pendant leaves",
+      "description": "Native to the foothills of central Peru, _regale_ grows enormous heart-shaped leaves with bone-white primary veins on a matte, slightly puckered blade. Mature leaves can exceed four feet, held on long petioles that arch rather than climb. It's slow from seedling and unforgiving of stagnant roots, but a well-rooted plant pushes a new leaf roughly every six to ten weeks in good conditions. The crown sits at or just above the medium — bury it and you'll lose the plant.",
+      "tag": "The headliner"
+    },
+    {
+      "name": "Anthurium magnificum",
+      "location": "Terrestrial · velvet, square petiole",
+      "description": "Colombian, and identifiable by its sharply quadrangular petiole — _magnificum_ is the most beginner-tolerant of the silver-veined giants. Leaves are rounder than _regale_, with a deeper sheen and slightly heavier substance. It tolerates a touch more moisture at the roots and recovers from minor mistakes faster. A good first big-leaf velvet before you commit to _regale_.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Anthurium crystallinum",
+      "location": "Epiphytic · velvet, smaller leaf",
+      "description": "The classic crystalline-veined anthurium, native to Panama and Colombia. Leaves stay in the 8–14 inch range and emerge a copper-bronze before settling to deep green with pale silver venation. It's faster than _regale_, happy in a smaller pot, and an honest test of whether your conditions support the velvet group at all. Many sold as _crystallinum_ are hybrids — true plants have a rounded sinus and a near-terete petiole.",
+      "tag": "Best entry point"
+    },
+    {
+      "name": "Anthurium clarinervium",
+      "location": "Lithophytic · stiff velvet leaf",
+      "description": "A Chiapas endemic that grows on limestone outcrops, which tells you what its roots want: chunky, mineral, fast-draining. Leaves are smaller, stiffer, and more triangular than _crystallinum_, with bold white venation on a darker blade. It handles lower humidity than its cousins — 55% is workable — and is the most realistic silver-veined anthurium for an open shelf.",
+      "tag": "Best value"
+    },
+    {
+      "name": "Anthurium warocqueanum",
+      "location": "Climber · pendant strap leaf",
+      "description": "The queen anthurium, from Colombia, and the other end of the velvet spectrum from _regale_: long, narrow, pendant blades reaching three feet on mature plants. It wants to climb a damp mossed slab with the growth point angled downward so new leaves hang correctly. Humidity below 70% will brown the margins quickly. Grow it if you already keep _regale_ alive — not before.",
+      "tag": "For the obsessed"
+    }
+  ],
+  "body_image_caption": "A young regale pushing its third adult leaf.",
+  "body_sections": [
+    {
+      "heading": "Substrate and roots",
+      "paragraphs": [
+        "_Regale_ is terrestrial in habit but its roots behave like an epiphyte's: thick, white, oxygen-hungry, and quick to rot in anything that stays wet. Build a mix that drains within seconds and dries unevenly — pockets of moisture next to pockets of air. A workable starting point is roughly 40% medium orchid bark, 20% perlite or pumice, 20% coco chunks or chopped tree-fern, and 20% high-quality sphagnum, with a handful of horticultural charcoal. Skip peat. Skip standard potting soil entirely.",
+        "Pot choice matters more than people admit. A tall, narrow pot with side aeration slits — or a net pot dropped into a cache — keeps the root column from souring at the base. Repot every 12 to 18 months, not because the plant has outgrown the container but because the bark has. Once the chunks crumble between your fingers, gas exchange is over and the roots know it before you do.",
+        "Keep the crown proud of the medium. The single most common way to kill _regale_ is to mound mix around the petiole bases trying to stabilize a top-heavy plant. Stake the leaf instead. Let the stem breathe."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect, and more of it than the velvet look suggests. Aim for **150–250 µmol/m²/s** at the leaf, or roughly 400–600 foot-candles for most of the photoperiod. Direct sun through glass will bleach the blade in an afternoon; deep shade gives you a plant that survives without producing the cathedral venation you bought it for. East-facing windows or a meter back from a south window with a sheer are both honest answers.",
+        "Water when the top inch of mix is approaching dry but the core is still faintly damp — for most growers that's every 5 to 8 days in summer, 10 to 14 in winter. Use room-temperature water low in dissolved solids; _regale_ shows tip burn from hard tap water before most aroids do. Rainwater, RO, or distilled with a quarter-strength balanced fertilizer at every watering keeps growth steady.",
+        "Humidity wants to sit at 65–80%. Below 60% the new leaves emerge crinkled and sometimes stick in the cataphyll; above 85% with poor airflow invites bacterial blight, which on a velvet anthurium spreads through a blade in a day. A small clip fan running constantly is not optional in an enclosure. Movement of air is as important as the moisture in it."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Overpotting.** A four-inch root mass does not belong in an eight-inch pot. The unused volume holds water the plant can't reach and turns anaerobic. Step up one size at a time.",
+        "**Chasing the next leaf.** _Regale_ pushes leaves on its own schedule. Pumping fertilizer or cranking heat to force growth produces small, deformed blades and burned root tips. Steady conditions beat aggressive ones, every time.",
+        "**Ignoring the petiole.** Watch where new leaves emerge from. A shortening petiole, a smaller new leaf, or a cataphyll that browns before opening all mean conditions slipped — usually root oxygen or humidity. The plant tells you weeks before it collapses; the trick is reading it.",
+        "**Buying a stressed import and expecting recovery in a window.** Freshly imported _regale_ with minimal roots wants a humid prop box, sphagnum-and-perlite, and three months of boredom. Pot it into a bark mix too early and you'll watch the remaining roots rot while the leaf hangs on out of momentum."
+      ]
+    }
+  ],
+  "slug": "anthurium-regale",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

@@ -1,0 +1,75 @@
+{
+  "meta_title": "Watering Rare Aroids by Weight",
+  "meta_description": "A kitchen scale, a notebook, and the end of watering schedules — how weighing pots changes the way you grow rare aroids.",
+  "category": "Field Skills",
+  "title": "Watering Rare Aroids by Weight",
+  "deck": "Throw away the calendar. A cheap kitchen scale will tell you, to the gram, what your philodendron actually wants.",
+  "intro": [
+    "The first time I weighed a pot I felt slightly ridiculous. There I was at the kitchen counter at eleven at night with a _Philodendron gloriosum_ on a $24 digital scale, writing 1,438 g in a notebook like some kind of horticultural accountant. The plant looked unimpressed. The cat looked concerned.",
+    "Six months later I had stopped killing things. Not because I had finally absorbed some mystical feel for moisture — I have a perfectly normal sense of touch — but because the scale told me, unambiguously, what the substrate held and what it had given up. A pot is a closed system with one variable that matters most: water mass. Schedules guess at it. Moisture meters approximate it. A scale measures it."
+  ],
+  "pull_quote": "A pot is a closed system with one variable that matters most: water mass. Schedules guess. A scale measures.",
+  "body_image_caption": "Saturated weight noted in pencil, taped to the pot.",
+  "sections": [
+    {
+      "heading": "Why schedules fail collectors",
+      "paragraphs": [
+        "Weekly watering is a heuristic invented for pothos in plastic nursery pots on office windowsills. It assumes a stable environment, a forgiving plant, and a substrate that behaves predictably. None of those assumptions survive contact with a rare aroid collection.",
+        "Consider what actually varies across a single shelf of plants. A _Philodendron spiritus-sancti_ in chunky bark and perlite in a 6-inch net pot dries in two days under a grow light. A _Philodendron gloriosum_ in a shallow terracotta bowl with more peat in the mix might hold useful moisture for ten. Seasonal humidity shifts of 20 points change transpiration. A cloudy week cuts light by half. The same plant in the same pot does not want water on the same day from one month to the next.",
+        "The collector who waters Sunday mornings is, on average, drowning half the shelf and desiccating the other half. The damage shows up slowly — a slightly yellowed petiole, a stalled new leaf, a faint sour smell when you finally repot — and gets blamed on humidity, or pests, or the moon. It is almost always the water."
+      ]
+    },
+    {
+      "heading": "What the scale actually tells you",
+      "paragraphs": [
+        "The principle is embarrassingly simple. Saturate a pot, let it drain for fifteen minutes, and weigh it. That number is your **field capacity** — the maximum useful water the substrate holds against gravity. Weigh again when the plant clearly needs water (you have probably learned this signal already: a slight droop in _Anthurium warocqueanum_, a softening of the newest _Hoya_ leaf, the petiole of a velvet philodendron going from rigid to faintly pliable). That second number is your **refill point**.",
+        "The difference between the two is the water the plant and the evaporation actually used. For a 6-inch potted _Anthurium clarinervium_ in a bark-heavy mix, this is often 150 to 250 grams. For a mounted _Anthurium luxurians_ in sphagnum, maybe 40 grams. The numbers themselves don't matter as universal targets — they matter as a baseline for that specific pot.",
+        "Once you know field capacity and a sensible refill point, watering becomes a question, not a ritual. You lift the pot. If it feels light, you weigh it. If it's near the refill weight, you water. If it's not, you put it back. Ninety seconds, no guessing."
+      ]
+    },
+    {
+      "heading": "Setting your baselines",
+      "paragraphs": [
+        "Start with your most expensive or most troublesome plants — the ones whose deaths would actually hurt. Water thoroughly until water runs freely from the drainage holes, then let the pot sit on a rack for fifteen minutes so excess drains away. Weigh. Write the number on a strip of masking tape stuck to the pot itself. Date it. This is field capacity at this moment in this substrate.",
+        "Then wait. Lift the pot daily. When the plant tells you it would like water — and rare aroids tell you, if you have learned their dialect — weigh it again before you do anything. That weight is your first refill point. After a few cycles you'll find it stabilizes within a small range. For most of my philodendrons in a chunky aroid mix, refill lands at roughly 55–65% of field capacity. For anthuriums in sphagnum, closer to 70%. Hoyas tolerate much lower, sometimes 40%.",
+        "Write both numbers on the tape: saturated and refill. Now you have a calibrated pot. The labor of this setup is maybe ten minutes per plant, spread over two weeks. After that, the system runs itself."
+      ]
+    },
+    {
+      "heading": "What you learn that you didn't expect",
+      "paragraphs": [
+        "The first surprise is how wrong your intuition was. I had been watering a _Philodendron verrucosum_ every five days because the top inch felt dry and the leaves looked vaguely thirsty. The scale showed the pot was still at 85% of saturation. The plant was not thirsty; it was suffocating slowly. I started waiting until it hit 60%. The next leaf came in larger than any before it.",
+        "The second surprise is how much your environment moves. The same _Monstera obliqua_ Peru that loses 30 g a day in February loses 90 g a day in August. A schedule cannot accommodate that. A weight target accommodates it automatically, because you only water when the number says to.",
+        "The third surprise is diagnostic. A pot that suddenly stops losing weight — that sits at field capacity for a week when it normally drops 40 g a day — is a pot with a problem. Root rot, almost always. The plant has stopped drinking. You can catch this a full week before the first yellow leaf, which is often the difference between a recoverable plant and a compost donation."
+      ]
+    },
+    {
+      "heading": "Edge cases: mounts, semi-hydro, and very small pots",
+      "paragraphs": [
+        "Mounted plants are harder but not impossible. A _Rhaphidophora hayi_ on a cedar plank can still be weighed; you just weigh the whole assembly. The numbers are smaller and the swings are faster, so daily weighing matters more. I keep a small scale on the shelf next to the mounts and weigh them like checking a pulse.",
+        "Semi-hydro in LECA breaks the model a little, because the reservoir confuses things. Here the useful measure isn't field capacity but reservoir depth, which you can see directly. The scale still helps for catching trouble: a LECA pot whose total mass stops changing is one whose roots have stopped working.",
+        "Very small pots — 2-inch propagation cups, tissue-culture deflasks — are where the scale earns its keep most dramatically. A 2-inch pot of _Anthurium forgetii_ seedlings can swing from saturated to bone-dry in 36 hours under lights. By weight, the difference is maybe 18 grams. By eye, it's invisible until the seedlings collapse."
+      ]
+    },
+    {
+      "heading": "The case against fetishizing the method",
+      "paragraphs": [
+        "A scale is a tool, not a religion. The point is not to weigh every pot every day forever. The point is to calibrate your hands and eyes so that the scale eventually becomes redundant for most of your collection. After a year of weighing, I can lift a 6-inch pot and tell you its mass within 30 grams. I only pull out the scale now for new acquisitions, for plants in trouble, and for the handful of species — the _spiritus-sancti_, a finicky _Anthurium papillilaminum_ — that I don't trust myself with yet.",
+        "There is also a real risk of becoming the kind of grower who optimizes the measurement instead of the plant. The scale doesn't tell you the leaf is undersized because the light is too dim, or that the petioles are stretching because the humidity crashed at night. Watering is one variable. It happens to be the one most often gotten wrong, which is why fixing it produces such dramatic results, but it is not the only one.",
+        "The honest claim for weight-based watering is narrow and strong: it removes the largest source of avoidable error in indoor aroid cultivation. It will not turn a north-facing apartment into Chocó. It will keep your _gloriosum_ from rotting while you figure out the rest."
+      ]
+    },
+    {
+      "heading": "Starting tonight",
+      "paragraphs": [
+        "You need a kitchen scale that reads to one gram and handles at least 5 kg. Mine cost less than a 4-inch _Philodendron mcdowell_. You need masking tape, a pencil, and the willingness to look slightly absurd in your own home for a week.",
+        "Pick three plants. Water them properly. Weigh them after draining. Write the number on the pot. Then wait, and pay attention, and weigh again when they ask for water. After three cycles you will know more about those three plants than you learned in the previous year of guessing. After three months, you will be a different grower.",
+        "The scale is not the point. The point is that you stop arguing with your plants about what day it is, and start answering the only question they were ever asking, which is how much water is left in the pot."
+      ]
+    }
+  ],
+  "slug": "watering-rare-aroids-by-weight",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}
