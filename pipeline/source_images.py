@@ -1,30 +1,32 @@
 #!/usr/bin/env python3
-"""Source two unique, on-topic photos for a freshly-generated article.
+"""Source two on-topic, visually-distinct, globally-unique photos for a new article.
 
-The problem this solves: the old common.assign_hero() picked from a tiny generic
-pool by md5 hash, so new cron articles got mismatched, duplicated images (a Hoya
-article showing a Monstera, the same photo on five articles). This sources photos
-that actually match the article's subject AND are globally unique across the site.
+Primary source is Openverse (api.openverse.org), which aggregates CC-licensed
+images from Wikimedia Commons, Flickr, iNaturalist, the Smithsonian and more.
+For cultivated collector plants this beats iNaturalist-only by a wide margin
+(e.g. "Anthurium clarinervium": Openverse has ~19 real specimens, iNat has 4
+that are mostly misIDed or show flowers). iNat is kept as a fallback.
 
-Strategy:
-  1. Determine the iNaturalist query from the article's genus + species (parsed
-     from the title). e.g. "Anthurium clarinervium: The ID Gold Standard" → query
-     "Anthurium clarinervium".
-  2. Query iNat for CC-BY / CC0 photos of that subject (species first, genus
-     fallback).
-  3. Score candidates by colorfulness x resolution (favor bright, sharp shots).
-  4. Pick the top two photo_ids NOT already used anywhere on the site (tracked via
-     hero_inat_id / body_image_inat_id stored in every _data.json).
-  5. Download, resize to 1800px, save to /images/source/stock/<slug>-hero|body.jpg.
+Pipeline:
+  1. Derive the query from genus + species parsed from the title.
+  2. Pull Openverse candidates (commercial-use licenses: CC0 / BY / BY-SA),
+     species query first then genus.
+  3. Drop any whose source-id is already used anywhere on the site.
+  4. Download, score by colorfulness x resolution, pick the best as hero; pick
+     the best-scoring BODY that is also perceptually distinct from the hero
+     (so hero/body aren't the same plant from one angle).
+  5. Save to /images/source/stock/<slug>-hero|body.jpg, return fields for
+     _data.json including attribution + a stable source-id for future dedup.
 
-If iNat can't supply two unique usable photos, the article is flagged
-"image_needs_review": true in its _data.json and falls back to brand placeholders,
-so the human catches it on /review instead of a silent mismatch shipping.
+If fewer than two usable unique photos turn up, sets image_needs_review=true +
+a placeholder so the human catches it on /review.
 """
 
 import json
 import math
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -33,11 +35,19 @@ import common
 
 SITE = common.SITE_ROOT
 STOCK = SITE / "images" / "source" / "stock"
-PLACEHOLDER = "/images/source/p50.jpg"  # brand book-cover shot, obvious stand-in
+PLACEHOLDER = "/images/source/p50.jpg"
+
+# Allowed licenses (commercial-OK). Lower rank = cleaner, but we optimize for
+# photo QUALITY first since all of these are acceptable for editorial display.
+ALLOWED = {"cc0", "pdm", "by", "by-sa"}
+SOURCE_LABEL = {
+    "wikimedia": "Wikimedia Commons", "flickr": "Flickr", "inaturalist": "iNaturalist",
+    "smithsonian_national_museum_of_natural_history": "Smithsonian", "rawpixel": "Rawpixel",
+}
 
 
-def used_inat_ids() -> set:
-    """Every iNat photo_id already deployed, for global uniqueness."""
+def used_source_ids() -> set:
+    """Every image source-id already deployed (Openverse ids + legacy iNat ids)."""
     used = set()
     for section in ("the-leaf", "field-guide"):
         for d in (SITE / section).glob("*/_data.json"):
@@ -45,16 +55,15 @@ def used_inat_ids() -> set:
                 dat = json.loads(d.read_text(encoding="utf-8"))
             except Exception:
                 continue
-            for k in ("hero_inat_id", "body_image_inat_id"):
+            for k in ("hero_source_id", "body_image_source_id",
+                      "hero_inat_id", "body_image_inat_id"):
                 if dat.get(k):
-                    used.add(int(dat[k]))
+                    used.add(str(dat[k]))
     return used
 
 
 def derive_subject(genus: str, title: str) -> tuple:
-    """Return (species_query, genus_query). Parse a species epithet that follows
-    the genus in the title, e.g. 'Anthurium clarinervium ...' → ('Anthurium
-    clarinervium', 'Anthurium')."""
+    """('Anthurium clarinervium: ...', genus='Anthurium') → ('Anthurium clarinervium', 'Anthurium')."""
     genus = (genus or "").strip()
     species_q = genus
     if genus and title:
@@ -64,19 +73,55 @@ def derive_subject(genus: str, title: str) -> tuple:
     return species_q or title, genus or title
 
 
-def _query(subject: str, per_page: int = 24) -> list:
+def _openverse(subject: str, page_size: int = 30, retries: int = 4) -> list:
+    """Query Openverse. Anonymous access has a tight burst limit, so retry on
+    429 with backoff before giving up (and falling through to iNat)."""
+    url = ("https://api.openverse.org/v1/images/"
+           f"?q={urllib.parse.quote(subject)}&license_type=commercial&page_size={page_size}")
+    data = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-img-sourcing"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                data = json.load(r)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < retries - 1:
+                time.sleep(2 + 2 * attempt)  # 2s, 4s, 6s
+                continue
+            return []
+        except Exception:
+            return []
+    if data is None:
+        return []
+    out = []
+    for r in data.get("results", []):
+        lic = (r.get("license") or "").lower()
+        if lic not in ALLOWED:
+            continue
+        if not r.get("url") or not r.get("id"):
+            continue
+        out.append({
+            "id": r["id"], "url": r["url"], "license": lic,
+            "version": r.get("license_version", ""),
+            "creator": r.get("creator") or "Unknown",
+            "source": r.get("source") or "",
+        })
+    return out
+
+
+def _inat_fallback(subject: str) -> list:
+    """iNat CC-BY/CC0, used only if Openverse comes up short."""
     url = ("https://api.inaturalist.org/v1/observations"
-           f"?taxon_name={urllib.parse.quote(subject)}"
-           "&photo_license=cc0,cc-by&order=desc&order_by=votes"
-           f"&per_page={per_page}")
+           f"?taxon_name={urllib.parse.quote(subject)}&photo_license=cc0,cc-by"
+           "&order=desc&order_by=votes&per_page=20")
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-img-sourcing"})
         with urllib.request.urlopen(req, timeout=20) as r:
             data = json.load(r)
     except Exception:
         return []
-    out = []
-    seen = set()
+    out, seen = [], set()
     for obs in data.get("results", []):
         for ph in obs.get("photos", []):
             pid = ph.get("id")
@@ -85,19 +130,31 @@ def _query(subject: str, per_page: int = 24) -> list:
             seen.add(pid)
             u = (ph.get("url") or "").replace("square", "large")
             if u:
-                out.append({"photo_id": pid, "url": u,
-                            "attribution": ph.get("attribution", "")})
+                out.append({"id": f"inat-{pid}", "url": u, "license": "by",
+                            "version": "4.0", "creator": (ph.get("attribution") or "").replace("(c) ", "").split(",")[0],
+                            "source": "inaturalist"})
     return out
 
 
 def _download(url: str, dest: Path) -> bool:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-img-sourcing"})
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 leafpeople-img-sourcing"})
         with urllib.request.urlopen(req, timeout=30) as r:
             dest.write_bytes(r.read())
-        return dest.stat().st_size > 0
+        return dest.stat().st_size > 1000
     except Exception:
         return False
+
+
+def _phash(path, size=12):
+    from PIL import Image
+    im = Image.open(path).convert("L").resize((size, size), Image.Resampling.LANCZOS)
+    px = list(im.getdata()); avg = sum(px) / len(px)
+    return [1 if p > avg else 0 for p in px]
+
+
+def _hamming(a, b):
+    return sum(x != y for x, y in zip(a, b))
 
 
 def _score(path: Path) -> float:
@@ -111,65 +168,77 @@ def _score(path: Path) -> float:
         return 0.0
 
 
-def _clean_attr(a: str) -> str:
-    if not a:
-        return ""
-    return a.replace("(c) ", "").split(",")[0].strip() + " / iNaturalist (CC BY 4.0)"
+def _attr(c: dict) -> str:
+    label = SOURCE_LABEL.get(c["source"], (c["source"] or "source").replace("_", " ").title())
+    lic = c["license"].upper()
+    ver = (" " + c["version"]) if c["version"] else ""
+    return f"{c['creator']} / {label} (CC {lic}{ver})".strip()
 
 
 def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
-    """Pick + download hero & body. Returns dict of fields to merge into _data.json."""
     from PIL import Image
 
     STOCK.mkdir(parents=True, exist_ok=True)
-    used = used_inat_ids()
+    used = used_source_ids()
     species_q, genus_q = derive_subject(genus, title)
 
-    # Gather candidates: species query first, then genus, dedup by photo_id
+    # Gather candidates: Openverse species → Openverse genus → iNat fallback
     cands, seen = [], set()
-    for q in (species_q, genus_q):
-        if not q:
-            continue
-        for c in _query(q):
-            if c["photo_id"] in seen or c["photo_id"] in used:
+    fetchers = [lambda: _openverse(species_q), lambda: _openverse(genus_q),
+                lambda: _inat_fallback(species_q), lambda: _inat_fallback(genus_q)]
+    for i, fetch in enumerate(fetchers):
+        if i:
+            time.sleep(1.5)  # space calls so Openverse doesn't 429
+        for c in fetch():
+            if c["id"] in seen or str(c["id"]) in used:
                 continue
-            seen.add(c["photo_id"])
-            cands.append(c)
-        if len(cands) >= 6:
+            seen.add(c["id"]); cands.append(c)
+        if len(cands) >= 10:
             break
 
-    # Download to a temp scoring area, score, keep best two
+    # Download + score
     tmp = STOCK / ".tmp"
     tmp.mkdir(exist_ok=True)
     scored = []
-    for c in cands:
-        p = tmp / f"{c['photo_id']}.jpg"
+    for c in cands[:12]:
+        p = tmp / f"cand-{abs(hash(c['id']))}.jpg"
         if _download(c["url"], p):
             scored.append((_score(p), c, p))
-    scored.sort(key=lambda x: -x[0])
+    scored.sort(key=lambda x: -x[0])  # quality first
 
     result = {}
-    roles = [("hero", "hero", "hero_attribution", "hero_inat_id"),
-             ("body_image", "body", "body_image_attribution", "body_image_inat_id")]
-    for i, (field, short, attr_field, id_field) in enumerate(roles):
-        if i < len(scored):
-            _, c, src = scored[i]
-            dst = STOCK / f"{slug}-{short}.jpg"
-            try:
-                im = Image.open(src).convert("RGB")
-                im.thumbnail((1800, 1800), Image.Resampling.LANCZOS)
-                im.save(dst, "JPEG", quality=88)
-            except Exception:
-                dst.write_bytes(src.read_bytes())
-            result[field] = f"/images/source/stock/{slug}-{short}.jpg"
-            result[attr_field] = _clean_attr(c["attribution"])
-            result[id_field] = c["photo_id"]
-        else:
-            # not enough unique on-topic photos — placeholder + flag for review
-            result[field] = PLACEHOLDER
-            result["image_needs_review"] = True
 
-    # cleanup temp
+    def place(field, short, attr_field, id_field, pick):
+        _, c, src = pick
+        dst = STOCK / f"{slug}-{short}.jpg"
+        try:
+            im = Image.open(src).convert("RGB")
+            im.thumbnail((1800, 1800), Image.Resampling.LANCZOS)
+            im.save(dst, "JPEG", quality=88)
+        except Exception:
+            dst.write_bytes(src.read_bytes())
+        result[field] = f"/images/source/stock/{slug}-{short}.jpg"
+        result[attr_field] = _attr(c)
+        result[id_field] = c["id"]
+
+    if scored:
+        hero = scored[0]
+        place("hero", "hero", "hero_attribution", "hero_source_id", hero)
+        # body: best-scoring candidate perceptually DISTINCT from hero
+        hero_ph = _phash(hero[2])
+        body = None
+        for cand in scored[1:]:
+            if _hamming(hero_ph, _phash(cand[2])) > 20:  # visually different
+                body = cand; break
+        body = body or (scored[1] if len(scored) > 1 else None)
+        if body:
+            place("body_image", "body", "body_image_attribution", "body_image_source_id", body)
+        else:
+            result["body_image"] = PLACEHOLDER
+            result["image_needs_review"] = True
+    else:
+        result.update({"hero": PLACEHOLDER, "body_image": PLACEHOLDER, "image_needs_review": True})
+
     for f in tmp.glob("*.jpg"):
         f.unlink()
     return result
@@ -182,5 +251,4 @@ if __name__ == "__main__":
         raise SystemExit(2)
     section, slug, genus = sys.argv[1], sys.argv[2], sys.argv[3]
     title = " ".join(sys.argv[4:]) or genus
-    out = source_for_article(section, slug, genus, title)
-    print(json.dumps(out, indent=2))
+    print(json.dumps(source_for_article(section, slug, genus, title), indent=2))
