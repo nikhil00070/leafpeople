@@ -70,7 +70,8 @@ const PUBLISH_WORKFLOW = `https://github.com/${REPO}/actions/workflows/publish.y
 
 async function loadSection(section) {
   try {
-    const r = await fetch(`/${section}/manifest.json`);
+    // cache-bust: the review queue must reflect live status, never the 5-min CDN cache
+    const r = await fetch(`/${section}/manifest.json?t=${Date.now()}`, { cache: "no-store" });
     const items = await r.json();
     return items.filter(a => a.status === "pending");
   } catch {
@@ -80,7 +81,7 @@ async function loadSection(section) {
 
 async function loadData(section, slug) {
   try {
-    const r = await fetch(`/${section}/${slug}/_data.json`);
+    const r = await fetch(`/${section}/${slug}/_data.json?t=${Date.now()}`, { cache: "no-store" });
     return await r.json();
   } catch {
     return {};
