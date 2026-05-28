@@ -222,5 +222,41 @@
     "genus": "Epipremnum",
     "title_hint": "Pothos cultivars worth shelf space — Cebu Blue, Manjula, Neon, Snow Queen, and the ones that aren't",
     "status": "queued"
+  },
+  {
+    "slug": "anthurium-crystallinum-vs-clarinervium",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium crystallinum vs. clarinervium — the two everyone confuses, told apart for good",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-regale",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium regale — the giant silver-veined heart, and what it asks of you",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-verrucosum",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron verrucosum — the fuzzy-petiole velvet that's worth the fuss",
+    "status": "queued"
+  },
+  {
+    "slug": "alocasia-cuprea",
+    "genus": "Alocasia",
+    "title_hint": "Alocasia cuprea — the mirror-finish jewel and how to keep it from melting",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-standleyana",
+    "genus": "Monstera",
+    "title_hint": "Monstera standleyana — the easy climber collectors overlook",
+    "status": "queued"
+  },
+  {
+    "slug": "rhaphidophora-decursiva",
+    "genus": "Rhaphidophora",
+    "title_hint": "Rhaphidophora decursiva — the big-leaf climber that earns a pole",
+    "status": "queued"
   }
 ]

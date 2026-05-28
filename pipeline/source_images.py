@@ -184,8 +184,13 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
 
     # Gather candidates: Openverse species → Openverse genus → iNat fallback
     cands, seen = [], set()
-    fetchers = [lambda: _openverse(species_q), lambda: _openverse(genus_q),
-                lambda: _inat_fallback(species_q), lambda: _inat_fallback(genus_q)]
+    # Openverse only (per project decision — iNat gave too many misID'd/flower
+    # shots). _inat_fallback is kept in the module but intentionally unused; set
+    # LP_ALLOW_INAT=1 to re-enable it as a last resort.
+    fetchers = [lambda: _openverse(species_q), lambda: _openverse(genus_q)]
+    import os as _os
+    if _os.environ.get("LP_ALLOW_INAT") == "1":
+        fetchers += [lambda: _inat_fallback(species_q), lambda: _inat_fallback(genus_q)]
     for i, fetch in enumerate(fetchers):
         if i:
             time.sleep(1.5)  # space calls so Openverse doesn't 429

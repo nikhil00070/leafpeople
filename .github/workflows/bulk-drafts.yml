@@ -1,0 +1,79 @@
+name: Bulk drafts (pending review)
+
+# One-shot: generate N articles per bucket as PENDING drafts, all landing on
+# /review for the human to approve/reject. Nothing goes public automatically.
+# Images sourced from Openverse. Regular cron keeps running independently.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Articles per bucket (Understory + Field Guide each)"
+        required: false
+        default: "20"
+      model:
+        description: "LP_MODEL"
+        required: false
+        default: "claude-opus-4-7"
+
+jobs:
+  bulk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Generate drafts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LP_MODEL: ${{ inputs.model }}
+          LP_BULK_N: ${{ inputs.count }}
+        run: python pipeline/bulk_drafts.py
+
+      - name: Regenerate sitemap + feed
+        run: |
+          cd pipeline
+          python generate_sitemap.py
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Bulk drafts: generated pending articles for review"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Summary review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pend_leaf=$(python3 -c "import json; print(sum(1 for e in json.load(open('the-leaf/manifest.json')) if e.get('status')=='pending'))")
+          pend_guide=$(python3 -c "import json; print(sum(1 for e in json.load(open('field-guide/manifest.json')) if e.get('status')=='pending'))")
+          gh issue create \
+            --title "Bulk drafts ready for review ($pend_leaf Understory + $pend_guide Field Guide)" \
+            --label "review-queue" \
+            --body "A batch of draft articles was just generated and is waiting on review.
+
+          - **Understory pending:** $pend_leaf
+          - **Field Guide pending:** $pend_guide
+
+          [**Open the review queue →**](https://leafpeople.app/review)
+
+          Review the hero + body image (on-topic? right species? shows the diagnostic feature, not just a flower?) and the article, then Publish or Reject each via the [Publish workflow](https://github.com/${{ github.repository }}/actions/workflows/publish.yml).
+
+          ---
+          _One summary issue for the whole batch — individual drafts don't each file an issue._" || echo "issue create failed (non-fatal)"
