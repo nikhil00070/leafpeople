@@ -75,6 +75,13 @@ _BRAND_SUFFIX = re.compile(
 )
 
 
+def strip_emphasis(s: str) -> str:
+    """Remove markdown emphasis markers from text that renders raw (titles, meta).
+    _word_ → word, **word** → word. Body/caption/heading keep theirs (rendered via md)."""
+    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s or "")
+    return re.sub(r"_([^_]+)_", r"\1", s)
+
+
 def clean_meta_title(s: str) -> str:
     s = s.strip()
     prev = None

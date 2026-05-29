@@ -56,7 +56,7 @@
     <p>{{ para | md }}</p>
     {% endfor %}
     {% for section in sections %}
-    <h2 id="s{{ loop.index }}">{{ section.heading }}</h2>
+    <h2 id="s{{ loop.index }}">{{ section.heading | md }}</h2>
     {% for para in section.paragraphs %}
     <p>{{ para | md }}</p>
     {% endfor %}
@@ -66,7 +66,7 @@
     {% if body_image and loop.index == (sections|length // 2) and not loop.last %}
     <figure class="art-body-img">
       <img src="{{ body_image }}" alt="{{ body_image_caption or '' }}" loading="lazy">
-      {% if body_image_caption %}<figcaption class="img-caption">{{ body_image_caption }}</figcaption>{% endif %}
+      {% if body_image_caption %}<figcaption class="img-caption">{{ body_image_caption | md }}</figcaption>{% endif %}
     </figure>
     {% endif %}
     {% endfor %}

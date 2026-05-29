@@ -79,7 +79,8 @@ def main() -> int:
 
     print(f"[leaf] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
-    article["meta_title"] = common.clean_meta_title(article["meta_title"])
+    article["meta_title"] = common.strip_emphasis(common.clean_meta_title(article["meta_title"]))
+    article["title"] = common.strip_emphasis(article["title"])
 
     # Slop gate
     texts = [article["title"], article["deck"], article["pull_quote"], article.get("body_image_caption", ""), *article.get("intro", [])]
