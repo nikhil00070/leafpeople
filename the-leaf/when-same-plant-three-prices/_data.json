@@ -70,7 +70,10 @@
     }
   ],
   "slug": "when-same-plant-three-prices",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/when-same-plant-three-prices-hero.jpg",
+  "hero_attribution": "Gonzalez Uriel / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-152913557",
+  "body_image": "/images/source/stock/when-same-plant-three-prices-body.jpg",
+  "body_image_attribution": "Sonja Schwendinger / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-154557062"
 }

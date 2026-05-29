@@ -72,7 +72,10 @@
     }
   ],
   "slug": "begonia-luxurians-palm-leaf",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/begonia-luxurians-palm-leaf-hero.jpg",
+  "hero_attribution": "Salix / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-42952151",
+  "body_image": "/images/source/stock/begonia-luxurians-palm-leaf-body.jpg",
+  "body_image_attribution": "Daderot / Wikimedia Commons (Public domain)",
+  "body_image_source_id": "wmc-15578929"
 }

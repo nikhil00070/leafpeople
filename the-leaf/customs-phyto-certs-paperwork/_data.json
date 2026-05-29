@@ -61,7 +61,10 @@
     }
   ],
   "slug": "customs-phyto-certs-paperwork",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/customs-phyto-certs-paperwork-hero.jpg",
+  "hero_attribution": "Volunteertoday / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-121095901",
+  "body_image": "/images/source/stock/customs-phyto-certs-paperwork-body.jpg",
+  "body_image_attribution": "Atlas Þə Biologist / Wikimedia Commons (CC BY 4.0)",
+  "body_image_source_id": "wmc-152490507"
 }

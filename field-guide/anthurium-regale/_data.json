@@ -67,7 +67,10 @@
     }
   ],
   "slug": "anthurium-regale",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/anthurium-regale-hero.jpg",
+  "hero_attribution": "Maja Dumat from Deutschland (Germany) / Wikimedia Commons (CC BY 2.0)",
+  "hero_source_id": "wmc-47293288",
+  "body_image": "/images/source/stock/anthurium-regale-body.jpg",
+  "body_image_attribution": "Cs california / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-124655163"
 }

@@ -61,7 +61,10 @@
     }
   ],
   "slug": "hoya-callistophylla-splash-leaf",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/hoya-callistophylla-splash-leaf-hero.jpg",
+  "hero_attribution": "Motohiro Sunouchi / Wikimedia Commons (CC BY 4.0)",
+  "hero_source_id": "wmc-183170506",
+  "body_image": "/images/source/stock/hoya-callistophylla-splash-leaf-body.jpg",
+  "body_image_attribution": "Motohiro Sunouchi / Wikimedia Commons (CC BY 4.0)",
+  "body_image_source_id": "wmc-183170480"
 }

@@ -75,7 +75,10 @@
     }
   ],
   "slug": "philodendron-verrucosum",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/philodendron-verrucosum-hero.jpg",
+  "hero_attribution": "Cody H. / Wikimedia Commons (CC BY 2.0)",
+  "hero_source_id": "wmc-7114199",
+  "body_image": "/images/source/stock/philodendron-verrucosum-body.jpg",
+  "body_image_attribution": "Krzysztof Ziarnek, Kenraiz / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-56190380"
 }

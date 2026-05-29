@@ -69,7 +69,10 @@
     }
   ],
   "slug": "plants-i-almost-bought",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/plants-i-almost-bought-hero.jpg",
+  "hero_attribution": "Photo by and (c)2014 Derek Ramsey (Ram-M / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-36700151",
+  "body_image": "/images/source/stock/plants-i-almost-bought-body.jpg",
+  "body_image_attribution": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-163949863"
 }

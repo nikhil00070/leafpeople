@@ -67,7 +67,10 @@
     }
   ],
   "slug": "monstera-dubia-transformation",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/monstera-dubia-transformation-hero.jpg",
+  "hero_attribution": "Kai Squires / Wikimedia Commons (CC BY 4.0)",
+  "hero_source_id": "wmc-115927254",
+  "body_image": "/images/source/stock/monstera-dubia-transformation-body.jpg",
+  "body_image_attribution": "Mickaël Schauli / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-150720035"
 }

@@ -62,7 +62,10 @@
     }
   ],
   "slug": "reading-new-leaf-color-in-juveniles",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/reading-new-leaf-color-in-juveniles-hero.jpg",
+  "hero_attribution": "Frank Schulenburg / Wikimedia Commons (CC BY-SA 3.0)",
+  "hero_source_id": "wmc-18632428",
+  "body_image": "/images/source/stock/reading-new-leaf-color-in-juveniles-body.jpg",
+  "body_image_attribution": "Gonzalez Uriel / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-152913573"
 }

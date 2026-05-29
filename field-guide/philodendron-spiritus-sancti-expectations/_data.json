@@ -59,7 +59,10 @@
     }
   ],
   "slug": "philodendron-spiritus-sancti-expectations",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/philodendron-spiritus-sancti-expectations-hero.jpg",
+  "hero_attribution": "Scot Nelson / Wikimedia Commons (CC0)",
+  "hero_source_id": "wmc-112666228",
+  "body_image": "/images/source/stock/philodendron-spiritus-sancti-expectations-body.jpg",
+  "body_image_attribution": "Scot Nelson / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-112666227"
 }

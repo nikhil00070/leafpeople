@@ -69,7 +69,10 @@
     }
   ],
   "slug": "plant-labels-what-your-handwriting-reveals",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/plant-labels-what-your-handwriting-reveals-hero.jpg",
+  "hero_attribution": "Steve Fitzgerald / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-183558395",
+  "body_image": "/images/source/stock/plant-labels-what-your-handwriting-reveals-body.jpg",
+  "body_image_attribution": "Scot Nelson / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-112665805"
 }

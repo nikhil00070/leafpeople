@@ -75,7 +75,10 @@
     }
   ],
   "slug": "alocasia-cuprea",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/alocasia-cuprea-hero.jpg",
+  "hero_attribution": "Frank Schulenburg / Wikimedia Commons (CC BY-SA 3.0)",
+  "hero_source_id": "wmc-18622524",
+  "body_image": "/images/source/stock/alocasia-cuprea-body.jpg",
+  "body_image_attribution": "Daderot / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-41977619"
 }

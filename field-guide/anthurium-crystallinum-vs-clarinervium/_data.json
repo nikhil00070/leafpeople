@@ -62,7 +62,10 @@
     }
   ],
   "slug": "anthurium-crystallinum-vs-clarinervium",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/anthurium-crystallinum-vs-clarinervium-hero.jpg",
+  "hero_attribution": "Photo by David J. Stang / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-61235386",
+  "body_image": "/images/source/stock/anthurium-crystallinum-vs-clarinervium-body.jpg",
+  "body_image_attribution": "Photo by David J. Stang / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-61235394"
 }

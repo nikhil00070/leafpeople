@@ -75,7 +75,10 @@
     }
   ],
   "slug": "pothos-cultivars-worth-shelf-space",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/pothos-cultivars-worth-shelf-space-hero.jpg",
+  "hero_attribution": "黃振琪 / Wikimedia Commons (CC BY 4.0)",
+  "hero_source_id": "wmc-115926034",
+  "body_image": "/images/source/stock/pothos-cultivars-worth-shelf-space-body.jpg",
+  "body_image_attribution": "nick_goldwater / Wikimedia Commons (CC BY 4.0)",
+  "body_image_source_id": "wmc-115926794"
 }

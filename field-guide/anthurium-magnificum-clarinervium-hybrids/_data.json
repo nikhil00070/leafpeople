@@ -66,7 +66,10 @@
     }
   ],
   "slug": "anthurium-magnificum-clarinervium-hybrids",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/anthurium-magnificum-clarinervium-hybrids-hero.jpg",
+  "hero_attribution": "Agnieszka Kwiecień, Nova / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-86046360",
+  "body_image": "/images/source/stock/anthurium-magnificum-clarinervium-hybrids-body.jpg",
+  "body_image_attribution": "Agnieszka Kwiecień, Nova / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-86046361"
 }

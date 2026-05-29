@@ -1,25 +1,21 @@
 #!/usr/bin/env python3
-"""Source two on-topic, visually-distinct, globally-unique photos for a new article.
+"""Source two on-topic, visually-distinct, globally-unique photos for an article.
 
-Primary source is Openverse (api.openverse.org), which aggregates CC-licensed
-images from Wikimedia Commons, Flickr, iNaturalist, the Smithsonian and more.
-For cultivated collector plants this beats iNaturalist-only by a wide margin
-(e.g. "Anthurium clarinervium": Openverse has ~19 real specimens, iNat has 4
-that are mostly misIDed or show flowers). iNat is kept as a fallback.
+Source priority:
+  1. Wikimedia Commons  — RELIABLE (no aggressive anon throttling), has the rare
+     species (it's where Openverse's good specimens come from anyway).
+  2. Openverse          — best-effort secondary (aggregates Flickr etc.), but its
+     anonymous tier 401s intermittently, so it's a bonus not a dependency.
+  3. iNaturalist        — last resort, gated behind LP_ALLOW_INAT=1.
 
-Pipeline:
-  1. Derive the query from genus + species parsed from the title.
-  2. Pull Openverse candidates (commercial-use licenses: CC0 / BY / BY-SA),
-     species query first then genus.
-  3. Drop any whose source-id is already used anywhere on the site.
-  4. Download, score by colorfulness x resolution, pick the best as hero; pick
-     the best-scoring BODY that is also perceptually distinct from the hero
-     (so hero/body aren't the same plant from one angle).
-  5. Save to /images/source/stock/<slug>-hero|body.jpg, return fields for
-     _data.json including attribution + a stable source-id for future dedup.
+Pipeline: derive query from genus+species in the title → gather CC candidates
+(commercial-OK: CC0 / PDM / CC-BY / CC-BY-SA, never NC/ND) → drop any whose
+source-id is already used site-wide → download, score by colorfulness x
+resolution → hero = best; body = best that's perceptually distinct from hero.
+Save to /images/source/stock/<slug>-hero|body.jpg.
 
-If fewer than two usable unique photos turn up, sets image_needs_review=true +
-a placeholder so the human catches it on /review.
+Fewer than two usable unique photos → image_needs_review=true + placeholder, so
+/review catches it.
 """
 
 import json
@@ -36,18 +32,16 @@ import common
 SITE = common.SITE_ROOT
 STOCK = SITE / "images" / "source" / "stock"
 PLACEHOLDER = "/images/source/p50.jpg"
+UA = "leafpeople-img-sourcing/1.0 (hello@percentearth.co)"
 
-# Allowed licenses (commercial-OK). Lower rank = cleaner, but we optimize for
-# photo QUALITY first since all of these are acceptable for editorial display.
-ALLOWED = {"cc0", "pdm", "by", "by-sa"}
-SOURCE_LABEL = {
-    "wikimedia": "Wikimedia Commons", "flickr": "Flickr", "inaturalist": "iNaturalist",
-    "smithsonian_national_museum_of_natural_history": "Smithsonian", "rawpixel": "Rawpixel",
-}
+ALLOWED_OV = {"cc0", "pdm", "by", "by-sa"}
+# Wikimedia titles that are scans/illustrations/specimens, not live plant photos
+NOISE = ("chronicle", "catalogue", "catalog", "illustration", "plate", "book",
+         "herbarium", "drawing", "engraving", "lithograph", "map", "label",
+         "scan", "botanical art", "iconographia")
 
 
 def used_source_ids() -> set:
-    """Every image source-id already deployed (Openverse ids + legacy iNat ids)."""
     used = set()
     for section in ("the-leaf", "field-guide"):
         for d in (SITE / section).glob("*/_data.json"):
@@ -63,7 +57,6 @@ def used_source_ids() -> set:
 
 
 def derive_subject(genus: str, title: str) -> tuple:
-    """('Anthurium clarinervium: ...', genus='Anthurium') → ('Anthurium clarinervium', 'Anthurium')."""
     genus = (genus or "").strip()
     species_q = genus
     if genus and title:
@@ -73,52 +66,87 @@ def derive_subject(genus: str, title: str) -> tuple:
     return species_q or title, genus or title
 
 
-def _openverse(subject: str, page_size: int = 30, retries: int = 4) -> list:
-    """Query Openverse. Anonymous access has a tight burst limit, so retry on
-    429 with backoff before giving up (and falling through to iNat)."""
-    url = ("https://api.openverse.org/v1/images/"
-           f"?q={urllib.parse.quote(subject)}&license_type=commercial&page_size={page_size}")
-    data = None
-    for attempt in range(retries):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-img-sourcing"})
-            with urllib.request.urlopen(req, timeout=20) as r:
-                data = json.load(r)
-            break
-        except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < retries - 1:
-                time.sleep(2 + 2 * attempt)  # 2s, 4s, 6s
-                continue
-            return []
-        except Exception:
-            return []
-    if data is None:
+def _get(url: str):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        return json.load(r)
+
+
+def _wikimedia(subject: str, limit: int = 15) -> list:
+    """Search Commons File namespace; return live-photo candidates with license."""
+    url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
+           "&generator=search&gsrnamespace=6"
+           f"&gsrsearch={urllib.parse.quote(subject)}&gsrlimit={limit}"
+           "&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1600")
+    try:
+        data = _get(url)
+    except Exception:
         return []
+    pages = (data.get("query") or {}).get("pages") or {}
+    # Require the genus token in the FILE TITLE — Commons keyword search matches
+    # descriptions/categories too, pulling in mislabeled neighbors (e.g. an Aechmea
+    # from the same garden batch). Correctly-named plant photos carry the genus in
+    # the filename ("Anthurium_regale_1zz.jpg").
+    genus_tok = subject.split()[0].lower()
     out = []
-    for r in data.get("results", []):
-        lic = (r.get("license") or "").lower()
-        if lic not in ALLOWED:
+    for pid, p in pages.items():
+        title = (p.get("title") or "").lower()
+        if genus_tok and genus_tok not in title:
             continue
-        if not r.get("url") or not r.get("id"):
+        if any(n in title for n in NOISE):
             continue
+        ii = (p.get("imageinfo") or [{}])[0]
+        if not ii:
+            continue
+        thumb = ii.get("thumburl") or ii.get("url") or ""
+        if not thumb.split("?")[0].lower().endswith((".jpg", ".jpeg", ".png")):
+            continue
+        em = ii.get("extmetadata", {}) or {}
+        lic = ((em.get("LicenseShortName", {}) or {}).get("value", "") or "")
+        ll = lic.lower()
+        ok = ("cc0" in ll or "public domain" in ll or "no restrictions" in ll
+              or ("cc by" in ll and "nc" not in ll and "nd" not in ll))
+        if not ok:
+            continue
+        artist = re.sub("<[^>]+>", "", (em.get("Artist", {}) or {}).get("value", "") or "").strip()
+        artist = (artist or "Wikimedia Commons")[:40]
         out.append({
-            "id": r["id"], "url": r["url"], "license": lic,
-            "version": r.get("license_version", ""),
-            "creator": r.get("creator") or "Unknown",
-            "source": r.get("source") or "",
+            "id": f"wmc-{pid}", "url": thumb, "source": "wikimedia",
+            "attribution": f"{artist} / Wikimedia Commons ({lic or 'CC'})",
         })
     return out
 
 
-def _inat_fallback(subject: str) -> list:
-    """iNat CC-BY/CC0, used only if Openverse comes up short."""
+def _openverse(subject: str, page_size: int = 30) -> list:
+    """Best-effort secondary. Anonymous tier 401s a lot — one try, no retry storm."""
+    url = ("https://api.openverse.org/v1/images/"
+           f"?q={urllib.parse.quote(subject)}&license_type=commercial&page_size={page_size}")
+    try:
+        data = _get(url)
+    except Exception:
+        return []
+    out = []
+    for r in data.get("results", []):
+        lic = (r.get("license") or "").lower()
+        if lic not in ALLOWED_OV or not r.get("url") or not r.get("id"):
+            continue
+        src = r.get("source") or "openverse"
+        label = {"wikimedia": "Wikimedia Commons", "flickr": "Flickr",
+                 "inaturalist": "iNaturalist"}.get(src, src.title())
+        ver = (" " + r.get("license_version", "")) if r.get("license_version") else ""
+        out.append({
+            "id": r["id"], "url": r["url"], "source": src,
+            "attribution": f"{r.get('creator') or 'Unknown'} / {label} (CC {lic.upper()}{ver})",
+        })
+    return out
+
+
+def _inat(subject: str) -> list:
     url = ("https://api.inaturalist.org/v1/observations"
            f"?taxon_name={urllib.parse.quote(subject)}&photo_license=cc0,cc-by"
            "&order=desc&order_by=votes&per_page=20")
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-img-sourcing"})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            data = json.load(r)
+        data = _get(url)
     except Exception:
         return []
     out, seen = [], set()
@@ -130,15 +158,15 @@ def _inat_fallback(subject: str) -> list:
             seen.add(pid)
             u = (ph.get("url") or "").replace("square", "large")
             if u:
-                out.append({"id": f"inat-{pid}", "url": u, "license": "by",
-                            "version": "4.0", "creator": (ph.get("attribution") or "").replace("(c) ", "").split(",")[0],
-                            "source": "inaturalist"})
+                who = (ph.get("attribution") or "").replace("(c) ", "").split(",")[0]
+                out.append({"id": f"inat-{pid}", "url": u, "source": "inaturalist",
+                            "attribution": f"{who} / iNaturalist (CC BY 4.0)"})
     return out
 
 
 def _download(url: str, dest: Path) -> bool:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 leafpeople-img-sourcing"})
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=30) as r:
             dest.write_bytes(r.read())
         return dest.stat().st_size > 1000
@@ -168,48 +196,40 @@ def _score(path: Path) -> float:
         return 0.0
 
 
-def _attr(c: dict) -> str:
-    label = SOURCE_LABEL.get(c["source"], (c["source"] or "source").replace("_", " ").title())
-    lic = c["license"].upper()
-    ver = (" " + c["version"]) if c["version"] else ""
-    return f"{c['creator']} / {label} (CC {lic}{ver})".strip()
-
-
 def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
+    import os
     from PIL import Image
 
     STOCK.mkdir(parents=True, exist_ok=True)
     used = used_source_ids()
     species_q, genus_q = derive_subject(genus, title)
 
-    # Gather candidates: Openverse species → Openverse genus → iNat fallback
+    fetchers = [
+        lambda: _wikimedia(species_q), lambda: _wikimedia(genus_q),
+        lambda: _openverse(species_q), lambda: _openverse(genus_q),
+    ]
+    if os.environ.get("LP_ALLOW_INAT") == "1":
+        fetchers += [lambda: _inat(species_q), lambda: _inat(genus_q)]
+
     cands, seen = [], set()
-    # Openverse only (per project decision — iNat gave too many misID'd/flower
-    # shots). _inat_fallback is kept in the module but intentionally unused; set
-    # LP_ALLOW_INAT=1 to re-enable it as a last resort.
-    fetchers = [lambda: _openverse(species_q), lambda: _openverse(genus_q)]
-    import os as _os
-    if _os.environ.get("LP_ALLOW_INAT") == "1":
-        fetchers += [lambda: _inat_fallback(species_q), lambda: _inat_fallback(genus_q)]
     for i, fetch in enumerate(fetchers):
         if i:
-            time.sleep(1.5)  # space calls so Openverse doesn't 429
+            time.sleep(1.0)
         for c in fetch():
             if c["id"] in seen or str(c["id"]) in used:
                 continue
             seen.add(c["id"]); cands.append(c)
-        if len(cands) >= 10:
+        if len(cands) >= 8:
             break
 
-    # Download + score
     tmp = STOCK / ".tmp"
     tmp.mkdir(exist_ok=True)
     scored = []
-    for c in cands[:12]:
+    for c in cands[:10]:
         p = tmp / f"cand-{abs(hash(c['id']))}.jpg"
         if _download(c["url"], p):
             scored.append((_score(p), c, p))
-    scored.sort(key=lambda x: -x[0])  # quality first
+    scored.sort(key=lambda x: -x[0])
 
     result = {}
 
@@ -223,18 +243,14 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
         except Exception:
             dst.write_bytes(src.read_bytes())
         result[field] = f"/images/source/stock/{slug}-{short}.jpg"
-        result[attr_field] = _attr(c)
+        result[attr_field] = c["attribution"]
         result[id_field] = c["id"]
 
     if scored:
         hero = scored[0]
         place("hero", "hero", "hero_attribution", "hero_source_id", hero)
-        # body: best-scoring candidate perceptually DISTINCT from hero
         hero_ph = _phash(hero[2])
-        body = None
-        for cand in scored[1:]:
-            if _hamming(hero_ph, _phash(cand[2])) > 20:  # visually different
-                body = cand; break
+        body = next((c for c in scored[1:] if _hamming(hero_ph, _phash(c[2])) > 20), None)
         body = body or (scored[1] if len(scored) > 1 else None)
         if body:
             place("body_image", "body", "body_image_attribution", "body_image_source_id", body)
@@ -254,6 +270,5 @@ if __name__ == "__main__":
     if len(sys.argv) < 4:
         print("usage: source_images.py <section> <slug> <genus> [title...]")
         raise SystemExit(2)
-    section, slug, genus = sys.argv[1], sys.argv[2], sys.argv[3]
-    title = " ".join(sys.argv[4:]) or genus
-    print(json.dumps(source_for_article(section, slug, genus, title), indent=2))
+    print(json.dumps(source_for_article(sys.argv[1], sys.argv[2], sys.argv[3],
+                                         " ".join(sys.argv[4:]) or sys.argv[3]), indent=2))

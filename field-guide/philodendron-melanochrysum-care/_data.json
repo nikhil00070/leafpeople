@@ -65,7 +65,10 @@
     }
   ],
   "slug": "philodendron-melanochrysum-care",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/philodendron-melanochrysum-care-hero.jpg",
+  "hero_attribution": "Cordeiro95 / Wikimedia Commons (CC0)",
+  "hero_source_id": "wmc-157019517",
+  "body_image": "/images/source/stock/philodendron-melanochrysum-care-body.jpg",
+  "body_image_attribution": "Scot Nelson / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-112666233"
 }

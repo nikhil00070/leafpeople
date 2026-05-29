@@ -69,7 +69,10 @@
     }
   ],
   "slug": "when-to-walk-away-from-a-deal",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/when-to-walk-away-from-a-deal-hero.jpg",
+  "hero_attribution": "Sigit Jati / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-126401554",
+  "body_image": "/images/source/stock/when-to-walk-away-from-a-deal-body.jpg",
+  "body_image_attribution": "H. Zell / Wikimedia Commons (CC BY-SA 3.0)",
+  "body_image_source_id": "wmc-8961151"
 }

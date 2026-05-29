@@ -73,7 +73,10 @@
     }
   ],
   "slug": "monstera-standleyana",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/monstera-standleyana-hero.jpg",
+  "hero_attribution": "Forest &amp; Kim Starr / Wikimedia Commons (CC BY 3.0)",
+  "hero_source_id": "wmc-6151216",
+  "body_image": "/images/source/stock/monstera-standleyana-body.jpg",
+  "body_image_attribution": "Janadume / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-167032471"
 }

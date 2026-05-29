@@ -66,7 +66,10 @@
     }
   ],
   "slug": "spathiphyllum-reconsidered",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/spathiphyllum-reconsidered-hero.jpg",
+  "hero_attribution": "Mokkie / Wikimedia Commons (CC BY-SA 3.0)",
+  "hero_source_id": "wmc-31954494",
+  "body_image": "/images/source/stock/spathiphyllum-reconsidered-body.jpg",
+  "body_image_attribution": "NasserHalaweh / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-107602223"
 }

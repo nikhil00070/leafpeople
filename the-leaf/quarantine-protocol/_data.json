@@ -61,7 +61,10 @@
     }
   ],
   "slug": "quarantine-protocol",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/quarantine-protocol-hero.jpg",
+  "hero_attribution": "Ong Jyh Seng / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-115925893",
+  "body_image": "/images/source/stock/quarantine-protocol-body.jpg",
+  "body_image_attribution": "Steve Fitzgerald / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-152403490"
 }

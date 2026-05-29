@@ -60,7 +60,10 @@
     }
   ],
   "slug": "stromanthe-vs-calathea-id",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/stromanthe-vs-calathea-id-hero.jpg",
+  "hero_attribution": "Alejandro  Bayer Tamayo from Armenia, Co / Wikimedia Commons (CC BY-SA 2.0)",
+  "hero_source_id": "wmc-63460065",
+  "body_image": "/images/source/stock/stromanthe-vs-calathea-id-body.jpg",
+  "body_image_attribution": "Hardyplants / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-98903298"
 }

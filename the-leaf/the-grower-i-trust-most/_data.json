@@ -68,7 +68,10 @@
     }
   ],
   "slug": "the-grower-i-trust-most",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/the-grower-i-trust-most-hero.jpg",
+  "hero_attribution": "Beah Vega / Wikimedia Commons (CC BY 4.0)",
+  "hero_source_id": "wmc-115925799",
+  "body_image": "/images/source/stock/the-grower-i-trust-most-body.jpg",
+  "body_image_attribution": "Steve Fitzgerald / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-151729938"
 }

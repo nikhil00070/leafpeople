@@ -67,7 +67,10 @@
     }
   ],
   "slug": "the-myth-of-the-perfect-leaf",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/the-myth-of-the-perfect-leaf-hero.jpg",
+  "hero_attribution": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-170860746",
+  "body_image": "/images/source/stock/the-myth-of-the-perfect-leaf-body.jpg",
+  "body_image_attribution": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-149169624"
 }

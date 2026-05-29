@@ -61,7 +61,10 @@
     }
   ],
   "slug": "wholesale-vs-retail-in-the-aroid-trade",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/wholesale-vs-retail-in-the-aroid-trade-hero.jpg",
+  "hero_attribution": "Hans Hillewaert / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-7909116",
+  "body_image": "/images/source/stock/wholesale-vs-retail-in-the-aroid-trade-body.jpg",
+  "body_image_attribution": "Agnes Monkelbaan / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-87134498"
 }

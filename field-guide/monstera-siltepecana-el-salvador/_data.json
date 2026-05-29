@@ -66,7 +66,10 @@
     }
   ],
   "slug": "monstera-siltepecana-el-salvador",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/monstera-siltepecana-el-salvador-hero.jpg",
+  "hero_attribution": "Grete Pasch / Wikimedia Commons (CC BY 4.0)",
+  "hero_source_id": "wmc-115928126",
+  "body_image": "/images/source/stock/monstera-siltepecana-el-salvador-body.jpg",
+  "body_image_attribution": "Daniel Pineda Vera / Wikimedia Commons (CC BY 4.0)",
+  "body_image_source_id": "wmc-115928054"
 }

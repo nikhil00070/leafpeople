@@ -61,7 +61,10 @@
     }
   ],
   "slug": "the-plant-that-taught-me-most",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/the-plant-that-taught-me-most-hero.jpg",
+  "hero_attribution": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-166170906",
+  "body_image": "/images/source/stock/the-plant-that-taught-me-most-body.jpg",
+  "body_image_attribution": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-163949859"
 }

@@ -61,7 +61,10 @@
     }
   ],
   "slug": "the-first-plant-i-sold",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/the-first-plant-i-sold-hero.jpg",
+  "hero_attribution": "Liné1 / Wikimedia Commons (CC BY 2.5)",
+  "hero_source_id": "wmc-1519689",
+  "body_image": "/images/source/stock/the-first-plant-i-sold-body.jpg",
+  "body_image_attribution": "Filo gèn' / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-57495108"
 }

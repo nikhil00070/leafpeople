@@ -62,7 +62,10 @@
     }
   ],
   "slug": "mounting-mature-aroids-on-wood",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/stock/mounting-mature-aroids-on-wood-hero.jpg",
+  "hero_attribution": "Moheen Reeyad / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-136665024",
+  "body_image": "/images/source/stock/mounting-mature-aroids-on-wood-body.jpg",
+  "body_image_attribution": "Forest &amp; Kim Starr / Wikimedia Commons (CC BY 3.0)",
+  "body_image_source_id": "wmc-11809541"
 }
