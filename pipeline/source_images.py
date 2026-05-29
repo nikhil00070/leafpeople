@@ -204,32 +204,38 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
     used = used_source_ids()
     species_q, genus_q = derive_subject(genus, title)
 
-    fetchers = [
-        lambda: _wikimedia(species_q), lambda: _wikimedia(genus_q),
-        lambda: _openverse(species_q), lambda: _openverse(genus_q),
-    ]
-    if os.environ.get("LP_ALLOW_INAT") == "1":
-        fetchers += [lambda: _inat(species_q), lambda: _inat(genus_q)]
-
+    # Tier 0 = species query, tier 1 = genus fallback. Species-tier candidates
+    # are ALWAYS preferred over genus-tier (a clarinervium article must show
+    # clarinervium, not a colorful generic Anthurium that happens to score higher).
     cands, seen = [], set()
-    for i, fetch in enumerate(fetchers):
-        if i:
-            time.sleep(1.0)
-        for c in fetch():
-            if c["id"] in seen or str(c["id"]) in used:
-                continue
-            seen.add(c["id"]); cands.append(c)
-        if len(cands) >= 8:
-            break
+
+    def gather(query, tier):
+        srcs = [lambda: _wikimedia(query), lambda: _openverse(query)]
+        if os.environ.get("LP_ALLOW_INAT") == "1":
+            srcs.append(lambda: _inat(query))
+        for j, fn in enumerate(srcs):
+            if j:
+                time.sleep(1.0)
+            for c in fn():
+                if c["id"] in seen or str(c["id"]) in used:
+                    continue
+                c["_tier"] = tier
+                seen.add(c["id"]); cands.append(c)
+
+    gather(species_q, 0)
+    if genus_q and genus_q != species_q:
+        time.sleep(1.0)
+        gather(genus_q, 1)
 
     tmp = STOCK / ".tmp"
     tmp.mkdir(exist_ok=True)
     scored = []
-    for c in cands[:10]:
+    for c in cands[:12]:
         p = tmp / f"cand-{abs(hash(c['id']))}.jpg"
         if _download(c["url"], p):
             scored.append((_score(p), c, p))
-    scored.sort(key=lambda x: -x[0])
+    # species-tier (0) always ranks above genus-tier (1); within a tier, by score
+    scored.sort(key=lambda x: (x[1].get("_tier", 0), -x[0]))
 
     result = {}
 
