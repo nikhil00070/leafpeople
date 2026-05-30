@@ -57,8 +57,11 @@ jobs:
           git add -A
           if git diff --cached --quiet; then
             echo "Nothing to publish."
+          elif [ -n "${{ steps.gen.outputs.slug }}" ]; then
+            git commit -m "Field Guide: draft article (pending review) — ${{ steps.gen.outputs.slug }}"
+            git push
           else
-            git commit -m "Field Guide: draft article (pending review)"
+            git commit -m "Field Guide: sitemap/feed refresh (queue empty, no new draft)"
             git push
           fi
 
