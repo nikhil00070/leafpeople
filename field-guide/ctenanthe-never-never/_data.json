@@ -1,0 +1,75 @@
+{
+  "meta_title": "Ctenanthe, the Calathea-Adjacent That Forgives",
+  "meta_description": "A field guide to Ctenanthe lubbersiana, the Never Never plant, and three more prayer-plant relatives that won't punish a missed watering.",
+  "genus": "Ctenanthe",
+  "title": "Ctenanthe and the Never Never Plant: The Prayer-Plant Cousin That Actually Lives",
+  "deck": "Calathea-adjacent foliage, half the drama — if you pick the right species and stop letting the pot go bone dry.",
+  "stat_number": "55–70%",
+  "stat_label": "Humidity these tolerate without a cabinet",
+  "picks": [
+    {
+      "name": "Ctenanthe lubbersiana",
+      "location": "Clumping understory · upright stems",
+      "description": "The Never Never plant, named for its yellow-and-green feathered variegation that splashes across each lance-shaped leaf. It grows as a clumping subshrub to about three feet indoors, taller than most prayer-plant relatives, with stiff petioles that don't flop the moment humidity drops. The variegation is stable and doesn't need bright light to show — in fact strong sun bleaches it. The most forgiving introduction to the genus and the one to start with.",
+      "tag": "Best overall"
+    },
+    {
+      "name": "Ctenanthe burle-marxii",
+      "location": "Low spreader · fishbone pattern",
+      "description": "Sometimes sold as _Stromanthe burle-marxii_ thanks to a recent taxonomic shuffle, but the trade still calls it Ctenanthe. The leaves are short, rounded, and patterned with dark green fishbone bars on a paler ground; the undersides flush burgundy. It stays under a foot tall and creeps sideways, making it a good shelf or terrarium plant. The cultivar 'Amagris' is the silver-leafed form worth seeking out.",
+      "tag": "Best compact"
+    },
+    {
+      "name": "Ctenanthe setosa 'Grey Star'",
+      "location": "Upright clump · silver wash",
+      "description": "Larger and more architectural than _lubbersiana_, with long paddle leaves washed silver-grey along the midrib and deep burgundy reverses that flash when the leaves fold up at night. Mature clumps reach four feet and read more like a small banana than a prayer plant. It wants slightly higher humidity than _lubbersiana_ but tolerates standard living-room conditions if you keep the substrate evenly moist. Stunning under a north window.",
+      "tag": "Most dramatic"
+    },
+    {
+      "name": "Ctenanthe oppenheimiana 'Tricolor'",
+      "location": "Upright clump · pink variegation",
+      "description": "The Never Never's flashier sibling, sold as the Giant Bamburanta. Cream and pink sectoral variegation runs across olive leaves with wine-red undersides, and a well-grown plant throws genuinely pink new growth. It's the fussiest pick here — variegated tissue means less chlorophyll, so it sulks in low light and crisps faster in dry air. Worth the extra attention if you can give it bright indirect light and 60%+ humidity.",
+      "tag": "For the variegation chasers"
+    },
+    {
+      "name": "Ctenanthe lubbersiana 'Gold Mosaic'",
+      "location": "Clumping · heavy yellow variegation",
+      "description": "A selection of the standard Never Never with the yellow variegation cranked up to cover half or more of each leaf. Growth is slower than the straight species and the heavily marked leaves can scorch, but the color holds year-round without seasonal fade. Still easier than any comparably variegated Calathea. A good step up once you've kept the species form happy for a year.",
+      "tag": "Collector pick"
+    }
+  ],
+  "body_image_caption": "Undersides of _C. setosa_ folded up at dusk.",
+  "body_sections": [
+    {
+      "heading": "Substrate and pot",
+      "paragraphs": [
+        "Ctenanthe roots are fine and fibrous, closer to a fern than an aroid, and they rot fast in dense peat that stays wet. Mix something airy but moisture-retentive: roughly two parts coir or peat, one part fine orchid bark, one part perlite, and a handful of horticultural charcoal. The goal is a substrate that drains within seconds when you water but still feels cool and damp a day later.",
+        "Pot choice matters more than people think. These are clumping rhizomatous plants, not deep rooters, so a wide, shallow pot suits them better than a tall one. Terracotta wicks moisture away faster than the roots like — glazed ceramic or plastic with drainage holes is the safer call. Repot in spring every two years; you'll usually find you can divide the clump into two or three plants at the same time."
+      ]
+    },
+    {
+      "heading": "Light, water, and humidity",
+      "paragraphs": [
+        "Bright indirect light is the ceiling, not the target. _C. lubbersiana_ holds its variegation in genuinely modest light — an east window, or two feet back from a south one behind a sheer. Direct sun past mid-morning bleaches the yellow to off-white and scorches the margins within a week. If the new leaves are coming in smaller and darker than the old ones, push it closer to the glass.",
+        "Water is where most people kill this genus. Unlike a Philodendron or Hoya, Ctenanthe does not want to dry out between waterings — the leaf edges crisp and stay crisp, because damaged tissue doesn't regenerate. Keep the top inch of substrate just barely damp, and water with rainwater, distilled, or filtered tap. Fluoride and chloramine accumulate in the leaves and show up as brown tips within a few months on city water.",
+        "Humidity should sit between 55 and 70%. That's achievable in most homes with a pebble tray and grouped plants; you don't need a cabinet. Below 45% you'll see the classic curl-and-crisp pattern even with perfect watering. Airflow matters too — stagnant humid air invites spider mites and fungal spotting, both of which this genus attracts."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Treating it like a Calathea and giving up.** Ctenanthe is genuinely more forgiving — _lubbersiana_ in particular tolerates the kind of household humidity that turns _Calathea white fusion_ into a brown skeleton. If you've failed at Calathea, try Ctenanthe before assuming the whole Marantaceae family hates you.",
+        "**Cutting off every damaged leaf.** A crisp-edged leaf is still photosynthesizing. Remove leaves only when they're more than half brown or fully yellow; the plant needs the energy to push new growth from the rhizome. Trim brown tips with scissors following the leaf's natural shape if the look bothers you.",
+        "**Fertilizing too hard.** These are understory plants from Brazilian forest floors, not heavy feeders. A quarter-strength balanced liquid fertilizer every third or fourth watering from spring through early fall is plenty. Salt buildup from over-fertilizing is a common cause of mysterious tip burn that owners blame on humidity.",
+        "**Missing spider mites until it's late.** The fine, slightly fuzzy undersides of _setosa_ and _oppenheimiana_ hide mites well. Check monthly with a phone flashlight held below the leaf — you're looking for tiny moving specks and fine webbing in the leaf axils. A weekly leaf wipe with plain water during heating season prevents most infestations before they start."
+      ]
+    }
+  ],
+  "slug": "ctenanthe-never-never",
+  "hero": "/images/source/stock/ctenanthe-never-never-hero.jpg",
+  "hero_attribution": "Krzysztof Ziarnek, Kenraiz / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-53391753",
+  "body_image": "/images/source/stock/ctenanthe-never-never-body.jpg",
+  "body_image_attribution": "Krzysztof Ziarnek, Kenraiz / Wikimedia Commons (CC BY-SA 4.0)",
+  "body_image_source_id": "wmc-56249462"
+}

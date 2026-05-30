@@ -1,0 +1,74 @@
+{
+  "meta_title": "Schismatoglottis: The Quiet Aroid Worth Chasing",
+  "meta_description": "A collector's guide to Schismatoglottis — the Bornean understory aroids worth growing, with picks and honest care notes.",
+  "genus": "Schismatoglottis",
+  "title": "Schismatoglottis — the understory jewel aroid most collectors miss",
+  "deck": "Small, patterned, terrestrial — the genus that quietly outshines its louder cousins once you know what to look for.",
+  "stat_number": "~120",
+  "stat_label": "described species, most from Borneo",
+  "picks": [
+    {
+      "name": "Schismatoglottis _wallichii_",
+      "location": "Terrestrial · silver-banded leaf",
+      "description": "The gateway _Schismatoglottis_ and still one of the prettiest. Lanceolate leaves carry a broad silver-grey midrib stripe against deep green, held on short petioles in a tidy clump. It tolerates lower light than most of the genus and forgives the occasional dry spell, which makes it a sane starting point. Mature clumps offset readily and look best in a wide, shallow pot.",
+      "tag": "Best starter"
+    },
+    {
+      "name": "Schismatoglottis _calyptrata_",
+      "location": "Terrestrial · clumping groundcover",
+      "description": "A workhorse from New Guinea and the Moluccas, _calyptrata_ throws plain green, slightly puckered leaves and spreads by short stolons into a dense colony. It is the species most often grown as a tropical landscape filler in Singapore and Hawaii, which tells you how tough it is. Indoors it asks for warmth and steady moisture and rewards you with constant new growth. Not flashy — useful.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Schismatoglottis _pulchra_ 'Silver'",
+      "location": "Terrestrial · silver wash leaf",
+      "description": "Often sold simply as \"Silver _Schismatoglottis_\", this is the one collectors keep coming back to. The entire leaf surface is brushed pewter with a darker green margin and midrib, and the texture has a faint quilted depth in good light. It wants more humidity than _wallichii_ — 70% and up keeps the silver clean — but it is not a terrarium prisoner. A slow grower that earns its space.",
+      "tag": "Collector's pick"
+    },
+    {
+      "name": "Schismatoglottis _roh_",
+      "location": "Terrestrial · narrow velvet leaf",
+      "description": "A Bornean species described relatively recently and still uncommon in cultivation. Narrow, elongated leaves with a soft matte finish and a pale central feather make it read almost like a miniature _Anthurium warocqueanum_ from across the room. It needs the standard Bornean understory setup — warm, humid, airy mix, no stagnant water — and resents being moved around. Worth the patience.",
+      "tag": "Rarity"
+    },
+    {
+      "name": "Schismatoglottis _ifugaoensis_",
+      "location": "Terrestrial · bullate green leaf",
+      "description": "A Philippine species with strongly bullate, almost hammered leaf surfaces and a compact habit that stays under 30 cm. The texture is the point: side light raked across the leaf shows every quilted cell. It is fussier about substrate than _wallichii_ and will rot fast in heavy mix, so keep it open and barely moist. Still semi-obscure on the market.",
+      "tag": "Texture freak"
+    }
+  ],
+  "body_image_caption": "Silver venation on a mature _S. pulchra_ clump.",
+  "body_sections": [
+    {
+      "heading": "Substrate and pots",
+      "paragraphs": [
+        " _Schismatoglottis_ are terrestrial understory aroids from leaf-litter slopes and streamsides, mostly in Borneo. That habitat is the whole care brief: a thin, fast-draining layer of organic debris over constantly moving water and air. Translate that into a chunky, airy mix — roughly 40% fine orchid bark, 30% perlite or pumice, 20% coco husk chips, and 10% worm castings or composted bark fines works well. Sphagnum alone holds too much water against the rhizome and is a common cause of crown rot.",
+        "Use wide, shallow pots rather than deep ones. The rhizome runs horizontally just under the surface, and a tall pot leaves a column of wet, anaerobic media below the roots that nothing in this genus appreciates. Terracotta is fine if you can keep humidity up; otherwise plastic or glazed ceramic with several drainage holes will do. Repot when you see the rhizome trying to climb out of the pot, which for a happy plant is roughly every 18 months."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect light, full stop. These are forest-floor plants that evolved under a broken canopy, so direct sun above maybe an hour of soft morning will bleach the silver patterning and scorch the margins. A north or east window, or 12–18 inches under a mid-output LED running 10–12 hours, is the sweet spot. If new leaves come in smaller and paler than the previous one, you are short on light, not water.",
+        "Water when the top inch of the mix is just barely damp — not bone dry, not wet. _Schismatoglottis_ do not store water the way a _Philodendron_ rhizome does, and they sulk quickly when fully desiccated, dropping older leaves to protect the growing point. Use room-temperature water, and if your tap is hard, switch to rainwater or RO; tip burn on the leaf margins is almost always a mineral issue, not a humidity one.",
+        "Humidity should sit between 65% and 85%. _wallichii_ and _calyptrata_ will cope down to 55% in a normal living room; the silver and bullate species genuinely need a cabinet or a well-humidified grow shelf to keep their leaf surfaces clean. Airflow matters as much as the number on the hygrometer — a small clip fan moving air across the leaves prevents the fungal spotting that closed, stagnant cabinets produce within weeks."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "The first mistake is treating them like _Philodendron_. They are not climbers, they do not want a moss pole, and they will not tolerate the same wet-feet routine a hemiepiphyte shrugs off. If you are coming from velvet philos, dial the watering back by about a third and open the mix up.",
+        "The second is buying a silver or bullate species and parking it on an open shelf at 45% humidity. The plant will live, but every new leaf comes in smaller and duller than the last, and within a year you have a sad green stub of what you paid for. Match the species to the setup you actually have before you spend the money.",
+        "The third is fertilizer panic. _Schismatoglottis_ are slow, light feeders. A quarter-strength balanced liquid fertilizer every third watering during active growth is plenty; full-strength weekly feeding burns the fine roots and shows up as crispy new-leaf tips. If a plant stalls, check light, root health, and water quality before reaching for more fertilizer — it is almost never the answer with this genus."
+      ]
+    }
+  ],
+  "slug": "schismatoglottis-jewel-aroid",
+  "hero": "/images/source/stock/schismatoglottis-jewel-aroid-hero.jpg",
+  "hero_attribution": "Dr. Alexey Yakovlev / Wikimedia Commons (CC BY-SA 2.0)",
+  "hero_source_id": "wmc-106740672",
+  "body_image": "/images/source/stock/schismatoglottis-jewel-aroid-body.jpg",
+  "body_image_attribution": "Obsidian Soul / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-113103462"
+}

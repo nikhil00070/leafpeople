@@ -1,0 +1,67 @@
+{
+  "meta_title": "Anthurium splendidum: Why the New Leaf Wins or Loses",
+  "meta_description": "A field guide to growing Anthurium splendidum and its quilted relatives — substrate, humidity, and the slow art of pushing a clean new leaf.",
+  "genus": "Anthurium",
+  "title": "Anthurium splendidum: Why the New Leaf Wins or Loses",
+  "deck": "The quilted ones grow on their own clock, and every new leaf is an audit of the last three months of your care.",
+  "stat_number": "60–90",
+  "stat_label": "Days to harden a single new leaf",
+  "picks": [
+    {
+      "name": "Anthurium splendidum",
+      "location": "Terrestrial climber · bullate leaf",
+      "description": "The benchmark for quilting. Mature leaves are dark, almost metallic, with a deeply pillowed surface that catches light in ridges. It pushes slowly — often one leaf a quarter under good conditions — and punishes inconsistency with crumpled, undersized blades. Endemic to a small range in Panama, and still uncommon in cultivation.",
+      "tag": "The benchmark"
+    },
+    {
+      "name": "Anthurium luxurians",
+      "location": "Creeping terrestrial · bullate leaf",
+      "description": "Squat, wide, and almost obscenely textured. The leaf surface is a deep oxblood-green with raised tissue between every vein, and seedlings show the trait early. Easier than _splendidum_ in my experience — more tolerant of brief humidity dips — but still wants a chunky mix and steady warmth. A gateway into the bullate group.",
+      "tag": "Best entry point"
+    },
+    {
+      "name": "Anthurium dressleri",
+      "location": "Climber · velvet leaf",
+      "description": "Not quilted but worth naming alongside _splendidum_ because growers chase them together. Long, narrow, deep-black velvet leaves with a chalky bloom on new growth. True _dressleri_ is rare in trade and frequently mislabeled; provenance matters. Slow, sulks at transplant, rewards patience with leaves that look painted.",
+      "tag": "For the velvet hunter"
+    },
+    {
+      "name": "Anthurium forgetii",
+      "location": "Climber · peltate leaf",
+      "description": "The peltate oddball — leaves with no sinus, attached to the petiole in the middle of the blade. Silver-veined forms are the ones to find. Grows faster than _splendidum_ and forgives more, which makes it useful practice for the conditions the harder bullate species demand. Stays compact enough for a 12-inch pot for years.",
+      "tag": "Most forgiving"
+    }
+  ],
+  "body_image_caption": "A new splendidum leaf hardening under cabinet glass.",
+  "body_sections": [
+    {
+      "heading": "What splendidum actually wants",
+      "paragraphs": [
+        "Start with the assumption that _Anthurium splendidum_ is a terrestrial, not an epiphyte. Wild plants root into leaf litter and broken-down wood on the forest floor in humid Panamanian lowlands, and the roots are thicker and more demanding than those of an epiphytic _warocqueanum_ or _clarinervium_. They want air, but they also want contact with damp, structured organic matter. A pure sphagnum setup that works fine for thinner-rooted anthuriums will sour on you within a few months here.",
+        "My working mix is roughly 40% medium orchid bark, 25% coarse perlite or pumice, 20% chunky coco husk, 10% high-quality sphagnum, and 5% horticultural charcoal. The goal is a substrate that drains in seconds but holds humidity for a day or two between waterings. Repot annually — not because the plant outgrows the pot quickly, but because the bark breaks down and the air pockets close. When that happens, the next leaf comes out small.",
+        "Light is where most growers either overcorrect or undercorrect. _Splendidum_ wants bright, diffuse light — roughly 150 to 250 µmol·m⁻²·s⁻¹ at the leaf, or what a decent LED panel delivers at 18 inches. Too little and the quilting flattens out; too much and you get bleaching along the midrib before the leaf even hardens. Aim for stability over intensity."
+      ]
+    },
+    {
+      "heading": "Water, humidity, and the slow leaf",
+      "paragraphs": [
+        "Humidity is non-negotiable. Below about 70%, new leaves on _splendidum_ tend to emerge crumpled or partially stuck to the cataphyll, and once a leaf hardens with damage it stays that way for its whole life — which is years. I keep mine between 75% and 85% with active airflow from a small clip fan running 24/7 on low. Still, wet air is what kills these plants. Moving wet air keeps them.",
+        "Watering is a rhythm, not a schedule. The top inch of the mix should feel barely damp before the next pour; the lower layers should never go bone dry. Rainwater or RO is worth the trouble — splendidum's roots are sensitive to mineral buildup, and you'll see it first as crispy leaf margins on the newest leaf. Fertilize lightly and constantly: a quarter-strength balanced feed at every watering beats monthly heavy doses.",
+        "The new leaf itself is the slowest part. From cataphyll emergence to a fully hardened blade, expect 60 to 90 days. During that window the plant is reading your conditions in real time. A humidity crash on day 20 shows up as a pucker on day 45. This is why consistency beats perfection: a plant kept at a steady 72% will out-leaf one bounced between 85% and 60%."
+      ]
+    },
+    {
+      "heading": "The mistakes that cost you leaves",
+      "paragraphs": [
+        "**Repotting a stressed plant.** If a newly arrived _splendidum_ is pushing a leaf, leave it in its nursery mix until that leaf hardens. Disturbing the roots mid-push almost always aborts the leaf or produces a runt. Wait, then repot into your own mix once the plant is in active root growth.",
+        "**Misting instead of managing humidity.** Misting raises ambient humidity for about twenty minutes and leaves standing water in the cataphyll, which is where bacterial rot starts. If you can't hold 70%+ ambient, the plant belongs in a cabinet or an IKEA Milsbo, not on an open shelf with a spray bottle.",
+        "**Chasing fast growth.** Heavy feeding, warm nights, and bright light will push a leaf faster, but on splendidum that usually means thinner tissue and weaker quilting. The texture you're paying for develops during a slow, deliberate hardening phase. Night temperatures in the mid-60s°F actually seem to deepen the bullate effect — the plant builds structure when it isn't racing.",
+        "**Ignoring root health.** Pull the plant out of its pot every few months and look. Healthy splendidum roots are pale, firm, and thick, often with visible root hairs. Brown, hollow, or mushy roots mean the mix has collapsed or stayed too wet — and the leaf you're waiting on will reflect that long before the plant looks sick from above. Catch it at the root, not at the leaf."
+      ]
+    }
+  ],
+  "slug": "anthurium-splendidum",
+  "hero": "/images/source/p50.jpg",
+  "body_image": "/images/source/p50.jpg",
+  "image_needs_review": true
+}

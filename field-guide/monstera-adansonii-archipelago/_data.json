@@ -1,0 +1,81 @@
+{
+  "meta_title": "The Monstera adansonii Complex, Untangled",
+  "meta_description": "Wide form, narrow form, round form, and the tangle of names sold as Monstera adansonii — what's what, and how to actually grow them.",
+  "genus": "Monstera",
+  "title": "The Monstera adansonii Complex, Untangled",
+  "deck": "Wide form, narrow form, round form, and the archipelago of names that arrive on the same shipping invoice.",
+  "stat_number": "4+",
+  "stat_label": "forms commonly traded as adansonii",
+  "picks": [
+    {
+      "name": "_Monstera adansonii_ (wide form)",
+      "location": "Hemiepiphytic climber · perforated leaf",
+      "description": "The plant most growers actually own when a tag reads adansonii. Leaves are broadly ovate with generous fenestrations and a slightly asymmetric base. Mature growth on a pole pushes wider lobes and more open windows; juvenile growth on a shelf stays small and modest. Tough, fast, and the sane place to start.",
+      "tag": "Reliable workhorse"
+    },
+    {
+      "name": "_Monstera adansonii_ (narrow form)",
+      "location": "Climber · elongated blade",
+      "description": "Sometimes sold as \"laniata-like\" or \"long form\" — narrower, more lanceolate leaves with fenestrations that sit closer to the midrib. Often confused with true _M. laniata_, which is a distinct taxon with thicker, glossier blades and a different geniculum. Grows quickly on a pole and tolerates lower humidity than its reputation suggests.",
+      "tag": "Often mislabeled"
+    },
+    {
+      "name": "_Monstera adansonii_ \"round form\"",
+      "location": "Climber · rounded juvenile leaf",
+      "description": "Trade name for plants whose juvenile leaves stay distinctly circular before fenestrating. Likely a regional ecotype rather than a separate species, though the taxonomy is unsettled. Holds its round shape longer on a moss pole with steady humidity; reverts to standard adansonii proportions if grown loose and dry. Worth the markup only if you can give it a climbing surface.",
+      "tag": "Shape collector"
+    },
+    {
+      "name": "_Monstera esqueleto_ (formerly _epipremnoides_)",
+      "location": "Large climber · skeletal fenestrations",
+      "description": "Not adansonii, but constantly sold as one. Mature leaves go almost entirely to window, with a thin border of tissue around enormous oblong holes. Wants more room, more light, and a sturdier pole than its cousins. The plant people actually mean when they say they want \"big swiss cheese.\"",
+      "tag": "Frequently confused"
+    },
+    {
+      "name": "_Monstera adansonii_ var. _laniata_",
+      "location": "Climber · glossy narrow blade",
+      "description": "A recognized variety with thicker, shinier leaves and a more pronounced drip tip than the common wide form. South American provenance, somewhat slower, and noticeably more architectural once it climbs. If you've grown standard adansonii to maturity and want a step up without jumping to _M. deliciosa_ size, this is the move.",
+      "tag": "The upgrade"
+    }
+  ],
+  "body_image_caption": "Narrow-form leaf, mid-fenestration, on a damp pole.",
+  "body_sections": [
+    {
+      "heading": "Why the names are a mess",
+      "paragraphs": [
+        "_Monstera adansonii_ has a wide natural range — Mexico through Brazil, plus much of the Caribbean — and the species varies a lot across that range. Add a decade of tissue culture, hobbyist imports, and Instagram nicknames, and you get a genuine taxonomic snarl. Wide form, narrow form, round form, \"Brazil form,\" \"Peru form,\" laniata, esqueleto, and the occasional _M. acuminata_ slipped into the pile under the same label.",
+        "A few practical truths. First, juvenile leaves in this group look more alike than mature leaves do; a 4-inch starter is often unidentifiable with confidence. Second, leaf shape shifts dramatically once the plant climbs — flat shelf growth tells you almost nothing about what the plant will become. Third, \"round form\" is a marketing description, not a botanical rank, and the plant behind it is usually a regional ecotype of plain adansonii. If a vendor can't tell you where their stock originated, assume you're buying the common wide form and price accordingly."
+      ]
+    },
+    {
+      "heading": "Substrate and the pole question",
+      "paragraphs": [
+        "Every plant in this complex is a hemiepiphyte. In habitat the roots run over bark, leaf litter, and moss — never compacted soil. A mix of roughly equal parts orchid bark, perlite or pumice, and coco chunks works well, with a handful of charcoal and a little sphagnum to hold moisture without going anaerobic. The mix should drain within seconds when you pour water through it.",
+        "A moss pole or wood plank changes the plant. Without one, adansonii will fenestrate but stay small-leaved and a bit floppy. With one — kept damp, not soaked — leaves roughly double in size within a year and the windows open up. This matters most for round form and laniata, both of which only show their best traits as climbers. Tie new growth in gently; the aerial roots will find the pole on their own within a few weeks if humidity is decent."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect light is the honest answer: a few feet back from an east or south window, or directly under a 30–40W LED panel on a 12-hour cycle. Direct midday sun bleaches the thin leaves of the wide form within days. Too little light and fenestrations close up — the plant will survive, but you bought it for the holes.",
+        "Water when the top inch of mix is dry and the pot feels noticeably lighter. These plants resent both bone-dry stretches (crispy leaf edges, aborted new leaves) and constant wetness (black petioles, root loss). Humidity above 60% helps, especially for new leaves unfurling cleanly, but adansonii is unusually forgiving down to 45% if airflow is steady. A small clip fan does more for leaf quality than any humidifier."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Buying a name, not a plant.** If round form or laniata matters to you, buy from a seller who can show mature growth from the mother plant. Juvenile leaves lie.",
+        "**Treating it like a pothos.** Adansonii tolerates neglect, but tolerance is not preference. The difference between a shelf-grown vine with quarter-sized windows and a poled specimen with hand-sized fenestrated leaves is entirely down to climbing surface, light, and consistent moisture at the root zone.",
+        "**Overpotting.** A 6-inch plant does not want a 10-inch pot. The mix stays wet in the middle, roots rot, and the plant sulks for months. Go up one pot size when roots circle the current one, and use a deeper pot rather than a wider one if you can — these are vertical-rooted plants.",
+        "**Ignoring thrips.** Thin monstera leaves are thrips candy. Check the undersides of new growth weekly; silvery stippling and black flecks of frass mean you're already two weeks behind. Predatory mites (_Amblyseius cucumeris_) handle small populations; systemic treatment is the move for anything worse."
+      ]
+    }
+  ],
+  "slug": "monstera-adansonii-archipelago",
+  "hero": "/images/source/stock/monstera-adansonii-archipelago-hero.jpg",
+  "hero_attribution": "Manuel de Jesús Hernández Ancheita / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-115927609",
+  "body_image": "/images/source/stock/monstera-adansonii-archipelago-body.jpg",
+  "body_image_attribution": "Aitor / Wikimedia Commons (CC BY 4.0)",
+  "body_image_source_id": "wmc-115927895"
+}

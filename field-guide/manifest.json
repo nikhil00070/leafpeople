@@ -1,5 +1,15 @@
 [
   {
+    "slug": "philodendron-luxurians",
+    "title": "Philodendron luxurians and its near-relations: chasing the dark forest blue",
+    "category": "Philodendron",
+    "description": "What separates a real Philodendron luxurians from its lookalikes, and the slow, humid patience it asks of growers willing to chase it.",
+    "url": "/field-guide/philodendron-luxurians",
+    "date": "2026-05-29",
+    "thumb": "/images/source/stock/philodendron-luxurians-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "anthurium-clarinervium-id-gold-standard",
     "title": "Anthurium clarinervium: The ID Gold Standard",
     "category": "Anthurium",
@@ -210,6 +220,26 @@
     "status": "published"
   },
   {
+    "slug": "philodendron-mamei-silver",
+    "title": "Philodendron mamei: Which Clones Hold the Silver",
+    "category": "Philodendron",
+    "description": "A collector's guide to Philodendron mamei clones, which ones keep their silver pigment, and the conditions that bleach or strip it.",
+    "url": "/field-guide/philodendron-mamei-silver",
+    "date": "2026-05-28",
+    "thumb": "/images/source/stock/philodendron-mamei-silver-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-billietiae",
+    "title": "Philodendron billietiae and the Tangerine-Petiole Climbers",
+    "category": "Philodendron",
+    "description": "A grower's guide to Philodendron billietiae — its tangerine petioles, climbing behavior, seasonal flushes, and the related species worth chasing.",
+    "url": "/field-guide/philodendron-billietiae",
+    "date": "2026-05-27",
+    "thumb": "/images/source/stock/philodendron-billietiae-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "anthurium-velvet-care",
     "title": "Caring for Velvet-Leaf Anthuriums",
     "category": "Anthurium",
@@ -226,6 +256,26 @@
     "url": "/field-guide/monstera-variegated-worth-it",
     "date": "2026-05-26",
     "thumb": "/images/source/stock/monstera-variegated-worth-it-hero.jpg"
+  },
+  {
+    "slug": "anthurium-luxurians",
+    "title": "Anthurium luxurians and the Cult of the Bullate Leaf",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium luxurians without losing its hammered, quilted texture — substrate, humidity, and the related bullate anthuriums worth chasing.",
+    "url": "/field-guide/anthurium-luxurians",
+    "date": "2026-05-26",
+    "thumb": "/images/source/stock/anthurium-luxurians-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-splendidum",
+    "title": "Anthurium splendidum: Why the New Leaf Wins or Loses",
+    "category": "Anthurium",
+    "description": "A field guide to growing Anthurium splendidum and its quilted relatives — substrate, humidity, and the slow art of pushing a clean new leaf.",
+    "url": "/field-guide/anthurium-splendidum",
+    "date": "2026-05-25",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-beginners",
@@ -246,6 +296,16 @@
     "thumb": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg"
   },
   {
+    "slug": "anthurium-dressleri",
+    "title": "Anthurium dressleri: Panama's Velvet That Punishes Wet Feet",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium dressleri at home — the airy substrate, low water, and patient humidity that keep this Panamanian velvet alive.",
+    "url": "/field-guide/anthurium-dressleri",
+    "date": "2026-05-22",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "monstera-obliqua-real-versus-fake",
     "title": "The obliqua Problem",
     "category": "Monstera",
@@ -253,6 +313,16 @@
     "url": "/field-guide/monstera-obliqua-real-versus-fake",
     "date": "2026-05-21",
     "thumb": "/images/source/stock/monstera-obliqua-real-versus-fake-hero.jpg"
+  },
+  {
+    "slug": "monstera-deliciosa-albo",
+    "title": "Monstera deliciosa albo-borsigiana: Top Cuts vs. Flips",
+    "category": "Monstera",
+    "description": "How to judge a Monstera deliciosa albo-borsigiana cutting — variegation stability, node quality, and the difference between a keeper and a flip.",
+    "url": "/field-guide/monstera-deliciosa-albo",
+    "date": "2026-05-21",
+    "thumb": "/images/source/stock/monstera-deliciosa-albo-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "hoya-leaf-based-id",
@@ -264,6 +334,16 @@
     "thumb": "/images/source/stock/hoya-leaf-based-id-hero.jpg"
   },
   {
+    "slug": "monstera-adansonii-archipelago",
+    "title": "The Monstera adansonii Complex, Untangled",
+    "category": "Monstera",
+    "description": "Wide form, narrow form, round form, and the tangle of names sold as Monstera adansonii — what's what, and how to actually grow them.",
+    "url": "/field-guide/monstera-adansonii-archipelago",
+    "date": "2026-05-20",
+    "thumb": "/images/source/stock/monstera-adansonii-archipelago-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "begonia-hairy-leaf-types",
     "title": "Hairy-Leaf Begonias: The Trichome Specialists",
     "category": "Begonia",
@@ -271,6 +351,16 @@
     "url": "/field-guide/begonia-hairy-leaf-types",
     "date": "2026-05-19",
     "thumb": "/images/source/stock/begonia-hairy-leaf-types-hero.jpg"
+  },
+  {
+    "slug": "hoya-carnosa-compacta",
+    "title": "Hindu Rope and Its Restless Sports",
+    "category": "Hoya",
+    "description": "A field guide to Hindu rope hoya and its variegated sports — which forms are worth chasing, and the care routine that actually produces blooms.",
+    "url": "/field-guide/hoya-carnosa-compacta",
+    "date": "2026-05-19",
+    "thumb": "/images/source/stock/hoya-carnosa-compacta-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-gloriosum-versus-mamei",
@@ -282,6 +372,16 @@
     "thumb": "/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg"
   },
   {
+    "slug": "hoya-kerrii-beyond-novelty",
+    "title": "Hoya kerrii Beyond the Valentine Leaf",
+    "category": "Hoya",
+    "description": "Past the single-leaf gift shop trick: how to grow the full Hoya kerrii vine, its variegated forms, and what actually triggers flowering.",
+    "url": "/field-guide/hoya-kerrii-beyond-novelty",
+    "date": "2026-05-18",
+    "thumb": "/images/source/stock/hoya-kerrii-beyond-novelty-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "anthurium-warocqueanum-and-clarinervium",
     "title": "The Velvet Anthuriums: Telling warocqueanum from clarinervium",
     "category": "Anthurium",
@@ -289,6 +389,16 @@
     "url": "/field-guide/anthurium-warocqueanum-and-clarinervium",
     "date": "2026-05-15",
     "thumb": "/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg"
+  },
+  {
+    "slug": "schismatoglottis-jewel-aroid",
+    "title": "Schismatoglottis — the understory jewel aroid most collectors miss",
+    "category": "Schismatoglottis",
+    "description": "A collector's guide to Schismatoglottis — the Bornean understory aroids worth growing, with picks and honest care notes.",
+    "url": "/field-guide/schismatoglottis-jewel-aroid",
+    "date": "2026-05-15",
+    "thumb": "/images/source/stock/schismatoglottis-jewel-aroid-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "amydrium-medium-care",
@@ -300,6 +410,16 @@
     "thumb": "/images/source/stock/amydrium-medium-care-hero.jpg"
   },
   {
+    "slug": "amorphophallus-bloom-giants",
+    "title": "Amorphophallus at Home: Growing the Bloom Giants Without Losing the Corm",
+    "category": "Amorphophallus",
+    "description": "A practical guide to growing Amorphophallus indoors — substrate, light, water, and how to overwinter the corm through dormancy without rot.",
+    "url": "/field-guide/amorphophallus-bloom-giants",
+    "date": "2026-05-14",
+    "thumb": "/images/source/stock/amorphophallus-bloom-giants-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "caladium-dormancy-window",
     "title": "Caladium Dormancy and the Wake-Up Window",
     "category": "Caladium",
@@ -307,6 +427,16 @@
     "url": "/field-guide/caladium-dormancy-window",
     "date": "2026-05-13",
     "thumb": "/images/source/stock/caladium-dormancy-window-hero.jpg"
+  },
+  {
+    "slug": "geogenanthus-pewter-plant",
+    "title": "Geogenanthus ciliatus and the pewter-plant velvet — a humidity-loving understory perennial that earns the bell jar",
+    "category": "Geogenanthus",
+    "description": "A field guide to Geogenanthus — the slow, humidity-bound velvet perennials worth keeping under glass, with ranked picks and care that actually works.",
+    "url": "/field-guide/geogenanthus-pewter-plant",
+    "date": "2026-05-13",
+    "thumb": "/images/source/stock/geogenanthus-pewter-plant-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "homalomena-under-collected",
@@ -318,6 +448,16 @@
     "thumb": "/images/source/stock/homalomena-under-collected-hero.jpg"
   },
   {
+    "slug": "ctenanthe-never-never",
+    "title": "Ctenanthe and the Never Never Plant: The Prayer-Plant Cousin That Actually Lives",
+    "category": "Ctenanthe",
+    "description": "A field guide to Ctenanthe lubbersiana, the Never Never plant, and three more prayer-plant relatives that won't punish a missed watering.",
+    "url": "/field-guide/ctenanthe-never-never",
+    "date": "2026-05-12",
+    "thumb": "/images/source/stock/ctenanthe-never-never-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "syngonium-rare-cultivars",
     "title": "Albo, Strawberry, Confetti, Mottled: Which Syngonium Cultivars Are Actually Worth Keeping",
     "category": "Syngonium",
@@ -325,6 +465,16 @@
     "url": "/field-guide/syngonium-rare-cultivars",
     "date": "2026-05-11",
     "thumb": "/images/source/stock/syngonium-rare-cultivars-hero.jpg"
+  },
+  {
+    "slug": "tradescantia-zebrina-purples",
+    "title": "Tradescantia zebrina and the Easy Purples",
+    "category": "Tradescantia",
+    "description": "What separates a deep-pigmented Tradescantia zebrina from a washed-out one — and four trailing purples worth growing well.",
+    "url": "/field-guide/tradescantia-zebrina-purples",
+    "date": "2026-05-11",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "rhaphidophora-tetrasperma-versus-monstera",

@@ -1,5 +1,15 @@
 [
   {
+    "slug": "repotting-mature-anthuriums",
+    "title": "The Long Quiet Hour: Repotting a Mature Anthurium",
+    "category": "Field Skills",
+    "description": "On knowing when to upsize a collector Anthurium, what tends to fail in the process, and how to keep a decade of root mass intact.",
+    "url": "/the-leaf/repotting-mature-anthuriums",
+    "date": "2026-05-29",
+    "thumb": "/images/source/stock/repotting-mature-anthuriums-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "watering-rare-aroids-by-weight",
     "title": "Watering Rare Aroids by Weight",
     "category": "Field Skills",
@@ -200,6 +210,16 @@
     "status": "published"
   },
   {
+    "slug": "humidity-cabinets-versus-tents",
+    "title": "Cabinets, Tents, and the Rig in Between",
+    "category": "Field Skills",
+    "description": "What humidity cabinets and IKEA-style grow tents actually do for velvet aroids — and how to build a hybrid that earns its footprint.",
+    "url": "/the-leaf/humidity-cabinets-versus-tents",
+    "date": "2026-05-27",
+    "thumb": "/images/source/stock/humidity-cabinets-versus-tents-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "petiole-tells-the-truth",
     "title": "The Petiole Doesn't Lie",
     "category": "Field Skills",
@@ -216,6 +236,16 @@
     "url": "/the-leaf/the-velvet-anthurium-problem",
     "date": "2026-05-25",
     "thumb": "/images/source/book/the-velvet-anthurium-problem-hero.jpg"
+  },
+  {
+    "slug": "node-cuttings-what-survives",
+    "title": "The Anatomy of a Cutting",
+    "category": "Field Skills",
+    "description": "On stem-node propagation in rare aroids: which cuts root, which rot, and why the prettiest node is often the wrong one.",
+    "url": "/the-leaf/node-cuttings-what-survives",
+    "date": "2026-05-25",
+    "thumb": "/images/source/stock/node-cuttings-what-survives-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "grown-where-they-shouldnt-exist",
@@ -236,6 +266,16 @@
     "thumb": "/images/source/stock/inspecting-a-stem-cut-hero.jpg"
   },
   {
+    "slug": "fertilizer-for-slow-growers",
+    "title": "Feeding a Plant That Gives You Two Leaves a Year",
+    "category": "Field Skills",
+    "description": "A fertilizer strategy for the slow growers — velvet philodendrons, jewel anthuriums, and the species that refuse to be rushed.",
+    "url": "/the-leaf/fertilizer-for-slow-growers",
+    "date": "2026-05-22",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "anthurium-price-history",
     "title": "The Anthurium Boom and the Cooling After",
     "category": "The Market",
@@ -243,6 +283,16 @@
     "url": "/the-leaf/anthurium-price-history",
     "date": "2026-05-20",
     "thumb": "/images/source/book/anthurium-price-history-hero.jpg"
+  },
+  {
+    "slug": "the-post-flush-rest",
+    "title": "The Post-Flush Rest",
+    "category": "Field Skills",
+    "description": "The quiet weeks between leaves are when an aroid actually builds itself. A field essay on the pause collectors keep trying to skip.",
+    "url": "/the-leaf/the-post-flush-rest",
+    "date": "2026-05-20",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "sourcing-from-southeast-asia",
@@ -254,6 +304,16 @@
     "thumb": "/images/source/stock/sourcing-from-southeast-asia-hero.jpg"
   },
   {
+    "slug": "instagram-after-the-fomo",
+    "title": "After the Gold Rush",
+    "category": "Collector Culture",
+    "description": "What's left of the rare aroid boom — the buyers, the flippers, and the collectors who never sold their _Anthurium warocqueanum_.",
+    "url": "/the-leaf/instagram-after-the-fomo",
+    "date": "2026-05-18",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "visiting-the-glasshouse",
     "title": "The Glasshouse Visit",
     "category": "Collector Culture",
@@ -261,6 +321,16 @@
     "url": "/the-leaf/visiting-the-glasshouse",
     "date": "2026-05-15",
     "thumb": "/images/source/stock/visiting-the-glasshouse-hero.jpg"
+  },
+  {
+    "slug": "collector-burnout",
+    "title": "The Quiet After the Chase",
+    "category": "Collector Culture",
+    "description": "On collector burnout, the trough that follows the rare-aroid hunt, and the growers who stop posting without ever quite selling off.",
+    "url": "/the-leaf/collector-burnout",
+    "date": "2026-05-15",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "trades-versus-sales",
@@ -272,6 +342,16 @@
     "thumb": "/images/source/stock/trades-versus-sales-hero.jpg"
   },
   {
+    "slug": "heritage-clones-and-provenance",
+    "title": "The Cult of the Mother Plant",
+    "category": "Collector Culture",
+    "description": "Why a heritage clone of the same species can fetch double — and what lineage actually proves about a plant in your care.",
+    "url": "/the-leaf/heritage-clones-and-provenance",
+    "date": "2026-05-13",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "photographing-collector-plants",
     "title": "How to Photograph Rare Aroids",
     "category": "Collector Culture",
@@ -279,6 +359,16 @@
     "url": "/the-leaf/photographing-collector-plants",
     "date": "2026-05-11",
     "thumb": "/images/source/book/photographing-collector-plants-hero.jpg"
+  },
+  {
+    "slug": "meeting-the-grower-in-person",
+    "title": "What You Learn About a Grower Only by Standing in Their Greenhouse",
+    "category": "Collector Culture",
+    "description": "After a year of DMs and Venmo receipts, visiting the grower in person rewires what you thought you knew about plants, trust, and price.",
+    "url": "/the-leaf/meeting-the-grower-in-person",
+    "date": "2026-05-11",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "the-collectors-lexicon",
@@ -290,6 +380,16 @@
     "thumb": "/images/source/stock/the-collectors-lexicon-hero.jpg"
   },
   {
+    "slug": "the-serious-private-collection",
+    "title": "The Quiet Collection",
+    "category": "Collector Culture",
+    "description": "What separates a serious aroid collection from an expensive one — curation, breadth, and the plants that quietly disappear from the trade.",
+    "url": "/the-leaf/the-serious-private-collection",
+    "date": "2026-05-08",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "reading-aroid-roots",
     "title": "Reading Aroid Roots",
     "category": "Field Skills",
@@ -297,6 +397,16 @@
     "url": "/the-leaf/reading-aroid-roots",
     "date": "2026-05-06",
     "thumb": "/images/source/stock/reading-aroid-roots-hero.jpg"
+  },
+  {
+    "slug": "auctions-versus-dm-sales",
+    "title": "The Gavel and the Whisper",
+    "category": "The Market",
+    "description": "How public auctions and private DM sales price rare aroids differently — and what each format reveals about the seller across the table.",
+    "url": "/the-leaf/auctions-versus-dm-sales",
+    "date": "2026-05-06",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "variegation-genetics-plain-english",
@@ -309,6 +419,16 @@
     "status": "published"
   },
   {
+    "slug": "the-broker-economy",
+    "title": "The Broker Economy",
+    "category": "The Market",
+    "description": "Inside the rare aroid middleman trade — who earns their cut sourcing Anthurium and Philodendron from Ecuador, and who's just skimming the spread.",
+    "url": "/the-leaf/the-broker-economy",
+    "date": "2026-05-04",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "acclimating-a-fresh-import",
     "title": "The First Sixty Days: Acclimating a Freshly Imported Aroid",
     "category": "Field Skills",
@@ -316,6 +436,16 @@
     "url": "/the-leaf/acclimating-a-fresh-import",
     "date": "2026-05-01",
     "thumb": "/images/plants/plant-18.jpg"
+  },
+  {
+    "slug": "tissue-culture-and-the-rarity-premium",
+    "title": "The Lab and the Ledger",
+    "category": "The Market",
+    "description": "Tissue culture has flooded the rare plant market with once-mythical species. Here's what that actually does to price — and what it doesn't.",
+    "url": "/the-leaf/tissue-culture-and-the-rarity-premium",
+    "date": "2026-05-01",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "light-for-velvet-aroids",
@@ -327,6 +457,16 @@
     "thumb": "/images/source/book/light-for-velvet-aroids-hero.jpg"
   },
   {
+    "slug": "export-licenses-what-they-protect",
+    "title": "The Paper Forest",
+    "category": "The Market",
+    "description": "Export permits, phytosanitary certificates, and customs holds — what the paperwork around rare aroids really does, and what slips through anyway.",
+    "url": "/the-leaf/export-licenses-what-they-protect",
+    "date": "2026-04-29",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "filial-generations-explained",
     "title": "F1, F2 and Selfing: What Hybrid Generation Labels Really Mean for What You're Buying",
     "category": "The Market",
@@ -334,6 +474,16 @@
     "url": "/the-leaf/filial-generations-explained",
     "date": "2026-04-27",
     "thumb": "/images/source/stock/filial-generations-explained-hero.jpg"
+  },
+  {
+    "slug": "the-cuttings-resale-market",
+    "title": "The Long Life of a Single Node",
+    "category": "The Market",
+    "description": "Inside the secondary market for aroid cuttings: who's selling, who's buying, and what a single node is really worth.",
+    "url": "/the-leaf/the-cuttings-resale-market",
+    "date": "2026-04-27",
+    "thumb": "/images/source/p50.jpg",
+    "status": "pending"
   },
   {
     "slug": "decoding-listing-abbreviations",

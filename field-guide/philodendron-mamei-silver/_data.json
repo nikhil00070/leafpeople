@@ -1,0 +1,77 @@
+{
+  "meta_title": "Philodendron mamei: Which Clones Hold the Silver",
+  "meta_description": "A collector's guide to Philodendron mamei clones, which ones keep their silver pigment, and the conditions that bleach or strip it.",
+  "genus": "Philodendron",
+  "title": "Philodendron mamei: Which Clones Hold the Silver",
+  "deck": "The silver isn't a guarantee — it's a negotiation between clone, light, and humidity, and most growers lose it without knowing why.",
+  "stat_number": "~70%",
+  "stat_label": "Humidity floor where silver pigment stabilizes",
+  "picks": [
+    {
+      "name": "Philodendron mamei 'Silver Cloud'",
+      "location": "Creeper · quilted leaf",
+      "description": "The clone most often sold under the bare name _mamei_, and the one that produces the broadest, most reliable silver wash across the leaf. Mature leaves go heart-shaped and deeply quilted, with silver pooling between the primary veins. It holds pigment well under 70–80% humidity and moderate light. If you buy one _mamei_, this is the one to chase.",
+      "tag": "Best overall"
+    },
+    {
+      "name": "Philodendron mamei (Ecuadorian wild type)",
+      "location": "Creeper · broad silver",
+      "description": "Collected forms from Pastaza and Morona-Santiago tend to throw the heaviest, most contiguous silver — sometimes covering 60% of the lamina on a mature leaf. They're slower than the tissue-cultured trade clones and resent low humidity more visibly. Provenance is rarely documented, so verify with the seller. Worth the price only if you can hold conditions steady.",
+      "tag": "For provenance"
+    },
+    {
+      "name": "Philodendron mamei 'Galaxy'",
+      "location": "Creeper · speckled silver",
+      "description": "A trade name applied to clones with finer, more fragmented silver — closer to spatter than wash. The pattern is striking on juvenile leaves and tends to consolidate as the plant matures. It's less prone to wholesale silver loss in mediocre conditions because the pattern is already broken up. A reasonable choice if your humidity drops below 60% in winter.",
+      "tag": "Most forgiving"
+    },
+    {
+      "name": "Philodendron sodiroi (often confused)",
+      "location": "Climber · silver leaf",
+      "description": "Not _mamei_, but sold as one often enough to warrant mention. _Sodiroi_ climbs rather than creeps, and the silver is laid over a narrower, more cordate leaf with a red petiole. If your supposed _mamei_ is heading up a pole rather than running sideways, check the ID. Both are worth growing — just not for the same reasons.",
+      "tag": "Frequent mix-up"
+    }
+  ],
+  "body_image_caption": "A mature leaf holding silver under 75% humidity.",
+  "body_sections": [
+    {
+      "heading": "Why the silver disappears",
+      "paragraphs": [
+        "The silver on _mamei_ is not pigment in the conventional sense. It's a structural effect produced by an air-filled layer beneath the upper epidermis that scatters light and reads as silver-grey. That layer forms during leaf development, which means you can't recover silver on a leaf that emerged without it — you can only influence the next leaf, and the one after.",
+        "Three conditions degrade the pattern reliably. **Low humidity** during leaf expansion thins or collapses the reflective layer, producing leaves that emerge muddy green with only faint silver along the midrib. **Excess direct light** bleaches the surface and can also push the plant to produce thicker, more sun-adapted cuticles that flatten the silver visually. **Heat stress above 32°C** with poor airflow does the same, often combined with edge burn.",
+        "The frustrating part: a clone with strong silver genetics can produce mediocre leaves for months under bad conditions, then snap back to full pattern on the next leaf once the room stabilizes. Collectors who flip plants quickly often blame the clone when the problem was the shelf."
+      ]
+    },
+    {
+      "heading": "Substrate and water",
+      "paragraphs": [
+        "_Mamei_ is a creeper, not a climber. In habitat it runs along leaf litter and rotting wood, sending roots down into a thin, constantly moist organic layer. Replicate that with a chunky, airy mix: roughly 40% orchid bark, 30% perlite or pumice, 20% coco chips, and 10% worm castings or composted bark fines. Sphagnum on top of the mix helps maintain surface moisture without souring the root zone.",
+        "Wide, shallow pots beat deep ones. The rhizome wants to crawl, and a deep pot leaves a column of wet, unused medium below the roots — the fastest route to rot in this species. Terracotta bulb pans or shallow plastic pond baskets both work.",
+        "Water when the top 2–3 cm dry. _Mamei_ tolerates more consistent moisture than most philodendrons because of where it grows, but it will not tolerate a swampy root zone. If you're using sphagnum on top, lift it occasionally and check the bark layer underneath — that's the layer that tells you whether to water."
+      ]
+    },
+    {
+      "heading": "Light, humidity, and airflow",
+      "paragraphs": [
+        "Aim for 150–250 μmol/m²/s of PPFD at the leaf, or roughly bright indirect light filtered through a sheer curtain. Direct morning sun for an hour is fine; direct afternoon sun is not. Under-lit plants produce smaller leaves with paler silver and longer internodes — a tell that's easy to miss until you compare to a well-grown plant.",
+        "Humidity is the lever most growers underuse. Below 60%, expect silver loss on new leaves within two or three leaf cycles. At 70–80% with steady airflow, the pattern stabilizes and often intensifies. A small clip fan moving air across the canopy matters as much as the humidifier itself — stagnant humid air invites bacterial leaf spot, which _mamei_ is particularly prone to.",
+        "Temperature wants to sit between 20°C and 28°C. Brief dips to 16°C won't kill an established plant but will slow it and may cause the next leaf to emerge with reduced pattern. Sustained cold plus wet substrate is the most common way collectors lose this species in winter."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Buying a juvenile and expecting adult silver.** Seedling and early tissue-culture leaves often show minimal pattern. The silver develops as the rhizome matures and starts producing larger leaves, usually after the third or fourth leaf on a healthy plant.",
+        "**Mounting it.** _Mamei_ will climb a pole if forced, but it sulks. The leaves get smaller, the silver thins, and the plant directs energy into aerial roots rather than lamina. Let it creep.",
+        "**Overcorrecting with fertilizer.** Heavy feeding doesn't produce more silver — it produces larger, greener leaves with proportionally less pattern. A dilute balanced feed (around 100–150 ppm N) every second or third watering is plenty. Save the heavy feeding for your _gloriosum_."
+      ]
+    }
+  ],
+  "slug": "philodendron-mamei-silver",
+  "hero": "/images/source/stock/philodendron-mamei-silver-hero.jpg",
+  "hero_attribution": "Mickaël Schauli / Wikimedia Commons (CC BY-SA 4.0)",
+  "hero_source_id": "wmc-150720714",
+  "body_image": "/images/source/stock/philodendron-mamei-silver-body.jpg",
+  "body_image_attribution": "Daderot / Wikimedia Commons (CC0)",
+  "body_image_source_id": "wmc-20011515"
+}
