@@ -278,5 +278,95 @@
     "title_hint": "Rhaphidophora decursiva — the big-leaf climber that earns a pole",
     "status": "pending_review",
     "published_at": "2026-05-28"
+  },
+  {
+    "slug": "philodendron-luxurians",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron luxurians — the dark forest blue, what's a real one, and the cultivation patience it asks for",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-mamei-silver",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron mamei — which clones hold the silver, and what cultivation conditions strip it",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-billietiae",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron billietiae — orange petioles, climbing behavior, and the seasonal flush rhythm",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-luxurians",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium luxurians — the bullate Colombian and how to keep its texture in cultivation",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-splendidum",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium splendidum — quilted, slow, and what makes the new leaves succeed or fail",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-dressleri",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium dressleri — the Panamanian velvet that punishes wet feet and rewards airy mix",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-deliciosa-albo",
+    "genus": "Monstera",
+    "title_hint": "Monstera deliciosa albo-borsigiana — what makes a top cut versus a flip, and how to read variegation stability",
+    "status": "queued"
+  },
+  {
+    "slug": "monstera-adansonii-archipelago",
+    "genus": "Monstera",
+    "title_hint": "The Monstera adansonii complex — wide form, narrow form, round form, and the archipelago of names",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-carnosa-compacta",
+    "genus": "Hoya",
+    "title_hint": "Hoya carnosa compacta — Hindu rope, the splash-variegated sports, and the care that earns blooms",
+    "status": "queued"
+  },
+  {
+    "slug": "hoya-kerrii-beyond-novelty",
+    "genus": "Hoya",
+    "title_hint": "Hoya kerrii beyond the single-leaf novelty — the full vine, the variegated form, and what the leaf-cutting myth gets wrong",
+    "status": "queued"
+  },
+  {
+    "slug": "schismatoglottis-jewel-aroid",
+    "genus": "Schismatoglottis",
+    "title_hint": "Schismatoglottis — the understory jewel aroid most collectors miss, and the species worth chasing",
+    "status": "queued"
+  },
+  {
+    "slug": "amorphophallus-bloom-giants",
+    "genus": "Amorphophallus",
+    "title_hint": "Amorphophallus — growing the bloom giants at home without losing the corm in dormancy",
+    "status": "queued"
+  },
+  {
+    "slug": "geogenanthus-pewter-plant",
+    "genus": "Geogenanthus",
+    "title_hint": "Geogenanthus ciliatus and the pewter-plant velvet — a humidity-loving understory perennial that earns the bell jar",
+    "status": "queued"
+  },
+  {
+    "slug": "ctenanthe-never-never",
+    "genus": "Ctenanthe",
+    "title_hint": "Ctenanthe lubbersiana and the Never Never plant — the calathea-adjacent that's actually easier to keep alive",
+    "status": "queued"
+  },
+  {
+    "slug": "tradescantia-zebrina-purples",
+    "genus": "Tradescantia",
+    "title_hint": "Tradescantia zebrina and the easy purples — what makes a deep-color form versus a washed-out one",
+    "status": "queued"
   }
 ]

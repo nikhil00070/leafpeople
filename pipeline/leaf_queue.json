@@ -271,5 +271,95 @@
     "title_hint": "When to walk away from a rare-plant deal — the red flags in the final DMs before you pay",
     "status": "pending_review",
     "published_at": "2026-05-28"
+  },
+  {
+    "slug": "repotting-mature-anthuriums",
+    "title_hint": "Repotting a mature collector Anthurium — when to upsize, what fails, and how to keep the root mass intact",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "humidity-cabinets-versus-tents",
+    "title_hint": "Humidity cabinets vs IKEA-style tents — what each actually does for velvet aroids, and the rig that splits the difference",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "node-cuttings-what-survives",
+    "title_hint": "Stem-node propagation — which cuts root, which rot, and why the nicest node isn't always the right one",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "fertilizer-for-slow-growers",
+    "title_hint": "Feeding a plant that gives you two leaves a year — a fertilizer strategy built for slow collector species",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "the-post-flush-rest",
+    "title_hint": "The post-flush rest — why the pause between leaves matters more than the leaves themselves",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "instagram-after-the-fomo",
+    "title_hint": "What the rare-plant Instagram economy looks like after the gold rush — buyers, flippers, and the collectors who stayed",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "collector-burnout",
+    "title_hint": "Collector burnout — the trough after the chase, and the growers who quietly stop posting",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "heritage-clones-and-provenance",
+    "title_hint": "Heritage clones — what a plant's lineage actually means, and why the same species can be worth twice as much from one mother",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "meeting-the-grower-in-person",
+    "title_hint": "Meeting the grower in person — what changes once you've stood in the greenhouse and what DMs can never tell you",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "the-serious-private-collection",
+    "title_hint": "What separates a serious private collection from an expensive one — curation, breadth, and the plants that quietly disappear",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "auctions-versus-dm-sales",
+    "title_hint": "Auctions vs DM sales — where rare-plant prices actually get set, and what each format tells you about a seller",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "the-broker-economy",
+    "title_hint": "The broker economy — when a middleman earns their cut, and when they're just skimming the spread",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "tissue-culture-and-the-rarity-premium",
+    "title_hint": "Tissue culture and the rarity premium — what lab propagation does to a plant's price, and what it doesn't",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "export-licenses-what-they-protect",
+    "title_hint": "CITES, phyto, customs — what export licenses actually protect against, and what they let through",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "the-cuttings-resale-market",
+    "title_hint": "The cuttings resale market — who sells props, who buys them, and the price arc of a single node",
+    "category": "The Market",
+    "status": "queued"
   }
 ]
