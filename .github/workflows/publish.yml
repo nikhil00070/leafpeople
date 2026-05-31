@@ -39,11 +39,12 @@ jobs:
             python pipeline/publish.py "${{ inputs.slug }}"
           fi
 
-      - name: Push notification (only on publish)
-        if: inputs.action == 'publish'
-        env:
-          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
-        run: python pipeline/send_push.py "${{ inputs.slug }}"
+      # Commit + push the manifest change FIRST — the article going live is
+      # the load-bearing step; the FCM push below is supplemental. Earlier
+      # ordering put send_push.py before the commit, so an FCM failure (e.g.
+      # missing `requests` dependency) aborted the workflow and the manifest
+      # flip was thrown away with the runner. Articles "published" via
+      # /review never reached the live site.
       - name: Commit & push
         run: |
           git config user.name "leaf-people-bot"
@@ -62,6 +63,13 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Push notification (only on publish)
+        if: inputs.action == 'publish'
+        continue-on-error: true   # never abort the workflow over FCM failure
+        env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: python pipeline/send_push.py "${{ inputs.slug }}"
 
       - name: Close matching review issue
         env:
