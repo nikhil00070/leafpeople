@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-31",
-  "count": 87,
+  "count": 88,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -562,6 +562,19 @@
       "url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents",
       "data_url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents/_data.json",
       "image": "https://leafpeople.app/images/source/stock/humidity-cabinets-versus-tents-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-billietiae",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-billietiae",
+      "title": "Philodendron billietiae and the Tangerine-Petiole Climbers",
+      "category": "Philodendron",
+      "description": "A grower's guide to Philodendron billietiae — its tangerine petioles, climbing behavior, seasonal flushes, and the related species worth chasing.",
+      "date": "2026-05-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-billietiae",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-billietiae/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-billietiae-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-velvet-care",
