@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-31",
-  "count": 83,
+  "count": 85,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -601,6 +601,19 @@
       "url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem",
       "data_url": "https://leafpeople.app/the-leaf/the-velvet-anthurium-problem/_data.json",
       "image": "https://leafpeople.app/images/source/book/the-velvet-anthurium-problem-hero.jpg"
+    },
+    {
+      "id": "the-leaf/node-cuttings-what-survives",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "node-cuttings-what-survives",
+      "title": "The Anatomy of a Cutting",
+      "category": "Field Skills",
+      "description": "On stem-node propagation in rare aroids: which cuts root, which rot, and why the prettiest node is often the wrong one.",
+      "date": "2026-05-25",
+      "url": "https://leafpeople.app/the-leaf/node-cuttings-what-survives",
+      "data_url": "https://leafpeople.app/the-leaf/node-cuttings-what-survives/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/node-cuttings-what-survives-hero.jpg"
     },
     {
       "id": "the-leaf/grown-where-they-shouldnt-exist",
