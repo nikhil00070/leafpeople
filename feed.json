@@ -720,6 +720,19 @@
       "image": "https://leafpeople.app/images/source/stock/begonia-hairy-leaf-types-hero.jpg"
     },
     {
+      "id": "field-guide/hoya-carnosa-compacta",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "hoya-carnosa-compacta",
+      "title": "Hindu Rope and Its Restless Sports",
+      "category": "Hoya",
+      "description": "A field guide to Hindu rope hoya and its variegated sports — which forms are worth chasing, and the care routine that actually produces blooms.",
+      "date": "2026-05-19",
+      "url": "https://leafpeople.app/field-guide/hoya-carnosa-compacta",
+      "data_url": "https://leafpeople.app/field-guide/hoya-carnosa-compacta/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/hoya-carnosa-compacta-hero.jpg"
+    },
+    {
       "id": "the-leaf/sourcing-from-southeast-asia",
       "section": "the-leaf",
       "section_label": "Understory",
