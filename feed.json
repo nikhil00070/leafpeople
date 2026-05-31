@@ -759,6 +759,19 @@
       "image": "https://leafpeople.app/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg"
     },
     {
+      "id": "field-guide/hoya-kerrii-beyond-novelty",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "hoya-kerrii-beyond-novelty",
+      "title": "Hoya kerrii Beyond the Valentine Leaf",
+      "category": "Hoya",
+      "description": "Past the single-leaf gift shop trick: how to grow the full Hoya kerrii vine, its variegated forms, and what actually triggers flowering.",
+      "date": "2026-05-18",
+      "url": "https://leafpeople.app/field-guide/hoya-kerrii-beyond-novelty",
+      "data_url": "https://leafpeople.app/field-guide/hoya-kerrii-beyond-novelty/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/hoya-kerrii-beyond-novelty-hero.jpg"
+    },
+    {
       "id": "the-leaf/visiting-the-glasshouse",
       "section": "the-leaf",
       "section_label": "Understory",
