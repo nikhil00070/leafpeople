@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-05-31",
-  "count": 82,
+  "count": 83,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -692,6 +692,19 @@
       "url": "https://leafpeople.app/field-guide/hoya-leaf-based-id",
       "data_url": "https://leafpeople.app/field-guide/hoya-leaf-based-id/_data.json",
       "image": "https://leafpeople.app/images/source/stock/hoya-leaf-based-id-hero.jpg"
+    },
+    {
+      "id": "field-guide/monstera-adansonii-archipelago",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "monstera-adansonii-archipelago",
+      "title": "The Monstera adansonii Complex, Untangled",
+      "category": "Monstera",
+      "description": "Wide form, narrow form, round form, and the tangle of names sold as Monstera adansonii — what's what, and how to actually grow them.",
+      "date": "2026-05-20",
+      "url": "https://leafpeople.app/field-guide/monstera-adansonii-archipelago",
+      "data_url": "https://leafpeople.app/field-guide/monstera-adansonii-archipelago/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/monstera-adansonii-archipelago-hero.jpg"
     },
     {
       "id": "field-guide/begonia-hairy-leaf-types",
