@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-05-30",
-  "count": 81,
+  "updated": "2026-05-31",
+  "count": 82,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -536,6 +536,19 @@
       "url": "https://leafpeople.app/field-guide/rhaphidophora-decursiva",
       "data_url": "https://leafpeople.app/field-guide/rhaphidophora-decursiva/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rhaphidophora-decursiva-hero.jpg"
+    },
+    {
+      "id": "the-leaf/humidity-cabinets-versus-tents",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "humidity-cabinets-versus-tents",
+      "title": "Cabinets, Tents, and the Rig in Between",
+      "category": "Field Skills",
+      "description": "What humidity cabinets and IKEA-style grow tents actually do for velvet aroids — and how to build a hybrid that earns its footprint.",
+      "date": "2026-05-27",
+      "url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents",
+      "data_url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/humidity-cabinets-versus-tents-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-velvet-care",
