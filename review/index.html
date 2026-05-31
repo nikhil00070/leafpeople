@@ -98,7 +98,6 @@ function articleCard(section, entry, data) {
   const cap = (data.body_image_caption || "").replace(/_([^_]+)_/g, "<em>$1</em>");
   const heroAttr = data.hero_attribution || "(your own photo)";
   const bodyAttr = data.body_image_attribution || "(your own photo)";
-  const publishUrl = `${PUBLISH_WORKFLOW}`;  // GitHub opens form; user pastes slug
   return `
   <article class="article" data-slug="${slug}">
     <div class="art-head">
@@ -123,12 +122,73 @@ function articleCard(section, entry, data) {
       </div>
     </div>
     <div class="actions">
-      <a class="btn btn-publish" href="${publishUrl}" target="_blank" rel="noopener">Publish on GitHub →</a>
-      <a class="btn btn-reject" href="${publishUrl}" target="_blank" rel="noopener">Reject (workflow → --reject)</a>
-      <a class="btn btn-secondary" href="/${slug}" target="_blank" rel="noopener">View draft article</a>
+      <button class="btn btn-publish" onclick="dispatch(this, '${slug}', 'publish')">Publish</button>
+      <button class="btn btn-reject" onclick="dispatch(this, '${slug}', 'reject')">Reject</button>
+      <a class="btn btn-secondary" href="/${slug}" target="_blank" rel="noopener">View draft</a>
       <span class="cmd" onclick="copyCmd(this)" title="Click to copy">python pipeline/publish.py ${slug}</span>
     </div>
   </article>`;
+}
+
+// Posts {slug, action} to /api/publish, which calls GitHub's workflow_dispatch
+// API with the slug baked in (no manual entry on the Actions form). On
+// success we yank the card from the DOM immediately — the workflow runs
+// async; the next manifest refresh will confirm. On failure we restore the
+// buttons + show the server error inline so the user can act on it.
+async function dispatch(btn, slug, action) {
+  const article = btn.closest("article.article");
+  const actions = btn.closest(".actions");
+  const all = actions.querySelectorAll("button");
+  all.forEach(b => { b.disabled = true; b.style.opacity = ".55"; });
+  btn.textContent = action === "publish" ? "Publishing…" : "Rejecting…";
+  try {
+    const r = await fetch("/api/publish", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, action }),
+    });
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(err.error || err.body || `HTTP ${r.status}`);
+    }
+    // Optimistic remove — the workflow runs async (~30-60s); the next
+    // /review load will confirm via the live manifest.
+    article.style.transition = "opacity .3s, transform .3s";
+    article.style.opacity = "0";
+    article.style.transform = "translateY(-6px)";
+    setTimeout(() => {
+      article.remove();
+      decrementCount(slug.startsWith("the-leaf/") ? "leafSection" : "guideSection");
+    }, 320);
+  } catch (e) {
+    all.forEach(b => { b.disabled = false; b.style.opacity = ""; });
+    btn.textContent = action === "publish" ? "Publish" : "Reject";
+    const err = document.createElement("div");
+    err.textContent = `Failed: ${e.message}`;
+    err.style.cssText = "color: var(--red); font-size: .8rem; margin-left: .8rem; align-self: center;";
+    actions.appendChild(err);
+    setTimeout(() => err.remove(), 6000);
+  }
+}
+
+// Update the "N pending" counters and hide a section once empty.
+function decrementCount(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  const list = section.querySelector("[id$='List']");
+  if (list && list.children.length === 0) section.style.display = "none";
+  // Update the counts header by re-reading remaining cards in the DOM.
+  const leftLeaf = document.querySelectorAll("#leafList .article").length;
+  const leftGuide = document.querySelectorAll("#guideList .article").length;
+  const counts = document.getElementById("counts");
+  counts.innerHTML = `
+    <div class="count"><strong>${leftLeaf}</strong> Understory pending</div>
+    <div class="count"><strong>${leftGuide}</strong> Field Guide pending</div>
+    <div class="count">Repo: <code style="color:var(--blue)">${REPO}</code></div>
+  `;
+  if (leftLeaf === 0 && leftGuide === 0) {
+    document.getElementById("empty").style.display = "block";
+  }
 }
 
 (async function() {
