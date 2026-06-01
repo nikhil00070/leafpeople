@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-05-31",
-  "count": 88,
+  "updated": "2026-06-01",
+  "count": 89,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -835,6 +835,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-and-clarinervium",
       "data_url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-and-clarinervium/_data.json",
       "image": "https://leafpeople.app/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg"
+    },
+    {
+      "id": "field-guide/schismatoglottis-jewel-aroid",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "schismatoglottis-jewel-aroid",
+      "title": "Schismatoglottis — the understory jewel aroid most collectors miss",
+      "category": "Schismatoglottis",
+      "description": "A collector's guide to Schismatoglottis — the Bornean understory aroids worth growing, with picks and honest care notes.",
+      "date": "2026-05-15",
+      "url": "https://leafpeople.app/field-guide/schismatoglottis-jewel-aroid",
+      "data_url": "https://leafpeople.app/field-guide/schismatoglottis-jewel-aroid/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/schismatoglottis-jewel-aroid-hero.jpg"
     },
     {
       "id": "field-guide/amydrium-medium-care",
