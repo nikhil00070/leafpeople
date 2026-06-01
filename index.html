@@ -146,7 +146,58 @@
   .metrics .m .num { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; color: var(--green); }
   .metrics .m .lbl { font-size: .8rem; color: var(--text-faint); letter-spacing: .06em; text-transform: uppercase; }
 
+  /* ---- Head-to-head (4-app comparison) ---- */
+  .hh-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0 2.6rem; }
+  .hh-stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-card); padding: 1.4rem 1.4rem 1.5rem; display: flex; flex-direction: column; }
+  .hh-stat.win { border-color: rgba(87,199,122,.4); box-shadow: 0 0 40px rgba(87,199,122,.08); }
+  .hh-stat .who { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: .6rem; }
+  .hh-stat.win .who { color: var(--green); }
+  .hh-stat .big { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; line-height: 1.1; }
+  .hh-stat.win .big { color: var(--green); }
+  .hh-stat.lose .big { color: #c98a7d; }
+  .hh-stat .note { font-size: .85rem; color: var(--text-dim); margin-top: .5rem; }
+  .hh-stat .rank { margin-top: auto; padding-top: .9rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+  .hh-stat.win .rank { color: var(--green); }
+
+  .hh-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 2.4rem 0 1.1rem; display: flex; align-items: center; gap: .55rem; }
+  .hh-sub .lead { color: var(--green); }
+
+  .hh-shotgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.6rem; }
+  .hh-shot { position: relative; border-radius: 22px; overflow: hidden; border: 1px solid var(--border); background: #000; box-shadow: 0 20px 45px rgba(0,0,0,.5); }
+  .hh-shot img { width: 100%; display: block; }
+  .hh-cap { position: absolute; left: .6rem; bottom: .6rem; right: .6rem; display: flex; align-items: center; gap: .4rem; font-size: .74rem; font-weight: 600; color: #fff;
+            background: rgba(8,12,10,.74); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--border-strong); border-radius: 12px; padding: .4rem .55rem; }
+  .hh-cap.win::before { content: "✓"; color: var(--green); font-weight: 800; }
+  .hh-cap.fail::before { content: "✕"; color: #e2725b; font-weight: 800; }
+
+  .hh-others { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 2.4rem; }
+  .hh-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column; }
+  .hh-card img { width: 100%; display: block; border-bottom: 1px solid var(--border); }
+  .hh-card .body { padding: 1.1rem 1.2rem 1.3rem; }
+  .hh-card .who { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: .45rem; }
+  .hh-card .verdict { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.25; }
+  .hh-card .verdict .miss { color: #e2725b; }
+  .hh-card p { font-size: .85rem; color: var(--text-dim); margin-top: .5rem; line-height: 1.45; }
+
+  .hh-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .hh-table th { text-align: left; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; padding: .6rem .8rem; border-bottom: 1px solid var(--border); }
+  .hh-table th.win { color: var(--green); }
+  .hh-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--border); color: var(--text-dim); }
+  .hh-table .plant { color: var(--text); font-weight: 500; }
+  .hh-table .plant i { font-style: italic; }
+  .hh-table .tag { font-size: .68rem; color: var(--text-faint); margin-left: .45rem; }
+  .hh-table .lp { color: var(--green); font-family: var(--font-display); font-weight: 700; white-space: nowrap; }
+  .hh-table .ap { color: #c98a7d; }
+  .hh-table .ok { color: var(--text-dim); }
+  .hh-foot { font-size: .8rem; color: var(--text-faint); margin-top: 1.1rem; line-height: 1.5; }
+
   @media (max-width: 900px) {
+    .hh-stats { grid-template-columns: 1fr 1fr; }
+    .hh-shotgrid { grid-template-columns: 1fr 1fr; }
+    .hh-others { grid-template-columns: 1fr; }
+    .hh-table { font-size: .82rem; }
+    .hh-table th, .hh-table td { padding: .55rem .5rem; }
+    .hh-table .tag { display: none; }
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
     .hero .sub { margin-left: auto; margin-right: auto; }
     .hero-cta, .proof { justify-content: center; }
@@ -295,6 +346,94 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ===== HEAD TO HEAD (vs Apple) ===== -->
+<section class="container" id="head-to-head">
+  <div class="section-head reveal">
+    <span class="eyebrow">The test</span>
+    <h2>We ran our rarest aroids through every major plant identifier. <span class="accent">None of them came close.</span></h2>
+    <p>Same plants, same afternoon. Leaf People named the species — and the cultivar. The others stopped at the genus, hedged, or guessed a different plant entirely.</p>
+  </div>
+
+  <div class="hh-stats reveal">
+    <div class="hh-stat win">
+      <div class="who">Leaf People</div>
+      <div class="big">Species &amp; cultivar</div>
+      <div class="note">10 / 10 named to species or cultivar, 82–99% — even a single leaf and a dried one.</div>
+      <div class="rank">★ The collector's tool</div>
+    </div>
+    <div class="hh-stat lose">
+      <div class="who">Google Lens</div>
+      <div class="big">Genus, then a guess</div>
+      <div class="note">Always "an Anthurium," then a hedged list — "balaoanum or esmeraldense," "NOID hybrid."</div>
+      <div class="rank">Poor</div>
+    </div>
+    <div class="hh-stat lose">
+      <div class="who">Apple Visual Look Up</div>
+      <div class="big">One word: "Laceleaf"</div>
+      <div class="note">The common name for the entire genus — the same answer for every rare anthurium.</div>
+      <div class="rank">Genus only</div>
+    </div>
+    <div class="hh-stat lose">
+      <div class="who">PictureThis</div>
+      <div class="big">Wrong plant entirely</div>
+      <div class="note">Called a queen anthurium a fern; labeled the rest "Flamingo-lily" — the grocery-store anthurium.</div>
+      <div class="rank">Worst</div>
+    </div>
+  </div>
+
+  <div class="hh-sub reveal"><span class="lead">✓ Leaf People</span> nailed every one</div>
+  <div class="hh-shotgrid reveal">
+    <div class="hh-shot"><img src="/images/compare/lp-warocqueanum.png" alt="Leaf People identifying Anthurium warocqueanum at 99%"><span class="hh-cap win">A. warocqueanum · 99%</span></div>
+    <div class="hh-shot"><img src="/images/compare/lp-papillilaminum.png" alt="Leaf People identifying Anthurium papillilaminum from a dried leaf at 99%"><span class="hh-cap win">A. papillilaminum · 99% · dried leaf</span></div>
+    <div class="hh-shot"><img src="/images/compare/lp-ace-of-spades.png" alt="Leaf People identifying Anthurium Ace of Spades at 99%"><span class="hh-cap win">'Ace of Spades' · 99%</span></div>
+    <div class="hh-shot"><img src="/images/compare/lp-crystallinum.png" alt="Leaf People identifying Anthurium crystallinum from a single leaf at 82%"><span class="hh-cap win">A. crystallinum · 82% · single leaf</span></div>
+  </div>
+
+  <div class="hh-sub reveal">Here's what everyone else said — <span style="color:var(--text-dim);font-weight:500;">on the same plants</span></div>
+  <div class="hh-others reveal">
+    <div class="hh-card">
+      <img src="/images/compare/pt-cretan-brake.png" alt="PictureThis misidentifying a queen anthurium as Cretan brake, a fern">
+      <div class="body">
+        <div class="who">PictureThis</div>
+        <div class="verdict">Queen anthurium → <span class="miss">"Cretan brake"</span></div>
+        <p>It identified a $400+ <i>Anthurium warocqueanum</i> as a common fern (<i>Pteris cretica</i>) — wrong genus, wrong family, wrong everything.</p>
+      </div>
+    </div>
+    <div class="hh-card">
+      <img src="/images/compare/pt-flamingo-lily.png" alt="PictureThis labeling a rare anthurium as the common Flamingo-lily">
+      <div class="body">
+        <div class="who">PictureThis</div>
+        <div class="verdict">Everything else → <span class="miss">"Flamingo-lily"</span></div>
+        <p>Rare anthuriums all came back as <i>A. andraeanum</i> — the $15 grocery-store flamingo flower. It knows one anthurium, and that's it.</p>
+      </div>
+    </div>
+    <div class="hh-card">
+      <img src="/images/compare/lens-hedge.png" alt="Google Lens hedging between several anthurium species">
+      <div class="body">
+        <div class="who">Google Lens</div>
+        <div class="verdict">"An Anthurium <span class="miss">hybrid… NOID</span>"</div>
+        <p>Genus-right, but it punts on species — offering a list of maybes and a "no-ID" hybrid label instead of an answer.</p>
+      </div>
+    </div>
+  </div>
+
+  <table class="hh-table reveal">
+    <thead>
+      <tr><th>The plant</th><th class="win">Leaf People</th><th>Google Lens</th><th>Apple</th><th>PictureThis</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="plant"><i>A. warocqueanum</i><span class="tag">queen</span></td><td class="lp">Species · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Cretan brake" (a fern)</td></tr>
+      <tr><td class="plant"><i>A. papillilaminum</i><span class="tag">dried leaf</span></td><td class="lp">Species · 99%</td><td class="ok">Species (hedged)</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant">Anthurium <i>'Ace of Spades'</i><span class="tag">cultivar</span></td><td class="lp">Cultivar · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant"><i>A. veitchii</i><span class="tag">king</span></td><td class="lp">Species · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant">Anthurium <i>'Carla Blackie'</i><span class="tag">cultivar</span></td><td class="lp">Cultivar · 99%</td><td class="ap">Genus (hedged)</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant"><i>A. cutucuense</i></td><td class="lp">Species · 98%</td><td class="ok">Species ✓</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant"><i>A. crystallinum</i><span class="tag">single leaf</span></td><td class="lp">Species · 82%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Angel wings" (a Caladium)</td></tr>
+    </tbody>
+  </table>
+  <p class="hh-foot">Tested May 2026 — Leaf People (on-device), Google Lens AI Mode, Apple Visual Look Up (iOS Photos), and PictureThis, the same photographs run through each. "Laceleaf" and "Flamingo-lily" are common names for the broad <i>Anthurium</i> genus — over 1,000 species. Google Lens reached the correct species once (<i>cutucuense</i>); PictureThis reached it zero times. Leaf People identifies within the genera we cover and tells you when a plant isn't one of ours.</p>
 </section>
 
 <!-- ===== HOW IT WORKS ===== -->
