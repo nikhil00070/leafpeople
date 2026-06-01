@@ -243,13 +243,132 @@
     "credit": ""
   },
   {
+    "src": "/images/instagram/monstera-siltepecana.jpg",
+    "branches": [
+      "rainforest-beauty",
+      "jungle-escape",
+      "leaf-texture",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/hoya-callistophylla.png",
+    "branches": [
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/monstera-thai-constellation.jpg",
+    "branches": [
+      "rarity-value",
+      "rarest-jungle",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/philodendron-squamiferum.png",
+    "branches": [
+      "rainforest-beauty",
+      "leaf-texture",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/philodendron-white-knight.jpg",
+    "branches": [
+      "rarity-value",
+      "rarest-jungle",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/philodendron-tortum.jpg",
+    "branches": [
+      "rainforest-beauty",
+      "leaf-texture",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/philodendron-pink-princess.png",
+    "branches": [
+      "rarity-value",
+      "rarest-jungle",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/begonia-maculata.jpg",
+    "branches": [
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/begonia-rex-escargot.jpg",
+    "branches": [
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/begonia-venosa.jpg",
+    "branches": [
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/monstera-albo-variegata.jpg",
+    "branches": [
+      "rarity-value",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
+    "src": "/images/instagram/philodendron-burle-marx-variegata.jpg",
+    "branches": [
+      "rarity-value",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "app",
+    "credit": ""
+  },
+  {
     "src": "/images/compare/lp-warocqueanum.png",
     "branches": [
-      "velvet-anthurium",
-      "rarest-jungle",
-      "leaf-texture",
-      "app-identify",
-      "welcome-leafpeople"
+      "app-identify"
     ],
     "kind": "id",
     "credit": ""
@@ -257,11 +376,7 @@
   {
     "src": "/images/compare/lp-ace-of-spades.png",
     "branches": [
-      "velvet-anthurium",
-      "rarest-jungle",
-      "leaf-texture",
-      "app-identify",
-      "welcome-leafpeople"
+      "app-identify"
     ],
     "kind": "id",
     "credit": ""
@@ -269,10 +384,7 @@
   {
     "src": "/images/compare/lp-crystallinum.png",
     "branches": [
-      "leaf-texture",
-      "velvet-anthurium",
-      "app-identify",
-      "welcome-leafpeople"
+      "app-identify"
     ],
     "kind": "id",
     "credit": ""
@@ -280,10 +392,7 @@
   {
     "src": "/images/compare/lp-papillilaminum.png",
     "branches": [
-      "velvet-anthurium",
-      "rarest-jungle",
-      "app-identify",
-      "welcome-leafpeople"
+      "app-identify"
     ],
     "kind": "id",
     "credit": ""
@@ -291,10 +400,7 @@
   {
     "src": "/images/compare/lp-carla-blackie.png",
     "branches": [
-      "velvet-anthurium",
-      "leaf-texture",
-      "app-identify",
-      "welcome-leafpeople"
+      "app-identify"
     ],
     "kind": "id",
     "credit": ""
