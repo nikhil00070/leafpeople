@@ -2,37 +2,56 @@
   "handle": "leafpeople.app",
   "site": "leafpeople.app",
   "phases": {
-    "intro": "Days 1-15 \u00b7 Beauty & identity \u2014 earn the follow.",
-    "concept": "Days 16-35 \u00b7 Tie the beauty to what Leaf People does.",
-    "convert": "Days 36-60 \u00b7 Drive to articles, site & installs."
+    "welcome": "Days 1-15 \u00b7 Introduce Leaf People + immerse in the rainforest \u2014 earn the follow.",
+    "showcase": "Days 16-30 \u00b7 The rarest leaves, up close \u2014 go deeper.",
+    "concept": "Days 31-45 \u00b7 Tie the beauty to what Leaf People does.",
+    "convert": "Days 46-60 \u00b7 Drive to articles, site & installs."
   },
   "branches": {
-    "velvet-anthurium": {
-      "phase": "intro",
+    "welcome-leafpeople": {
+      "phase": "welcome",
+      "color": "#34c759",
+      "label": "Welcome \u00b7 Leaf People",
+      "intent": "Introduce the app & mission \u2014 the daily escape to the jungle."
+    },
+    "jungle-escape": {
+      "phase": "welcome",
+      "color": "#2f8f6b",
+      "label": "Jungle Escape",
+      "intent": "Immersive, sensory escapism \u2014 transport them to the rainforest."
+    },
+    "rarest-jungle": {
+      "phase": "welcome",
       "color": "#7c5cff",
+      "label": "Rarest Jungle Plants",
+      "intent": "The wow \u2014 the rarest leaves on earth, revealed."
+    },
+    "velvet-anthurium": {
+      "phase": "showcase",
+      "color": "#9a7bff",
       "label": "Velvet Anthuriums",
-      "intent": "The hero look \u2014 dark, suede, dramatic. The plant that stops the scroll."
+      "intent": "Dark, suede, dramatic \u2014 the plant that stops the scroll."
     },
     "rainforest-beauty": {
-      "phase": "intro",
+      "phase": "showcase",
       "color": "#2fae6b",
       "label": "Rainforest Beauty",
       "intent": "Understory mood, light, lush foliage. Aspiration & calm."
     },
     "leaf-texture": {
-      "phase": "intro",
+      "phase": "showcase",
       "color": "#d98a3a",
       "label": "Leaf Texture",
-      "intent": "Macro veining, iridescence, crystalline surfaces. The 'how is that real' shot."
+      "intent": "Macro veining, iridescence, crystalline surfaces."
     },
     "rarity-value": {
-      "phase": "intro",
+      "phase": "showcase",
       "color": "#e0556d",
       "label": "Rarity & Value",
       "intent": "The $400-$12k stories. Desire, scarcity, the hunt."
     },
     "collector-culture": {
-      "phase": "intro",
+      "phase": "showcase",
       "color": "#46a7e0",
       "label": "Collector Culture",
       "intent": "The people & the obsession. Belonging."
@@ -89,28 +108,28 @@
   "goals": [
     {
       "weeks": "Days 1-14",
-      "theme": "Establish the look & find the winning intro branch",
+      "theme": "Welcome the world \u2014 establish the immersive Leaf People vibe",
       "followers": 150,
       "avg_likes": 40,
-      "extra": "Identify the top-performing intro branch by day 14."
+      "extra": "Find which welcome angle hooks hardest: escape, the rarest, or the app itself."
     },
     {
       "weeks": "Days 15-28",
-      "theme": "Bridge beauty -> the app",
+      "theme": "Go deeper \u2014 showcase the rarest leaves",
       "followers": 400,
       "avg_likes": 80,
-      "extra": "50+ bio-link clicks; double down on the proven branch."
+      "extra": "Double down on the winning welcome angle; 50+ bio-link clicks."
     },
     {
       "weeks": "Days 29-42",
-      "theme": "Concept posts turn lookers into learners",
+      "theme": "Bridge into the app \u2014 concept posts",
       "followers": 800,
       "avg_likes": 120,
       "extra": "150+ link clicks; first attributed installs."
     },
     {
       "weeks": "Days 43-56",
-      "theme": "Article tie-ins drive the site & app",
+      "theme": "Articles & CTAs convert lookers to users",
       "followers": 1500,
       "avg_likes": 180,
       "extra": "300+ clicks; 30+ attributed installs."
@@ -139,6 +158,27 @@
       "#plantcollector"
     ],
     "niche": {
+      "welcome-leafpeople": [
+        "#rareplantsofinstagram",
+        "#plantcommunity",
+        "#aroidaddicts",
+        "#rarearoids"
+      ],
+      "jungle-escape": [
+        "#rainforest",
+        "#jungle",
+        "#biophilia",
+        "#naturelovers",
+        "#botanicalescape",
+        "#calm"
+      ],
+      "rarest-jungle": [
+        "#rarearoids",
+        "#anthurium",
+        "#velvetanthurium",
+        "#unicornplant",
+        "#aroidsofinstagram"
+      ],
       "velvet-anthurium": [
         "#anthurium",
         "#velvetanthurium",

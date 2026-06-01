@@ -175,11 +175,12 @@ function renderTiles(){
   const totalLikes = act.reduce((s,p)=>s+(p.metrics.likes||0),0);
   const avg = act.length ? Math.round(totalLikes/act.length) : 0;
   const posted = POSTS.map(view).filter(p=>p.status==="posted").length;
+  const authored = POSTS.filter(p=>p.status!=="skeleton").length;
   document.getElementById("tiles").innerHTML = `
     <div class="tile"><div class="k">Followers</div><div class="v green"><input id="followers" type="number" min="0" value="${STATE.followers||0}"></div></div>
     <div class="tile"><div class="k">Posts live</div><div class="v">${posted}<span style="font-size:1rem;color:var(--faint)"> / ${POSTS.length}</span></div></div>
     <div class="tile"><div class="k">Avg likes</div><div class="v green">${avg}</div></div>
-    <div class="tile"><div class="k">Authored</div><div class="v">15<span style="font-size:1rem;color:var(--faint)"> intro</span></div></div>
+    <div class="tile"><div class="k">Authored</div><div class="v">${authored}<span style="font-size:1rem;color:var(--faint)"> written</span></div></div>
     <div class="tile"><div class="k">Top branch</div><div class="v" style="font-size:1.05rem" id="topBranch">—</div></div>`;
   document.getElementById("followers").addEventListener("change", e=>{ STATE.followers=+e.target.value||0; save(); });
 }
@@ -239,7 +240,7 @@ function renderRecs(){
         recs.push(["🔁", `Day ${a.day} (<b>${wb?wb.label:a.branch}</b>) crushed day ${b.day} — ${sa} vs ${sb}. Walk further down the day-${a.day} path before abandoning it.`]); break; }
     }
     const tried = new Set(stats.map(s=>s.branch));
-    const untried = Object.keys(BR.branches).filter(b=>!tried.has(b) && BR.branches[b].phase==="intro");
+    const untried = Object.keys(BR.branches).filter(b=>!tried.has(b) && ["welcome","showcase"].includes(BR.branches[b].phase));
     if(untried.length){ const ub=BR.branches[untried[0]]; recs.push(["🧪", `Keep exploring: <b>${ub.label}</b> hasn't been tested yet. Slot one in so a sleeper hit isn't missed.`]); }
   }
   document.getElementById("recs").innerHTML = recs.map(r=>`<div class="rec"><span class="ic">${r[0]}</span><span>${r[1]}</span></div>`).join("");
