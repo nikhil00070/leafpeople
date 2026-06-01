@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-01",
-  "count": 89,
+  "count": 90,
   "items": [
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
@@ -900,6 +900,19 @@
       "url": "https://leafpeople.app/field-guide/homalomena-under-collected",
       "data_url": "https://leafpeople.app/field-guide/homalomena-under-collected/_data.json",
       "image": "https://leafpeople.app/images/source/stock/homalomena-under-collected-hero.jpg"
+    },
+    {
+      "id": "field-guide/ctenanthe-never-never",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "ctenanthe-never-never",
+      "title": "Ctenanthe and the Never Never Plant: The Prayer-Plant Cousin That Actually Lives",
+      "category": "Ctenanthe",
+      "description": "A field guide to Ctenanthe lubbersiana, the Never Never plant, and three more prayer-plant relatives that won't punish a missed watering.",
+      "date": "2026-05-12",
+      "url": "https://leafpeople.app/field-guide/ctenanthe-never-never",
+      "data_url": "https://leafpeople.app/field-guide/ctenanthe-never-never/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/ctenanthe-never-never-hero.jpg"
     },
     {
       "id": "the-leaf/photographing-collector-plants",
