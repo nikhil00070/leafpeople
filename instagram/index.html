@@ -150,12 +150,34 @@ function ps(id){ STATE.posts[id] = STATE.posts[id] || {}; return STATE.posts[id]
 // merge a post's authored data with any local overrides (chosen image + metrics + status)
 function view(p){
   const o = STATE.posts[p.id] || {};
-  const pool = p.pool || [];
-  const imgIdx = Number.isInteger(o.imgIdx) ? o.imgIdx : 0;
-  const image = pool.length ? pool[((imgIdx%pool.length)+pool.length)%pool.length] : (p.image||"");
+  const image = o.img || p.image || "";
   const metrics = Object.assign({}, p.metrics, o.metrics||{});
   const status = o.status || p.status;
   return { ...p, image, metrics, status };
+}
+
+// ---- image library + refresh options (global exclusivity) ----
+let LIB = [];
+function metaFor(src){ return LIB.find(e=>e.src===src) || null; }
+function libByBranch(branch){ return LIB.filter(e=>(e.branches||[]).includes(branch)); }
+// images currently CHOSEN by other posts — these are off-limits as options here
+function chosenElsewhere(id){
+  const s = new Set();
+  POSTS.forEach(p=>{ if(p.id===id) return; const img = view(p).image; if(img) s.add(img); });
+  return s;
+}
+// up to 10 options: this post's current image first, then on-branch candidates not
+// chosen by any other post. (Listing an option doesn't consume it — only choosing does.)
+function optionsFor(p){
+  const cur = view(p).image;
+  const taken = chosenElsewhere(p.id);
+  const opts = cur ? [cur] : [];
+  for(const e of libByBranch(p.branch)){
+    if(opts.length >= 10) break;
+    if(e.src === cur || taken.has(e.src) || opts.includes(e.src)) continue;
+    opts.push(e.src);
+  }
+  return opts;
 }
 function score(m){ return (m.likes||0)*WEIGHTS.likes + (m.comments||0)*WEIGHTS.comments + (m.saves||0)*WEIGHTS.saves + (m.follows||0)*WEIGHTS.follows; }
 
@@ -288,8 +310,15 @@ function openModal(id){
   const b = BR.branches[p.branch] || {color:"#888",label:p.branch,intent:""};
   const d = new Date(p.date+"T00:00:00");
   const isSkel = p.status==="skeleton";
+  const opts = optionsFor(raw);
+  const meta = metaFor(p.image);
   const imgHtml = p.image ? `<img class="ig-img" src="${p.image}">` : `<div class="ig-img skel">skeleton — generate image when ready</div>`;
-  const poolBtn = (raw.pool&&raw.pool.length>1) ? `<button class="refresh" onclick="refreshImg()">↻ refresh image (${raw.pool.length} in pool)</button>` : "";
+  const poolBtn = (opts.length>1)
+    ? `<button class="refresh" onclick="refreshImg()">↻ refresh image · ${opts.length} option${opts.length>1?'s':''}</button>`
+    : (p.image ? `<div class="refresh" style="cursor:default;opacity:.55">only option left in this branch</div>` : "");
+  const credit = meta ? `<div style="font-size:.66rem;color:#8a8a8a;padding:.15rem .2rem">${
+      meta.kind==='stock' ? '📷 '+(meta.credit||'iNaturalist (CC BY)')+' — add this credit when you post'
+      : (meta.kind==='appui' ? '📱 app screenshot (yours)' : '🌿 your photo')}</div>` : "";
   const m = p.metrics;
   document.getElementById("modal").innerHTML = `
     <div class="left">
@@ -301,6 +330,7 @@ function openModal(id){
         <div class="ig-cap"><b>${BR.handle||"leafpeople.app"}</b> ${isSkel?'<i style="color:#777">caption to be written</i>':fmtCap(p)}</div>
       </div>
       ${poolBtn}
+      ${credit}
     </div>
     <div class="right">
       <span class="pill" style="background:${b.color}22;color:${b.color}">${b.label}</span>
@@ -332,14 +362,19 @@ function closeModal(){ document.getElementById("overlay").classList.remove("open
 document.getElementById("overlay").addEventListener("click", e=>{ if(e.target.id==="overlay") closeModal(); });
 
 function refreshImg(){
-  const raw = POSTS.find(p=>p.id===CUR); if(!raw.pool||raw.pool.length<2) return;
-  const o = ps(CUR); o.imgIdx = ((Number.isInteger(o.imgIdx)?o.imgIdx:0)+1) % raw.pool.length; save();
+  const raw = POSTS.find(p=>p.id===CUR);
+  const opts = optionsFor(raw); if(opts.length<2) return;
+  const cur = view(raw).image;
+  const idx = Math.max(0, opts.indexOf(cur));
+  const o = ps(CUR); o.img = opts[(idx+1) % opts.length]; save();
   openModal(CUR); rerenderCalOnly();
 }
 function togglePosted(id){ const o=ps(id); const cur=o.status||POSTS.find(p=>p.id===id).status; o.status = cur==="posted"?"draft":"posted"; save(); openModal(id); rerender(); }
 function copyCaption(id){
   const p = view(POSTS.find(x=>x.id===id));
-  const text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
+  let text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
+  const meta = metaFor(p.image);
+  if(meta && meta.kind==="stock" && meta.credit) text += "\n\n📷 " + meta.credit;
   navigator.clipboard?.writeText(text);
   const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ copied"; setTimeout(()=>c.textContent="",1500); }
 }
@@ -350,9 +385,10 @@ function rerender(){ renderTiles(); renderLeaderboard(); renderRecs(); renderCal
 (async function(){
   STATE = load();
   const bust = "?t="+Date.now();
-  [POSTS, BR] = await Promise.all([
+  [POSTS, BR, LIB] = await Promise.all([
     fetch("/instagram/posts.json"+bust,{cache:"no-store"}).then(r=>r.json()),
     fetch("/instagram/branches.json"+bust,{cache:"no-store"}).then(r=>r.json()),
+    fetch("/instagram/library.json"+bust,{cache:"no-store"}).then(r=>r.json()),
   ]);
   renderTiles(); renderLeaderboard(); renderRecs(); renderGoals(); renderCal();
 })();
