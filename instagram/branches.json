@@ -1,0 +1,179 @@
+{
+  "handle": "leafpeople.app",
+  "site": "leafpeople.app",
+  "phases": {
+    "intro": "Days 1-15 \u00b7 Beauty & identity \u2014 earn the follow.",
+    "concept": "Days 16-35 \u00b7 Tie the beauty to what Leaf People does.",
+    "convert": "Days 36-60 \u00b7 Drive to articles, site & installs."
+  },
+  "branches": {
+    "velvet-anthurium": {
+      "phase": "intro",
+      "color": "#7c5cff",
+      "label": "Velvet Anthuriums",
+      "intent": "The hero look \u2014 dark, suede, dramatic. The plant that stops the scroll."
+    },
+    "rainforest-beauty": {
+      "phase": "intro",
+      "color": "#2fae6b",
+      "label": "Rainforest Beauty",
+      "intent": "Understory mood, light, lush foliage. Aspiration & calm."
+    },
+    "leaf-texture": {
+      "phase": "intro",
+      "color": "#d98a3a",
+      "label": "Leaf Texture",
+      "intent": "Macro veining, iridescence, crystalline surfaces. The 'how is that real' shot."
+    },
+    "rarity-value": {
+      "phase": "intro",
+      "color": "#e0556d",
+      "label": "Rarity & Value",
+      "intent": "The $400-$12k stories. Desire, scarcity, the hunt."
+    },
+    "collector-culture": {
+      "phase": "intro",
+      "color": "#46a7e0",
+      "label": "Collector Culture",
+      "intent": "The people & the obsession. Belonging."
+    },
+    "app-identify": {
+      "phase": "concept",
+      "color": "#5bd17a",
+      "label": "App \u00b7 Identify",
+      "intent": "Name any rare aroid from a leaf \u2014 the head-to-head proof."
+    },
+    "app-track-care": {
+      "phase": "concept",
+      "color": "#46c0c0",
+      "label": "App \u00b7 Track & Care",
+      "intent": "Care tracker, reminders, regional guidance."
+    },
+    "app-learn": {
+      "phase": "concept",
+      "color": "#8fb04a",
+      "label": "App \u00b7 Learn",
+      "intent": "Field guide & Understory deep-dives in the app."
+    },
+    "app-collect": {
+      "phase": "concept",
+      "color": "#c08a46",
+      "label": "App \u00b7 Collect",
+      "intent": "Collection log + the collector's marketplace."
+    },
+    "article-fieldguide": {
+      "phase": "convert",
+      "color": "#9a7bd1",
+      "label": "Article \u00b7 Field Guide",
+      "intent": "Species spotlight -> 'read the full guide, link in bio'."
+    },
+    "article-understory": {
+      "phase": "convert",
+      "color": "#d17b9a",
+      "label": "Article \u00b7 Understory",
+      "intent": "Story/culture spotlight -> 'read it, link in bio'."
+    },
+    "app-cta": {
+      "phase": "convert",
+      "color": "#3ec98a",
+      "label": "App \u00b7 Get it",
+      "intent": "Direct install CTA, 7-day trial, $0.99/mo."
+    },
+    "community-ugc": {
+      "phase": "convert",
+      "color": "#e0a13a",
+      "label": "Community / UGC",
+      "intent": "Prompt followers to share + tag; reshare the best."
+    }
+  },
+  "goals": [
+    {
+      "weeks": "Days 1-14",
+      "theme": "Establish the look & find the winning intro branch",
+      "followers": 150,
+      "avg_likes": 40,
+      "extra": "Identify the top-performing intro branch by day 14."
+    },
+    {
+      "weeks": "Days 15-28",
+      "theme": "Bridge beauty -> the app",
+      "followers": 400,
+      "avg_likes": 80,
+      "extra": "50+ bio-link clicks; double down on the proven branch."
+    },
+    {
+      "weeks": "Days 29-42",
+      "theme": "Concept posts turn lookers into learners",
+      "followers": 800,
+      "avg_likes": 120,
+      "extra": "150+ link clicks; first attributed installs."
+    },
+    {
+      "weeks": "Days 43-56",
+      "theme": "Article tie-ins drive the site & app",
+      "followers": 1500,
+      "avg_likes": 180,
+      "extra": "300+ clicks; 30+ attributed installs."
+    },
+    {
+      "weeks": "Days 57-60+",
+      "theme": "Rolling funnel \u2014 exploit winners, keep exploring",
+      "followers": 2000,
+      "avg_likes": 220,
+      "extra": "Self-sustaining: each posted day spawns a fresh skeleton."
+    }
+  ],
+  "hashtagTiers": {
+    "brand": [
+      "#leafpeople",
+      "#leafpeopleapp"
+    ],
+    "discovery": [
+      "#plantsofinstagram",
+      "#rareplants",
+      "#aroidaddicts",
+      "#foliage",
+      "#houseplantsofinstagram",
+      "#indoorjungle",
+      "#botanical",
+      "#plantcollector"
+    ],
+    "niche": {
+      "velvet-anthurium": [
+        "#anthurium",
+        "#velvetanthurium",
+        "#rarearoids",
+        "#aroidsofinstagram",
+        "#anthuriumlove"
+      ],
+      "rainforest-beauty": [
+        "#rainforest",
+        "#understory",
+        "#junglevibes",
+        "#tropicalplants",
+        "#greenery"
+      ],
+      "leaf-texture": [
+        "#leafporn",
+        "#venation",
+        "#botanicaldetail",
+        "#macrophotography",
+        "#foliagelove"
+      ],
+      "rarity-value": [
+        "#rareplants",
+        "#variegata",
+        "#plantcollector",
+        "#aroidcollector",
+        "#unicornplant"
+      ],
+      "collector-culture": [
+        "#plantcommunity",
+        "#planthobby",
+        "#plantpeople",
+        "#aroidcollector",
+        "#planthoarder"
+      ]
+    }
+  }
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Instagram funnel — Leaf People</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0b0f0d; --card:#141a16; --card2:#0f1411; --border:#1f2a23; --text:#e8efe9; --dim:#b8c8bb; --faint:#8da38f; --green:#4ade80; --orange:#f97316; --red:#ef4444; --blue:#60a5fa; }
+* { box-sizing: border-box; }
+body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); margin:0; padding:2rem; }
+.wrap { max-width:1300px; margin:0 auto; }
+a { color:var(--blue); }
+h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin:0; letter-spacing:-.02em; }
+.note { color:var(--faint); font-size:.9rem; max-width:74ch; line-height:1.5; margin:.5rem 0 0; }
+.eyebrow { font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin:2.2rem 0 .9rem; }
+
+/* dashboard */
+.tiles { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; }
+.tile { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1.1rem 1.2rem; }
+.tile .k { font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); }
+.tile .v { font-family:'Geologica',sans-serif; font-weight:800; font-size:1.9rem; line-height:1.1; margin-top:.3rem; }
+.tile .v.green { color:var(--green); }
+.tile input { width:5.5rem; background:var(--card2); border:1px solid var(--border); color:var(--text); border-radius:6px; padding:.2rem .4rem; font:inherit; font-size:1.4rem; font-weight:800; }
+.cols { display:grid; grid-template-columns:1.2fr 1fr; gap:1.2rem; margin-top:1.2rem; }
+.panel { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1.2rem 1.3rem; }
+.panel h3 { font-family:'Geologica',sans-serif; font-size:1rem; margin:0 0 .9rem; }
+
+/* branch leaderboard */
+.lb-row { display:grid; grid-template-columns:14px 1fr auto; gap:.7rem; align-items:center; padding:.5rem 0; border-bottom:1px solid var(--border); }
+.lb-row:last-child { border-bottom:0; }
+.dot { width:12px; height:12px; border-radius:50%; }
+.lb-name { font-size:.9rem; }
+.lb-name small { display:block; color:var(--faint); font-size:.72rem; }
+.lb-score { font-family:'Geologica',sans-serif; font-weight:700; font-size:.95rem; text-align:right; }
+.lb-hint { font-size:.68rem; padding:1px 7px; border-radius:99px; margin-left:.5rem; white-space:nowrap; }
+.hint-up { background:rgba(74,222,128,.14); color:var(--green); }
+.hint-down { background:rgba(239,68,68,.14); color:#fca5a5; }
+.hint-new { background:rgba(96,165,250,.14); color:var(--blue); }
+
+/* recommendations */
+.rec { font-size:.88rem; line-height:1.5; color:var(--dim); padding:.6rem 0; border-bottom:1px solid var(--border); display:flex; gap:.6rem; }
+.rec:last-child { border-bottom:0; }
+.rec .ic { flex:0 0 auto; }
+
+/* goals */
+.goal { padding:.6rem 0; border-bottom:1px solid var(--border); font-size:.85rem; }
+.goal:last-child { border-bottom:0; }
+.goal .gh { display:flex; justify-content:space-between; gap:1rem; }
+.goal .gw { font-weight:700; }
+.goal .gt { color:var(--faint); }
+.goal .gx { color:var(--dim); margin-top:.2rem; line-height:1.45; }
+
+/* calendar */
+.cal-head { display:grid; grid-template-columns:repeat(7,1fr); gap:.55rem; margin-bottom:.5rem; }
+.cal-head span { font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); text-align:center; }
+.cal { display:grid; grid-template-columns:repeat(7,1fr); gap:.55rem; }
+.cell { background:var(--card); border:1px solid var(--border); border-radius:10px; min-height:118px; padding:.45rem; cursor:pointer; position:relative; overflow:hidden; display:flex; flex-direction:column; gap:.3rem; transition:transform .12s, border-color .12s; }
+.cell:hover { transform:translateY(-2px); border-color:var(--faint); }
+.cell.skeleton { opacity:.62; border-style:dashed; }
+.cell .chd { display:flex; justify-content:space-between; align-items:center; font-size:.66rem; color:var(--faint); }
+.cell .daynum { font-weight:800; color:var(--text); font-size:.78rem; }
+.cell .thumb { flex:1; border-radius:6px; background:var(--card2) center/cover no-repeat; min-height:50px; }
+.cell .branchbar { height:4px; border-radius:3px; }
+.cell .meta { display:flex; justify-content:space-between; align-items:center; font-size:.66rem; color:var(--dim); }
+.cell .st { font-size:.6rem; padding:0 5px; border-radius:99px; background:var(--border); color:var(--dim); }
+.cell .st.posted { background:rgba(74,222,128,.16); color:var(--green); }
+.cell .st.draft { background:rgba(96,165,250,.14); color:var(--blue); }
+.month-tag { grid-column:1/-1; font-family:'Geologica',sans-serif; font-weight:700; color:var(--faint); font-size:.85rem; margin:.8rem 0 .1rem; letter-spacing:.04em; }
+
+/* modal */
+.overlay { position:fixed; inset:0; background:rgba(0,0,0,.72); display:none; align-items:flex-start; justify-content:center; padding:2.5rem 1rem; z-index:50; overflow:auto; }
+.overlay.open { display:flex; }
+.modal { background:var(--card); border:1px solid var(--border); border-radius:16px; width:min(880px,100%); display:grid; grid-template-columns:360px 1fr; overflow:hidden; }
+.modal .left { background:#000; padding:1rem; display:flex; flex-direction:column; gap:.7rem; }
+/* IG post mockup */
+.ig { background:#0c0c0c; border:1px solid #222; border-radius:10px; overflow:hidden; }
+.ig-top { display:flex; align-items:center; gap:.55rem; padding:.6rem .7rem; }
+.ig-top img { width:30px; height:30px; border-radius:50%; }
+.ig-top b { font-size:.82rem; }
+.ig-top .more { margin-left:auto; color:#888; }
+.ig-img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#111; }
+.ig-img.skel { display:flex; align-items:center; justify-content:center; color:#555; font-size:.8rem; }
+.ig-acts { display:flex; gap:.8rem; padding:.6rem .7rem .2rem; font-size:1.1rem; color:#eee; }
+.ig-likes { padding:0 .7rem; font-size:.8rem; font-weight:700; }
+.ig-cap { padding:.3rem .7rem .8rem; font-size:.8rem; line-height:1.45; color:#ddd; white-space:pre-wrap; }
+.ig-cap .tag { color:#6ab7ff; }
+.refresh { background:#1b241d; border:1px solid var(--border); color:var(--dim); border-radius:8px; padding:.5rem; font:inherit; font-size:.78rem; cursor:pointer; }
+.refresh:hover { background:#22302a; color:var(--text); }
+.modal .right { padding:1.4rem 1.5rem; }
+.modal .right h2 { font-family:'Geologica',sans-serif; font-size:1.2rem; margin:.1rem 0 .2rem; }
+.pill { display:inline-block; font-size:.66rem; padding:2px 9px; border-radius:99px; font-weight:700; letter-spacing:.04em; }
+.mfield { margin-top:1rem; }
+.mfield label { font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); display:block; margin-bottom:.3rem; }
+.metrics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; }
+.metrics-grid input { width:100%; background:var(--card2); border:1px solid var(--border); color:var(--text); border-radius:6px; padding:.4rem .5rem; font:inherit; }
+.btnrow { display:flex; gap:.6rem; margin-top:1.3rem; flex-wrap:wrap; }
+.btn { padding:.55rem 1rem; border-radius:8px; font-weight:700; font-size:.82rem; cursor:pointer; border:1px solid transparent; font-family:inherit; }
+.btn-green { background:var(--green); color:#06140c; }
+.btn-ghost { background:transparent; color:var(--dim); border-color:var(--border); }
+.btn-ghost:hover { background:var(--border); }
+.tagchips { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.4rem; }
+.chip { font-size:.7rem; background:var(--card2); border:1px solid var(--border); color:var(--dim); padding:1px 7px; border-radius:99px; }
+.close { position:absolute; top:1.2rem; right:1.4rem; color:#fff; font-size:1.6rem; cursor:pointer; z-index:60; }
+.copied { color:var(--green); font-size:.75rem; margin-left:.4rem; }
+@media (max-width:980px){ .tiles{grid-template-columns:repeat(2,1fr)} .cols{grid-template-columns:1fr} .modal{grid-template-columns:1fr} }
+@media (max-width:680px){ .cal,.cal-head{grid-template-columns:repeat(2,1fr)} .cal-head{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Instagram funnel</h1>
+  <p class="note">Your 60-day growth calendar. Days 1–15 are written intro posts; days 16–60 are skeletons the learning loop re-biases as real numbers come in. <b>Phase 1 is manual:</b> open a day, hit <b>Copy caption</b>, post it on Instagram, then type the likes/comments back in here — the dashboard and branch recommendations update live. Don't like an image? Hit <b>↻ refresh</b> to cycle the candidate pool. Private page (noindex).</p>
+</header>
+
+<div class="eyebrow">Dashboard</div>
+<div class="tiles" id="tiles"></div>
+<div class="cols">
+  <div class="panel"><h3>Branch leaderboard <span style="color:var(--faint);font-weight:400;font-size:.75rem">— what's working</span></h3><div id="leaderboard"></div></div>
+  <div class="panel"><h3>Recommendations</h3><div id="recs"></div></div>
+</div>
+<div class="cols">
+  <div class="panel" style="grid-column:1/-1"><h3>Fortnightly goals</h3><div id="goals"></div></div>
+</div>
+
+<div class="eyebrow">Content calendar — 60 days</div>
+<div class="cal-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+<div class="cal" id="cal"></div>
+</div>
+
+<div class="overlay" id="overlay">
+  <span class="close" onclick="closeModal()">×</span>
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+const LS = "lp_ig_v1";
+const WEIGHTS = { likes:1, comments:4, saves:6, follows:10 };
+let POSTS=[], BR={}, STATE={ followers:0, posts:{} };
+
+function load(){ try{ return JSON.parse(localStorage.getItem(LS)) || {followers:0,posts:{}} }catch{ return {followers:0,posts:{}} } }
+function save(){ localStorage.setItem(LS, JSON.stringify(STATE)); }
+function ps(id){ STATE.posts[id] = STATE.posts[id] || {}; return STATE.posts[id]; }
+
+// merge a post's authored data with any local overrides (chosen image + metrics + status)
+function view(p){
+  const o = STATE.posts[p.id] || {};
+  const pool = p.pool || [];
+  const imgIdx = Number.isInteger(o.imgIdx) ? o.imgIdx : 0;
+  const image = pool.length ? pool[((imgIdx%pool.length)+pool.length)%pool.length] : (p.image||"");
+  const metrics = Object.assign({}, p.metrics, o.metrics||{});
+  const status = o.status || p.status;
+  return { ...p, image, metrics, status };
+}
+function score(m){ return (m.likes||0)*WEIGHTS.likes + (m.comments||0)*WEIGHTS.comments + (m.saves||0)*WEIGHTS.saves + (m.follows||0)*WEIGHTS.follows; }
+
+function esc(s){ return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+function fmtCap(p){
+  let t = esc(p.caption);
+  const tagline = (p.hashtags||[]).join(" ");
+  if(tagline) t += "\n\n" + esc(p.cta||"") + "\n" + esc(tagline);
+  return t.replace(/(#[A-Za-z0-9_]+)/g,'<span class="tag">$1</span>');
+}
+
+/* ---------- dashboard ---------- */
+function activePosts(){ return POSTS.map(view).filter(p => p.status==="posted" || score(p.metrics)>0); }
+
+function renderTiles(){
+  const act = activePosts();
+  const totalLikes = act.reduce((s,p)=>s+(p.metrics.likes||0),0);
+  const avg = act.length ? Math.round(totalLikes/act.length) : 0;
+  const posted = POSTS.map(view).filter(p=>p.status==="posted").length;
+  document.getElementById("tiles").innerHTML = `
+    <div class="tile"><div class="k">Followers</div><div class="v green"><input id="followers" type="number" min="0" value="${STATE.followers||0}"></div></div>
+    <div class="tile"><div class="k">Posts live</div><div class="v">${posted}<span style="font-size:1rem;color:var(--faint)"> / ${POSTS.length}</span></div></div>
+    <div class="tile"><div class="k">Avg likes</div><div class="v green">${avg}</div></div>
+    <div class="tile"><div class="k">Authored</div><div class="v">15<span style="font-size:1rem;color:var(--faint)"> intro</span></div></div>
+    <div class="tile"><div class="k">Top branch</div><div class="v" style="font-size:1.05rem" id="topBranch">—</div></div>`;
+  document.getElementById("followers").addEventListener("change", e=>{ STATE.followers=+e.target.value||0; save(); });
+}
+
+// avg engagement score per branch, plus a simple cooling check (latest posted < 45% of branch peak)
+function branchStats(){
+  const by = {};
+  POSTS.map(view).forEach(p=>{
+    const s = score(p.metrics);
+    if(p.status!=="posted" && s===0) return;
+    (by[p.branch] = by[p.branch] || []).push({ day:p.day, s });
+  });
+  return Object.entries(by).map(([b,arr])=>{
+    arr.sort((a,c)=>a.day-c.day);
+    const avg = arr.reduce((t,x)=>t+x.s,0)/arr.length;
+    const peak = Math.max(...arr.map(x=>x.s));
+    const latest = arr[arr.length-1].s;
+    const cooling = arr.length>=2 && latest < peak*0.45;
+    return { branch:b, avg:Math.round(avg), n:arr.length, cooling, latest, peak };
+  }).sort((a,c)=>c.avg-a.avg);
+}
+
+function renderLeaderboard(){
+  const stats = branchStats();
+  const el = document.getElementById("leaderboard");
+  if(!stats.length){ el.innerHTML = `<p style="color:var(--faint);font-size:.85rem;margin:.2rem 0">No numbers yet. Post a day, enter its likes, and branches rank here automatically.</p>`; return; }
+  el.innerHTML = stats.map((s,i)=>{
+    const b = BR.branches[s.branch] || {color:"#888",label:s.branch,intent:""};
+    let hint = "";
+    if(i===0) hint = `<span class="lb-hint hint-up">↑ double down</span>`;
+    else if(s.cooling) hint = `<span class="lb-hint hint-down">↓ cooling</span>`;
+    return `<div class="lb-row"><span class="dot" style="background:${b.color}"></span>
+      <span class="lb-name">${b.label}${hint}<small>${b.intent||""}</small></span>
+      <span class="lb-score">${s.avg}<br><small style="color:var(--faint);font-weight:400">${s.n} post${s.n>1?'s':''}</small></span></div>`;
+  }).join("");
+  const top = stats[0]; const tb = document.getElementById("topBranch");
+  if(top && tb){ const b=BR.branches[top.branch]; tb.textContent = b? b.label : top.branch; tb.style.color = b? b.color : "var(--text)"; }
+}
+
+// recommendations = the bandit's spoken advice + day-over-day swing detection
+function renderRecs(){
+  const stats = branchStats();
+  const recs = [];
+  if(!stats.length){
+    recs.push(["💡","Post the day-1 intro, enter its likes, and the learning loop switches on. Until then this is your plan, not your data."]);
+  } else {
+    const top = stats[0]; const tb = BR.branches[top.branch];
+    const openSlots = POSTS.map(view).filter(p=>p.status==="skeleton" && BR.branches[p.branch] && BR.branches[p.branch].phase===tb.phase).slice(0,3);
+    recs.push(["🏆", `<b>${tb.label}</b> is your strongest branch (avg score ${top.avg}). Bias the next open ${tb.phase} slots toward it — repurpose the angle that worked.`]);
+    const cooling = stats.find(s=>s.cooling);
+    if(cooling){ const cb=BR.branches[cooling.branch]; recs.push(["📉", `<b>${cb.label}</b> is cooling (peaked at ${cooling.peak}, last post ${cooling.latest}). That vein looks tapped — rotate to the next branch.`]); }
+    // biggest day-over-day swing, like the user's "day 5 vs day 6" example
+    const posted = POSTS.map(view).filter(p=>p.status==="posted").sort((a,b)=>a.day-b.day);
+    for(let i=1;i<posted.length;i++){
+      const a=posted[i-1], b=posted[i]; const sa=score(a.metrics), sb=score(b.metrics);
+      if(sa>0 && sb>0 && sa>=sb*4){ const wb=BR.branches[a.branch];
+        recs.push(["🔁", `Day ${a.day} (<b>${wb?wb.label:a.branch}</b>) crushed day ${b.day} — ${sa} vs ${sb}. Walk further down the day-${a.day} path before abandoning it.`]); break; }
+    }
+    const tried = new Set(stats.map(s=>s.branch));
+    const untried = Object.keys(BR.branches).filter(b=>!tried.has(b) && BR.branches[b].phase==="intro");
+    if(untried.length){ const ub=BR.branches[untried[0]]; recs.push(["🧪", `Keep exploring: <b>${ub.label}</b> hasn't been tested yet. Slot one in so a sleeper hit isn't missed.`]); }
+  }
+  document.getElementById("recs").innerHTML = recs.map(r=>`<div class="rec"><span class="ic">${r[0]}</span><span>${r[1]}</span></div>`).join("");
+}
+
+function renderGoals(){
+  document.getElementById("goals").innerHTML = (BR.goals||[]).map(g=>`
+    <div class="goal"><div class="gh"><span class="gw">${g.weeks} · ${g.theme}</span>
+      <span class="gt">${g.followers.toLocaleString()} followers · ${g.avg_likes} avg likes</span></div>
+      <div class="gx">${g.extra}</div></div>`).join("");
+}
+
+/* ---------- calendar ---------- */
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function renderCal(){
+  const cal = document.getElementById("cal");
+  let html = ""; let lastMonth = -1;
+  POSTS.forEach((raw,idx)=>{
+    const p = view(raw);
+    const d = new Date(p.date+"T00:00:00");
+    const month = d.getMonth();
+    if(month!==lastMonth){ html += `<div class="month-tag">${MON[month]} ${d.getFullYear()}</div>`; lastMonth=month; }
+    if(idx===0 || month!==new Date(POSTS[idx-1].date+"T00:00:00").getMonth()){
+      // align first cell of each month block to its weekday (Mon=0)
+      const wd = (d.getDay()+6)%7;
+      if(wd>0) html += `<div style="grid-column:span ${wd}"></div>`;
+    }
+    const b = BR.branches[p.branch] || {color:"#888",label:p.branch};
+    const lk = p.metrics.likes||0;
+    const thumb = p.image ? `style="background-image:url('${p.image}')"` : "";
+    html += `<div class="cell ${p.status==='skeleton'?'skeleton':''}" data-id="${p.id}" onclick="openModal('${p.id}')">
+      <div class="chd"><span class="daynum">Day ${p.day}</span><span>${MON[month]} ${d.getDate()}</span></div>
+      <div class="branchbar" style="background:${b.color}"></div>
+      <div class="thumb" ${thumb}></div>
+      <div class="meta"><span class="st ${p.status}">${p.status}</span><span>${lk?('♥ '+lk):''}</span></div>
+    </div>`;
+  });
+  cal.innerHTML = html;
+}
+
+/* ---------- modal ---------- */
+let CUR=null;
+function openModal(id){
+  CUR=id; const raw = POSTS.find(p=>p.id===id); const p = view(raw);
+  const b = BR.branches[p.branch] || {color:"#888",label:p.branch,intent:""};
+  const d = new Date(p.date+"T00:00:00");
+  const isSkel = p.status==="skeleton";
+  const imgHtml = p.image ? `<img class="ig-img" src="${p.image}">` : `<div class="ig-img skel">skeleton — generate image when ready</div>`;
+  const poolBtn = (raw.pool&&raw.pool.length>1) ? `<button class="refresh" onclick="refreshImg()">↻ refresh image (${raw.pool.length} in pool)</button>` : "";
+  const m = p.metrics;
+  document.getElementById("modal").innerHTML = `
+    <div class="left">
+      <div class="ig">
+        <div class="ig-top"><img src="/images/icon-64.png"><b>${BR.handle||"leafpeople.app"}</b><span class="more">•••</span></div>
+        ${imgHtml}
+        <div class="ig-acts"><span>♥</span><span>💬</span><span>✈</span><span style="margin-left:auto">🔖</span></div>
+        <div class="ig-likes">${(m.likes||0).toLocaleString()} likes</div>
+        <div class="ig-cap"><b>${BR.handle||"leafpeople.app"}</b> ${isSkel?'<i style="color:#777">caption to be written</i>':fmtCap(p)}</div>
+      </div>
+      ${poolBtn}
+    </div>
+    <div class="right">
+      <span class="pill" style="background:${b.color}22;color:${b.color}">${b.label}</span>
+      <span class="pill" style="background:var(--border);color:var(--dim);margin-left:.3rem">${p.phase}</span>
+      <h2>Day ${p.day} · ${MON[d.getMonth()]} ${d.getDate()}</h2>
+      <div style="color:var(--faint);font-size:.82rem">${p.title||""} — <span style="color:var(--dim)">${b.intent||""}</span></div>
+      ${isSkel ? `<p style="color:var(--faint);font-size:.85rem;margin-top:1rem">Skeleton slot. Branch <b>${b.label}</b> is assigned; caption + image get generated when this day comes up (or sooner if the learning loop promotes this branch).</p>`
+      : `<div class="mfield"><label>Hashtags (${(p.hashtags||[]).length})</label><div class="tagchips">${(p.hashtags||[]).map(t=>`<span class="chip">${t}</span>`).join("")}</div></div>`}
+      <div class="mfield"><label>Metrics — type these in after you post <span id="copied"></span></label>
+        <div class="metrics-grid">
+          <div><div style="font-size:.68rem;color:var(--faint)">Likes</div><input type="number" min="0" data-m="likes" value="${m.likes||0}"></div>
+          <div><div style="font-size:.68rem;color:var(--faint)">Comments</div><input type="number" min="0" data-m="comments" value="${m.comments||0}"></div>
+          <div><div style="font-size:.68rem;color:var(--faint)">Saves</div><input type="number" min="0" data-m="saves" value="${m.saves||0}"></div>
+          <div><div style="font-size:.68rem;color:var(--faint)">New follows</div><input type="number" min="0" data-m="follows" value="${m.follows||0}"></div>
+          <div><div style="font-size:.68rem;color:var(--faint)">Reach</div><input type="number" min="0" data-m="reach" value="${m.reach||0}"></div>
+        </div>
+      </div>
+      <div class="btnrow">
+        ${isSkel?"":`<button class="btn btn-green" onclick="copyCaption('${p.id}')">Copy caption + tags</button>`}
+        <button class="btn btn-ghost" onclick="togglePosted('${p.id}')">${p.status==="posted"?"↩ Mark not posted":"✓ Mark posted"}</button>
+      </div>
+    </div>`;
+  document.getElementById("modal").querySelectorAll('input[data-m]').forEach(inp=>{
+    inp.addEventListener("change", e=>{ const k=e.target.dataset.m; const o=ps(CUR); o.metrics=o.metrics||{}; o.metrics[k]=+e.target.value||0; save(); rerender(); });
+  });
+  document.getElementById("overlay").classList.add("open");
+}
+function closeModal(){ document.getElementById("overlay").classList.remove("open"); CUR=null; }
+document.getElementById("overlay").addEventListener("click", e=>{ if(e.target.id==="overlay") closeModal(); });
+
+function refreshImg(){
+  const raw = POSTS.find(p=>p.id===CUR); if(!raw.pool||raw.pool.length<2) return;
+  const o = ps(CUR); o.imgIdx = ((Number.isInteger(o.imgIdx)?o.imgIdx:0)+1) % raw.pool.length; save();
+  openModal(CUR); rerenderCalOnly();
+}
+function togglePosted(id){ const o=ps(id); const cur=o.status||POSTS.find(p=>p.id===id).status; o.status = cur==="posted"?"draft":"posted"; save(); openModal(id); rerender(); }
+function copyCaption(id){
+  const p = view(POSTS.find(x=>x.id===id));
+  const text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
+  navigator.clipboard?.writeText(text);
+  const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ copied"; setTimeout(()=>c.textContent="",1500); }
+}
+
+function rerenderCalOnly(){ renderCal(); }
+function rerender(){ renderTiles(); renderLeaderboard(); renderRecs(); renderCal(); }
+
+(async function(){
+  STATE = load();
+  const bust = "?t="+Date.now();
+  [POSTS, BR] = await Promise.all([
+    fetch("/instagram/posts.json"+bust,{cache:"no-store"}).then(r=>r.json()),
+    fetch("/instagram/branches.json"+bust,{cache:"no-store"}).then(r=>r.json()),
+  ]);
+  renderTiles(); renderLeaderboard(); renderRecs(); renderGoals(); renderCal();
+})();
+</script>
+</body>
+</html>
