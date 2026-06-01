@@ -169,14 +169,19 @@ function chosenElsewhere(id){
 }
 // up to 10 options: this post's current image first, then on-branch candidates not
 // chosen by any other post. (Listing an option doesn't consume it — only choosing does.)
+// A STABLE ring of up to 10 options for this post. Order does NOT depend on which one is
+// currently selected (that was the ping-pong bug) — it's purely: on-branch candidates in
+// library order, then top-up from the whole library, excluding images chosen on OTHER posts.
+// The current image is guaranteed to be a member so cycling stays inside one fixed ring.
 function optionsFor(p){
+  const taken = chosenElsewhere(p.id);   // other posts' picks only — current stays eligible
+  const ring = [];
+  const push = list => { for(const e of (list||[])){ if(ring.length>=10) break; if(!e||!e.src) continue; if(taken.has(e.src)||ring.includes(e.src)) continue; ring.push(e.src); } };
+  push(libByBranch(p.branch));
+  if(ring.length < 10) push(LIB);
   const cur = view(p).image;
-  const taken = chosenElsewhere(p.id);
-  const opts = cur ? [cur] : [];
-  const push = list => { for(const e of (list||[])){ if(opts.length>=10) break; if(!e||!e.src) continue; if(e.src===cur||taken.has(e.src)||opts.includes(e.src)) continue; opts.push(e.src); } };
-  push(libByBranch(p.branch));   // on-theme options first
-  if(opts.length < 10) push(LIB); // top up from the whole library so a thin branch never starves
-  return opts;
+  if(cur && !ring.includes(cur)){ if(ring.length >= 10) ring[ring.length-1] = cur; else ring.push(cur); }
+  return ring;
 }
 function score(m){ return (m.likes||0)*WEIGHTS.likes + (m.comments||0)*WEIGHTS.comments + (m.saves||0)*WEIGHTS.saves + (m.follows||0)*WEIGHTS.follows; }
 
@@ -330,7 +335,6 @@ function openModal(id){
       </div>
       ${poolBtn}
       ${credit}
-      <div style="font-size:.6rem;color:#5b6b5e;font-family:ui-monospace,monospace">dbg · LIB ${LIB.length} · branch ${libByBranch(raw.branch).length} · used-elsewhere ${chosenElsewhere(raw.id).size} · opts ${opts.length}</div>
     </div>
     <div class="right">
       <span class="pill" style="background:${b.color}22;color:${b.color}">${b.label}</span>
@@ -363,10 +367,10 @@ document.getElementById("overlay").addEventListener("click", e=>{ if(e.target.id
 
 function refreshImg(){
   const raw = POSTS.find(p=>p.id===CUR);
-  const opts = optionsFor(raw); if(opts.length<2) return;
+  const ring = optionsFor(raw); if(ring.length<2) return;
   const cur = view(raw).image;
-  const idx = Math.max(0, opts.indexOf(cur));
-  const o = ps(CUR); o.img = opts[(idx+1) % opts.length]; save();
+  let i = ring.indexOf(cur); if(i<0) i = 0;
+  const o = ps(CUR); o.img = ring[(i+1) % ring.length]; save();
   openModal(CUR); rerenderCalOnly();
 }
 function togglePosted(id){ const o=ps(id); const cur=o.status||POSTS.find(p=>p.id===id).status; o.status = cur==="posted"?"draft":"posted"; save(); openModal(id); rerender(); }
