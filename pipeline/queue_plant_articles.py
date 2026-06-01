@@ -129,9 +129,8 @@ def main():
         entry = {"category": genus, "slug": slug, "title_hint": story, "status": "queued"}
         hero = PROFILES.get(slug)
         if hero:
-            entry["hero"] = hero                       # app photo as hero (all 68)
-            if "'" in display:                          # cultivar/hybrid — iNat won't have it
-                entry["body_image"] = hero              # use the app photo for the body too
+            entry["hero"] = hero            # app photo as hero (all 68)
+            entry["body_fallback"] = hero   # body prefers free stock; app photo only if none found
         leaf_q.append(entry)
         leaf_have.add(slug); added += 1
 

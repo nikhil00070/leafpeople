@@ -28,6 +28,7 @@ jobs:
       - name: Regenerate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LP_ALLOW_INAT: "1"   # body images may fall back to iNaturalist (free, CC BY)
         run: |
           cd pipeline
           python regenerate.py "${{ inputs.section }}"

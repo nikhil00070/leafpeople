@@ -1,15 +1,5 @@
 [
   {
-    "slug": "anthurium-warocqueanum",
-    "title": "The Queen of the Cloud Forest",
-    "category": "Anthurium",
-    "description": "How Anthurium warocqueanum became the hobby's holy grail — and why keeping a metre of black velvet alive is harder than it looks.",
-    "url": "/the-leaf/anthurium-warocqueanum",
-    "date": "2026-06-01",
-    "thumb": "/images/plants/profiles/anthurium-warocqueanum.jpeg",
-    "status": "pending"
-  },
-  {
     "slug": "repotting-mature-anthuriums",
     "title": "The Long Quiet Hour: Repotting a Mature Anthurium",
     "category": "Field Skills",
@@ -339,7 +329,7 @@
     "description": "On collector burnout, the trough that follows the rare-aroid hunt, and the growers who stop posting without ever quite selling off.",
     "url": "/the-leaf/collector-burnout",
     "date": "2026-05-15",
-    "thumb": "/images/source/p50.jpg",
+    "thumb": "/images/source/stock/collector-burnout-hero.jpg",
     "status": "pending"
   },
   {

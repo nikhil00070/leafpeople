@@ -99,17 +99,20 @@ def main() -> int:
     # iNat can't supply two unique shots, caught at /review.
     import source_images
     imgs = source_images.source_for_article("the-leaf", item["slug"], "Anthurium", article["title"])
-    # Per-item image override: pin a specific hero/body (e.g. the app's own plant-profile
-    # photo) — essential for cultivars/hybrids that iNaturalist (wild observations only)
-    # can't supply. iNat still fills whatever isn't overridden.
+    # Plant stories: pin the app's own plant-profile photo as the hero; let the body image
+    # come from FREE STOCK (Wikimedia / Openverse / iNaturalist). If the sourcer can't find a
+    # usable body (common for cultivars iNat won't have), fall back to the app photo rather
+    # than the placeholder — so no plant story ever lands with a broken second image.
     if item.get("hero"):
         imgs["hero"] = item["hero"]
         imgs["hero_attribution"] = item.get("hero_attribution", "Leaf People")
         imgs.pop("hero_source_id", None)
-    if item.get("body_image"):
-        imgs["body_image"] = item["body_image"]
+    if imgs.get("image_needs_review") and item.get("body_fallback"):
+        imgs["body_image"] = item["body_fallback"]
         imgs["body_image_attribution"] = item.get("body_image_attribution", "Leaf People")
         imgs.pop("body_image_source_id", None)
+        if item.get("hero"):
+            imgs["image_needs_review"] = False  # app hero + app body fallback = two real images
     hero = imgs["hero"]
     body_image = imgs["body_image"]
     html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
