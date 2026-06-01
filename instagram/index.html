@@ -116,6 +116,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 <header>
   <h1>Instagram funnel</h1>
   <p class="note">Your 60-day growth calendar. Days 1–15 are written intro posts; days 16–60 are skeletons the learning loop re-biases as real numbers come in. <b>Phase 1 is manual:</b> open a day, hit <b>Copy caption</b>, post it on Instagram, then type the likes/comments back in here — the dashboard and branch recommendations update live. Don't like an image? Hit <b>↻ refresh</b> to cycle the candidate pool. Private page (noindex).</p>
+  <button onclick="if(confirm('Reset all your image picks, metrics and posted flags?')){localStorage.removeItem(LS);location.reload();}" style="margin-top:.6rem;background:transparent;border:1px solid var(--border);color:var(--faint);border-radius:8px;padding:.4rem .8rem;font:inherit;font-size:.78rem;cursor:pointer">↺ Reset my choices</button>
 </header>
 
 <div class="eyebrow">Dashboard</div>
@@ -172,11 +173,9 @@ function optionsFor(p){
   const cur = view(p).image;
   const taken = chosenElsewhere(p.id);
   const opts = cur ? [cur] : [];
-  for(const e of libByBranch(p.branch)){
-    if(opts.length >= 10) break;
-    if(e.src === cur || taken.has(e.src) || opts.includes(e.src)) continue;
-    opts.push(e.src);
-  }
+  const push = list => { for(const e of (list||[])){ if(opts.length>=10) break; if(!e||!e.src) continue; if(e.src===cur||taken.has(e.src)||opts.includes(e.src)) continue; opts.push(e.src); } };
+  push(libByBranch(p.branch));   // on-theme options first
+  if(opts.length < 10) push(LIB); // top up from the whole library so a thin branch never starves
   return opts;
 }
 function score(m){ return (m.likes||0)*WEIGHTS.likes + (m.comments||0)*WEIGHTS.comments + (m.saves||0)*WEIGHTS.saves + (m.follows||0)*WEIGHTS.follows; }
@@ -331,6 +330,7 @@ function openModal(id){
       </div>
       ${poolBtn}
       ${credit}
+      <div style="font-size:.6rem;color:#5b6b5e;font-family:ui-monospace,monospace">dbg · LIB ${LIB.length} · branch ${libByBranch(raw.branch).length} · used-elsewhere ${chosenElsewhere(raw.id).size} · opts ${opts.length}</div>
     </div>
     <div class="right">
       <span class="pill" style="background:${b.color}22;color:${b.color}">${b.label}</span>
