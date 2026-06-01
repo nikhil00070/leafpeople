@@ -381,8 +381,9 @@
     "category": "Anthurium",
     "slug": "anthurium-warocqueanum",
     "title_hint": "The Queen of the cloud forest: how a metre-long sheet of black velvet from the Colombian Andes became the hobby's holy grail, and the heartbreak of trying to keep her alive on a shelf.",
-    "status": "queued",
-    "hero": "/images/plants/profiles/anthurium-warocqueanum.jpeg"
+    "status": "pending_review",
+    "hero": "/images/plants/profiles/anthurium-warocqueanum.jpeg",
+    "published_at": "2026-06-01"
   },
   {
     "category": "Philodendron",
