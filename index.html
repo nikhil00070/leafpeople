@@ -170,7 +170,7 @@
   .hh-cap.win::before { content: "✓"; color: var(--green); font-weight: 800; }
   .hh-cap.fail::before { content: "✕"; color: #e2725b; font-weight: 800; }
 
-  .hh-others { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 2.4rem; }
+  .hh-others { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; margin-bottom: 2.4rem; }
   .hh-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column; }
   .hh-card img { width: 100%; display: block; border-bottom: 1px solid var(--border); }
   .hh-card .body { padding: 1.1rem 1.2rem 1.3rem; }
@@ -384,7 +384,7 @@
     <div class="hh-stat lose">
       <div class="who">PictureThis</div>
       <div class="big">Wrong plant entirely</div>
-      <div class="note">Mistook a rare cloud-forest anthurium for a fern; labeled everything else "Flamingo-lily" — the grocery-store anthurium.</div>
+      <div class="note">Called one rare anthurium a fern, the queen a caladium, and defaulted the rest to "Flamingo-lily" — the grocery-store anthurium.</div>
       <div class="rank">Worst</div>
     </div>
   </div>
@@ -408,11 +408,19 @@
       </div>
     </div>
     <div class="hh-card">
+      <img src="/images/compare/pt-angel-wings.png" alt="PictureThis misidentifying the queen anthurium as Angel wings, a Caladium">
+      <div class="body">
+        <div class="who">PictureThis</div>
+        <div class="verdict">Queen anthurium → <span class="miss">"Angel wings"</span></div>
+        <p>The prized <i>Anthurium warocqueanum</i> — worth thousands — came back as <i>Caladium lindenii</i>, a different genus entirely. Leaf People: <i>warocqueanum</i>, 99%.</p>
+      </div>
+    </div>
+    <div class="hh-card">
       <img src="/images/compare/pt-flamingo-lily.png" alt="PictureThis labeling a rare anthurium as the common Flamingo-lily">
       <div class="body">
         <div class="who">PictureThis</div>
         <div class="verdict">Everything else → <span class="miss">"Flamingo-lily"</span></div>
-        <p>Rare anthuriums all came back as <i>A. andraeanum</i> — the $15 grocery-store flamingo flower. It knows one anthurium, and that's it.</p>
+        <p>The rest came back as <i>A. andraeanum</i> — the $15 grocery-store flamingo flower. It knows one anthurium, and that's it.</p>
       </div>
     </div>
     <div class="hh-card">
@@ -430,13 +438,13 @@
       <tr><th>The plant</th><th class="win">Leaf People</th><th>Google Lens</th><th>Apple</th><th>PictureThis</th></tr>
     </thead>
     <tbody>
-      <tr><td class="plant"><i>A. warocqueanum</i><span class="tag">queen</span></td><td class="lp">Species · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
+      <tr><td class="plant"><i>A. warocqueanum</i><span class="tag">queen</span></td><td class="lp">Species · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Angel wings" (a Caladium)</td></tr>
       <tr><td class="plant"><i>A. papillilaminum</i><span class="tag">dried leaf</span></td><td class="lp">Species · 99%</td><td class="ok">Species (hedged)</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
       <tr><td class="plant">Anthurium <i>'Ace of Spades'</i><span class="tag">cultivar</span></td><td class="lp">Cultivar · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
       <tr><td class="plant"><i>A. veitchii</i><span class="tag">king</span></td><td class="lp">Species · 99%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
       <tr><td class="plant">Anthurium <i>'Carla Blackie'</i><span class="tag">cultivar</span></td><td class="lp">Cultivar · 99%</td><td class="ap">Genus (hedged)</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
       <tr><td class="plant"><i>A. cutucuense</i></td><td class="lp">Species · 98%</td><td class="ok">Species ✓</td><td class="ap">"Laceleaf"</td><td class="ap">"Cretan brake" (a fern)</td></tr>
-      <tr><td class="plant"><i>A. crystallinum</i><span class="tag">single leaf</span></td><td class="lp">Species · 82%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Angel wings" (a Caladium)</td></tr>
+      <tr><td class="plant"><i>A. crystallinum</i><span class="tag">single leaf</span></td><td class="lp">Species · 82%</td><td class="ap">Genus only</td><td class="ap">"Laceleaf"</td><td class="ap">"Flamingo-lily"</td></tr>
     </tbody>
   </table>
   <p class="hh-foot">Tested May 2026 — Leaf People (on-device), Google Lens AI Mode, Apple Visual Look Up (iOS Photos), and PictureThis, the same photographs run through each. "Laceleaf" and "Flamingo-lily" are common names for the broad <i>Anthurium</i> genus — over 1,000 species. Google Lens reached the correct species once (<i>cutucuense</i>); PictureThis reached it zero times. Leaf People identifies within the genera we cover and tells you when a plant isn't one of ours.</p>
