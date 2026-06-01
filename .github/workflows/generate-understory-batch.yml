@@ -1,0 +1,59 @@
+name: Generate Understory (batch)
+
+# One-shot batch generator for the queued Understory stories. Unlike "Backfill"
+# (fixed 17, back-dated for the launch archive), this generates however many you
+# ask for at TODAY's date, straight into /review. Uses generate_leaf.py, so it
+# honors per-item hero overrides (app plant photos) and iNat-sourced body images.
+#
+# Actions → "Generate Understory (batch)" → Run workflow → set count.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many queued Understory stories to generate now (e.g. 10, or 68 for all)"
+        required: true
+        default: "10"
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Generate N Understory stories
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNT: ${{ inputs.count }}
+        run: |
+          cd pipeline
+          ok=0; fail=0
+          for i in $(seq 1 "$COUNT"); do
+            echo "=== generating $i / $COUNT ==="
+            if python generate_leaf.py; then ok=$((ok+1)); else fail=$((fail+1)); echo "  (failed — continuing)"; fi
+          done
+          echo "generated ok=$ok fail=$fail"
+          python generate_sitemap.py
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Batch-generate ${{ inputs.count }} Understory plant stories (pending review)"
+            git push
+          fi
