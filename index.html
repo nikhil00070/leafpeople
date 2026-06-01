@@ -170,7 +170,7 @@
   .hh-cap.win::before { content: "✓"; color: var(--green); font-weight: 800; }
   .hh-cap.fail::before { content: "✕"; color: #e2725b; font-weight: 800; }
 
-  .hh-others { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; margin-bottom: 2.4rem; }
+  .hh-others { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; margin-bottom: 2.4rem; }
   .hh-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column; }
   .hh-card img { width: 100%; display: block; border-bottom: 1px solid var(--border); }
   .hh-card .body { padding: 1.1rem 1.2rem 1.3rem; }
@@ -200,7 +200,7 @@
   @media (max-width: 900px) {
     .hh-stats { grid-template-columns: 1fr 1fr; }
     .hh-shotgrid { grid-template-columns: 1fr 1fr; }
-    .hh-others { grid-template-columns: 1fr; }
+    .hh-others { grid-template-columns: 1fr 1fr; }
     .hh-table { font-size: .82rem; }
     .hh-table th, .hh-table td { padding: .55rem .5rem; }
     .hh-table .tag { display: none; }
