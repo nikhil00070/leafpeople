@@ -99,6 +99,17 @@ def main() -> int:
     # iNat can't supply two unique shots, caught at /review.
     import source_images
     imgs = source_images.source_for_article("the-leaf", item["slug"], "Anthurium", article["title"])
+    # Per-item image override: pin a specific hero/body (e.g. the app's own plant-profile
+    # photo) — essential for cultivars/hybrids that iNaturalist (wild observations only)
+    # can't supply. iNat still fills whatever isn't overridden.
+    if item.get("hero"):
+        imgs["hero"] = item["hero"]
+        imgs["hero_attribution"] = item.get("hero_attribution", "Leaf People")
+        imgs.pop("hero_source_id", None)
+    if item.get("body_image"):
+        imgs["body_image"] = item["body_image"]
+        imgs["body_image_attribution"] = item.get("body_image_attribution", "Leaf People")
+        imgs.pop("body_image_source_id", None)
     hero = imgs["hero"]
     body_image = imgs["body_image"]
     html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
