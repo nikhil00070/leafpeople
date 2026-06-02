@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 106,
+  "count": 107,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -81,6 +81,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-melanochrysum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-melanochrysum/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-melanochrysum.jpeg"
+    },
+    {
+      "id": "the-leaf/monstera-obliqua",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-obliqua",
+      "title": "More Hole Than Leaf",
+      "category": "Monstera",
+      "description": "Everyone thinks they have adansonii. Most don't. The Peru form myth, the real species behind it, and how to tell them apart.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-obliqua",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-obliqua/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-obliqua.png"
     },
     {
       "id": "the-leaf/begonia-venosa",
