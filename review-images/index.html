@@ -121,7 +121,10 @@ function toggle(slug){
   if(open && !grid.dataset.built){
     // species-accurate iNat options first, then the curated pool (genus-relevant first)
     const inat=(INAT[slug]||[]).map(o=>({src:o.src, label:"iNat · "+(o.label||"")}));
-    const all=[...inat, ...poolFor(genusOf(slug))];
+    const pool=poolFor(genusOf(slug));
+    const all=[...inat, ...pool];
+    const gh=grid.parentElement.querySelector(".gridhead");
+    if(gh) gh.innerHTML = `Tap to set the <b class="tlabel">${row.dataset.target||'body'}</b> image — <span style="color:#60a5fa">iNat ${inat.length} · curated ${pool.length} · total ${all.length}</span> (INAT keys loaded: ${Object.keys(INAT).length})`;
     grid.innerHTML=all.map(e=>`
       <div class="opt" data-src="${e.src}" onclick="pick('${slug}', this.dataset.src)" title="${e.label.replace(/"/g,'&quot;')}">
         <img src="${e.src}" loading="lazy" referrerpolicy="no-referrer"><span class="cap2">${e.label}</span></div>`).join("");
