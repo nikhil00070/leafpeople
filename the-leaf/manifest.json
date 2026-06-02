@@ -50,16 +50,6 @@
     "status": "published"
   },
   {
-    "slug": "anthurium-veitchii",
-    "title": "Anthurium warocqueanum: The King in Full",
-    "category": "Anthurium",
-    "description": "The story of Anthurium warocqueanum — Victorian nurserymen, pendant corrugated leaves past two metres, and why the narrow vs. wide form debate still runs hot.",
-    "url": "/the-leaf/anthurium-veitchii",
-    "date": "2026-06-02",
-    "thumb": "/images/source/inat/anthurium-veitchii-hero.jpg",
-    "status": "pending"
-  },
-  {
     "slug": "philodendron-gloriosum",
     "title": "The Crawler",
     "category": "Philodendron",
@@ -317,16 +307,6 @@
     "url": "/the-leaf/philodendron-white-knight",
     "date": "2026-06-02",
     "thumb": "/images/plants/profiles/philodendron-white-knight.jpg",
-    "status": "pending"
-  },
-  {
-    "slug": "monstera-siltepecana",
-    "title": "Silver to Swiss-Cheese: The Monstera dubia Story",
-    "category": "Monstera",
-    "description": "Monstera dubia starts as a silver-leafed shingler and matures into a fenestrated giant. Here's what collectors need to know.",
-    "url": "/the-leaf/monstera-siltepecana",
-    "date": "2026-06-02",
-    "thumb": "/images/plants/profiles/monstera-siltepecana.jpg",
     "status": "pending"
   },
   {

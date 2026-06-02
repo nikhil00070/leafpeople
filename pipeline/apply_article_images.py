@@ -45,8 +45,31 @@ def download(url, dest_rel):
     return dest_rel
 
 
+EPI = ["warocqueanum", "veitchii", "crystallinum", "papillilaminum", "dressleri", "forgetii",
+       "cutucuense", "corrugatum", "vittariifolium", "wendlingeri", "kunayalense", "antolakii",
+       "cupulispathum", "gloriosum", "melanochrysum", "gigas", "verrucosum", "billietiae",
+       "squamiferum", "tortum", "lynnhannoniae", "hederaceum", "obliqua", "dubia", "siltepecana",
+       "pinnatipartita", "standleyana", "adansonii", "deliciosa", "callistophylla", "kerrii",
+       "linearis", "obovata", "pubicalyx", "australis", "kentiana", "carnosa", "ferox", "listada",
+       "paulensis", "venosa", "maculata"]
+FIXMAP = {"crystalanium": "crystallinum", "cutucuence": "cutucuense"}
+
+
 def base_caption(cap):
-    return (cap or "").split(" — \U0001F4F7")[0]
+    # template now renders the credit from body_image_attribution, so drop any appended credit
+    return (cap or "").split(" — \U0001F4F7")[0].rstrip()
+
+
+def normalize_species(slug, cap):
+    """For a single-species article, replace any wrong species name in the caption with its own."""
+    own = [FIXMAP.get(p, p) for p in slug.split("-")[1:]]
+    own_epi = [e for e in own if e in EPI]
+    if len(own_epi) != 1 or not cap:
+        return cap
+    for e in EPI:
+        if e != own_epi[0] and e in cap:
+            cap = cap.replace(e, own_epi[0])
+    return cap
 
 
 def resolve(slug, src, imap, suffix):
@@ -91,8 +114,8 @@ def apply_one(slug, sel, imap):
             data["body_image"] = local
             data["body_image_attribution"] = attrib_full
             data.pop("body_image_source_id", None)
-            cap = base_caption(data.get("body_image_caption", ""))
-            data["body_image_caption"] = (f"{cap} — \U0001F4F7 {name}".strip(" —") if name else cap)
+            # template shows the credit; just strip any old appended credit + fix wrong species
+            data["body_image_caption"] = normalize_species(slug, base_caption(data.get("body_image_caption", "")))
             changed.append("body")
 
     if sel.get("hero"):
