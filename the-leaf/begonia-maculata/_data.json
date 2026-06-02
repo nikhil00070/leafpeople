@@ -70,9 +70,8 @@
     }
   ],
   "slug": "begonia-maculata",
-  "hero": "/images/plants/profiles/begonia-maculata.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-maculata-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155430"
+  "hero": "/images/source/inat/begonia-maculata-hero.jpg",
+  "hero_attribution": "filipeprates / iNaturalist (CC-BY)",
+  "body_image": "/images/plants/profiles/begonia-maculata.jpg",
+  "body_image_attribution": "Leaf People"
 }
