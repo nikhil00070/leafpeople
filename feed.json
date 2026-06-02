@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 92,
+  "count": 93,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -29,6 +29,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-crystalanium",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-crystalanium/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-crystalanium.jpeg"
+    },
+    {
+      "id": "the-leaf/anthurium-papillilaminum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-papillilaminum",
+      "title": "The Parent Behind Half the Dark Hybrids",
+      "category": "Anthurium",
+      "description": "How Anthurium papillilaminum became the defining velvet parent of a generation — and why collectors obsess over 'true' papi provenance.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
     },
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
