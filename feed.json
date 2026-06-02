@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 97,
+  "count": 98,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -29,6 +29,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-spiritus-sancti",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-spiritus-sancti/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-spiritus-sancti-hero.jpg"
+    },
+    {
+      "id": "the-leaf/begonia-maculata",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-maculata",
+      "title": "Polka Dots That Went Viral",
+      "category": "Begonia",
+      "description": "Silver-spotted wings, cane stems, and the truth behind the begonia Instagram made famous. A closer look at Begonia maculata and its lineage.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-maculata",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-maculata/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/begonia-maculata-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-crystalanium",
