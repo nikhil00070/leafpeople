@@ -36,6 +36,9 @@ h1{font-family:'Geologica',sans-serif;font-weight:900;font-size:1.9rem;margin:0}
 .body{display:none;padding:0 1rem 1rem;border-top:1px solid var(--border)}
 .row.open .body{display:block}
 .cap{font-size:.8rem;color:var(--dim);font-style:italic;margin:.7rem 0}
+.seg{display:flex;gap:.4rem;align-items:center;font-size:.78rem;color:var(--faint);margin:.6rem 0 .2rem}
+.segbtn{background:var(--card2);border:1px solid var(--border);color:var(--dim);border-radius:99px;padding:.25rem .85rem;font:inherit;font-size:.78rem;cursor:pointer}
+.segbtn.on{background:var(--green);color:#06140c;border-color:var(--green);font-weight:700}
 .gridhead{font-size:.7rem;color:var(--faint);text-transform:uppercase;letter-spacing:.1em;margin:.6rem 0 .3rem}
 .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:.4rem}
 .opt{aspect-ratio:1/1;border-radius:7px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:#000;position:relative}
@@ -71,7 +74,10 @@ let POOL=[], ARTICLES=[], CHOICE={}, INAT={};
 function load(){ try{return JSON.parse(localStorage.getItem(LS))||{}}catch{return{}} }
 function save(){ localStorage.setItem(LS, JSON.stringify(CHOICE)); }
 function genusOf(slug){ const g=(slug.split("-")[0]||""); const c=g.charAt(0).toUpperCase()+g.slice(1); return GENERA.includes(c)?c:"Other"; }
-function chosenSrc(a){ return CHOICE[a.slug] || a.body_image || ""; }
+function norm(c){ return (typeof c==="string") ? {body:c} : (c||{}); }
+function chosenHero(a){ return norm(CHOICE[a.slug]).hero || a.hero || ""; }
+function chosenBody(a){ return norm(CHOICE[a.slug]).body || a.body_image || ""; }
+function hasChoice(slug){ const c=norm(CHOICE[slug]); return !!(c.hero||c.body); }
 
 function poolFor(genus){
   // genus matches first, then mood/general (Other), then everything else
@@ -81,24 +87,28 @@ function poolFor(genus){
 
 function renderBar(){
   document.getElementById("cPending").innerHTML=`<b>${ARTICLES.length}</b> pending`;
-  const n=Object.keys(CHOICE).length;
+  const n=Object.keys(CHOICE).filter(hasChoice).length;
   document.getElementById("cChosen").innerHTML=`<b>${n}</b> chosen`;
   document.getElementById("finalize").disabled = n===0;
 }
 
 function rowHTML(a){
   const genus=genusOf(a.slug);
-  const cur=chosenSrc(a);
-  const picked=!!CHOICE[a.slug];
-  return `<div class="row" data-slug="${a.slug}">
+  const picked=hasChoice(a.slug);
+  return `<div class="row" data-slug="${a.slug}" data-target="body">
     <div class="rhead" onclick="toggle('${a.slug}')">
-      <div class="pcol"><img class="thumb" src="${a.hero||''}" loading="lazy"><span class="lab">hero · kept</span></div>
-      <div class="pcol"><img class="thumb bodythumb" src="${cur}" loading="lazy"><span class="lab">body</span></div>
+      <div class="pcol"><img class="thumb herothumb" src="${chosenHero(a)}" loading="lazy"><span class="lab">hero</span></div>
+      <div class="pcol"><img class="thumb bodythumb" src="${chosenBody(a)}" loading="lazy"><span class="lab">body</span></div>
       <div class="rtitle"><b>${a.title||a.slug}</b><small>${genus} · ${a.slug}</small></div>
-      <span class="rstate ${picked?'chosen':'todo'}">${picked?'✓ chosen':'pick one'}</span>
+      <span class="rstate ${picked?'chosen':'todo'}">${picked?'✓ chosen':'pick'}</span>
     </div>
-    <div class="body"><div class="cap">Caption: "${(a.body_image_caption||'').replace(/"/g,'&quot;')}"</div>
-      <div class="gridhead">Tap to choose the body image — ${genus} first</div>
+    <div class="body">
+      <div class="seg">Choosing:
+        <button class="segbtn on" data-t="body" onclick="setTarget('${a.slug}','body')">Body image</button>
+        <button class="segbtn" data-t="hero" onclick="setTarget('${a.slug}','hero')">Hero image</button>
+      </div>
+      <div class="cap">Body caption: "${(a.body_image_caption||'').replace(/"/g,'&quot;')}"</div>
+      <div class="gridhead">Tap to set the <b class="tlabel">body</b> image — species &amp; ${genus} photos first</div>
       <div class="grid" data-grid="${a.slug}"></div>
     </div>
   </div>`;
@@ -109,32 +119,50 @@ function toggle(slug){
   const open=row.classList.toggle("open");
   const grid=row.querySelector(`[data-grid="${slug}"]`);
   if(open && !grid.dataset.built){
-    const a=ARTICLES.find(x=>x.slug===slug); const cur=chosenSrc(a);
     // species-accurate iNat options first, then the curated pool (genus-relevant first)
     const inat=(INAT[slug]||[]).map(o=>({src:o.src, label:"iNat · "+(o.label||"")}));
     const all=[...inat, ...poolFor(genusOf(slug))];
     grid.innerHTML=all.map(e=>`
-      <div class="opt ${e.src===cur?'sel':''}" data-src="${e.src}" onclick="pick('${slug}', this.dataset.src)" title="${e.label.replace(/"/g,'&quot;')}">
+      <div class="opt" data-src="${e.src}" onclick="pick('${slug}', this.dataset.src)" title="${e.label.replace(/"/g,'&quot;')}">
         <img src="${e.src}" loading="lazy" referrerpolicy="no-referrer"><span class="cap2">${e.label}</span></div>`).join("");
     grid.dataset.built="1";
+    highlightGrid(slug);
   }
 }
 
-function pick(slug, src){
-  CHOICE[slug]=src; save();
+function highlightGrid(slug){
   const row=document.querySelector(`.row[data-slug="${slug}"]`);
-  row.querySelectorAll(".opt").forEach(o=>o.classList.toggle("sel", o.dataset.src===src));
-  row.querySelector(".bodythumb").src=src;
+  const a=ARTICLES.find(x=>x.slug===slug);
+  const cur = row.dataset.target==="hero" ? chosenHero(a) : chosenBody(a);
+  row.querySelectorAll(".opt").forEach(o=>o.classList.toggle("sel", o.dataset.src===cur));
+}
+
+function setTarget(slug, t){
+  const row=document.querySelector(`.row[data-slug="${slug}"]`);
+  row.dataset.target=t;
+  row.querySelectorAll(".segbtn").forEach(b=>b.classList.toggle("on", b.dataset.t===t));
+  const tl=row.querySelector(".tlabel"); if(tl) tl.textContent = t;
+  highlightGrid(slug);
+}
+
+function pick(slug, src){
+  const row=document.querySelector(`.row[data-slug="${slug}"]`);
+  const t=row.dataset.target||"body";
+  const c=norm(CHOICE[slug]); c[t]=src; CHOICE[slug]=c; save();
+  row.querySelector(t==="hero"?".herothumb":".bodythumb").src=src;
+  highlightGrid(slug);
   const st=row.querySelector(".rstate"); st.className="rstate chosen"; st.textContent="✓ chosen";
   renderBar();
 }
 
 async function finalize(){
-  const n=Object.keys(CHOICE).length; if(!n) return;
+  const payload={};
+  for(const s of Object.keys(CHOICE)){ const c=norm(CHOICE[s]); const e={}; if(c.hero)e.hero=c.hero; if(c.body)e.body=c.body; if(c.hero||c.body) payload[s]=e; }
+  const n=Object.keys(payload).length; if(!n) return;
   const btn=document.getElementById("finalize"), msg=document.getElementById("msg");
   btn.disabled=true; msg.style.color="var(--dim)"; msg.textContent="Dispatching…";
   try{
-    const r=await fetch("/api/apply-images",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({selections:CHOICE})});
+    const r=await fetch("/api/apply-images",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({selections:payload})});
     if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.error||`HTTP ${r.status}`);}
     msg.style.color="var(--green)"; msg.textContent=`✓ Applying ${n} images — regenerating, check the articles in ~1–2 min.`;
   }catch(e){ msg.style.color="var(--red)"; msg.textContent="Failed: "+e.message; btn.disabled=false; }

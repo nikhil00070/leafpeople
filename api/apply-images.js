@@ -29,10 +29,21 @@ export default async function handler(req, res) {
   const clean = {};
   for (const [k, v] of Object.entries(sel)) {
     const slug = String(k).split("/").pop();
-    if (!SLUG_RE.test(slug) || typeof v !== "string" || !validSrc(v)) {
-      return res.status(400).json({ error: `invalid selection: ${k} -> ${v}` });
+    if (!SLUG_RE.test(slug)) return res.status(400).json({ error: `invalid slug: ${k}` });
+    // accept {hero?, body?} (or a bare string, treated as body)
+    const choice = (typeof v === "string") ? { body: v } : v;
+    if (!choice || typeof choice !== "object" || Array.isArray(choice)) {
+      return res.status(400).json({ error: `invalid selection for ${slug}` });
     }
-    clean[slug] = v;
+    const cv = {};
+    for (const key of ["hero", "body"]) {
+      if (choice[key] === undefined) continue;
+      if (typeof choice[key] !== "string" || !validSrc(choice[key])) {
+        return res.status(400).json({ error: `invalid ${key} for ${slug}: ${choice[key]}` });
+      }
+      cv[key] = choice[key];
+    }
+    if (Object.keys(cv).length) clean[slug] = cv;
   }
   const n = Object.keys(clean).length;
   if (!n) return res.status(400).json({ error: "no valid selections" });
