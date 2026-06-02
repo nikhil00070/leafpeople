@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """Apply chosen body images to Understory articles and re-render them.
 
-Takes a JSON map {slug: image_src} (slug may be "the-leaf/<slug>" or bare "<slug>"), and for
-each: sets body_image in _data.json, clears the needs-review flag, and re-renders index.html
-(publishing reuses the baked HTML, so re-rendering matters). No Claude, no network — file ops
-+ Jinja only.
+Takes a JSON map {slug: image_src} (slug may be "the-leaf/<slug>" or bare "<slug>"). For each:
+  * if image_src is a local /images/... path -> use it, attribution "Leaf People"
+  * if image_src is an iNaturalist photo URL    -> download it to images/source/inat/<slug>.jpg,
+    look up its attribution in the-leaf/inat-options.json, and append a visible "📷 …" credit
+    to the body caption (CC-BY needs visible attribution)
+then sets body_image in _data.json, clears the needs-review flag, and re-renders index.html.
 
-    python pipeline/apply_article_images.py '{"anthurium-warocqueanum":"/images/plants/profiles/anthurium-veitchii.jpeg"}'
+No Claude. Network only when an iNat URL is chosen (to download it).
+
+    python pipeline/apply_article_images.py '{"anthurium-crystalanium":"https://.../large.jpg"}'
     SELECTIONS='{...}' python pipeline/apply_article_images.py
 """
 import json
 import os
 import sys
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -22,27 +27,68 @@ SKIP = {"hero", "body_image", "og_image", "slug", "hero_attribution", "hero_sour
         "body_image_attribution", "body_image_source_id", "image_needs_review"}
 
 
-def apply_one(slug, body_image):
+def inat_map():
+    try:
+        data = json.load(open(os.path.join(ROOT, "the-leaf", "inat-options.json")))
+    except Exception:
+        return {}
+    m = {}
+    for opts in data.values():
+        for o in opts:
+            m[o["src"]] = o
+    return m
+
+
+def download(url, dest_rel):
+    dest = os.path.join(ROOT, dest_rel.lstrip("/"))
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    req = urllib.request.Request(url, headers={"User-Agent": "leafpeople-curation"})
+    with urllib.request.urlopen(req, timeout=60) as r, open(dest, "wb") as f:
+        f.write(r.read())
+    return dest_rel
+
+
+def base_caption(cap):
+    return (cap or "").split(" — \U0001F4F7")[0]  # strip any prior iNat credit
+
+
+def apply_one(slug, body_image, imap):
     slug = slug.split("/")[-1]
     d = os.path.join(ROOT, "the-leaf", slug)
     dp = os.path.join(d, "_data.json")
     if not os.path.exists(dp):
         print(f"  ! {slug}: no _data.json — skipping")
         return False
-    if not os.path.exists(os.path.join(ROOT, body_image.lstrip("/"))):
-        print(f"  ! {slug}: image {body_image} not found — skipping")
-        return False
     data = json.load(open(dp))
-    data["body_image"] = body_image
-    data["body_image_attribution"] = "Leaf People"
+    cap = base_caption(data.get("body_image_caption", ""))
+
+    if body_image.startswith("http"):
+        meta = imap.get(body_image, {})
+        try:
+            local = download(body_image, f"/images/source/inat/{slug}.jpg")
+        except Exception as e:
+            print(f"  ! {slug}: iNat download failed ({e}) — skipping")
+            return False
+        attrib = meta.get("label", "iNaturalist")
+        data["body_image"] = local
+        data["body_image_attribution"] = f"{attrib} / iNaturalist ({meta.get('license', 'CC').upper()})"
+        data["body_image_caption"] = f"{cap} — \U0001F4F7 {attrib}".strip(" —")
+    else:
+        if not os.path.exists(os.path.join(ROOT, body_image.lstrip("/"))):
+            print(f"  ! {slug}: image {body_image} not found — skipping")
+            return False
+        data["body_image"] = body_image
+        data["body_image_attribution"] = "Leaf People"
+        data["body_image_caption"] = cap
+
     data.pop("body_image_source_id", None)
     data.pop("image_needs_review", None)
     ctx = {k: v for k, v in data.items() if k not in SKIP}
     html = render("leaf-canonical.html", hero=data.get("hero", ""),
-                  og_image=data.get("hero", ""), body_image=body_image, **ctx)
+                  og_image=data.get("hero", ""), body_image=data["body_image"], **ctx)
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(html)
     open(dp, "w", encoding="utf-8").write(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-    print(f"  ✓ {slug} -> {body_image}")
+    print(f"  ✓ {slug} -> {data['body_image']}")
     return True
 
 
@@ -56,7 +102,8 @@ def main():
     if not isinstance(sel, dict) or not sel:
         print("no selections — nothing to do")
         return 0
-    n = sum(1 for s, src in sel.items() if apply_one(s, src))
+    imap = inat_map()
+    n = sum(1 for s, src in sel.items() if apply_one(s, src, imap))
     print(f"applied {n}/{len(sel)} body images")
     return 0
 

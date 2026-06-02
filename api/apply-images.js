@@ -11,7 +11,9 @@ const WORKFLOW = "apply-article-images.yml";
 const REF = "main";
 
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{1,80}$/;
-const SRC_RE = /^\/images\/[A-Za-z0-9._\/-]{3,200}\.(jpg|jpeg|png|webp)$/;
+const SRC_LOCAL = /^\/images\/[A-Za-z0-9._\/-]{3,200}\.(jpg|jpeg|png|webp)$/i;
+const SRC_INAT = /^https:\/\/(inaturalist-open-data\.s3\.amazonaws\.com|static\.inaturalist\.org)\/photos\/\d+\/(large|original|medium)\.(jpe?g|png)(\?.*)?$/i;
+const validSrc = (v) => SRC_LOCAL.test(v) || SRC_INAT.test(v);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
@@ -27,7 +29,7 @@ export default async function handler(req, res) {
   const clean = {};
   for (const [k, v] of Object.entries(sel)) {
     const slug = String(k).split("/").pop();
-    if (!SLUG_RE.test(slug) || typeof v !== "string" || !SRC_RE.test(v)) {
+    if (!SLUG_RE.test(slug) || typeof v !== "string" || !validSrc(v)) {
       return res.status(400).json({ error: `invalid selection: ${k} -> ${v}` });
     }
     clean[slug] = v;

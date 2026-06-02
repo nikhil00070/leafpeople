@@ -66,7 +66,7 @@ h1{font-family:'Geologica',sans-serif;font-weight:900;font-size:1.9rem;margin:0}
 <script>
 const LS="lp_article_imgs_v1";
 const GENERA=["Anthurium","Philodendron","Monstera","Hoya","Begonia"];
-let POOL=[], ARTICLES=[], CHOICE={};
+let POOL=[], ARTICLES=[], CHOICE={}, INAT={};
 
 function load(){ try{return JSON.parse(localStorage.getItem(LS))||{}}catch{return{}} }
 function save(){ localStorage.setItem(LS, JSON.stringify(CHOICE)); }
@@ -110,9 +110,12 @@ function toggle(slug){
   const grid=row.querySelector(`[data-grid="${slug}"]`);
   if(open && !grid.dataset.built){
     const a=ARTICLES.find(x=>x.slug===slug); const cur=chosenSrc(a);
-    grid.innerHTML=poolFor(genusOf(slug)).map(e=>`
-      <div class="opt ${e.src===cur?'sel':''}" data-src="${e.src}" onclick="pick('${slug}','${e.src}')" title="${e.label}">
-        <img src="${e.src}" loading="lazy"><span class="cap2">${e.label}</span></div>`).join("");
+    // species-accurate iNat options first, then the curated pool (genus-relevant first)
+    const inat=(INAT[slug]||[]).map(o=>({src:o.src, label:"iNat · "+(o.label||"")}));
+    const all=[...inat, ...poolFor(genusOf(slug))];
+    grid.innerHTML=all.map(e=>`
+      <div class="opt ${e.src===cur?'sel':''}" data-src="${e.src}" onclick="pick('${slug}', this.dataset.src)" title="${e.label.replace(/"/g,'&quot;')}">
+        <img src="${e.src}" loading="lazy" referrerpolicy="no-referrer"><span class="cap2">${e.label}</span></div>`).join("");
     grid.dataset.built="1";
   }
 }
@@ -141,11 +144,12 @@ document.getElementById("finalize").addEventListener("click", finalize);
 (async function(){
   CHOICE=load();
   const bust="?t="+Date.now();
-  const [man, pool]=await Promise.all([
+  const [man, pool, inat]=await Promise.all([
     fetch("/the-leaf/manifest.json"+bust,{cache:"no-store"}).then(r=>r.json()),
     fetch("/the-leaf/image-pool.json"+bust,{cache:"no-store"}).then(r=>r.json()),
+    fetch("/the-leaf/inat-options.json"+bust,{cache:"no-store"}).then(r=>r.json()).catch(()=>({})),
   ]);
-  POOL=pool;
+  POOL=pool; INAT=inat;
   const pending=man.filter(a=>a.status==="pending");
   ARTICLES=(await Promise.all(pending.map(async a=>{
     try{ const d=await fetch(`/the-leaf/${a.slug}/_data.json`+bust,{cache:"no-store"}).then(r=>r.json());
