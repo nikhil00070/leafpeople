@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 113,
+  "count": 115,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -55,6 +55,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-gloriosum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-gloriosum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-gloriosum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-kerrii",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-kerrii",
+      "title": "The Sweetheart Con",
+      "category": "Hoya",
+      "description": "A single Hoya kerrii leaf will never vine. Here's the myth behind the Valentine's gimmick — and the real plant worth growing.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-kerrii",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-kerrii/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-kerrii.jpg"
     },
     {
       "id": "the-leaf/anthurium-crystalanium",
