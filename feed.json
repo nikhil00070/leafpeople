@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 99,
+  "count": 101,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -107,6 +107,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-forgetii",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-forgetii/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-forgetii.png"
+    },
+    {
+      "id": "the-leaf/anthurium-cutucuence",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-cutucuence",
+      "title": "From the Cordillera del Cóndor: What Locality Really Means",
+      "category": "Anthurium",
+      "description": "A cloud-forest anthurium from one of Ecuador's most remote ranges forces collectors to ask what locality provenance is actually worth.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-cutucuence",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-cutucuence/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-cutucuence.jpeg"
     },
     {
       "id": "the-leaf/monstera-adansonii-variegata",
