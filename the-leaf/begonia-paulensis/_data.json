@@ -75,7 +75,6 @@
   "slug": "begonia-paulensis",
   "hero": "/images/plants/profiles/begonia-paulensis.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-paulensis-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-1671366"
+  "body_image": "/images/source/inat/begonia-paulensis.jpg",
+  "body_image_attribution": "Josep Lluis Berdonces / iNaturalist (CC-BY-NC)"
 }
