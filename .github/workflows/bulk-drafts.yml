@@ -55,7 +55,10 @@ jobs:
           else
             git commit -m "Bulk drafts: generated pending articles for review"
             git pull --rebase origin main
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
           fi
 
       - name: Summary review issue

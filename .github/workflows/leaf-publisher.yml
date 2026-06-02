@@ -59,10 +59,16 @@ jobs:
             echo "Nothing to publish."
           elif [ -n "${{ steps.gen.outputs.slug }}" ]; then
             git commit -m "The Leaf: draft article (pending review) — ${{ steps.gen.outputs.slug }}"
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
           else
             git commit -m "The Leaf: sitemap/feed refresh (queue empty, no new draft)"
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
           fi
 
       - name: Create review issue

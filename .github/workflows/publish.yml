@@ -61,7 +61,10 @@ jobs:
               git commit -m "Review: publish $SLUG"
             fi
             git pull --rebase origin main
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
           fi
 
       - name: Push notification (only on publish)
