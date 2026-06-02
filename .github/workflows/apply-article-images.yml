@@ -1,0 +1,52 @@
+name: Apply article body images
+
+# Triggered by /review-images "Finalize" (via /api/apply-images). Takes a JSON map of
+# {slug: image_src}, sets each article's body image, re-renders, and commits.
+
+on:
+  workflow_dispatch:
+    inputs:
+      selections:
+        description: 'JSON map {slug: image_src}'
+        required: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Apply chosen body images
+        env:
+          SELECTIONS: ${{ inputs.selections }}
+        run: python pipeline/apply_article_images.py "$SELECTIONS"
+
+      - name: Rebuild sitemap + feed
+        run: |
+          cd pipeline
+          python generate_sitemap.py
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Curate: apply chosen article body images"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
+          fi
