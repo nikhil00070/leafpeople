@@ -119,12 +119,20 @@ function toggle(slug){
   const open=row.classList.toggle("open");
   const grid=row.querySelector(`[data-grid="${slug}"]`);
   if(open && !grid.dataset.built){
-    // species-accurate iNat options first, then the curated pool (genus-relevant first)
+    // 1) this species' iNat photos, 2) the curated pool (genus-first), 3) EVERY other iNat
+    // photo (labeled with its species) — so you can pick from absolutely everything.
     const inat=(INAT[slug]||[]).map(o=>({src:o.src, label:"iNat · "+(o.label||"")}));
     const pool=poolFor(genusOf(slug));
-    const all=[...inat, ...pool];
+    const seen=new Set([...inat.map(e=>e.src), ...pool.map(e=>e.src)]);
+    const more=[];
+    for(const [sl,opts] of Object.entries(INAT)){
+      if(sl===slug) continue;
+      const sp=sl.split("-").slice(1).join(" ");
+      for(const o of (opts||[])){ if(!seen.has(o.src)){ seen.add(o.src); more.push({src:o.src, label:"iNat · "+sp+" · "+(o.label||"")}); } }
+    }
+    const all=[...inat, ...pool, ...more];
     const gh=grid.parentElement.querySelector(".gridhead");
-    if(gh) gh.innerHTML = `Tap to set the <b class="tlabel">${row.dataset.target||'body'}</b> image — <span style="color:#60a5fa">iNat ${inat.length} · curated ${pool.length} · total ${all.length}</span> (INAT keys loaded: ${Object.keys(INAT).length})`;
+    if(gh) gh.innerHTML = `Tap to set the <b class="tlabel">${row.dataset.target||'body'}</b> image — <span style="color:#60a5fa">${inat.length} species iNat · ${pool.length} curated · ${more.length} other iNat · ${all.length} total</span>`;
     grid.innerHTML=all.map(e=>`
       <div class="opt" data-src="${e.src}" onclick="pick('${slug}', this.dataset.src)" title="${e.label.replace(/"/g,'&quot;')}">
         <img src="${e.src}" loading="lazy" referrerpolicy="no-referrer"><span class="cap2">${e.label}</span></div>`).join("");
