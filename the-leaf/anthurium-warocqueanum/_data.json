@@ -9,7 +9,7 @@
     "That tension is the whole story of _warocqueanum_ in cultivation. No other aroid — possibly no other houseplant — commands the price, the patience, and the grief that this species does. Collectors who keep ten-leaf specimens speak with the quiet authority of people who have survived something. Those who have lost one speak with equal authority, only darker. The Queen, as the hobby calls her, has been earning that epithet since Victorian horticulturists first displayed her in Belgian glasshouses, and she has not become more forgiving in the intervening century and a half."
   ],
   "pull_quote": "Every collector who has killed a warocqueanum understands something about the plant that no care guide can fully teach.",
-  "body_image_caption": "A mature leaf, backlit — venation like hammered wire.",
+  "body_image_caption": "A mature leaf, backlit — venation like hammered wire. — 📷 Nate Hartley",
   "sections": [
     {
       "heading": "A Plant with a Pedigree",
@@ -79,7 +79,6 @@
   "slug": "anthurium-warocqueanum",
   "hero": "/images/plants/profiles/anthurium-warocqueanum.jpeg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/anthurium-warocqueanum-body.jpg",
-  "body_image_attribution": "Kai Squires / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-175086639"
+  "body_image": "/images/source/inat/anthurium-warocqueanum.jpg",
+  "body_image_attribution": "Nate Hartley / iNaturalist (CC-BY-NC)"
 }

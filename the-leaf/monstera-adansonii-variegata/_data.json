@@ -9,7 +9,7 @@
     "The umbrella of _Monstera adansonii_ has stretched to cover at least several distinct entities that botanists and serious collectors regard as separate species or at minimum stable morphological forms. Add variegation, which commands its own premium regardless of what's underneath it, and you have a category where provenance is murky, taxonomy is contested, and buyers are frequently paying species-specific prices for a name that describes a complex rather than a single plant. Understanding what you're actually buying requires knowing something about the complex itself."
   ],
   "pull_quote": "Variegation reveals the plant's structure the way raking light reveals brushwork — it doesn't change what's underneath, but it makes you look harder.",
-  "body_image_caption": "Indonesian form in early morning greenhouse light.",
+  "body_image_caption": "Indonesian form in early morning greenhouse light. — 📷 iNaturalist",
   "sections": [
     {
       "heading": "What the Name Actually Covers",
@@ -70,7 +70,6 @@
   "slug": "monstera-adansonii-variegata",
   "hero": "/images/plants/profiles/monstera-adansonii-variegata.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/monstera-adansonii-variegata-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012595"
+  "body_image": "/images/source/inat/monstera-adansonii-variegata.jpg",
+  "body_image_attribution": "iNaturalist / iNaturalist (CC)"
 }

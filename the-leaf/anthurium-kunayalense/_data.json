@@ -69,9 +69,8 @@
     }
   ],
   "slug": "anthurium-kunayalense",
-  "hero": "/images/plants/profiles/anthurium-kunayalense.png",
-  "hero_attribution": "Leaf People",
+  "hero": "/images/source/inat/anthurium-kunayalense-hero.jpg",
+  "hero_attribution": "njweess / iNaturalist (CC-BY-NC)",
   "body_image": "/images/plants/profiles/anthurium-kunayalense.png",
-  "image_needs_review": false,
   "body_image_attribution": "Leaf People"
 }

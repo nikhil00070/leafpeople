@@ -9,7 +9,7 @@
     "There is a category of collector — you know the type — who pursues velvets and windows and silver venation, who measures a leaf's sinus depth and photographs new growth before it finishes unfurling. _Vittarifolium_ attracts a slightly different obsessive: someone drawn to form rather than surface, to silhouette and scale, to the question of how you suspend a living chandelier in a room with eight-foot ceilings and make it work. The answer, it turns out, involves a decent hanging basket, a lot of sphagnum, and a willingness to let the plant define the space rather than the other way around."
   ],
   "pull_quote": "Vittarifolium does not decorate a room. It reorganises one — leaves falling like ribbons cut from a rainforest canopy.",
-  "body_image_caption": "Ripe berries cluster along the spadix, absurdly pink.",
+  "body_image_caption": "Ripe berries cluster along the spadix, absurdly pink. — 📷 yerbasanta",
   "sections": [
     {
       "heading": "Where It Comes From and Why That Matters",
@@ -67,9 +67,8 @@
     }
   ],
   "slug": "anthurium-vittariifolium",
-  "hero": "/images/plants/profiles/anthurium-vittariifolium.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/anthurium-vittariifolium-body.jpg",
-  "body_image_attribution": "Paúl Gonzáles / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-597504924"
+  "hero": "/images/source/inat/anthurium-vittariifolium-hero.jpg",
+  "hero_attribution": "Vallarta Botanical Garden / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/source/inat/anthurium-vittariifolium.jpg",
+  "body_image_attribution": "yerbasanta / iNaturalist (CC-BY-NC)"
 }

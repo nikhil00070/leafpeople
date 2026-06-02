@@ -9,7 +9,7 @@
     "_Anthurium papillilaminum_ is not the rarest velvet anthurium in circulation. It is not the most expensive. What it is, arguably, is the most consequential: the species whose genes appear, directly or at one remove, in a staggering proportion of the dark-leaf velvet hybrids that have defined high-end anthurium collecting over the last decade. Understanding it means understanding where the obsession came from, why provenance suddenly matters as much as phenotype, and what it costs — in money, in time, in ideological commitment — to chase a plant whose identity is now genuinely contested."
   ],
   "pull_quote": "The leaf surface of a true papi is so densely papillate it reads as matte velvet under a loupe — not a metaphor, a structural fact.",
-  "body_image_caption": "A mature papi leaf showing characteristic papillate surface texture.",
+  "body_image_caption": "A mature papi leaf showing characteristic papillate surface texture. — 📷 ramon_d",
   "sections": [
     {
       "heading": "What the Leaf Actually Does",
@@ -69,9 +69,8 @@
     }
   ],
   "slug": "anthurium-papillilaminum",
-  "hero": "/images/plants/profiles/anthurium-papillilaminum.png",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/anthurium-papillilaminum-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012597"
+  "hero": "/images/source/inat/anthurium-papillilaminum-hero.jpg",
+  "hero_attribution": "col_sa_pilarmorunoizurieta / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/source/inat/anthurium-papillilaminum.jpg",
+  "body_image_attribution": "ramon_d / iNaturalist (CC-BY-NC)"
 }

@@ -9,7 +9,7 @@
     "That plant — or the idea of that plant — is almost certainly _Anthurium crystallinum_. Or _Anthurium clarinervium_. The distinction matters more than most beginners realize and less than some veterans pretend. Both species are real, both are beautiful in specific and different ways, and between them they have done more to drag ordinary plant hobbyists into the obsessive end of aroid collecting than any other genus. Understanding why requires looking at where these plants come from, what they actually are, and what the endless confusion between them says about how collectors learn — or fail to — to see."
   ],
   "pull_quote": "Every collector has a first velvet anthurium. The plant itself matters less than what it opens.",
-  "body_image_caption": "Deep venation on a mature crystallinum leaf, backlit.",
+  "body_image_caption": "Deep venation on a mature crystallinum leaf, backlit. — 📷 Madeleine (Magsy) Lombard",
   "sections": [
     {
       "heading": "Two Species, One Silhouette",
@@ -63,7 +63,6 @@
   "slug": "anthurium-crystalanium",
   "hero": "/images/plants/profiles/anthurium-crystalanium.jpeg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/anthurium-crystalanium-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155795"
+  "body_image": "/images/source/inat/anthurium-crystalanium.jpg",
+  "body_image_attribution": "Madeleine (Magsy) Lombard / iNaturalist (CC-BY-NC)"
 }
