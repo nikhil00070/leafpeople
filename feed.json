@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 102,
+  "count": 103,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -120,6 +120,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-cutucuence",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-cutucuence/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cutucuence.jpeg"
+    },
+    {
+      "id": "the-leaf/anthurium-corrugatum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-corrugatum",
+      "title": "Texture as the Whole Point",
+      "category": "Anthurium",
+      "description": "Why bullate Anthurium leaves from Ecuador's cloud forests photograph like landscapes — and why serious collectors can't stop chasing them.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-corrugatum",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-corrugatum/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-corrugatum.jpeg"
     },
     {
       "id": "the-leaf/monstera-adansonii-variegata",
