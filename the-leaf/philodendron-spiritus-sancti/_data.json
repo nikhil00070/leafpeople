@@ -65,9 +65,8 @@
     }
   ],
   "slug": "philodendron-spiritus-sancti",
-  "hero": "/images/plants/profiles/philodendron-spiritus-sancti.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-spiritus-sancti-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-80194737"
+  "hero": "/images/source/inat/philodendron-spiritus-sancti-hero.jpg",
+  "hero_attribution": "agujaceratops / iNaturalist (CC-BY)",
+  "body_image": "/images/plants/profiles/philodendron-spiritus-sancti.jpg",
+  "body_image_attribution": "Leaf People"
 }
