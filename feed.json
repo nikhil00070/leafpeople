@@ -161,6 +161,19 @@
       "image": "https://leafpeople.app/images/source/inat/anthurium-dressleri-hero.jpg"
     },
     {
+      "id": "the-leaf/philodendron-pink-princess",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-pink-princess",
+      "title": "The Variegation Lottery",
+      "category": "Philodendron",
+      "description": "How a bubblegum-pink philodendron became a collector status symbol — and why the Pink Congo scam burned thousands of buyers.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-pink-princess",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-pink-princess/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-pink-princess.png"
+    },
+    {
       "id": "the-leaf/monstera-burle-marx-flame",
       "section": "the-leaf",
       "section_label": "Understory",
