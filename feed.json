@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 98,
+  "count": 99,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -42,6 +42,19 @@
       "url": "https://leafpeople.app/the-leaf/begonia-maculata",
       "data_url": "https://leafpeople.app/the-leaf/begonia-maculata/_data.json",
       "image": "https://leafpeople.app/images/source/inat/begonia-maculata-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-gloriosum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-gloriosum",
+      "title": "The Crawler",
+      "category": "Philodendron",
+      "description": "Velvet rhizomatous philodendrons don't climb — they walk. Here's what that means for how you grow them.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-gloriosum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-gloriosum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-gloriosum-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-crystalanium",
