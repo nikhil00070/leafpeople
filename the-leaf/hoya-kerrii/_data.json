@@ -70,7 +70,6 @@
   "slug": "hoya-kerrii",
   "hero": "/images/plants/profiles/hoya-kerrii.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-kerrii-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155671"
+  "body_image": "/images/source/inat/hoya-kerrii.jpg",
+  "body_image_attribution": "julien CLAUDE / iNaturalist (CC-BY-NC)"
 }
