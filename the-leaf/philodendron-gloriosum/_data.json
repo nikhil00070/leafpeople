@@ -70,9 +70,8 @@
     }
   ],
   "slug": "philodendron-gloriosum",
-  "hero": "/images/plants/profiles/philodendron-gloriosum.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-gloriosum-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155483"
+  "hero": "/images/source/inat/philodendron-gloriosum-hero.jpg",
+  "hero_attribution": "laribasso / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/philodendron-gloriosum.jpg",
+  "body_image_attribution": "Leaf People"
 }
