@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 112,
+  "count": 113,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -133,6 +133,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/begonia-listada",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-listada",
+      "title": "The Velvet Chevron",
+      "category": "Begonia",
+      "description": "A deep look at the quiet elegance of species begonias — their herringbone texture, bright midrib stripe, and why collectors keep returning to them.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-listada",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-listada/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-listada.jpg"
     },
     {
       "id": "the-leaf/anthurium-dressleri",
