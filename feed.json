@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 110,
+  "count": 111,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -107,6 +107,19 @@
       "url": "https://leafpeople.app/the-leaf/begonia-venosa",
       "data_url": "https://leafpeople.app/the-leaf/begonia-venosa/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/begonia-venosa.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-ace-of-spades",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-ace-of-spades",
+      "title": "The Blackest Leaf in the Room",
+      "category": "Anthurium",
+      "description": "How near-black anthuriums became a status symbol, why most plants sold under that name aren't the real thing, and what darkness actually costs.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-ace-of-spades",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-ace-of-spades/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-ace-of-spades.jpeg"
     },
     {
       "id": "the-leaf/anthurium-papillilaminum",
