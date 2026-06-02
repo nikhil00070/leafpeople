@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 107,
+  "count": 108,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -120,6 +120,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-dressleri",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-dressleri",
+      "title": "Anthurium dressleri: Provenance, Obsession, and the Panamanian Grail",
+      "category": "Anthurium",
+      "description": "Anthurium dressleri is the bullet-dark, bullate grail of serious collectors — and the lineage behind your plant matters as much as the plant itself.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-dressleri",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-dressleri/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-dressleri-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-forgetii",
