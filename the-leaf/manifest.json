@@ -1,5 +1,665 @@
 [
   {
+    "slug": "anthurium-warocqueanum",
+    "title": "The Queen of the Cloud Forest",
+    "category": "Anthurium",
+    "description": "How a metre-long sheet of black velvet from the Colombian Andes became the hobby's holy grail — and why keeping her alive is so hard.",
+    "url": "/the-leaf/anthurium-warocqueanum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-warocqueanum.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-spiritus-sancti",
+    "title": "The Ghost of Espírito Santo",
+    "category": "Philodendron",
+    "description": "A Brazilian philodendron reduced to a handful of wild plants, the most coveted leaf in the hobby, and a conservation story disguised as a flex.",
+    "url": "/the-leaf/philodendron-spiritus-sancti",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-spiritus-sancti.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-thai-constellation",
+    "title": "A Galaxy Grown in a Lab",
+    "category": "Monstera",
+    "description": "How tissue-cultured variegated Monstera deliciosa from Thailand's TC labs broke the market, stabilized the pattern, and changed what collectors value.",
+    "url": "/the-leaf/monstera-thai-constellation",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-thai-constellation.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-callistophylla",
+    "title": "Stained Glass: The Case for Hoyas as the Hobby's Greatest Leaf Show",
+    "category": "Hoya",
+    "description": "Dark veining, Bornean forest floors, and why hoyas deserve far more attention than their flowers ever get.",
+    "url": "/the-leaf/hoya-callistophylla",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-callistophylla.png",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-maculata",
+    "title": "Polka Dots That Went Viral",
+    "category": "Begonia",
+    "description": "Silver-spotted wings, cane stems, and the truth behind the begonia Instagram made famous. A closer look at Begonia maculata and its lineage.",
+    "url": "/the-leaf/begonia-maculata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-maculata.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-veitchii",
+    "title": "Anthurium warocqueanum: The King in Full",
+    "category": "Anthurium",
+    "description": "The story of Anthurium warocqueanum — Victorian nurserymen, pendant corrugated leaves past two metres, and why the narrow vs. wide form debate still runs hot.",
+    "url": "/the-leaf/anthurium-veitchii",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-veitchii.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-gloriosum",
+    "title": "The Crawler",
+    "category": "Philodendron",
+    "description": "Velvet rhizomatous philodendrons don't climb — they walk. Here's what that means for how you grow them.",
+    "url": "/the-leaf/philodendron-gloriosum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-gloriosum.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-albo-variegata",
+    "title": "The Half-Moon That Started It All",
+    "category": "Monstera",
+    "description": "How the unstable white-variegated Monstera deliciosa spawned a cutting economy — and the reversion anxiety baked into every node.",
+    "url": "/the-leaf/monstera-albo-variegata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-albo-variegata.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-kerrii",
+    "title": "The Sweetheart Con",
+    "category": "Hoya",
+    "description": "A single Hoya kerrii leaf will never vine. Here's the myth behind the Valentine's gimmick — and the real plant worth growing.",
+    "url": "/the-leaf/hoya-kerrii",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-kerrii.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-rex-escargot",
+    "title": "A Spiral You Can Grow",
+    "category": "Begonia",
+    "description": "Rex begonias are painterly, obsessive, and humidity-dependent. Start with the snail-shell cultivars and work outward.",
+    "url": "/the-leaf/begonia-rex-escargot",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-rex-escargot.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-crystalanium",
+    "title": "The Gateway Velvet",
+    "category": "Anthurium",
+    "description": "Sugar-white veins, deep green velvet, and endless misidentification — how Anthurium crystallinum became the plant that starts a collection.",
+    "url": "/the-leaf/anthurium-crystalanium",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-crystalanium.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-melanochrysum",
+    "title": "Black Gold: The Velvet Climber That Changes Everything",
+    "category": "Philodendron",
+    "description": "How Philodendron melanochrysum goes from tiny juvenile to sprawling giant — and why it's the velvet philodendron that resets your standards.",
+    "url": "/the-leaf/philodendron-melanochrysum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-melanochrysum.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-obliqua",
+    "title": "More Hole Than Leaf",
+    "category": "Monstera",
+    "description": "Everyone thinks they have adansonii. Most don't. The Peru form myth, the real species behind it, and how to tell them apart.",
+    "url": "/the-leaf/monstera-obliqua",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-obliqua.png",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-linearis",
+    "title": "A Waterfall of Fuzz",
+    "category": "Hoya",
+    "description": "Hoya linearis defies everything you know about hoyas. A deep look at the Himalayan cliff-dweller that grows like green hair.",
+    "url": "/the-leaf/hoya-linearis",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-linearis.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-venosa",
+    "title": "Felted and Strange: The Begonia That Breaks the Rules",
+    "category": "Begonia",
+    "description": "A fuzzy, succulent-leaved begonia from dry Brazilian scrub upends everything collectors think they know about the genus.",
+    "url": "/the-leaf/begonia-venosa",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-venosa.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-ace-of-spades",
+    "title": "The Blackest Leaf in the Room",
+    "category": "Anthurium",
+    "description": "How near-black anthuriums became a status symbol, why most plants sold under that name aren't the real thing, and what darkness actually costs.",
+    "url": "/the-leaf/anthurium-ace-of-spades",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-ace-of-spades.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-gigas",
+    "title": "The Giant of Panama",
+    "category": "Philodendron",
+    "description": "Philodendron gigas ages from copper to near-black and gets enormous. Here's what it actually takes to grow one well.",
+    "url": "/the-leaf/philodendron-gigas",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-gigas.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-aurea",
+    "title": "Variegation in Gold: The Marbled-Yellow Deliciosa and the Chase for a Perfect Mustard Leaf",
+    "category": "Monstera",
+    "description": "Why Monstera deliciosa aurea variegation behaves so differently from albo — and what it takes to grow a perfect mustard-and-green leaf.",
+    "url": "/the-leaf/monstera-aurea",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-aurea.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-obovata",
+    "title": "The Gateway Hoya",
+    "category": "Hoya",
+    "description": "How Hoya carnosa became the species that pulls houseplant people into the deep end of hoya collecting — and why it still earns its place.",
+    "url": "/the-leaf/hoya-obovata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-obovata.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-ferox",
+    "title": "The Fierce One: Inside Begonia's Most Armored Leaf",
+    "category": "Begonia",
+    "description": "A Chinese begonia studded with black-tipped bullate spikes raises a sharp question: why do collectors keep reaching for the plants that look like they bite back?",
+    "url": "/the-leaf/begonia-ferox",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-ferox.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-papillilaminum",
+    "title": "The Parent Behind Half the Dark Hybrids",
+    "category": "Anthurium",
+    "description": "How Anthurium papillilaminum became the defining velvet parent of a generation — and why collectors obsess over 'true' papi provenance.",
+    "url": "/the-leaf/anthurium-papillilaminum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-papillilaminum.png",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-verrucosum",
+    "title": "Hairy Petioles and Stained-Glass Leaves",
+    "category": "Philodendron",
+    "description": "Philodendron gloriosum, verrucosum, and friends: why Ecuador's iridescent velvet climbers sulk the moment your humidity drops.",
+    "url": "/the-leaf/philodendron-verrucosum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-verrucosum.png",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-dubia",
+    "title": "The Shapeshifter",
+    "category": "Monstera",
+    "description": "From coin-flat juvenile to fenestrated giant, some Monstera species transform so completely they barely resemble themselves. Here's what drives it.",
+    "url": "/the-leaf/monstera-dubia",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-dubia.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-pubicalyx",
+    "title": "The Fast Bloomer",
+    "category": "Hoya",
+    "description": "Speckled leaves, dark star flowers, vigorous growth — and a cultivar naming mess that's fooled collectors for years. The real story of Hoya lacunosa.",
+    "url": "/the-leaf/hoya-pubicalyx",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-pubicalyx.png",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-listada",
+    "title": "The Velvet Chevron",
+    "category": "Begonia",
+    "description": "A deep look at the quiet elegance of species begonias — their herringbone texture, bright midrib stripe, and why collectors keep returning to them.",
+    "url": "/the-leaf/begonia-listada",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-listada.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-dressleri",
+    "title": "Anthurium dressleri: Provenance, Obsession, and the Panamanian Grail",
+    "category": "Anthurium",
+    "description": "Anthurium dressleri is the bullet-dark, bullate grail of serious collectors — and the lineage behind your plant matters as much as the plant itself.",
+    "url": "/the-leaf/anthurium-dressleri",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-dressleri.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-pink-princess",
+    "title": "The Variegation Lottery",
+    "category": "Philodendron",
+    "description": "How a bubblegum-pink philodendron became a collector status symbol — and why the Pink Congo scam burned thousands of buyers.",
+    "url": "/the-leaf/philodendron-pink-princess",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-pink-princess.png",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-burle-marx-flame",
+    "title": "Fenestration Like Fire: The Leaf Patterns That Define Monstera Identity",
+    "category": "Monstera",
+    "description": "How flame-shaped fenestrations, the Burle Marx name, and the geometry of leaf cutting became the grammar of Monstera collecting.",
+    "url": "/the-leaf/monstera-burle-marx-flame",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-burle-marx-flame.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-krimson-queen",
+    "title": "Variegation on the Edges: The Cream-Margined Carnosa and Its Mirror-Image Sibling",
+    "category": "Hoya",
+    "description": "The cream-margined Hoya carnosa and its reverse-variegated sibling explained — plus the Queen-versus-Princess confusion every collector faces.",
+    "url": "/the-leaf/hoya-krimson-queen",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-krimson-queen.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-paulensis",
+    "title": "Seersucker Leaves: Why Texture-First Begonias Are Having a Moment",
+    "category": "Begonia",
+    "description": "Bullate, puckered, ruffled-edged begonias are rewriting what collectors chase. Here's why foliage texture is the new frontier.",
+    "url": "/the-leaf/begonia-paulensis",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-paulensis.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-forgetii",
+    "title": "The Anthurium With No Lobes",
+    "category": "Anthurium",
+    "description": "A perfectly round, peltate leaf rimmed in bone-white veins — why Anthurium magnificum's geometry feels almost engineered.",
+    "url": "/the-leaf/anthurium-forgetii",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-forgetii.png",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-white-knight",
+    "title": "Dark Stems, White Leaves: The Patience Tax on a Chimeric Plant",
+    "category": "Philodendron",
+    "description": "Why the most coveted high-contrast variegated philodendrons can't be rushed — and what serious collectors do while they wait.",
+    "url": "/the-leaf/philodendron-white-knight",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-white-knight.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-siltepecana",
+    "title": "Silver to Swiss-Cheese: The Monstera dubia Story",
+    "category": "Monstera",
+    "description": "Monstera dubia starts as a silver-leafed shingler and matures into a fenestrated giant. Here's what collectors need to know.",
+    "url": "/the-leaf/monstera-siltepecana",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-siltepecana.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-krimson-princess",
+    "title": "Variegation from the Inside Out",
+    "category": "Hoya",
+    "description": "From 'Krimson Queen' to tricolor sports, one species spawned a whole lineage. A deep look at how Hoya carnosa variegates.",
+    "url": "/the-leaf/hoya-krimson-princess",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-krimson-princess.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-rex-fireworks",
+    "title": "Silver and Plum Explosion",
+    "category": "Begonia",
+    "description": "How rex begonia cultivars get their otherworldly color, why leaf structure does the painting, and which cultivars are worth the obsession.",
+    "url": "/the-leaf/begonia-rex-fireworks",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-rex-fireworks.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-cutucuence",
+    "title": "From the Cordillera del Cóndor: What Locality Really Means",
+    "category": "Anthurium",
+    "description": "A cloud-forest anthurium from one of Ecuador's most remote ranges forces collectors to ask what locality provenance is actually worth.",
+    "url": "/the-leaf/anthurium-cutucuence",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-cutucuence.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-billietiae",
+    "title": "Tangerine Petioles",
+    "category": "Philodendron",
+    "description": "A deep look at Philodendron billietiae — its wild origins, flush rhythm, orange petioles, and the variegated form that rewrote collector prices.",
+    "url": "/the-leaf/philodendron-billietiae",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-billietiae.png",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-pinnatipartita",
+    "title": "The Climber That Splits",
+    "category": "Monstera",
+    "description": "Monstera's solid juvenile leaves that tear into pinnate fingers on a pole — why the wait is the whole point of growing one.",
+    "url": "/the-leaf/monstera-pinnatipartita",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-pinnatipartita.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-australis-lisa",
+    "title": "Golden Hours: The Case for Hoya australis 'Lisa'",
+    "category": "Hoya",
+    "description": "Hoya australis 'Lisa' grows fast, roots easily, and looks extraordinary. A defense of the plant wrongly filed under 'beginner.'",
+    "url": "/the-leaf/hoya-australis-lisa",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-australis-lisa.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-rex-mclauchlan",
+    "title": "The Painter's Begonia: Silver, Burgundy, and the Art of the Named Rex",
+    "category": "Begonia",
+    "description": "How swirled silver and burgundy turned rex begonias into named cultivars — and what it takes to keep the color honest.",
+    "url": "/the-leaf/begonia-rex-mclauchlan",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-rex-mclauchlan.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-corrugatum",
+    "title": "Texture as the Whole Point",
+    "category": "Anthurium",
+    "description": "Why bullate Anthurium leaves from Ecuador's cloud forests photograph like landscapes — and why serious collectors can't stop chasing them.",
+    "url": "/the-leaf/anthurium-corrugatum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-corrugatum.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-tortum",
+    "title": "Living Sculpture: The Skeletal Philodendrons",
+    "category": "Philodendron",
+    "description": "Finger-thin leaflets, twisting petioles, fossil-like forms — the pinnate and pedatum philodendrons are the jungle's idea of minimalism.",
+    "url": "/the-leaf/philodendron-tortum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-tortum.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-adansonii-variegata",
+    "title": "Holes Plus Cream: The Variegated Adansonii Problem",
+    "category": "Monstera",
+    "description": "Why 'adansonii' covers more plants than collectors realize — and what to know before buying a variegated Swiss-cheese.",
+    "url": "/the-leaf/monstera-adansonii-variegata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-adansonii-variegata.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-kentiana-variegata",
+    "title": "Ribbons of Cream: The Variegated Wayetii and the Joy of a Cascading Hoya",
+    "category": "Hoya",
+    "description": "On Hoya wayetii, its variegated form, the persistent taxonomic confusion, and why a trailing wax plant earns its shelf space.",
+    "url": "/the-leaf/hoya-kentiana-variegata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-kentiana-variegata.png",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-caravan",
+    "title": "Pattern on Pattern: Why Begonia Breeders Don't Care About the Flowers",
+    "category": "Begonia",
+    "description": "Rex-type begonia hybrids are bred purely for leaf spectacle. Here's the obsessive world of breeders chasing perfect pattern on pattern.",
+    "url": "/the-leaf/begonia-caravan",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-caravan.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-vittariifolium",
+    "title": "The Chandelier Anthurium",
+    "category": "Anthurium",
+    "description": "Anthurium vittarifolium is unlike any houseplant. A metre of strap leaf, shocking pink berries, and a pendant habit that demands you rethink your shelves.",
+    "url": "/the-leaf/anthurium-vittariifolium",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-vittariifolium.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-squamiferum",
+    "title": "Touch the Stem",
+    "category": "Philodendron",
+    "description": "Fuzzy petioles, D-shaped cross-sections, and red bristles: the case that half an aroid's beauty lives below the leaf blade.",
+    "url": "/the-leaf/philodendron-squamiferum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-squamiferum.png",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-standleyana-variegata",
+    "title": "Not Even a Monstera",
+    "category": "Monstera",
+    "description": "From albo to aurea to the overlooked sport worth growing, a collector's guide to variegated climbing aroids beyond Monstera.",
+    "url": "/the-leaf/monstera-standleyana-variegata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-standleyana-variegata.png",
+    "status": "pending"
+  },
+  {
+    "slug": "hoya-hindu-rope",
+    "title": "The Curled Classic",
+    "category": "Hoya",
+    "description": "The mutation that twists every leaf on Hoya carnosa 'Compacta' — its origins, quirks, and why this old cultivar still earns serious attention.",
+    "url": "/the-leaf/hoya-hindu-rope",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/hoya-hindu-rope.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "begonia-dinhdui",
+    "title": "Out of Vietnam",
+    "category": "Begonia",
+    "description": "Vietnam's karst forests hide some of the most striking begonias on earth — and botanists are still finding them.",
+    "url": "/the-leaf/begonia-dinhdui",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/begonia-dinhdui.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-wendlingeri",
+    "title": "Velvet on a String",
+    "category": "Anthurium",
+    "description": "Long ribbon leaves, a corkscrew spadix, and a misting-or-die reputation. The pendant anthuriums of Costa Rica deserve a second look.",
+    "url": "/the-leaf/anthurium-wendlingeri",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-wendlingeri.png",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-florida-ghost",
+    "title": "Ghost Leaves",
+    "category": "Philodendron",
+    "description": "New growth that unfurls ghostly white, then slowly greens: why certain philodendron hybrids do it, and whether the white will hold.",
+    "url": "/the-leaf/philodendron-florida-ghost",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-florida-ghost.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "monstera-mint",
+    "title": "The Mint Unicorn",
+    "category": "Monstera",
+    "description": "Monstera deliciosa 'Mint' is rare, unstable, and possibly mythologized. A close look at what makes it real — and what makes it rumor.",
+    "url": "/the-leaf/monstera-mint",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/monstera-mint.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-morona",
+    "title": "Out of Morona-Santiago: Ecuador's Under-the-Radar Velvet Anthurium",
+    "category": "Anthurium",
+    "description": "Deep in Ecuador's Morona-Santiago province grows a velvet anthurium most collectors have never chased. Here's why that's about to change.",
+    "url": "/the-leaf/anthurium-morona",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-morona.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-paraiso-verde",
+    "title": "The Marbled Mystery",
+    "category": "Philodendron",
+    "description": "Some philodendrons defy taxonomy and provenance. Here's what it means to collect a plant the botanists haven't caught up with yet.",
+    "url": "/the-leaf/philodendron-paraiso-verde",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-paraiso-verde.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-kunayalense",
+    "title": "Named for a Homeland: Anthurium kunayalense and the Weight of a Plant Name",
+    "category": "Anthurium",
+    "description": "Anthurium kunayalense carries the name of the Guna Yala comarca. What does it mean when a plant's label outlasts the politics of place?",
+    "url": "/the-leaf/anthurium-kunayalense",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-kunayalense.png",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-strawberry-shake",
+    "title": "Pink, Cream, and Green Confetti",
+    "category": "Philodendron",
+    "description": "The flushed new growth that sells the plant, the variegation that fades, and what collectors are really chasing in variegated philodendrons.",
+    "url": "/the-leaf/philodendron-strawberry-shake",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-strawberry-shake.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-antolakii",
+    "title": "The Sleeper: How a Quiet Velvet Anthurium Gets Its Name",
+    "category": "Anthurium",
+    "description": "New anthurium species named for living growers are rewriting who gets credit in taxonomy. Meet the sleeper velvet collectors keep overlooking.",
+    "url": "/the-leaf/anthurium-antolakii",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-antolakii.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-jose-buono",
+    "title": "Big Paddles, Honest Splashes",
+    "category": "Philodendron",
+    "description": "Philodendron 'White Wizard' and its large-leaf variegated relatives offer bold color that holds. Here's why collectors trust them.",
+    "url": "/the-leaf/philodendron-jose-buono",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-jose-buono.png",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-cupulispathum",
+    "title": "The Cult of the Cup Spathe",
+    "category": "Anthurium",
+    "description": "Beyond the velvet flagships, a quieter obsession waits — cup-spathe anthuriums that reward the collector who's already seen everything else.",
+    "url": "/the-leaf/anthurium-cupulispathum",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-cupulispathum.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-orange-marmalade",
+    "title": "Citrus on a Leaf",
+    "category": "Philodendron",
+    "description": "New hybrids blazing orange and gold are reshaping what collectors want from variegated philodendrons. Here's why warm-tone variegation matters.",
+    "url": "/the-leaf/philodendron-orange-marmalade",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-orange-marmalade.png",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-carla-blackie",
+    "title": "When a Hybrid Gets a Human Name",
+    "category": "Anthurium",
+    "description": "How named anthurium hybrids carry breeder lineages, why a name can move a price, and what the label is really selling.",
+    "url": "/the-leaf/anthurium-carla-blackie",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-carla-blackie.jpeg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-blizzard",
+    "title": "Snow on Green: Making Sense of White-Variegated Philodendrons",
+    "category": "Philodendron",
+    "description": "From 'White Princess' to 'White Wizard', the white-variegated philodendron family is tangled. Here's how to read the lineage and the leaf.",
+    "url": "/the-leaf/philodendron-blizzard",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-blizzard.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-dark-mama",
+    "title": "Bred for Darkness",
+    "category": "Anthurium",
+    "description": "What 'Dark Mama' actually is, why breeders keep chasing blacker leaves, and the strange economics of engineered rarity in collector anthuriums.",
+    "url": "/the-leaf/anthurium-dark-mama",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/anthurium-dark-mama.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-green-congo-nuclear",
+    "title": "Neon, on Purpose: The Electric Chartreuse Congo",
+    "category": "Philodendron",
+    "description": "How a tissue-culture color sport becomes a named cultivar — and what separates a real selection from a marketing label.",
+    "url": "/the-leaf/philodendron-green-congo-nuclear",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-green-congo-nuclear.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-burle-marx-variegata",
+    "title": "The Marxii Problem: Variegation, Restraint, and a Legend's Legacy",
+    "category": "Philodendron",
+    "description": "Philodendron 'Burle Marx' is the workhorse. Its variegated form is the argument. What one cultivar reveals about taste, hype, and Roberto Burle Marx himself.",
+    "url": "/the-leaf/philodendron-burle-marx-variegata",
+    "date": "2026-06-02",
+    "thumb": "/images/plants/profiles/philodendron-burle-marx-variegata.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "repotting-mature-anthuriums",
     "title": "The Long Quiet Hour: Repotting a Mature Anthurium",
     "category": "Field Skills",
