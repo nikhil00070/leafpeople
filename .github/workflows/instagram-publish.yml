@@ -1,0 +1,55 @@
+name: Publish to Instagram (daily)
+
+# Posts the day's scheduled Instagram post via the Graph API.
+#
+# DORMANT / DRY by default. It publishes for real ONLY when all of these hold:
+#   1. instagram/publish_config.json -> {"start_date": "YYYY-MM-DD", "enabled": true}
+#   2. repo secrets IG_TOKEN + IG_USER_ID are set
+#   3. it's not forced dry (manual runs default to dry_run=1)
+# Otherwise it just logs what it WOULD post and commits nothing.
+#
+# Schedule is ~10am Pacific (17:00 UTC during PDT) — adjust to your best posting time.
+
+on:
+  schedule:
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = log only (default, safe), 0 = publish for real"
+        required: false
+        default: "1"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Post today's Instagram post
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: python pipeline/post_to_instagram.py
+
+      - name: Commit posted status (if anything published)
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add instagram/posts.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit (dry run or already posted)."
+          else
+            git commit -m "Instagram: mark today's post as posted"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
+          fi
