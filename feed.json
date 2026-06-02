@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 93,
+  "count": 94,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -42,6 +42,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-forgetii",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-forgetii",
+      "title": "The Anthurium With No Lobes",
+      "category": "Anthurium",
+      "description": "A perfectly round, peltate leaf rimmed in bone-white veins — why Anthurium magnificum's geometry feels almost engineered.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-forgetii",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-forgetii/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-forgetii.png"
     },
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
