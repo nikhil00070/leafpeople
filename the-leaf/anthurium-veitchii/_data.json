@@ -9,7 +9,7 @@
     "Most collector obsessions start with a photograph. Someone sees a pendant _warocqueanum_ leaf photographed against a dark background, the silver veins catching light, and the plant lodges in the mind before any rational cost-benefit analysis can intervene. What follows is the usual progression: a cutting acquired at serious expense, a period of fumbling care, the slow realization that this species rewards growers who understand its logic rather than those who simply want it badly enough."
   ],
   "pull_quote": "The leaves hang in dark, corrugated curtains — the plant does not beg for attention. It commands it.",
-  "body_image_caption": "Pendant blade, silver venation, two metres of quiet authority. — 📷 Nate Hartley",
+  "body_image_caption": "Pendant blade, silver venation, two metres of quiet authority.",
   "sections": [
     {
       "heading": "Veitch, Warocque, and the Weight of a Name",
@@ -68,8 +68,8 @@
     }
   ],
   "slug": "anthurium-veitchii",
-  "hero": "/images/plants/profiles/anthurium-veitchii.jpeg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/inat/anthurium-veitchii.jpg",
-  "body_image_attribution": "Nate Hartley / iNaturalist (CC-BY-NC)"
+  "hero": "/images/source/inat/anthurium-veitchii-hero.jpg",
+  "hero_attribution": "Nate Hartley / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/anthurium-veitchii.jpeg",
+  "body_image_attribution": "Leaf People"
 }
