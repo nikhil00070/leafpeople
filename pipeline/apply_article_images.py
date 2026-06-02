@@ -23,8 +23,8 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from render import render  # noqa: E402
 
-SKIP = {"hero", "body_image", "og_image", "slug", "hero_attribution", "hero_source_id",
-        "body_image_attribution", "body_image_source_id", "image_needs_review"}
+# Keep attributions IN the render context so the template can show "📷 credit" lines.
+SKIP = {"hero", "og_image", "body_image", "slug"}
 MANIFEST = os.path.join(ROOT, "the-leaf", "manifest.json")
 
 

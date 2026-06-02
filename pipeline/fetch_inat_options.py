@@ -41,9 +41,26 @@ SPECIES = {
 }
 
 
+# Include CC-BY-NC (non-commercial): user's editorial-use decision — every photo is credited
+# and we honor takedown requests. taxon_id is far more reliable than taxon_name.
+LICENSES = "cc0,cc-by,cc-by-sa,cc-by-nc,cc-by-nc-sa"
+
+
+def resolve_taxon(name):
+    q = urllib.parse.urlencode({"q": name, "rank": "species"})
+    req = urllib.request.Request(f"https://api.inaturalist.org/v1/taxa?{q}",
+                                 headers={"User-Agent": "leafpeople-curation"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        res = json.loads(r.read()).get("results", [])
+    return res[0]["id"] if res else None
+
+
 def fetch(name):
+    tid = resolve_taxon(name)
+    if not tid:
+        return []
     q = urllib.parse.urlencode({
-        "taxon_name": name, "photos": "true", "photo_license": "cc0,cc-by,cc-by-sa",
+        "taxon_id": tid, "photos": "true", "photo_license": LICENSES,
         "per_page": 40, "order_by": "votes", "order": "desc",
     })
     url = f"https://api.inaturalist.org/v1/observations?{q}"

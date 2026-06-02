@@ -115,7 +115,9 @@ def main() -> int:
             imgs["image_needs_review"] = False  # app hero + app body fallback = two real images
     hero = imgs["hero"]
     body_image = imgs["body_image"]
-    html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
+    html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image,
+                  hero_attribution=imgs.get("hero_attribution", ""),
+                  body_image_attribution=imgs.get("body_image_attribution", ""), **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")

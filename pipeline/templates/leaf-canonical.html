@@ -42,6 +42,7 @@
     <div class="leaf-hero-img" style="background-image:url('{{ hero }}')"></div>
     <div class="leaf-hero-grade"></div>
     <div class="hero-grain"></div>
+    {% if hero_attribution and hero_attribution != 'Leaf People' %}<div style="position:absolute;bottom:8px;right:10px;z-index:4;font-size:.6rem;color:rgba(255,255,255,.78);background:rgba(0,0,0,.45);padding:2px 7px;border-radius:6px">📷 {{ hero_attribution }}</div>{% endif %}
     <span class="leaf-badge">{{ category }}</span>
     <div class="leaf-hero-content">
       <div class="hero-eyebrow">Understory</div>
@@ -66,7 +67,7 @@
     {% if body_image and loop.index == (sections|length // 2) and not loop.last %}
     <figure class="art-body-img">
       <img src="{{ body_image }}" alt="{{ body_image_caption or '' }}" loading="lazy">
-      {% if body_image_caption %}<figcaption class="img-caption">{{ body_image_caption | md }}</figcaption>{% endif %}
+      {% if body_image_caption or (body_image_attribution and body_image_attribution != 'Leaf People') %}<figcaption class="img-caption">{{ body_image_caption | md }}{% if body_image_attribution and body_image_attribution != 'Leaf People' %} <span style="opacity:.65">— 📷 {{ body_image_attribution }}</span>{% endif %}</figcaption>{% endif %}
     </figure>
     {% endif %}
     {% endfor %}

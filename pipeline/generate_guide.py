@@ -124,7 +124,9 @@ def main() -> int:
     imgs = source_images.source_for_article("field-guide", item["slug"], article["genus"], article["title"])
     hero = imgs["hero"]
     body_image = imgs["body_image"]
-    html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image, **article)
+    html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image,
+                  hero_attribution=imgs.get("hero_attribution", ""),
+                  body_image_attribution=imgs.get("body_image_attribution", ""), **article)
 
     out_dir = common.SITE_ROOT / "field-guide" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
