@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 105,
+  "count": 106,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -172,6 +172,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-vittariifolium-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-wendlingeri",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-wendlingeri",
+      "title": "Velvet on a String",
+      "category": "Anthurium",
+      "description": "Long ribbon leaves, a corkscrew spadix, and a misting-or-die reputation. The pendant anthuriums of Costa Rica deserve a second look.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-wendlingeri",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-wendlingeri/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-wendlingeri-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-kunayalense",
