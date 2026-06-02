@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 91,
+  "count": 92,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -16,6 +16,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-warocqueanum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-warocqueanum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-warocqueanum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-crystalanium",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-crystalanium",
+      "title": "The Gateway Velvet",
+      "category": "Anthurium",
+      "description": "Sugar-white veins, deep green velvet, and endless misidentification — how Anthurium crystallinum became the plant that starts a collection.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-crystalanium",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-crystalanium/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-crystalanium.jpeg"
     },
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
