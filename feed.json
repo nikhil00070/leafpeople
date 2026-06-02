@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 108,
+  "count": 109,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -237,6 +237,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cupulispathum.jpeg"
+    },
+    {
+      "id": "the-leaf/anthurium-dark-mama",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-dark-mama",
+      "title": "Bred for Darkness",
+      "category": "Anthurium",
+      "description": "What 'Dark Mama' actually is, why breeders keep chasing blacker leaves, and the strange economics of engineered rarity in collector anthuriums.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-dark-mama",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-dark-mama/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-dark-mama.jpg"
     },
     {
       "id": "the-leaf/watering-rare-aroids-by-weight",
