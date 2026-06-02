@@ -135,11 +135,25 @@
       "extra": "300+ clicks; 30+ attributed installs."
     },
     {
-      "weeks": "Days 57-60+",
+      "weeks": "Days 57-70",
+      "theme": "Second wave \u2014 fresh species, deeper cuts",
+      "followers": 2500,
+      "avg_likes": 250,
+      "extra": "Article tie-ins driving real traffic; lean hard into the winning branches."
+    },
+    {
+      "weeks": "Days 71-84",
+      "theme": "Authority \u2014 the rare-plant destination",
+      "followers": 4000,
+      "avg_likes": 320,
+      "extra": "UGC compounding; collaborations & reshares from the community."
+    },
+    {
+      "weeks": "Days 85-90+",
       "theme": "Rolling funnel \u2014 exploit winners, keep exploring",
-      "followers": 2000,
-      "avg_likes": 220,
-      "extra": "Self-sustaining: each posted day spawns a fresh skeleton."
+      "followers": 5500,
+      "avg_likes": 400,
+      "extra": "Self-sustaining cadence; every posted day informs the next."
     }
   ],
   "hashtagTiers": {

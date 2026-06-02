@@ -32,7 +32,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
 START = date(2026, 6, 2)
-N_DAYS = 60
+N_DAYS = 90
 HANDLE = "leafpeople.app"
 SITE = "leafpeople.app"
 
@@ -41,6 +41,14 @@ STK = "/images/source/stock/"
 PLT = "/images/plants/"
 CMP = "/images/compare/"
 APP = "/images/app/"
+
+# slug -> app plant-profile photo (all 68), built alongside the Understory queue.
+# Used to give later showcase posts fresh-species heroes and to enrich the library.
+PROFILE = {}
+try:
+    PROFILE = json.loads(open(os.path.join(HERE, "profile_images.json")).read())
+except Exception:
+    PROFILE = {}
 
 # --- Hashtags ----------------------------------------------------------------
 BRAND_TAGS = ["#leafpeople", "#leafpeopleapp"]
@@ -112,8 +120,12 @@ FORTNIGHT_GOALS = [
      "followers": 800, "avg_likes": 120, "extra": "150+ link clicks; first attributed installs."},
     {"weeks": "Days 43-56", "theme": "Articles & CTAs convert lookers to users",
      "followers": 1500, "avg_likes": 180, "extra": "300+ clicks; 30+ attributed installs."},
-    {"weeks": "Days 57-60+", "theme": "Rolling funnel — exploit winners, keep exploring",
-     "followers": 2000, "avg_likes": 220, "extra": "Self-sustaining: each posted day spawns a fresh skeleton."},
+    {"weeks": "Days 57-70", "theme": "Second wave — fresh species, deeper cuts",
+     "followers": 2500, "avg_likes": 250, "extra": "Article tie-ins driving real traffic; lean hard into the winning branches."},
+    {"weeks": "Days 71-84", "theme": "Authority — the rare-plant destination",
+     "followers": 4000, "avg_likes": 320, "extra": "UGC compounding; collaborations & reshares from the community."},
+    {"weeks": "Days 85-90+", "theme": "Rolling funnel — exploit winners, keep exploring",
+     "followers": 5500, "avg_likes": 400, "extra": "Self-sustaining cadence; every posted day informs the next."},
 ]
 
 CTA = {
@@ -209,6 +221,17 @@ def load_credits():
         pass
     return out
 
+def profile_branches(slug):
+    b = set()
+    if slug.startswith("anthurium"):     b |= {"velvet-anthurium", "rarest-jungle", "leaf-texture", "rarity-value"}
+    elif slug.startswith("philodendron"): b |= {"rainforest-beauty", "leaf-texture", "rarity-value"}
+    elif slug.startswith("monstera"):     b |= {"rainforest-beauty", "jungle-escape", "rarity-value"}
+    elif slug.startswith("hoya"):         b |= {"rainforest-beauty", "leaf-texture"}
+    elif slug.startswith("begonia"):      b |= {"leaf-texture", "rainforest-beauty"}
+    b |= {"article-fieldguide", "article-understory", "community-ugc", "welcome-leafpeople"}
+    return sorted(b)
+
+
 def build_library():
     lib = []
     seen = set()
@@ -222,6 +245,13 @@ def build_library():
     for f, br in MOOD_LIB.items(): add(PLT + f, br, "mood")
     for f, br in APP_UI.items():   add(APP + f, br, "appui")
 
+    # All 68 app plant-profile photos (deduped against the IG set by slug/basename).
+    ig_slugs = {os.path.splitext(f)[0] for f in APP_LIB}
+    for slug, src in PROFILE.items():
+        if slug in ig_slugs:
+            continue
+        add(src, profile_branches(slug), "profile")
+
     credits = load_credits()
     for full in sorted(glob.glob(os.path.join(ROOT, "images", "source", "stock", "*-hero.jpg"))):
         src = "/" + os.path.relpath(full, ROOT)
@@ -233,9 +263,15 @@ def build_library():
         if {"velvet-anthurium", "rainforest-beauty", "rarest-jungle"} & set(e["branches"]):
             if "welcome-leafpeople" not in e["branches"]:
                 e["branches"] = e["branches"] + ["welcome-leafpeople"]
+    # App-feature posts can lead with a striking plant photo, not only a UI screenshot.
+    for e in lib:
+        if {"velvet-anthurium", "rarest-jungle", "leaf-texture", "rarity-value"} & set(e["branches"]):
+            for b in ("app-identify", "app-collect", "app-track-care", "app-learn", "app-cta"):
+                if b not in e["branches"]:
+                    e["branches"].append(b)
     return lib
 
-KIND_ORDER = {"app": 0, "appui": 1, "id": 2, "mood": 3, "stock": 4}
+KIND_ORDER = {"app": 0, "appui": 1, "id": 2, "profile": 3, "mood": 4, "stock": 5}
 
 def candidates_for(branch, lib):
     c = [e for e in lib if branch in e["branches"]]
@@ -322,7 +358,139 @@ BRANCH_SCHEDULE = (
        "article-fieldguide", "article-understory", "app-cta", "community-ugc", "app-cta"]
 )
 
-AUTHORED = WELCOME_POSTS + SHOWCASE_POSTS
+# CONCEPT (days 31-45) — tie the beauty to what the app does.
+CONCEPT_POSTS = [
+    {"branch": "app-identify", "title": "Point, shoot, know", "prefer": APP+"shot-04.png",
+     "caption": "Point your camera at any leaf. Get the species — not 'it's a houseplant,' the actual species. That's the whole idea behind Leaf People."},
+    {"branch": "app-track-care", "title": "Never miss a watering", "prefer": APP+"shot-07.png",
+     "caption": "Velvet anthuriums don't forgive a missed week. Leaf People tracks water, food, foliar feed and more — and nudges you before it becomes a problem."},
+    {"branch": "app-learn", "title": "Field guide in your pocket", "prefer": APP+"shot-02.png",
+     "caption": "Every plant in the app comes with a real care guide — light, humidity, substrate, the lot. No more twelve open tabs at 1am."},
+    {"branch": "app-identify", "title": "We name what others can't", "prefer": CMP+"lp-warocqueanum.png",
+     "caption": "Other apps see a rare anthurium and shrug: 'Laceleaf.' Leaf People names the species. We tested it head-to-head — it isn't close."},
+    {"branch": "app-collect", "title": "Your jungle, catalogued", "prefer": APP+"shot-05.png",
+     "caption": "Every plant you own, in one place — what it is, how to care for it, when you last watered. Your collection, finally organized."},
+    {"branch": "app-track-care", "title": "Care that knows your climate", "prefer": APP+"shot-08.png",
+     "caption": "Phoenix isn't Singapore. Leaf People tunes its care guidance to where you actually grow — not one-size-fits-all."},
+    {"branch": "app-learn", "title": "A new story every day", "prefer": PLT+"the-leaf.jpg",
+     "caption": "Open the app to a fresh rare-plant story daily — field notes, deep dives, collector culture. Get sharper with every leaf."},
+    {"branch": "app-identify", "title": "Even from a single leaf", "prefer": CMP+"lp-crystallinum.png",
+     "caption": "No flower, no tag — just one leaf on a table? Still enough. Leaf People reads the veins, shape and texture, and names it."},
+    {"branch": "app-collect", "title": "Trade with people who get it", "prefer": APP+"shot-09.png",
+     "caption": "Buy, sell and trade in a marketplace built for collectors — not a yard sale. Secure, and plant-people only."},
+    {"branch": "app-track-care", "title": "Six kinds of care, one timeline", "prefer": APP+"shot-06.png",
+     "caption": "Water, fertilize, foliar feed, root check, substrate check, propagate — each on its own schedule, all on one timeline."},
+    {"branch": "app-identify", "title": "crystallinum or clarinervium?", "prefer": STK+"anthurium-crystallinum-vs-clarinervium-hero.jpg",
+     "caption": "The question that starts fights. Leaf People settles it — to the species — in about a second."},
+    {"branch": "app-learn", "title": "Know why it's doing that", "prefer": PLT+"plant-08.jpg",
+     "caption": "Yellow leaf? Crispy edge? Slow growth? The app's guides tell you why — and what to change — for the exact plants you own."},
+    {"branch": "app-collect", "title": "Log every new leaf", "prefer": APP+"shot-03.png",
+     "caption": "Watch your collection grow, literally. Track new leaves, milestones and progress on every plant you keep."},
+    {"branch": "app-identify", "title": "Mystery to named species", "prefer": PLT+"anthurium.jpg",
+     "caption": "That unlabeled plant from the sale table? Point, shoot, and finally know exactly what you brought home."},
+    {"branch": "app-collect", "title": "The collection in your pocket", "prefer": APP+"shot-10.png",
+     "caption": "Identify it, learn it, track it, trade it. Everything a collector needs — and nothing leaves your phone."},
+]
+
+# CONVERT (days 46-60) — drive to articles, the site, installs, community.
+CONVERT_POSTS = [
+    {"branch": "article-fieldguide", "title": "The Queen, in full", "prefer": STK+"anthurium-regale-hero.jpg",
+     "caption": "The complete story of the Queen Anthurium — where she grows, why she's coveted, how to keep her alive. Full guide, link in bio."},
+    {"branch": "app-cta", "title": "All of it. $0.99/mo", "prefer": APP+"shot-01.png",
+     "caption": "The ID engine, the field guide, the care tracker, the marketplace — one subscription, $0.99 a month, 7-day free trial. Link in bio."},
+    {"branch": "article-understory", "title": "Ghost of Espírito Santo", "prefer": STK+"philodendron-luxurians-hero.jpg",
+     "caption": "A philodendron down to a handful of wild plants, and the most coveted leaf in the hobby. We told its story — read it, link in bio."},
+    {"branch": "community-ugc", "title": "Show us your grail", "prefer": PLT+"plant-09.jpg",
+     "caption": "What's the one plant you'd save in a fire? Show us. Tag #leafpeople and we'll reshare our favorites. 🌿"},
+    {"branch": "article-fieldguide", "title": "Velvets, demystified", "prefer": STK+"treating-leaf-spot-on-velvets-hero.jpg",
+     "caption": "Why velvet anthuriums are so hard to tell apart — and how to actually do it. Full guide, link in bio."},
+    {"branch": "app-cta", "title": "Less than a coffee", "prefer": PLT+"plant-16.jpg",
+     "caption": "Seven days free. Then $0.99 a month — less than one coffee — for the whole collector's toolkit. Link in bio."},
+    {"branch": "article-understory", "title": "Why a leaf costs $5k", "prefer": STK+"wholesale-vs-retail-in-the-aroid-trade-hero.jpg",
+     "caption": "How does a single leaf cost more than a flight? Scarcity, slow growth, and a wall of demand. We broke down the economics — link in bio."},
+    {"branch": "article-fieldguide", "title": "Crystallinum vs clarinervium", "prefer": STK+"anthurium-clarinervium-id-gold-standard-hero.jpg",
+     "caption": "Two famous velvet hearts, endlessly confused. Our guide settles which is which, for good. Read it — link in bio."},
+    {"branch": "community-ugc", "title": "Your first rare plant", "prefer": PLT+"plant-17.jpg",
+     "caption": "Everyone remembers their first 'real' rare plant. Drop yours in the comments 👇 — the saga, the price, the panic."},
+    {"branch": "app-cta", "title": "The collector's app", "prefer": STK+"repotting-mature-anthuriums-hero.jpg",
+     "caption": "Identify, track, learn, trade — built only for rare plants, by people who grow them. Free to try. leafpeople.app"},
+    {"branch": "article-fieldguide", "title": "Pink Princess, honestly", "prefer": STK+"anthurium-magnificum-clarinervium-hybrids-hero.jpg",
+     "caption": "Pink Princess: the variegation lottery, the reversion heartbreak, the scams. The honest full guide — link in bio."},
+    {"branch": "article-understory", "title": "The Pink Congo scam", "prefer": STK+"buying-a-rare-plant-without-getting-burned-hero.jpg",
+     "caption": "How thousands got burned buying a 'pink' philodendron that turned plain green in months. The cautionary tale — link in bio."},
+    {"branch": "app-cta", "title": "Identify. Track. Trade.", "prefer": APP+"shot-04.png",
+     "caption": "Three taps from 'what is this?' to a named, tracked, traded plant. The whole loop lives in Leaf People. Link in bio."},
+    {"branch": "community-ugc", "title": "Tag us in your jungle", "prefer": PLT+"plant-15.jpg",
+     "caption": "Building a jungle? Tag @leafpeople.app — we reshare the best corners of the community every week. 🌿"},
+    {"branch": "app-cta", "title": "Start your collection", "prefer": STK+"mounting-mature-aroids-on-wood-hero.jpg",
+     "caption": "However many plants you've got, Leaf People makes them a collection. Start today — 7 days free. leafpeople.app"},
+]
+
+# EXTENDED (days 61-90) — a second wave: fresh species + more app/article/community.
+EXTENDED_POSTS = [
+    {"branch": "leaf-texture", "title": "Begonia 'Fireworks'", "prefer": PROFILE.get("begonia-rex-fireworks", ""),
+     "caption": "Silver and plum, set off like a firework. Rex begonias are painted by structure, not pigment — the leaf itself scatters light into colour."},
+    {"branch": "rainforest-beauty", "title": "Monstera obliqua", "prefer": PROFILE.get("monstera-obliqua", ""),
+     "caption": "More hole than leaf. The real M. obliqua is mostly air — and so rare that 99% of plants sold as 'obliqua' are actually adansonii. The ghost of the genus."},
+    {"branch": "velvet-anthurium", "title": "Anthurium dressleri", "prefer": PROFILE.get("anthurium-dressleri", ""),
+     "caption": "The Panama grail. Bullet-dark, velvet, and so tied to provenance that collectors trade its lineage like baseball cards."},
+    {"branch": "rarity-value", "title": "Monstera 'Aurea'", "prefer": PROFILE.get("monstera-aurea", ""),
+     "caption": "Variegation in gold. Where albo splits white, aurea marbles mustard-yellow — rarer, moodier, and a nightmare to keep balanced. Collector catnip."},
+    {"branch": "collector-culture", "title": "The plant I lost", "prefer": PLT+"plant-09.jpg",
+     "caption": "Every collector has one — the plant they killed and still think about. Rot, shock, a missed week. What did yours teach you? 👇"},
+    {"branch": "leaf-texture", "title": "Begonia ferox", "prefer": PROFILE.get("begonia-ferox", ""),
+     "caption": "The fierce one. Black-tipped bullate spikes across a puckered leaf — discovered shockingly recently in China. A begonia that looks armored."},
+    {"branch": "rainforest-beauty", "title": "Monstera dubia", "prefer": PROFILE.get("monstera-dubia", ""),
+     "caption": "The great shapeshifter. A juvenile that shingles flat against bark like coins, then matures into something unrecognizable. The best glow-up in aroids."},
+    {"branch": "app-identify", "title": "What is that?", "prefer": "",
+     "caption": "Found an unlabeled velvet at a sale? Point Leaf People at it — it names the species other apps just call 'Laceleaf.'"},
+    {"branch": "velvet-anthurium", "title": "Anthurium kunayalense", "prefer": PROFILE.get("anthurium-kunayalense", ""),
+     "caption": "Named for Guna Yala, the indigenous comarca in Panama it comes from. Every rare plant has a homeland — and a name that carries it."},
+    {"branch": "rarity-value", "title": "Monstera 'Mint'", "prefer": PROFILE.get("monstera-mint", ""),
+     "caption": "The mint unicorn. Green-on-green variegation so rare and unstable it's nearly myth — and priced like one. Most people will only see it on a screen."},
+    {"branch": "article-fieldguide", "title": "Keep a velvet alive", "prefer": STK+"light-for-velvet-aroids-hero.jpg",
+     "caption": "Want to actually keep a velvet anthurium alive? Our guide covers light, humidity, substrate and the mistakes that kill them. Link in bio."},
+    {"branch": "leaf-texture", "title": "Begonia paulensis", "prefer": PROFILE.get("begonia-paulensis", ""),
+     "caption": "Seersucker leaves — heavily puckered, glossy, ruffle-edged. A Brazilian begonia grown entirely for texture. One touch and you're hooked."},
+    {"branch": "rainforest-beauty", "title": "Monstera pinnatipartita", "prefer": PROFILE.get("monstera-pinnatipartita", ""),
+     "caption": "The climber that splits. Solid juvenile leaves tear into deep pinnate fingers once it catches a pole. Patience isn't a bug — it's the show."},
+    {"branch": "community-ugc", "title": "Your jungle wall", "prefer": PLT+"plant-12.jpg",
+     "caption": "Show us your plant wall 🌿 The greener and messier the better. Tag #leafpeople — we reshare favorites every week."},
+    {"branch": "rarity-value", "title": "Philodendron 'Jose Buono'", "prefer": PROFILE.get("philodendron-jose-buono", ""),
+     "caption": "Big paddles, bold cream splashes — and refreshingly stable. Jose Buono is the variegated philodendron that won't betray you by reverting to green."},
+    {"branch": "app-collect", "title": "Catalogue it all", "prefer": APP+"shot-05.png",
+     "caption": "Twenty plants? Two hundred? Leaf People keeps every one — what it is, how to care for it, when you last watered. Your whole jungle, in your pocket."},
+    {"branch": "leaf-texture", "title": "Begonia listada", "prefer": PROFILE.get("begonia-listada", ""),
+     "caption": "One bright stripe down deep green velvet. Begonia listada keeps it simple — herringbone texture, a chartreuse chevron, quiet confidence."},
+    {"branch": "rainforest-beauty", "title": "Burle Marx Flame", "prefer": PROFILE.get("monstera-burle-marx-flame", ""),
+     "caption": "Fenestration like fire. The flame-shaped windows set this one apart — named, like so much great planting, for Roberto Burle Marx."},
+    {"branch": "article-understory", "title": "Why a leaf costs a car", "prefer": STK+"anthurium-price-history-hero.jpg",
+     "caption": "Scarcity, slow growth, and a wall of demand. How a single leaf ends up worth more than a used car — the full breakdown, link in bio."},
+    {"branch": "rarity-value", "title": "Strawberry Shake", "prefer": PROFILE.get("philodendron-strawberry-shake", ""),
+     "caption": "Pink, cream and green confetti on every new leaf. Strawberry Shake sells itself on the flush — then settles. Chasing the perfect leaf is the game."},
+    {"branch": "collector-culture", "title": "Unboxing day", "prefer": PLT+"plant-18.jpg",
+     "caption": "Nothing beats unboxing day — bubble wrap, a heat pack, and a leaf you've wanted for a year. Best box you ever opened? 📦🌿"},
+    {"branch": "leaf-texture", "title": "Hoya 'Hindu Rope'", "prefer": PROFILE.get("hoya-hindu-rope", ""),
+     "caption": "The curled classic your grandmother grew. A mutation twists every leaf into a contorted rope — proof a 'common' plant can still be deeply strange."},
+    {"branch": "rainforest-beauty", "title": "Philodendron 'Florida Ghost'", "prefer": PROFILE.get("philodendron-florida-ghost", ""),
+     "caption": "Ghost leaves. New growth emerges spectral white and ages to deep green — a living before-and-after on one plant. Half the fun is the wait."},
+    {"branch": "app-learn", "title": "A story for every plant", "prefer": PLT+"the-leaf.jpg",
+     "caption": "We're publishing a story for all 68 plants in the app — origins, lore, the hunt. Open Leaf People to a fresh one every day. 🌿"},
+    {"branch": "rarity-value", "title": "Philodendron billietiae", "prefer": PROFILE.get("philodendron-billietiae", ""),
+     "caption": "Tangerine petioles, strap leaves, and a variegated form that broke the bank. The orange-stemmed climber that made everyone fall for petioles."},
+    {"branch": "rainforest-beauty", "title": "Hoya linearis", "prefer": PROFILE.get("hoya-linearis", ""),
+     "caption": "A waterfall of soft green needles. Linearis grows like hair off a Himalayan cliff — and hates exactly what most hoyas love. Cool, bright, a little spoiled."},
+    {"branch": "community-ugc", "title": "Name your grail", "prefer": PLT+"plant-13.jpg",
+     "caption": "Quick: the one plant you'd sell a kidney for. No wrong answers 👇 — we're building the ultimate Leaf People wishlist."},
+    {"branch": "rainforest-beauty", "title": "Hoya obovata", "prefer": PROFILE.get("hoya-obovata", ""),
+     "caption": "Round, silver-splashed, forgiving — obovata flowers like clockwork and turns houseplant people into hoya people. The friendliest gateway in the genus."},
+    {"branch": "velvet-anthurium", "title": "Anthurium cupulispathum", "prefer": PROFILE.get("anthurium-cupulispathum", ""),
+     "caption": "Deep-cut rarity. The cup-spathe anthurium you only meet far down the rabbit hole — the kind nobody at the party will recognize. That's the appeal."},
+    {"branch": "app-cta", "title": "All of it, $0.99", "prefer": APP+"shot-01.png",
+     "caption": "Identify, track, learn, trade — every plant in this feed, and the tools to keep them. One subscription, $0.99/month, 7 days free. leafpeople.app"},
+]
+
+AUTHORED = WELCOME_POSTS + SHOWCASE_POSTS + CONCEPT_POSTS + CONVERT_POSTS + EXTENDED_POSTS
 
 
 def exists(src):
@@ -334,6 +502,19 @@ def build():
     lib = [e for e in lib if exists(e["src"])]
     used = set()  # global: every chosen default is unique across posts
 
+    # Preserve already-assigned default images for existing days, so regenerating to add
+    # later days never reshuffles days the user has reviewed. (Their picker choices live in
+    # localStorage and override regardless; this keeps the underlying defaults stable too.)
+    old = {}
+    posts_path = os.path.join(ROOT, "instagram", "posts.json")
+    if os.path.exists(posts_path):
+        try:
+            for op in json.load(open(posts_path)):
+                if op.get("image"):
+                    old[op["id"]] = op["image"]
+        except Exception:
+            pass
+
     posts = []
     for i in range(N_DAYS):
         day = i + 1
@@ -342,8 +523,9 @@ def build():
             p = AUTHORED[i]
             branch = p["branch"]
             phase = BRANCHES[branch]["phase"]
-            # default = preferred image if free+real, else first branch candidate not yet used
-            order = ([p["prefer"]] if p.get("prefer") else []) + [e["src"] for e in candidates_for(branch, lib)]
+            # default = existing image (stable) -> preferred image -> first free branch candidate
+            prev = old.get(f"d{day:02d}")
+            order = ([prev] if prev else []) + ([p["prefer"]] if p.get("prefer") else []) + [e["src"] for e in candidates_for(branch, lib)]
             default = next((s for s in order if exists(s) and s not in used), "")
             if not default:
                 print(f"  ! day {day} ({branch}): no free image!")
