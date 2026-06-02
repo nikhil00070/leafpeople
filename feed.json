@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 96,
+  "count": 97,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -16,6 +16,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-warocqueanum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-warocqueanum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-warocqueanum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-spiritus-sancti",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-spiritus-sancti",
+      "title": "The Ghost of Espírito Santo",
+      "category": "Philodendron",
+      "description": "A Brazilian philodendron reduced to a handful of wild plants, the most coveted leaf in the hobby, and a conservation story disguised as a flex.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-spiritus-sancti",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-spiritus-sancti/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-spiritus-sancti-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-crystalanium",
