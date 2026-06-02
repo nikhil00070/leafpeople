@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 111,
+  "count": 112,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -146,6 +146,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-dressleri",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-dressleri/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-dressleri-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-burle-marx-flame",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-burle-marx-flame",
+      "title": "Fenestration Like Fire: The Leaf Patterns That Define Monstera Identity",
+      "category": "Monstera",
+      "description": "How flame-shaped fenestrations, the Burle Marx name, and the geometry of leaf cutting became the grammar of Monstera collecting.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-burle-marx-flame",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-burle-marx-flame/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-burle-marx-flame.jpg"
     },
     {
       "id": "the-leaf/begonia-paulensis",
