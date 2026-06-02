@@ -135,6 +135,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/monstera-adansonii-variegata.jpg"
     },
     {
+      "id": "the-leaf/anthurium-vittariifolium",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-vittariifolium",
+      "title": "The Chandelier Anthurium",
+      "category": "Anthurium",
+      "description": "Anthurium vittarifolium is unlike any houseplant. A metre of strap leaf, shocking pink berries, and a pendant habit that demands you rethink your shelves.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-vittariifolium-hero.jpg"
+    },
+    {
       "id": "the-leaf/anthurium-kunayalense",
       "section": "the-leaf",
       "section_label": "Understory",
