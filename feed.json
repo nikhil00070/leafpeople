@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-02",
-  "count": 103,
+  "count": 105,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -81,6 +81,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-melanochrysum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-melanochrysum/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-melanochrysum.jpeg"
+    },
+    {
+      "id": "the-leaf/begonia-venosa",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-venosa",
+      "title": "Felted and Strange: The Begonia That Breaks the Rules",
+      "category": "Begonia",
+      "description": "A fuzzy, succulent-leaved begonia from dry Brazilian scrub upends everything collectors think they know about the genus.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-venosa",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-venosa/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-venosa.jpg"
     },
     {
       "id": "the-leaf/anthurium-papillilaminum",
