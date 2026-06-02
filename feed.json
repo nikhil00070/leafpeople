@@ -174,6 +174,19 @@
       "image": "https://leafpeople.app/images/source/inat/anthurium-kunayalense-hero.jpg"
     },
     {
+      "id": "the-leaf/anthurium-cupulispathum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-cupulispathum",
+      "title": "The Cult of the Cup Spathe",
+      "category": "Anthurium",
+      "description": "Beyond the velvet flagships, a quieter obsession waits — cup-spathe anthuriums that reward the collector who's already seen everything else.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-cupulispathum.jpeg"
+    },
+    {
       "id": "the-leaf/watering-rare-aroids-by-weight",
       "section": "the-leaf",
       "section_label": "Understory",
