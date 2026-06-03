@@ -69,7 +69,8 @@
     }
   ],
   "slug": "meeting-the-grower-in-person",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/meeting-the-grower-in-person-hero.jpg",
+  "body_image": "/images/source/inat/meeting-the-grower-in-person.jpg",
+  "body_image_attribution": "Original madness / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "joselunasolarte / iNaturalist (CC-BY-NC)"
 }
