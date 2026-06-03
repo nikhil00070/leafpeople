@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-03",
-  "count": 117,
+  "count": 118,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1381,6 +1381,19 @@
       "url": "https://leafpeople.app/the-leaf/variegation-genetics-plain-english",
       "data_url": "https://leafpeople.app/the-leaf/variegation-genetics-plain-english/_data.json",
       "image": "https://leafpeople.app/images/source/stock/variegation-genetics-plain-english-hero.jpg"
+    },
+    {
+      "id": "the-leaf/the-broker-economy",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "the-broker-economy",
+      "title": "The Broker Economy",
+      "category": "The Market",
+      "description": "Inside the rare aroid middleman trade — who earns their cut sourcing Anthurium and Philodendron from Ecuador, and who's just skimming the spread.",
+      "date": "2026-05-04",
+      "url": "https://leafpeople.app/the-leaf/the-broker-economy",
+      "data_url": "https://leafpeople.app/the-leaf/the-broker-economy/_data.json",
+      "image": "https://leafpeople.app/images/plants/plant-15.jpg"
     },
     {
       "id": "field-guide/alocasia-spider-mites-and-corms",
