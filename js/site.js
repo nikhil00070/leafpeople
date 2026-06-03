@@ -171,13 +171,13 @@
 
   var css = document.createElement("style");
   css.textContent =
-    ".lp-wall{max-width:520px;margin:.5rem auto 1.8rem;padding:1.9rem 1.6rem;text-align:center;background:#fbfbf8;border:1px solid rgba(0,0,0,.1);border-radius:16px;box-shadow:0 12px 34px rgba(0,0,0,.07)}" +
-    ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem}" +
-    ".lp-wall p{color:#5a6b5e;max-width:44ch;margin:0 auto 1.3rem;line-height:1.5}" +
+    ".lp-wall{max-width:520px;margin:.5rem auto 1.8rem;padding:2rem 1.7rem;text-align:center;background:#0b0f0d;color:#e8efe9;border:1px solid rgba(255,255,255,.12);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.32)}" +
+    ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem;color:#f3f7f3}" +
+    ".lp-wall p{color:#b8c8bb;max-width:44ch;margin:0 auto 1.3rem;line-height:1.55}" +
     ".lp-wall .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}" +
     ".lp-wall a{display:inline-block;padding:.72rem 1.35rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:.92rem}" +
     ".lp-wall .primary{background:#FA2A52;color:#fff}" +
-    ".lp-wall .ghost{background:transparent;color:#2b3a2f;border:1px solid rgba(0,0,0,.2)}";
+    ".lp-wall .ghost{background:transparent;color:#e8efe9;border:1px solid rgba(255,255,255,.28)}";
   document.head.appendChild(css);
 
   var wall = document.createElement("div");

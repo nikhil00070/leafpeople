@@ -276,8 +276,7 @@ section { position: relative; padding: 6rem 0; }
 
 /* ------------------------------------------------------------------ Newsletter block */
 .news {
-  background: var(--card); border: 1px solid var(--border); border-radius: var(--r-card);
-  padding: 2rem; margin: 3rem 0; text-align: center;
+  padding: 1.4rem 0; margin: 2.5rem 0; text-align: center;
 }
 .news h3 { font-size: 1.5rem; margin-bottom: .5rem; }
 .news p { color: var(--text-dim); margin-bottom: 1.3rem; }
