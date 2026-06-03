@@ -161,22 +161,17 @@
   var box = document.querySelector("article.prose") || document.querySelector(".guide-wrap");
   if (!box) return;
 
-  // Free preview = deck + intro + first section; gate from the 2nd heading (fallback: ~45% in).
-  var gate = null;
-  var h2s = box.querySelectorAll("h2");
-  if (h2s.length > 1) gate = h2s[1];
-  if (!gate) {
-    var kids = Array.prototype.filter.call(box.children, function (n) { return n.offsetHeight > 0; });
-    gate = kids[Math.max(2, Math.floor(kids.length * 0.45))] || null;
-  }
-  if (!gate) return;
-
-  for (var n = gate; n; n = n.nextElementSibling) n.style.display = "none";
+  // WSJ-style: clamp the body to ~6 lines, then fade it out into the wall.
+  box.style.position = "relative";
+  box.style.maxHeight = "9.5em";
+  box.style.overflow = "hidden";
+  var fade = document.createElement("div");
+  fade.style.cssText = "position:absolute;left:0;right:0;bottom:0;height:7em;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff))";
+  box.appendChild(fade);
 
   var css = document.createElement("style");
   css.textContent =
-    ".lp-wall{position:relative;margin:1.4rem 0 0;padding:2.6rem 1.4rem 1.2rem;text-align:center}" +
-    ".lp-wall:before{content:'';position:absolute;left:0;right:0;top:-130px;height:130px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff));pointer-events:none}" +
+    ".lp-wall{margin:0 0 1.2rem;padding:.4rem 1.4rem 1.4rem;text-align:center}" +
     ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem}" +
     ".lp-wall p{color:#5a6b5e;max-width:44ch;margin:0 auto 1.3rem;line-height:1.5}" +
     ".lp-wall .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}" +
@@ -194,7 +189,7 @@
       "<a class='primary' href='https://apps.apple.com/us/app/leaf-people-rare-plant-guide/id6760627345' target='_blank' rel='noopener'>Subscribe in the app</a>" +
       "<a class='ghost' href='#' data-lp-signin>Already a subscriber? Sign in</a>" +
     "</div>";
-  gate.parentNode.insertBefore(wall, gate);
+  box.parentNode.insertBefore(wall, box.nextSibling);
 
   // Phase 2 will wire this to Firebase Auth (Sign in with Apple); placeholder for now.
   var si = wall.querySelector("[data-lp-signin]");
