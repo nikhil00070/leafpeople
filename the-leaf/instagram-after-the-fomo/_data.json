@@ -64,7 +64,8 @@
     }
   ],
   "slug": "instagram-after-the-fomo",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/instagram-after-the-fomo-hero.jpg",
+  "body_image": "/images/source/inat/instagram-after-the-fomo.jpg",
+  "body_image_attribution": "Zarek / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "Pedro H. Martins / iNaturalist (CC-BY-NC)"
 }
