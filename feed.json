@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-03",
-  "count": 118,
+  "count": 119,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1420,6 +1420,19 @@
       "url": "https://leafpeople.app/the-leaf/acclimating-a-fresh-import",
       "data_url": "https://leafpeople.app/the-leaf/acclimating-a-fresh-import/_data.json",
       "image": "https://leafpeople.app/images/plants/plant-18.jpg"
+    },
+    {
+      "id": "the-leaf/tissue-culture-and-the-rarity-premium",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "tissue-culture-and-the-rarity-premium",
+      "title": "The Lab and the Ledger",
+      "category": "The Market",
+      "description": "Tissue culture has flooded the rare plant market with once-mythical species. Here's what that actually does to price — and what it doesn't.",
+      "date": "2026-05-01",
+      "url": "https://leafpeople.app/the-leaf/tissue-culture-and-the-rarity-premium",
+      "data_url": "https://leafpeople.app/the-leaf/tissue-culture-and-the-rarity-premium/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/tissue-culture-and-the-rarity-premium-hero.jpg"
     },
     {
       "id": "field-guide/begonia-rex-care",
