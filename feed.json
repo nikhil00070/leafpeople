@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-03",
-  "count": 127,
+  "count": 128,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1147,6 +1147,19 @@
       "url": "https://leafpeople.app/the-leaf/sourcing-from-southeast-asia",
       "data_url": "https://leafpeople.app/the-leaf/sourcing-from-southeast-asia/_data.json",
       "image": "https://leafpeople.app/images/source/stock/sourcing-from-southeast-asia-hero.jpg"
+    },
+    {
+      "id": "the-leaf/instagram-after-the-fomo",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "instagram-after-the-fomo",
+      "title": "After the Gold Rush",
+      "category": "Collector Culture",
+      "description": "What's left of the rare aroid boom — the buyers, the flippers, and the collectors who never sold their _Anthurium warocqueanum_.",
+      "date": "2026-05-18",
+      "url": "https://leafpeople.app/the-leaf/instagram-after-the-fomo",
+      "data_url": "https://leafpeople.app/the-leaf/instagram-after-the-fomo/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/instagram-after-the-fomo-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-gloriosum-versus-mamei",
