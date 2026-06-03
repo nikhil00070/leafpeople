@@ -1474,6 +1474,19 @@
       "image": "https://leafpeople.app/images/source/book/light-for-velvet-aroids-hero.jpg"
     },
     {
+      "id": "the-leaf/export-licenses-what-they-protect",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "export-licenses-what-they-protect",
+      "title": "The Paper Forest",
+      "category": "The Market",
+      "description": "Export permits, phytosanitary certificates, and customs holds — what the paperwork around rare aroids really does, and what slips through anyway.",
+      "date": "2026-04-29",
+      "url": "https://leafpeople.app/the-leaf/export-licenses-what-they-protect",
+      "data_url": "https://leafpeople.app/the-leaf/export-licenses-what-they-protect/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/export-licenses-what-they-protect-hero.jpg"
+    },
+    {
       "id": "the-leaf/filial-generations-explained",
       "section": "the-leaf",
       "section_label": "Understory",
