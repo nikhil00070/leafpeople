@@ -163,7 +163,7 @@
 
   // WSJ-style: clamp the body to ~6 lines, then fade it out into the wall.
   box.style.position = "relative";
-  box.style.maxHeight = "9.5em";
+  box.style.maxHeight = "16em";
   box.style.overflow = "hidden";
   var fade = document.createElement("div");
   fade.style.cssText = "position:absolute;left:0;right:0;bottom:0;height:7em;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff))";
