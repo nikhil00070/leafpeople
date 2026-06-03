@@ -1071,6 +1071,19 @@
       "image": "https://leafpeople.app/images/source/book/anthurium-price-history-hero.jpg"
     },
     {
+      "id": "the-leaf/the-post-flush-rest",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "the-post-flush-rest",
+      "title": "The Post-Flush Rest",
+      "category": "Field Skills",
+      "description": "The quiet weeks between leaves are when an aroid actually builds itself. A field essay on the pause collectors keep trying to skip.",
+      "date": "2026-05-20",
+      "url": "https://leafpeople.app/the-leaf/the-post-flush-rest",
+      "data_url": "https://leafpeople.app/the-leaf/the-post-flush-rest/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/the-post-flush-rest-hero.jpg"
+    },
+    {
       "id": "field-guide/hoya-leaf-based-id",
       "section": "field-guide",
       "section_label": "Field Guide",
