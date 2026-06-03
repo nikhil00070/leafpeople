@@ -171,7 +171,7 @@
 
   var css = document.createElement("style");
   css.textContent =
-    ".lp-wall{margin:0 0 1.2rem;padding:.4rem 1.4rem 1.4rem;text-align:center}" +
+    ".lp-wall{max-width:520px;margin:.5rem auto 1.8rem;padding:1.9rem 1.6rem;text-align:center;background:#fbfbf8;border:1px solid rgba(0,0,0,.1);border-radius:16px;box-shadow:0 12px 34px rgba(0,0,0,.07)}" +
     ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem}" +
     ".lp-wall p{color:#5a6b5e;max-width:44ch;margin:0 auto 1.3rem;line-height:1.5}" +
     ".lp-wall .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}" +
