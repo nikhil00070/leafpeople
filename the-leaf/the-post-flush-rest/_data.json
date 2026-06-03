@@ -60,7 +60,8 @@
     }
   ],
   "slug": "the-post-flush-rest",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/the-post-flush-rest-hero.jpg",
+  "body_image": "/images/source/inat/the-post-flush-rest.jpg",
+  "body_image_attribution": "yakelinedaza / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "lianabrazil / iNaturalist (CC-BY-NC)"
 }
