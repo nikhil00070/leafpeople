@@ -61,7 +61,8 @@
     }
   ],
   "slug": "collector-burnout",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/collector-burnout-hero.jpg",
+  "body_image": "/images/source/inat/collector-burnout.jpg",
+  "body_image_attribution": "Mateo Hernandez Schmidt / iNaturalist (CC-BY-NC-SA)",
+  "hero_attribution": "Apipa / iNaturalist (CC-BY-NC)"
 }

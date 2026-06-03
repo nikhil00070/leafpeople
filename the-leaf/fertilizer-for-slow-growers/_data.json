@@ -61,7 +61,8 @@
     }
   ],
   "slug": "fertilizer-for-slow-growers",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/fertilizer-for-slow-growers-hero.jpg",
+  "body_image": "/images/source/inat/fertilizer-for-slow-growers.jpg",
+  "body_image_attribution": "wesparrish53 / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "Lydia Brühwasser / iNaturalist (CC-BY-NC)"
 }
