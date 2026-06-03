@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-03",
-  "count": 115,
+  "count": 116,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -237,6 +237,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-cutucuence",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-cutucuence/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cutucuence.jpeg"
+    },
+    {
+      "id": "the-leaf/hoya-australis-lisa",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-australis-lisa",
+      "title": "Golden Hours: The Case for Hoya australis 'Lisa'",
+      "category": "Hoya",
+      "description": "Hoya australis 'Lisa' grows fast, roots easily, and looks extraordinary. A defense of the plant wrongly filed under 'beginner.'",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-australis-lisa",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-australis-lisa/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-australis-lisa-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-corrugatum",
