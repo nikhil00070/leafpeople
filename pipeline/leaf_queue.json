@@ -426,9 +426,10 @@
     "category": "Anthurium",
     "slug": "anthurium-veitchii",
     "title_hint": "Anthurium veitchii — the KING ANTHURIUM. CRITICAL: veitchii is the King; warocqueanum is the Queen — this article is ONLY about Anthurium veitchii and must NEVER call it warocqueanum. Tell its story: the longest, most pendulous leaves of any anthurium, deeply pleated/corrugated ribbed straps reaching one to two metres; first described in 1876 and named for the Veitch nursery of Chelsea; native to Colombian cloud forest; and the collector debate between its 'narrow form' and 'wide form'.",
-    "status": "queued",
+    "status": "pending_review",
     "hero": "/images/plants/profiles/anthurium-veitchii.jpeg",
-    "body_fallback": "/images/plants/profiles/anthurium-veitchii.jpeg"
+    "body_fallback": "/images/plants/profiles/anthurium-veitchii.jpeg",
+    "published_at": "2026-06-03"
   },
   {
     "category": "Philodendron",
