@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-03",
-  "count": 124,
+  "count": 125,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1017,6 +1017,19 @@
       "url": "https://leafpeople.app/the-leaf/inspecting-a-stem-cut",
       "data_url": "https://leafpeople.app/the-leaf/inspecting-a-stem-cut/_data.json",
       "image": "https://leafpeople.app/images/source/stock/inspecting-a-stem-cut-hero.jpg"
+    },
+    {
+      "id": "the-leaf/fertilizer-for-slow-growers",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "fertilizer-for-slow-growers",
+      "title": "Feeding a Plant That Gives You Two Leaves a Year",
+      "category": "Field Skills",
+      "description": "A fertilizer strategy for the slow growers — velvet philodendrons, jewel anthuriums, and the species that refuse to be rushed.",
+      "date": "2026-05-22",
+      "url": "https://leafpeople.app/the-leaf/fertilizer-for-slow-growers",
+      "data_url": "https://leafpeople.app/the-leaf/fertilizer-for-slow-growers/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/fertilizer-for-slow-growers-hero.jpg"
     },
     {
       "id": "field-guide/epipremnum-fenestration-timeline",
