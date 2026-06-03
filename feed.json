@@ -1279,6 +1279,19 @@
       "image": "https://leafpeople.app/images/source/book/photographing-collector-plants-hero.jpg"
     },
     {
+      "id": "the-leaf/meeting-the-grower-in-person",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "meeting-the-grower-in-person",
+      "title": "What You Learn About a Grower Only by Standing in Their Greenhouse",
+      "category": "Collector Culture",
+      "description": "After a year of DMs and Venmo receipts, visiting the grower in person rewires what you thought you knew about plants, trust, and price.",
+      "date": "2026-05-11",
+      "url": "https://leafpeople.app/the-leaf/meeting-the-grower-in-person",
+      "data_url": "https://leafpeople.app/the-leaf/meeting-the-grower-in-person/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/meeting-the-grower-in-person-hero.jpg"
+    },
+    {
       "id": "field-guide/syngonium-rare-cultivars",
       "section": "field-guide",
       "section_label": "Field Guide",
