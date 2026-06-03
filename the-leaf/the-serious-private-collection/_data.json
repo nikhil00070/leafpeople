@@ -61,7 +61,8 @@
     }
   ],
   "slug": "the-serious-private-collection",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/the-serious-private-collection-hero.jpg",
+  "body_image": "/images/source/inat/the-serious-private-collection.jpg",
+  "body_image_attribution": "dscherberich / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "Bri B / iNaturalist (CC-BY-NC)"
 }

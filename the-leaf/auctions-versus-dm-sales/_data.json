@@ -59,7 +59,8 @@
     }
   ],
   "slug": "auctions-versus-dm-sales",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/auctions-versus-dm-sales-hero.jpg",
+  "body_image": "/images/source/inat/auctions-versus-dm-sales.jpg",
+  "body_image_attribution": "shiguangshi / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "江国彬 / iNaturalist (CC-BY-NC)"
 }

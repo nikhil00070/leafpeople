@@ -61,7 +61,8 @@
     }
   ],
   "slug": "the-broker-economy",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/plants/plant-15.jpg",
+  "body_image": "/images/plants/profiles/philodendron-strawberry-shake.jpg",
+  "body_image_attribution": "Leaf People",
+  "hero_attribution": "Leaf People"
 }
