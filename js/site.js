@@ -166,7 +166,7 @@
   box.style.maxHeight = "24em";
   box.style.overflow = "hidden";
   var fade = document.createElement("div");
-  fade.style.cssText = "position:absolute;left:0;right:0;bottom:0;height:7em;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff))";
+  fade.style.cssText = "position:absolute;left:0;right:0;bottom:0;height:5em;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff))";
   box.appendChild(fade);
 
   var css = document.createElement("style");
