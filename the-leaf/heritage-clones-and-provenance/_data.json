@@ -61,7 +61,8 @@
     }
   ],
   "slug": "heritage-clones-and-provenance",
-  "hero": "/images/source/p50.jpg",
-  "body_image": "/images/source/p50.jpg",
-  "image_needs_review": true
+  "hero": "/images/source/inat/heritage-clones-and-provenance-hero.jpg",
+  "body_image": "/images/source/inat/heritage-clones-and-provenance.jpg",
+  "body_image_attribution": "sofiamp1 / iNaturalist (CC-BY-NC)",
+  "hero_attribution": "anis22004190 / iNaturalist (CC-BY-NC)"
 }
