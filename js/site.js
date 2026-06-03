@@ -147,3 +147,56 @@
     });
   });
 })();
+
+/* ===== Subscriber wall (Phase 1: visible only) =====
+   Real enforcement comes from edge middleware in a later phase — this just renders the wall.
+   OFF by default; preview any article with ?paywall=1. Flip PAYWALL_ON to true to show it live. */
+(function () {
+  "use strict";
+  var PAYWALL_ON = false;
+  var preview = location.search.indexOf("paywall=1") !== -1;
+  if (!(PAYWALL_ON || preview)) return;
+  if (!/^\/(the-leaf|field-guide)\//.test(location.pathname)) return;
+
+  var box = document.querySelector("article.prose") || document.querySelector(".guide-wrap");
+  if (!box) return;
+
+  // Free preview = deck + intro + first section; gate from the 2nd heading (fallback: ~45% in).
+  var gate = null;
+  var h2s = box.querySelectorAll("h2");
+  if (h2s.length > 1) gate = h2s[1];
+  if (!gate) {
+    var kids = Array.prototype.filter.call(box.children, function (n) { return n.offsetHeight > 0; });
+    gate = kids[Math.max(2, Math.floor(kids.length * 0.45))] || null;
+  }
+  if (!gate) return;
+
+  for (var n = gate; n; n = n.nextElementSibling) n.style.display = "none";
+
+  var css = document.createElement("style");
+  css.textContent =
+    ".lp-wall{position:relative;margin:1.4rem 0 0;padding:2.6rem 1.4rem 1.2rem;text-align:center}" +
+    ".lp-wall:before{content:'';position:absolute;left:0;right:0;top:-130px;height:130px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg,#fff));pointer-events:none}" +
+    ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem}" +
+    ".lp-wall p{color:#5a6b5e;max-width:44ch;margin:0 auto 1.3rem;line-height:1.5}" +
+    ".lp-wall .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}" +
+    ".lp-wall a{display:inline-block;padding:.72rem 1.35rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:.92rem}" +
+    ".lp-wall .primary{background:#FA2A52;color:#fff}" +
+    ".lp-wall .ghost{background:transparent;color:#2b3a2f;border:1px solid rgba(0,0,0,.2)}";
+  document.head.appendChild(css);
+
+  var wall = document.createElement("div");
+  wall.className = "lp-wall";
+  wall.innerHTML =
+    "<h3>Keep reading with Leaf People</h3>" +
+    "<p>The rest of this story is for subscribers. One Leaf People subscription unlocks every Understory feature and Field Guide — in the app and here on the web.</p>" +
+    "<div class='btns'>" +
+      "<a class='primary' href='https://apps.apple.com/us/app/leaf-people-rare-plant-guide/id6760627345' target='_blank' rel='noopener'>Subscribe in the app</a>" +
+      "<a class='ghost' href='#' data-lp-signin>Already a subscriber? Sign in</a>" +
+    "</div>";
+  gate.parentNode.insertBefore(wall, gate);
+
+  // Phase 2 will wire this to Firebase Auth (Sign in with Apple); placeholder for now.
+  var si = wall.querySelector("[data-lp-signin]");
+  if (si) si.addEventListener("click", function (e) { e.preventDefault(); alert("Web sign-in is coming soon — for now, subscribe in the app."); });
+})();
