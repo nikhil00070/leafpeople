@@ -2,6 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/the-leaf/(.*)/_data.json", "destination": "/_blocked" },
+    { "source": "/field-guide/(.*)/_data.json", "destination": "/_blocked" },
     { "source": "/the-leaf", "destination": "/the-leaf/index.html" },
     { "source": "/field-guide", "destination": "/field-guide/index.html" },
     { "source": "/privacy", "destination": "/privacy/index.html" },
