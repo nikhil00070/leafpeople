@@ -25,6 +25,7 @@ Phase 1 is MANUAL-ASSIST. Re-run to regenerate from scratch.
 
 import json
 import os
+import re
 import glob
 from datetime import date, timedelta
 
@@ -281,7 +282,7 @@ def build_library(articles=None):
     # published article. Owned shots ("Leaf People") carry no credit; iNat/stock
     # shots carry the photographer attribution so it can be appended when posting.
     for a in (articles or []):
-        br = article_image_branches(a.get("category", ""))
+        br = article_image_branches(a.get("_category") or a.get("category") or "")
         for src, attr in ((a.get("hero"), a.get("hero_attribution")),
                           (a.get("body_image"), a.get("body_image_attribution"))):
             if not src:
@@ -528,13 +529,30 @@ AUTHORED = WELCOME_POSTS + SHOWCASE_POSTS + CONCEPT_POSTS + CONVERT_POSTS + EXTE
 
 
 # ============================================================================
-# REST-OF-YEAR (days 91-213) — one spotlight per published story.
-# Each post draws its image straight from THAT story's curated hero/body picks,
-# so the species always matches the photo (a gloriosum post uses gloriosum imagery,
-# by construction). No image repeats across the whole calendar (global `used` set);
-# stories whose lead image was already used in days 1-90 fall back to their other
-# curated image. Captions are seeded from each article's deck + a "link in bio" CTA.
+# REST-OF-YEAR (days 91-213) — one spotlight per published story, iNat-ONLY.
+#
+# Hard rules (the user's): every rest-of-year post uses an external iNaturalist /
+# CC in-habitat photo — NEVER one of our own studio photos (those are reserved for
+# days 1-90 and reusing them reads as a repeat). The image is always one the user
+# curated as that article's hero/body, so the species matches the picture by
+# construction (a gloriosum post shows a gloriosum). No photo appears twice anywhere
+# in the 213-day calendar. Species are unique too, with one allowance: to reach
+# Dec 31 we let ~17 species already shown in days 1-90 reappear ONCE more, but only
+# with a *different* wild iNat photo (two-pass fill: fresh species first, then a
+# single distinct-photo recurrence per species). Captions seed from the deck + CTA.
 # ============================================================================
+
+# Pulls from BOTH article sets: the-leaf/ (Understory) and field-guide/ (per-species guides).
+ARTICLE_SECTIONS = ["the-leaf", "field-guide"]
+
+# Genus prefixes that mark a slug as a *species* post (for the no-species-repeat rule).
+GENERA = {
+    "anthurium", "philodendron", "monstera", "hoya", "begonia", "alocasia", "syngonium",
+    "scindapsus", "epipremnum", "aglaonema", "rhaphidophora", "amydrium", "homalomena",
+    "caladium", "dieffenbachia", "spathiphyllum", "colocasia", "amorphophallus",
+    "schismatoglottis", "philodendrons", "anthuriums",
+}
+SPECIES_CATS = ["Anthurium", "Philodendron", "Monstera", "Hoya", "Begonia"]
 
 # Species categories -> rotating beauty branches (keeps the calendar colourful and
 # lets the bandit learn which genus/angle performs). Story categories -> convert/community.
@@ -544,13 +562,13 @@ ROY_BRANCHES = {
     "Monstera":          ["rainforest-beauty", "jungle-escape", "rarity-value"],
     "Hoya":              ["rainforest-beauty", "leaf-texture"],
     "Begonia":           ["leaf-texture", "rainforest-beauty"],
+    "Other Species":     ["rainforest-beauty", "leaf-texture", "jungle-escape"],
     "The Market":        ["rarity-value", "article-understory"],
     "Collector Culture": ["collector-culture", "community-ugc", "article-understory"],
     "Field Skills":      ["app-learn", "article-fieldguide"],
 }
-SPECIES_CATS = ["Anthurium", "Philodendron", "Monstera", "Hoya", "Begonia"]
 # round-robin interleave order so consecutive days vary in genus/branch/colour
-INTERLEAVE = ["Anthurium", "Philodendron", "The Market", "Hoya",
+INTERLEAVE = ["Anthurium", "Philodendron", "The Market", "Hoya", "Other Species",
               "Collector Culture", "Monstera", "Field Skills", "Begonia"]
 ROY_TAIL = {
     "The Market":        "\n\nThe economics, in full — link in bio.",
@@ -560,16 +578,49 @@ ROY_TAIL = {
 SPECIES_TAIL = "\n\nFull field guide on Leaf People — link in bio. 🌿"
 
 
+def is_inat(src):
+    """An external iNaturalist / CC in-habitat photo (never one of our studio shots)."""
+    return bool(src) and ("/images/source/inat/" in src or "/images/source/stock/" in src)
+
+
+def species_key(slug):
+    """The genus-species identity of a plant slug (first two tokens), else None.
+    Collapsing to genus+species means a story and a field guide about the SAME plant —
+    or a comparison article like `philodendron-gloriosum-versus-mamei` and the dedicated
+    `philodendron-gloriosum` guide — dedupe to one post. Errs toward never repeating a
+    plant in the new wave (a couple of near-identical cultivars collapse too; acceptable)."""
+    parts = (slug or "").split("-")
+    return "-".join(parts[:2]) if (parts and parts[0] in GENERA and len(parts) >= 2) else None
+
+
+def article_category(d):
+    """Normalise a category across both article sets (field-guide uses `genus`)."""
+    cat = d.get("category")
+    if cat in ROY_BRANCHES:
+        return cat
+    genus = (d.get("genus") or "").strip().title()
+    if genus in SPECIES_CATS:
+        return genus
+    if species_key(d.get("slug", "")):
+        return "Other Species"
+    return "Field Skills"
+
+
 def load_articles():
     arts = []
-    for dj in sorted(glob.glob(os.path.join(ROOT, "the-leaf", "*", "_data.json"))):
-        try:
-            d = json.loads(open(dj).read())
-        except Exception:
-            continue
-        if not d.get("slug") or not d.get("category"):
-            continue
-        arts.append(d)
+    seen = set()
+    for sec in ARTICLE_SECTIONS:
+        for dj in sorted(glob.glob(os.path.join(ROOT, sec, "*", "_data.json"))):
+            try:
+                d = json.loads(open(dj).read())
+            except Exception:
+                continue
+            slug = d.get("slug")
+            if not slug or slug in seen:
+                continue
+            seen.add(slug)
+            d["_category"] = article_category(d)
+            arts.append(d)
     return arts
 
 
@@ -577,29 +628,32 @@ def article_image_branches(category):
     """Branches an article's hero/body image suits, for the library + picker."""
     b = set(ROY_BRANCHES.get(category, ["rainforest-beauty"]))
     b |= {"article-fieldguide", "article-understory", "community-ugc"}
-    if category in SPECIES_CATS:
+    if category in SPECIES_CATS or category == "Other Species":
         b |= {"welcome-leafpeople"}
     return sorted(b)
 
 
 def roy_caption(art):
     deck = (art.get("deck") or art.get("meta_description") or "").strip()
-    cat = art.get("category", "")
-    tail = SPECIES_TAIL if cat in SPECIES_CATS else ROY_TAIL.get(cat, "\n\nRead it — link in bio. 🌿")
+    deck = re.sub(r"[_*]", "", deck)  # drop markdown emphasis from the deck
+    cat = art.get("_category", "")
+    species = cat in SPECIES_CATS or cat == "Other Species"
+    tail = SPECIES_TAIL if species else ROY_TAIL.get(cat, "\n\nRead it — link in bio. 🌿")
     return deck + tail
 
 
-def build_roy_posts():
-    """One post per published story, interleaved by category for day-to-day variety.
-    Returns authored-post dicts (branch/title/caption/prefer_list) for the build loop."""
+def build_roy_specs():
+    """One spec per published story, interleaved by category for day-to-day variety.
+    Each carries its iNat-only candidate images (the curated hero/body picks), its
+    species key (for the no-repeat rule), branch and caption. Image *selection* and
+    dedup happen in build() once days 1-90 are assigned."""
     arts = load_articles()
     by_cat = {}
     for a in arts:
-        by_cat.setdefault(a["category"], []).append(a)
+        by_cat.setdefault(a["_category"], []).append(a)
     for cat in by_cat:
         by_cat[cat].sort(key=lambda a: a["slug"])  # deterministic
 
-    counters = {cat: 0 for cat in ROY_BRANCHES}
     order, idx = [], {cat: 0 for cat in by_cat}
     remaining = sum(len(v) for v in by_cat.values())
     while remaining:
@@ -607,46 +661,36 @@ def build_roy_posts():
             lst = by_cat.get(cat, [])
             if idx[cat] < len(lst):
                 order.append(lst[idx[cat]]); idx[cat] += 1; remaining -= 1
+        # any category not in INTERLEAVE (shouldn't happen) — drain it too
+        for cat in by_cat:
+            if cat not in INTERLEAVE and idx[cat] < len(by_cat[cat]):
+                order.append(by_cat[cat][idx[cat]]); idx[cat] += 1; remaining -= 1
 
-    posts = []
+    counters = {}
+    specs = []
     for a in order:
-        cat = a["category"]
+        cat = a["_category"]
         rot = ROY_BRANCHES.get(cat, ["rainforest-beauty"])
         branch = rot[counters.get(cat, 0) % len(rot)]
         counters[cat] = counters.get(cat, 0) + 1
-        # curated picks first (hero is the article's lead image, then the body image),
-        # both guaranteed to be the right species for a species story.
-        prefer_list = [s for s in (a.get("hero"), a.get("body_image")) if s]
-        posts.append({
+        # iNat-only candidates, in the user's curated order (hero lead, then body).
+        inat_imgs = [s for s in (a.get("hero"), a.get("body_image"))
+                     if is_inat(s) and exists(s)]
+        if not inat_imgs:
+            continue  # no external in-habitat photo for this story — skip (never use a studio shot)
+        specs.append({
             "branch": branch,
             "title": a.get("title", a["slug"]),
             "caption": roy_caption(a),
-            "prefer_list": prefer_list,
+            "inat_imgs": inat_imgs,
             "slug": a["slug"],
-            # species posts are image-strict: ONLY their own curated photos are
-            # acceptable (a Monstera story must never show a Philodendron). If none
-            # is free, the post is dropped and a beauty top-up takes the slot.
-            "species": cat in SPECIES_CATS,
+            "species": species_key(a["slug"]),
         })
-    return posts
+    return specs
 
 
 def exists(src):
     return os.path.exists(os.path.join(ROOT, src.lstrip("/")))
-
-
-def build_topups(n):
-    """Pure-beauty showcase posts to top up any days the stories don't cover.
-    No preferred image — the loop fills each from the first unused on-branch photo."""
-    beauty = ["rainforest-beauty", "velvet-anthurium", "leaf-texture", "rarity-value", "jungle-escape"]
-    out = []
-    for i in range(max(0, n)):
-        out.append({
-            "branch": beauty[i % len(beauty)], "title": "Rare & beautiful",
-            "caption": "More from the rarest corners of the rainforest — a fresh rare-plant story every day on Leaf People. \U0001F33F leafpeople.app",
-            "prefer_list": [],
-        })
-    return out
 
 
 def build():
@@ -667,36 +711,76 @@ def build():
         except Exception:
             pass
 
-    # Full-year line-up: the original authored arc (days 1-90), then one spotlight per
-    # published story (rest-of-year wave), then beauty top-ups to fill out to Dec 31.
-    queue = AUTHORED + build_roy_posts()
-    used = set()      # global: every chosen image is unique across the calendar
-    assigned = []     # (post-spec, image) in final order; dropped specs are skipped
+    used = set()          # every chosen image — unique across the whole 213-day calendar
+    used_species = set()  # every species shown so far — enforces the no-species-repeat rule
+    assigned = []         # (spec, image) in final day order
 
-    def pick_image(p, day_hint):
-        prev = old.get(f"d{day_hint:02d}") if day_hint else None
-        prefers = p.get("prefer_list") or ([p["prefer"]] if p.get("prefer") else [])
-        order = ([prev] if prev else []) + list(prefers)
-        if not p.get("species"):            # non-species posts may fall back to any on-branch photo
-            order += [e["src"] for e in candidates_for(p["branch"], lib)]
-        return next((s for s in order if s and exists(s) and s not in used), "")
+    def img_species(src):
+        base = re.sub(r"-(hero|body)$", "", os.path.splitext(os.path.basename(src or ""))[0])
+        return species_key(base)
 
-    for idx, p in enumerate(queue):
-        img = pick_image(p, idx + 1 if idx < len(AUTHORED) else 0)
-        if not img:
-            if p.get("species"):
-                continue  # image-strict species post with no free own-species photo — drop it
-            print(f"  ! ({p['branch']}): no free image, kept empty")
+    def take(spec, img):
         used.add(img)
-        assigned.append((p, img))
+        sp = spec.get("species") or img_species(img)
+        if sp:
+            used_species.add(sp)
+        assigned.append((spec, img))
+
+    # --- Days 1-90: the original authored arc (keeps its studio photos, preserved as-is). ---
+    for idx, p in enumerate(AUTHORED):
+        prev = old.get(f"d{idx + 1:02d}")
+        prefers = p.get("prefer_list") or ([p["prefer"]] if p.get("prefer") else [])
+        order = ([prev] if prev else []) + list(prefers) + [e["src"] for e in candidates_for(p["branch"], lib)]
+        img = next((s for s in order if s and exists(s) and s not in used), "")
+        take(p, img)
+
+    # --- Days 91-213: iNat-ONLY story spotlights. Two-pass fill. ---
+    specs = build_roy_specs()
+    taken = [False] * len(specs)
+    new_plants = set()  # plants already used in the NEW wave — never repeat one within days 91-213
+
+    # Pass A — fresh species (and non-species stories): one post per plant NOT shown anywhere
+    # yet (days 1-90 or earlier in the new wave), always an external in-habitat photo.
+    for i, s in enumerate(specs):
         if len(assigned) >= N_DAYS:
             break
+        if s["species"] and s["species"] in used_species:
+            continue
+        img = next((c for c in s["inat_imgs"] if c not in used), "")
+        if not img:
+            continue
+        take(s, img); taken[i] = True
+        if s["species"]:
+            new_plants.add(s["species"])
 
-    # Top up any remaining days with pure-beauty showcase posts (generic caption, any free photo).
-    for tp in build_topups(N_DAYS - len(assigned)):
-        img = pick_image(tp, 0)
-        used.add(img)
-        assigned.append((tp, img))
+    # Pass B — fill to year-end: allow a plant shown only in days 1-90 to reappear ONCE more,
+    # with a *different* unused wild iNat photo. Never a plant already used in the new wave.
+    for i, s in enumerate(specs):
+        if len(assigned) >= N_DAYS:
+            break
+        if taken[i] or (s["species"] and s["species"] in new_plants):
+            continue
+        img = next((c for c in s["inat_imgs"] if c not in used), "")
+        if not img:
+            continue
+        take(s, img); taken[i] = True
+        if s["species"]:
+            new_plants.add(s["species"])
+
+    # Pass C (safety net) — if the stories still don't reach Dec 31, any unused external
+    # iNat photo from the library, as a generic beauty post. (Normally unused.)
+    if len(assigned) < N_DAYS:
+        beauty = ["rainforest-beauty", "leaf-texture", "rarity-value"]
+        bi = 0
+        for e in lib:
+            if len(assigned) >= N_DAYS:
+                break
+            if not is_inat(e["src"]) or e["src"] in used:
+                continue
+            take({"branch": beauty[bi % len(beauty)], "title": "Rare & beautiful", "species": None,
+                  "caption": "More from the rarest corners of the rainforest — a fresh rare-plant story every day on Leaf People. \U0001F33F leafpeople.app"},
+                 e["src"])
+            bi += 1
 
     posts = []
     for i, (p, img) in enumerate(assigned[:N_DAYS]):
