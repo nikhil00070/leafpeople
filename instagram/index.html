@@ -113,6 +113,14 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 .tagchips { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.4rem; }
 .chip { font-size:.7rem; background:var(--card2); border:1px solid var(--border); color:var(--dim); padding:1px 7px; border-radius:99px; }
 .close { position:absolute; top:1.2rem; right:1.4rem; color:#fff; font-size:1.6rem; cursor:pointer; z-index:60; }
+/* prev / next day arrows */
+.navarrow { position:fixed; top:50%; transform:translateY(-50%); width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-family:'Geologica',sans-serif; font-size:1.9rem; line-height:1; color:#fff; background:rgba(20,26,22,.78); border:1px solid var(--border); border-radius:50%; cursor:pointer; z-index:60; user-select:none; transition:background .12s,color .12s; }
+.navarrow:hover { background:var(--green); color:#06140c; border-color:var(--green); }
+.navarrow.prev { left:max(1rem, calc(50% - 520px)); }
+.navarrow.next { right:max(1rem, calc(50% - 520px)); }
+.navarrow.disabled { opacity:.22; pointer-events:none; }
+.overlay:not(.open) .navarrow { display:none; }
+@media (max-width:980px){ .navarrow.prev{left:.4rem} .navarrow.next{right:.4rem} }
 .copied { color:var(--green); font-size:.75rem; margin-left:.4rem; }
 @media (max-width:980px){ .tiles{grid-template-columns:repeat(2,1fr)} .cols{grid-template-columns:1fr} .modal{grid-template-columns:1fr} }
 @media (max-width:680px){ .cal,.cal-head{grid-template-columns:repeat(2,1fr)} .cal-head{display:none} }
@@ -122,7 +130,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 <div class="wrap">
 <header>
   <h1>Instagram funnel</h1>
-  <p class="note">Your 60-day growth calendar. Days 1–15 are written intro posts; days 16–60 are skeletons the learning loop re-biases as real numbers come in. <b>Phase 1 is manual:</b> open a day, hit <b>Copy caption</b>, post it on Instagram, then type the likes/comments back in here — the dashboard and branch recommendations update live. Don't like an image? Hit <b>↻ refresh</b> to cycle the candidate pool. Private page (noindex).</p>
+  <p class="note">Your full-year growth calendar — 213 posts, Jun 2 → Dec 31, every day authored. Days 1–90 are the original launch arc; days 91–213 are a story-a-day wave, each post a spotlight on a published Understory / Field-Guide article using that story's own curated photo (species always matches the picture). <b>Phase 1 is manual:</b> open a day, hit <b>Copy caption</b>, post it on Instagram, then type the likes/comments back in here — the dashboard and branch recommendations update live. Step through days with the <b>‹ ›</b> arrows (or ← → keys). Don't like an image? Hit <b>↻ refresh</b> to cycle the candidate pool. Private page (noindex).</p>
   <button onclick="if(confirm('Reset all your image picks, metrics and posted flags?')){localStorage.removeItem(LS);location.reload();}" style="margin-top:.6rem;background:transparent;border:1px solid var(--border);color:var(--faint);border-radius:8px;padding:.4rem .8rem;font:inherit;font-size:.78rem;cursor:pointer">↺ Reset my choices</button>
 </header>
 
@@ -136,13 +144,15 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
   <div class="panel" style="grid-column:1/-1"><h3>Fortnightly goals</h3><div id="goals"></div></div>
 </div>
 
-<div class="eyebrow">Content calendar — 60 days</div>
+<div class="eyebrow">Content calendar — full year (213 days)</div>
 <div class="cal-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
 <div class="cal" id="cal"></div>
 </div>
 
 <div class="overlay" id="overlay">
   <span class="close" onclick="closeModal()">×</span>
+  <span class="navarrow prev" onclick="navPost(-1)" title="Previous day (←)">‹</span>
+  <span class="navarrow next" onclick="navPost(1)" title="Next day (→)">›</span>
   <div class="modal" id="modal"></div>
 </div>
 
@@ -371,10 +381,34 @@ function openModal(id){
   document.getElementById("modal").querySelectorAll('input[data-m]').forEach(inp=>{
     inp.addEventListener("change", e=>{ const k=e.target.dataset.m; const o=ps(CUR); o.metrics=o.metrics||{}; o.metrics[k]=+e.target.value||0; save(); rerender(); });
   });
+  // enable/disable the prev/next arrows at the ends of the calendar
+  const pi = POSTS.findIndex(p=>p.id===id);
+  document.querySelector(".navarrow.prev").classList.toggle("disabled", pi<=0);
+  document.querySelector(".navarrow.next").classList.toggle("disabled", pi>=POSTS.length-1);
   document.getElementById("overlay").classList.add("open");
 }
 function closeModal(){ document.getElementById("overlay").classList.remove("open"); CUR=null; }
+// step to the previous/next day's post without closing the modal
+function navPost(dir){
+  if(CUR==null) return;
+  const i = POSTS.findIndex(p=>p.id===CUR);
+  const j = i + dir;
+  if(j<0 || j>=POSTS.length) return;
+  openModal(POSTS[j].id);
+  document.getElementById("overlay").scrollTop = 0;
+}
 document.getElementById("overlay").addEventListener("click", e=>{ if(e.target.id==="overlay") closeModal(); });
+// keyboard: ← / → step between days, Esc closes (ignored while typing in a field)
+document.addEventListener("keydown", e=>{
+  if(!document.getElementById("overlay").classList.contains("open")) return;
+  if(e.key==="Escape"){ closeModal(); return; }
+  if(e.key==="ArrowRight" || e.key==="ArrowLeft"){
+    const ae=document.activeElement;
+    if(ae && (ae.tagName==="INPUT" || ae.tagName==="TEXTAREA")) return;
+    e.preventDefault();
+    navPost(e.key==="ArrowRight" ? 1 : -1);
+  }
+});
 
 function pickImg(src){ const o = ps(CUR); o.img = src; save(); openModal(CUR); rerenderCalOnly(); }
 function refreshImg(){

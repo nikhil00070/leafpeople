@@ -583,8 +583,12 @@
   {
     "src": "/images/plants/the-leaf.jpg",
     "branches": [
-      "rainforest-beauty",
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
+      "rainforest-beauty",
       "welcome-leafpeople"
     ],
     "kind": "mood",
@@ -825,9 +829,13 @@
   {
     "src": "/images/plants/plant-15.jpg",
     "branches": [
-      "rainforest-beauty",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
       "welcome-leafpeople",
       "app-identify",
       "app-collect",
@@ -861,14 +869,17 @@
   {
     "src": "/images/plants/plant-18.jpg",
     "branches": [
-      "rainforest-beauty",
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "leaf-texture",
+      "rainforest-beauty",
       "welcome-leafpeople",
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "mood",
@@ -1705,9 +1716,30 @@
   {
     "src": "/images/source/stock/anatomy-of-an-aroid-inflorescence-hero.jpg",
     "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "leaf-texture",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-ace-of-spades-hero.jpg",
+    "branches": [
       "article-fieldguide",
       "jungle-escape",
       "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
       "app-identify",
       "app-collect",
       "app-track-care",
@@ -1715,10 +1747,48 @@
       "app-cta"
     ],
     "kind": "stock",
-    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-antolakii-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
   },
   {
     "src": "/images/source/stock/anthurium-besseae-aff-complex-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-carla-blackie-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -1756,7 +1826,159 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/anthurium-corrugatum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-crystalanium-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/anthurium-crystallinum-vs-clarinervium-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-cupulispathum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-cutucuence-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-dark-mama-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-dressleri-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-forgetii-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-kunayalense-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -1814,6 +2036,44 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/anthurium-morona-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-papillilaminum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/anthurium-regale-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -1822,6 +2082,130 @@
       "rarest-jungle",
       "rarity-value",
       "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-veitchii-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-vittariifolium-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-warocqueanum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anthurium-wendlingeri-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-caravan-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-dinhdui-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-ferox-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
       "welcome-leafpeople",
       "app-identify",
       "app-collect",
@@ -1849,6 +2233,22 @@
     "credit": "Yoannis Dom\u00ednguez / iNaturalist (CC BY 4.0)"
   },
   {
+    "src": "/images/source/stock/begonia-listada-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/begonia-luxurians-palm-leaf-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -1856,6 +2256,38 @@
       "leaf-texture",
       "rainforest-beauty",
       "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-maculata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-paulensis-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
       "welcome-leafpeople",
       "app-identify",
       "app-collect",
@@ -1881,6 +2313,70 @@
     ],
     "kind": "stock",
     "credit": "Yoannis Dom\u00ednguez / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-escargot-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-fireworks-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-mclauchlan-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/begonia-venosa-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
   },
   {
     "src": "/images/source/stock/buying-a-rare-plant-without-getting-burned-hero.jpg",
@@ -1929,12 +2425,14 @@
   {
     "src": "/images/source/stock/cataphylls-and-maturity-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "leaf-texture",
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "stock",
@@ -2016,9 +2514,17 @@
     "src": "/images/source/stock/filial-generations-explained-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
-      "welcome-leafpeople"
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
     ],
     "kind": "stock",
     "credit": "iNaturalist (CC BY)"
@@ -2052,6 +2558,31 @@
   },
   {
     "src": "/images/source/stock/how-rare-plant-instagram-works-as-a-market-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-australis-lisa-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-callistophylla-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2095,7 +2626,62 @@
     "credit": "Takaaki Hattori / iNaturalist (CC BY 4.0)"
   },
   {
+    "src": "/images/source/stock/hoya-hindu-rope-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-kentiana-variegata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/hoya-kerrii-beyond-novelty-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-kerrii-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-krimson-princess-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-krimson-queen-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2117,6 +2703,39 @@
     "credit": "luluchouette / iNaturalist (CC BY 4.0)"
   },
   {
+    "src": "/images/source/stock/hoya-linearis-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-obovata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/hoya-pubicalyx-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/hoya-pubicalyx-reblooming-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -2130,7 +2749,10 @@
   {
     "src": "/images/source/stock/humidity-cabinets-versus-tents-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2142,6 +2764,25 @@
     "src": "/images/source/stock/inspecting-a-stem-cut-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-adansonii-archipelago-hero.jpg",
+    "branches": [
+      "article-fieldguide",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2150,7 +2791,40 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
-    "src": "/images/source/stock/monstera-adansonii-archipelago-hero.jpg",
+    "src": "/images/source/stock/monstera-adansonii-variegata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-albo-variegata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-aurea-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-burle-marx-flame-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2172,7 +2846,40 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/monstera-dubia-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/monstera-dubia-transformation-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-mint-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-obliqua-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2194,6 +2901,17 @@
     "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
   },
   {
+    "src": "/images/source/stock/monstera-pinnatipartita-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/monstera-siltepecana-el-salvador-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -2205,7 +2923,40 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/monstera-siltepecana-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/monstera-standleyana-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-standleyana-variegata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "welcome-leafpeople"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/monstera-thai-constellation-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2229,7 +2980,10 @@
   {
     "src": "/images/source/stock/mounting-mature-aroids-on-wood-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2240,7 +2994,10 @@
   {
     "src": "/images/source/stock/node-cuttings-what-survives-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2283,6 +3040,91 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/philodendron-blizzard-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-burle-marx-variegata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-florida-ghost-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-gigas-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-gloriosum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -2298,6 +3140,40 @@
     ],
     "kind": "stock",
     "credit": "Kevin Faccenda / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-green-congo-nuclear-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-jose-buono-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
   },
   {
     "src": "/images/source/stock/philodendron-luxurians-hero.jpg",
@@ -2351,7 +3227,75 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/philodendron-melanochrysum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-orange-marmalade-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-paraiso-verde-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/philodendron-pastazanum-care-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-pink-princess-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2385,7 +3329,92 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/philodendron-spiritus-sancti-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-squamiferum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-strawberry-shake-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-tortum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/philodendron-verrucosum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-white-knight-hero.jpg",
     "branches": [
       "article-fieldguide",
       "jungle-escape",
@@ -2405,6 +3434,9 @@
     "src": "/images/source/stock/plant-labels-what-your-handwriting-reveals-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2416,6 +3448,9 @@
     "src": "/images/source/stock/plants-i-almost-bought-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2426,7 +3461,10 @@
   {
     "src": "/images/source/stock/pollinating-aroids-at-home-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2449,9 +3487,17 @@
     "src": "/images/source/stock/pricing-a-plant-nobody-else-has-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
-      "welcome-leafpeople"
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
     ],
     "kind": "stock",
     "credit": "iNaturalist (CC BY)"
@@ -2459,7 +3505,10 @@
   {
     "src": "/images/source/stock/quarantine-protocol-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2470,13 +3519,15 @@
   {
     "src": "/images/source/stock/reading-aroid-roots-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "leaf-texture",
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "stock",
@@ -2485,13 +3536,15 @@
   {
     "src": "/images/source/stock/reading-aroid-venation-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "leaf-texture",
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "stock",
@@ -2500,7 +3553,10 @@
   {
     "src": "/images/source/stock/reading-new-leaf-color-in-juveniles-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2511,7 +3567,10 @@
   {
     "src": "/images/source/stock/repotting-mature-anthuriums-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "leaf-texture",
       "rarest-jungle",
@@ -2521,7 +3580,6 @@
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "stock",
@@ -2575,9 +3633,17 @@
     "src": "/images/source/stock/sourcing-from-southeast-asia-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
-      "welcome-leafpeople"
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
     ],
     "kind": "stock",
     "credit": "Caleb Catto / iNaturalist (CC BY 4.0)"
@@ -2612,7 +3678,10 @@
   {
     "src": "/images/source/stock/substrate-recipes-i-keep-coming-back-to-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2646,9 +3715,17 @@
     "src": "/images/source/stock/the-first-plant-i-sold-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
-      "welcome-leafpeople"
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
     ],
     "kind": "stock",
     "credit": "iNaturalist (CC BY)"
@@ -2657,6 +3734,9 @@
     "src": "/images/source/stock/the-grower-i-trust-most-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2668,6 +3748,9 @@
     "src": "/images/source/stock/the-myth-of-the-perfect-leaf-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2679,6 +3762,9 @@
     "src": "/images/source/stock/the-plant-that-taught-me-most-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2706,12 +3792,14 @@
   {
     "src": "/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "leaf-texture",
       "app-identify",
       "app-collect",
       "app-track-care",
-      "app-learn",
       "app-cta"
     ],
     "kind": "stock",
@@ -2720,7 +3808,10 @@
   {
     "src": "/images/source/stock/variegation-genetics-plain-english-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2732,6 +3823,9 @@
     "src": "/images/source/stock/visiting-the-glasshouse-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2759,7 +3853,10 @@
   {
     "src": "/images/source/stock/watering-rare-aroids-by-weight-hero.jpg",
     "branches": [
+      "app-learn",
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2771,6 +3868,9 @@
     "src": "/images/source/stock/what-i-throw-away-from-a-delivery-box-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
       "welcome-leafpeople"
@@ -2799,9 +3899,17 @@
     "src": "/images/source/stock/when-to-walk-away-from-a-deal-hero.jpg",
     "branches": [
       "article-fieldguide",
+      "article-understory",
+      "community-ugc",
       "jungle-escape",
       "rainforest-beauty",
-      "welcome-leafpeople"
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
     ],
     "kind": "stock",
     "credit": "iNaturalist (CC BY)"
@@ -2823,5 +3931,2503 @@
     ],
     "kind": "stock",
     "credit": "iNaturalist (CC BY)"
+  },
+  {
+    "src": "/images/source/stock/anatomy-of-an-aroid-inflorescence-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Kai Squires / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-ace-of-spades.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-carla-blackie.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-antolakii.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-corrugatum.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-corrugatum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC-BY)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-crystalanium.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-crystalanium.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Madeleine (Magsy) Lombard / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-cupulispathum.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-cupulispathum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Jonathan Pantoja / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-cutucuence.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-cutucuence.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Fredy Ram\u00f3n C. / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-dark-mama.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-dressleri-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "njweess / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-dressleri.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "ramon_d / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-forgetii.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-forgetii.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "brysondashner / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-kunayalense-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "njweess / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-kunayalense.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-morona.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-papillilaminum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "col_sa_pilarmorunoizurieta / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-papillilaminum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "ramon_d / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/book/anthurium-price-history-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/anthurium-price-history-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Attila Ol\u00e1h / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-veitchii.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/anthurium-veitchii-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Txecoloco / Wikimedia Commons (CC BY-SA 3.0)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-vittariifolium-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Vallarta Botanical Garden / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-vittariifolium.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "yerbasanta / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-warocqueanum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nate Hartley / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/anthurium-warocqueanum.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/anthurium-wendlingeri-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Cheongweei Gan / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-wendlingeri.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rarest-jungle",
+      "rarity-value",
+      "velvet-anthurium",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Billy Gottenstrater / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/auctions-versus-dm-sales-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Hubert Szczygie\u0142 / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/auctions-versus-dm-sales.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "ramon_d / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/begonia-caravan-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Rafael Medina / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/begonia-dinhdui-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Pa\u00fal Gonz\u00e1les / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/begonia-ferox-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/begonia-listada.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "HUGO DAVID CAVERZASI / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/begonia-maculata-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "filipeprates / iNaturalist (CC-BY)"
+  },
+  {
+    "src": "/images/plants/profiles/begonia-maculata.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/begonia-paulensis.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Josep Lluis Berdonces / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/begonia-rex-escargot.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-escargot-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Attila Ol\u00e1h / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-fireworks-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Skjold S\u00f8ndergaard / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/begonia-rex-mclauchlan-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/begonia-venosa.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/begonia-venosa-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/buying-a-rare-plant-without-getting-burned-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Igor Balashov / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/cataphylls-and-maturity-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Greg III Espera / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/collector-burnout-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Apipa / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/collector-burnout.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "silviadipollina / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/customs-phyto-certs-paperwork-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Atlas \u00de\u0259 Biologist / Wikimedia Commons (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/decoding-listing-abbreviations-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Skjold S\u00f8ndergaard / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/export-licenses-what-they-protect-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "rudymaex / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-verrucosum.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/fertilizer-for-slow-growers-hero.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Lydia Br\u00fchwasser / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/fertilizer-for-slow-growers.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "wesparrish53 / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/filial-generations-explained-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "\u0422\u0430\u0442\u044c\u044f\u043d\u0430 \u041c\u0430\u043a\u0441\u0438\u043c\u043e\u0432\u0430 / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/book/grown-where-they-shouldnt-exist-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/book/grown-where-they-shouldnt-exist-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/heritage-clones-and-provenance-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "anis22004190 / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/heritage-clones-and-provenance.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "sofiamp1 / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/how-rare-plant-instagram-works-as-a-market-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Flocci Nivis / Wikimedia Commons (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/hoya-australis-lisa-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Katrina Schwager / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/hoya-callistophylla.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/hoya-callistophylla-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-hindu-rope-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Pa\u00fal Gonz\u00e1les / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-kentiana-variegata-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/hoya-kerrii.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "julien CLAUDE / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/hoya-krimson-princess-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-krimson-queen-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-linearis-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-obovata-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Attila Ol\u00e1h / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/hoya-pubicalyx-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Kai Squires / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/humidity-cabinets-versus-tents-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Kostka Martin / Wikimedia Commons (CC0)"
+  },
+  {
+    "src": "/images/source/stock/inspecting-a-stem-cut-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "no rights reserved / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/instagram-after-the-fomo-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Pedro H. Martins / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/instagram-after-the-fomo.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Zarek / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/book/light-for-velvet-aroids-hero.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/light-for-velvet-aroids-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "no rights reserved / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/meeting-the-grower-in-person-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "joselunasolarte / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/meeting-the-grower-in-person.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Original madness / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/monstera-adansonii-variegata.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist / iNaturalist (CC)"
+  },
+  {
+    "src": "/images/plants/profiles/monstera-albo-variegata.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/monstera-thai-constellation.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/monstera-aurea-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nicol\u00e1s Baresch Uribe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/monstera-burle-marx-flame-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/monstera-dubia-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/monstera-obliqua.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Ana Maria Benavides / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/monstera-pinnatipartita-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/monstera-standleyana-variegata-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Pa\u00fal Gonz\u00e1les / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/monstera-thai-constellation-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/mounting-mature-aroids-on-wood-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Michael Wolf / Wikimedia Commons (CC BY-SA 3.0)"
+  },
+  {
+    "src": "/images/source/stock/node-cuttings-what-survives-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Qian2007 / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/book/petiole-tells-the-truth-hero.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/petiole-tells-the-truth-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nicol\u00e1s Baresch Uribe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-billietiae-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-burle-marx-variegata.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-burle-marx-variegata-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Victor Farjalla Pontes / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-florida-ghost-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-gigas.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-gigas-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Eduardo Chac\u00f3n Madrigal / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/philodendron-gloriosum-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "laribasso / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-gloriosum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-green-congo-nuclear-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Victor Farjalla Pontes / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-melanochrysum.jpeg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/inat/philodendron-melanochrysum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Lydia Br\u00fchwasser / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-pink-princess.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-pink-princess-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/philodendron-spiritus-sancti-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "agujaceratops / iNaturalist (CC-BY)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-spiritus-sancti.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-squamiferum.png",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-squamiferum-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-tortum.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-tortum-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-verrucosum-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Kai Squires / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/plants/profiles/philodendron-white-knight.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/philodendron-white-knight-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nicol\u00e1s Baresch Uribe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/book/photographing-collector-plants-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/book/photographing-collector-plants-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/plant-labels-what-your-handwriting-reveals-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Scot Nelson / Wikimedia Commons (CC0)"
+  },
+  {
+    "src": "/images/source/stock/plants-i-almost-bought-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/pollinating-aroids-at-home-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Scot Nelson / Wikimedia Commons (CC0)"
+  },
+  {
+    "src": "/images/source/stock/pricing-a-plant-nobody-else-has-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Bernard DUPONT from FRANCE / Wikimedia Commons (CC BY-SA 2.0)"
+  },
+  {
+    "src": "/images/source/stock/quarantine-protocol-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Steve Fitzgerald / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/reading-aroid-roots-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "no rights reserved / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/reading-aroid-venation-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/reading-new-leaf-color-in-juveniles-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Gonzalez Uriel / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/repotting-mature-anthuriums-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "MKankesh / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/sourcing-from-southeast-asia-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "no rights reserved / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/substrate-recipes-i-keep-coming-back-to-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Umfassender / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/the-collectors-lexicon-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "scallions / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/the-cuttings-resale-market-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "ramon_d / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/the-cuttings-resale-market.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "col_sa_pilarmorunoizurieta / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/the-first-plant-i-sold-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Filo g\u00e8n' / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/the-grower-i-trust-most-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Steve Fitzgerald / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/the-myth-of-the-perfect-leaf-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/the-plant-that-taught-me-most-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/inat/the-post-flush-rest-hero.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "lianabrazil / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/the-post-flush-rest.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "yakelinedaza / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/the-serious-private-collection-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Bri B / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/the-serious-private-collection.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "dscherberich / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/book/the-velvet-anthurium-problem-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/the-velvet-anthurium-problem-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nicol\u00e1s Baresch Uribe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/tissue-culture-and-the-rarity-premium-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Therecia 2 Junechlue / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/inat/tissue-culture-and-the-rarity-premium.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "col_sa_pilarmorunoizurieta / iNaturalist (CC-BY-NC)"
+  },
+  {
+    "src": "/images/source/stock/trades-versus-sales-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Patr\u00edcia Mees / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/treating-leaf-spot-on-velvets-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "damonsalveo / Wikimedia Commons (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/variegation-genetics-plain-english-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Zac Peterson / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/visiting-the-glasshouse-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "bernhard_hiller / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/watering-rare-aroids-by-weight-body.jpg",
+    "branches": [
+      "app-learn",
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "JJ Harrison (https://www.jjharrison.com. / Wikimedia Commons (CC BY-SA 3.0)"
+  },
+  {
+    "src": "/images/source/stock/what-i-throw-away-from-a-delivery-box-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "collector-culture",
+      "community-ugc"
+    ],
+    "kind": "stock",
+    "credit": "Nativeplants garden / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/when-same-plant-three-prices-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Sonja Schwendinger / Wikimedia Commons (CC BY-SA 4.0)"
+  },
+  {
+    "src": "/images/source/stock/when-to-walk-away-from-a-deal-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "H. Zell / Wikimedia Commons (CC BY-SA 3.0)"
+  },
+  {
+    "src": "/images/source/stock/wholesale-vs-retail-in-the-aroid-trade-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "rarity-value",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Agnes Monkelbaan / Wikimedia Commons (CC BY-SA 4.0)"
   }
 ]

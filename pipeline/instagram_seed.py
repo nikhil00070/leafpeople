@@ -32,7 +32,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
 START = date(2026, 6, 2)
-N_DAYS = 90
+# Calendar runs day 1 (Jun 2) through the end of the year (Dec 31 = day 213).
+# Days 1-90 are the original authored arc; days 91-213 are the rest-of-year wave,
+# generated from the published Understory/Field-Guide stories + their curated images.
+END = date(2026, 12, 31)
+N_DAYS = (END - START).days + 1  # 213
 HANDLE = "leafpeople.app"
 SITE = "leafpeople.app"
 
@@ -41,6 +45,7 @@ STK = "/images/source/stock/"
 PLT = "/images/plants/"
 CMP = "/images/compare/"
 APP = "/images/app/"
+INAT = "/images/source/inat/"
 
 # slug -> app plant-profile photo (all 68), built alongside the Understory queue.
 # Used to give later showcase posts fresh-species heroes and to enrich the library.
@@ -124,8 +129,16 @@ FORTNIGHT_GOALS = [
      "followers": 2500, "avg_likes": 250, "extra": "Article tie-ins driving real traffic; lean hard into the winning branches."},
     {"weeks": "Days 71-84", "theme": "Authority — the rare-plant destination",
      "followers": 4000, "avg_likes": 320, "extra": "UGC compounding; collaborations & reshares from the community."},
-    {"weeks": "Days 85-90+", "theme": "Rolling funnel — exploit winners, keep exploring",
+    {"weeks": "Days 85-98", "theme": "Rolling funnel — exploit winners, keep exploring",
      "followers": 5500, "avg_likes": 400, "extra": "Self-sustaining cadence; every posted day informs the next."},
+    {"weeks": "Days 99-126 · Sep", "theme": "Story engine — a spotlight a day from the published library",
+     "followers": 7500, "avg_likes": 500, "extra": "Each post drives to a real Understory/Field-Guide article — track bio-link clicks per genus."},
+    {"weeks": "Days 127-160 · Oct", "theme": "Genus depth — lean into whichever genus converts best",
+     "followers": 10000, "avg_likes": 650, "extra": "Double down on the top-performing species branch; reshare the strongest UGC."},
+    {"weeks": "Days 161-190 · Nov", "theme": "Authority — the rare-plant reference people send each other",
+     "followers": 14000, "avg_likes": 800, "extra": "Article tie-ins compounding; collaborations and creator reshares."},
+    {"weeks": "Days 191-213 · Dec", "theme": "Year-end push — convert the audience into subscribers",
+     "followers": 18000, "avg_likes": 950, "extra": "Gift-the-collector angle; $0.99 trial CTAs; close the year on installs."},
 ]
 
 CTA = {
@@ -232,13 +245,19 @@ def profile_branches(slug):
     return sorted(b)
 
 
-def build_library():
+def build_library(articles=None):
     lib = []
-    seen = set()
+    seen = {}
     def add(src, branches, kind, credit=""):
-        if src in seen: return
-        seen.add(src)
-        lib.append({"src": src, "branches": branches, "kind": kind, "credit": credit})
+        if src in seen:
+            # already in the library — just widen the branch set so this image
+            # also surfaces for the rest-of-year post that curated it.
+            e = seen[src]
+            e["branches"] = sorted(set(e["branches"]) | set(branches))
+            return
+        e = {"src": src, "branches": branches, "kind": kind, "credit": credit}
+        seen[src] = e
+        lib.append(e)
 
     for f, br in APP_LIB.items():  add(IG + f, br, "app")
     for f, br in ID_LIB.items():   add(CMP + f, br, "id")
@@ -257,6 +276,21 @@ def build_library():
         src = "/" + os.path.relpath(full, ROOT)
         c = credits.get(src, {})
         add(src, stock_branches(os.path.basename(src)), "stock", c.get("credit", "iNaturalist (CC BY)"))
+
+    # Curated story images — the hero + body photos the user picked inside each
+    # published article. Owned shots ("Leaf People") carry no credit; iNat/stock
+    # shots carry the photographer attribution so it can be appended when posting.
+    for a in (articles or []):
+        br = article_image_branches(a.get("category", ""))
+        for src, attr in ((a.get("hero"), a.get("hero_attribution")),
+                          (a.get("body_image"), a.get("body_image_attribution"))):
+            if not src:
+                continue
+            owned = (attr or "").strip().lower() in ("", "leaf people")
+            if owned:
+                add(src, br, "profile")
+            else:
+                add(src, br, "stock", attr or "iNaturalist (CC BY)")
 
     # welcome-leafpeople can pull from the whole "pretty" pool
     for e in lib:
@@ -493,14 +527,132 @@ EXTENDED_POSTS = [
 AUTHORED = WELCOME_POSTS + SHOWCASE_POSTS + CONCEPT_POSTS + CONVERT_POSTS + EXTENDED_POSTS
 
 
+# ============================================================================
+# REST-OF-YEAR (days 91-213) — one spotlight per published story.
+# Each post draws its image straight from THAT story's curated hero/body picks,
+# so the species always matches the photo (a gloriosum post uses gloriosum imagery,
+# by construction). No image repeats across the whole calendar (global `used` set);
+# stories whose lead image was already used in days 1-90 fall back to their other
+# curated image. Captions are seeded from each article's deck + a "link in bio" CTA.
+# ============================================================================
+
+# Species categories -> rotating beauty branches (keeps the calendar colourful and
+# lets the bandit learn which genus/angle performs). Story categories -> convert/community.
+ROY_BRANCHES = {
+    "Anthurium":         ["velvet-anthurium", "leaf-texture", "rarity-value", "rarest-jungle"],
+    "Philodendron":      ["rainforest-beauty", "leaf-texture", "rarity-value"],
+    "Monstera":          ["rainforest-beauty", "jungle-escape", "rarity-value"],
+    "Hoya":              ["rainforest-beauty", "leaf-texture"],
+    "Begonia":           ["leaf-texture", "rainforest-beauty"],
+    "The Market":        ["rarity-value", "article-understory"],
+    "Collector Culture": ["collector-culture", "community-ugc", "article-understory"],
+    "Field Skills":      ["app-learn", "article-fieldguide"],
+}
+SPECIES_CATS = ["Anthurium", "Philodendron", "Monstera", "Hoya", "Begonia"]
+# round-robin interleave order so consecutive days vary in genus/branch/colour
+INTERLEAVE = ["Anthurium", "Philodendron", "The Market", "Hoya",
+              "Collector Culture", "Monstera", "Field Skills", "Begonia"]
+ROY_TAIL = {
+    "The Market":        "\n\nThe economics, in full — link in bio.",
+    "Collector Culture": "\n\nThe full story's in bio. 🌿",
+    "Field Skills":      "\n\nThe complete how-to — link in bio.",
+}
+SPECIES_TAIL = "\n\nFull field guide on Leaf People — link in bio. 🌿"
+
+
+def load_articles():
+    arts = []
+    for dj in sorted(glob.glob(os.path.join(ROOT, "the-leaf", "*", "_data.json"))):
+        try:
+            d = json.loads(open(dj).read())
+        except Exception:
+            continue
+        if not d.get("slug") or not d.get("category"):
+            continue
+        arts.append(d)
+    return arts
+
+
+def article_image_branches(category):
+    """Branches an article's hero/body image suits, for the library + picker."""
+    b = set(ROY_BRANCHES.get(category, ["rainforest-beauty"]))
+    b |= {"article-fieldguide", "article-understory", "community-ugc"}
+    if category in SPECIES_CATS:
+        b |= {"welcome-leafpeople"}
+    return sorted(b)
+
+
+def roy_caption(art):
+    deck = (art.get("deck") or art.get("meta_description") or "").strip()
+    cat = art.get("category", "")
+    tail = SPECIES_TAIL if cat in SPECIES_CATS else ROY_TAIL.get(cat, "\n\nRead it — link in bio. 🌿")
+    return deck + tail
+
+
+def build_roy_posts():
+    """One post per published story, interleaved by category for day-to-day variety.
+    Returns authored-post dicts (branch/title/caption/prefer_list) for the build loop."""
+    arts = load_articles()
+    by_cat = {}
+    for a in arts:
+        by_cat.setdefault(a["category"], []).append(a)
+    for cat in by_cat:
+        by_cat[cat].sort(key=lambda a: a["slug"])  # deterministic
+
+    counters = {cat: 0 for cat in ROY_BRANCHES}
+    order, idx = [], {cat: 0 for cat in by_cat}
+    remaining = sum(len(v) for v in by_cat.values())
+    while remaining:
+        for cat in INTERLEAVE:
+            lst = by_cat.get(cat, [])
+            if idx[cat] < len(lst):
+                order.append(lst[idx[cat]]); idx[cat] += 1; remaining -= 1
+
+    posts = []
+    for a in order:
+        cat = a["category"]
+        rot = ROY_BRANCHES.get(cat, ["rainforest-beauty"])
+        branch = rot[counters.get(cat, 0) % len(rot)]
+        counters[cat] = counters.get(cat, 0) + 1
+        # curated picks first (hero is the article's lead image, then the body image),
+        # both guaranteed to be the right species for a species story.
+        prefer_list = [s for s in (a.get("hero"), a.get("body_image")) if s]
+        posts.append({
+            "branch": branch,
+            "title": a.get("title", a["slug"]),
+            "caption": roy_caption(a),
+            "prefer_list": prefer_list,
+            "slug": a["slug"],
+            # species posts are image-strict: ONLY their own curated photos are
+            # acceptable (a Monstera story must never show a Philodendron). If none
+            # is free, the post is dropped and a beauty top-up takes the slot.
+            "species": cat in SPECIES_CATS,
+        })
+    return posts
+
+
 def exists(src):
     return os.path.exists(os.path.join(ROOT, src.lstrip("/")))
 
 
+def build_topups(n):
+    """Pure-beauty showcase posts to top up any days the stories don't cover.
+    No preferred image — the loop fills each from the first unused on-branch photo."""
+    beauty = ["rainforest-beauty", "velvet-anthurium", "leaf-texture", "rarity-value", "jungle-escape"]
+    out = []
+    for i in range(max(0, n)):
+        out.append({
+            "branch": beauty[i % len(beauty)], "title": "Rare & beautiful",
+            "caption": "More from the rarest corners of the rainforest — a fresh rare-plant story every day on Leaf People. \U0001F33F leafpeople.app",
+            "prefer_list": [],
+        })
+    return out
+
+
 def build():
-    lib = build_library()
+    articles = load_articles()
+    lib = build_library(articles)
     lib = [e for e in lib if exists(e["src"])]
-    used = set()  # global: every chosen default is unique across posts
 
     # Preserve already-assigned default images for existing days, so regenerating to add
     # later days never reshuffles days the user has reviewed. (Their picker choices live in
@@ -515,40 +667,50 @@ def build():
         except Exception:
             pass
 
+    # Full-year line-up: the original authored arc (days 1-90), then one spotlight per
+    # published story (rest-of-year wave), then beauty top-ups to fill out to Dec 31.
+    queue = AUTHORED + build_roy_posts()
+    used = set()      # global: every chosen image is unique across the calendar
+    assigned = []     # (post-spec, image) in final order; dropped specs are skipped
+
+    def pick_image(p, day_hint):
+        prev = old.get(f"d{day_hint:02d}") if day_hint else None
+        prefers = p.get("prefer_list") or ([p["prefer"]] if p.get("prefer") else [])
+        order = ([prev] if prev else []) + list(prefers)
+        if not p.get("species"):            # non-species posts may fall back to any on-branch photo
+            order += [e["src"] for e in candidates_for(p["branch"], lib)]
+        return next((s for s in order if s and exists(s) and s not in used), "")
+
+    for idx, p in enumerate(queue):
+        img = pick_image(p, idx + 1 if idx < len(AUTHORED) else 0)
+        if not img:
+            if p.get("species"):
+                continue  # image-strict species post with no free own-species photo — drop it
+            print(f"  ! ({p['branch']}): no free image, kept empty")
+        used.add(img)
+        assigned.append((p, img))
+        if len(assigned) >= N_DAYS:
+            break
+
+    # Top up any remaining days with pure-beauty showcase posts (generic caption, any free photo).
+    for tp in build_topups(N_DAYS - len(assigned)):
+        img = pick_image(tp, 0)
+        used.add(img)
+        assigned.append((tp, img))
+
     posts = []
-    for i in range(N_DAYS):
+    for i, (p, img) in enumerate(assigned[:N_DAYS]):
         day = i + 1
         d = START + timedelta(days=i)
-        if i < len(AUTHORED):
-            p = AUTHORED[i]
-            branch = p["branch"]
-            phase = BRANCHES[branch]["phase"]
-            # default = existing image (stable) -> preferred image -> first free branch candidate
-            prev = old.get(f"d{day:02d}")
-            order = ([prev] if prev else []) + ([p["prefer"]] if p.get("prefer") else []) + [e["src"] for e in candidates_for(branch, lib)]
-            default = next((s for s in order if exists(s) and s not in used), "")
-            if not default:
-                print(f"  ! day {day} ({branch}): no free image!")
-                default = p.get("prefer", "")
-            used.add(default)
-            posts.append({
-                "id": f"d{day:02d}", "day": day, "date": d.isoformat(),
-                "phase": phase, "branch": branch, "status": "draft",
-                "title": p["title"], "image": default,
-                "caption": p["caption"], "hashtags": tags(branch), "cta": CTA[phase],
-                "metrics": {"likes": 0, "comments": 0, "saves": 0, "follows": 0, "reach": 0},
-            })
-        else:
-            j = i - len(AUTHORED)
-            branch = BRANCH_SCHEDULE[j] if j < len(BRANCH_SCHEDULE) else "app-cta"
-            phase = BRANCHES[branch]["phase"]
-            posts.append({
-                "id": f"d{day:02d}", "day": day, "date": d.isoformat(),
-                "phase": phase, "branch": branch, "status": "skeleton",
-                "title": BRANCHES[branch]["label"], "image": "",
-                "caption": "", "hashtags": tags(branch), "cta": CTA[phase],
-                "metrics": {"likes": 0, "comments": 0, "saves": 0, "follows": 0, "reach": 0},
-            })
+        branch = p["branch"]
+        phase = BRANCHES[branch]["phase"]
+        posts.append({
+            "id": f"d{day:02d}", "day": day, "date": d.isoformat(),
+            "phase": phase, "branch": branch, "status": "draft",
+            "title": p["title"], "image": img,
+            "caption": p["caption"], "hashtags": tags(branch), "cta": CTA[phase],
+            "metrics": {"likes": 0, "comments": 0, "saves": 0, "follows": 0, "reach": 0},
+        })
 
     branches_out = {
         "handle": HANDLE, "site": SITE, "phases": PHASES, "branches": BRANCHES,

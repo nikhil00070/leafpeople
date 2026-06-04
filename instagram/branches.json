@@ -149,11 +149,39 @@
       "extra": "UGC compounding; collaborations & reshares from the community."
     },
     {
-      "weeks": "Days 85-90+",
+      "weeks": "Days 85-98",
       "theme": "Rolling funnel \u2014 exploit winners, keep exploring",
       "followers": 5500,
       "avg_likes": 400,
       "extra": "Self-sustaining cadence; every posted day informs the next."
+    },
+    {
+      "weeks": "Days 99-126 \u00b7 Sep",
+      "theme": "Story engine \u2014 a spotlight a day from the published library",
+      "followers": 7500,
+      "avg_likes": 500,
+      "extra": "Each post drives to a real Understory/Field-Guide article \u2014 track bio-link clicks per genus."
+    },
+    {
+      "weeks": "Days 127-160 \u00b7 Oct",
+      "theme": "Genus depth \u2014 lean into whichever genus converts best",
+      "followers": 10000,
+      "avg_likes": 650,
+      "extra": "Double down on the top-performing species branch; reshare the strongest UGC."
+    },
+    {
+      "weeks": "Days 161-190 \u00b7 Nov",
+      "theme": "Authority \u2014 the rare-plant reference people send each other",
+      "followers": 14000,
+      "avg_likes": 800,
+      "extra": "Article tie-ins compounding; collaborations and creator reshares."
+    },
+    {
+      "weeks": "Days 191-213 \u00b7 Dec",
+      "theme": "Year-end push \u2014 convert the audience into subscribers",
+      "followers": 18000,
+      "avg_likes": 950,
+      "extra": "Gift-the-collector angle; $0.99 trial CTAs; close the year on installs."
     }
   ],
   "hashtagTiers": {
