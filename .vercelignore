@@ -1,0 +1,5 @@
+# Firebase Cloud Functions live in this repo but deploy to Firebase, not Vercel.
+# Keep them out of the static site upload so their source isn't served.
+functions
+firebase.json
+.firebaserc
