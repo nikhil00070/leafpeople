@@ -161,6 +161,16 @@
   var box = document.querySelector("article.prose") || document.querySelector(".guide-wrap");
   if (!box) return;
 
+  // Lazy-load Firebase Auth (a module) only now that the wall is actually showing — so the
+  // ~100KB SDK never loads on non-gated pages. auth.js sets window.lpAuth + fires lp-auth-changed.
+  if (!document.querySelector("script[data-lp-auth]")) {
+    var authScript = document.createElement("script");
+    authScript.type = "module";
+    authScript.src = "/js/auth.js";
+    authScript.setAttribute("data-lp-auth", "1");
+    document.head.appendChild(authScript);
+  }
+
   // WSJ-style: clamp the body to ~6 lines, then fade it out into the wall.
   box.style.position = "relative";
   box.style.maxHeight = "24em";
@@ -175,9 +185,19 @@
     ".lp-wall h3{font-family:'Geologica',sans-serif;font-size:1.45rem;margin:0 0 .5rem;color:#f3f7f3}" +
     ".lp-wall p{color:#b8c8bb;max-width:44ch;margin:0 auto 1.3rem;line-height:1.55}" +
     ".lp-wall .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}" +
-    ".lp-wall a{display:inline-block;padding:.72rem 1.35rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:.92rem}" +
+    ".lp-wall a,.lp-wall button{display:inline-block;padding:.72rem 1.35rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:.92rem;font-family:inherit;cursor:pointer;border:0;line-height:1.2}" +
     ".lp-wall .primary{background:#FA2A52;color:#fff}" +
-    ".lp-wall .ghost{background:transparent;color:#e8efe9;border:1px solid rgba(255,255,255,.28)}";
+    ".lp-wall .ghost{background:transparent;color:#e8efe9;border:1px solid rgba(255,255,255,.28)}" +
+    ".lp-signin{display:none;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.12)}" +
+    ".lp-signin.open{display:block}" +
+    ".lp-signin .row{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:.7rem}" +
+    ".lp-signin .prov{background:#fff;color:#111;min-width:200px}" +
+    ".lp-signin .prov.google{background:#f1f3f4}" +
+    ".lp-signin form{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:.2rem}" +
+    ".lp-signin input{padding:.6rem .8rem;border-radius:9px;border:1px solid rgba(255,255,255,.22);background:#11161300;color:#e8efe9;font-size:.9rem;min-width:150px}" +
+    ".lp-signin input::placeholder{color:#7e8d80}" +
+    ".lp-signin .status{min-height:1.2em;margin:.6rem 0 0;font-size:.85rem;color:#b8c8bb}" +
+    ".lp-signin .status.err{color:#ff8aa0}";
   document.head.appendChild(css);
 
   var wall = document.createElement("div");
@@ -187,11 +207,71 @@
     "<p>The rest of this story is for subscribers. One Leaf People subscription unlocks every Understory feature and Field Guide — in the app and here on the web.</p>" +
     "<div class='btns'>" +
       "<a class='primary' href='https://apps.apple.com/us/app/leaf-people-rare-plant-guide/id6760627345' target='_blank' rel='noopener'>Subscribe in the app</a>" +
-      "<a class='ghost' href='#' data-lp-signin>Already a subscriber? Sign in</a>" +
+      "<button type='button' class='ghost' data-lp-signin-toggle>Already a subscriber? Sign in</button>" +
+    "</div>" +
+    "<div class='lp-signin' data-lp-signin>" +
+      "<div class='row'>" +
+        "<button type='button' class='prov' data-prov='apple'>Continue with Apple</button>" +
+        "<button type='button' class='prov google' data-prov='google'>Continue with Google</button>" +
+      "</div>" +
+      "<form data-lp-email-form>" +
+        "<input type='email' name='email' placeholder='Email' autocomplete='email' required>" +
+        "<input type='password' name='password' placeholder='Password' autocomplete='current-password' required>" +
+        "<button type='submit' class='ghost'>Sign in</button>" +
+      "</form>" +
+      "<p class='status' data-lp-status></p>" +
     "</div>";
   box.parentNode.insertBefore(wall, box.nextSibling);
 
-  // Phase 2 will wire this to Firebase Auth (Sign in with Apple); placeholder for now.
-  var si = wall.querySelector("[data-lp-signin]");
-  if (si) si.addEventListener("click", function (e) { e.preventDefault(); alert("Web sign-in is coming soon — for now, subscribe in the app."); });
+  var panel = wall.querySelector("[data-lp-signin]");
+  var status = wall.querySelector("[data-lp-status]");
+  var setStatus = function (msg, isErr) {
+    status.textContent = msg || "";
+    status.classList.toggle("err", !!isErr);
+  };
+  var busy = function (on) {
+    wall.querySelectorAll("button,input").forEach(function (el) { el.disabled = on; });
+  };
+  var run = function (promise) {
+    if (!window.lpAuth) { setStatus("Still loading — try again in a second.", true); return; }
+    setStatus("Signing in…");
+    busy(true);
+    promise()
+      .catch(function (e) {
+        var m = window.lpAuth.readableError(e);
+        if (m) setStatus(m, true); else setStatus(""); // null = user cancelled
+      })
+      .finally(function () { busy(false); });
+  };
+
+  wall.querySelector("[data-lp-signin-toggle]").addEventListener("click", function () {
+    panel.classList.toggle("open");
+  });
+  wall.querySelector("[data-prov='apple']").addEventListener("click", function () {
+    run(function () { return window.lpAuth.signInApple(); });
+  });
+  wall.querySelector("[data-prov='google']").addEventListener("click", function () {
+    run(function () { return window.lpAuth.signInGoogle(); });
+  });
+  wall.querySelector("[data-lp-email-form]").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target;
+    run(function () { return window.lpAuth.signInEmail(f.email.value, f.password.value); });
+  });
+
+  // When auth state arrives (sign-in completes, or returning signed-in visitor), reflect it.
+  // NOTE: this only confirms IDENTITY. The actual content unlock is Phase 3 (server-side
+  // entitlement check via edge middleware) — for now we just acknowledge the signed-in user.
+  window.addEventListener("lp-auth-changed", function (ev) {
+    var user = ev.detail && ev.detail.user;
+    if (!user) return;
+    var who = user.email || user.displayName || "your account";
+    wall.innerHTML =
+      "<h3>You're signed in</h3>" +
+      "<p>Signed in as <strong style='color:#e8efe9'>" + who + "</strong>. " +
+      "Subscriber access unlocks here once we finish connecting your subscription — coming shortly.</p>" +
+      "<div class='btns'><button type='button' class='ghost' data-lp-signout>Sign out</button></div>";
+    var so = wall.querySelector("[data-lp-signout]");
+    if (so) so.addEventListener("click", function () { window.lpAuth && window.lpAuth.signOut(); location.reload(); });
+  });
 })();
