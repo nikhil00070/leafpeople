@@ -153,7 +153,7 @@
    OFF by default; preview any article with ?paywall=1. Flip PAYWALL_ON to true to show it live. */
 (function () {
   "use strict";
-  var PAYWALL_ON = false;
+  var PAYWALL_ON = true;
   var preview = location.search.indexOf("paywall=1") !== -1;
   if (!(PAYWALL_ON || preview)) return;
   if (!/^\/(the-leaf|field-guide)\//.test(location.pathname)) return;
