@@ -10,7 +10,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import {
   getAuth, setPersistence, browserLocalPersistence,
   OAuthProvider, GoogleAuthProvider, signInWithPopup,
-  signInWithEmailAndPassword, onAuthStateChanged, signOut,
+  signInWithEmailAndPassword, onIdTokenChanged, signOut,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
@@ -27,8 +27,20 @@ const auth = getAuth(app);
 auth.useDeviceLanguage();
 setPersistence(auth, browserLocalPersistence).catch(() => {});
 
-const emit = (user) =>
-  window.dispatchEvent(new CustomEvent("lp-auth-changed", { detail: { user } }));
+const emit = (user, isSubscriber) =>
+  window.dispatchEvent(new CustomEvent("lp-auth-changed", { detail: { user, isSubscriber } }));
+
+// The edge middleware reads this cookie (the Firebase ID token) to decide subscriber access.
+// Short-lived by design — the token expires in ~1h and onIdTokenChanged refreshes it.
+const COOKIE = "__lpAuth";
+const setTokenCookie = (token) => {
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = COOKIE + "=" + token + "; path=/; max-age=3600; SameSite=Lax" + secure;
+};
+const clearTokenCookie = () => {
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = COOKIE + "=; path=/; max-age=0; SameSite=Lax" + secure;
+};
 
 // Friendlier copy for the handful of errors users actually hit.
 function readableError(e) {
@@ -43,6 +55,7 @@ function readableError(e) {
 
 window.lpAuth = {
   user: null,
+  isSubscriber: false, // from the `subscriber` custom claim in the ID token
   ready: false,        // true once Firebase has reported initial auth state
   readableError,
   signInApple() {
@@ -62,8 +75,21 @@ window.lpAuth = {
   },
 };
 
-onAuthStateChanged(auth, (user) => {
+// onIdTokenChanged fires on sign-in/out AND on every silent token refresh (~hourly),
+// so the middleware cookie stays current and the `subscriber` claim is always fresh.
+onIdTokenChanged(auth, async (user) => {
+  let isSubscriber = false;
+  if (user) {
+    try {
+      const res = await user.getIdTokenResult();
+      isSubscriber = res.claims.subscriber === true;
+      setTokenCookie(res.token);
+    } catch (_) { /* leave defaults; middleware fails open */ }
+  } else {
+    clearTokenCookie();
+  }
   window.lpAuth.user = user;
+  window.lpAuth.isSubscriber = isSubscriber;
   window.lpAuth.ready = true;
-  emit(user);
+  emit(user, isSubscriber);
 });

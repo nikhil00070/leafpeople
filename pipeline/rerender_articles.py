@@ -26,11 +26,16 @@ def main():
         for dp in sorted(glob.glob(os.path.join(ROOT, sec, "*", "_data.json"))):
             data = json.load(open(dp))
             ctx = {k: v for k, v in data.items() if k not in SKIP}
-            html = render(tpl, hero=data.get("hero", ""), og_image=data.get("hero", ""),
+            common = dict(hero=data.get("hero", ""), og_image=data.get("hero", ""),
                           body_image=data.get("body_image", ""), **ctx)
-            open(os.path.join(os.path.dirname(dp), "index.html"), "w", encoding="utf-8").write(html)
+            d = os.path.dirname(dp)
+            # Full article (subscribers) + paywalled preview (everyone else / crawlers).
+            # The full text lives ONLY in index.html, which the edge middleware serves only
+            # to subscribers; non-subscribers are rewritten to preview.html.
+            open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(render(tpl, gated=False, **common))
+            open(os.path.join(d, "preview.html"), "w", encoding="utf-8").write(render(tpl, gated=True, **common))
             n += 1
-    print(f"re-rendered {n} articles")
+    print(f"re-rendered {n} articles (full + preview)")
 
 
 if __name__ == "__main__":

@@ -56,7 +56,7 @@
     {% for para in intro|default([]) %}
     <p>{{ para | md }}</p>
     {% endfor %}
-    {% for section in sections %}
+    {% for section in (sections[:1] if gated else sections) %}
     <h2 id="s{{ loop.index }}">{{ section.heading | md }}</h2>
     {% for para in section.paragraphs %}
     <p>{{ para | md }}</p>
@@ -64,7 +64,7 @@
     {% if loop.index == 1 and pull_quote %}
     <p class="pull-quote">{{ pull_quote | md }}</p>
     {% endif %}
-    {% if body_image and loop.index == (sections|length // 2) and not loop.last %}
+    {% if not gated and body_image and loop.index == (sections|length // 2) and not loop.last %}
     <figure class="art-body-img">
       <img src="{{ body_image }}" alt="{{ body_image_caption or '' }}" loading="lazy">
       {% if body_image_caption or (body_image_attribution and body_image_attribution != 'Leaf People') %}<figcaption class="img-caption">{{ body_image_caption | md }}{% if body_image_attribution and body_image_attribution != 'Leaf People' %} <span style="opacity:.65">— 📷 {{ body_image_attribution }}</span>{% endif %}</figcaption>{% endif %}
@@ -72,6 +72,7 @@
     {% endif %}
     {% endfor %}
   </article>
+  {% if gated %}{% include 'partials/wall.html' %}{% endif %}
 
   <div class="news">
     <h3>Rare plants, real stories — a few times a week.</h3>

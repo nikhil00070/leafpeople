@@ -57,7 +57,7 @@
   <p class="deck">{{ deck | md }}</p>
 
   <div class="picks-label">The picks</div>
-  {% for pick in picks %}
+  {% for pick in (picks[:1] if gated else picks) %}
   <div class="pick" id="p{{ loop.index }}">
     <div class="pick-num">{{ "%02d"|format(loop.index) }}</div>
     <div class="pick-body">
@@ -69,6 +69,9 @@
   </div>
   {% endfor %}
 
+  {% if gated %}
+  {% include 'partials/wall.html' %}
+  {% else %}
   {% if body_image %}
   <figure class="art-body-img">
     <img src="{{ body_image }}" alt="{{ body_image_caption or '' }}" loading="lazy">
@@ -84,6 +87,7 @@
     {% endfor %}
     {% endfor %}
   </div>
+  {% endif %}
 
   <div class="news">
     <h3>New guides, by genus — every weekday.</h3>
