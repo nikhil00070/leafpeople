@@ -23,7 +23,7 @@ const GRANTS = new Set([
 ]);
 const REVOKES = new Set(["EXPIRATION", "REFUND"]);
 
-exports.revenuecatWebhook = onRequest({ secrets: [RC_WEBHOOK_AUTH] }, async (req, res) => {
+exports.revenuecatWebhook = onRequest({ secrets: [RC_WEBHOOK_AUTH], invoker: "public" }, async (req, res) => {
   if (req.method !== "POST") return res.status(405).send("POST only");
   if ((req.get("authorization") || "") !== RC_WEBHOOK_AUTH.value()) {
     return res.status(401).send("unauthorized");
