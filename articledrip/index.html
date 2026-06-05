@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Article drip — Leaf People</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0b0f0d; --card:#141a16; --card2:#0f1411; --border:#1f2a23; --text:#e8efe9; --dim:#b8c8bb; --faint:#8da38f; --green:#4ade80; --pink:#FA2A52; --blue:#60a5fa; --amber:#f59e0b; }
+* { box-sizing:border-box; }
+body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); margin:0; padding:2rem; }
+.wrap { max-width:920px; margin:0 auto; }
+a { color:var(--blue); }
+h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin:0; letter-spacing:-.02em; }
+.note { color:var(--faint); font-size:.9rem; max-width:78ch; line-height:1.55; margin:.5rem 0 0; }
+
+/* toolbar */
+.toolbar { display:flex; flex-wrap:wrap; gap:.8rem; align-items:flex-end; margin:1.4rem 0 1rem; padding:1rem 1.1rem; background:var(--card); border:1px solid var(--border); border-radius:12px; }
+.fld { display:flex; flex-direction:column; gap:.3rem; }
+.fld label { font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); }
+.fld input { background:var(--card2); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:.45rem .6rem; font:inherit; font-size:.9rem; }
+.fld input[type=number] { width:5rem; }
+.spacer { flex:1; }
+.btn { padding:.55rem 1rem; border-radius:9px; font-weight:700; font-size:.82rem; cursor:pointer; border:1px solid transparent; font-family:inherit; }
+.btn-green { background:var(--green); color:#06140c; }
+.btn-ghost { background:transparent; color:var(--dim); border:1px solid var(--border); }
+.btn-ghost:hover { background:var(--border); color:var(--text); }
+.copied { color:var(--green); font-size:.8rem; align-self:center; }
+
+.legend { display:flex; gap:1.1rem; flex-wrap:wrap; font-size:.76rem; color:var(--faint); margin:.2rem 0 1rem; }
+.legend b { color:var(--dim); font-weight:600; }
+.dot { display:inline-block; width:9px; height:9px; border-radius:50%; vertical-align:middle; margin-right:.3rem; }
+
+/* list */
+.list { display:flex; flex-direction:column; gap:.5rem; }
+.row { display:grid; grid-template-columns:26px 64px 52px 1fr auto; gap:.8rem; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:11px; padding:.55rem .7rem; transition:border-color .12s, background .12s, transform .06s; }
+.row:hover { border-color:var(--faint); }
+.row.dragging { opacity:.4; }
+.row.dropbefore { box-shadow:0 -3px 0 var(--green); }
+.row.dropafter { box-shadow:0 3px 0 var(--green); }
+.row.flash { border-color:var(--green); }
+.handle { cursor:grab; color:var(--faint); font-size:1.1rem; text-align:center; user-select:none; line-height:1; }
+.handle:active { cursor:grabbing; }
+.day { text-align:center; }
+.day .d { font-family:'Geologica',sans-serif; font-weight:800; font-size:1.05rem; line-height:1; }
+.day .dl { font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); }
+.day .dt { font-size:.62rem; color:var(--faint); margin-top:.15rem; }
+.thumb { width:52px; height:52px; border-radius:8px; background:var(--card2) center/cover no-repeat; }
+.meta { min-width:0; }
+.meta .t { font-size:.92rem; font-weight:600; line-height:1.25; }
+.meta .s { font-size:.72rem; color:var(--faint); margin-top:.15rem; display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.tag { padding:0 .45rem; border-radius:99px; background:var(--card2); border:1px solid var(--border); }
+.tag.understory { color:#c7b3ff; border-color:#3a2f63; }
+.tag.field-guide { color:#8fe0c0; border-color:#2a5546; }
+.tag.pending { color:var(--amber); border-color:#5a4413; }
+.ctrls { display:flex; gap:.25rem; }
+.ctrls button { width:30px; height:30px; border-radius:7px; border:1px solid var(--border); background:var(--card2); color:var(--dim); cursor:pointer; font-size:.9rem; line-height:1; }
+.ctrls button:hover { background:var(--border); color:var(--text); }
+.ctrls button:disabled { opacity:.3; cursor:default; }
+.hit { background:rgba(74,222,128,.10); }
+@media (max-width:680px){ body{padding:1rem} .row{grid-template-columns:22px 50px 1fr auto; } .thumb{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Article drip</h1>
+  <p class="note">The order stories land in a new reader's <b>Stories</b> section after they install the app — one every couple of days, starting on day 1. Drag a row by its <b>⠿</b> handle (or use <b>↑ ↓</b>) to re-order; day numbers and dates update automatically. Your order is saved in this browser. When it's final, hit <b>Copy finalized order</b> and it'll drive the live drip. Private page (noindex).</p>
+</header>
+
+<div class="toolbar">
+  <div class="fld"><label>One story every</label><div style="display:flex;gap:.4rem;align-items:center"><input id="cadence" type="number" min="1" max="30" value="2"><span style="color:var(--faint);font-size:.85rem">days</span></div></div>
+  <div class="fld"><label>New reader starts</label><input id="start" type="date"></div>
+  <div class="fld"><label>Jump to</label><input id="search" type="text" placeholder="filter by title…" style="width:13rem"></div>
+  <div class="spacer"></div>
+  <button class="btn btn-green" id="copyBtn">Copy finalized order</button>
+  <button class="btn btn-ghost" id="resetBtn">↺ Reset to default</button>
+  <span class="copied" id="copied"></span>
+</div>
+<div class="legend">
+  <span><b id="count">0</b> stories</span>
+  <span><span class="dot" style="background:#c7b3ff"></span>Understory <b id="cU">0</b></span>
+  <span><span class="dot" style="background:#8fe0c0"></span>Field Guide <b id="cF">0</b></span>
+  <span><span class="dot" style="background:var(--amber)"></span>pending (not yet live) <b id="cP">0</b></span>
+  <span id="span">drip spans <b id="spanDays">0</b></span>
+</div>
+
+<div class="list" id="list"></div>
+</div>
+
+<script>
+const LS = "lp_drip_v1";
+let DRIP = [];                 // [{slug,title,category,section,section_label,url,thumb,date,status}]
+let BY = {};                   // slug -> article
+let ORDER = [];                // array of slugs, the live ordering
+let STATE = { order:null, cadence:2, start:null };
+
+function load(){ try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch { return {}; } }
+function save(){ STATE.order = ORDER.slice(); localStorage.setItem(LS, JSON.stringify(STATE)); }
+
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function dayDate(i){
+  const start = document.getElementById("start").value;
+  if(!start) return "";
+  const cad = cadence();
+  const d = new Date(start+"T00:00:00");
+  d.setDate(d.getDate() + i*cad);
+  return MON[d.getMonth()]+" "+d.getDate();
+}
+function cadence(){ return Math.max(1, parseInt(document.getElementById("cadence").value,10) || 2); }
+function dayNum(i){ return 1 + i*cadence(); }
+
+// reconcile saved order with the current drip.json: keep saved sequence, append any new slugs.
+function buildOrder(){
+  const all = DRIP.map(a=>a.slug);
+  const saved = (STATE.order||[]).filter(s=>BY[s]);
+  const have = new Set(saved);
+  const appended = all.filter(s=>!have.has(s));
+  ORDER = saved.concat(appended);
+}
+
+function move(from, to){
+  if(to<0 || to>=ORDER.length || from===to) return;
+  const [s] = ORDER.splice(from,1);
+  ORDER.splice(to,0,s);
+  save(); render(from<to?to:from);
+}
+
+function render(flashIdx){
+  const list = document.getElementById("list");
+  const q = (document.getElementById("search").value||"").trim().toLowerCase();
+  list.innerHTML = ORDER.map((slug,i)=>{
+    const a = BY[slug]; if(!a) return "";
+    const secClass = a.section==="field-guide" ? "field-guide" : "understory";
+    const hit = q && a.title.toLowerCase().includes(q);
+    const pend = a.status!=="published" ? `<span class="tag pending">pending</span>` : "";
+    return `<div class="row${hit?' hit':''}" draggable="true" data-i="${i}" data-slug="${slug}">
+      <div class="handle" title="Drag to reorder">⠿</div>
+      <div class="day"><div class="dl">Day</div><div class="d">${dayNum(i)}</div><div class="dt">${dayDate(i)}</div></div>
+      <div class="thumb" style="background-image:url('${a.thumb||""}')"></div>
+      <div class="meta">
+        <div class="t">${esc(a.title)}</div>
+        <div class="s"><span class="tag ${secClass}">${a.section_label}</span><span>${esc(a.category||"")}</span>${pend}<a href="${a.url}" target="_blank" rel="noopener" style="font-size:.72rem">view ↗</a></div>
+      </div>
+      <div class="ctrls">
+        <button title="Move up" ${i===0?"disabled":""} onclick="move(${i},${i-1})">↑</button>
+        <button title="Move down" ${i===ORDER.length-1?"disabled":""} onclick="move(${i},${i+1})">↓</button>
+      </div>
+    </div>`;
+  }).join("");
+  wireDrag();
+  document.getElementById("count").textContent = ORDER.length;
+  document.getElementById("cU").textContent = ORDER.filter(s=>BY[s]&&BY[s].section==="the-leaf").length;
+  document.getElementById("cF").textContent = ORDER.filter(s=>BY[s]&&BY[s].section==="field-guide").length;
+  document.getElementById("cP").textContent = ORDER.filter(s=>BY[s]&&BY[s].status!=="published").length;
+  document.getElementById("spanDays").textContent = ORDER.length ? ("day "+dayNum(ORDER.length-1)+(dayDate(ORDER.length-1)?" · "+dayDate(ORDER.length-1):"")) : "0";
+  if(flashIdx!=null){ const el=list.querySelector(`[data-i="${flashIdx}"]`); if(el){ el.classList.add("flash"); el.scrollIntoView({block:"nearest"}); setTimeout(()=>el.classList.remove("flash"),500); } }
+}
+function esc(s){ return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+/* drag and drop */
+let dragI = null;
+function wireDrag(){
+  document.querySelectorAll(".row").forEach(row=>{
+    row.addEventListener("dragstart", e=>{ dragI=+row.dataset.i; row.classList.add("dragging"); e.dataTransfer.effectAllowed="move"; });
+    row.addEventListener("dragend", ()=>{ row.classList.remove("dragging"); clearMarks(); });
+    row.addEventListener("dragover", e=>{ e.preventDefault(); const i=+row.dataset.i; clearMarks(); row.classList.add(i>dragI?"dropafter":"dropbefore"); });
+    row.addEventListener("drop", e=>{ e.preventDefault(); const to=+row.dataset.i; clearMarks(); if(dragI!=null && dragI!==to) move(dragI, to); dragI=null; });
+  });
+}
+function clearMarks(){ document.querySelectorAll(".row").forEach(r=>r.classList.remove("dropbefore","dropafter")); }
+
+function copyOrder(){
+  const payload = {
+    cadence_days: cadence(),
+    start: document.getElementById("start").value,
+    count: ORDER.length,
+    order: ORDER.map((slug,i)=>({ day: dayNum(i), slug, section: BY[slug].section, title: BY[slug].title }))
+  };
+  navigator.clipboard?.writeText(JSON.stringify(payload, null, 2));
+  const c=document.getElementById("copied"); c.textContent="✓ copied "+ORDER.length+" stories"; setTimeout(()=>c.textContent="",2200);
+}
+
+(async function(){
+  STATE = Object.assign({ order:null, cadence:2, start:null }, load());
+  DRIP = await fetch("/articledrip/drip.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json());
+  BY = Object.fromEntries(DRIP.map(a=>[a.slug,a]));
+  buildOrder();
+  document.getElementById("cadence").value = STATE.cadence || 2;
+  document.getElementById("start").value = STATE.start || new Date().toISOString().slice(0,10);
+  const onCfg = ()=>{ STATE.cadence=cadence(); STATE.start=document.getElementById("start").value; save(); render(); };
+  document.getElementById("cadence").addEventListener("change", onCfg);
+  document.getElementById("start").addEventListener("change", onCfg);
+  document.getElementById("search").addEventListener("input", ()=>render());
+  document.getElementById("copyBtn").addEventListener("click", copyOrder);
+  document.getElementById("resetBtn").addEventListener("click", ()=>{ if(confirm("Reset to the default drip order? Your custom ordering will be cleared.")){ STATE.order=null; localStorage.setItem(LS,JSON.stringify(STATE)); buildOrder(); render(); } });
+  render();
+})();
+</script>
+</body>
+</html>
