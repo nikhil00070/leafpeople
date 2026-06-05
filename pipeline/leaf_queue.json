@@ -669,9 +669,10 @@
     "category": "Monstera",
     "slug": "monstera-siltepecana",
     "title_hint": "Monstera siltepecana — ONLY about Monstera siltepecana, never Monstera dubia (a different shingling species). Its story: the dusty blue-silver juvenile leaves, the coveted 'El Salvador' form, and how it climbs and fenestrates as it matures — silver to swiss-cheese.",
-    "status": "queued",
+    "status": "pending_review",
     "hero": "/images/plants/profiles/monstera-siltepecana.jpg",
-    "body_fallback": "/images/plants/profiles/monstera-siltepecana.jpg"
+    "body_fallback": "/images/plants/profiles/monstera-siltepecana.jpg",
+    "published_at": "2026-06-05"
   },
   {
     "category": "Hoya",
