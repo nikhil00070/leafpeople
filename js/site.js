@@ -194,17 +194,19 @@
     li.innerHTML =
       "<button class='lp-account-btn' type='button' aria-haspopup='true' aria-expanded='false' aria-label='Account menu'>" +
         "<span class='lp-avatar'></span>" +
+        "<span class='lp-account-name'></span>" +
         "<span class='lp-caret' aria-hidden='true'>▾</span>" +
       "</button>" +
       "<div class='lp-account-menu' hidden>" +
-        "<div class='lp-account-name'></div>" +
+        "<div class='lp-account-fullname'></div>" +
         "<div class='lp-account-email'></div>" +
         "<button class='lp-signout' type='button'>Sign out</button>" +
       "</div>";
-    // Nav shows only the avatar initial (fixed width — fits any name length). The full name
-    // and email live in the dropdown. textContent (not innerHTML) → no injection from claims.
+    // Nav shows the FIRST name (CSS-truncated with an ellipsis if very long); the dropdown
+    // has the full name + email. textContent (not innerHTML) for claims → no injection.
     li.querySelector(".lp-avatar").textContent = (shortName(name).charAt(0) || "?").toUpperCase();
-    li.querySelector(".lp-account-name").textContent = name || "Account";
+    li.querySelector(".lp-account-name").textContent = shortName(name);
+    li.querySelector(".lp-account-fullname").textContent = name || "Account";
     li.querySelector(".lp-account-email").textContent = email || "";
     nav.appendChild(li);
 
