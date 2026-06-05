@@ -56,7 +56,7 @@
     {% for para in intro|default([]) %}
     <p>{{ para | md }}</p>
     {% endfor %}
-    {% for section in (sections[:1] if gated else sections) %}
+    {% for section in (sections[:0] if gated else sections) %}
     <h2 id="s{{ loop.index }}">{{ section.heading | md }}</h2>
     {% for para in section.paragraphs %}
     <p>{{ para | md }}</p>
