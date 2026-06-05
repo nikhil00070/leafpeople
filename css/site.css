@@ -448,10 +448,10 @@ section { position: relative; padding: 6rem 0; }
 .nav-links .lp-account { position: relative; display: flex; align-items: center; }
 .lp-account-btn { display: inline-flex; align-items: center; gap: .45rem; background: transparent; border: 0; color: inherit; cursor: pointer; font: inherit; padding: .3rem .35rem; }
 .lp-avatar { width: 26px; height: 26px; border-radius: 50%; background: #FA2A52; color: #fff; display: grid; place-items: center; font-size: .78rem; font-weight: 800; flex: none; }
-.lp-account-name { font-weight: 600; font-size: .92rem; }
 .lp-caret { font-size: .65rem; opacity: .7; }
 .lp-account-menu { position: absolute; top: calc(100% + .4rem); right: 0; min-width: 210px; background: #0b0f0d; color: #e8efe9; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.4); padding: .55rem; z-index: 200; }
 .lp-account-menu[hidden] { display: none; }
-.lp-account-email { font-size: .76rem; color: #b8c8bb; padding: .3rem .5rem .55rem; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: .35rem; word-break: break-all; }
+.lp-account-menu .lp-account-name { font-weight: 700; font-size: .95rem; color: #f3f7f3; padding: .3rem .5rem .1rem; word-break: break-word; }
+.lp-account-email { font-size: .76rem; color: #b8c8bb; padding: .05rem .5rem .55rem; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: .35rem; word-break: break-all; }
 .lp-signout { width: 100%; text-align: left; background: transparent; border: 0; color: #e8efe9; font: inherit; font-weight: 600; padding: .55rem .5rem; border-radius: 8px; cursor: pointer; }
 .lp-signout:hover { background: rgba(255,255,255,.08); }
