@@ -31,11 +31,13 @@ const emit = (user, isSubscriber) =>
   window.dispatchEvent(new CustomEvent("lp-auth-changed", { detail: { user, isSubscriber } }));
 
 // The edge middleware reads this cookie (the Firebase ID token) to decide subscriber access.
-// Short-lived by design — the token expires in ~1h and onIdTokenChanged refreshes it.
+// Security comes from the token's own ~1h `exp` (the middleware verifies it), NOT the cookie
+// lifetime — so we keep the cookie for 30 days and onIdTokenChanged refreshes the token inside
+// it. That lets the site detect a signed-in visitor (and show the account chip) between visits.
 const COOKIE = "__lpAuth";
 const setTokenCookie = (token) => {
   const secure = location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = COOKIE + "=" + token + "; path=/; max-age=3600; SameSite=Lax" + secure;
+  document.cookie = COOKIE + "=" + token + "; path=/; max-age=2592000; SameSite=Lax" + secure;
 };
 const clearTokenCookie = () => {
   const secure = location.protocol === "https:" ? "; Secure" : "";
