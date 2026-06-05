@@ -31,7 +31,8 @@ let jwksAt = 0;
 
 export default async function middleware(request) {
   try {
-    if (process.env.LP_PAYWALL !== "on") return; // dormant -> serve normally
+    const flag = (process.env.LP_PAYWALL || "").trim().toLowerCase();
+    if (flag !== "on") return; // dormant -> serve normally
 
     const url = new URL(request.url);
     if (!ARTICLE.test(url.pathname)) return; // not a gated article page
@@ -39,11 +40,21 @@ export default async function middleware(request) {
     const token = readCookie(request, "__lpAuth");
     if (await isSubscriber(token)) return; // verified subscriber -> full page
 
-    // Non-subscriber -> serve the preview file at the same URL (internal rewrite, URL unchanged).
-    url.pathname = url.pathname.replace(/\/$/, "") + "/preview.html";
-    return new Response(null, { headers: { "x-middleware-rewrite": url.toString() } });
+    // Non-subscriber -> serve the preview file's HTML at the same URL. We FETCH it (a different
+    // path, not matched by the matcher, so no loop) rather than relying on a rewrite header.
+    const previewURL = new URL(url.pathname.replace(/\/$/, "") + "/preview", url.origin);
+    const res = await fetch(previewURL.toString(), { headers: { "x-lp-internal": "1" } });
+    const html = await res.text();
+    return new Response(html, {
+      status: 200,
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-store",
+        "x-lp-gated": "1", // debug marker so we can confirm the gate fired
+      },
+    });
   } catch (_) {
-    return; // fail open
+    return; // fail open — serve the normal page on any error
   }
 }
 
