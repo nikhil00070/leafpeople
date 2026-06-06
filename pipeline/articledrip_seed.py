@@ -58,11 +58,17 @@ def build():
                 "status": a.get("status", "published"),
             })
 
-    # Default drip order: the ready-to-read (published) stories first, then the pending
-    # pipeline — each in chronological (publish-date) order. This is just the starting
-    # point; /articledrip lets you reorder freely and remembers your sequence.
-    rank = {"published": 0, "pending": 1, "pending_review": 1, "queued": 2}
-    items.sort(key=lambda a: (rank.get(a["status"], 1), a["date"], a["title"]))
+    # Default drip order = the Stories FEED order (exactly what the app shows via feed.json),
+    # then anything not in the feed (pending/unpublished) appended after by date. Just the
+    # starting point; /articledrip lets you reorder freely and remembers your sequence.
+    feed_order = {}
+    try:
+        fd = json.loads(open(os.path.join(ROOT, "feed.json")).read())
+        fitems = fd.get("items", fd) if isinstance(fd, dict) else fd
+        feed_order = {a.get("slug"): i for i, a in enumerate(fitems) if a.get("slug")}
+    except Exception:
+        feed_order = {}
+    items.sort(key=lambda a: (feed_order.get(a["slug"], 10_000), a.get("date", ""), a["title"]))
 
     out_dir = os.path.join(ROOT, "articledrip")
     os.makedirs(out_dir, exist_ok=True)

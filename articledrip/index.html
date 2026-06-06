@@ -61,7 +61,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 .ctrls button { width:30px; height:30px; border-radius:7px; border:1px solid var(--border); background:var(--card2); color:var(--dim); cursor:pointer; font-size:.9rem; line-height:1; }
 .ctrls button:hover { background:var(--border); color:var(--text); }
 .ctrls button:disabled { opacity:.3; cursor:default; }
-.hit { background:rgba(74,222,128,.10); }
+.hit { background:rgba(74,222,128,.22); border-color:var(--green); box-shadow:0 0 0 1px var(--green) inset; }
 @media (max-width:680px){ body{padding:1rem} .row{grid-template-columns:22px 50px 1fr auto; } .thumb{display:none} }
 </style>
 </head>
@@ -153,6 +153,8 @@ function render(flashIdx){
     </div>`;
   }).join("");
   wireDrag();
+  // "Jump to": bring the first matching row into view so the highlight is actually seen.
+  if (q) { const hitEl = list.querySelector(".row.hit"); if (hitEl) hitEl.scrollIntoView({ block: "center", behavior: "smooth" }); }
   document.getElementById("count").textContent = ORDER.length;
   document.getElementById("cU").textContent = ORDER.filter(s=>BY[s]&&BY[s].section==="the-leaf").length;
   document.getElementById("cF").textContent = ORDER.filter(s=>BY[s]&&BY[s].section==="field-guide").length;
