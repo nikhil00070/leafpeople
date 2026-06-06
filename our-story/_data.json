@@ -1,0 +1,24 @@
+{
+  "meta_title": "Our Story",
+  "meta_description": "How Leaf People started — from a home in the Bay Area, a notebook, and a leaf that refused to know better.",
+  "category": "Welcome",
+  "title": "How this all started.",
+  "deck": "From a home in the Bay Area, a notebook, and a leaf that refused to know better.",
+  "intro": [
+    "By Nik Amin · San Francisco Bay Area"
+  ],
+  "sections": [
+    {
+      "heading": "The Book",
+      "paragraphs": [
+        "A few years ago I started keeping rare aroids at my home in the Bay Area — velvet anthuriums, black-leaf philodendrons, plants that by every reasonable measure should not survive a forced-air room thousands of miles from the cloud forest where they evolved. I kept them anyway. The leaves kept coming.",
+        "What started as a private record — notebooks, photographs, the humidity curve I'd defended for a year — turned into a book: Leaf People · Bay Area, Extraordinary foliage plants grown where they shouldn't. It is the most carefully made love letter to a hobby I have ever written. Photographed plant by plant. The genus-by-genus notes I wish I'd had at the beginning.",
+        "Leaf People — the app, this site, the field guide — is what came next. The book taught us depth beats breadth: pick five genera, learn them properly, write about them with the respect they deserve from the growers already keeping them alive. We are not going to be a thousand-species catalog. We are going to be the place a serious collector trusts.",
+        "Grown Where They Shouldn't Exist, the first piece of editorial under Understory, picks up the book's thesis exactly where it left off. The book's chapters became the Field Guide. The book's photos became this site. The writing — the part that began as a private record on a kitchen-counter notebook — becomes a public one, here, every week."
+      ]
+    }
+  ],
+  "slug": "our-story",
+  "hero": "https://leafpeople.app/images/cta.jpg",
+  "og_image": "https://leafpeople.app/images/cta.jpg"
+}
