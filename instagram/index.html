@@ -132,6 +132,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
   <h1>Instagram funnel</h1>
   <p class="note">Your full-year growth calendar — 213 posts, Jun 2 → Dec 31, every day authored. Days 1–90 are the original launch arc; days 91–213 are a story-a-day wave, each post a spotlight on a published Understory / Field-Guide article using that story's own curated photo (species always matches the picture). <b>Phase 1 is manual:</b> open a day, hit <b>Copy caption</b>, post it on Instagram, then type the likes/comments back in here — the dashboard and branch recommendations update live. Step through days with the <b>‹ ›</b> arrows (or ← → keys). Don't like an image? Hit <b>↻ refresh</b> to cycle the candidate pool. Private page (noindex).</p>
   <button onclick="if(confirm('Reset all your image picks, metrics and posted flags?')){localStorage.removeItem(LS);location.reload();}" style="margin-top:.6rem;background:transparent;border:1px solid var(--border);color:var(--faint);border-radius:8px;padding:.4rem .8rem;font:inherit;font-size:.78rem;cursor:pointer">↺ Reset my choices</button>
+  <button onclick="saveChoicesToRepo()" title="Persist your curated images into posts.json so auto-posting uses them, not the defaults" style="margin-top:.6rem;margin-left:.5rem;background:var(--green);border:1px solid var(--green);color:#06140c;border-radius:8px;padding:.4rem .8rem;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer">💾 Save image choices to repo</button>
 </header>
 
 <div class="eyebrow">Dashboard</div>
@@ -164,6 +165,31 @@ let POSTS=[], BR={}, STATE={ followers:0, posts:{} };
 function load(){ try{ return JSON.parse(localStorage.getItem(LS)) || {followers:0,posts:{}} }catch{ return {followers:0,posts:{}} } }
 function save(){ localStorage.setItem(LS, JSON.stringify(STATE)); }
 function ps(id){ STATE.posts[id] = STATE.posts[id] || {}; return STATE.posts[id]; }
+
+// Persist curated image picks (localStorage) into the repo's posts.json via
+// /api/apply-ig-images → apply-instagram-images.yml, so the auto-poster uses
+// your chosen images instead of the seeded defaults.
+async function saveChoicesToRepo(){
+  const sel = {};
+  for (const [id, o] of Object.entries(STATE.posts || {})) {
+    if (o && o.img) sel[id] = o.img;
+  }
+  const n = Object.keys(sel).length;
+  if (!n) { alert("No image choices to save yet — pick an image on some posts first."); return; }
+  if (!confirm(`Save ${n} curated image choice(s) to the repo?\n\nThis updates instagram/posts.json so auto-posting uses your picks, not the defaults.`)) return;
+  try {
+    const r = await fetch("/api/apply-ig-images", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ selections: sel }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok) alert(`✓ Sent ${j.count || n} choice(s). The apply workflow is committing them to posts.json now (~1 min).`);
+    else alert(`Save failed: ${j.error || r.status}`);
+  } catch (e) {
+    alert(`Save failed: ${e.message}`);
+  }
+}
 
 // merge a post's authored data with any local overrides (chosen image + metrics + status)
 function view(p){

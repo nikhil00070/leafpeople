@@ -1,0 +1,45 @@
+name: Apply Instagram image choices
+
+# Triggered by the /instagram "Save image choices" button (via /api/apply-ig-images).
+# Takes a JSON map of {post_id: image_src} and writes each into instagram/posts.json's
+# `image` field, so the auto-poster (post_to_instagram.py) uses your curated picks
+# instead of the seeded defaults. Mirrors apply-article-images.yml.
+
+on:
+  workflow_dispatch:
+    inputs:
+      selections:
+        description: 'JSON map {post_id: image_src}'
+        required: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply chosen Instagram images
+        env:
+          SELECTIONS: ${{ inputs.selections }}
+        run: python pipeline/apply_instagram_images.py "$SELECTIONS"
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Instagram: apply curated post images"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
+          fi
