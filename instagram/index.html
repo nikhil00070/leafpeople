@@ -146,7 +146,11 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 </div>
 
 <div class="eyebrow">Content calendar — full year (213 days)</div>
-<div class="cal-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+<div id="tabbar" style="display:flex;gap:.5rem;margin:.4rem 0 .9rem">
+  <button id="tab-queue" class="btn btn-green" onclick="setTab('queue')">📋 Queue <span id="qn"></span></button>
+  <button id="tab-past" class="btn btn-ghost" onclick="setTab('past')">✓ Past <span id="pn"></span></button>
+</div>
+<div class="cal-head" id="calHead"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
 <div class="cal" id="cal"></div>
 </div>
 
@@ -161,6 +165,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 const LS = "lp_ig_v1";
 const WEIGHTS = { likes:1, comments:4, saves:6, follows:10 };
 let POSTS=[], BR={}, STATE={ followers:0, posts:{} };
+let TAB="queue";   // "queue" = not-yet-posted · "past" = posted (manual or auto)
 
 function load(){ try{ return JSON.parse(localStorage.getItem(LS)) || {followers:0,posts:{}} }catch{ return {followers:0,posts:{}} } }
 function save(){ localStorage.setItem(LS, JSON.stringify(STATE)); }
@@ -328,16 +333,33 @@ function renderGoals(){
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function renderCal(){
   const cal = document.getElementById("cal");
+  const isPast = TAB === "past";
+  // Queue = not posted; Past = posted (covers BOTH manual marks and auto-posts,
+  // since the cron sets status:"posted" in posts.json). A post leaving the queue
+  // (either way) drops out of Queue and shows up under Past automatically.
+  let list = POSTS.filter(raw => (view(raw).status === "posted") === isPast);
+  if(isPast){
+    const when = raw => (STATE.posts[raw.id]||{}).postedAt || raw.date;  // actual post time, else scheduled
+    list = list.slice().sort((a,b)=> when(b) < when(a) ? -1 : when(b) > when(a) ? 1 : b.day - a.day);
+  }
+  if(!list.length){
+    cal.innerHTML = `<div style="grid-column:1/-1;color:var(--faint);padding:2rem;text-align:center;font-size:.9rem">${isPast
+      ? "Nothing posted yet — mark a post as posted (or let the auto-poster send it) and it lands here."
+      : "🎉 Queue empty — every post has gone out."}</div>`;
+    return;
+  }
   let html = ""; let lastMonth = -1;
-  POSTS.forEach((raw,idx)=>{
+  list.forEach((raw,idx)=>{
     const p = view(raw);
     const d = new Date(p.date+"T00:00:00");
     const month = d.getMonth();
-    if(month!==lastMonth){ html += `<div class="month-tag">${MON[month]} ${d.getFullYear()}</div>`; lastMonth=month; }
-    if(idx===0 || month!==new Date(POSTS[idx-1].date+"T00:00:00").getMonth()){
-      // align first cell of each month block to its weekday (Mon=0)
-      const wd = (d.getDay()+6)%7;
-      if(wd>0) html += `<div style="grid-column:span ${wd}"></div>`;
+    // Month dividers + weekday alignment only make sense in the chronological Queue.
+    if(!isPast){
+      if(month!==lastMonth){ html += `<div class="month-tag">${MON[month]} ${d.getFullYear()}</div>`; lastMonth=month; }
+      if(idx===0 || month!==new Date(list[idx-1].date+"T00:00:00").getMonth()){
+        const wd = (d.getDay()+6)%7;
+        if(wd>0) html += `<div style="grid-column:span ${wd}"></div>`;
+      }
     }
     const b = BR.branches[p.branch] || {color:"#888",label:p.branch};
     const lk = p.metrics.likes||0;
@@ -350,6 +372,20 @@ function renderCal(){
     </div>`;
   });
   cal.innerHTML = html;
+}
+
+function setTab(t){
+  TAB = t;
+  document.getElementById("tab-queue").className = "btn " + (t==="queue" ? "btn-green" : "btn-ghost");
+  document.getElementById("tab-past").className  = "btn " + (t==="past"  ? "btn-green" : "btn-ghost");
+  const ch = document.getElementById("calHead"); if(ch) ch.style.display = (t==="past") ? "none" : "";
+  renderCal(); updateTabCounts();
+}
+function updateTabCounts(){
+  const posted = POSTS.map(view).filter(p=>p.status==="posted").length;
+  const q=document.getElementById("qn"), pn=document.getElementById("pn");
+  if(q)  q.textContent  = `(${POSTS.length - posted})`;
+  if(pn) pn.textContent = `(${posted})`;
 }
 
 /* ---------- modal ---------- */
@@ -401,7 +437,7 @@ function openModal(id){
       </div>
       <div class="btnrow">
         ${isSkel?"":`<button class="btn btn-green" onclick="copyCaption('${p.id}')">Copy caption + tags</button>`}
-        <button class="btn btn-ghost" onclick="togglePosted('${p.id}')">${p.status==="posted"?"↩ Mark not posted":"✓ Mark posted"}</button>
+        <button class="btn btn-ghost" onclick="togglePosted('${p.id}')">${p.status==="posted"?"↩ Move back to Queue":"✓ Posted — move to Past"}</button>
       </div>
     </div>`;
   document.getElementById("modal").querySelectorAll('input[data-m]').forEach(inp=>{
@@ -445,7 +481,12 @@ function refreshImg(){
   const o = ps(CUR); o.img = ring[(i+1) % ring.length]; save();
   openModal(CUR); rerenderCalOnly();
 }
-function togglePosted(id){ const o=ps(id); const cur=o.status||POSTS.find(p=>p.id===id).status; o.status = cur==="posted"?"draft":"posted"; save(); openModal(id); rerender(); }
+function togglePosted(id){
+  const o=ps(id); const cur=o.status||POSTS.find(p=>p.id===id).status;
+  if(cur==="posted"){ o.status="draft"; delete o.postedAt; }      // back to Queue
+  else { o.status="posted"; o.postedAt=new Date().toISOString(); } // out of Queue → Past
+  save(); openModal(id); rerender();
+}
 function copyCaption(id){
   const p = view(POSTS.find(x=>x.id===id));
   let text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
@@ -456,7 +497,7 @@ function copyCaption(id){
 }
 
 function rerenderCalOnly(){ renderCal(); }
-function rerender(){ renderTiles(); renderLeaderboard(); renderRecs(); renderCal(); }
+function rerender(){ renderTiles(); renderLeaderboard(); renderRecs(); renderCal(); updateTabCounts(); }
 
 (async function(){
   STATE = load();
@@ -466,7 +507,7 @@ function rerender(){ renderTiles(); renderLeaderboard(); renderRecs(); renderCal
     fetch("/instagram/branches.json"+bust,{cache:"no-store"}).then(r=>r.json()),
     fetch("/instagram/library.json"+bust,{cache:"no-store"}).then(r=>r.json()),
   ]);
-  renderTiles(); renderLeaderboard(); renderRecs(); renderGoals(); renderCal();
+  renderTiles(); renderLeaderboard(); renderRecs(); renderGoals(); renderCal(); updateTabCounts();
 })();
 </script>
 </body>
