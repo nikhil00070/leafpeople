@@ -163,6 +163,7 @@ function render(flashIdx){
   document.getElementById("cP").textContent = ORDER.filter(s=>BY[s]&&BY[s].status!=="published").length;
   document.getElementById("spanDays").textContent = ORDER.length ? ("day "+dayNum(ORDER.length-1)+(dayDate(ORDER.length-1)?" · "+dayDate(ORDER.length-1):"")) : "0";
   if(flashIdx!=null){ const el=list.querySelector(`[data-i="${flashIdx}"]`); if(el){ el.classList.add("flash"); el.scrollIntoView({block:"nearest"}); setTimeout(()=>el.classList.remove("flash"),500); } }
+  renderRunway();
 }
 function esc(s){ return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
 
@@ -197,31 +198,37 @@ const RUN_SEC = [["the-leaf","Understory"],["field-guide","Field Guide"]];
 function fmtRun(w){ return w < 1 ? Math.max(0,Math.round(w*7))+"d" : w.toFixed(1)+"wk"; }
 function renderRunway(){
   const colors = { ok:"#4ade80", warn:"#fbbf24", low:"#f87171" };
-  const icon   = { ok:"🟢", warn:"🟡", low:"🔴" };
+  const cad = cadence();
+  const total = DRIP.length;
+  const live = DRIP.filter(a=>a.status==="published").length;
+  const queued = total - live;
+  // Drip is ONE story (Understory OR Field Guide, interleaved) every `cad` days.
+  // Total coverage = every story in the queue × the cadence.
+  const days = total * cad;
+  const months = (days/30.4).toFixed(1);
+  // Per-section PUBLISH runway: is new content still flowing into the live feed?
+  // (leaf-publisher 3/wk, guide-generator 5/wk — once a section hits 0 it stops feeding.)
   const rows = RUN_SEC.map(([sec,label])=>{
     const pend = DRIP.filter(a=>a.section===sec && a.status!=="published").length;
     return { label, pend, wk: pend / PUB_RATE[sec] };
   });
   const worst = Math.min(...rows.map(r=>r.wk));
-  const level = worst > 4 ? "ok" : worst >= 2 ? "warn" : "low";
-  const live = DRIP.filter(a=>a.status==="published").length;
-  const queued = DRIP.length - live;
-  const head = level==="ok" ? "Queue healthy" : level==="warn" ? "Queue running low — top up soon" : "Queue nearly dry — top up now";
+  const flow = worst > 4 ? "ok" : worst >= 2 ? "warn" : "low";
+  const lowSec = rows.find(r=>r.wk < 2);
   const detail = rows.map(r=>{
     const c = r.wk>4?colors.ok:r.wk>=2?colors.warn:colors.low;
-    return `<span style="color:${c}">${r.label}: <b>${r.pend}</b> queued · ~${fmtRun(r.wk)} left</span>`;
-  }).join('<span style="opacity:.35;margin:0 .15rem">·</span>');
+    return `${r.label}: <b style="color:${c}">${r.pend}</b> queued · ~${fmtRun(r.wk)}`;
+  }).join('<span style="opacity:.35;margin:0 .3rem">·</span>');
   const r = document.getElementById("runway");
-  r.style.cssText = `margin:.2rem 0 1rem;padding:.7rem .9rem;border-radius:.6rem;background:rgba(255,255,255,.04);border:1px solid ${colors[level]}40;border-left:3px solid ${colors[level]}`;
+  r.style.cssText = `margin:.2rem 0 1rem;padding:.7rem .9rem;border-radius:.6rem;background:rgba(255,255,255,.04);border:1px solid ${colors[flow]}40;border-left:3px solid ${colors[flow]}`;
   r.innerHTML =
-    `<div style="display:flex;align-items:center;gap:.55rem;flex-wrap:wrap">
-       <span style="font-size:1rem">${icon[level]}</span>
-       <b style="color:${colors[level]}">${head}</b>
-       <span style="opacity:.65;font-size:.85rem">${live} live · ${queued} in queue</span>
+    `<div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">
+       <b style="color:${colors.ok};font-size:1.02rem">Drip covers ~${days} days (~${months} months)</b>
+       <span style="opacity:.7;font-size:.85rem">at 1 story / ${cad} days · ${total} stories (${live} live · ${queued} still publishing)</span>
      </div>
-     <div style="margin-top:.45rem;display:flex;gap:.35rem;flex-wrap:wrap;font-size:.85rem;align-items:center">${detail}</div>`
-    + (level!=="ok"
-        ? `<div style="margin-top:.45rem;font-size:.82rem;opacity:.85">✍️ Add stories to the low section's queue (pipeline/leaf_queue.json or guide_queue.json) so the drip never stalls.</div>`
+     <div style="margin-top:.45rem;font-size:.85rem;opacity:.9">New content flowing — ${detail}</div>`
+    + (flow!=="ok"
+        ? `<div style="margin-top:.4rem;font-size:.82rem;color:${colors[flow]}">⚠️ ${lowSec ? lowSec.label : "A section"} queue is nearly dry — top it up so the feed keeps growing.</div>`
         : "");
 }
 
@@ -229,7 +236,6 @@ function renderRunway(){
   STATE = Object.assign({ order:null, cadence:2, start:null }, load());
   DRIP = await fetch("/articledrip/drip.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json());
   BY = Object.fromEntries(DRIP.map(a=>[a.slug,a]));
-  renderRunway();
   buildOrder();
   document.getElementById("cadence").value = STATE.cadence || 2;
   document.getElementById("start").value = STATE.start || new Date().toISOString().slice(0,10);
