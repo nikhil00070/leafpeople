@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Shared plant-ID reference images. READ is public (they drive on-device ID
+    // for every user and aren't sensitive); WRITE is locked to the admin account
+    // (also gated client-side in the app).
+    match /referenceImages/{image} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
+    // Everything else: no client access.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

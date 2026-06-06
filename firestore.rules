@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Shared plant-ID reference library + its version manifest.
+    // READ is public: it drives on-device identification for every user and
+    //   contains no sensitive data (plant photos + Vision feature-prints).
+    // WRITE is locked to the admin account (also gated client-side in the app).
+    match /referenceLibrary/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+    match /referenceMeta/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
+    // Everything else: NO direct client access. The RevenueCat webhook writes
+    // users/{uid} via the Firebase Admin SDK, which bypasses these rules — so
+    // subscription claims keep working. The app uses no other Firestore client
+    // access today, so this lockdown changes nothing except improving security.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
