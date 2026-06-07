@@ -3,3 +3,6 @@
 functions
 firebase.json
 .firebaserc
+
+# Internal setup doc — version-controlled, but not served on the public site.
+IG_AUTOMATION_SETUP.md
