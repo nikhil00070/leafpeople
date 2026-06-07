@@ -436,7 +436,8 @@ function openModal(id){
         </div>
       </div>
       <div class="btnrow">
-        ${isSkel?"":`<button class="btn btn-green" onclick="copyCaption('${p.id}')">Copy caption + tags</button>`}
+        ${isSkel?"":`<button class="btn btn-green" onclick="sharePost('${p.id}')">📲 Save image + caption</button>`}
+        ${isSkel?"":`<button class="btn btn-ghost" onclick="copyCaption('${p.id}')">Copy caption only</button>`}
         <button class="btn btn-ghost" onclick="togglePosted('${p.id}')">${p.status==="posted"?"↩ Move back to Queue":"✓ Posted — move to Past"}</button>
       </div>
     </div>`;
@@ -487,13 +488,41 @@ function togglePosted(id){
   else { o.status="posted"; o.postedAt=new Date().toISOString(); } // out of Queue → Past
   save(); openModal(id); rerender();
 }
-function copyCaption(id){
-  const p = view(POSTS.find(x=>x.id===id));
+function captionText(p){
   let text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
   const meta = metaFor(p.image);
   if(meta && meta.kind==="stock" && meta.credit) text += "\n\n📷 " + meta.credit;
-  navigator.clipboard?.writeText(text);
+  return text;
+}
+function copyCaption(id){
+  const p = view(POSTS.find(x=>x.id===id));
+  navigator.clipboard?.writeText(captionText(p));
   const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ copied"; setTimeout(()=>c.textContent="",1500); }
+}
+// One tap to get a post ready for Instagram: copy the caption AND hand the image
+// to the phone's native share sheet (tap "Save Image" → it lands in Photos, then
+// open IG → new post → pick it → paste). Desktop falls back to a file download.
+async function sharePost(id){
+  const p = view(POSTS.find(x=>x.id===id));
+  const text = captionText(p);
+  try { await navigator.clipboard?.writeText(text); } catch(e){}
+  if(!p.image){ alert("No image on this post yet — pick one first."); return; }
+  try {
+    const url = p.image.startsWith("http") ? p.image : (location.origin + p.image);
+    const blob = await (await fetch(url, {cache:"no-store"})).blob();
+    const fname = (p.image.split("/").pop() || "leafpeople.jpg");
+    const file = new File([blob], fname, { type: blob.type || "image/jpeg" });
+    if(navigator.canShare && navigator.canShare({ files:[file] })){
+      await navigator.share({ files:[file], text });   // mobile: share sheet → Save Image / Instagram
+      return;
+    }
+    const a = document.createElement("a");           // desktop fallback: download
+    a.href = URL.createObjectURL(blob); a.download = fname;
+    document.body.appendChild(a); a.click(); a.remove();
+    alert("✓ Caption copied + image downloaded.\nOpen Instagram → new post → pick the image → paste the caption.");
+  } catch(e){
+    alert("Caption copied. Couldn't grab the image automatically — long-press the image above → Save to Photos.");
+  }
 }
 
 function rerenderCalOnly(){ renderCal(); }
