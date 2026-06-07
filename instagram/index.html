@@ -175,18 +175,19 @@ function ps(id){ STATE.posts[id] = STATE.posts[id] || {}; return STATE.posts[id]
 // /api/apply-ig-images → apply-instagram-images.yml, so the auto-poster uses
 // your chosen images instead of the seeded defaults.
 async function saveChoicesToRepo(){
-  const sel = {};
+  const sel = {}, pos = {};
   for (const [id, o] of Object.entries(STATE.posts || {})) {
     if (o && o.img) sel[id] = o.img;
+    if (o && o.imgPos && o.imgPos !== "50% 50%") pos[id] = o.imgPos;
   }
-  const n = Object.keys(sel).length;
-  if (!n) { alert("No image choices to save yet — pick an image on some posts first."); return; }
-  if (!confirm(`Save ${n} curated image choice(s) to the repo?\n\nThis updates instagram/posts.json so auto-posting uses your picks, not the defaults.`)) return;
+  const n = new Set([...Object.keys(sel), ...Object.keys(pos)]).size;
+  if (!n) { alert("Nothing to save yet — pick an image or adjust framing on some posts first."); return; }
+  if (!confirm(`Save curated changes for ${n} post(s) to the repo?\n\n• ${Object.keys(sel).length} image pick(s)\n• ${Object.keys(pos).length} framing adjustment(s)\n\nThis updates instagram/posts.json so auto-posting uses your picks.`)) return;
   try {
     const r = await fetch("/api/apply-ig-images", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ selections: sel }),
+      body: JSON.stringify({ selections: sel, positions: pos }),
     });
     const j = await r.json().catch(() => ({}));
     if (r.ok) alert(`✓ Sent ${j.count || n} choice(s). The apply workflow is committing them to posts.json now (~1 min).`);
@@ -200,9 +201,21 @@ async function saveChoicesToRepo(){
 function view(p){
   const o = STATE.posts[p.id] || {};
   const image = o.img || p.image || "";
+  const imgPos = o.imgPos || p.imgPos || "50% 50%";
   const metrics = Object.assign({}, p.metrics, o.metrics||{});
   const status = o.status || p.status;
-  return { ...p, image, metrics, status };
+  return { ...p, image, imgPos, metrics, status };
+}
+// vertical % out of an object-position string ("50% 20%" -> 20; keywords supported)
+function posV(pos){ const m=/(\d+(?:\.\d+)?)%\s*$/.exec(pos||""); if(m) return Math.round(+m[1]); if(/top/.test(pos))return 0; if(/bottom/.test(pos))return 100; return 50; }
+// live-adjust the open post's vertical crop (0=top … 100=bottom); persists locally,
+// reaches posts.json via "Save image choices". Updates the preview without a full rerender.
+function setImgFrame(v){
+  if(CUR==null) return;
+  const pos = `50% ${Math.max(0,Math.min(100,+v))}%`;
+  ps(CUR).imgPos = pos; save();
+  const img = document.querySelector('#modal .ig-img'); if(img) img.style.objectPosition = pos;
+  const cell = document.querySelector(`.cell[data-id="${CUR}"] .thumb`); if(cell) cell.style.backgroundPosition = pos;
 }
 
 // ---- image library + refresh options (global exclusivity) ----
@@ -373,7 +386,8 @@ function renderCal(){
     }
     const b = BR.branches[p.branch] || {color:"#888",label:p.branch};
     const lk = p.metrics.likes||0;
-    const thumb = p.image ? `style="background-image:url('${p.image}')"` : "";
+    const tpos = (STATE.posts[p.id]||{}).imgPos || p.imgPos || "50% 50%";
+    const thumb = p.image ? `style="background-image:url('${p.image}');background-position:${tpos}"` : "";
     html += `<div class="cell ${p.status==='skeleton'?'skeleton':''}" data-id="${p.id}" onclick="openModal('${p.id}')">
       <div class="chd"><span class="daynum">Day ${p.day}</span><span>${MON[month]} ${d.getDate()}</span></div>
       <div class="branchbar" style="background:${b.color}"></div>
@@ -407,7 +421,7 @@ function openModal(id){
   const isSkel = p.status==="skeleton";
   const opts = optionsFor(raw);
   const meta = metaFor(p.image);
-  const imgHtml = p.image ? `<img class="ig-img" src="${p.image}">` : `<div class="ig-img skel">skeleton — generate image when ready</div>`;
+  const imgHtml = p.image ? `<img class="ig-img" src="${p.image}" style="object-position:${p.imgPos||'50% 50%'}">` : `<div class="ig-img skel">skeleton — generate image when ready</div>`;
   const poolBtn = (opts.length>1)
     ? `<button class="refresh" onclick="refreshImg()">↻ refresh image · ${opts.length} option${opts.length>1?'s':''}</button>`
     : (p.image ? `<div class="refresh" style="cursor:default;opacity:.55">only option left in this branch</div>` : "");
@@ -435,6 +449,9 @@ function openModal(id){
       ${isSkel ? `<p style="color:var(--faint);font-size:.85rem;margin-top:1rem">Skeleton slot. Branch <b>${b.label}</b> is assigned; caption + image get generated when this day comes up (or sooner if the learning loop promotes this branch).</p>`
       : `<div class="mfield"><label>Choose image · ${opts.length} options <span style="color:var(--faint);font-weight:400;text-transform:none;letter-spacing:0">— tap to pick (📷 = stock, credit it · 📱 = app shot)</span></label>
           <div class="picker">${opts.map(s=>{const m=metaFor(s)||{};const k=m.kind==='stock'?'📷':(m.kind==='appui'?'📱':'');return `<div class="opt ${s===p.image?'sel':''}" onclick="pickImg('${s}')" title="${(m.credit||'').replace(/"/g,'&quot;')}"><img src="${s}" loading="lazy">${k?`<span class="kd">${k}</span>`:''}</div>`;}).join("")}</div></div>
+         ${p.image?`<div class="mfield"><label>Frame · vertical crop <span style="color:var(--faint);font-weight:400;text-transform:none;letter-spacing:0">— drag if the important part is cut off</span></label>
+          <input type="range" min="0" max="100" step="1" value="${posV(p.imgPos)}" oninput="setImgFrame(this.value)" style="width:100%;accent-color:${b.color}">
+          <div style="display:flex;justify-content:space-between;font-size:.66rem;color:var(--faint);margin-top:-.2rem"><span>↑ show top</span><span>center</span><span>show bottom ↓</span></div></div>`:''}
          <div class="mfield"><label>Hashtags (${(p.hashtags||[]).length})</label><div class="tagchips">${(p.hashtags||[]).map(t=>`<span class="chip">${t}</span>`).join("")}</div></div>`}
       <div class="mfield"><label>Metrics — type these in after you post <span id="copied"></span></label>
         <div class="metrics-grid">

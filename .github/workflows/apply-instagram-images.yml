@@ -10,7 +10,12 @@ on:
     inputs:
       selections:
         description: 'JSON map {post_id: image_src}'
-        required: true
+        required: false
+        default: '{}'
+      positions:
+        description: 'JSON map {post_id: "50% 20%"} — vertical crop / object-position'
+        required: false
+        default: '{}'
 
 jobs:
   apply:
@@ -27,7 +32,8 @@ jobs:
       - name: Apply chosen Instagram images
         env:
           SELECTIONS: ${{ inputs.selections }}
-        run: python pipeline/apply_instagram_images.py "$SELECTIONS"
+          POSITIONS: ${{ inputs.positions }}
+        run: python pipeline/apply_instagram_images.py "$SELECTIONS" "$POSITIONS"
 
       - name: Commit & push
         run: |

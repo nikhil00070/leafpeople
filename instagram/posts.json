@@ -1201,7 +1201,8 @@
       "follows": 0,
       "reach": 0
     },
-    "species": "anthurium warocqueanum"
+    "species": "anthurium warocqueanum",
+    "imgPos": "50% 0%"
   },
   {
     "id": "d35",
@@ -1326,7 +1327,8 @@
       "follows": 0,
       "reach": 0
     },
-    "species": "anthurium papillilaminum"
+    "species": "anthurium papillilaminum",
+    "imgPos": "50% 0%"
   },
   {
     "id": "d39",

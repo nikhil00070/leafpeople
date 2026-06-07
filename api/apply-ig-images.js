@@ -22,9 +22,10 @@ export default async function handler(req, res) {
   if (!token) return res.status(500).json({ error: "GITHUB_TOKEN not configured on the server." });
 
   const body = typeof req.body === "string" ? safeJson(req.body) : (req.body || {});
-  const sel = body.selections;
-  if (!sel || typeof sel !== "object" || Array.isArray(sel)) {
-    return res.status(400).json({ error: "selections object required" });
+  const sel = body.selections || {};
+  const pos = body.positions || {};
+  if (typeof sel !== "object" || Array.isArray(sel) || typeof pos !== "object" || Array.isArray(pos)) {
+    return res.status(400).json({ error: "selections/positions must be objects" });
   }
 
   const clean = {};
@@ -36,9 +37,21 @@ export default async function handler(req, res) {
     }
     clean[id] = v;
   }
-  const n = Object.keys(clean).length;
-  if (!n) return res.status(400).json({ error: "no valid selections" });
-  if (n > 250) return res.status(400).json({ error: "too many selections" });
+
+  const POS_RE = /^\d{1,3}% \d{1,3}%$/;               // e.g. "50% 20%"
+  const cleanPos = {};
+  for (const [k, v] of Object.entries(pos)) {
+    const id = String(k);
+    if (!ID_RE.test(id)) return res.status(400).json({ error: `invalid post id: ${k}` });
+    if (typeof v !== "string" || !POS_RE.test(v)) {
+      return res.status(400).json({ error: `invalid position for ${id}: ${v}` });
+    }
+    cleanPos[id] = v;
+  }
+
+  const n = new Set([...Object.keys(clean), ...Object.keys(cleanPos)]).size;
+  if (!n) return res.status(400).json({ error: "no valid selections or positions" });
+  if (n > 250) return res.status(400).json({ error: "too many changes" });
 
   const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW}/dispatches`;
   const gh = await fetch(url, {
@@ -50,7 +63,7 @@ export default async function handler(req, res) {
       "Content-Type": "application/json",
       "User-Agent": "leafpeople-curate",
     },
-    body: JSON.stringify({ ref: REF, inputs: { selections: JSON.stringify(clean) } }),
+    body: JSON.stringify({ ref: REF, inputs: { selections: JSON.stringify(clean), positions: JSON.stringify(cleanPos) } }),
   });
 
   if (gh.status === 204) return res.status(200).json({ ok: true, count: n });

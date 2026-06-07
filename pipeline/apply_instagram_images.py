@@ -28,14 +28,23 @@ def main():
     except Exception as e:
         print(f"bad selections JSON: {e}")
         sys.exit(1)
-    if not isinstance(sel, dict) or not sel:
-        print("no selections — nothing to do")
+    try:
+        pos = json.loads(sys.argv[2]) if len(sys.argv) > 2 else {}
+    except Exception as e:
+        print(f"bad positions JSON: {e}")
+        pos = {}
+    if not isinstance(sel, dict):
+        sel = {}
+    if not isinstance(pos, dict):
+        pos = {}
+    if not sel and not pos:
+        print("no selections or positions — nothing to do")
         return
 
     posts = json.loads(open(POSTS).read())
     by_id = {p.get("id"): p for p in posts}
 
-    applied, missing = 0, 0
+    applied, framed, missing = 0, 0, 0
     for pid, src in sel.items():
         post = by_id.get(pid)
         if not post:
@@ -44,9 +53,16 @@ def main():
         if isinstance(src, str) and src and post.get("image") != src:
             post["image"] = src
             applied += 1
+    for pid, p in pos.items():
+        post = by_id.get(pid)
+        if not post:
+            continue
+        if isinstance(p, str) and p and post.get("imgPos") != p:
+            post["imgPos"] = p
+            framed += 1
 
     json.dump(posts, open(POSTS, "w"), indent=2)
-    print(f"applied {applied} image choice(s) across {len(posts)} posts"
+    print(f"applied {applied} image choice(s) + {framed} framing(s) across {len(posts)} posts"
           f"{f' ({missing} unknown id(s) skipped)' if missing else ''}")
 
 
