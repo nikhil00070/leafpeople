@@ -1200,7 +1200,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "species": "anthurium warocqueanum"
   },
   {
     "id": "d35",
@@ -1324,7 +1325,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "species": "anthurium papillilaminum"
   },
   {
     "id": "d39",
@@ -1551,7 +1553,7 @@
     "branch": "article-fieldguide",
     "status": "draft",
     "title": "The Queen, in full",
-    "image": "/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg",
+    "image": "/images/source/stock/anthurium-warocqueanum-hero.jpg",
     "caption": "The complete story of the Queen Anthurium \u2014 where she grows, why she's coveted, how to keep her alive. Full guide, link in bio.",
     "hashtags": [
       "#leafpeople",
@@ -1572,7 +1574,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "species": "anthurium warocqueanum"
   },
   {
     "id": "d47",
@@ -3603,7 +3606,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "species": "philodendron burle marx variegata"
   },
   {
     "id": "d107",
@@ -5395,7 +5399,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "species": "anthurium luxurians"
   },
   {
     "id": "d160",

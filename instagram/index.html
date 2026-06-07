@@ -227,6 +227,16 @@ function optionsFor(p){
   const taken = chosenElsewhere(p.id);
   const ring = [];
   const push = list => { for(const e of (list||[])){ if(!e||!e.src) continue; if(taken.has(e.src)||ring.includes(e.src)) continue; ring.push(e.src); } };
+  // SPECIES/KEYWORD MATCH FIRST — pull images whose filename matches words in this
+  // post's title (e.g. "Anthurium luxurians" surfaces every *luxurians* shot up top)
+  // so a species spotlight gets its relevant options first, not buried under 250 generic ones.
+  const STOP = new Set(['the','and','from','with','that','this','your','what','others','full','cult','leaf','problem','legend','legacy','restraint','single','even','name','cant','bloomer','fast']);
+  const kws = ((p.title||'')+' '+(p.species||'')).toLowerCase().match(/[a-z]{4,}/g)||[];
+  const terms = kws.filter(k=>!STOP.has(k));
+  if(terms.length){
+    const matches = LIB.filter(e=>{ const s=(e.src||'').toLowerCase(); return terms.some(t=>s.includes(t)); });
+    push(matches);                // species/keyword matches surfaced first
+  }
   push(libByBranch(p.branch));   // every on-theme option
   push(LIB);                      // then the rest of the library — pick from anything
   const cur = view(p).image;
