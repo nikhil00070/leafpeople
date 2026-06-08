@@ -975,9 +975,10 @@
     "category": "Philodendron",
     "slug": "philodendron-lynnhannoniae",
     "title_hint": "A species, not a cultivar: the rare true-species philodendron most people have never heard of, and why species snobbery exists in a hybrid-soaked hobby.",
-    "status": "queued",
+    "status": "pending_review",
     "hero": "/images/plants/profiles/philodendron-lynnhannoniae.jpg",
-    "body_fallback": "/images/plants/profiles/philodendron-lynnhannoniae.jpg"
+    "body_fallback": "/images/plants/profiles/philodendron-lynnhannoniae.jpg",
+    "published_at": "2026-06-08"
   },
   {
     "category": "Philodendron",
