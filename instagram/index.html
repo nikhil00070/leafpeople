@@ -525,10 +525,19 @@ function togglePosted(id){
 // So the caption carries the 5 strongest (deduped, in order); the overflow is meant
 // for the first comment.
 const CAPTION_TAGS = 5;
+// The same brand + generic boilerplate leads every post's tag list, so a naive "first 5"
+// puts the IDENTICAL 5 on every caption. Instead: pin the brand tag, then the post's
+// distinctive/niche tags (these vary per post → reach the actual audience), then the
+// generic filler. Caption takes the top 5; the rest (incl. filler) goes to the comment.
+const BRAND_PIN = "#leafpeople";
+const GENERIC_TAGS = new Set(["#leafpeopleapp","#plantsofinstagram","#foliage","#houseplantsofinstagram","#botanical","#indoorjungle","#plantcollector"]);
+function tagPriority(t){ const k=(t||"").toLowerCase(); if(k===BRAND_PIN) return 0; return GENERIC_TAGS.has(k)?2:1; }
 function splitTags(p){
   const seen=new Set(), uniq=[];
   for(const t of (p.hashtags||[])){ const k=(t||"").toLowerCase(); if(t && !seen.has(k)){ seen.add(k); uniq.push(t); } }
-  return { caption: uniq.slice(0,CAPTION_TAGS), comment: uniq.slice(CAPTION_TAGS) };
+  // stable sort by priority (brand → niche → generic), tie-broken by original order
+  const ordered = uniq.map((t,i)=>[t,i]).sort((a,b)=> (tagPriority(a[0])-tagPriority(b[0])) || (a[1]-b[1])).map(x=>x[0]);
+  return { caption: ordered.slice(0,CAPTION_TAGS), comment: ordered.slice(CAPTION_TAGS) };
 }
 function tagChips(p){
   const sp=splitTags(p);
