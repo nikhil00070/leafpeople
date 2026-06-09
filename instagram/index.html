@@ -260,10 +260,15 @@ function score(m){ return (m.likes||0)*WEIGHTS.likes + (m.comments||0)*WEIGHTS.c
 
 function esc(s){ return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
 function fmtCap(p){
-  let t = esc(p.caption);
-  const tagline = (p.hashtags||[]).join(" ");
-  if(tagline) t += "\n\n" + esc(p.cta||"") + "\n" + esc(tagline);
-  return t.replace(/(#[A-Za-z0-9_]+)/g,'<span class="tag">$1</span>');
+  const sp = splitTags(p);
+  let t = esc(p.caption) + "\n\n" + esc(p.cta||"");
+  if(sp.caption.length) t += "\n" + esc(sp.caption.join(" "));
+  let html = t.replace(/(#[A-Za-z0-9_]+)/g,'<span class="tag">$1</span>');
+  if(sp.comment.length){
+    const ct = esc(sp.comment.join(" ")).replace(/(#[A-Za-z0-9_]+)/g,'<span class="tag" style="opacity:.55">$1</span>');
+    html += "\n\n" + `<span style="color:var(--faint);font-size:.9em">↳ 1st comment: ${ct}</span>`;
+  }
+  return html;
 }
 
 /* ---------- dashboard ---------- */
@@ -452,7 +457,7 @@ function openModal(id){
          ${p.image?`<div class="mfield"><label>Frame · vertical crop <span style="color:var(--faint);font-weight:400;text-transform:none;letter-spacing:0">— drag if the important part is cut off</span></label>
           <input type="range" min="0" max="100" step="1" value="${posV(p.imgPos)}" oninput="setImgFrame(this.value)" style="width:100%;accent-color:${b.color}">
           <div style="display:flex;justify-content:space-between;font-size:.66rem;color:var(--faint);margin-top:-.2rem"><span>↑ show top</span><span>center</span><span>show bottom ↓</span></div></div>`:''}
-         <div class="mfield"><label>Hashtags (${(p.hashtags||[]).length})</label><div class="tagchips">${(p.hashtags||[]).map(t=>`<span class="chip">${t}</span>`).join("")}</div></div>`}
+         <div class="mfield"><label>Hashtags <span style="color:var(--faint);font-weight:400;text-transform:none;letter-spacing:0">— first 5 go in the caption, the rest in your 1st comment (Instagram only links 5)</span></label><div class="tagchips">${tagChips(p)}</div></div>`}
       <div class="mfield"><label>Metrics — type these in after you post <span id="copied"></span></label>
         <div class="metrics-grid">
           <div><div style="font-size:.68rem;color:var(--faint)">Likes</div><input type="number" min="0" data-m="likes" value="${m.likes||0}"></div>
@@ -465,6 +470,7 @@ function openModal(id){
       <div class="btnrow">
         ${isSkel?"":`<button class="btn btn-green" onclick="sharePost('${p.id}')">📲 Save image + caption</button>`}
         ${isSkel?"":`<button class="btn btn-ghost" onclick="copyCaption('${p.id}')">Copy caption only</button>`}
+        ${(!isSkel && splitTags(p).comment.length)?`<button class="btn btn-ghost" onclick="copyComment('${p.id}')">Copy 1st-comment tags</button>`:""}
         <button class="btn btn-ghost" onclick="togglePosted('${p.id}')">${p.status==="posted"?"↩ Move back to Queue":"✓ Posted — move to Past"}</button>
       </div>
     </div>`;
@@ -515,16 +521,41 @@ function togglePosted(id){
   else { o.status="posted"; o.postedAt=new Date().toISOString(); } // out of Queue → Past
   save(); openModal(id); rerender();
 }
+// Instagram only hyperlinks ~the first 5 hashtags — the rest render as dead text.
+// So the caption carries the 5 strongest (deduped, in order); the overflow is meant
+// for the first comment.
+const CAPTION_TAGS = 5;
+function splitTags(p){
+  const seen=new Set(), uniq=[];
+  for(const t of (p.hashtags||[])){ const k=(t||"").toLowerCase(); if(t && !seen.has(k)){ seen.add(k); uniq.push(t); } }
+  return { caption: uniq.slice(0,CAPTION_TAGS), comment: uniq.slice(CAPTION_TAGS) };
+}
+function tagChips(p){
+  const sp=splitTags(p);
+  const cap=sp.caption.map(t=>`<span class="chip" style="border-color:var(--green);color:var(--text)">${t}</span>`).join("");
+  if(!sp.comment.length) return cap;
+  const com=sp.comment.map(t=>`<span class="chip" style="opacity:.5">${t}</span>`).join("");
+  return cap + `<span class="chip" style="opacity:.45;border-style:dashed">↓ 1st comment</span>` + com;
+}
 function captionText(p){
-  let text = p.caption + "\n\n" + (p.cta||"") + "\n" + (p.hashtags||[]).join(" ");
+  const t5 = splitTags(p).caption;
+  let text = p.caption + "\n\n" + (p.cta||"");
+  if(t5.length) text += "\n" + t5.join(" ");
   const meta = metaFor(p.image);
   if(meta && meta.kind==="stock" && meta.credit) text += "\n\n📷 " + meta.credit;
   return text;
 }
+function commentText(p){ return splitTags(p).comment.join(" "); }
 function copyCaption(id){
   const p = view(POSTS.find(x=>x.id===id));
   navigator.clipboard?.writeText(captionText(p));
-  const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ copied"; setTimeout(()=>c.textContent="",1500); }
+  const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ caption copied (5 tags)"; setTimeout(()=>c.textContent="",1600); }
+}
+function copyComment(id){
+  const p = view(POSTS.find(x=>x.id===id));
+  const t = commentText(p); if(!t) return;
+  navigator.clipboard?.writeText(t);
+  const c=document.getElementById("copied"); if(c){ c.className="copied"; c.textContent="✓ 1st-comment tags copied"; setTimeout(()=>c.textContent="",1800); }
 }
 // One tap to get a post ready for Instagram: copy the caption AND hand the image
 // to the phone's native share sheet (tap "Save Image" → it lands in Photos, then
