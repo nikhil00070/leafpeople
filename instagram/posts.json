@@ -104,7 +104,7 @@
     "date": "2026-06-05",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
-    "status": "posted",
+    "status": "draft",
     "title": "What is Leaf People",
     "image": "/images/instagram/begonia-maculata.jpg",
     "caption": "So what is Leaf People?\n\nA field guide, a care tracker, an ID engine and a collector's marketplace — built only for rare rainforest plants. Not ten thousand species skimmed. The ones actually worth knowing, studied deep.\n\nBy plant people, for plant people. leafpeople.app 🌿",
@@ -127,8 +127,7 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    },
-    "posted_at": "2026-06-10"
+    }
   },
   {
     "id": "d05",

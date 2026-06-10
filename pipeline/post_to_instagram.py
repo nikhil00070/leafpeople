@@ -102,8 +102,23 @@ def assemble(post, credit_by_src):
 def graph_post(path, params):
     data = urllib.parse.urlencode(params).encode()
     req = urllib.request.Request(f"{GRAPH}/{path}", data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:  # surface Meta's actual error body, not a bare 400
+        body = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"Graph API {e.code} on POST {path}: {body}") from None
+
+
+def graph_get(path, params):
+    qs = urllib.parse.urlencode(params)
+    req = urllib.request.Request(f"{GRAPH}/{path}?{qs}", method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"Graph API {e.code} on GET {path}: {body}") from None
 
 
 def publish(ig_user_id, token, image_url, caption):
@@ -164,7 +179,11 @@ def main():
             credit_by_src[e["src"]] = e["credit"]
 
     base = os.environ.get("SITE_BASE", "https://leafpeople.app").rstrip("/")
-    image_url = base + post["image"]
+    # Prefer the pre-rendered 4:5 feed-compliant image (images/ig_ready/dNN.jpg). The raw
+    # plant photos are too tall (~0.63–0.75) and the feed API rejects anything below 0.80.
+    ready_rel = f"/images/ig_ready/d{day:02d}.jpg"
+    image_rel = ready_rel if (ROOT / ready_rel.lstrip("/")).exists() else post["image"]
+    image_url = base + image_rel
     caption, first_comment = assemble(post, credit_by_src)
 
     log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')}")
