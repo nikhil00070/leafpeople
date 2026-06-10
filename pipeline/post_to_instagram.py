@@ -139,6 +139,31 @@ def publish(ig_user_id, token, image_url, caption):
     raise RuntimeError(f"publish did not return a media id (last error: {last})")
 
 
+def publish_reel(ig_user_id, token, video_url, caption, cover_url=None):
+    """Publish a Reel. Video containers process async, so poll status_code until FINISHED before publishing."""
+    params = {"media_type": "REELS", "video_url": video_url, "caption": caption,
+              "share_to_feed": "true", "access_token": token}
+    if cover_url:
+        params["cover_url"] = cover_url
+    container = graph_post(f"{ig_user_id}/media", params)
+    cid = container["id"]
+    log(f"created reel container {cid}; waiting for video processing...")
+    for _ in range(40):  # up to ~6 min
+        st = graph_get(cid, {"fields": "status_code,status", "access_token": token})
+        code = st.get("status_code")
+        if code == "FINISHED":
+            break
+        if code == "ERROR":
+            raise RuntimeError(f"reel container processing failed: {st}")
+        time.sleep(9)
+    else:
+        raise RuntimeError("reel container did not finish processing within the timeout")
+    out = graph_post(f"{ig_user_id}/media_publish", {"creation_id": cid, "access_token": token})
+    if not out.get("id"):
+        raise RuntimeError(f"reel publish returned no media id: {out}")
+    return out["id"]
+
+
 def add_comment(media_id, token, message):
     """Post the overflow hashtags as the first comment on the freshly published media."""
     if not (message or "").strip():
@@ -186,8 +211,14 @@ def main():
     image_url = base + image_rel
     caption, first_comment = assemble(post, credit_by_src)
 
-    log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')}")
-    log(f"image: {image_url}")
+    # Every 3rd post is a Reel (day % 3 == 0) when a pre-rendered video exists; otherwise
+    # it gracefully posts as a feed image, so a missing reel never blocks the day.
+    video_rel = f"/videos/instagram/d{day:02d}.mp4"
+    is_reel = (day % 3 == 0) and (ROOT / video_rel.lstrip("/")).exists()
+    fmt = "REEL" if is_reel else "image"
+
+    log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')} · format={fmt}")
+    log(f"{'video' if is_reel else 'image'}: {base + (video_rel if is_reel else image_rel)}")
     log("caption:\n" + caption + "\n")
     log("first comment (hashtags):\n" + (first_comment or "(none)") + "\n")
 
@@ -208,8 +239,12 @@ def main():
         log(f"DRY RUN ({why}) — would post the above; publishing nothing.")
         return 0
 
-    media_id = publish(uid, token, image_url, caption)
-    log(f"PUBLISHED media {media_id}")
+    if is_reel:
+        media_id = publish_reel(uid, token, base + video_rel, caption, cover_url=image_url)
+        log(f"PUBLISHED reel {media_id}")
+    else:
+        media_id = publish(uid, token, image_url, caption)
+        log(f"PUBLISHED media {media_id}")
 
     if first_comment:
         try:
