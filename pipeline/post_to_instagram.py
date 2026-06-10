@@ -239,10 +239,14 @@ def main():
         log(f"DRY RUN ({why}) — would post the above; publishing nothing.")
         return 0
 
+    media_id = None
     if is_reel:
-        media_id = publish_reel(uid, token, base + video_rel, caption, cover_url=image_url)
-        log(f"PUBLISHED reel {media_id}")
-    else:
+        try:
+            media_id = publish_reel(uid, token, base + video_rel, caption, cover_url=image_url)
+            log(f"PUBLISHED reel {media_id}")
+        except Exception as e:  # never lose the day to a reel hiccup — fall back to the image
+            log(f"WARNING: reel publish failed ({e}); falling back to feed image.")
+    if not media_id:
         media_id = publish(uid, token, image_url, caption)
         log(f"PUBLISHED media {media_id}")
 
