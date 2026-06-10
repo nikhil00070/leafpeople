@@ -529,9 +529,13 @@ const CAPTION_TAGS = 5;
 // puts the IDENTICAL 5 on every caption. Instead: pin the brand tag, then the post's
 // distinctive/niche tags (these vary per post → reach the actual audience), then the
 // generic filler. Caption takes the top 5; the rest (incl. filler) goes to the comment.
-const BRAND_PIN = "#leafpeople";
-const GENERIC_TAGS = new Set(["#leafpeopleapp","#plantsofinstagram","#foliage","#houseplantsofinstagram","#botanical","#indoorjungle","#plantcollector"]);
-function tagPriority(t){ const k=(t||"").toLowerCase(); if(k===BRAND_PIN) return 0; return GENERIC_TAGS.has(k)?2:1; }
+const BRAND_PIN = "#leafpeopleapp";
+// Caption tags, best-first: brand pinned, then these high-value tags in rank order
+// (species-specific lead, then the proven broad rare-aroid tags). Everything else —
+// mood/aesthetic/filler — overflows to the first comment.
+const TAG_RANK = ["#velvetanthurium","#darkleafanthurium","#anthurium","#anthuriumlove",
+                  "#rarearoids","#aroidsofinstagram","#rareplants","#aroids","#houseplant"];
+function tagPriority(t){ const k=(t||"").toLowerCase(); if(k===BRAND_PIN) return -1; const i=TAG_RANK.indexOf(k); return i>=0 ? i : 999; }
 function splitTags(p){
   const seen=new Set(), uniq=[];
   for(const t of (p.hashtags||[])){ const k=(t||"").toLowerCase(); if(t && !seen.has(k)){ seen.add(k); uniq.push(t); } }

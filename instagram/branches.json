@@ -186,18 +186,14 @@
   ],
   "hashtagTiers": {
     "brand": [
-      "#leafpeople",
       "#leafpeopleapp"
     ],
     "discovery": [
-      "#plantsofinstagram",
       "#rareplants",
-      "#aroidaddicts",
-      "#foliage",
-      "#houseplantsofinstagram",
-      "#indoorjungle",
-      "#botanical",
-      "#plantcollector"
+      "#rarearoids",
+      "#aroidsofinstagram",
+      "#houseplant",
+      "#aroids"
     ],
     "niche": {
       "welcome-leafpeople": [
@@ -218,14 +214,14 @@
         "#rarearoids",
         "#anthurium",
         "#velvetanthurium",
-        "#unicornplant",
+        "#darkleafanthurium",
         "#aroidsofinstagram"
       ],
       "velvet-anthurium": [
         "#anthurium",
         "#velvetanthurium",
+        "#darkleafanthurium",
         "#rarearoids",
-        "#aroidsofinstagram",
         "#anthuriumlove"
       ],
       "rainforest-beauty": [

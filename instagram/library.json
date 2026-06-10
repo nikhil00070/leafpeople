@@ -3392,6 +3392,23 @@
     "credit": "iNaturalist (CC BY)"
   },
   {
+    "src": "/images/source/stock/philodendron-lynnhannoniae-hero.jpg",
+    "branches": [
+      "article-fieldguide",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "iNaturalist (CC BY)"
+  },
+  {
     "src": "/images/source/stock/philodendron-mamei-silver-hero.jpg",
     "branches": [
       "article-fieldguide",
@@ -5740,6 +5757,44 @@
     "credit": "Neptal\u00ed Ram\u00edrez Marcial / iNaturalist (CC BY 4.0)"
   },
   {
+    "src": "/images/plants/profiles/monstera-siltepecana.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "profile",
+    "credit": ""
+  },
+  {
+    "src": "/images/source/stock/monstera-siltepecana-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "jungle-escape",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
+  },
+  {
     "src": "/images/source/stock/monstera-standleyana-variegata-body.jpg",
     "branches": [
       "article-fieldguide",
@@ -5991,6 +6046,25 @@
     ],
     "kind": "stock",
     "credit": "Victor Farjalla Pontes / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/stock/philodendron-lynnhannoniae-body.jpg",
+    "branches": [
+      "article-fieldguide",
+      "article-understory",
+      "community-ugc",
+      "leaf-texture",
+      "rainforest-beauty",
+      "rarity-value",
+      "welcome-leafpeople",
+      "app-identify",
+      "app-collect",
+      "app-track-care",
+      "app-learn",
+      "app-cta"
+    ],
+    "kind": "stock",
+    "credit": "Nolan Exe / iNaturalist (CC BY 4.0)"
   },
   {
     "src": "/images/plants/profiles/philodendron-melanochrysum.jpeg",

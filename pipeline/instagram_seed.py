@@ -57,14 +57,17 @@ except Exception:
     PROFILE = {}
 
 # --- Hashtags ----------------------------------------------------------------
-BRAND_TAGS = ["#leafpeople", "#leafpeopleapp"]
-DISCOVERY = ["#plantsofinstagram", "#rareplants", "#aroidaddicts", "#foliage",
-             "#houseplantsofinstagram", "#indoorjungle", "#botanical", "#plantcollector"]
+# #leafpeople dropped — too generic, the tag is polluted with unrelated posts.
+# #leafpeopleapp is the clean, ownable brand tag (the @leafpeople.app mention in the
+# CTA carries brand discovery; a "." can't live in a hashtag).
+BRAND_TAGS = ["#leafpeopleapp"]
+# Proven discovery tags the top rare-aroid accounts actually use (correct spelling: AROID).
+DISCOVERY = ["#rareplants", "#rarearoids", "#aroidsofinstagram", "#houseplant", "#aroids"]
 NICHE = {
     "welcome-leafpeople": ["#rareplantsofinstagram", "#plantcommunity", "#aroidaddicts", "#rarearoids"],
     "jungle-escape":      ["#rainforest", "#jungle", "#biophilia", "#naturelovers", "#botanicalescape", "#calm"],
-    "rarest-jungle":      ["#rarearoids", "#anthurium", "#velvetanthurium", "#unicornplant", "#aroidsofinstagram"],
-    "velvet-anthurium":   ["#anthurium", "#velvetanthurium", "#rarearoids", "#aroidsofinstagram", "#anthuriumlove"],
+    "rarest-jungle":      ["#rarearoids", "#anthurium", "#velvetanthurium", "#darkleafanthurium", "#aroidsofinstagram"],
+    "velvet-anthurium":   ["#anthurium", "#velvetanthurium", "#darkleafanthurium", "#rarearoids", "#anthuriumlove"],
     "rainforest-beauty":  ["#rainforest", "#understory", "#junglevibes", "#tropicalplants", "#greenery"],
     "leaf-texture":       ["#leafporn", "#venation", "#botanicaldetail", "#macrophotography", "#foliagelove"],
     "rarity-value":       ["#rareplants", "#variegata", "#plantcollector", "#aroidcollector", "#unicornplant"],
@@ -72,7 +75,9 @@ NICHE = {
 }
 
 def tags(branch):
-    return BRAND_TAGS + DISCOVERY + NICHE.get(branch, [])
+    # Brand first, then the post's NICHE (most specific/highest-intent — these win the
+    # 5 caption slots), then the broader DISCOVERY tags (overflow to the first comment).
+    return BRAND_TAGS + NICHE.get(branch, []) + DISCOVERY
 
 # --- Strategy tree -----------------------------------------------------------
 BRANCHES = {
