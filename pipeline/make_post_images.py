@@ -19,7 +19,7 @@ import json
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "instagram" / "posts.json"
@@ -29,16 +29,12 @@ CANVAS = (1080, 1350)   # 4:5 — the tallest feed format IG allows
 
 def render(src: Path, dst: Path):
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
-    # blurred cover background fills the whole canvas
-    bg = ImageOps.fit(im, CANVAS, method=Image.LANCZOS, centering=(0.5, 0.4))
-    bg = bg.filter(ImageFilter.GaussianBlur(42))
-    bg = Image.eval(bg, lambda p: int(p * 0.82))  # darken so the sharp photo pops
-    # sharp foreground, fully contained (no crop)
-    fg = ImageOps.contain(im, CANVAS, method=Image.LANCZOS)
-    canvas = bg.copy()
-    canvas.paste(fg, ((CANVAS[0] - fg.width) // 2, (CANVAS[1] - fg.height) // 2))
+    # full-bleed: cover-crop to fill the whole 4:5 frame edge-to-edge, no bars, no blur.
+    # centering biased slightly above middle so the plant stays and the crop favors the
+    # bottom (usually the pot/background).
+    out = ImageOps.fit(im, CANVAS, method=Image.LANCZOS, centering=(0.5, 0.45))
     dst.parent.mkdir(parents=True, exist_ok=True)
-    canvas.save(dst, "JPEG", quality=88, optimize=True, progressive=True)
+    out.save(dst, "JPEG", quality=90, optimize=True, progressive=True)
 
 
 def main(argv):
