@@ -70,8 +70,13 @@ def tag_rank(t):
         return 999
 
 
+CAPTION_TAGS = 5  # IG only treats the first ~5 caption hashtags as real tags; the rest are dead weight
+
+
 def split_tags(tags):
-    """Return (caption_tags, comment_tags): brand pin in the caption, the rest (ranked) in the first comment."""
+    """Return (caption_tags, comment_tags). IG caps effective caption hashtags at ~5, and
+    posting overflow as a first comment needs instagram_manage_comments (not worth the token
+    hassle). So we keep the 5 best (ranked: brand -> species -> proven broad) and drop the rest."""
     seen, uniq = set(), []
     for t in tags or []:
         k = (t or "").lower()
@@ -80,7 +85,7 @@ def split_tags(tags):
             uniq.append(t)
     ordered = sorted(range(len(uniq)), key=lambda i: (tag_rank(uniq[i]), i))
     ordered = [uniq[i] for i in ordered]
-    return ordered[:1], ordered[1:]
+    return ordered[:CAPTION_TAGS], []
 
 
 def assemble(post, credit_by_src):
