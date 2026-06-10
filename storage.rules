@@ -11,6 +11,12 @@ service firebase.storage {
         && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
     }
 
+    // Custom-plant images the admin pushes from the app for review/promotion.
+    match /customPlants/{image} {
+      allow read, write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
     // Everything else: no client access.
     match /{allPaths=**} {
       allow read, write: if false;
