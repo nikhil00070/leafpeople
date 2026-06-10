@@ -984,8 +984,9 @@
     "category": "Philodendron",
     "slug": "philodendron-heartleaf",
     "title_hint": "The everyplant with a secret: the humble heartleaf in every dorm room is the same genus as the grails — a love letter to the plant that started most of us.",
-    "status": "queued",
+    "status": "pending_review",
     "hero": "/images/plants/profiles/philodendron-heartleaf.jpg",
-    "body_fallback": "/images/plants/profiles/philodendron-heartleaf.jpg"
+    "body_fallback": "/images/plants/profiles/philodendron-heartleaf.jpg",
+    "published_at": "2026-06-10"
   }
 ]
