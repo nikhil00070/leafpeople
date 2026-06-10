@@ -1,5 +1,5 @@
 {
   "_comment": "Instagram auto-posting config. SAFE until you flip this on. To go live: (1) add IG_TOKEN + IG_USER_ID as GitHub Actions secrets, (2) set start_date to your launch date (YYYY-MM-DD), (3) set enabled to true. Until then the daily cron is a dry run that only logs what it would post.",
-  "start_date": "2026-07-07",
-  "enabled": false
+  "start_date": "2026-06-07",
+  "enabled": true
 }

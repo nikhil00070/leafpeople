@@ -50,16 +50,53 @@ def load(path, default):
         return default
 
 
-def caption_for(post, credit_by_src):
+# Hashtag strategy (mirror of the /instagram web picker): keep ONLY the brand tag in
+# the caption (clean caption) and push every other hashtag into the first comment.
+# Caption vs first-comment placement is cosmetic to the algorithm — both are indexed —
+# but the clean caption reads better. Tags are value-ranked so the comment leads with
+# the species-specific tags, then the proven broad rare-aroid tags, then filler.
+BRAND_PIN = "#leafpeopleapp"
+TAG_RANK = ["#velvetanthurium", "#darkleafanthurium", "#anthurium", "#anthuriumlove",
+            "#rarearoids", "#aroidsofinstagram", "#rareplants", "#aroids", "#houseplant"]
+
+
+def tag_rank(t):
+    k = t.lower()
+    if k == BRAND_PIN:
+        return -1
+    try:
+        return TAG_RANK.index(k)
+    except ValueError:
+        return 999
+
+
+def split_tags(tags):
+    """Return (caption_tags, comment_tags): brand pin in the caption, the rest (ranked) in the first comment."""
+    seen, uniq = set(), []
+    for t in tags or []:
+        k = (t or "").lower()
+        if t and k not in seen:
+            seen.add(k)
+            uniq.append(t)
+    ordered = sorted(range(len(uniq)), key=lambda i: (tag_rank(uniq[i]), i))
+    ordered = [uniq[i] for i in ordered]
+    return ordered[:1], ordered[1:]
+
+
+def assemble(post, credit_by_src):
+    """Build (caption, first_comment) for a post."""
     parts = [post.get("caption", "").strip()]
     if post.get("cta"):
         parts.append(post["cta"].strip())
-    if post.get("hashtags"):
-        parts.append(" ".join(post["hashtags"]))
+    cap_tags, com_tags = split_tags(post.get("hashtags"))
+    if cap_tags:
+        parts.append(" ".join(cap_tags))
     credit = credit_by_src.get(post.get("image", ""))
     if credit:  # licensing: stock/iNat images must carry attribution when posted
         parts.append("\U0001F4F7 " + credit)
-    return "\n\n".join(p for p in parts if p)
+    caption = "\n\n".join(p for p in parts if p)
+    first_comment = " ".join(com_tags)
+    return caption, first_comment
 
 
 def graph_post(path, params):
@@ -85,6 +122,14 @@ def publish(ig_user_id, token, image_url, caption):
             last = e
         time.sleep(5)
     raise RuntimeError(f"publish did not return a media id (last error: {last})")
+
+
+def add_comment(media_id, token, message):
+    """Post the overflow hashtags as the first comment on the freshly published media."""
+    if not (message or "").strip():
+        return None
+    out = graph_post(f"{media_id}/comments", {"message": message, "access_token": token})
+    return out.get("id")
 
 
 def main():
@@ -120,11 +165,12 @@ def main():
 
     base = os.environ.get("SITE_BASE", "https://leafpeople.app").rstrip("/")
     image_url = base + post["image"]
-    caption = caption_for(post, credit_by_src)
+    caption, first_comment = assemble(post, credit_by_src)
 
     log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')}")
     log(f"image: {image_url}")
     log("caption:\n" + caption + "\n")
+    log("first comment (hashtags):\n" + (first_comment or "(none)") + "\n")
 
     token = os.environ.get("IG_TOKEN")
     uid = os.environ.get("IG_USER_ID")
@@ -145,6 +191,13 @@ def main():
 
     media_id = publish(uid, token, image_url, caption)
     log(f"PUBLISHED media {media_id}")
+
+    if first_comment:
+        try:
+            cmt = add_comment(media_id, token, first_comment)
+            log(f"first comment posted ({cmt}): {first_comment}")
+        except Exception as e:  # a missing comment must not undo a successful post
+            log(f"WARNING: post published but first comment failed: {e}")
 
     post["status"] = "posted"
     post["posted_at"] = today.isoformat()
