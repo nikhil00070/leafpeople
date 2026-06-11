@@ -84,6 +84,34 @@ def strip_emphasis(s: str) -> str:
     return re.sub(r"_([^_]+)_", r"\1", s)
 
 
+# Genera we recognise in slugs, for front-loading the plant name into the <title> (SEO).
+SCI_GENERA = {
+    "anthurium", "philodendron", "monstera", "alocasia", "begonia", "hoya", "syngonium",
+    "aglaonema", "calathea", "amydrium", "amorphophallus", "caladium", "colocasia",
+    "epipremnum", "rhaphidophora", "scindapsus", "stromanthe", "spathiphyllum",
+    "dieffenbachia", "homalomena", "schismatoglottis", "cercestis", "thaumatophyllum",
+}
+
+
+def ensure_keyword_title(meta_title: str, *, slug: str = None, genus: str = None) -> str:
+    """Front-load the plant name into a meta_title (the <title>) when it's missing, so the
+    title Google shows carries the searched term. Species pages (binomial slug) get
+    'Genus species — ...'; genus / Field Guide pages get 'Genus — ...'. The on-page H1 uses
+    the separate `title` field and is untouched. Idempotent (skips if already present)."""
+    term = None
+    if slug:
+        parts = slug.split("-")
+        if len(parts) == 2 and parts[0] in SCI_GENERA:
+            term = parts[0].capitalize() + " " + parts[1]
+    elif genus:
+        term = genus
+    if not term:
+        return meta_title
+    if all(w.lower() in meta_title.lower() for w in term.split()):
+        return meta_title
+    return f"{term} — {meta_title}"
+
+
 def clean_meta_title(s: str) -> str:
     s = s.strip()
     prev = None

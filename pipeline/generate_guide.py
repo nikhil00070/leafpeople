@@ -103,6 +103,7 @@ def main() -> int:
     print(f"[guide] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
     article["meta_title"] = common.strip_emphasis(common.clean_meta_title(article["meta_title"]))
+    article["meta_title"] = common.ensure_keyword_title(article["meta_title"], genus=item["genus"])
     article["title"] = common.strip_emphasis(article["title"])
 
     # Slop gate
