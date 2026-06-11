@@ -1,3 +1,32 @@
+/* Google Analytics 4 — set GA_ID to your Measurement ID (G-XXXXXXXXXX) to activate.
+   Loaded on every page (this file is included site-wide). Dormant until GA_ID is set. */
+(function () {
+  "use strict";
+  var GA_ID = "G-XXXXXXXXXX"; // ← paste your GA4 Measurement ID here, then deploy
+  if (!GA_ID || GA_ID.indexOf("XXXX") !== -1) return; // not configured yet → do nothing
+
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", GA_ID, { anonymize_ip: true });
+
+  // Custom events: App Store / "Get the App" CTA clicks + outbound links.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (/apps\.apple\.com|app-store|testflight|[#/]get\b/i.test(href)) {
+      gtag("event", "app_store_click", { link_url: href, link_text: (a.textContent || "").trim().slice(0, 80) });
+    } else if (/^https?:\/\//i.test(href) && href.indexOf(location.host) === -1) {
+      gtag("event", "outbound_click", { link_url: href });
+    }
+  }, { passive: true });
+})();
+
 /* Leaf People — landing interactions */
 (function () {
   "use strict";

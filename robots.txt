@@ -1,5 +1,42 @@
+# Leaf People — robots.txt
+# Search engines and AI answer engines are welcome. Admin/API paths are not.
+
 User-agent: *
 Allow: /
 Disallow: /review
+Disallow: /api/
+Disallow: /instagram
+
+# AI answer-engine / training crawlers — explicitly welcomed (AEO).
+# We WANT our field guides cited in AI answers, so these are allowed.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://leafpeople.app/sitemap.xml
