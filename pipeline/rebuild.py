@@ -119,7 +119,8 @@ def main() -> int:
                     json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
             hero = data.get("hero") or hero_of(data)
             ctx = {k: v for k, v in data.items() if k not in ("slug", "hero")}
-            index.write_text(render(template, hero=hero, og_image=hero, **ctx), encoding="utf-8")
+            # slug (= the post dir name = its URL path) drives canonical + JSON-LD URLs
+            index.write_text(render(template, hero=hero, og_image=hero, slug=post.name, **ctx), encoding="utf-8")
             print(f"[rebuild] {section}/{post.name}")
     return 0
 

@@ -125,6 +125,7 @@ def main() -> int:
     hero = imgs["hero"]
     body_image = imgs["body_image"]
     html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image,
+                  slug=item["slug"],  # drives canonical + JSON-LD URLs
                   hero_attribution=imgs.get("hero_attribution", ""),
                   body_image_attribution=imgs.get("body_image_attribution", ""), **article)
 
