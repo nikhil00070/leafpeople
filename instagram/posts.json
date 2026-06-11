@@ -137,7 +137,7 @@
     "date": "2026-06-06",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "Find the light",
     "image": "/images/plants/the-leaf.jpg",
     "caption": "Find the light.\n\nOn the forest floor it arrives in pieces \u2014 a shaft here, a glow there, filtered through a hundred feet of canopy. It's why these leaves grow so big, so dark, so hungry.\n\nSlow down. Let your eyes adjust. There's a whole world down here.",
@@ -162,7 +162,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-11",
+    "ig_media_id": "18090376535458680"
   },
   {
     "id": "d06",
