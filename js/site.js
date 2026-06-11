@@ -2,7 +2,7 @@
    Loaded on every page (this file is included site-wide). Dormant until GA_ID is set. */
 (function () {
   "use strict";
-  var GA_ID = "G-XXXXXXXXXX"; // ← paste your GA4 Measurement ID here, then deploy
+  var GA_ID = "G-D0MTYNTM9W"; // GA4 Measurement ID (leafpeople.app web stream)
   if (!GA_ID || GA_ID.indexOf("XXXX") !== -1) return; // not configured yet → do nothing
 
   var s = document.createElement("script");
