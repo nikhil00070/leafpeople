@@ -62,6 +62,8 @@ def inline_md(text: str) -> str:
     """Convert the limited inline markdown we allow (**bold**, _italic_) to HTML,
     escaping everything else."""
     out = (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+    # Internal markdown links [text](/path) -> <a> (internal paths only, for safety/SEO).
+    out = re.sub(r"\[([^\]]+?)\]\((/[^)\s]+)\)", r'<a href="\2">\1</a>', out)
     out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
     out = re.sub(r"_(.+?)_", r"<em>\1</em>", out)
     return out
