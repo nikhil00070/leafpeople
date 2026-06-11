@@ -10,12 +10,12 @@
 <meta property="og:image" content="https://leafpeople.app{{ og_image }}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Leaf People">
-<meta property="og:url" content="https://leafpeople.app/the-leaf/{{ slug }}/">
+<meta property="og:url" content="https://leafpeople.app/the-leaf/{{ slug }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ meta_description }}">
 <meta name="twitter:image" content="https://leafpeople.app{{ og_image }}">
-<link rel="canonical" href="https://leafpeople.app/the-leaf/{{ slug }}/">
+<link rel="canonical" href="https://leafpeople.app/the-leaf/{{ slug }}">
 <meta name="theme-color" content="#0B0F0D">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
@@ -33,10 +33,11 @@
   "image": ["https://leafpeople.app{{ og_image }}"],
   "author": {"@type": "Organization", "name": "Leaf People", "url": "https://leafpeople.app/"},
   "publisher": {"@type": "Organization", "name": "Leaf People", "logo": {"@type": "ImageObject", "url": "https://leafpeople.app/images/icon-512.png"}},
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://leafpeople.app/the-leaf/{{ slug }}/"},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://leafpeople.app/the-leaf/{{ slug }}"},
   "articleSection": {{ category | tojson }},
   "inLanguage": "en",
-  "isAccessibleForFree": true
+  "isAccessibleForFree": false,
+  "hasPart": { "@type": "WebPageElement", "isAccessibleForFree": false, "cssSelector": ".prose" }
 }
 </script>
 <script type="application/ld+json">

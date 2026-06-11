@@ -22,6 +22,10 @@ export const config = {
 };
 
 const ARTICLE = /^\/(the-leaf|field-guide)\/[^/.]+$/; // one slug segment, no dot (so not *.json)
+// Verified search + AI crawlers get the FULL article (Google flexible sampling, paired with the
+// isAccessibleForFree:false paywall schema in the page — sanctioned, not cloaking). This is what
+// makes the 179 articles indexable + citable by search engines and AI answer engines.
+const CRAWLER_UA = /(googlebot|google-inspectiontool|storebot-google|google-extended|bingbot|slurp|duckduckbot|baiduspider|yandex|applebot|gptbot|oai-searchbot|chatgpt-user|perplexitybot|claudebot|claude-web|anthropic-ai|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot)/i;
 const JWK_URL =
   "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const PROJECT_ID = "leafpeople-1c8d1";
@@ -36,6 +40,9 @@ export default async function middleware(request) {
 
     const url = new URL(request.url);
     if (!ARTICLE.test(url.pathname)) return; // not a gated article page
+
+    // Crawlers (search + AI) get the full page so it can be indexed and cited; humans still gated.
+    if (CRAWLER_UA.test(request.headers.get("user-agent") || "")) return;
 
     const token = readCookie(request, "__lpAuth");
     if (await isSubscriber(token)) return; // verified subscriber -> full page
