@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 133,
+  "count": 135,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -315,6 +315,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-cutucuence",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-cutucuence/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cutucuence.jpeg"
+    },
+    {
+      "id": "the-leaf/philodendron-billietiae",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-billietiae",
+      "title": "Tangerine Petioles",
+      "category": "Philodendron",
+      "description": "A deep look at Philodendron billietiae — its wild origins, flush rhythm, orange petioles, and the variegated form that rewrote collector prices.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-billietiae",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-billietiae/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-billietiae-hero.jpg"
     },
     {
       "id": "the-leaf/hoya-australis-lisa",
