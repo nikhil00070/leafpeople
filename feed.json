@@ -2,8 +2,21 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 130,
+  "count": 131,
   "items": [
+    {
+      "id": "the-leaf/philodendron-heartleaf",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-heartleaf",
+      "title": "The Everyplant with a Secret",
+      "category": "Philodendron",
+      "description": "The heartleaf philodendron shares a genus with the rarest grails on earth. A love letter to the plant that started most of us.",
+      "date": "2026-06-10",
+      "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
+    },
     {
       "id": "the-leaf/monstera-siltepecana",
       "section": "the-leaf",
