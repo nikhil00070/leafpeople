@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 135,
+  "count": 136,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -380,6 +380,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-vittariifolium-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-squamiferum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-squamiferum",
+      "title": "Touch the Stem",
+      "category": "Philodendron",
+      "description": "Fuzzy petioles, D-shaped cross-sections, and red bristles: the case that half an aroid's beauty lives below the leaf blade.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-squamiferum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-squamiferum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-squamiferum-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-wendlingeri",
