@@ -172,7 +172,7 @@
     "date": "2026-06-07",
     "phase": "welcome",
     "branch": "rarest-jungle",
-    "status": "draft",
+    "status": "posted",
     "title": "Blackest leaf",
     "image": "/images/instagram/anthurium-ace-of-spades.jpeg",
     "caption": "The blackest leaf in the room.\n\nAnthurium 'Ace of Spades' drinks the light \u2014 velvet so dark it reads almost black, with an oil-slick shimmer when it turns.\n\nSome plants are pretty. This one is a statement.\n\nleafpeople.app \ud83d\udda4",
@@ -196,7 +196,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-12",
+    "ig_media_id": "18103573822885765"
   },
   {
     "id": "d07",
