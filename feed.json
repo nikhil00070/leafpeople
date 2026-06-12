@@ -187,6 +187,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-ace-of-spades.jpeg"
     },
     {
+      "id": "the-leaf/philodendron-gigas",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-gigas",
+      "title": "The Giant of Panama",
+      "category": "Philodendron",
+      "description": "Philodendron gigas ages from copper to near-black and gets enormous. Here's what it actually takes to grow one well.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-gigas",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-gigas/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-gigas-hero.jpg"
+    },
+    {
       "id": "the-leaf/anthurium-papillilaminum",
       "section": "the-leaf",
       "section_label": "Understory",
