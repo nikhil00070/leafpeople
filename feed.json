@@ -395,6 +395,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-corrugatum.jpeg"
     },
     {
+      "id": "the-leaf/philodendron-tortum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-tortum",
+      "title": "Living Sculpture: The Skeletal Philodendrons",
+      "category": "Philodendron",
+      "description": "Finger-thin leaflets, twisting petioles, fossil-like forms — the pinnate and pedatum philodendrons are the jungle's idea of minimalism.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-tortum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-tortum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
+    },
+    {
       "id": "the-leaf/monstera-adansonii-variegata",
       "section": "the-leaf",
       "section_label": "Understory",
