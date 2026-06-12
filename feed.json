@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 142,
+  "count": 144,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -510,6 +510,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-kunayalense",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-kunayalense/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-kunayalense-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-strawberry-shake",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-strawberry-shake",
+      "title": "Pink, Cream, and Green Confetti",
+      "category": "Philodendron",
+      "description": "The flushed new growth that sells the plant, the variegation that fades, and what collectors are really chasing in variegated philodendrons.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-strawberry-shake.jpg"
     },
     {
       "id": "the-leaf/anthurium-cupulispathum",
