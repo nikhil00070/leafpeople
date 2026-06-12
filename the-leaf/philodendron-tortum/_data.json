@@ -69,9 +69,8 @@
     }
   ],
   "slug": "philodendron-tortum",
-  "hero": "/images/plants/profiles/philodendron-tortum.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-tortum-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-29874210"
+  "hero": "/images/source/inat/philodendron-tortum-hero.jpg",
+  "hero_attribution": "Tiago Costa / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/philodendron-tortum.jpg",
+  "body_image_attribution": "Leaf People"
 }
