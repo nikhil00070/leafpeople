@@ -61,9 +61,8 @@
     }
   ],
   "slug": "philodendron-gigas",
-  "hero": "/images/plants/profiles/philodendron-gigas.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-gigas-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155724"
+  "hero": "/images/source/inat/philodendron-gigas-hero.jpg",
+  "hero_attribution": "Pete Zivkov / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/philodendron-gigas.jpg",
+  "body_image_attribution": "Leaf People"
 }
