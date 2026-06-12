@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 131,
+  "count": 132,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -185,6 +185,19 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-verrucosum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-verrucosum",
+      "title": "Hairy Petioles and Stained-Glass Leaves",
+      "category": "Philodendron",
+      "description": "Philodendron gloriosum, verrucosum, and friends: why Ecuador's iridescent velvet climbers sulk the moment your humidity drops.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-verrucosum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-verrucosum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-verrucosum-hero.jpg"
     },
     {
       "id": "the-leaf/begonia-listada",
