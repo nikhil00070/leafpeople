@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 129,
+  "count": 130,
   "items": [
     {
       "id": "the-leaf/monstera-siltepecana",
@@ -16,6 +16,19 @@
       "url": "https://leafpeople.app/the-leaf/monstera-siltepecana",
       "data_url": "https://leafpeople.app/the-leaf/monstera-siltepecana/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/monstera-siltepecana.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-veitchii",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-veitchii",
+      "title": "Anthurium veitchii: A Field Portrait of the King",
+      "category": "Anthurium",
+      "description": "The story of Anthurium veitchii — its Colombian cloud forest origins, its corrugated metre-long leaves, and the collector debate between narrow and wide form.",
+      "date": "2026-06-03",
+      "url": "https://leafpeople.app/the-leaf/anthurium-veitchii",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-veitchii/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-veitchii-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-warocqueanum",
