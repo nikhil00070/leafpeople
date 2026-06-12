@@ -9,7 +9,7 @@
     "The philodendron hobby has been, for the better part of a decade, a hybrid economy. _P._ 'Ring of Fire', _P._ 'Florida Beauty', _P._ 'Paraiso Verde' — names that move like stock tickers, prices that inflate and crash inside a single growing season. Into that noise, a quieter argument has been reasserting itself: that the species — the wild-type, the taxonomically honest plant — is worth more attention than the market gives it. Not because hybrids are wrong, but because the true-species philodendron asks harder questions and rewards the grower who can answer them."
   ],
   "pull_quote": "The species doesn't negotiate. It is what it is — and that's exactly what makes growing it feel like something real.",
-  "body_image_caption": "Wild-type _gloriosum_ on a crawling rhizome, unphotoshopped.",
+  "body_image_caption": "Wild-type _lynnhannoniae_ on a crawling rhizome, unphotoshopped.",
   "sections": [
     {
       "heading": "The Hybrid Economy and What It Displaced",
@@ -69,9 +69,8 @@
     }
   ],
   "slug": "philodendron-lynnhannoniae",
-  "hero": "/images/plants/profiles/philodendron-lynnhannoniae.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-lynnhannoniae-body.jpg",
-  "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-354026721"
+  "hero": "/images/source/inat/philodendron-lynnhannoniae-hero.jpg",
+  "hero_attribution": "Mateo Roldán / iNaturalist (CC-BY-NC-SA)",
+  "body_image": "/images/plants/profiles/philodendron-lynnhannoniae.jpg",
+  "body_image_attribution": "Leaf People"
 }
