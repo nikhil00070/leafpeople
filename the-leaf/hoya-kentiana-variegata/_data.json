@@ -69,9 +69,8 @@
     }
   ],
   "slug": "hoya-kentiana-variegata",
-  "hero": "/images/plants/profiles/hoya-kentiana-variegata.png",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-kentiana-variegata-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-80194691"
+  "hero": "/images/source/inat/hoya-kentiana-variegata-hero.jpg",
+  "hero_attribution": "Skjold Søndergaard / iNaturalist (CC-BY)",
+  "body_image": "/images/source/inat/hoya-kentiana-variegata.jpg",
+  "body_image_attribution": "Petr Šíma / iNaturalist (CC-BY-NC)"
 }

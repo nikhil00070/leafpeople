@@ -70,9 +70,8 @@
     }
   ],
   "slug": "begonia-ferox",
-  "hero": "/images/plants/profiles/begonia-ferox.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-ferox-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012589"
+  "hero": "/images/source/inat/begonia-ferox-hero.jpg",
+  "hero_attribution": "江国彬 / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/source/inat/begonia-ferox.jpg",
+  "body_image_attribution": "iNaturalist / iNaturalist (CC0)"
 }

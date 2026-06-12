@@ -69,9 +69,8 @@
     }
   ],
   "slug": "monstera-dubia",
-  "hero": "/images/plants/profiles/monstera-dubia.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/monstera-dubia-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-195107177"
+  "hero": "/images/source/inat/monstera-dubia-hero.jpg",
+  "hero_attribution": "Melvin Opolka / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/monstera-dubia.jpg",
+  "body_image_attribution": "Leaf People"
 }
