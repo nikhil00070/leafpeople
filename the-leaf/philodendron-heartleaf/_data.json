@@ -71,7 +71,6 @@
   "slug": "philodendron-heartleaf",
   "hero": "/images/plants/profiles/philodendron-heartleaf.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-heartleaf-body.jpg",
-  "body_image_attribution": "Eduardo Chacón Madrigal / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-90155671"
+  "body_image": "/images/source/inat/philodendron-heartleaf.jpg",
+  "body_image_attribution": "Alex Castelein / iNaturalist (CC-BY-NC)"
 }
