@@ -456,3 +456,13 @@ section { position: relative; padding: 6rem 0; }
 .lp-account-email { font-size: .76rem; color: #b8c8bb; padding: .05rem .5rem .55rem; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: .35rem; word-break: break-all; }
 .lp-signout { width: 100%; text-align: left; background: transparent; border: 0; color: #e8efe9; font: inherit; font-weight: 600; padding: .55rem .5rem; border-radius: 8px; cursor: pointer; }
 .lp-signout:hover { background: rgba(255,255,255,.08); }
+
+/* Scientific-name subtitle under an article's poetic headline (species pages). */
+.hero-sci {
+  margin: .5rem 0 0;
+  font-size: clamp(.95rem, 1.6vw, 1.15rem);
+  font-style: italic;
+  letter-spacing: .01em;
+  color: var(--green, #6fae7a);
+  opacity: .9;
+}

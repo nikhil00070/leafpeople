@@ -112,6 +112,21 @@ def ensure_keyword_title(meta_title: str, *, slug: str = None, genus: str = None
     return f"{term} — {meta_title}"
 
 
+# Slugs whose binomial differs from a literal de-hyphenation (typos, variants).
+SCI_NAME_FIX = {"anthurium-crystalanium": "Anthurium crystallinum"}
+
+
+def sci_name(slug: str) -> str:
+    """Display binomial for a species article ('Genus species'); '' for topic/genus pages.
+    Used as a Jinja filter to show the scientific name under the poetic headline."""
+    if slug in SCI_NAME_FIX:
+        return SCI_NAME_FIX[slug]
+    parts = (slug or "").split("-")
+    if len(parts) == 2 and parts[0] in SCI_GENERA:
+        return parts[0].capitalize() + " " + parts[1]
+    return ""
+
+
 def clean_meta_title(s: str) -> str:
     s = s.strip()
     prev = None
