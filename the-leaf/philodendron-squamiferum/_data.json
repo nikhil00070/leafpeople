@@ -69,9 +69,8 @@
     }
   ],
   "slug": "philodendron-squamiferum",
-  "hero": "/images/plants/profiles/philodendron-squamiferum.png",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-squamiferum-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-94864125"
+  "hero": "/images/source/inat/philodendron-squamiferum-hero.jpg",
+  "hero_attribution": "Guillaume Delaitre / iNaturalist (CC-BY)",
+  "body_image": "/images/source/inat/philodendron-squamiferum.jpg",
+  "body_image_attribution": "刘光裕 Liu Guangyu / iNaturalist (CC-BY-NC)"
 }
