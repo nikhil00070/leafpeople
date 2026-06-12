@@ -1,9 +1,22 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-06-11",
-  "count": 128,
+  "updated": "2026-06-12",
+  "count": 129,
   "items": [
+    {
+      "id": "the-leaf/monstera-siltepecana",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-siltepecana",
+      "title": "Monstera siltepecana: Silver Juvenile, Fenestrated Adult",
+      "category": "Monstera",
+      "description": "The full story of Monstera siltepecana — its dusty blue-silver juvenile leaves, the 'El Salvador' form, and what happens when it climbs.",
+      "date": "2026-06-05",
+      "url": "https://leafpeople.app/the-leaf/monstera-siltepecana",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-siltepecana/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-siltepecana.jpg"
+    },
     {
       "id": "the-leaf/anthurium-warocqueanum",
       "section": "the-leaf",
