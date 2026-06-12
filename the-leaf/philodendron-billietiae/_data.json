@@ -72,9 +72,8 @@
     }
   ],
   "slug": "philodendron-billietiae",
-  "hero": "/images/plants/profiles/philodendron-billietiae.png",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-billietiae-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-125529121"
+  "hero": "/images/source/inat/philodendron-billietiae-hero.jpg",
+  "hero_attribution": "Gustavo Gonsioroski / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/plants/profiles/philodendron-billietiae.png",
+  "body_image_attribution": "Leaf People"
 }
