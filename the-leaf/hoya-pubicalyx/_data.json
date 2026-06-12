@@ -71,9 +71,8 @@
     }
   ],
   "slug": "hoya-pubicalyx",
-  "hero": "/images/plants/profiles/hoya-pubicalyx.png",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-pubicalyx-body.jpg",
-  "body_image_attribution": "Kai Squires / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-234444985"
+  "hero": "/images/source/inat/hoya-pubicalyx-hero.jpg",
+  "hero_attribution": "hazelchiu / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/source/inat/hoya-pubicalyx.jpg",
+  "body_image_attribution": "Frances Méndez / iNaturalist (CC-BY-NC)"
 }

@@ -69,7 +69,6 @@
   "slug": "hoya-obovata",
   "hero": "/images/plants/profiles/hoya-obovata.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-obovata-body.jpg",
-  "body_image_attribution": "Attila Oláh / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-278751204"
+  "body_image": "/images/source/inat/hoya-obovata.jpg",
+  "body_image_attribution": "guanhong / iNaturalist (CC-BY-NC)"
 }

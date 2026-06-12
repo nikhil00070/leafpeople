@@ -58,9 +58,8 @@
     }
   ],
   "slug": "hoya-linearis",
-  "hero": "/images/plants/profiles/hoya-linearis.jpg",
-  "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-linearis-body.jpg",
-  "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-354026711"
+  "hero": "/images/source/inat/hoya-linearis-hero.jpg",
+  "hero_attribution": "ocanire / iNaturalist (CC-BY-NC)",
+  "body_image": "/images/source/inat/hoya-linearis.jpg",
+  "body_image_attribution": "Basu Dev Neupane / iNaturalist (CC-BY-NC)"
 }
