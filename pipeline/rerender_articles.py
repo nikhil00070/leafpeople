@@ -26,9 +26,10 @@ def main():
         for dp in sorted(glob.glob(os.path.join(ROOT, sec, "*", "_data.json"))):
             data = json.load(open(dp))
             ctx = {k: v for k, v in data.items() if k not in SKIP}
-            common = dict(hero=data.get("hero", ""), og_image=data.get("hero", ""),
-                          body_image=data.get("body_image", ""), **ctx)
             d = os.path.dirname(dp)
+            common = dict(hero=data.get("hero", ""), og_image=data.get("hero", ""),
+                          body_image=data.get("body_image", ""),
+                          slug=os.path.basename(d), **ctx)  # slug drives canonical/JSON-LD URLs
             # Full article (subscribers) + paywalled preview (everyone else / crawlers).
             # The full text lives ONLY in index.html, which the edge middleware serves only
             # to subscribers; non-subscribers are rewritten to preview.html.
