@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 136,
+  "count": 137,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -198,6 +198,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-gigas",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-gigas/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-gigas-hero.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-obovata",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-obovata",
+      "title": "The Gateway Hoya",
+      "category": "Hoya",
+      "description": "How Hoya carnosa became the species that pulls houseplant people into the deep end of hoya collecting — and why it still earns its place.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-obovata",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-obovata/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-obovata.jpg"
     },
     {
       "id": "the-leaf/anthurium-papillilaminum",
