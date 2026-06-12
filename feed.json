@@ -239,6 +239,19 @@
       "image": "https://leafpeople.app/images/source/inat/philodendron-verrucosum-hero.jpg"
     },
     {
+      "id": "the-leaf/hoya-pubicalyx",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-pubicalyx",
+      "title": "The Fast Bloomer",
+      "category": "Hoya",
+      "description": "Speckled leaves, dark star flowers, vigorous growth — and a cultivar naming mess that's fooled collectors for years. The real story of Hoya lacunosa.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-pubicalyx",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-pubicalyx/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-pubicalyx-hero.jpg"
+    },
+    {
       "id": "the-leaf/begonia-listada",
       "section": "the-leaf",
       "section_label": "Understory",
