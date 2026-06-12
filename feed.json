@@ -538,6 +538,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cupulispathum.jpeg"
     },
     {
+      "id": "the-leaf/philodendron-orange-marmalade",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-orange-marmalade",
+      "title": "Citrus on a Leaf",
+      "category": "Philodendron",
+      "description": "New hybrids blazing orange and gold are reshaping what collectors want from variegated philodendrons. Here's why warm-tone variegation matters.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-orange-marmalade.png"
+    },
+    {
       "id": "the-leaf/anthurium-dark-mama",
       "section": "the-leaf",
       "section_label": "Understory",
