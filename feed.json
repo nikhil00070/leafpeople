@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 137,
+  "count": 139,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -159,6 +159,19 @@
       "url": "https://leafpeople.app/the-leaf/monstera-obliqua",
       "data_url": "https://leafpeople.app/the-leaf/monstera-obliqua/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/monstera-obliqua.png"
+    },
+    {
+      "id": "the-leaf/hoya-linearis",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-linearis",
+      "title": "A Waterfall of Fuzz",
+      "category": "Hoya",
+      "description": "Hoya linearis defies everything you know about hoyas. A deep look at the Himalayan cliff-dweller that grows like green hair.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-linearis",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-linearis/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-linearis-hero.jpg"
     },
     {
       "id": "the-leaf/begonia-venosa",
