@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-12",
-  "count": 140,
+  "count": 141,
   "items": [
     {
       "id": "the-leaf/philodendron-heartleaf",
@@ -250,6 +250,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-verrucosum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-verrucosum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-verrucosum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-dubia",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-dubia",
+      "title": "The Shapeshifter",
+      "category": "Monstera",
+      "description": "From coin-flat juvenile to fenestrated giant, some Monstera species transform so completely they barely resemble themselves. Here's what drives it.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-dubia",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-dubia/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/monstera-dubia-hero.jpg"
     },
     {
       "id": "the-leaf/hoya-pubicalyx",
