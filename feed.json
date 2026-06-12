@@ -226,6 +226,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/hoya-obovata.jpg"
     },
     {
+      "id": "the-leaf/begonia-ferox",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-ferox",
+      "title": "The Fierce One: Inside Begonia's Most Armored Leaf",
+      "category": "Begonia",
+      "description": "A Chinese begonia studded with black-tipped bullate spikes raises a sharp question: why do collectors keep reaching for the plants that look like they bite back?",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-ferox",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-ferox/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/begonia-ferox-hero.jpg"
+    },
+    {
       "id": "the-leaf/anthurium-papillilaminum",
       "section": "the-leaf",
       "section_label": "Understory",
