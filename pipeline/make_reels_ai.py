@@ -227,6 +227,9 @@ def main(argv):
     for p in posts:
         if p.get("day") not in days or not p.get("image"):
             continue
+        if p.get("no_reel"):  # marked image-only (e.g. photo has a person AI would mangle)
+            print(f"[ai-reels] SKIP day {p['day']}: no_reel")
+            continue
         src = ROOT / p["image"].lstrip("/")
         if not src.exists():
             print(f"[ai-reels] SKIP day {p['day']}: missing {p['image']}")
