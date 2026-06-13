@@ -428,7 +428,7 @@ function openModal(id){
   const isSkel = p.status==="skeleton";
   const opts = optionsFor(raw);
   const meta = metaFor(p.image);
-  const reel = (p.day % 2 === 0);                                  // every-other-day = Reel
+  const reel = !!p.reel;                                           // only show the player where a reel actually exists
   const reelMp4 = `/videos/instagram/d${String(p.day).padStart(2,'0')}.mp4`;
   const imgHtml = !p.image ? `<div class="ig-img skel">skeleton — generate image when ready</div>`
     : reel ? `<video class="ig-img" src="${reelMp4}" poster="${p.image}" controls playsinline preload="none" style="object-position:${p.imgPos||'50% 50%'}"></video><span class="reel-badge">▶ REEL</span>`

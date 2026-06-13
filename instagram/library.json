@@ -7769,5 +7769,14 @@
     ],
     "kind": "stock",
     "credit": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)"
+  },
+  {
+    "src": "/images/source/inat/anthurium-wendlingeri-inat.jpg",
+    "branches": [
+      "velvet-anthurium",
+      "rarest-jungle"
+    ],
+    "kind": "stock",
+    "credit": "Rosario / iNaturalist (CC BY 4.0)"
   }
 ]

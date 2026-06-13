@@ -198,7 +198,8 @@
       "reach": 0
     },
     "posted_at": "2026-06-12",
-    "ig_media_id": "18103573822885765"
+    "ig_media_id": "18103573822885765",
+    "reel": true
   },
   {
     "id": "d07",
@@ -262,7 +263,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d09",
@@ -325,7 +327,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d11",
@@ -390,7 +393,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d13",
@@ -454,7 +458,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d15",
@@ -517,7 +522,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d17",
@@ -581,7 +587,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d19",
@@ -645,7 +652,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d21",
@@ -709,7 +717,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d23",
@@ -773,7 +782,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d25",
@@ -815,7 +825,7 @@
     "branch": "velvet-anthurium",
     "status": "draft",
     "title": "Wendlingeri — pendant velvet",
-    "image": "/images/instagram/anthurium-wendlingeri.png",
+    "image": "/images/source/inat/anthurium-wendlingeri-inat.jpg",
     "caption": "Velvet, but make it alive.\n\nAnthurium wendlingeri hangs in long, quilted, light-eating ribbons — matte enough to read as shadow. Feels like suede, photographs like a void. No filter.",
     "hashtags": [
       "#leafpeopleapp",
@@ -838,7 +848,7 @@
       "follows": 0,
       "reach": 0
     },
-    "no_reel": true
+    "reel": true
   },
   {
     "id": "d27",
@@ -902,7 +912,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d29",
@@ -966,7 +977,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d31",
@@ -1020,7 +1032,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d33",
@@ -1074,7 +1087,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d35",
@@ -1128,7 +1142,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d37",
@@ -1182,7 +1197,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d39",
@@ -1236,7 +1252,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d41",
@@ -1290,7 +1307,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d43",
@@ -1344,7 +1362,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d45",
@@ -1381,7 +1400,7 @@
     "branch": "article-fieldguide",
     "status": "draft",
     "title": "The Queen, in full",
-    "image": "/images/source/inat/anthurium-regale-inat.jpg",
+    "image": "/images/instagram/anthurium-warocqueanum.jpeg",
     "caption": "The complete story of the Queen Anthurium — where she grows, why she's coveted, how to keep her alive. Full guide, link in bio.",
     "hashtags": [
       "#leafpeopleapp",
@@ -1398,7 +1417,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d47",
@@ -1452,7 +1472,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d49",
@@ -1506,7 +1527,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d51",
@@ -1560,7 +1582,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d53",
@@ -1614,7 +1637,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d55",
@@ -1668,7 +1692,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d57",
@@ -1722,7 +1747,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d59",
@@ -1776,7 +1802,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d61",
@@ -1840,7 +1867,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d63",
@@ -1904,7 +1932,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d65",
@@ -1968,7 +1997,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d67",
@@ -2027,7 +2057,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d69",
@@ -2091,7 +2122,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d71",
@@ -2150,7 +2182,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d73",
@@ -2209,7 +2242,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d75",
@@ -2268,7 +2302,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d77",
@@ -2332,7 +2367,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d79",
@@ -2391,7 +2427,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d81",
@@ -4736,7 +4773,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d159",
@@ -4859,7 +4897,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d163",

@@ -67,14 +67,31 @@ RAIN_AUDIO = ("steady rainfall, water droplets dripping on broad leaves, soft ra
 STATE = {"prompt": DEFAULT_MOTION, "audio": DEFAULT_AUDIO}  # set per-post by main()
 
 
+# Rotate tropical soundscapes so reels don't all sound identical (Veo generates audio from
+# the prompt, so we tell it which ambience). Picked deterministically by day, so it varies.
+SOUND_POOL = [
+    "distant tropical birdsong and a soft warm breeze",
+    "chirping insects and cicadas humming in the canopy",
+    "a faint rainforest dawn chorus, birds calling far off",
+    "a quiet jungle stream trickling nearby, leaves rustling",
+    "exotic birdcalls echoing through the canopy",
+    "gentle wind through foliage with occasional birdsong",
+]
+RAIN_SOUND = "steady rainfall and water dripping on broad leaves"
+
+
 def prompts_for(post):
-    """(motion, audio) prompt for a post. REEL_PROMPT env overrides for one-off tests."""
+    """(motion, audio) prompt for a post, with a varied ambient soundscape baked into the
+    Veo prompt. REEL_PROMPT env overrides for one-off tests."""
     if os.environ.get("REEL_PROMPT"):
         return os.environ["REEL_PROMPT"], os.environ.get("REEL_AUDIO_PROMPT", DEFAULT_AUDIO)
     t = (str(post.get("title", "")) + " " + str(post.get("caption", ""))).lower()
-    if any(w in t for w in ("rain", "mist", "wet", "drip", "cloud forest", "monsoon", "humid", "dew", "fog")):
-        return RAIN_MOTION, RAIN_AUDIO
-    return DEFAULT_MOTION, DEFAULT_AUDIO
+    rain = any(w in t for w in ("rain", "mist", "wet", "drip", "cloud forest", "monsoon", "humid", "dew", "fog"))
+    if rain:
+        motion, sound = RAIN_MOTION, RAIN_SOUND
+    else:
+        motion, sound = DEFAULT_MOTION, SOUND_POOL[post.get("day", 0) % len(SOUND_POOL)]
+    return f"{motion} Ambient sound: {sound}; no music, no speech.", f"{sound}. No music, no speech."
 
 
 # Swap with REEL_MODEL=kling|seedance|veo (default veo). 'audio' = model emits its own sound.
