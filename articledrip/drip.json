@@ -308,17 +308,6 @@
     "status": "published"
   },
   {
-    "slug": "treating-leaf-spot-on-velvets",
-    "title": "The Quiet Art of Saving a Velvet Leaf",
-    "category": "Field Skills",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/treating-leaf-spot-on-velvets",
-    "thumb": "/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg",
-    "date": "2026-05-28",
-    "status": "published"
-  },
-  {
     "slug": "reading-new-leaf-color-in-juveniles",
     "title": "Reading New-Leaf Color in Juvenile Anthuriums",
     "category": "Field Skills",
@@ -326,6 +315,17 @@
     "section_label": "Understory",
     "url": "/the-leaf/reading-new-leaf-color-in-juveniles",
     "thumb": "/images/source/stock/reading-new-leaf-color-in-juveniles-hero.jpg",
+    "date": "2026-05-28",
+    "status": "published"
+  },
+  {
+    "slug": "treating-leaf-spot-on-velvets",
+    "title": "The Quiet Art of Saving a Velvet Leaf",
+    "category": "Field Skills",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/treating-leaf-spot-on-velvets",
+    "thumb": "/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg",
     "date": "2026-05-28",
     "status": "published"
   },

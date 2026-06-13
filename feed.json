@@ -369,19 +369,6 @@
       "image": "https://leafpeople.app/images/source/stock/mounting-mature-aroids-on-wood-hero.jpg"
     },
     {
-      "id": "the-leaf/treating-leaf-spot-on-velvets",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "treating-leaf-spot-on-velvets",
-      "title": "The Quiet Art of Saving a Velvet Leaf",
-      "category": "Field Skills",
-      "description": "A field-tested approach to stopping leaf-spot on velvet philodendrons and anthuriums before it leaves a permanent mark on the foliage.",
-      "date": "2026-05-28",
-      "url": "https://leafpeople.app/the-leaf/treating-leaf-spot-on-velvets",
-      "data_url": "https://leafpeople.app/the-leaf/treating-leaf-spot-on-velvets/_data.json",
-      "image": "https://leafpeople.app/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg"
-    },
-    {
       "id": "the-leaf/reading-new-leaf-color-in-juveniles",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -393,6 +380,19 @@
       "url": "https://leafpeople.app/the-leaf/reading-new-leaf-color-in-juveniles",
       "data_url": "https://leafpeople.app/the-leaf/reading-new-leaf-color-in-juveniles/_data.json",
       "image": "https://leafpeople.app/images/source/stock/reading-new-leaf-color-in-juveniles-hero.jpg"
+    },
+    {
+      "id": "the-leaf/treating-leaf-spot-on-velvets",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "treating-leaf-spot-on-velvets",
+      "title": "The Quiet Art of Saving a Velvet Leaf",
+      "category": "Field Skills",
+      "description": "A field-tested approach to stopping leaf-spot on velvet philodendrons and anthuriums before it leaves a permanent mark on the foliage.",
+      "date": "2026-05-28",
+      "url": "https://leafpeople.app/the-leaf/treating-leaf-spot-on-velvets",
+      "data_url": "https://leafpeople.app/the-leaf/treating-leaf-spot-on-velvets/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg"
     },
     {
       "id": "the-leaf/substrate-recipes-i-keep-coming-back-to",
