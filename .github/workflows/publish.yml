@@ -67,12 +67,14 @@ jobs:
             done
           fi
 
-      - name: Push notification (only on publish)
-        if: inputs.action == 'publish'
-        continue-on-error: true   # never abort the workflow over FCM failure
-        env:
-          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
-        run: python pipeline/send_push.py "${{ inputs.slug }}"
+      # NO publish-time push. The app owns story notifications via its client-side
+      # drip (StoryDripService): each subscriber's board reveals one story at a time
+      # on a personal schedule (welcome pair, then one every 2 days) and fires a LOCAL
+      # notification exactly when a story lands. An FCM "stories" push on approval
+      # jumped that queue — it pinged users about stories the drip won't surface for
+      # days (the "10 notifications, no stories" bug). Approved articles just enter
+      # feed.json and the drip picks them up in order. (send_push.py is kept for a
+      # future *deliberate* broadcast, but is no longer wired to every approval.)
 
       - name: Close matching review issue
         env:
