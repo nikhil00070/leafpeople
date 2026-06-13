@@ -69,8 +69,13 @@ def main() -> int:
         )
         print(f"[publish] published: {section}/{slug}")
 
-    # Regenerate derived files so the new article shows in sitemap/feed
+    # Regenerate derived files so the new article shows in sitemap/feed.
+    # Order matters: sync the drip FIRST (append the new article onto /articledrip's
+    # drip.json at the back of the queue), THEN build feed.json — which orders itself by
+    # drip.json. This is how a freshly-approved article flows onto /articledrip and into
+    # the phone's drip without jumping the line.
     subprocess.run([sys.executable, str(ROOT / "generate_sitemap.py")], check=False)
+    subprocess.run([sys.executable, str(ROOT / "articledrip_seed.py")], check=False)
     subprocess.run([sys.executable, str(ROOT / "generate_feed.py")], check=False)
     return 0
 

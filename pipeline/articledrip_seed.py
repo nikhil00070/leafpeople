@@ -37,47 +37,65 @@ def load_manifest(section):
     return d if isinstance(d, list) else d.get("items", [])
 
 
+DRIP_PATH = os.path.join(ROOT, "articledrip", "drip.json")
+
+
+def _item(a, section, label):
+    slug = a.get("slug")
+    return {
+        "slug": slug,
+        "title": a.get("title", slug),
+        "category": a.get("category", ""),
+        "section": section,
+        "section_label": label,
+        "url": a.get("url", f"/{section}/{slug}"),
+        "thumb": a.get("thumb", ""),
+        "date": a.get("date", ""),
+        "status": a.get("status", "published"),
+    }
+
+
 def build():
-    items = []
-    seen = set()
+    """Sync articledrip/drip.json with the manifests, PRESERVING the curated order.
+
+    drip.json is the source of truth for the drip sequence, so re-running this never
+    reshuffles it. We keep the existing order, refresh each entry's metadata/status from
+    the manifest, drop anything rejected/deleted, and APPEND newly-approved articles at
+    the end (oldest-first) so they fall to the back of the queue — never jumping the line.
+    publish.py calls this on every approval so new articles always flow onto /articledrip.
+    """
+    # current articles, keyed by slug (slugs are unique across sections — the page assumes this too)
+    current = {}
     for section, label in SECTIONS:
         for a in load_manifest(section):
             slug = a.get("slug")
-            if not slug or slug in seen:
+            if not slug or slug in current:
                 continue
-            seen.add(slug)
-            items.append({
-                "slug": slug,
-                "title": a.get("title", slug),
-                "category": a.get("category", ""),
-                "section": section,
-                "section_label": label,
-                "url": a.get("url", f"/{section}/{slug}"),
-                "thumb": a.get("thumb", ""),
-                "date": a.get("date", ""),
-                "status": a.get("status", "published"),
-            })
+            current[slug] = _item(a, section, label)
 
-    # Default drip order = the Stories FEED order (exactly what the app shows via feed.json),
-    # then anything not in the feed (pending/unpublished) appended after by date. Just the
-    # starting point; /articledrip lets you reorder freely and remembers your sequence.
-    feed_order = {}
     try:
-        fd = json.loads(open(os.path.join(ROOT, "feed.json")).read())
-        fitems = fd.get("items", fd) if isinstance(fd, dict) else fd
-        feed_order = {a.get("slug"): i for i, a in enumerate(fitems) if a.get("slug")}
+        existing = json.loads(open(DRIP_PATH).read())
     except Exception:
-        feed_order = {}
-    items.sort(key=lambda a: (feed_order.get(a["slug"], 10_000), a.get("date", ""), a["title"]))
+        existing = []
 
-    out_dir = os.path.join(ROOT, "articledrip")
-    os.makedirs(out_dir, exist_ok=True)
-    json.dump(items, open(os.path.join(out_dir, "drip.json"), "w"), indent=2)
+    result, seen = [], set()
+    for a in existing:                              # keep order, refresh from manifest, drop removed
+        slug = a.get("slug")
+        if slug in current and slug not in seen:
+            result.append(current[slug])
+            seen.add(slug)
+    new = sorted((s for s in current if s not in seen),
+                 key=lambda s: (current[s].get("date", ""), current[s]["title"]))
+    for s in new:                                   # append newcomers at the back of the queue
+        result.append(current[s])
+
+    os.makedirs(os.path.dirname(DRIP_PATH), exist_ok=True)
+    json.dump(result, open(DRIP_PATH, "w"), indent=2)
 
     from collections import Counter
-    by_sec = Counter(a["section_label"] for a in items)
-    by_status = Counter(a["status"] for a in items)
-    print(f"Wrote articledrip/drip.json — {len(items)} stories")
+    by_sec = Counter(a["section_label"] for a in result)
+    by_status = Counter(a["status"] for a in result)
+    print(f"Wrote articledrip/drip.json — {len(result)} stories ({len(new)} newly appended)")
     print(f"  sections: {dict(by_sec)}")
     print(f"  statuses: {dict(by_status)}")
 

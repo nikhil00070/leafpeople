@@ -1,61 +1,9 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-06-12",
+  "updated": "2026-06-13",
   "count": 145,
   "items": [
-    {
-      "id": "the-leaf/philodendron-heartleaf",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-heartleaf",
-      "title": "The Everyplant with a Secret",
-      "category": "Philodendron",
-      "description": "The heartleaf philodendron shares a genus with the rarest grails on earth. A love letter to the plant that started most of us.",
-      "date": "2026-06-10",
-      "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
-    },
-    {
-      "id": "the-leaf/philodendron-lynnhannoniae",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-lynnhannoniae",
-      "title": "A Species, Not a Cultivar",
-      "category": "Philodendron",
-      "description": "Why serious collectors are turning back to wild-type philodendron species — and what the hybrid craze has quietly cost the hobby.",
-      "date": "2026-06-08",
-      "url": "https://leafpeople.app/the-leaf/philodendron-lynnhannoniae",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-lynnhannoniae/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/philodendron-lynnhannoniae.jpg"
-    },
-    {
-      "id": "the-leaf/monstera-siltepecana",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "monstera-siltepecana",
-      "title": "Monstera siltepecana: Silver Juvenile, Fenestrated Adult",
-      "category": "Monstera",
-      "description": "The full story of Monstera siltepecana — its dusty blue-silver juvenile leaves, the 'El Salvador' form, and what happens when it climbs.",
-      "date": "2026-06-05",
-      "url": "https://leafpeople.app/the-leaf/monstera-siltepecana",
-      "data_url": "https://leafpeople.app/the-leaf/monstera-siltepecana/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/monstera-siltepecana.jpg"
-    },
-    {
-      "id": "the-leaf/anthurium-veitchii",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "anthurium-veitchii",
-      "title": "Anthurium veitchii: A Field Portrait of the King",
-      "category": "Anthurium",
-      "description": "The story of Anthurium veitchii — its Colombian cloud forest origins, its corrugated metre-long leaves, and the collector debate between narrow and wide form.",
-      "date": "2026-06-03",
-      "url": "https://leafpeople.app/the-leaf/anthurium-veitchii",
-      "data_url": "https://leafpeople.app/the-leaf/anthurium-veitchii/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/anthurium-veitchii-hero.jpg"
-    },
     {
       "id": "the-leaf/anthurium-warocqueanum",
       "section": "the-leaf",
@@ -161,19 +109,6 @@
       "image": "https://leafpeople.app/images/plants/profiles/monstera-obliqua.png"
     },
     {
-      "id": "the-leaf/hoya-linearis",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "hoya-linearis",
-      "title": "A Waterfall of Fuzz",
-      "category": "Hoya",
-      "description": "Hoya linearis defies everything you know about hoyas. A deep look at the Himalayan cliff-dweller that grows like green hair.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/hoya-linearis",
-      "data_url": "https://leafpeople.app/the-leaf/hoya-linearis/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/hoya-linearis-hero.jpg"
-    },
-    {
       "id": "the-leaf/begonia-venosa",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -200,45 +135,6 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-ace-of-spades.jpeg"
     },
     {
-      "id": "the-leaf/philodendron-gigas",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-gigas",
-      "title": "The Giant of Panama",
-      "category": "Philodendron",
-      "description": "Philodendron gigas ages from copper to near-black and gets enormous. Here's what it actually takes to grow one well.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-gigas",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-gigas/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/philodendron-gigas-hero.jpg"
-    },
-    {
-      "id": "the-leaf/hoya-obovata",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "hoya-obovata",
-      "title": "The Gateway Hoya",
-      "category": "Hoya",
-      "description": "How Hoya carnosa became the species that pulls houseplant people into the deep end of hoya collecting — and why it still earns its place.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/hoya-obovata",
-      "data_url": "https://leafpeople.app/the-leaf/hoya-obovata/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/hoya-obovata.jpg"
-    },
-    {
-      "id": "the-leaf/begonia-ferox",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "begonia-ferox",
-      "title": "The Fierce One: Inside Begonia's Most Armored Leaf",
-      "category": "Begonia",
-      "description": "A Chinese begonia studded with black-tipped bullate spikes raises a sharp question: why do collectors keep reaching for the plants that look like they bite back?",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/begonia-ferox",
-      "data_url": "https://leafpeople.app/the-leaf/begonia-ferox/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/begonia-ferox-hero.jpg"
-    },
-    {
       "id": "the-leaf/anthurium-papillilaminum",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -250,45 +146,6 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-papillilaminum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-papillilaminum-hero.jpg"
-    },
-    {
-      "id": "the-leaf/philodendron-verrucosum",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-verrucosum",
-      "title": "Hairy Petioles and Stained-Glass Leaves",
-      "category": "Philodendron",
-      "description": "Philodendron gloriosum, verrucosum, and friends: why Ecuador's iridescent velvet climbers sulk the moment your humidity drops.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-verrucosum",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-verrucosum/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/philodendron-verrucosum-hero.jpg"
-    },
-    {
-      "id": "the-leaf/monstera-dubia",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "monstera-dubia",
-      "title": "The Shapeshifter",
-      "category": "Monstera",
-      "description": "From coin-flat juvenile to fenestrated giant, some Monstera species transform so completely they barely resemble themselves. Here's what drives it.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/monstera-dubia",
-      "data_url": "https://leafpeople.app/the-leaf/monstera-dubia/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/monstera-dubia-hero.jpg"
-    },
-    {
-      "id": "the-leaf/hoya-pubicalyx",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "hoya-pubicalyx",
-      "title": "The Fast Bloomer",
-      "category": "Hoya",
-      "description": "Speckled leaves, dark star flowers, vigorous growth — and a cultivar naming mess that's fooled collectors for years. The real story of Hoya lacunosa.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/hoya-pubicalyx",
-      "data_url": "https://leafpeople.app/the-leaf/hoya-pubicalyx/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/hoya-pubicalyx-hero.jpg"
     },
     {
       "id": "the-leaf/begonia-listada",
@@ -382,19 +239,6 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cutucuence.jpeg"
     },
     {
-      "id": "the-leaf/philodendron-billietiae",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-billietiae",
-      "title": "Tangerine Petioles",
-      "category": "Philodendron",
-      "description": "A deep look at Philodendron billietiae — its wild origins, flush rhythm, orange petioles, and the variegated form that rewrote collector prices.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-billietiae",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-billietiae/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/philodendron-billietiae-hero.jpg"
-    },
-    {
       "id": "the-leaf/hoya-australis-lisa",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -421,19 +265,6 @@
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-corrugatum.jpeg"
     },
     {
-      "id": "the-leaf/philodendron-tortum",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-tortum",
-      "title": "Living Sculpture: The Skeletal Philodendrons",
-      "category": "Philodendron",
-      "description": "Finger-thin leaflets, twisting petioles, fossil-like forms — the pinnate and pedatum philodendrons are the jungle's idea of minimalism.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-tortum",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-tortum/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
-    },
-    {
       "id": "the-leaf/monstera-adansonii-variegata",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -447,19 +278,6 @@
       "image": "https://leafpeople.app/images/plants/profiles/monstera-adansonii-variegata.jpg"
     },
     {
-      "id": "the-leaf/hoya-kentiana-variegata",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "hoya-kentiana-variegata",
-      "title": "Ribbons of Cream: The Variegated Wayetii and the Joy of a Cascading Hoya",
-      "category": "Hoya",
-      "description": "On Hoya wayetii, its variegated form, the persistent taxonomic confusion, and why a trailing wax plant earns its shelf space.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata",
-      "data_url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/hoya-kentiana-variegata-hero.jpg"
-    },
-    {
       "id": "the-leaf/anthurium-vittariifolium",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -471,19 +289,6 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-vittariifolium/_data.json",
       "image": "https://leafpeople.app/images/source/inat/anthurium-vittariifolium-hero.jpg"
-    },
-    {
-      "id": "the-leaf/philodendron-squamiferum",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-squamiferum",
-      "title": "Touch the Stem",
-      "category": "Philodendron",
-      "description": "Fuzzy petioles, D-shaped cross-sections, and red bristles: the case that half an aroid's beauty lives below the leaf blade.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-squamiferum",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-squamiferum/_data.json",
-      "image": "https://leafpeople.app/images/source/inat/philodendron-squamiferum-hero.jpg"
     },
     {
       "id": "the-leaf/anthurium-wendlingeri",
@@ -512,19 +317,6 @@
       "image": "https://leafpeople.app/images/source/inat/anthurium-kunayalense-hero.jpg"
     },
     {
-      "id": "the-leaf/philodendron-strawberry-shake",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-strawberry-shake",
-      "title": "Pink, Cream, and Green Confetti",
-      "category": "Philodendron",
-      "description": "The flushed new growth that sells the plant, the variegation that fades, and what collectors are really chasing in variegated philodendrons.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/philodendron-strawberry-shake.jpg"
-    },
-    {
       "id": "the-leaf/anthurium-cupulispathum",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -536,19 +328,6 @@
       "url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum",
       "data_url": "https://leafpeople.app/the-leaf/anthurium-cupulispathum/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/anthurium-cupulispathum.jpeg"
-    },
-    {
-      "id": "the-leaf/philodendron-orange-marmalade",
-      "section": "the-leaf",
-      "section_label": "Understory",
-      "slug": "philodendron-orange-marmalade",
-      "title": "Citrus on a Leaf",
-      "category": "Philodendron",
-      "description": "New hybrids blazing orange and gold are reshaping what collectors want from variegated philodendrons. Here's why warm-tone variegation matters.",
-      "date": "2026-06-02",
-      "url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade",
-      "data_url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade/_data.json",
-      "image": "https://leafpeople.app/images/plants/profiles/philodendron-orange-marmalade.png"
     },
     {
       "id": "the-leaf/anthurium-dark-mama",
@@ -1045,6 +824,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-regale-hero.jpg"
     },
     {
+      "id": "the-leaf/philodendron-verrucosum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-verrucosum",
+      "title": "Hairy Petioles and Stained-Glass Leaves",
+      "category": "Philodendron",
+      "description": "Philodendron gloriosum, verrucosum, and friends: why Ecuador's iridescent velvet climbers sulk the moment your humidity drops.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-verrucosum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-verrucosum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-verrucosum-hero.jpg"
+    },
+    {
       "id": "field-guide/philodendron-verrucosum",
       "section": "field-guide",
       "section_label": "Field Guide",
@@ -1121,6 +913,19 @@
       "url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents",
       "data_url": "https://leafpeople.app/the-leaf/humidity-cabinets-versus-tents/_data.json",
       "image": "https://leafpeople.app/images/source/stock/humidity-cabinets-versus-tents-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-billietiae",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-billietiae",
+      "title": "Tangerine Petioles",
+      "category": "Philodendron",
+      "description": "A deep look at Philodendron billietiae — its wild origins, flush rhythm, orange petioles, and the variegated form that rewrote collector prices.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-billietiae",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-billietiae/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-billietiae-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-billietiae",
@@ -1888,6 +1693,201 @@
       "url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned",
       "data_url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned/_data.json",
       "image": "https://leafpeople.app/images/source/stock/buying-a-rare-plant-without-getting-burned-hero.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-linearis",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-linearis",
+      "title": "A Waterfall of Fuzz",
+      "category": "Hoya",
+      "description": "Hoya linearis defies everything you know about hoyas. A deep look at the Himalayan cliff-dweller that grows like green hair.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-linearis",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-linearis/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-linearis-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-orange-marmalade",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-orange-marmalade",
+      "title": "Citrus on a Leaf",
+      "category": "Philodendron",
+      "description": "New hybrids blazing orange and gold are reshaping what collectors want from variegated philodendrons. Here's why warm-tone variegation matters.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-orange-marmalade/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-orange-marmalade.png"
+    },
+    {
+      "id": "the-leaf/philodendron-tortum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-tortum",
+      "title": "Living Sculpture: The Skeletal Philodendrons",
+      "category": "Philodendron",
+      "description": "Finger-thin leaflets, twisting petioles, fossil-like forms — the pinnate and pedatum philodendrons are the jungle's idea of minimalism.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-tortum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-tortum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-strawberry-shake",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-strawberry-shake",
+      "title": "Pink, Cream, and Green Confetti",
+      "category": "Philodendron",
+      "description": "The flushed new growth that sells the plant, the variegation that fades, and what collectors are really chasing in variegated philodendrons.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-strawberry-shake/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-strawberry-shake.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-kentiana-variegata",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-kentiana-variegata",
+      "title": "Ribbons of Cream: The Variegated Wayetii and the Joy of a Cascading Hoya",
+      "category": "Hoya",
+      "description": "On Hoya wayetii, its variegated form, the persistent taxonomic confusion, and why a trailing wax plant earns its shelf space.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-kentiana-variegata-hero.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-pubicalyx",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-pubicalyx",
+      "title": "The Fast Bloomer",
+      "category": "Hoya",
+      "description": "Speckled leaves, dark star flowers, vigorous growth — and a cultivar naming mess that's fooled collectors for years. The real story of Hoya lacunosa.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-pubicalyx",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-pubicalyx/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/hoya-pubicalyx-hero.jpg"
+    },
+    {
+      "id": "the-leaf/begonia-ferox",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-ferox",
+      "title": "The Fierce One: Inside Begonia's Most Armored Leaf",
+      "category": "Begonia",
+      "description": "A Chinese begonia studded with black-tipped bullate spikes raises a sharp question: why do collectors keep reaching for the plants that look like they bite back?",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-ferox",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-ferox/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/begonia-ferox-hero.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-obovata",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-obovata",
+      "title": "The Gateway Hoya",
+      "category": "Hoya",
+      "description": "How Hoya carnosa became the species that pulls houseplant people into the deep end of hoya collecting — and why it still earns its place.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-obovata",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-obovata/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-obovata.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-gigas",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-gigas",
+      "title": "The Giant of Panama",
+      "category": "Philodendron",
+      "description": "Philodendron gigas ages from copper to near-black and gets enormous. Here's what it actually takes to grow one well.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-gigas",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-gigas/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-gigas-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-dubia",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-dubia",
+      "title": "The Shapeshifter",
+      "category": "Monstera",
+      "description": "From coin-flat juvenile to fenestrated giant, some Monstera species transform so completely they barely resemble themselves. Here's what drives it.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-dubia",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-dubia/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/monstera-dubia-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-squamiferum",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-squamiferum",
+      "title": "Touch the Stem",
+      "category": "Philodendron",
+      "description": "Fuzzy petioles, D-shaped cross-sections, and red bristles: the case that half an aroid's beauty lives below the leaf blade.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-squamiferum",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-squamiferum/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/philodendron-squamiferum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-veitchii",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-veitchii",
+      "title": "Anthurium veitchii: A Field Portrait of the King",
+      "category": "Anthurium",
+      "description": "The story of Anthurium veitchii — its Colombian cloud forest origins, its corrugated metre-long leaves, and the collector debate between narrow and wide form.",
+      "date": "2026-06-03",
+      "url": "https://leafpeople.app/the-leaf/anthurium-veitchii",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-veitchii/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/anthurium-veitchii-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-siltepecana",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-siltepecana",
+      "title": "Monstera siltepecana: Silver Juvenile, Fenestrated Adult",
+      "category": "Monstera",
+      "description": "The full story of Monstera siltepecana — its dusty blue-silver juvenile leaves, the 'El Salvador' form, and what happens when it climbs.",
+      "date": "2026-06-05",
+      "url": "https://leafpeople.app/the-leaf/monstera-siltepecana",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-siltepecana/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-siltepecana.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-lynnhannoniae",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-lynnhannoniae",
+      "title": "A Species, Not a Cultivar",
+      "category": "Philodendron",
+      "description": "Why serious collectors are turning back to wild-type philodendron species — and what the hybrid craze has quietly cost the hobby.",
+      "date": "2026-06-08",
+      "url": "https://leafpeople.app/the-leaf/philodendron-lynnhannoniae",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-lynnhannoniae/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-lynnhannoniae.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-heartleaf",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-heartleaf",
+      "title": "The Everyplant with a Secret",
+      "category": "Philodendron",
+      "description": "The heartleaf philodendron shares a genus with the rarest grails on earth. A love letter to the plant that started most of us.",
+      "date": "2026-06-10",
+      "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
     }
   ]
 }

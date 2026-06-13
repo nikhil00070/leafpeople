@@ -1,0 +1,52 @@
+name: Apply drip order
+
+# Triggered by the /articledrip "Save order" button (via /api/apply-drip-order). Takes the
+# curated ORDER (a JSON list of slugs), writes it into articledrip/drip.json, rebuilds
+# feed.json in that order (the phone's Stories drip), and commits.
+
+on:
+  workflow_dispatch:
+    inputs:
+      order:
+        description: 'JSON list of slugs in drip order'
+        required: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Apply drip order
+        env:
+          ORDER: ${{ inputs.order }}
+        run: python pipeline/apply_drip_order.py "$ORDER"
+
+      - name: Rebuild feed in drip order
+        run: |
+          cd pipeline
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Drip: apply curated order from /articledrip"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
+          fi

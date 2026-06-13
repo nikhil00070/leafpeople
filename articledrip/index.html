@@ -69,7 +69,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 <div class="wrap">
 <header>
   <h1>Article drip</h1>
-  <p class="note">The order stories land in a new reader's <b>Stories</b> section after they install the app — one every couple of days, starting on day 1. Drag a row by its <b>⠿</b> handle (or use <b>↑ ↓</b>) to re-order; day numbers and dates update automatically. Your order is saved in this browser. When it's final, hit <b>Copy finalized order</b> and it'll drive the live drip. Private page (noindex).</p>
+  <p class="note">The order stories land in a new reader's <b>Stories</b> section after they install the app — one every couple of days, starting on day 1. Drag a row by its <b>⠿</b> handle (or use <b>↑ ↓</b>) to re-order; day numbers and dates update automatically. Drafts save in this browser as you go. When it's final, hit <b>Save order</b> — it writes the sequence to the live drip (<code>feed.json</code>), and that's the exact order stories land on the phone. Newly-approved articles auto-append to the end of the queue. Private page (noindex).</p>
 </header>
 
 <div class="toolbar">
@@ -77,7 +77,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
   <div class="fld"><label>New reader starts</label><input id="start" type="date"></div>
   <div class="fld"><label>Jump to</label><input id="search" type="text" placeholder="filter by title…" style="width:13rem"></div>
   <div class="spacer"></div>
-  <button class="btn btn-green" id="copyBtn">Copy finalized order</button>
+  <button class="btn btn-green" id="copyBtn">Save order → drives drip</button>
   <button class="btn btn-ghost" id="resetBtn">↺ Reset to default</button>
   <span class="copied" id="copied"></span>
 </div>
@@ -179,15 +179,31 @@ function wireDrag(){
 }
 function clearMarks(){ document.querySelectorAll(".row").forEach(r=>r.classList.remove("dropbefore","dropafter")); }
 
-function copyOrder(){
-  const payload = {
-    cadence_days: cadence(),
-    start: document.getElementById("start").value,
-    count: ORDER.length,
-    order: ORDER.map((slug,i)=>({ day: dayNum(i), slug, section: BY[slug].section, title: BY[slug].title }))
-  };
-  navigator.clipboard?.writeText(JSON.stringify(payload, null, 2));
-  const c=document.getElementById("copied"); c.textContent="✓ copied "+ORDER.length+" stories"; setTimeout(()=>c.textContent="",2200);
+// Save the curated order to the repo: POST → /api/apply-drip-order → apply-drip-order.yml
+// writes articledrip/drip.json in this order + rebuilds feed.json (the phone's drip).
+async function copyOrder(){
+  const btn = document.getElementById("copyBtn");
+  const c = document.getElementById("copied");
+  const order = ORDER.filter(s=>BY[s]).map(slug=>({ slug, section: BY[slug].section }));
+  // bonus: also drop the full detail on the clipboard
+  try {
+    navigator.clipboard?.writeText(JSON.stringify({
+      cadence_days: cadence(), start: document.getElementById("start").value, count: order.length,
+      order: ORDER.map((slug,i)=>({ day: dayNum(i), slug, section: BY[slug].section, title: BY[slug].title }))
+    }, null, 2));
+  } catch {}
+  const label = btn.textContent;
+  btn.disabled = true; btn.textContent = "Saving…"; c.style.color = "var(--faint)"; c.textContent = "";
+  try {
+    const r = await fetch("/api/apply-drip-order", {
+      method:"POST", headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ order })
+    });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok) { c.style.color = "var(--green)"; c.textContent = "✓ saved "+(j.count||order.length)+" — drip rebuilding (~1 min)"; }
+    else { c.style.color = "var(--pink)"; c.textContent = "✗ "+(j.error || ("HTTP "+r.status)); }
+  } catch(e){ c.style.color = "var(--pink)"; c.textContent = "✗ "+e.message; }
+  finally { btn.disabled = false; btn.textContent = label; setTimeout(()=>{ c.textContent=""; }, 7000); }
 }
 
 // Queue runway: how long until the publish crons exhaust the pending queue, per section.
