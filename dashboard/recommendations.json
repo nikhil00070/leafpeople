@@ -1,0 +1,85 @@
+{
+  "updated": "2026-06-13",
+  "note": "Curated by Claude from the current state of the project. Seeded before live traffic/download/social numbers are flowing — these sharpen once GA4 + ASC are connected and the first Instagram insights run lands.",
+  "items": [
+    {
+      "title": "Connect GA4 → light up Traffic + 'articles that landed customers'",
+      "priority": "high",
+      "why": "Traffic and the conversion bridge are dark until GA4 is wired. The hard part is already done — site.js fires app_store_click / outbound_click per page, so once GA4 reads, you get true article→install attribution.",
+      "steps": [
+        "Create a GA4 service account with the Analytics Data API enabled; grant it Viewer on the property",
+        "Add GA4_PROPERTY_ID + GA4_SA_JSON to Vercel env vars",
+        "Ping me — I'll build api/ga4.js and wire the Traffic + attribution panels"
+      ],
+      "by": "2026-06-20",
+      "status": "todo"
+    },
+    {
+      "title": "Connect App Store Connect → light up Downloads",
+      "priority": "high",
+      "why": "Installs/conversion is the top-of-funnel number with no live source yet. You have ASC, so it's just an API key away.",
+      "steps": [
+        "App Store Connect → Users and Access → Integrations → create an API key (.p8), note the Issuer ID + Key ID",
+        "Add ASC_ISSUER_ID, ASC_KEY_ID, ASC_P8 to Vercel env vars",
+        "Ping me — I'll build api/asc.js and wire the Downloads panel"
+      ],
+      "by": "2026-06-20",
+      "status": "todo"
+    },
+    {
+      "title": "Baseline the socials — run the insights button",
+      "priority": "medium",
+      "why": "Nothing to analyze until the first pull lands. Establish a baseline now, then re-run weekly to watch trends.",
+      "steps": [
+        "Hit 'Refresh Instagram numbers' on this dashboard",
+        "Re-run weekly (Mondays) to track follower + reach growth"
+      ],
+      "by": "2026-06-13",
+      "status": "todo"
+    },
+    {
+      "title": "Validate the text hooks against the 79% skip rate",
+      "priority": "medium",
+      "why": "The whole hook rollout (days 8–46) targets reel retention. Needs ~5 hooked reels live to read a signal.",
+      "steps": [
+        "After ~5 hooked reels have posted (~late June), compare avg watch time: hooked (🪝) vs non-hooked reels in the insights",
+        "If watch time is up → keep and expand hooks to all reels",
+        "If flat → iterate the hook copy on the weakest performers and re-test"
+      ],
+      "by": "2026-06-27",
+      "status": "todo"
+    },
+    {
+      "title": "Keep the content queues from drying up",
+      "priority": "medium",
+      "why": "The phone drip and the daily IG posts both feed off the article pipeline. Field Guide burns faster (publishes ~5/wk vs Understory ~3/wk).",
+      "steps": [
+        "Watch the Ops 'runway' tile below — it flags when a section drops under ~2 weeks",
+        "Top up leaf_queue / guide_queue before either hits the warning band"
+      ],
+      "by": "rolling",
+      "status": "monitor"
+    },
+    {
+      "title": "Ship the new App Store description on the next app update",
+      "priority": "low",
+      "why": "The promo text (differentiation hook) is already live, but the fuller description rides the next version submission.",
+      "steps": [
+        "Paste the drafted 'generic apps can't ID the good stuff' description into the next version's App Store listing"
+      ],
+      "by": "next release",
+      "status": "todo"
+    },
+    {
+      "title": "Confirm the iOS→web entitlement bridge is deployed",
+      "priority": "low",
+      "why": "Code is fully built; only runtime config (Firebase function deploy + RevenueCat webhook) is unverified. Low impact since customers live in the app, but worth closing.",
+      "steps": [
+        "Confirm the Firebase revenuecatWebhook function is deployed and the RevenueCat dashboard webhook points at it",
+        "Sandbox-purchase on a signed-in account → check that user's Firebase 'subscriber' custom claim flips true"
+      ],
+      "by": "2026-07-15",
+      "status": "todo"
+    }
+  ]
+}

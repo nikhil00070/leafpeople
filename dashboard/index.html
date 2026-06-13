@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Mission Control — Leaf People</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0b0f0d; --card:#141a16; --card2:#0f1411; --border:#1f2a23; --text:#e8efe9; --dim:#b8c8bb; --faint:#8da38f; --green:#4ade80; --pink:#FA2A52; --blue:#60a5fa; --amber:#f59e0b; --red:#f87171; }
+* { box-sizing:border-box; }
+body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); margin:0; padding:1.8rem; }
+.wrap { max-width:1100px; margin:0 auto; }
+h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:1.9rem; margin:0; letter-spacing:-.02em; }
+.sub { color:var(--faint); font-size:.85rem; margin:.3rem 0 0; }
+.sec-h { font-family:'Geologica',sans-serif; font-weight:800; font-size:.95rem; letter-spacing:.04em; text-transform:uppercase; color:var(--dim); margin:1.8rem 0 .8rem; display:flex; align-items:center; gap:.5rem; }
+.grid { display:grid; gap:.9rem; }
+.g3 { grid-template-columns:repeat(3,1fr); } .g2 { grid-template-columns:repeat(2,1fr); }
+@media (max-width:760px){ .g3,.g2 { grid-template-columns:1fr; } }
+.card { background:var(--card); border:1px solid var(--border); border-radius:13px; padding:1rem 1.1rem; }
+.card h3 { margin:0 0 .5rem; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); font-weight:600; }
+.big { font-family:'Geologica',sans-serif; font-weight:800; font-size:1.8rem; line-height:1; }
+.big small { font-size:.85rem; color:var(--faint); font-weight:400; font-family:'Inter'; }
+.kv { display:flex; justify-content:space-between; font-size:.86rem; padding:.22rem 0; border-bottom:1px solid var(--card2); }
+.kv:last-child { border-bottom:0; }
+.kv b { font-weight:600; }
+.muted { color:var(--faint); }
+.pill { display:inline-block; font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:1px 7px; border-radius:20px; }
+.p-ok { background:rgba(74,222,128,.16); color:var(--green); }
+.p-warn { background:rgba(245,158,11,.16); color:var(--amber); }
+.p-low { background:rgba(248,113,113,.16); color:var(--red); }
+.p-off { background:rgba(141,163,143,.14); color:var(--faint); }
+.p-blue { background:rgba(96,165,250,.16); color:var(--blue); }
+.btn { padding:.5rem 1rem; border-radius:9px; font-weight:700; font-size:.8rem; cursor:pointer; border:1px solid transparent; font-family:inherit; background:var(--green); color:#06140c; }
+.btn:disabled { opacity:.5; cursor:default; }
+.btn-ghost { background:transparent; color:var(--dim); border:1px solid var(--border); }
+.status { font-size:.78rem; margin-left:.6rem; }
+.connect { border-style:dashed; }
+.rec { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--faint); border-radius:11px; padding:.85rem 1rem; margin-bottom:.7rem; }
+.rec.high { border-left-color:var(--pink); } .rec.medium { border-left-color:var(--amber); } .rec.low { border-left-color:var(--faint); }
+.rec .t { font-weight:700; font-size:.95rem; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+.rec .why { color:var(--dim); font-size:.84rem; margin:.35rem 0; line-height:1.45; }
+.rec ol { margin:.4rem 0 .2rem; padding-left:1.1rem; }
+.rec li { font-size:.83rem; color:var(--text); margin:.18rem 0; }
+.rec .by { font-size:.74rem; color:var(--faint); margin-top:.4rem; }
+.row { font-size:.82rem; padding:.28rem 0; border-bottom:1px solid var(--card2); display:flex; gap:.6rem; align-items:baseline; }
+.row:last-child { border-bottom:0; }
+.row .d { color:var(--faint); font-variant-numeric:tabular-nums; min-width:5.2rem; }
+.bp { color:var(--dim); font-size:.84rem; line-height:1.6; }
+.bp b { color:var(--text); }
+a { color:var(--blue); }
+.dim-note { color:var(--faint); font-size:.78rem; margin-top:.3rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🌿 Mission Control</h1>
+    <p class="sub">Everything Leaf People, one page. Ops panels are live; Growth lights up as GA4 + App Store Connect are connected. <span id="freshness"></span> Private (noindex).</p>
+  </header>
+
+  <!-- GROWTH -->
+  <div class="sec-h">📈 Growth</div>
+  <div class="grid g3">
+    <div class="card connect" id="traffic">
+      <h3>Traffic · GA4</h3>
+      <div class="big muted" style="font-size:1rem">Not connected <span class="pill p-off">setup</span></div>
+      <p class="dim-note">Add <code>GA4_PROPERTY_ID</code> + <code>GA4_SA_JSON</code> to Vercel, then I wire <code>api/ga4.js</code>. Unlocks sessions, top articles, live visitors, and article→install attribution (events already firing).</p>
+    </div>
+    <div class="card connect" id="downloads">
+      <h3>Downloads · App Store</h3>
+      <div class="big muted" style="font-size:1rem">Not connected <span class="pill p-off">setup</span></div>
+      <p class="dim-note">Create an ASC API key (.p8) → add <code>ASC_ISSUER_ID</code>, <code>ASC_KEY_ID</code>, <code>ASC_P8</code> to Vercel, then I wire <code>api/asc.js</code>. Unlocks daily installs + conversion.</p>
+    </div>
+    <div class="card" id="socials">
+      <h3>Socials · Instagram</h3>
+      <div class="big muted" id="ig-headline" style="font-size:1rem">Loading…</div>
+      <div id="ig-body"></div>
+      <div style="margin-top:.7rem">
+        <button class="btn" id="igBtn">↻ Refresh Instagram numbers</button>
+        <span class="status" id="igStatus"></span>
+      </div>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:.9rem">
+    <div class="card" id="ig-reels-vs"><h3>Reels vs Static</h3><div id="ig-rv" class="muted" style="font-size:.85rem">Run the insights to populate.</div></div>
+    <div class="card" id="ig-top"><h3>Top posts by reach</h3><div id="ig-topbody" class="muted" style="font-size:.85rem">—</div></div>
+  </div>
+
+  <!-- OPS -->
+  <div class="sec-h">🛠 Ops</div>
+  <div class="grid g3">
+    <div class="card" id="content"><h3>Content live</h3><div class="big" id="content-big">—</div><div id="content-kv" style="margin-top:.5rem"></div></div>
+    <div class="card" id="runway"><h3>Queue runway</h3><div id="runway-body" class="muted">—</div></div>
+    <div class="card" id="automation"><h3>Automation health</h3><div id="auto-body" class="muted">—</div></div>
+  </div>
+  <div class="card" id="drip" style="margin-top:.9rem"><h3>Front of the drip (next to land)</h3><div id="drip-body" class="muted" style="font-size:.85rem">—</div></div>
+
+  <!-- RECOMMENDATIONS -->
+  <div class="sec-h">✅ Recommendations <span class="pill p-blue" id="rec-date"></span></div>
+  <p class="dim-note" id="rec-note" style="margin:-.4rem 0 .8rem"></p>
+  <div id="recs"></div>
+
+  <!-- BLUEPRINT -->
+  <div class="sec-h">🗺 Blueprint</div>
+  <div class="card">
+    <p class="bp"><b>Growth</b> — Traffic (GA4 · needs key), Downloads (ASC · needs key), Socials (IG ✓ live via the button), and the conversion bridge: <b>articles that landed customers</b> from the <code>app_store_click</code> events already firing in site.js (lights up with GA4).</p>
+    <p class="bp"><b>Ops</b> — Content live ✓, Queue runway + dry-queue alerts ✓, Drip order ✓, Automation health ✓. Each existing admin tool (/review, /instagram, /articledrip) is a panel here.</p>
+    <p class="bp"><b>Real-time</b> — GA4 has a true realtime API (live visitors); IG + App Store are near-real-time (~hourly); repo/automation data is instant. This page polls every 60s, so the live parts stay live.</p>
+  </div>
+</div>
+
+<script>
+const J = (u) => fetch(u + "?t=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null);
+const PUB_RATE = { "the-leaf": 3, "field-guide": 5 };   // leaf-publisher 3/wk, guide-generator 5/wk
+const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
+const esc = (s) => (s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+async function load() {
+  const [feed, drip, posts, insights, recs] = await Promise.all([
+    J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
+    J("/instagram/insights.json"), J("/dashboard/recommendations.json"),
+  ]);
+  renderContent(feed, drip);
+  renderRunway(drip);
+  renderAutomation(posts);
+  renderDrip(feed);
+  renderSocials(insights);
+  renderRecs(recs);
+  document.getElementById("freshness").textContent = "Updated " + new Date().toLocaleTimeString();
+}
+
+function renderContent(feed, drip) {
+  if (!feed) return;
+  const items = feed.items || [];
+  const bySec = {};
+  items.forEach(i => bySec[i.section_label] = (bySec[i.section_label]||0) + 1);
+  document.getElementById("content-big").innerHTML = items.length + ' <small>live articles</small>';
+  document.getElementById("content-kv").innerHTML = Object.entries(bySec)
+    .map(([k,v]) => `<div class="kv"><span class="muted">${esc(k)}</span><b>${v}</b></div>`).join("");
+}
+
+function renderRunway(drip) {
+  const el = document.getElementById("runway-body");
+  if (!drip) { el.textContent = "—"; return; }
+  const SECS = [["the-leaf","Understory"],["field-guide","Field Guide"]];
+  let worst = Infinity, html = "";
+  for (const [sec,label] of SECS) {
+    const pend = drip.filter(d => d.section === sec && d.status !== "published").length;
+    const wk = pend / PUB_RATE[sec];
+    worst = Math.min(worst, wk);
+    const cls = wk > 4 ? "p-ok" : wk >= 2 ? "p-warn" : "p-low";
+    const txt = wk < 1 ? Math.round(wk*7)+"d" : wk.toFixed(1)+"wk";
+    html += `<div class="kv"><span class="muted">${label}</span><span><b>${pend}</b> queued <span class="pill ${cls}">~${txt}</span></span></div>`;
+  }
+  if (worst < 2) html += `<p class="dim-note" style="color:var(--amber)">⚠️ A section is nearly dry — top up the queue.</p>`;
+  el.innerHTML = html;
+}
+
+function postDate(day) { const d = new Date("2026-06-02T00:00:00"); d.setDate(d.getDate() + (day-1)); return d; }
+function renderAutomation(posts) {
+  const el = document.getElementById("auto-body");
+  if (!posts) { el.textContent = "—"; return; }
+  const posted = posts.filter(p => p.status === "posted" || p.postedAt);
+  const reels = posts.filter(p => p.reel).length;
+  const next = posts.filter(p => !(p.status === "posted" || p.postedAt)).sort((a,b)=>a.day-b.day)[0];
+  const lastDay = posted.sort((a,b)=>b.day-a.day)[0];
+  el.innerHTML =
+    `<div class="kv"><span class="muted">Posted</span><b>${posted.length} / ${posts.length}</b></div>` +
+    `<div class="kv"><span class="muted">Last post</span><b>${lastDay ? "d"+lastDay.day : "—"}</b></div>` +
+    `<div class="kv"><span class="muted">Next up</span><b>${next ? "d"+next.day+" · "+postDate(next.day).toLocaleDateString(undefined,{month:'short',day:'numeric'}) : "—"}</b></div>` +
+    `<div class="kv"><span class="muted">Reels queued</span><b>${reels}</b></div>`;
+}
+
+function renderDrip(feed) {
+  const el = document.getElementById("drip-body");
+  if (!feed || !feed.items) return;
+  el.innerHTML = feed.items.slice(0,6).map((i,n) =>
+    `<div class="row"><span class="d">#${n+1}</span><span>${esc(i.title)} <span class="muted">· ${esc(i.section_label)}</span></span></div>`).join("");
+}
+
+function renderSocials(ins) {
+  const head = document.getElementById("ig-headline");
+  if (!ins) { head.innerHTML = 'No data yet <span class="pill p-off">run it</span>'; document.getElementById("ig-body").innerHTML = '<p class="dim-note">Hit the button to pull your first numbers.</p>'; return; }
+  const a = ins.account || {};
+  head.innerHTML = fmt(a.followers) + ' <small>followers · ' + fmt(a.posts) + ' posts</small>';
+  document.getElementById("ig-body").innerHTML = `<p class="dim-note">@${esc(a.username||"")} · updated ${esc((ins.updated||"").replace("T"," ").slice(0,16))}</p>`;
+  const s = ins.summary || {};
+  if (s.reels && s.images) {
+    const mult = s.images.avg_reach ? (s.reels.avg_reach / s.images.avg_reach).toFixed(1) : "—";
+    document.getElementById("ig-rv").innerHTML =
+      `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>reach <b>${fmt(s.reels.avg_reach)}</b> · eng <b>${s.reels.avg_eng_pct}%</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>` +
+      `<div class="kv"><span class="muted">🖼 Static (${s.images.count})</span><span>reach <b>${fmt(s.images.avg_reach)}</b> · eng <b>${s.images.avg_eng_pct}%</b></span></div>` +
+      `<p class="dim-note">→ reels reach <b style="color:var(--green)">${mult}×</b> the static posts</p>`;
+  }
+  const top = (ins.posts||[]).slice().sort((x,y)=>(y.reach||0)-(x.reach||0)).slice(0,5);
+  document.getElementById("ig-topbody").innerHTML = top.map(p =>
+    `<div class="row"><span class="d">${fmt(p.reach)}</span><span>${p.is_reel?"▶":"🖼"} ${esc(p.label||"")}${p.hook?" 🪝":""}</span></div>`).join("") || "—";
+}
+
+function renderRecs(recs) {
+  if (!recs) return;
+  document.getElementById("rec-date").textContent = recs.updated || "";
+  document.getElementById("rec-note").textContent = recs.note || "";
+  const pri = { high:"p-low", medium:"p-warn", low:"p-off" };
+  document.getElementById("recs").innerHTML = (recs.items||[]).map(r => `
+    <div class="rec ${r.priority}">
+      <div class="t">${esc(r.title)} <span class="pill ${pri[r.priority]||'p-off'}">${esc(r.priority)}</span>
+        <span class="pill p-blue">by ${esc(r.by)}</span>${r.status==='monitor'?'<span class="pill p-ok">monitor</span>':''}</div>
+      <div class="why">${esc(r.why)}</div>
+      <ol>${(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join("")}</ol>
+    </div>`).join("");
+}
+
+document.getElementById("igBtn").addEventListener("click", async function() {
+  const btn = this, st = document.getElementById("igStatus");
+  btn.disabled = true; const label = btn.textContent; btn.textContent = "Dispatching…"; st.style.color = "var(--faint)"; st.textContent = "";
+  try {
+    const r = await fetch("/api/run-insights", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ limit: 40 }) });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok) { st.style.color = "var(--green)"; st.textContent = "✓ pulling numbers — refresh in ~1 min"; }
+    else { st.style.color = "var(--pink)"; st.textContent = "✗ " + (j.error || ("HTTP "+r.status)); }
+  } catch(e) { st.style.color = "var(--pink)"; st.textContent = "✗ " + e.message; }
+  finally { btn.disabled = false; btn.textContent = label; setTimeout(()=>st.textContent="", 8000); }
+});
+
+load();
+setInterval(load, 60000);   // poll for liveness
+</script>
+</body>
+</html>

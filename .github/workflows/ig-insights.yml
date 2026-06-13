@@ -1,0 +1,46 @@
+name: Instagram insights
+
+# Triggered by the /dashboard "Refresh Instagram numbers" button (via /api/run-insights),
+# or manually. Pulls read-only Graph API insights for our own IG Business account and
+# commits instagram/insights.json, which the dashboard renders.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many recent posts to scan"
+        required: false
+        default: "40"
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull Instagram insights
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_LIMIT: ${{ inputs.limit }}
+        run: python pipeline/ig_insights.py
+
+      - name: Commit insights.json
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A instagram/insights.json
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "Insights: refresh Instagram numbers"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying"; sleep 5
+            done
+          fi
