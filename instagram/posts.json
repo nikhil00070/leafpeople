@@ -2861,7 +2861,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d95",
@@ -3085,9 +3086,9 @@
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
-    "title": "The Cult of the Mother Plant",
+    "title": "The House of Monstera",
     "image": "/images/source/inat/heritage-clones-and-provenance-hero.jpg",
-    "caption": "Two Anthurium luxurians sit on the same shelf, in the same mix, under the same light — and one is worth twice the other. The difference is paperwork.\n\nThe full story's in bio. 🌿",
+    "caption": "The House of Monstera 🌿\n\nImagine a greenhouse given over to a single genus — wall to wall, floor to ceiling, every fenestration its own. Step inside.\n\nEvery plant here is one tap away on Leaf People — link in bio.",
     "hashtags": [
       "#leafpeopleapp",
       "#rareplants",
@@ -3103,7 +3104,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d103",
@@ -4714,7 +4716,8 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "reel": true
   },
   {
     "id": "d157",
