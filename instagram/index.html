@@ -65,7 +65,8 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 .cell.skeleton { opacity:.62; border-style:dashed; }
 .cell .chd { display:flex; justify-content:space-between; align-items:center; font-size:.66rem; color:var(--faint); }
 .cell .daynum { font-weight:800; color:var(--text); font-size:.78rem; }
-.cell .thumb { flex:1; border-radius:6px; background:var(--card2) center/cover no-repeat; min-height:50px; }
+.cell .thumb { flex:1; border-radius:6px; background:var(--card2) center/cover no-repeat; min-height:50px; position:relative; }
+.cell .cal-reel { position:absolute; top:4px; right:4px; background:rgba(0,0,0,.66); color:#fff; font-size:.58rem; font-weight:700; letter-spacing:.04em; padding:1px 6px; border-radius:10px; }
 .cell .branchbar { height:4px; border-radius:3px; }
 .cell .meta { display:flex; justify-content:space-between; align-items:center; font-size:.66rem; color:var(--dim); }
 .cell .st { font-size:.6rem; padding:0 5px; border-radius:99px; background:var(--border); color:var(--dim); }
@@ -398,7 +399,7 @@ function renderCal(){
     html += `<div class="cell ${p.status==='skeleton'?'skeleton':''}" data-id="${p.id}" onclick="openModal('${p.id}')">
       <div class="chd"><span class="daynum">Day ${p.day}</span><span>${MON[month]} ${d.getDate()}</span></div>
       <div class="branchbar" style="background:${b.color}"></div>
-      <div class="thumb" ${thumb}></div>
+      <div class="thumb" ${thumb}>${p.reel?'<span class="cal-reel">▶ REEL</span>':''}</div>
       <div class="meta"><span class="st ${p.status}">${p.status}</span><span>${lk?('♥ '+lk):''}</span></div>
     </div>`;
   });
