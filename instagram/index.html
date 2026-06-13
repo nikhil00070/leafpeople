@@ -395,7 +395,8 @@ function renderCal(){
     const b = BR.branches[p.branch] || {color:"#888",label:p.branch};
     const lk = p.metrics.likes||0;
     const tpos = (STATE.posts[p.id]||{}).imgPos || p.imgPos || "50% 50%";
-    const thumb = p.image ? `style="background-image:url('${p.image}');background-position:${tpos}"` : "";
+    const thumbImg = p.reel ? `/videos/instagram/posters/d${String(p.day).padStart(2,'0')}.jpg` : p.image;  // hooked frame shows the hook in-grid
+    const thumb = thumbImg ? `style="background-image:url('${thumbImg}');background-position:${p.reel?'50% 50%':tpos}"` : "";
     html += `<div class="cell ${p.status==='skeleton'?'skeleton':''}" data-id="${p.id}" onclick="openModal('${p.id}')">
       <div class="chd"><span class="daynum">Day ${p.day}</span><span>${MON[month]} ${d.getDate()}</span></div>
       <div class="branchbar" style="background:${b.color}"></div>
@@ -432,7 +433,7 @@ function openModal(id){
   const reel = !!p.reel;                                           // only show the player where a reel actually exists
   const reelMp4 = `/videos/instagram/d${String(p.day).padStart(2,'0')}.mp4`;
   const imgHtml = !p.image ? `<div class="ig-img skel">skeleton — generate image when ready</div>`
-    : reel ? `<video class="ig-img" src="${reelMp4}" poster="${p.image}" controls playsinline preload="none" style="object-position:${p.imgPos||'50% 50%'}"></video><span class="reel-badge">▶ REEL</span>`
+    : reel ? `<video class="ig-img" src="${reelMp4}" poster="/videos/instagram/posters/d${String(p.day).padStart(2,'0')}.jpg" controls playsinline preload="none" style="object-position:${p.imgPos||'50% 50%'}"></video><span class="reel-badge">▶ REEL</span>`
     : `<img class="ig-img" src="${p.image}" style="object-position:${p.imgPos||'50% 50%'}">`;
   const poolBtn = (opts.length>1)
     ? `<button class="refresh" onclick="refreshImg()">↻ refresh image · ${opts.length} option${opts.length>1?'s':''}</button>`
