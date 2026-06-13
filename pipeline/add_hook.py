@@ -99,8 +99,15 @@ def main(argv):
     hook = os.environ.get("HOOK") or post.get("hook")
     if not hook:
         sys.exit(f"no hook for day {day} (set HOOK=... or add a 'hook' field)")
-    src = ROOT / "videos" / "instagram" / f"d{day:02d}.mp4"
-    out = Path(argv[1]) if len(argv) > 1 else src
+    import shutil
+    live = ROOT / "videos" / "instagram" / f"d{day:02d}.mp4"
+    masters = ROOT / "_reel_masters"
+    master = masters / f"d{day:02d}.mp4"
+    if not master.exists():                       # snapshot the clean (no-hook) reel once
+        masters.mkdir(parents=True, exist_ok=True)
+        shutil.copy(live, master)
+    src = master                                  # always hook from the clean master (re-wordable)
+    out = Path(argv[1]) if len(argv) > 1 else live
     with tempfile.TemporaryDirectory() as td:
         ov = Path(td) / "ov.png"
         make_overlay(hook, ov)
@@ -111,7 +118,7 @@ def main(argv):
                         "-filter_complex", vf, "-c:a", "copy", "-shortest", "-movflags", "+faststart",
                         str(tmp_out)], check=True, capture_output=True)
         out.parent.mkdir(parents=True, exist_ok=True)
-        Path(tmp_out).replace(out) if out != src else __import__("shutil").copy(tmp_out, out)
+        shutil.copy(tmp_out, out)
     print(f"[hook] day {day}: \"{hook}\"  ->  {out}")
     return 0
 
