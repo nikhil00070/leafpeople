@@ -112,8 +112,19 @@ def ensure_keyword_title(meta_title: str, *, slug: str = None, genus: str = None
     return f"{term} — {meta_title}"
 
 
-# Slugs whose binomial differs from a literal de-hyphenation (typos, variants).
-SCI_NAME_FIX = {"anthurium-crystalanium": "Anthurium crystallinum"}
+# Slugs whose display name can't be derived by simple de-hyphenation: typos, two-word
+# species epithets, and cultivars (the multi-token slugs that ARE a single plant — topic
+# slugs like anthurium-price-history are intentionally absent, so they get no subtitle).
+SCI_NAME_FIX = {
+    "anthurium-crystalanium": "Anthurium crystallinum",
+    "philodendron-spiritus-sancti": "Philodendron spiritus-sancti",
+    "anthurium-ace-of-spades": "Anthurium 'Ace of Spades'",
+    "philodendron-pink-princess": "Philodendron 'Pink Princess'",
+    "monstera-burle-marx-flame": "Monstera 'Burle-Marx Flame'",
+    "hoya-australis-lisa": "Hoya australis 'Lisa'",
+    "monstera-adansonii-variegata": "Monstera adansonii 'Variegata'",
+    "anthurium-dark-mama": "Anthurium 'Dark Mama'",
+}
 
 
 def sci_name(slug: str) -> str:
