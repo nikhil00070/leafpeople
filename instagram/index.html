@@ -85,6 +85,8 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:2rem; margin
 .ig-top b { font-size:.82rem; }
 .ig-top .more { margin-left:auto; color:#888; }
 .ig-img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#111; }
+.ig { position:relative; }
+.reel-badge { position:absolute; top:44px; left:8px; background:rgba(0,0,0,.62); color:#fff; font-size:.62rem; font-weight:700; letter-spacing:.05em; padding:2px 8px; border-radius:20px; pointer-events:none; }
 .ig-img.skel { display:flex; align-items:center; justify-content:center; color:#555; font-size:.8rem; }
 .ig-acts { display:flex; gap:.8rem; padding:.6rem .7rem .2rem; font-size:1.1rem; color:#eee; }
 .ig-likes { padding:0 .7rem; font-size:.8rem; font-weight:700; }
@@ -426,7 +428,11 @@ function openModal(id){
   const isSkel = p.status==="skeleton";
   const opts = optionsFor(raw);
   const meta = metaFor(p.image);
-  const imgHtml = p.image ? `<img class="ig-img" src="${p.image}" style="object-position:${p.imgPos||'50% 50%'}">` : `<div class="ig-img skel">skeleton — generate image when ready</div>`;
+  const reel = (p.day % 2 === 0);                                  // every-other-day = Reel
+  const reelMp4 = `/videos/instagram/d${String(p.day).padStart(2,'0')}.mp4`;
+  const imgHtml = !p.image ? `<div class="ig-img skel">skeleton — generate image when ready</div>`
+    : reel ? `<video class="ig-img" src="${reelMp4}" poster="${p.image}" controls playsinline preload="none" style="object-position:${p.imgPos||'50% 50%'}"></video><span class="reel-badge">▶ REEL</span>`
+    : `<img class="ig-img" src="${p.image}" style="object-position:${p.imgPos||'50% 50%'}">`;
   const poolBtn = (opts.length>1)
     ? `<button class="refresh" onclick="refreshImg()">↻ refresh image · ${opts.length} option${opts.length>1?'s':''}</button>`
     : (p.image ? `<div class="refresh" style="cursor:default;opacity:.55">only option left in this branch</div>` : "");

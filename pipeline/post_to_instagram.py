@@ -216,10 +216,10 @@ def main():
     image_url = base + image_rel
     caption, first_comment = assemble(post, credit_by_src)
 
-    # Every 3rd post is a Reel (day % 3 == 0) when a pre-rendered video exists; otherwise
-    # it gracefully posts as a feed image, so a missing reel never blocks the day.
+    # Every other day is a Reel (even day) when a pre-rendered video exists; otherwise it
+    # gracefully posts as a feed image, so a missing reel never blocks the day.
     video_rel = f"/videos/instagram/d{day:02d}.mp4"
-    is_reel = (day % 3 == 0) and (ROOT / video_rel.lstrip("/")).exists()
+    is_reel = (day % 2 == 0) and (ROOT / video_rel.lstrip("/")).exists()
     fmt = "REEL" if is_reel else "image"
 
     log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')} · format={fmt}")

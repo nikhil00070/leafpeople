@@ -82,7 +82,7 @@ def main(argv):
         days = set(range(int(argv[0]), int(argv[1]) + 1))
     else:
         days = {p["day"] for p in posts if p.get("status") != "posted"}
-    days = {d for d in days if d % 3 == 0}  # every 3rd post is a Reel
+    days = {d for d in days if d % 2 == 0}  # every other day is a Reel (even days)
 
     made, skipped = 0, []
     for p in posts:
