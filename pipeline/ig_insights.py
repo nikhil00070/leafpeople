@@ -40,22 +40,34 @@ def graph(path, params):
         raise RuntimeError(f"HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:300]}")
 
 
+def _metric_group(mid, metrics):
+    """Fetch a group of metrics; if the batch errors (a deprecated metric like 'plays'), retry
+    EACH metric on its own so one bad metric can't take down the good ones. The old code dropped
+    by substring-matching Meta's error text, which wrongly ate 'reach' (it appears in the error's
+    list of VALID metrics) — that's why reach read 0 everywhere."""
+    try:
+        data = graph(f"{mid}/insights", {"metric": ",".join(metrics)})
+        return {d["name"]: d["values"][0]["value"] for d in data.get("data", [])}
+    except RuntimeError:
+        out = {}
+        for mt in metrics:
+            try:
+                data = graph(f"{mid}/insights", {"metric": mt})
+                for d in data.get("data", []):
+                    out[d["name"]] = d["values"][0]["value"]
+            except RuntimeError:
+                pass
+        return out
+
+
 def media_insights(m):
-    """{metric: value} for one media, resilient to reels-vs-feed + Meta metric churn."""
+    """{metric: value} for one media. Reach + core metrics first (all valid → one call); reel
+    watch-time/views in a second group so a deprecated reel metric never zeroes reach."""
     mid, ptype = m["id"], m.get("media_product_type", "")
+    out = _metric_group(mid, ["reach", "saved", "shares", "total_interactions"])
     if ptype == "REELS":
-        metrics = ["reach", "saved", "shares", "comments", "likes", "total_interactions",
-                   "ig_reels_avg_watch_time", "ig_reels_video_view_total_time", "views", "plays"]
-    else:
-        metrics = ["reach", "saved", "shares", "total_interactions"]
-    while metrics:
-        try:
-            data = graph(f"{mid}/insights", {"metric": ",".join(metrics)})
-            return {d["name"]: d["values"][0]["value"] for d in data.get("data", [])}
-        except RuntimeError as e:
-            bad = next((x for x in metrics if x in str(e)), metrics[-1])  # drop the metric Meta rejected
-            metrics.remove(bad)
-    return {}
+        out.update(_metric_group(mid, ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time", "views"]))
+    return out
 
 
 def _norm(s):
