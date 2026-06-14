@@ -52,6 +52,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2.2rem
 .kv { display:flex; justify-content:space-between; gap:.6rem; font-size:.85rem; padding:.28rem 0; border-bottom:1px solid var(--border); }
 .kv:last-child { border-bottom:0; } .kv b { font-weight:700; }
 .help { font-size:.74rem; color:var(--faint); margin-top:.5rem; line-height:1.45; }
+.hl { color:var(--pink); font-weight:700; }
 .list-row { font-size:.82rem; padding:.3rem 0; border-bottom:1px solid var(--border); display:flex; gap:.6rem; align-items:baseline; }
 .list-row:last-child { border-bottom:0; }
 .list-row .d { color:var(--faint); font-variant-numeric:tabular-nums; min-width:3.4rem; text-align:right; }
@@ -318,7 +319,7 @@ function renderTimeline(ga, asc, posts, ins){
   }).join("");
 
   el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>IG reach</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
-    <p class="help"><b>Read it left to right: IG reach → web users → installs.</b> That's the funnel. Your d6 reel reached <b>112</b> on Instagram, but only a trickle reached the website and 1 installed — so the leak is the <b>Instagram → website</b> step (the bio-link tap), not reach. Reels are earning reach; converting that reach into clicks is the next job. Images get ~0 reach, so they can't drive anything. Pink = today.</p>`;
+    <p class="help"><b>Read it left to right: IG reach → web users → installs.</b> That's the funnel. Your d6 reel reached <span class="hl">112</span> on Instagram, but only a trickle reached the website and 1 installed — so the <span class="hl">leak is the Instagram → website step</span> (the bio-link tap), not reach. Reels are earning reach; converting that reach into clicks is the next job. Images get ~0 reach, so they can't drive anything. Pink = today.</p>`;
 }
 
 function renderGA(ga, feed){
@@ -359,7 +360,7 @@ function renderGA(ga, feed){
   document.getElementById("ga-conv-body").innerHTML =
     `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · 30d</small></div>
      <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (30d)</span><b>${C.click_rate_pct}%</b></div>
-     <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\'t enough traffic to even test this. The failure point right now is upstream (traffic), not the CTA.':''}</div>`;
+     <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\'t enough traffic to even test this. The <span class="hl">failure point right now is upstream — traffic</span>, not the CTA.':''}</div>`;
 
   const clicks=ga.app_store_clicks||[];
   document.getElementById("ga-attr-body").innerHTML = clicks.length
@@ -377,7 +378,7 @@ function renderFunnel(ga, asc, subs){
     ["Active subscribers","now", sc?subs.active:null],
   ];
   el.innerHTML = rows.map(([l,tf,v])=>`<div class="kv"><span class="muted">${l} <span style="font-size:.68rem">· ${tf}</span></span><b>${v==null?'—':fmt(v)}</b></div>`).join("")
-    + `<div class="help">Each step should shrink — the biggest drop is your leak. Right now it collapses at the very top: too little traffic to even fill the lower steps. Fix traffic first; only then is the install/paywall testable. (Timeframes differ; read as direction.)</div>`;
+    + `<div class="help">Each step should shrink — the biggest drop is your leak. Right now it <span class="hl">collapses at the very top</span>: too little traffic to even fill the lower steps. Fix traffic first; only then is the install/paywall testable. (Timeframes differ; read as direction.)</div>`;
 }
 
 function renderSubs(subs){
@@ -406,7 +407,7 @@ function renderSocials(ins){
     const mult=ir?(rr/ir).toFixed(1):null;
     let msg;
     if(rr>0&&ir>0) msg=`Reels reach <b style="color:var(--green)">${mult}×</b> static.`;
-    else if(rr>0) msg=`Reels ARE reaching people (avg <b style="color:var(--green)">${fmt(rr)}</b> per reel); static posts reach <b>~0</b>. Reels are the only format getting discovered — images are dead weight for reach.`;
+    else if(rr>0) msg=`Reels ARE reaching people (avg <b style="color:var(--green)">${fmt(rr)}</b> per reel); static posts reach <b>~0</b>. Reels are the only format getting discovered — <span class="hl">images are dead weight for reach</span>.`;
     else msg=`<b>0 reach on every post</b> — too new / not discovered yet.`;
     document.getElementById("ig-rv").innerHTML=
       `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>avg reach <b>${fmt(rr)}</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>`+
@@ -472,7 +473,7 @@ function renderOps(feed, drip, posts){
 function renderRecs(recs){
   if(!recs) return;
   document.getElementById("rec-meta").textContent = (recs.note||"") + (recs.updated?(" · updated "+recs.updated):"");
-  const card=(r)=>`<div class="rec ${r.priority||'low'}"><div class="ins"><b>Insight:</b> ${esc(r.insight)}</div><div class="act">${esc(r.action)}</div>${r.by?`<div class="by">by ${esc(r.by)}</div>`:""}</div>`;
+  const card=(r)=>`<div class="rec ${r.priority||'low'}"><div class="ins"><b class="hl">Insight:</b> ${r.priority==='high'?`<span class="hl">${esc(r.insight)}</span>`:esc(r.insight)}</div><div class="act">${esc(r.action)}</div>${r.by?`<div class="by">by ${esc(r.by)}</div>`:""}</div>`;
   const fill=(id,arr)=>{ const el=document.getElementById(id); if(el) el.innerHTML=(arr||[]).map(card).join(""); };
   const S=recs.sections||{};
   fill("rec-overall", S.overall); fill("rec-traffic", S.traffic); fill("rec-conversion", S.conversion);
