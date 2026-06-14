@@ -354,18 +354,19 @@ function renderGA(ga, feed){
   const label=(p)=>esc(pathTitle[p]||p);
   if(!ga||!ga.connected){ if(ga&&ga.error){const d=t.querySelector("div"); if(d)d.textContent="GA4: "+ga.error;} return; }
   const T=ga.totals||{}, D=ga.dau||{}, E=ga.engagement||{}, C=ga.conversion||{};
+  const single = GAVIEW !== "total";
   t.innerHTML = `<h3>Audience · unique users</h3>
     <div class="big">${fmt(T.users)} <small>unique · ${GAVLABEL}</small></div>
     <div style="margin-top:.5rem">
       ${ga.realtime!=null?`<div class="kv"><span class="muted">● Active now</span><b>${fmt(ga.realtime)}</b></div>`:""}
-      <div class="kv"><span class="muted">Avg daily users</span><b>${fmt(D.avg30)} <span class="muted">${GAVLABEL}</span></b></div>
+      <div class="kv"><span class="muted">${single?"Users":"Avg daily users"}</span><b>${fmt(D.avg30)} <span class="muted">${GAVLABEL}</span></b></div>
       <div class="kv"><span class="muted">Total users · all-time</span><b>${fmt(ga.total_users)}</b></div>
       <div class="kv"><span class="muted">New users</span><b>${ga.new_pct}%</b></div>
     </div>
     <div class="help">Distinct people (GA dedupes). Pageviews (incl. repeats): ${fmt(T.pageviews)}.</div>`;
 
   document.getElementById("ga-trend-body").innerHTML =
-    `<div class="big">${fmt(D.avg30)} <small>avg/day (since data began)</small></div>
+    `<div class="big">${fmt(D.avg30)} <small>${single?"users · "+GAVLABEL:"avg/day (since data began)"}</small></div>
      <div style="margin:.5rem 0 0">${chart((ga.dau_series||[]).slice(-14).map(p=>({date:iso2(p.date), value:p.users})))}</div>`;
 
   document.getElementById("ga-eng-body").innerHTML =
