@@ -135,9 +135,9 @@ const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
 const esc = (s) => (s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
-    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"),
+    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"),
   ]);
   renderContent(feed, drip);
   renderRunway(drip);
@@ -145,6 +145,7 @@ async function load() {
   renderDrip(feed);
   renderSocials(insights);
   renderGA(ga, feed);
+  renderASC(asc);
   renderRecs(recs);
   document.getElementById("freshness").textContent = "Updated " + new Date().toLocaleTimeString();
 }
@@ -263,6 +264,21 @@ function renderGA(ga, feed) {
   document.getElementById("ga-attr-body").innerHTML = clicks.length
     ? clicks.map(r => `<div class="row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
     : '<p class="dim-note">No App Store clicks recorded in the last 30 days yet.</p>';
+}
+
+function renderASC(asc) {
+  const el = document.getElementById("downloads");
+  if (!asc || !asc.connected) { if (asc && asc.error){ const p=el.querySelector("p"); if(p) p.textContent = "App Store: " + asc.error; } return; }
+  el.classList.remove("connect");
+  const latest = asc.latest || {};
+  el.innerHTML = `<h3>Downloads · App Store</h3>
+    <div class="big">${fmt(asc.total)} <small>downloads · since launch</small></div>
+    <div style="margin:.5rem 0 .15rem">${sparkline((asc.series||[]).map(p=>({users:p.units})))}</div>
+    <div style="margin-top:.3rem">
+      <div class="kv"><span class="muted">Latest · ${esc((latest.date||"—").slice(5))}</span><b>${fmt(latest.units)}</b></div>
+      <div class="kv"><span class="muted">Last 7 days</span><b>${fmt(asc.last7)}</b></div>
+    </div>
+    <p class="dim-note">Apple data lags ~24–48h.</p>`;
 }
 
 function renderRecs(recs) {
