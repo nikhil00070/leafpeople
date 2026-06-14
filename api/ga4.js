@@ -10,7 +10,7 @@
 import crypto from "crypto";
 
 let tok = null, tokExp = 0;          // OAuth token cache (per warm instance)
-let cache = null, cacheAt = 0;       // result cache (5 min) to spare GA4 quota under polling
+const cache = {}, cacheAt = {};      // result cache (5 min) per window (days) to spare GA4 quota
 const CACHE_MS = 5 * 60 * 1000;
 
 const b64url = (b) => Buffer.from(b).toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
@@ -55,9 +55,13 @@ export default async function handler(req, res) {
   const saRaw = process.env.GA4_SA_JSON;
   if (!pid || !saRaw) return res.status(200).json({ connected: false });
 
-  if (cache && Date.now() - cacheAt < CACHE_MS) {
+  let days = parseInt((req.query && req.query.days) || "30", 10);
+  if (!Number.isFinite(days) || days < 1 || days > 365) days = 30;
+  const ck = String(days);
+
+  if (cache[ck] && Date.now() - cacheAt[ck] < CACHE_MS) {
     res.setHeader("cache-control", "no-store");
-    return res.status(200).json(cache);
+    return res.status(200).json(cache[ck]);
   }
 
   let sa;
@@ -65,18 +69,18 @@ export default async function handler(req, res) {
 
   try {
     const token = await accessToken(sa);
-    const r30 = [{ startDate: "30daysAgo", endDate: "today" }];
+    const rWin = [{ startDate: `${days}daysAgo`, endDate: "today" }];
     const rAll = [{ startDate: "2020-01-01", endDate: "today" }];   // "since launch" — GA returns from first data
     const clickFilter = { filter: { fieldName: "eventName", inListFilter: { values: ["app_store_click"] } } };
 
     const [totalsR, allR, seriesR, pages, channels, clicksByPage, clicksTotalR] = await Promise.all([
-      report(pid, token, { dateRanges: r30, metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }, { name: "screenPageViews" }, { name: "engagedSessions" }, { name: "userEngagementDuration" }] }),
+      report(pid, token, { dateRanges: rWin, metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }, { name: "screenPageViews" }, { name: "engagedSessions" }, { name: "userEngagementDuration" }] }),
       report(pid, token, { dateRanges: rAll, metrics: [{ name: "totalUsers" }] }),
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: 40 }),
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }, { name: "totalUsers" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 10 }),  // views + unique readers per page (breakdown of total pageviews)
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "totalUsers" }], orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique users per channel
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique install-tappers per article
-      report(pid, token, { dateRanges: r30, metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter }),   // unique users who tapped Install
+      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: Math.min(days + 1, 90) }),
+      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }, { name: "totalUsers" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 10 }),  // views + unique readers per page
+      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "totalUsers" }], orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique users per channel
+      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "pagePath" }], metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique install-tappers per article
+      report(pid, token, { dateRanges: rWin, metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter }),   // unique users who tapped Install
     ]);
 
     let realtime = null;
@@ -91,8 +95,9 @@ export default async function handler(req, res) {
     const total_users = num(allR.rows?.[0]?.metricValues?.[0]?.value);
     const clicks_total = num(clicksTotalR.rows?.[0]?.metricValues?.[0]?.value);
 
-    cache = {
+    cache[ck] = {
       connected: true,
+      window: days,
       updated: new Date().toISOString(),
       totals: { sessions, users: activeUsers, pageviews, newUsers },
       total_users,
@@ -106,9 +111,9 @@ export default async function handler(req, res) {
       channels: rows(channels),
       app_store_clicks: rows(clicksByPage),
     };
-    cacheAt = Date.now();
+    cacheAt[ck] = Date.now();
     res.setHeader("cache-control", "no-store");
-    return res.status(200).json(cache);
+    return res.status(200).json(cache[ck]);
   } catch (e) {
     return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 200) });
   }

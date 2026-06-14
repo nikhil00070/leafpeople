@@ -75,6 +75,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2.2rem
 .tl td { padding:.5rem .55rem; border-bottom:1px solid var(--border); vertical-align:top; }
 .tl tr.today td { background:rgba(250,42,82,.07); }
 .tl tr.hot td { box-shadow:inset 3px 0 0 var(--green); }
+.tl tr.reelrow td:first-child { box-shadow:inset 3px 0 0 #2E7DF6; }
 .tl .n { font-variant-numeric:tabular-nums; font-weight:700; }
 .tl .ig { color:var(--dim); }
 
@@ -111,10 +112,10 @@ a { color:var(--blue); }
   </div>
 
   <div class="kpis">
-    <div class="card kpi"><h3>Unique users · 30d</h3><div class="big" id="kpi-users">—</div></div>
+    <div class="card kpi"><h3>Unique users</h3><div class="big" id="kpi-users">—</div></div>
     <div class="card kpi"><h3>Avg daily users</h3><div class="big" id="kpi-dau">—</div></div>
     <div class="card kpi"><h3>Downloads · all-time</h3><div class="big" id="kpi-downloads">—</div></div>
-    <div class="card kpi"><h3>Install taps · 30d</h3><div class="big" id="kpi-taps">—</div></div>
+    <div class="card kpi"><h3>Install taps</h3><div class="big" id="kpi-taps">—</div></div>
     <div class="card kpi"><h3>Subscribers</h3><div class="big" id="kpi-subs">—</div></div>
   </div>
 
@@ -138,7 +139,10 @@ a { color:var(--blue); }
 
   <!-- TRAFFIC -->
   <div class="panel" id="tab-traffic">
-    <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them). Last 30 days.</p>
+    <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them). Window:
+      <select id="gaWindow" style="background:var(--card);border:1px solid var(--border);border-radius:7px;padding:.2rem .4rem;font:inherit;font-size:.82rem;color:var(--text)">
+        <option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option>
+      </select></p>
     <div class="grid g3">
       <div class="card" id="traffic"><h3>Audience</h3><div class="muted" style="font-size:.85rem">Load GA4.</div></div>
       <div class="card"><h3>Daily unique users</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">—</div></div>
@@ -217,6 +221,7 @@ a { color:var(--blue); }
 <script>
 const J = (u) => fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null);
 const PUB_RATE = { "the-leaf": 3, "field-guide": 5 };
+let GAWIN = 30;   // GA date window (days), set by the Traffic-tab dropdown
 const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
 const esc = (s) => (s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const fmtDur = (s) => { s=Math.round(s||0); if(s<60) return s+"s"; const m=Math.floor(s/60),r=s%60; return m+"m"+(r?" "+r+"s":""); };
@@ -260,7 +265,7 @@ document.getElementById("tabs").addEventListener("click", e=>{
 async function load() {
   const [feed, drip, posts, insights, recs, ga, asc, subs, durations] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
-    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"), J("/api/subscriptions"),
+    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?days="+GAWIN), J("/api/asc"), J("/api/subscriptions"),
     J("/videos/instagram/reel_durations.json"),
   ]);
   renderKPIs(ga, asc, subs);
@@ -280,7 +285,7 @@ async function load() {
 function setBig(id, html, gradient){ const el=document.getElementById(id); if(!el) return; el.innerHTML=html; el.style.cssText = gradient?"":"background:none;-webkit-text-fill-color:initial;color:var(--text)"; }
 
 function renderKPIs(ga, asc, subs){
-  if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>30d</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
+  if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>'+GAWIN+'d</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
   if(asc&&asc.connected) setBig("kpi-downloads", fmt(asc.total)+' <small>installs</small>', true);
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
 }
@@ -335,9 +340,10 @@ function renderTimeline(ga, asc, posts, ins){
       const tag = x.reel ? '<span class="pill p-ok">▶ REEL</span>' : '<span class="pill p-off">🖼 IMAGE</span>';
       return `${tag} ${esc((x.title||"").slice(0,42))}${x.hook?' 🪝':''}${pend}`;
     }).join('<br>') : '<span class="muted">—</span>';
-    const tag = isLaunch ? ' <span class="pill p-blue">launch</span>' : '';
+    const hasReel = ps.some(x=>x.reel);
+    const tag = (isLaunch ? ' <span class="pill p-blue">launch</span>' : '') + (hasReel ? ' <span class="pill p-ok">▶ REEL</span>' : '');
     const hot = dl>0;
-    return `<tr class="${isToday?'today':''} ${hot?'hot':''}"><td class="muted" style="white-space:nowrap">${esc(dlabel(dt))}${tag}</td><td class="n">${reach||'·'}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
+    return `<tr class="${isToday?'today':''} ${hot?'hot':''} ${hasReel?'reelrow':''}"><td class="muted" style="white-space:nowrap">${esc(dlabel(dt))}${tag}</td><td class="n">${reach||'·'}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
   }).join("");
 
   el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>IG reach</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
@@ -351,10 +357,10 @@ function renderGA(ga, feed){
   if(!ga||!ga.connected){ if(ga&&ga.error){const d=t.querySelector("div"); if(d)d.textContent="GA4: "+ga.error;} return; }
   const T=ga.totals||{}, D=ga.dau||{}, E=ga.engagement||{}, C=ga.conversion||{};
   t.innerHTML = `<h3>Audience · unique users</h3>
-    <div class="big">${fmt(T.users)} <small>unique · 30d</small></div>
+    <div class="big">${fmt(T.users)} <small>unique · ${GAWIN}d</small></div>
     <div style="margin-top:.5rem">
       ${ga.realtime!=null?`<div class="kv"><span class="muted">● Active now</span><b>${fmt(ga.realtime)}</b></div>`:""}
-      <div class="kv"><span class="muted">Avg daily users</span><b>${fmt(D.avg7)} <span class="muted">7d</span> · ${fmt(D.avg30)} <span class="muted">30d</span></b></div>
+      <div class="kv"><span class="muted">Avg daily users</span><b>${fmt(D.avg7)} <span class="muted">7d</span> · ${fmt(D.avg30)} <span class="muted">${GAWIN}d</span></b></div>
       <div class="kv"><span class="muted">Total users · all-time</span><b>${fmt(ga.total_users)}</b></div>
       <div class="kv"><span class="muted">New users</span><b>${ga.new_pct}%</b></div>
     </div>
@@ -366,7 +372,7 @@ function renderGA(ga, feed){
 
   document.getElementById("ga-eng-body").innerHTML =
     `<div class="big">${fmtDur(E.avg_sec_per_user)} <small>avg / user</small></div>
-     <div style="margin-top:.5rem"><div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div><div class="kv"><span class="muted">Sessions · 30d</span><b>${fmt(T.sessions)}</b></div></div>
+     <div style="margin-top:.5rem"><div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div><div class="kv"><span class="muted">Sessions · ${GAWIN}d</span><b>${fmt(T.sessions)}</b></div></div>
      <div class="help">Engagement rate = share of visits that were "engaged" (>10s / 2+ pages / converted). Higher = real reads.</div>`;
 
   const ch = ga.channels||[];
@@ -375,27 +381,27 @@ function renderGA(ga, feed){
     `<div class="help">${ch.slice(0,3).map(c=>`<b>${esc(c.key)}:</b> ${esc(CHANNEL_HELP[c.key]||"")}`).join("<br>")}</div>`;
 
   document.getElementById("ga-pages-body").innerHTML =
-    `<div class="kv" style="border-bottom:1px solid var(--border)"><span class="muted">All page views · 30d</span><b>${fmt(T.pageviews)}</b></div>` +
+    `<div class="kv" style="border-bottom:1px solid var(--border)"><span class="muted">All page views · ${GAWIN}d</span><b>${fmt(T.pageviews)}</b></div>` +
     (ga.top_pages||[]).map(r=>
     `<div class="list-row"><span class="d">${fmt(r.views)}</span><span>${label(r.key)} <span class="muted">· ${fmt(r.users)} ${r.users===1?'reader':'readers'}</span></span></div>`).join("");
 
   document.getElementById("ga-conv-body").innerHTML =
-    `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · 30d</small></div>
-     <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (30d)</span><b>${C.click_rate_pct}%</b></div>
+    `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · ${GAWIN}d</small></div>
+     <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (${GAWIN}d)</span><b>${C.click_rate_pct}%</b></div>
      <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\'t enough traffic to even test this. The <span class="hl">failure point right now is upstream — traffic</span>, not the CTA.':''}</div>`;
 
   const clicks=ga.app_store_clicks||[];
   document.getElementById("ga-attr-body").innerHTML = clicks.length
     ? clicks.map(r=>`<div class="list-row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
-    : '<p class="help" style="margin-top:0">No taps in 30d yet — the first article to drive one shows here, and that\'s your repeatable converter.</p>';
+    : '<p class="help" style="margin-top:0">No taps in ${GAWIN}d yet — the first article to drive one shows here, and that\'s your repeatable converter.</p>';
 }
 
 function renderFunnel(ga, asc, subs){
   const el=document.getElementById("funnel-body");
   const gc=ga&&ga.connected, ac=asc&&asc.connected, sc=subs&&subs.connected;
   const rows=[
-    ["Web users","30d", gc?ga.totals.users:null],
-    ["Tapped Install","30d", gc?ga.conversion.app_store_clicks:null],
+    ["Web users",GAWIN+"d", gc?ga.totals.users:null],
+    ["Tapped Install",GAWIN+"d", gc?ga.conversion.app_store_clicks:null],
     ["Downloads","all-time", ac?asc.total:null],
     ["Active subscribers","now", sc?subs.active:null],
   ];
@@ -508,6 +514,8 @@ document.getElementById("allBtn").addEventListener("click", async function(){
   st.style.color="var(--green)"; st.textContent="✓ refreshed — Instagram numbers land in ~1 min (refresh again)";
   btn.disabled=false; btn.textContent=label; setTimeout(()=>st.textContent="", 9000);
 });
+
+document.getElementById("gaWindow").addEventListener("change", function(){ GAWIN = +this.value || 30; load(); });
 
 load();
 setInterval(load, 60000);
