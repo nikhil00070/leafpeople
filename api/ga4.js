@@ -55,9 +55,10 @@ export default async function handler(req, res) {
   const saRaw = process.env.GA4_SA_JSON;
   if (!pid || !saRaw) return res.status(200).json({ connected: false });
 
-  let days = parseInt((req.query && req.query.days) || "30", 10);
-  if (!Number.isFinite(days) || days < 1 || days > 365) days = 30;
-  const ck = String(days);
+  // date = a specific "YYYY-MM-DD" (single day) or "total" (all time, default)
+  const dateParam = (req.query && req.query.date) || "total";
+  const isDay = /^\d{4}-\d{2}-\d{2}$/.test(dateParam);
+  const ck = isDay ? dateParam : "total";
 
   if (cache[ck] && Date.now() - cacheAt[ck] < CACHE_MS) {
     res.setHeader("cache-control", "no-store");
@@ -69,14 +70,14 @@ export default async function handler(req, res) {
 
   try {
     const token = await accessToken(sa);
-    const rWin = [{ startDate: `${days}daysAgo`, endDate: "today" }];
+    const rWin = isDay ? [{ startDate: dateParam, endDate: dateParam }] : [{ startDate: "2020-01-01", endDate: "today" }];
     const rAll = [{ startDate: "2020-01-01", endDate: "today" }];   // "since launch" — GA returns from first data
     const clickFilter = { filter: { fieldName: "eventName", inListFilter: { values: ["app_store_click"] } } };
 
     const [totalsR, allR, seriesR, pages, channels, clicksByPage, clicksTotalR] = await Promise.all([
       report(pid, token, { dateRanges: rWin, metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }, { name: "screenPageViews" }, { name: "engagedSessions" }, { name: "userEngagementDuration" }] }),
       report(pid, token, { dateRanges: rAll, metrics: [{ name: "totalUsers" }] }),
-      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: Math.min(days + 1, 90) }),
+      report(pid, token, { dateRanges: rWin, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: 90 }),
       report(pid, token, { dateRanges: rWin, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }, { name: "totalUsers" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 10 }),  // views + unique readers per page
       report(pid, token, { dateRanges: rWin, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "totalUsers" }], orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique users per channel
       report(pid, token, { dateRanges: rWin, dimensions: [{ name: "pagePath" }], metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique install-tappers per article
@@ -97,7 +98,7 @@ export default async function handler(req, res) {
 
     cache[ck] = {
       connected: true,
-      window: days,
+      window: ck,
       updated: new Date().toISOString(),
       totals: { sessions, users: activeUsers, pageviews, newUsers },
       total_users,

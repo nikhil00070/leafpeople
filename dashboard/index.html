@@ -139,10 +139,7 @@ a { color:var(--blue); }
 
   <!-- TRAFFIC -->
   <div class="panel" id="tab-traffic">
-    <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them). Window:
-      <select id="gaWindow" style="background:var(--card);border:1px solid var(--border);border-radius:7px;padding:.2rem .4rem;font:inherit;font-size:.82rem;color:var(--text)">
-        <option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option>
-      </select></p>
+    <p class="sec-sub">Showing <select id="gaWindow" style="background:var(--card);border:1px solid var(--border);border-radius:7px;padding:.25rem .5rem;font:inherit;font-size:.82rem;color:var(--text)"></select> — unique users (GA dedupes them).</p>
     <div class="grid g3">
       <div class="card" id="traffic"><h3>Audience</h3><div class="muted" style="font-size:.85rem">Load GA4.</div></div>
       <div class="card"><h3>Daily unique users</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">—</div></div>
@@ -221,7 +218,7 @@ a { color:var(--blue); }
 <script>
 const J = (u) => fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null);
 const PUB_RATE = { "the-leaf": 3, "field-guide": 5 };
-let GAWIN = 30;   // GA date window (days), set by the Traffic-tab dropdown
+let GAVIEW = "total", GAVLABEL = "all time";   // GA view: "total" or a specific YYYY-MM-DD day
 const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
 const esc = (s) => (s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const fmtDur = (s) => { s=Math.round(s||0); if(s<60) return s+"s"; const m=Math.floor(s/60),r=s%60; return m+"m"+(r?" "+r+"s":""); };
@@ -265,9 +262,10 @@ document.getElementById("tabs").addEventListener("click", e=>{
 async function load() {
   const [feed, drip, posts, insights, recs, ga, asc, subs, durations] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
-    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?days="+GAWIN), J("/api/asc"), J("/api/subscriptions"),
+    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
     J("/videos/instagram/reel_durations.json"),
   ]);
+  GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs);
   renderSpikes(ga, asc, posts);
   renderTimeline(ga, asc, posts, insights);
@@ -285,7 +283,7 @@ async function load() {
 function setBig(id, html, gradient){ const el=document.getElementById(id); if(!el) return; el.innerHTML=html; el.style.cssText = gradient?"":"background:none;-webkit-text-fill-color:initial;color:var(--text)"; }
 
 function renderKPIs(ga, asc, subs){
-  if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>'+GAWIN+'d</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
+  if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>'+GAVLABEL+'</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
   if(asc&&asc.connected) setBig("kpi-downloads", fmt(asc.total)+' <small>installs</small>', true);
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
 }
@@ -357,10 +355,10 @@ function renderGA(ga, feed){
   if(!ga||!ga.connected){ if(ga&&ga.error){const d=t.querySelector("div"); if(d)d.textContent="GA4: "+ga.error;} return; }
   const T=ga.totals||{}, D=ga.dau||{}, E=ga.engagement||{}, C=ga.conversion||{};
   t.innerHTML = `<h3>Audience · unique users</h3>
-    <div class="big">${fmt(T.users)} <small>unique · ${GAWIN}d</small></div>
+    <div class="big">${fmt(T.users)} <small>unique · ${GAVLABEL}</small></div>
     <div style="margin-top:.5rem">
       ${ga.realtime!=null?`<div class="kv"><span class="muted">● Active now</span><b>${fmt(ga.realtime)}</b></div>`:""}
-      <div class="kv"><span class="muted">Avg daily users</span><b>${fmt(D.avg7)} <span class="muted">7d</span> · ${fmt(D.avg30)} <span class="muted">${GAWIN}d</span></b></div>
+      <div class="kv"><span class="muted">Avg daily users</span><b>${fmt(D.avg30)} <span class="muted">${GAVLABEL}</span></b></div>
       <div class="kv"><span class="muted">Total users · all-time</span><b>${fmt(ga.total_users)}</b></div>
       <div class="kv"><span class="muted">New users</span><b>${ga.new_pct}%</b></div>
     </div>
@@ -372,7 +370,7 @@ function renderGA(ga, feed){
 
   document.getElementById("ga-eng-body").innerHTML =
     `<div class="big">${fmtDur(E.avg_sec_per_user)} <small>avg / user</small></div>
-     <div style="margin-top:.5rem"><div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div><div class="kv"><span class="muted">Sessions · ${GAWIN}d</span><b>${fmt(T.sessions)}</b></div></div>
+     <div style="margin-top:.5rem"><div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div><div class="kv"><span class="muted">Sessions · ${GAVLABEL}</span><b>${fmt(T.sessions)}</b></div></div>
      <div class="help">Engagement rate = share of visits that were "engaged" (>10s / 2+ pages / converted). Higher = real reads.</div>`;
 
   const ch = ga.channels||[];
@@ -381,27 +379,27 @@ function renderGA(ga, feed){
     `<div class="help">${ch.slice(0,3).map(c=>`<b>${esc(c.key)}:</b> ${esc(CHANNEL_HELP[c.key]||"")}`).join("<br>")}</div>`;
 
   document.getElementById("ga-pages-body").innerHTML =
-    `<div class="kv" style="border-bottom:1px solid var(--border)"><span class="muted">All page views · ${GAWIN}d</span><b>${fmt(T.pageviews)}</b></div>` +
+    `<div class="kv" style="border-bottom:1px solid var(--border)"><span class="muted">All page views · ${GAVLABEL}</span><b>${fmt(T.pageviews)}</b></div>` +
     (ga.top_pages||[]).map(r=>
     `<div class="list-row"><span class="d">${fmt(r.views)}</span><span>${label(r.key)} <span class="muted">· ${fmt(r.users)} ${r.users===1?'reader':'readers'}</span></span></div>`).join("");
 
   document.getElementById("ga-conv-body").innerHTML =
-    `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · ${GAWIN}d</small></div>
-     <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (${GAWIN}d)</span><b>${C.click_rate_pct}%</b></div>
+    `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · ${GAVLABEL}</small></div>
+     <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (${GAVLABEL})</span><b>${C.click_rate_pct}%</b></div>
      <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\'t enough traffic to even test this. The <span class="hl">failure point right now is upstream — traffic</span>, not the CTA.':''}</div>`;
 
   const clicks=ga.app_store_clicks||[];
   document.getElementById("ga-attr-body").innerHTML = clicks.length
     ? clicks.map(r=>`<div class="list-row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
-    : '<p class="help" style="margin-top:0">No taps in ${GAWIN}d yet — the first article to drive one shows here, and that\'s your repeatable converter.</p>';
+    : '<p class="help" style="margin-top:0">No taps in ${GAVLABEL} yet — the first article to drive one shows here, and that\'s your repeatable converter.</p>';
 }
 
 function renderFunnel(ga, asc, subs){
   const el=document.getElementById("funnel-body");
   const gc=ga&&ga.connected, ac=asc&&asc.connected, sc=subs&&subs.connected;
   const rows=[
-    ["Web users",GAWIN+"d", gc?ga.totals.users:null],
-    ["Tapped Install",GAWIN+"d", gc?ga.conversion.app_store_clicks:null],
+    ["Web users",GAVLABEL, gc?ga.totals.users:null],
+    ["Tapped Install",GAVLABEL, gc?ga.conversion.app_store_clicks:null],
     ["Downloads","all-time", ac?asc.total:null],
     ["Active subscribers","now", sc?subs.active:null],
   ];
@@ -515,7 +513,15 @@ document.getElementById("allBtn").addEventListener("click", async function(){
   btn.disabled=false; btn.textContent=label; setTimeout(()=>st.textContent="", 9000);
 });
 
-document.getElementById("gaWindow").addEventListener("change", function(){ GAWIN = +this.value || 30; load(); });
+function buildGaDropdown(){
+  const sel=document.getElementById("gaWindow"); if(!sel) return;
+  let o='<option value="total" selected>Total · all time</option>';
+  const t=new Date();
+  for(let i=0;i<7;i++){ const d=new Date(t); d.setDate(d.getDate()-i); const iso=localISO(d); o+='<option value="'+iso+'">'+(i===0?'Today · '+dlabel(iso):dlabel(iso))+'</option>'; }
+  sel.innerHTML=o;
+}
+buildGaDropdown();
+document.getElementById("gaWindow").addEventListener("change", function(){ GAVIEW = this.value; load(); });
 
 load();
 setInterval(load, 60000);
