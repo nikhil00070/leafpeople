@@ -28,7 +28,7 @@ async function fetchReport(jwt, params) {
     headers: { Authorization: `Bearer ${jwt}`, Accept: "application/a-gzip" },
   });
   if (r.status === 404) return null;                                            // no report that day
-  if (!r.ok) throw new Error(`${params["filter[reportType]"]} ${r.status}: ${(await r.text()).slice(0, 140)}`);
+  if (!r.ok) throw new Error(`${params["filter[reportType]"]} ${r.status}: ${(await r.text()).replace(/\s+/g, " ").slice(0, 600)}`);
   return zlib.gunzipSync(Buffer.from(await r.arrayBuffer())).toString("utf8");
 }
 
@@ -89,6 +89,6 @@ export default async function handler(req, res) {
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
   } catch (e) {
-    return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 200) });
+    return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 600) });
   }
 }
