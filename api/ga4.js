@@ -88,8 +88,8 @@ export default async function handler(req, res) {
     let realtime = null, realtime_detail = [];
     try { const rt = await report(pid, token, { metrics: [{ name: "activeUsers" }] }, true); realtime = num(rt.rows?.[0]?.metricValues?.[0]?.value); } catch { /* realtime optional */ }
     try {
-      const rd = await report(pid, token, { dimensions: [{ name: "city" }, { name: "deviceCategory" }, { name: "unifiedScreenName" }], metrics: [{ name: "activeUsers" }] }, true);
-      realtime_detail = (rd.rows || []).map((r) => ({ city: r.dimensionValues?.[0]?.value, device: r.dimensionValues?.[1]?.value, page: r.dimensionValues?.[2]?.value, users: num(r.metricValues?.[0]?.value) }));
+      const rd = await report(pid, token, { dimensions: [{ name: "city" }, { name: "deviceCategory" }], metrics: [{ name: "activeUsers" }] }, true);
+      realtime_detail = (rd.rows || []).map((r) => ({ city: r.dimensionValues?.[0]?.value, device: r.dimensionValues?.[1]?.value, users: num(r.metricValues?.[0]?.value) }));
     } catch { /* detail optional */ }
 
     const t = totalsR.rows?.[0]?.metricValues || [];
