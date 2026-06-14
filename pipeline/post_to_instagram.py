@@ -209,17 +209,21 @@ def main():
             credit_by_src[e["src"]] = e["credit"]
 
     base = os.environ.get("SITE_BASE", "https://leafpeople.app").rstrip("/")
-    # Prefer the pre-rendered 4:5 feed-compliant image (images/ig_ready/dNN.jpg). The raw
-    # plant photos are too tall (~0.63–0.75) and the feed API rejects anything below 0.80.
-    ready_rel = f"/images/ig_ready/d{day:02d}.jpg"
+    # Media resolves by EXPLICIT post field first (img_ready / video), then the day-keyed
+    # convention (images/ig_ready/dNN.jpg, videos/instagram/dNN.mp4). Explicit fields make the
+    # calendar reflow-safe: when posts are inserted and days renumbered, each post keeps
+    # pointing at its own asset instead of whatever now happens to sit at its day number.
+    # (Pre-rendered 4:5 images are used because raw plant photos are too tall for the feed API.)
+    ready_rel = post.get("img_ready") or f"/images/ig_ready/d{day:02d}.jpg"
     image_rel = ready_rel if (ROOT / ready_rel.lstrip("/")).exists() else post["image"]
     image_url = base + image_rel
     caption, first_comment = assemble(post, credit_by_src)
 
-    # Every other day is a Reel (even day) when a pre-rendered video exists; otherwise it
-    # gracefully posts as a feed image, so a missing reel never blocks the day.
-    video_rel = f"/videos/instagram/d{day:02d}.mp4"
-    is_reel = (day % 2 == 0) and (ROOT / video_rel.lstrip("/")).exists()
+    # A post is a Reel when it's flagged reel:true and its video exists (explicit `video` field,
+    # else the day-keyed dNN.mp4). Driven by the flag — not day parity — so a reel can land on
+    # ANY day. Posts without the flag never accidentally pick up a colliding dNN.mp4.
+    video_rel = post.get("video") or f"/videos/instagram/d{day:02d}.mp4"
+    is_reel = bool(post.get("reel")) and (ROOT / video_rel.lstrip("/")).exists()
     fmt = "REEL" if is_reel else "image"
 
     log(f"DUE: day {day} · {post.get('title', '')} · branch={post.get('branch')} · format={fmt}")

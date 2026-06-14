@@ -304,9 +304,43 @@
     }
   },
   {
-    "id": "d10",
+    "id": "model-01",
     "day": 10,
-    "date": "2026-06-11",
+    "date": "2026-06-16",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "Morning green",
+    "image": "/images/instagram/model-01-cover.jpg",
+    "img_ready": "/images/instagram/model-01-cover.jpg",
+    "video": "/videos/instagram/model-01.mp4",
+    "reel": true,
+    "caption": "The world's on fire and I'm fully invested in whether this one pushed a new root overnight. If a quiet 7am plant check is the only calm you get all day \u2014 you're our people. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "Some mornings you just need to see something green.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
+    }
+  },
+  {
+    "id": "d10",
+    "day": 11,
+    "date": "2026-06-17",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
     "status": "draft",
@@ -334,12 +368,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "A room that's only Monstera"
+    "hook": "A room that's only Monstera",
+    "img_ready": "/images/ig_ready/d10.jpg",
+    "video": "/videos/instagram/d10.mp4"
   },
   {
     "id": "d11",
-    "day": 11,
-    "date": "2026-06-12",
+    "day": 12,
+    "date": "2026-06-18",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -367,12 +403,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d11.jpg"
+  },
+  {
+    "id": "model-02",
+    "day": 13,
+    "date": "2026-06-19",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "7am check",
+    "image": "/images/instagram/model-02-cover.jpg",
+    "img_ready": "/images/instagram/model-02-cover.jpg",
+    "video": "/videos/instagram/model-02.mp4",
+    "reel": true,
+    "caption": "Coffee in hand, sunlight on the leaves, before I've said a word to anyone. Try explaining that kind of peace to someone who's never needed it. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "The 7am plant check. Before I've spoken to a soul.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d12",
-    "day": 12,
-    "date": "2026-06-13",
+    "day": 14,
+    "date": "2026-06-20",
     "phase": "welcome",
     "branch": "rarest-jungle",
     "status": "draft",
@@ -401,12 +472,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "The ones collectors whisper about"
+    "hook": "The ones collectors whisper about",
+    "img_ready": "/images/ig_ready/d12.jpg",
+    "video": "/videos/instagram/d12.mp4"
   },
   {
     "id": "d13",
-    "day": 13,
-    "date": "2026-06-14",
+    "day": 15,
+    "date": "2026-06-21",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
     "status": "draft",
@@ -432,12 +505,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d13.jpg"
+  },
+  {
+    "id": "model-03",
+    "day": 16,
+    "date": "2026-06-22",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "Color of life",
+    "image": "/images/instagram/model-03-cover.jpg",
+    "img_ready": "/images/instagram/model-03-cover.jpg",
+    "video": "/videos/instagram/model-03.mp4",
+    "reel": true,
+    "caption": "Psychology says green is the color of life. Some mornings it's the only peace I get \u2014 and honestly, that's enough. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "Green is the color of life.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d14",
-    "day": 14,
-    "date": "2026-06-15",
+    "day": 17,
+    "date": "2026-06-23",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -467,12 +575,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "A jungle, two feet from your couch"
+    "hook": "A jungle, two feet from your couch",
+    "img_ready": "/images/ig_ready/d14.jpg",
+    "video": "/videos/instagram/d14.mp4"
   },
   {
     "id": "d15",
-    "day": 15,
-    "date": "2026-06-16",
+    "day": 18,
+    "date": "2026-06-24",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
     "status": "draft",
@@ -498,12 +608,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d15.jpg"
+  },
+  {
+    "id": "model-04",
+    "day": 19,
+    "date": "2026-06-25",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "Chaos vs green",
+    "image": "/images/instagram/model-04-cover.jpg",
+    "img_ready": "/images/instagram/model-04-cover.jpg",
+    "video": "/videos/instagram/model-04.mp4",
+    "reel": true,
+    "caption": "200 unread emails, 6 missed calls, and ten quiet minutes with something alive and growing before any of it. The world feels chaotic. This doesn't. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "The world feels chaotic. Green doesn't.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d16",
-    "day": 16,
-    "date": "2026-06-17",
+    "day": 20,
+    "date": "2026-06-26",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -532,12 +677,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "The anthurium that drapes like silk"
+    "hook": "The anthurium that drapes like silk",
+    "img_ready": "/images/ig_ready/d16.jpg",
+    "video": "/videos/instagram/d16.mp4"
   },
   {
     "id": "d17",
-    "day": 17,
-    "date": "2026-06-18",
+    "day": 21,
+    "date": "2026-06-27",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -564,12 +711,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d17.jpg"
+  },
+  {
+    "id": "model-05",
+    "day": 22,
+    "date": "2026-06-28",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "Don't need much",
+    "image": "/images/instagram/model-05-cover.jpg",
+    "img_ready": "/images/instagram/model-05-cover.jpg",
+    "video": "/videos/instagram/model-05.mp4",
+    "reel": true,
+    "caption": "The older I get, the more I realize I don't need much. Coffee, quiet, and a brand-new leaf unfurling \u2014 that's the whole morning. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "Coffee, quiet, a new leaf. I don't need much else.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d18",
-    "day": 18,
-    "date": "2026-06-19",
+    "day": 23,
+    "date": "2026-06-29",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -598,12 +780,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "A leaf like stained glass"
+    "hook": "A leaf like stained glass",
+    "img_ready": "/images/ig_ready/d18.jpg",
+    "video": "/videos/instagram/d18.mp4"
   },
   {
     "id": "d19",
-    "day": 19,
-    "date": "2026-06-20",
+    "day": 24,
+    "date": "2026-06-30",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -630,12 +814,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d19.jpg"
+  },
+  {
+    "id": "model-06",
+    "day": 25,
+    "date": "2026-07-01",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "No words before coffee",
+    "image": "/images/instagram/model-06-cover.jpg",
+    "img_ready": "/images/instagram/model-06-cover.jpg",
+    "video": "/videos/instagram/model-06.mp4",
+    "reel": true,
+    "caption": "Some of us just need a few quiet minutes with something green before the day starts taking. No words before coffee. If you get it, you get it. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "No words before coffee. Just me and the plants.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d20",
-    "day": 20,
-    "date": "2026-06-21",
+    "day": 26,
+    "date": "2026-07-02",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -664,12 +883,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Plants people cross oceans for"
+    "hook": "Plants people cross oceans for",
+    "img_ready": "/images/ig_ready/d20.jpg",
+    "video": "/videos/instagram/d20.mp4"
   },
   {
     "id": "d21",
-    "day": 21,
-    "date": "2026-06-22",
+    "day": 27,
+    "date": "2026-07-03",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -696,12 +917,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d21.jpg"
+  },
+  {
+    "id": "model-07",
+    "day": 28,
+    "date": "2026-07-04",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "The part I want",
+    "image": "/images/instagram/model-07-cover.jpg",
+    "img_ready": "/images/instagram/model-07-cover.jpg",
+    "video": "/videos/instagram/model-07.mp4",
+    "reel": true,
+    "caption": "The older I get, the more I realize \u2014 this is the part I actually want. Not the noise. This. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "This is the part I actually want.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d22",
-    "day": 22,
-    "date": "2026-06-23",
+    "day": 29,
+    "date": "2026-07-05",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -730,12 +986,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "The philodendron with velvet-red stems"
+    "hook": "The philodendron with velvet-red stems",
+    "img_ready": "/images/ig_ready/d22.jpg",
+    "video": "/videos/instagram/d22.mp4"
   },
   {
     "id": "d23",
-    "day": 23,
-    "date": "2026-06-24",
+    "day": 30,
+    "date": "2026-07-06",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -762,12 +1020,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d23.jpg"
+  },
+  {
+    "id": "model-08",
+    "day": 31,
+    "date": "2026-07-07",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "New leaf priorities",
+    "image": "/images/instagram/model-08-cover.jpg",
+    "img_ready": "/images/instagram/model-08-cover.jpg",
+    "video": "/videos/instagram/model-08.mp4",
+    "reel": true,
+    "caption": "200 unread emails, 6 missed calls, 3 'you up?' texts\u2026 and me, fully locked in on whether a new leaf unfurled overnight. Priorities. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "200 unread emails. Me: is that a new leaf?",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d24",
-    "day": 24,
-    "date": "2026-06-25",
+    "day": 32,
+    "date": "2026-07-08",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -796,12 +1089,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "When one leaf costs $500"
+    "hook": "When one leaf costs $500",
+    "img_ready": "/images/ig_ready/d24.jpg",
+    "video": "/videos/instagram/d24.mp4"
   },
   {
     "id": "d25",
-    "day": 25,
-    "date": "2026-06-26",
+    "day": 33,
+    "date": "2026-07-09",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -828,12 +1123,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d25.jpg"
+  },
+  {
+    "id": "model-09",
+    "day": 34,
+    "date": "2026-07-10",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "The reset",
+    "image": "/images/instagram/model-09-cover.jpg",
+    "img_ready": "/images/instagram/model-09-cover.jpg",
+    "video": "/videos/instagram/model-09.mp4",
+    "reel": true,
+    "caption": "On the loud days, this is the reset \u2014 something green, something alive, something that asks nothing of me. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "Just need to see something green and alive.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d26",
-    "day": 26,
-    "date": "2026-06-27",
+    "day": 35,
+    "date": "2026-07-11",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -862,12 +1192,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Velvet straps a metre long"
+    "hook": "Velvet straps a metre long",
+    "img_ready": "/images/ig_ready/d26.jpg",
+    "video": "/videos/instagram/d26.mp4"
   },
   {
     "id": "d27",
-    "day": 27,
-    "date": "2026-06-28",
+    "day": 36,
+    "date": "2026-07-12",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -894,12 +1226,47 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
+    },
+    "img_ready": "/images/ig_ready/d27.jpg"
+  },
+  {
+    "id": "model-10",
+    "day": 37,
+    "date": "2026-07-13",
+    "phase": "lifestyle",
+    "branch": "model-reels",
+    "status": "draft",
+    "title": "More than most people",
+    "image": "/images/instagram/model-10-cover.jpg",
+    "img_ready": "/images/instagram/model-10-cover.jpg",
+    "video": "/videos/instagram/model-10.mp4",
+    "reel": true,
+    "caption": "I find more joy in plants than in most people. Made my peace with that a while ago, honestly. If you did too \u2014 welcome home. \ud83c\udf3f",
+    "hashtags": [
+      "#leafpeopleapp",
+      "#rareplants",
+      "#aroidsofinstagram",
+      "#rarearoids",
+      "#plantsofinstagram",
+      "#urbanjungle",
+      "#plantmom",
+      "#houseplant",
+      "#plantsmakepeoplehappy"
+    ],
+    "cta": "Leaf People \u2014 the rare-plant ID & care app, free to try. Link in bio \ud83c\udf3f",
+    "hook": "More joy in plants than in most people.",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "follows": 0,
+      "reach": 0
     }
   },
   {
     "id": "d28",
-    "day": 28,
-    "date": "2026-06-29",
+    "day": 38,
+    "date": "2026-07-14",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -928,12 +1295,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Quilted like hammered leather"
+    "hook": "Quilted like hammered leather",
+    "img_ready": "/images/ig_ready/d28.jpg",
+    "video": "/videos/instagram/d28.mp4"
   },
   {
     "id": "d29",
-    "day": 29,
-    "date": "2026-06-30",
+    "day": 39,
+    "date": "2026-07-15",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -960,12 +1329,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d29.jpg"
   },
   {
     "id": "d30",
-    "day": 30,
-    "date": "2026-07-01",
+    "day": 40,
+    "date": "2026-07-16",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -994,12 +1364,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Rare even among rare anthuriums"
+    "hook": "Rare even among rare anthuriums",
+    "img_ready": "/images/ig_ready/d30.jpg",
+    "video": "/videos/instagram/d30.mp4"
   },
   {
     "id": "d31",
-    "day": 31,
-    "date": "2026-07-02",
+    "day": 41,
+    "date": "2026-07-17",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -1021,12 +1393,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d31.jpg"
   },
   {
     "id": "d32",
-    "day": 32,
-    "date": "2026-07-03",
+    "day": 42,
+    "date": "2026-07-18",
     "phase": "concept",
     "branch": "app-track-care",
     "status": "draft",
@@ -1050,12 +1423,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Never lose a plant to bad timing"
+    "hook": "Never lose a plant to bad timing",
+    "img_ready": "/images/ig_ready/d32.jpg",
+    "video": "/videos/instagram/d32.mp4"
   },
   {
     "id": "d33",
-    "day": 33,
-    "date": "2026-07-04",
+    "day": 43,
+    "date": "2026-07-19",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -1077,12 +1452,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d33.jpg"
   },
   {
     "id": "d34",
-    "day": 34,
-    "date": "2026-07-05",
+    "day": 44,
+    "date": "2026-07-20",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -1106,12 +1482,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "We name what other apps can't"
+    "hook": "We name what other apps can't",
+    "img_ready": "/images/ig_ready/d34.jpg",
+    "video": "/videos/instagram/d34.mp4"
   },
   {
     "id": "d35",
-    "day": 35,
-    "date": "2026-07-06",
+    "day": 45,
+    "date": "2026-07-21",
     "phase": "concept",
     "branch": "app-collect",
     "status": "draft",
@@ -1133,12 +1511,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d35.jpg"
   },
   {
     "id": "d36",
-    "day": 36,
-    "date": "2026-07-07",
+    "day": 46,
+    "date": "2026-07-22",
     "phase": "concept",
     "branch": "app-track-care",
     "status": "draft",
@@ -1162,12 +1541,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Care tuned to your climate"
+    "hook": "Care tuned to your climate",
+    "img_ready": "/images/ig_ready/d36.jpg",
+    "video": "/videos/instagram/d36.mp4"
   },
   {
     "id": "d37",
-    "day": 37,
-    "date": "2026-07-08",
+    "day": 47,
+    "date": "2026-07-23",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -1189,12 +1570,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d37.jpg"
   },
   {
     "id": "d38",
-    "day": 38,
-    "date": "2026-07-09",
+    "day": 48,
+    "date": "2026-07-24",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -1218,12 +1600,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "We'll name it from a single leaf"
+    "hook": "We'll name it from a single leaf",
+    "img_ready": "/images/ig_ready/d38.jpg",
+    "video": "/videos/instagram/d38.mp4"
   },
   {
     "id": "d39",
-    "day": 39,
-    "date": "2026-07-10",
+    "day": 49,
+    "date": "2026-07-25",
     "phase": "concept",
     "branch": "app-collect",
     "status": "draft",
@@ -1245,12 +1629,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d39.jpg"
   },
   {
     "id": "d40",
-    "day": 40,
-    "date": "2026-07-11",
+    "day": 50,
+    "date": "2026-07-26",
     "phase": "concept",
     "branch": "app-track-care",
     "status": "draft",
@@ -1274,12 +1659,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Every plant's care, one timeline"
+    "hook": "Every plant's care, one timeline",
+    "img_ready": "/images/ig_ready/d40.jpg",
+    "video": "/videos/instagram/d40.mp4"
   },
   {
     "id": "d41",
-    "day": 41,
-    "date": "2026-07-12",
+    "day": 51,
+    "date": "2026-07-27",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -1301,12 +1688,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d41.jpg"
   },
   {
     "id": "d42",
-    "day": 42,
-    "date": "2026-07-13",
+    "day": 52,
+    "date": "2026-07-28",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -1330,12 +1718,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "Finally know why it's doing that"
+    "hook": "Finally know why it's doing that",
+    "img_ready": "/images/ig_ready/d42.jpg",
+    "video": "/videos/instagram/d42.mp4"
   },
   {
     "id": "d43",
-    "day": 43,
-    "date": "2026-07-14",
+    "day": 53,
+    "date": "2026-07-29",
     "phase": "concept",
     "branch": "app-collect",
     "status": "draft",
@@ -1357,12 +1747,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d43.jpg"
   },
   {
     "id": "d44",
-    "day": 44,
-    "date": "2026-07-15",
+    "day": 54,
+    "date": "2026-07-30",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -1386,12 +1777,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "From mystery to named species"
+    "hook": "From mystery to named species",
+    "img_ready": "/images/ig_ready/d44.jpg",
+    "video": "/videos/instagram/d44.mp4"
   },
   {
     "id": "d45",
-    "day": 45,
-    "date": "2026-07-16",
+    "day": 55,
+    "date": "2026-07-31",
     "phase": "concept",
     "branch": "app-collect",
     "status": "draft",
@@ -1413,12 +1806,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d45.jpg"
   },
   {
     "id": "d46",
-    "day": 46,
-    "date": "2026-07-17",
+    "day": 56,
+    "date": "2026-08-01",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -1442,12 +1836,14 @@
       "reach": 0
     },
     "reel": true,
-    "hook": "The one collectors call the Queen"
+    "hook": "The one collectors call the Queen",
+    "img_ready": "/images/ig_ready/d46.jpg",
+    "video": "/videos/instagram/d46.mp4"
   },
   {
     "id": "d47",
-    "day": 47,
-    "date": "2026-07-18",
+    "day": 57,
+    "date": "2026-08-02",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -1469,12 +1865,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d47.jpg"
   },
   {
     "id": "d48",
-    "day": 48,
-    "date": "2026-07-19",
+    "day": 58,
+    "date": "2026-08-03",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -1497,12 +1894,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d48.jpg",
+    "video": "/videos/instagram/d48.mp4"
   },
   {
     "id": "d49",
-    "day": 49,
-    "date": "2026-07-20",
+    "day": 59,
+    "date": "2026-08-04",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -1524,12 +1923,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d49.jpg"
   },
   {
     "id": "d50",
-    "day": 50,
-    "date": "2026-07-21",
+    "day": 60,
+    "date": "2026-08-05",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -1551,12 +1951,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d50.jpg"
   },
   {
     "id": "d51",
-    "day": 51,
-    "date": "2026-07-22",
+    "day": 61,
+    "date": "2026-08-06",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -1578,12 +1979,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d51.jpg"
   },
   {
     "id": "d52",
-    "day": 52,
-    "date": "2026-07-23",
+    "day": 62,
+    "date": "2026-08-07",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -1606,12 +2008,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d52.jpg",
+    "video": "/videos/instagram/d52.mp4"
   },
   {
     "id": "d53",
-    "day": 53,
-    "date": "2026-07-24",
+    "day": 63,
+    "date": "2026-08-08",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -1633,12 +2037,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d53.jpg"
   },
   {
     "id": "d54",
-    "day": 54,
-    "date": "2026-07-25",
+    "day": 64,
+    "date": "2026-08-09",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -1661,12 +2066,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d54.jpg",
+    "video": "/videos/instagram/d54.mp4"
   },
   {
     "id": "d55",
-    "day": 55,
-    "date": "2026-07-26",
+    "day": 65,
+    "date": "2026-08-10",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -1688,12 +2095,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d55.jpg"
   },
   {
     "id": "d56",
-    "day": 56,
-    "date": "2026-07-27",
+    "day": 66,
+    "date": "2026-08-11",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -1716,12 +2124,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d56.jpg",
+    "video": "/videos/instagram/d56.mp4"
   },
   {
     "id": "d57",
-    "day": 57,
-    "date": "2026-07-28",
+    "day": 67,
+    "date": "2026-08-12",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -1743,12 +2153,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d57.jpg"
   },
   {
     "id": "d58",
-    "day": 58,
-    "date": "2026-07-29",
+    "day": 68,
+    "date": "2026-08-13",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -1771,12 +2182,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d58.jpg",
+    "video": "/videos/instagram/d58.mp4"
   },
   {
     "id": "d59",
-    "day": 59,
-    "date": "2026-07-30",
+    "day": 69,
+    "date": "2026-08-14",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -1798,12 +2211,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d59.jpg"
   },
   {
     "id": "d60",
-    "day": 60,
-    "date": "2026-07-31",
+    "day": 70,
+    "date": "2026-08-15",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -1825,12 +2239,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d60.jpg"
   },
   {
     "id": "d61",
-    "day": 61,
-    "date": "2026-08-01",
+    "day": 71,
+    "date": "2026-08-16",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -1857,12 +2272,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d61.jpg"
   },
   {
     "id": "d62",
-    "day": 62,
-    "date": "2026-08-02",
+    "day": 72,
+    "date": "2026-08-17",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -1890,12 +2306,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d62.jpg",
+    "video": "/videos/instagram/d62.mp4"
   },
   {
     "id": "d63",
-    "day": 63,
-    "date": "2026-08-03",
+    "day": 73,
+    "date": "2026-08-18",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -1922,12 +2340,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d63.jpg"
   },
   {
     "id": "d64",
-    "day": 64,
-    "date": "2026-08-04",
+    "day": 74,
+    "date": "2026-08-19",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -1955,12 +2374,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d64.jpg",
+    "video": "/videos/instagram/d64.mp4"
   },
   {
     "id": "d65",
-    "day": 65,
-    "date": "2026-08-05",
+    "day": 75,
+    "date": "2026-08-20",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -1987,12 +2408,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d65.jpg"
   },
   {
     "id": "d66",
-    "day": 66,
-    "date": "2026-08-06",
+    "day": 76,
+    "date": "2026-08-21",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -2020,12 +2442,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d66.jpg",
+    "video": "/videos/instagram/d66.mp4"
   },
   {
     "id": "d67",
-    "day": 67,
-    "date": "2026-08-07",
+    "day": 77,
+    "date": "2026-08-22",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2052,12 +2476,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d67.jpg"
   },
   {
     "id": "d68",
-    "day": 68,
-    "date": "2026-08-08",
+    "day": 78,
+    "date": "2026-08-23",
     "phase": "concept",
     "branch": "app-identify",
     "status": "draft",
@@ -2080,12 +2505,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d68.jpg",
+    "video": "/videos/instagram/d68.mp4"
   },
   {
     "id": "d69",
-    "day": 69,
-    "date": "2026-08-09",
+    "day": 79,
+    "date": "2026-08-24",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -2112,12 +2539,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d69.jpg"
   },
   {
     "id": "d70",
-    "day": 70,
-    "date": "2026-08-10",
+    "day": 80,
+    "date": "2026-08-25",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -2145,12 +2573,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d70.jpg",
+    "video": "/videos/instagram/d70.mp4"
   },
   {
     "id": "d71",
-    "day": 71,
-    "date": "2026-08-11",
+    "day": 81,
+    "date": "2026-08-26",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -2172,12 +2602,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d71.jpg"
   },
   {
     "id": "d72",
-    "day": 72,
-    "date": "2026-08-12",
+    "day": 82,
+    "date": "2026-08-27",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -2205,12 +2636,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d72.jpg",
+    "video": "/videos/instagram/d72.mp4"
   },
   {
     "id": "d73",
-    "day": 73,
-    "date": "2026-08-13",
+    "day": 83,
+    "date": "2026-08-28",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2237,12 +2670,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d73.jpg"
   },
   {
     "id": "d74",
-    "day": 74,
-    "date": "2026-08-14",
+    "day": 84,
+    "date": "2026-08-29",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -2265,12 +2699,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d74.jpg",
+    "video": "/videos/instagram/d74.mp4"
   },
   {
     "id": "d75",
-    "day": 75,
-    "date": "2026-08-15",
+    "day": 85,
+    "date": "2026-08-30",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -2297,12 +2733,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d75.jpg"
   },
   {
     "id": "d76",
-    "day": 76,
-    "date": "2026-08-16",
+    "day": 86,
+    "date": "2026-08-31",
     "phase": "concept",
     "branch": "app-collect",
     "status": "draft",
@@ -2325,12 +2762,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d76.jpg",
+    "video": "/videos/instagram/d76.mp4"
   },
   {
     "id": "d77",
-    "day": 77,
-    "date": "2026-08-17",
+    "day": 87,
+    "date": "2026-09-01",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -2357,12 +2796,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d77.jpg"
   },
   {
     "id": "d78",
-    "day": 78,
-    "date": "2026-08-18",
+    "day": 88,
+    "date": "2026-09-02",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2390,12 +2830,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d78.jpg",
+    "video": "/videos/instagram/d78.mp4"
   },
   {
     "id": "d79",
-    "day": 79,
-    "date": "2026-08-19",
+    "day": 89,
+    "date": "2026-09-03",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -2417,12 +2859,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d79.jpg"
   },
   {
     "id": "d80",
-    "day": 80,
-    "date": "2026-08-20",
+    "day": 90,
+    "date": "2026-09-04",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -2450,12 +2893,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d80.jpg",
+    "video": "/videos/instagram/d80.mp4"
   },
   {
     "id": "d81",
-    "day": 81,
-    "date": "2026-08-21",
+    "day": 91,
+    "date": "2026-09-05",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -2482,12 +2927,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d81.jpg"
   },
   {
     "id": "d82",
-    "day": 82,
-    "date": "2026-08-22",
+    "day": 92,
+    "date": "2026-09-06",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -2514,12 +2960,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d82.jpg"
   },
   {
     "id": "d83",
-    "day": 83,
-    "date": "2026-08-23",
+    "day": 93,
+    "date": "2026-09-07",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2546,12 +2993,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d83.jpg"
   },
   {
     "id": "d84",
-    "day": 84,
-    "date": "2026-08-24",
+    "day": 94,
+    "date": "2026-09-08",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -2573,12 +3021,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d84.jpg"
   },
   {
     "id": "d85",
-    "day": 85,
-    "date": "2026-08-25",
+    "day": 95,
+    "date": "2026-09-09",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -2605,12 +3054,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d85.jpg"
   },
   {
     "id": "d86",
-    "day": 86,
-    "date": "2026-08-26",
+    "day": 96,
+    "date": "2026-09-10",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2637,12 +3087,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d86.jpg"
   },
   {
     "id": "d87",
-    "day": 87,
-    "date": "2026-08-27",
+    "day": 97,
+    "date": "2026-09-11",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -2664,12 +3115,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d87.jpg"
   },
   {
     "id": "d88",
-    "day": 88,
-    "date": "2026-08-28",
+    "day": 98,
+    "date": "2026-09-12",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2696,12 +3148,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d88.jpg"
   },
   {
     "id": "d89",
-    "day": 89,
-    "date": "2026-08-29",
+    "day": 99,
+    "date": "2026-09-13",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -2728,12 +3181,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d89.jpg"
   },
   {
     "id": "d90",
-    "day": 90,
-    "date": "2026-08-30",
+    "day": 100,
+    "date": "2026-09-14",
     "phase": "convert",
     "branch": "app-cta",
     "status": "draft",
@@ -2755,12 +3209,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d90.jpg"
   },
   {
     "id": "d91",
-    "day": 91,
-    "date": "2026-08-31",
+    "day": 101,
+    "date": "2026-09-15",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2787,12 +3242,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d91.jpg"
   },
   {
     "id": "d92",
-    "day": 92,
-    "date": "2026-09-01",
+    "day": 102,
+    "date": "2026-09-16",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -2819,12 +3275,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d92.jpg"
   },
   {
     "id": "d93",
-    "day": 93,
-    "date": "2026-09-02",
+    "day": 103,
+    "date": "2026-09-17",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -2851,12 +3308,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d93.jpg"
   },
   {
     "id": "d94",
-    "day": 94,
-    "date": "2026-09-03",
+    "day": 104,
+    "date": "2026-09-18",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -2883,12 +3341,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d94.jpg"
   },
   {
     "id": "d95",
-    "day": 95,
-    "date": "2026-09-04",
+    "day": 105,
+    "date": "2026-09-19",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -2910,12 +3369,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d95.jpg"
   },
   {
     "id": "d96",
-    "day": 96,
-    "date": "2026-09-05",
+    "day": 106,
+    "date": "2026-09-20",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -2942,12 +3402,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d96.jpg"
   },
   {
     "id": "d97",
-    "day": 97,
-    "date": "2026-09-06",
+    "day": 107,
+    "date": "2026-09-21",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -2969,12 +3430,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d97.jpg"
   },
   {
     "id": "d98",
-    "day": 98,
-    "date": "2026-09-07",
+    "day": 108,
+    "date": "2026-09-22",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3001,12 +3463,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d98.jpg"
   },
   {
     "id": "d99",
-    "day": 99,
-    "date": "2026-09-08",
+    "day": 109,
+    "date": "2026-09-23",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3033,12 +3496,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d99.jpg"
   },
   {
     "id": "d100",
-    "day": 100,
-    "date": "2026-09-09",
+    "day": 110,
+    "date": "2026-09-24",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3065,12 +3529,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d100.jpg"
   },
   {
     "id": "d101",
-    "day": 101,
-    "date": "2026-09-10",
+    "day": 111,
+    "date": "2026-09-25",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -3098,12 +3563,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d101.jpg"
   },
   {
     "id": "d102",
-    "day": 102,
-    "date": "2026-09-11",
+    "day": 112,
+    "date": "2026-09-26",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -3125,12 +3591,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d102.jpg"
   },
   {
     "id": "d103",
-    "day": 103,
-    "date": "2026-09-12",
+    "day": 113,
+    "date": "2026-09-27",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -3152,12 +3619,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d103.jpg"
   },
   {
     "id": "d104",
-    "day": 104,
-    "date": "2026-09-13",
+    "day": 114,
+    "date": "2026-09-28",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3184,12 +3652,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d104.jpg"
   },
   {
     "id": "d105",
-    "day": 105,
-    "date": "2026-09-14",
+    "day": 115,
+    "date": "2026-09-29",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -3211,12 +3680,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d105.jpg"
   },
   {
     "id": "d106",
-    "day": 106,
-    "date": "2026-09-15",
+    "day": 116,
+    "date": "2026-09-30",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -3243,12 +3713,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d106.jpg"
   },
   {
     "id": "d107",
-    "day": 107,
-    "date": "2026-09-16",
+    "day": 117,
+    "date": "2026-10-01",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3275,12 +3746,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d107.jpg"
   },
   {
     "id": "d108",
-    "day": 108,
-    "date": "2026-09-17",
+    "day": 118,
+    "date": "2026-10-02",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -3307,12 +3779,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d108.jpg"
   },
   {
     "id": "d109",
-    "day": 109,
-    "date": "2026-09-18",
+    "day": 119,
+    "date": "2026-10-03",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -3334,12 +3807,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d109.jpg"
   },
   {
     "id": "d110",
-    "day": 110,
-    "date": "2026-09-19",
+    "day": 120,
+    "date": "2026-10-04",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3366,12 +3840,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d110.jpg"
   },
   {
     "id": "d111",
-    "day": 111,
-    "date": "2026-09-20",
+    "day": 121,
+    "date": "2026-10-05",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3398,12 +3873,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d111.jpg"
   },
   {
     "id": "d112",
-    "day": 112,
-    "date": "2026-09-21",
+    "day": 122,
+    "date": "2026-10-06",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3430,12 +3906,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d112.jpg"
   },
   {
     "id": "d113",
-    "day": 113,
-    "date": "2026-09-22",
+    "day": 123,
+    "date": "2026-10-07",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -3462,12 +3939,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d113.jpg"
   },
   {
     "id": "d114",
-    "day": 114,
-    "date": "2026-09-23",
+    "day": 124,
+    "date": "2026-10-08",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -3489,12 +3967,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d114.jpg"
   },
   {
     "id": "d115",
-    "day": 115,
-    "date": "2026-09-24",
+    "day": 125,
+    "date": "2026-10-09",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -3516,12 +3995,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d115.jpg"
   },
   {
     "id": "d116",
-    "day": 116,
-    "date": "2026-09-25",
+    "day": 126,
+    "date": "2026-10-10",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3548,12 +4028,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d116.jpg"
   },
   {
     "id": "d117",
-    "day": 117,
-    "date": "2026-09-26",
+    "day": 127,
+    "date": "2026-10-11",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -3575,12 +4056,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d117.jpg"
   },
   {
     "id": "d118",
-    "day": 118,
-    "date": "2026-09-27",
+    "day": 128,
+    "date": "2026-10-12",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -3608,12 +4090,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d118.jpg"
   },
   {
     "id": "d119",
-    "day": 119,
-    "date": "2026-09-28",
+    "day": 129,
+    "date": "2026-10-13",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -3635,12 +4118,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d119.jpg"
   },
   {
     "id": "d120",
-    "day": 120,
-    "date": "2026-09-29",
+    "day": 130,
+    "date": "2026-10-14",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3667,12 +4151,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d120.jpg"
   },
   {
     "id": "d121",
-    "day": 121,
-    "date": "2026-09-30",
+    "day": 131,
+    "date": "2026-10-15",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -3694,12 +4179,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d121.jpg"
   },
   {
     "id": "d122",
-    "day": 122,
-    "date": "2026-10-01",
+    "day": 132,
+    "date": "2026-10-16",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3726,12 +4212,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d122.jpg"
   },
   {
     "id": "d123",
-    "day": 123,
-    "date": "2026-10-02",
+    "day": 133,
+    "date": "2026-10-17",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3758,12 +4245,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d123.jpg"
   },
   {
     "id": "d124",
-    "day": 124,
-    "date": "2026-10-03",
+    "day": 134,
+    "date": "2026-10-18",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -3790,12 +4278,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d124.jpg"
   },
   {
     "id": "d125",
-    "day": 125,
-    "date": "2026-10-04",
+    "day": 135,
+    "date": "2026-10-19",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3822,12 +4311,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d125.jpg"
   },
   {
     "id": "d126",
-    "day": 126,
-    "date": "2026-10-05",
+    "day": 136,
+    "date": "2026-10-20",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -3854,12 +4344,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d126.jpg"
   },
   {
     "id": "d127",
-    "day": 127,
-    "date": "2026-10-06",
+    "day": 137,
+    "date": "2026-10-21",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -3881,12 +4372,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d127.jpg"
   },
   {
     "id": "d128",
-    "day": 128,
-    "date": "2026-10-07",
+    "day": 138,
+    "date": "2026-10-22",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -3908,12 +4400,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d128.jpg"
   },
   {
     "id": "d129",
-    "day": 129,
-    "date": "2026-10-08",
+    "day": 139,
+    "date": "2026-10-23",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -3940,12 +4433,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d129.jpg"
   },
   {
     "id": "d130",
-    "day": 130,
-    "date": "2026-10-09",
+    "day": 140,
+    "date": "2026-10-24",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -3967,12 +4461,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d130.jpg"
   },
   {
     "id": "d131",
-    "day": 131,
-    "date": "2026-10-10",
+    "day": 141,
+    "date": "2026-10-25",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -3994,12 +4489,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d131.jpg"
   },
   {
     "id": "d132",
-    "day": 132,
-    "date": "2026-10-11",
+    "day": 142,
+    "date": "2026-10-26",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -4026,12 +4522,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d132.jpg"
   },
   {
     "id": "d133",
-    "day": 133,
-    "date": "2026-10-12",
+    "day": 143,
+    "date": "2026-10-27",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -4059,12 +4556,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d133.jpg"
   },
   {
     "id": "d134",
-    "day": 134,
-    "date": "2026-10-13",
+    "day": 144,
+    "date": "2026-10-28",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4086,12 +4584,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d134.jpg"
   },
   {
     "id": "d135",
-    "day": 135,
-    "date": "2026-10-14",
+    "day": 145,
+    "date": "2026-10-29",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -4113,12 +4612,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d135.jpg"
   },
   {
     "id": "d136",
-    "day": 136,
-    "date": "2026-10-15",
+    "day": 146,
+    "date": "2026-10-30",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4140,12 +4640,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d136.jpg"
   },
   {
     "id": "d137",
-    "day": 137,
-    "date": "2026-10-16",
+    "day": 147,
+    "date": "2026-10-31",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -4172,12 +4673,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d137.jpg"
   },
   {
     "id": "d138",
-    "day": 138,
-    "date": "2026-10-17",
+    "day": 148,
+    "date": "2026-11-01",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -4204,12 +4706,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d138.jpg"
   },
   {
     "id": "d139",
-    "day": 139,
-    "date": "2026-10-18",
+    "day": 149,
+    "date": "2026-11-02",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -4236,12 +4739,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d139.jpg"
   },
   {
     "id": "d140",
-    "day": 140,
-    "date": "2026-10-19",
+    "day": 150,
+    "date": "2026-11-03",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -4263,12 +4767,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d140.jpg"
   },
   {
     "id": "d141",
-    "day": 141,
-    "date": "2026-10-20",
+    "day": 151,
+    "date": "2026-11-04",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -4295,12 +4800,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d141.jpg"
   },
   {
     "id": "d142",
-    "day": 142,
-    "date": "2026-10-21",
+    "day": 152,
+    "date": "2026-11-05",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -4322,12 +4828,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d142.jpg"
   },
   {
     "id": "d143",
-    "day": 143,
-    "date": "2026-10-22",
+    "day": 153,
+    "date": "2026-11-06",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -4349,12 +4856,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d143.jpg"
   },
   {
     "id": "d144",
-    "day": 144,
-    "date": "2026-10-23",
+    "day": 154,
+    "date": "2026-11-07",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4376,12 +4884,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d144.jpg"
   },
   {
     "id": "d145",
-    "day": 145,
-    "date": "2026-10-24",
+    "day": 155,
+    "date": "2026-11-08",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -4408,12 +4917,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d145.jpg"
   },
   {
     "id": "d146",
-    "day": 146,
-    "date": "2026-10-25",
+    "day": 156,
+    "date": "2026-11-09",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -4441,12 +4951,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d146.jpg"
   },
   {
     "id": "d147",
-    "day": 147,
-    "date": "2026-10-26",
+    "day": 157,
+    "date": "2026-11-10",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4468,12 +4979,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d147.jpg"
   },
   {
     "id": "d148",
-    "day": 148,
-    "date": "2026-10-27",
+    "day": 158,
+    "date": "2026-11-11",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -4495,12 +5007,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d148.jpg"
   },
   {
     "id": "d149",
-    "day": 149,
-    "date": "2026-10-28",
+    "day": 159,
+    "date": "2026-11-12",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -4527,12 +5040,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d149.jpg"
   },
   {
     "id": "d150",
-    "day": 150,
-    "date": "2026-10-29",
+    "day": 160,
+    "date": "2026-11-13",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -4559,12 +5073,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d150.jpg"
   },
   {
     "id": "d151",
-    "day": 151,
-    "date": "2026-10-30",
+    "day": 161,
+    "date": "2026-11-14",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -4591,12 +5106,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d151.jpg"
   },
   {
     "id": "d152",
-    "day": 152,
-    "date": "2026-10-31",
+    "day": 162,
+    "date": "2026-11-15",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -4623,12 +5139,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d152.jpg"
   },
   {
     "id": "d153",
-    "day": 153,
-    "date": "2026-11-01",
+    "day": 163,
+    "date": "2026-11-16",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -4650,12 +5167,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d153.jpg"
   },
   {
     "id": "d154",
-    "day": 154,
-    "date": "2026-11-02",
+    "day": 164,
+    "date": "2026-11-17",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4677,12 +5195,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d154.jpg"
   },
   {
     "id": "d155",
-    "day": 155,
-    "date": "2026-11-03",
+    "day": 165,
+    "date": "2026-11-18",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -4709,12 +5228,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d155.jpg"
   },
   {
     "id": "d156",
-    "day": 156,
-    "date": "2026-11-04",
+    "day": 166,
+    "date": "2026-11-19",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -4736,12 +5256,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d156.jpg"
   },
   {
     "id": "d157",
-    "day": 157,
-    "date": "2026-11-05",
+    "day": 167,
+    "date": "2026-11-20",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -4763,12 +5284,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d157.jpg"
   },
   {
     "id": "d158",
-    "day": 158,
-    "date": "2026-11-06",
+    "day": 168,
+    "date": "2026-11-21",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -4796,12 +5318,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d158.jpg",
+    "video": "/videos/instagram/d158.mp4"
   },
   {
     "id": "d159",
-    "day": 159,
-    "date": "2026-11-07",
+    "day": 169,
+    "date": "2026-11-22",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -4828,12 +5352,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d159.jpg"
   },
   {
     "id": "d160",
-    "day": 160,
-    "date": "2026-11-08",
+    "day": 170,
+    "date": "2026-11-23",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -4860,12 +5385,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d160.jpg"
   },
   {
     "id": "d161",
-    "day": 161,
-    "date": "2026-11-09",
+    "day": 171,
+    "date": "2026-11-24",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -4887,12 +5413,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d161.jpg"
   },
   {
     "id": "d162",
-    "day": 162,
-    "date": "2026-11-10",
+    "day": 172,
+    "date": "2026-11-25",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -4920,12 +5447,14 @@
       "follows": 0,
       "reach": 0
     },
-    "reel": true
+    "reel": true,
+    "img_ready": "/images/ig_ready/d162.jpg",
+    "video": "/videos/instagram/d162.mp4"
   },
   {
     "id": "d163",
-    "day": 163,
-    "date": "2026-11-11",
+    "day": 173,
+    "date": "2026-11-26",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -4947,12 +5476,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d163.jpg"
   },
   {
     "id": "d164",
-    "day": 164,
-    "date": "2026-11-12",
+    "day": 174,
+    "date": "2026-11-27",
     "phase": "welcome",
     "branch": "rarest-jungle",
     "status": "draft",
@@ -4979,12 +5509,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d164.jpg"
   },
   {
     "id": "d165",
-    "day": 165,
-    "date": "2026-11-13",
+    "day": 175,
+    "date": "2026-11-28",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -5006,12 +5537,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d165.jpg"
   },
   {
     "id": "d166",
-    "day": 166,
-    "date": "2026-11-14",
+    "day": 176,
+    "date": "2026-11-29",
     "phase": "showcase",
     "branch": "collector-culture",
     "status": "draft",
@@ -5038,12 +5570,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d166.jpg"
   },
   {
     "id": "d167",
-    "day": 167,
-    "date": "2026-11-15",
+    "day": 177,
+    "date": "2026-11-30",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5065,12 +5598,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d167.jpg"
   },
   {
     "id": "d168",
-    "day": 168,
-    "date": "2026-11-16",
+    "day": 178,
+    "date": "2026-12-01",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -5097,12 +5631,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d168.jpg"
   },
   {
     "id": "d169",
-    "day": 169,
-    "date": "2026-11-17",
+    "day": 179,
+    "date": "2026-12-02",
     "phase": "convert",
     "branch": "community-ugc",
     "status": "draft",
@@ -5124,12 +5659,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d169.jpg"
   },
   {
     "id": "d170",
-    "day": 170,
-    "date": "2026-11-18",
+    "day": 180,
+    "date": "2026-12-03",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -5151,12 +5687,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d170.jpg"
   },
   {
     "id": "d171",
-    "day": 171,
-    "date": "2026-11-19",
+    "day": 181,
+    "date": "2026-12-04",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5183,12 +5720,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d171.jpg"
   },
   {
     "id": "d172",
-    "day": 172,
-    "date": "2026-11-20",
+    "day": 182,
+    "date": "2026-12-05",
     "phase": "convert",
     "branch": "article-understory",
     "status": "draft",
@@ -5210,12 +5748,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d172.jpg"
   },
   {
     "id": "d173",
-    "day": 173,
-    "date": "2026-11-21",
+    "day": 183,
+    "date": "2026-12-06",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -5242,12 +5781,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d173.jpg"
   },
   {
     "id": "d174",
-    "day": 174,
-    "date": "2026-11-22",
+    "day": 184,
+    "date": "2026-12-07",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5269,12 +5809,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d174.jpg"
   },
   {
     "id": "d175",
-    "day": 175,
-    "date": "2026-11-23",
+    "day": 185,
+    "date": "2026-12-08",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -5296,12 +5837,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d175.jpg"
   },
   {
     "id": "d176",
-    "day": 176,
-    "date": "2026-11-24",
+    "day": 186,
+    "date": "2026-12-09",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5323,12 +5865,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d176.jpg"
   },
   {
     "id": "d177",
-    "day": 177,
-    "date": "2026-11-25",
+    "day": 187,
+    "date": "2026-12-10",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -5350,12 +5893,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d177.jpg"
   },
   {
     "id": "d178",
-    "day": 178,
-    "date": "2026-11-26",
+    "day": 188,
+    "date": "2026-12-11",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5377,12 +5921,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d178.jpg"
   },
   {
     "id": "d179",
-    "day": 179,
-    "date": "2026-11-27",
+    "day": 189,
+    "date": "2026-12-12",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5404,12 +5949,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d179.jpg"
   },
   {
     "id": "d180",
-    "day": 180,
-    "date": "2026-11-28",
+    "day": 190,
+    "date": "2026-12-13",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -5431,12 +5977,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d180.jpg"
   },
   {
     "id": "d181",
-    "day": 181,
-    "date": "2026-11-29",
+    "day": 191,
+    "date": "2026-12-14",
     "phase": "convert",
     "branch": "article-fieldguide",
     "status": "draft",
@@ -5458,12 +6005,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d181.jpg"
   },
   {
     "id": "d182",
-    "day": 182,
-    "date": "2026-11-30",
+    "day": 192,
+    "date": "2026-12-15",
     "phase": "concept",
     "branch": "app-learn",
     "status": "draft",
@@ -5485,12 +6033,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d182.jpg"
   },
   {
     "id": "d183",
-    "day": 183,
-    "date": "2026-12-01",
+    "day": 193,
+    "date": "2026-12-16",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -5517,12 +6066,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d183.jpg"
   },
   {
     "id": "d184",
-    "day": 184,
-    "date": "2026-12-02",
+    "day": 194,
+    "date": "2026-12-17",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -5549,12 +6099,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d184.jpg"
   },
   {
     "id": "d185",
-    "day": 185,
-    "date": "2026-12-03",
+    "day": 195,
+    "date": "2026-12-18",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5581,12 +6132,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d185.jpg"
   },
   {
     "id": "d186",
-    "day": 186,
-    "date": "2026-12-04",
+    "day": 196,
+    "date": "2026-12-19",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5613,12 +6165,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d186.jpg"
   },
   {
     "id": "d187",
-    "day": 187,
-    "date": "2026-12-05",
+    "day": 197,
+    "date": "2026-12-20",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5645,12 +6198,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d187.jpg"
   },
   {
     "id": "d188",
-    "day": 188,
-    "date": "2026-12-06",
+    "day": 198,
+    "date": "2026-12-21",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5677,12 +6231,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d188.jpg"
   },
   {
     "id": "d189",
-    "day": 189,
-    "date": "2026-12-07",
+    "day": 199,
+    "date": "2026-12-22",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -5709,12 +6264,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d189.jpg"
   },
   {
     "id": "d190",
-    "day": 190,
-    "date": "2026-12-08",
+    "day": 200,
+    "date": "2026-12-23",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -5741,12 +6297,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d190.jpg"
   },
   {
     "id": "d191",
-    "day": 191,
-    "date": "2026-12-09",
+    "day": 201,
+    "date": "2026-12-24",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5773,12 +6330,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d191.jpg"
   },
   {
     "id": "d192",
-    "day": 192,
-    "date": "2026-12-10",
+    "day": 202,
+    "date": "2026-12-25",
     "phase": "welcome",
     "branch": "jungle-escape",
     "status": "draft",
@@ -5806,12 +6364,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d192.jpg"
   },
   {
     "id": "d193",
-    "day": 193,
-    "date": "2026-12-11",
+    "day": 203,
+    "date": "2026-12-26",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5838,12 +6397,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d193.jpg"
   },
   {
     "id": "d194",
-    "day": 194,
-    "date": "2026-12-12",
+    "day": 204,
+    "date": "2026-12-27",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5870,12 +6430,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d194.jpg"
   },
   {
     "id": "d195",
-    "day": 195,
-    "date": "2026-12-13",
+    "day": 205,
+    "date": "2026-12-28",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5902,12 +6463,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d195.jpg"
   },
   {
     "id": "d196",
-    "day": 196,
-    "date": "2026-12-14",
+    "day": 206,
+    "date": "2026-12-29",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -5934,12 +6496,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d196.jpg"
   },
   {
     "id": "d197",
-    "day": 197,
-    "date": "2026-12-15",
+    "day": 207,
+    "date": "2026-12-30",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -5966,12 +6529,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d197.jpg"
   },
   {
     "id": "d198",
-    "day": 198,
-    "date": "2026-12-16",
+    "day": 208,
+    "date": "2026-12-31",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -5998,12 +6562,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d198.jpg"
   },
   {
     "id": "d199",
-    "day": 199,
-    "date": "2026-12-17",
+    "day": 209,
+    "date": "2027-01-01",
     "phase": "welcome",
     "branch": "rarest-jungle",
     "status": "draft",
@@ -6030,12 +6595,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d199.jpg"
   },
   {
     "id": "d200",
-    "day": 200,
-    "date": "2026-12-18",
+    "day": 210,
+    "date": "2027-01-02",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -6062,12 +6628,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d200.jpg"
   },
   {
     "id": "d201",
-    "day": 201,
-    "date": "2026-12-19",
+    "day": 211,
+    "date": "2027-01-03",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -6094,12 +6661,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d201.jpg"
   },
   {
     "id": "d202",
-    "day": 202,
-    "date": "2026-12-20",
+    "day": 212,
+    "date": "2027-01-04",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -6126,12 +6694,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d202.jpg"
   },
   {
     "id": "d203",
-    "day": 203,
-    "date": "2026-12-21",
+    "day": 213,
+    "date": "2027-01-05",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -6158,12 +6727,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d203.jpg"
   },
   {
     "id": "d204",
-    "day": 204,
-    "date": "2026-12-22",
+    "day": 214,
+    "date": "2027-01-06",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -6190,12 +6760,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d204.jpg"
   },
   {
     "id": "d205",
-    "day": 205,
-    "date": "2026-12-23",
+    "day": 215,
+    "date": "2027-01-07",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -6222,12 +6793,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d205.jpg"
   },
   {
     "id": "d206",
-    "day": 206,
-    "date": "2026-12-24",
+    "day": 216,
+    "date": "2027-01-08",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -6254,12 +6826,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d206.jpg"
   },
   {
     "id": "d207",
-    "day": 207,
-    "date": "2026-12-25",
+    "day": 217,
+    "date": "2027-01-09",
     "phase": "showcase",
     "branch": "leaf-texture",
     "status": "draft",
@@ -6286,12 +6859,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d207.jpg"
   },
   {
     "id": "d208",
-    "day": 208,
-    "date": "2026-12-26",
+    "day": 218,
+    "date": "2027-01-10",
     "phase": "welcome",
     "branch": "rarest-jungle",
     "status": "draft",
@@ -6318,12 +6892,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d208.jpg"
   },
   {
     "id": "d209",
-    "day": 209,
-    "date": "2026-12-27",
+    "day": 219,
+    "date": "2027-01-11",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -6350,12 +6925,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d209.jpg"
   },
   {
     "id": "d210",
-    "day": 210,
-    "date": "2026-12-28",
+    "day": 220,
+    "date": "2027-01-12",
     "phase": "showcase",
     "branch": "rarity-value",
     "status": "draft",
@@ -6382,12 +6958,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d210.jpg"
   },
   {
     "id": "d211",
-    "day": 211,
-    "date": "2026-12-29",
+    "day": 221,
+    "date": "2027-01-13",
     "phase": "showcase",
     "branch": "velvet-anthurium",
     "status": "draft",
@@ -6414,12 +6991,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d211.jpg"
   },
   {
     "id": "d212",
-    "day": 212,
-    "date": "2026-12-30",
+    "day": 222,
+    "date": "2027-01-14",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -6446,12 +7024,13 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d212.jpg"
   },
   {
     "id": "d213",
-    "day": 213,
-    "date": "2026-12-31",
+    "day": 223,
+    "date": "2027-01-15",
     "phase": "showcase",
     "branch": "rainforest-beauty",
     "status": "draft",
@@ -6478,6 +7057,7 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "img_ready": "/images/ig_ready/d213.jpg"
   }
 ]
