@@ -73,10 +73,10 @@ export default async function handler(req, res) {
       report(pid, token, { dateRanges: r30, metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }, { name: "screenPageViews" }, { name: "engagedSessions" }, { name: "userEngagementDuration" }] }),
       report(pid, token, { dateRanges: rAll, metrics: [{ name: "totalUsers" }] }),
       report(pid, token, { dateRanges: r30, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: 40 }),
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 8 }),
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: 6 }),
-      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "eventCount" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "eventCount" }, desc: true }], limit: 8 }),
-      report(pid, token, { dateRanges: r30, metrics: [{ name: "eventCount" }], dimensionFilter: clickFilter }),
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "totalUsers" }], orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),         // unique readers per article
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "totalUsers" }], orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique users per channel
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }], limit: 8 }),  // unique install-tappers per article
+      report(pid, token, { dateRanges: r30, metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter }),   // unique users who tapped Install
     ]);
 
     let realtime = null;

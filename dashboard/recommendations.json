@@ -1,72 +1,70 @@
 {
   "updated": "2026-06-14",
-  "note": "Refreshed now that GA4 + App Store Connect are live. The plumbing works; the early numbers (~2.4 avg DAU, 8 users/30d, 6 downloads since launch) say the content exists but distribution is the bottleneck. Priorities below reflect that.",
-  "items": [
-    {
-      "title": "Distribution is the #1 lever — content is built, reach isn't",
-      "priority": "high",
-      "why": "~2.4 avg DAU and 8 users in 30 days with 145 live articles means discovery, not supply, is the constraint. Reels (especially the hooked ones) and search are the two channels that move this.",
-      "steps": [
-        "Keep the every-other-day AI reel cadence going; front-load the hooked reels",
-        "Share new Understory pieces where rare-aroid collectors gather (r/aroids, FB collector groups, Discords) — link in bio, not the article wall",
-        "Verify Google Search Console + submit the sitemap so the 145 articles start ranking"
-      ],
-      "by": "2026-06-21",
-      "status": "todo"
-    },
-    {
-      "title": "Watch the reel → article → install path",
-      "priority": "high",
-      "why": "Only 6 downloads so far — every install matters and the funnel is now fully measurable. The 'articles that landed customers' panel will show which content converts the moment App Store clicks register.",
-      "steps": [
-        "Run the Instagram insights weekly and check reel reach vs the 79% skip baseline",
-        "Watch the GA 'articles that landed customers' panel — double down on whatever article first drives App Store clicks"
-      ],
-      "by": "2026-06-27",
-      "status": "monitor"
-    },
-    {
-      "title": "Validate the text hooks against the 79% skip rate",
-      "priority": "medium",
-      "why": "The hook rollout (days 8-46) targets reel retention; needs ~5 hooked reels live to read a signal.",
-      "steps": [
-        "Once ~5 hooked reels have posted, compare avg watch time hooked (🪝) vs non-hooked in the insights",
-        "Up → expand hooks to all reels. Flat → iterate the copy on the weakest and re-test"
-      ],
-      "by": "2026-06-27",
-      "status": "todo"
-    },
-    {
-      "title": "Keep the content queues from drying up",
-      "priority": "medium",
-      "why": "The phone drip and daily IG posts both feed off the article pipeline; Field Guide burns ~5/wk.",
-      "steps": [
-        "Watch the Ops 'runway' tile — it flags under ~2 weeks",
-        "Top up leaf_queue / guide_queue before either hits the warning band"
-      ],
-      "by": "rolling",
-      "status": "monitor"
-    },
-    {
-      "title": "Drop your own IP from GA when traffic grows",
-      "priority": "low",
-      "why": "Left in for now (fine at this volume), but once real users show up it'll skew DAU/engagement/new-%.",
-      "steps": [
-        "When the daily-users sparkline lifts and New-users % settles below 100%, activate the GA4 internal-traffic filter (or keep Firefox ETP Strict / Private tabs)"
-      ],
-      "by": "when traffic lifts",
-      "status": "todo"
-    },
-    {
-      "title": "Ship the new App Store description + confirm iOS→web entitlement",
-      "priority": "low",
-      "why": "Promo text is live; the fuller differentiation description rides the next version. Separately, verify a paying iOS user unlocks on web.",
-      "steps": [
-        "Paste the drafted 'generic apps can't ID the good stuff' description into the next app version",
-        "Sandbox-purchase test → confirm the Firebase 'subscriber' claim flips and the web wall opens"
-      ],
-      "by": "next release",
-      "status": "todo"
-    }
-  ]
+  "note": "Insight → action, per section. Read these as 'what the numbers mean and what to do about it,' refreshed as the data moves.",
+  "sections": {
+    "overall": [
+      {
+        "priority": "high",
+        "insight": "145 articles live but only ~2.4 unique users/day — you have supply, not demand. Distribution is the single bottleneck; the content engine is already ahead of the audience.",
+        "action": "Pick ONE channel to push hard each week (reels or a rare-aroid community) and watch the timeline above for the lift — repeat whatever moves it.",
+        "by": "2026-06-21"
+      },
+      {
+        "priority": "high",
+        "insight": "We can't yet see whether readers convert to paying — subscription data lives in RevenueCat, which isn't wired. So 'people read gated articles but don't subscribe' is a hypothesis we can't prove or fix blind.",
+        "action": "Wire RevenueCat into the dashboard (subscribers, trial→paid, churn) so conversion becomes visible — then we can act on it.",
+        "by": "2026-06-28"
+      }
+    ],
+    "traffic": [
+      {
+        "priority": "high",
+        "insight": "Most traffic is 'Direct,' which is almost entirely your untagged Instagram bio link — so you can't tell which post drove which visit.",
+        "action": "Add UTM tags to the bio link (e.g. ?utm_source=instagram&utm_medium=bio). Then those visits show as Organic Social and attribute to IG.",
+        "by": "2026-06-21"
+      },
+      {
+        "priority": "medium",
+        "insight": "Pageviews-per-user is healthy (people read several articles per visit) — depth is fine; it's the top of funnel that's tiny.",
+        "action": "Verify Google Search Console + submit the sitemap so the 145 articles start pulling Organic Search traffic, not just Direct.",
+        "by": "2026-06-21"
+      }
+    ],
+    "conversion": [
+      {
+        "priority": "high",
+        "insight": "0 web install-taps in 30 days — the read→install bridge isn't converting yet (partly just too little traffic to register).",
+        "action": "Make the App Store CTA more prominent on article pages; re-check as traffic grows. The 'articles that drove install taps' panel will name the first converter — then make more like it.",
+        "by": "2026-06-27"
+      }
+    ],
+    "socials": [
+      {
+        "priority": "medium",
+        "insight": "Static IG images get a fraction of reels' reach — near-zero growth leverage, though cheap to keep posting for consistency.",
+        "action": "Treat reels as the growth driver (keep the every-other-day cadence); don't pour effort into image days — they're filler, not a lever.",
+        "by": "rolling"
+      },
+      {
+        "priority": "medium",
+        "insight": "Hooked reels (days 8-46) are the bet to beat the 79% skip rate; need ~5 live to read a signal.",
+        "action": "Once ~5 hooked reels have posted, compare avg watch time hooked (🪝) vs non-hooked in the insights — expand hooks if it lifts, iterate copy if flat.",
+        "by": "2026-06-27"
+      }
+    ],
+    "ops": [
+      {
+        "priority": "medium",
+        "insight": "Field Guide burns ~5/wk and Understory ~3/wk; both drips depend on the queue staying full.",
+        "action": "Watch the runway tile — top up leaf_queue / guide_queue before either drops under the 2-week warning band.",
+        "by": "rolling"
+      },
+      {
+        "priority": "low",
+        "insight": "Your own IP still counts in GA, inflating engagement and New-users % at this low volume.",
+        "action": "Activate the GA4 internal-traffic filter once real users show up and the numbers start mattering.",
+        "by": "when traffic lifts"
+      }
+    ]
+  }
 }
