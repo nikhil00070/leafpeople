@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/ig", "destination": "/app?utm_source=instagram&utm_medium=social&utm_campaign=bio-link", "permanent": false }
+    { "source": "/ig", "destination": "/?utm_source=instagram&utm_medium=social&utm_campaign=bio-link", "permanent": false }
   ],
   "rewrites": [
     { "source": "/the-leaf/(.*)/_data.json", "destination": "/_blocked" },
