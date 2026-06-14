@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T18:32:25+00:00",
+  "updated": "2026-06-14T19:25:41+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 0,
@@ -8,29 +8,29 @@
   "summary": {
     "reels": {
       "count": 2,
-      "avg_reach": 0,
+      "avg_reach": 58,
       "avg_eng_pct": 0.0,
-      "avg_watch_s": 0.0,
-      "avg_plays": 0
+      "avg_watch_s": 4.3,
+      "avg_plays": 64
     },
     "images": {
       "count": 6,
       "avg_reach": 0,
-      "avg_eng_pct": 0.0
+      "avg_eng_pct": 16.7
     }
   },
   "posts": [
     {
       "date": "2026-06-14",
       "type": "REEL",
-      "reach": 0,
+      "reach": 3,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 0,
-      "plays": 0,
+      "watch_ms": 6040,
+      "plays": 5,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
       "is_reel": true,
@@ -55,14 +55,14 @@
     {
       "date": "2026-06-12",
       "type": "REEL",
-      "reach": 0,
+      "reach": 112,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 0,
-      "plays": 0,
+      "watch_ms": 2554,
+      "plays": 123,
       "label": "d6 Blackest leaf",
       "hook": null,
       "is_reel": true,
@@ -135,18 +135,19 @@
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 0,
+      "reach": 1,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 0,
+      "total_interactions": 1,
       "watch_ms": 0,
       "plays": 0,
       "label": "d1 Welcome home",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 0.0
+      "eng_pct": 100.0
     }
-  ]
+  ],
+  "diag": null
 }
