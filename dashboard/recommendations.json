@@ -38,6 +38,14 @@
         "by": "2026-06-27"
       }
     ],
+    "revenue": [
+      {
+        "priority": "high",
+        "insight": "The funnel collapses at install → subscribe: readers exist, but ~0 web install-taps and ~0 active subscribers. People consume free/preview content and stop before paying.",
+        "action": "As installs grow, watch trial-starts vs trial→paid. If trials start but don't convert, the first-session value isn't landing before the ask — front-load the 'aha' (a real ID + care guide) before the paywall, not after.",
+        "by": "2026-06-28"
+      }
+    ],
     "socials": [
       {
         "priority": "medium",

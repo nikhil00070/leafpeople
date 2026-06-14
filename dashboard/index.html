@@ -137,6 +137,17 @@ a { color:var(--blue); }
     <div id="rec-conversion"></div>
   </div>
 
+  <!-- SUBSCRIPTIONS / FUNNEL -->
+  <div class="sec">
+    <div class="sec-h">💳 Subscriptions & funnel</div>
+    <p class="sec-sub">The whole path: read → install → subscribe. Subscriptions come from App Store Connect (all subs originate there; web is unlock-only).</p>
+    <div class="grid g2">
+      <div class="card"><h3>Conversion funnel</h3><div id="funnel-body" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Subscriptions</h3><div id="subs-body" class="muted" style="font-size:.85rem">—</div></div>
+    </div>
+    <div id="rec-revenue"></div>
+  </div>
+
   <!-- SOCIALS -->
   <div class="sec">
     <div class="sec-h">📱 Socials · Instagram</div>
@@ -214,13 +225,15 @@ function chart(points){
 }
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
-    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"),
+    J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"), J("/api/subscriptions"),
   ]);
   renderKPIs(ga, asc, insights);
   renderTimeline(ga, asc, posts, insights, feed);
   renderGA(ga, feed);
+  renderFunnel(ga, asc, subs);
+  renderSubs(subs);
   renderSocials(insights);
   renderASC(asc);
   renderOps(feed, drip, posts);
@@ -363,6 +376,34 @@ function renderOps(feed, drip, posts){
       `<div class="kv"><span class="muted">Reels queued</span><b>${reels}</b></div>`; }
 }
 
+function renderFunnel(ga, asc, subs){
+  const el=document.getElementById("funnel-body");
+  const gc=ga&&ga.connected, ac=asc&&asc.connected, sc=subs&&subs.connected;
+  const rows=[
+    ["Web users","30d", gc?ga.totals.users:null],
+    ["Tapped Install","30d", gc?ga.conversion.app_store_clicks:null],
+    ["Downloads","all-time", ac?asc.total:null],
+    ["Active subscribers","now", sc?subs.active:null],
+  ];
+  el.innerHTML = rows.map(([l,tf,v])=>`<div class="kv"><span class="muted">${l} <span style="font-size:.68rem">· ${tf}</span></span><b>${v==null?'—':fmt(v)}</b></div>`).join("")
+    + `<div class="help">Each step should shrink — the biggest drop is where you lose people. Timeframes differ (users/taps 30d, downloads/subs all-time), so read it as direction, not exact ratios. This is the literal answer to "are readers converting?" — follow it down.</div>`;
+}
+
+function renderSubs(subs){
+  const el=document.getElementById("subs-body");
+  if(!subs||!subs.connected){ el.innerHTML = (subs&&subs.error)? `<p class="help" style="margin-top:0">Couldn't load: ${esc(subs.error)}</p>` : '<p class="help" style="margin-top:0">App Store creds not set.</p>'; return; }
+  const e=subs.events30||{};
+  const zero = subs.active===0 && !e.subscribe;
+  el.innerHTML = `<div class="big">${fmt(subs.active)} <small>active subscribers</small></div>
+    <div style="margin-top:.5rem">
+      <div class="kv"><span class="muted">Active trials</span><b>${fmt(subs.trials)}</b></div>
+      <div class="kv"><span class="muted">New subscribes · 30d</span><b>${fmt(e.subscribe)}</b></div>
+      <div class="kv"><span class="muted">Trial → paid · 30d</span><b>${fmt(e.conversion)}</b></div>
+      <div class="kv"><span class="muted">Cancellations · 30d</span><b>${fmt(e.cancel)}</b></div>
+    </div>
+    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}App Store sub reports lag a few days.${zero?' Zero so far — installers aren’t converting to paid yet; that’s the funnel’s real leak, not traffic.':''}</div>`;
+}
+
 function renderRecs(recs){
   if(!recs) return;
   document.getElementById("rec-meta").textContent = (recs.note||"") + (recs.updated?(" · updated "+recs.updated):"");
@@ -371,7 +412,7 @@ function renderRecs(recs){
   const fill=(id,arr)=>{ const el=document.getElementById(id); if(el&&arr) el.innerHTML=(arr||[]).map(card).join(""); };
   const S=recs.sections||{};
   fill("rec-overall", S.overall); fill("rec-traffic", S.traffic); fill("rec-conversion", S.conversion);
-  fill("rec-socials", S.socials); fill("rec-ops", S.ops);
+  fill("rec-revenue", S.revenue); fill("rec-socials", S.socials); fill("rec-ops", S.ops);
 }
 
 document.getElementById("allBtn").addEventListener("click", async function(){
