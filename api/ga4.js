@@ -85,8 +85,12 @@ export default async function handler(req, res) {
       report(pid, token, { dateRanges: rWin, metrics: [{ name: "totalUsers" }], dimensionFilter: clickFilter }),   // unique users who tapped Install
     ]);
 
-    let realtime = null;
+    let realtime = null, realtime_detail = [];
     try { const rt = await report(pid, token, { metrics: [{ name: "activeUsers" }] }, true); realtime = num(rt.rows?.[0]?.metricValues?.[0]?.value); } catch { /* realtime optional */ }
+    try {
+      const rd = await report(pid, token, { dimensions: [{ name: "city" }, { name: "deviceCategory" }, { name: "unifiedScreenName" }], metrics: [{ name: "activeUsers" }] }, true);
+      realtime_detail = (rd.rows || []).map((r) => ({ city: r.dimensionValues?.[0]?.value, device: r.dimensionValues?.[1]?.value, page: r.dimensionValues?.[2]?.value, users: num(r.metricValues?.[0]?.value) }));
+    } catch { /* detail optional */ }
 
     const t = totalsR.rows?.[0]?.metricValues || [];
     const activeUsers = num(t[0]?.value), newUsers = num(t[1]?.value), sessions = num(t[2]?.value),
@@ -108,6 +112,7 @@ export default async function handler(req, res) {
       engagement: { avg_sec_per_user: activeUsers ? Math.round(engDur / activeUsers) : 0, rate_pct: sessions ? r1((engagedSessions / sessions) * 100) : 0 },
       new_pct: activeUsers ? r1((newUsers / activeUsers) * 100) : 0,
       realtime,
+      realtime_detail,
       conversion: { app_store_clicks: clicks_total, click_rate_pct: activeUsers ? r1((clicks_total / activeUsers) * 100) : 0 },
       top_pages: (pages.rows || []).map((r) => ({ key: r.dimensionValues?.[0]?.value, views: num(r.metricValues?.[0]?.value), users: num(r.metricValues?.[1]?.value) })),
       channels: rows(channels),
