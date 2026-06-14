@@ -352,7 +352,7 @@ function renderGA(ga, feed){
   document.getElementById("ga-conv-body").innerHTML =
     `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · 30d</small></div>
      <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (30d)</span><b>${C.click_rate_pct}%</b></div>
-     <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\\'t enough traffic to even test this. The failure point right now is upstream (traffic), not the CTA.':''}</div>`;
+     <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\'t enough traffic to even test this. The failure point right now is upstream (traffic), not the CTA.':''}</div>`;
 
   const clicks=ga.app_store_clicks||[];
   document.getElementById("ga-attr-body").innerHTML = clicks.length
@@ -384,7 +384,7 @@ function renderSubs(subs){
       <div class="kv"><span class="muted">Trial → paid · 30d</span><b>${fmt(e.conversion)}</b></div>
       <div class="kv"><span class="muted">Cancellations · 30d</span><b>${fmt(e.cancel)}</b></div>
     </div>
-    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}${zero?'Zero so far — but with ~0 installs there\\'s nothing to convert yet. This becomes meaningful once installs climb.':'App Store sub reports lag a few days.'}</div>`;
+    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}${zero?'Zero so far — but with ~0 installs there\'s nothing to convert yet. This becomes meaningful once installs climb.':'App Store sub reports lag a few days.'}</div>`;
 }
 
 function renderSocials(ins){
