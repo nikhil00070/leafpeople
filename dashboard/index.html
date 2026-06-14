@@ -91,6 +91,11 @@ code { background:rgba(0,0,0,.05); padding:1px 5px; border-radius:5px; font-size
       </div>
     </div>
   </div>
+  <div class="grid g3" style="margin-top:.9rem">
+    <div class="card" id="ga-trend"><h3>Daily users · 30d</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">Connect GA4.</div></div>
+    <div class="card" id="ga-engagement"><h3>Engagement</h3><div id="ga-eng-body" class="muted" style="font-size:.85rem">Connect GA4.</div></div>
+    <div class="card" id="ga-conversion"><h3>Install intent · App Store clicks</h3><div id="ga-conv-body" class="muted" style="font-size:.85rem">Connect GA4.</div></div>
+  </div>
   <div class="grid g2" style="margin-top:.9rem">
     <div class="card" id="ga-pages"><h3>Top articles · 30d views</h3><div id="ga-pages-body" class="muted" style="font-size:.85rem">Connect GA4 to populate.</div></div>
     <div class="card" id="ga-attr"><h3>Articles that landed customers · App Store clicks</h3><div id="ga-attr-body" class="muted" style="font-size:.85rem">Connect GA4 to populate.</div></div>
@@ -213,34 +218,49 @@ function renderSocials(ins) {
     `<div class="row"><span class="d">${fmt(p.reach)}</span><span>${p.is_reel?"▶":"🖼"} ${esc(p.label||"")}${p.hook?" 🪝":""}</span></div>`).join("") || "—";
 }
 
+function fmtDur(s){ s=Math.round(s||0); if(s<60) return s+"s"; const m=Math.floor(s/60), r=s%60; return m+"m"+(r?" "+r+"s":""); }
+function sparkline(series){
+  if(!series||series.length<2) return '<span class="muted">—</span>';
+  const v=series.map(p=>p.users), max=Math.max(...v,1), min=Math.min(...v,0), w=240, h=42, dx=w/(series.length-1);
+  const pts=v.map((u,i)=>`${(i*dx).toFixed(1)},${(h-3-(u-min)/((max-min)||1)*(h-6)).toFixed(1)}`).join(" ");
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none"><defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5BD17A"/><stop offset="1" stop-color="#2E7DF6"/></linearGradient></defs><polyline points="${pts}" fill="none" stroke="url(#gl)" stroke-width="2" stroke-linejoin="round"/></svg>`;
+}
 function renderGA(ga, feed) {
   const t = document.getElementById("traffic");
-  const pagesB = document.getElementById("ga-pages-body");
-  const attrB = document.getElementById("ga-attr-body");
   const pathTitle = {};
   (feed && feed.items || []).forEach(i => { try { pathTitle[new URL(i.url).pathname] = i.title; } catch(e){} });
   const label = (p) => esc(pathTitle[p] || p);
-
-  if (!ga || !ga.connected) {
-    if (ga && ga.error) t.querySelector("p").textContent = "GA4 error: " + ga.error;
-    return;
-  }
+  if (!ga || !ga.connected) { if (ga && ga.error){ const p=t.querySelector("p"); if(p) p.textContent = "GA4 error: " + ga.error; } return; }
   t.classList.remove("connect");
-  const T = ga.totals || {};
-  t.innerHTML = `<h3>Traffic · GA4</h3>
-    <div class="big">${fmt(T.sessions)} <small>sessions · 30d</small></div>
+  const T=ga.totals||{}, D=ga.dau||{}, E=ga.engagement||{}, C=ga.conversion||{};
+  t.innerHTML = `<h3>Audience · GA4</h3>
+    <div class="big">${fmt(D.avg7)} <small>avg DAU · 7d</small></div>
     <div style="margin-top:.55rem">
       ${ga.realtime!=null?`<div class="kv"><span class="muted">● Active now</span><b>${fmt(ga.realtime)}</b></div>`:""}
-      <div class="kv"><span class="muted">Users (30d)</span><b>${fmt(T.users)}</b></div>
-      <div class="kv"><span class="muted">Pageviews (30d)</span><b>${fmt(T.pageviews)}</b></div>
-      ${(ga.channels||[]).slice(0,3).map(c=>`<div class="kv"><span class="muted">${esc(c.key||"")}</span><b>${fmt(c.value)}</b></div>`).join("")}
+      <div class="kv"><span class="muted">Total users · all-time</span><b>${fmt(ga.total_users)}</b></div>
+      <div class="kv"><span class="muted">Users · 30d</span><b>${fmt(T.users)}</b></div>
+      <div class="kv"><span class="muted">New users · 30d</span><b>${ga.new_pct}%</b></div>
     </div>`;
-
-  pagesB.innerHTML = (ga.top_pages||[]).map(r =>
+  const peak = Math.max(...((ga.dau_series||[{users:0}]).map(p=>p.users)), 0);
+  document.getElementById("ga-trend-body").innerHTML =
+    `<div class="big">${fmt(D.avg30)} <small>avg DAU · 30d</small></div>
+     <div style="margin:.5rem 0 .15rem">${sparkline(ga.dau_series)}</div>
+     <div class="dim-note">peak ${fmt(peak)} · today ${fmt(D.today)}</div>`;
+  document.getElementById("ga-eng-body").innerHTML =
+    `<div class="big">${fmtDur(E.avg_sec_per_user)} <small>avg / user</small></div>
+     <div style="margin-top:.5rem">
+       <div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div>
+       <div class="kv"><span class="muted">Sessions · 30d</span><b>${fmt(T.sessions)}</b></div>
+       <div class="kv"><span class="muted">Pageviews · 30d</span><b>${fmt(T.pageviews)}</b></div>
+     </div>`;
+  document.getElementById("ga-conv-body").innerHTML =
+    `<div class="big">${fmt(C.app_store_clicks)} <small>App Store clicks · 30d</small></div>
+     <div class="kv" style="margin-top:.5rem"><span class="muted">Click rate (of users)</span><b>${C.click_rate_pct}%</b></div>
+     <div class="kv"><span class="muted">Top channel</span><b>${esc((ga.channels||[]).slice(0,1).map(c=>c.key).join("")||"—")}</b></div>`;
+  document.getElementById("ga-pages-body").innerHTML = (ga.top_pages||[]).map(r =>
     `<div class="row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("") || "—";
-
   const clicks = ga.app_store_clicks || [];
-  attrB.innerHTML = clicks.length
+  document.getElementById("ga-attr-body").innerHTML = clicks.length
     ? clicks.map(r => `<div class="row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
     : '<p class="dim-note">No App Store clicks recorded in the last 30 days yet.</p>';
 }

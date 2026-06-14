@@ -65,31 +65,46 @@ export default async function handler(req, res) {
 
   try {
     const token = await accessToken(sa);
-    const range = [{ startDate: "30daysAgo", endDate: "today" }];
+    const r30 = [{ startDate: "30daysAgo", endDate: "today" }];
+    const rAll = [{ startDate: "2020-01-01", endDate: "today" }];   // "since launch" — GA returns from first data
+    const clickFilter = { filter: { fieldName: "eventName", inListFilter: { values: ["app_store_click"] } } };
 
-    const [totals, pages, channels, clicks] = await Promise.all([
-      report(pid, token, { dateRanges: range, metrics: [{ name: "sessions" }, { name: "totalUsers" }, { name: "screenPageViews" }] }),
-      report(pid, token, { dateRanges: range, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 8 }),
-      report(pid, token, { dateRanges: range, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: 6 }),
-      report(pid, token, {
-        dateRanges: range, dimensions: [{ name: "pagePath" }], metrics: [{ name: "eventCount" }],
-        dimensionFilter: { filter: { fieldName: "eventName", inListFilter: { values: ["app_store_click"] } } },
-        orderBys: [{ metric: { metricName: "eventCount" }, desc: true }], limit: 8,
-      }),
+    const [totalsR, allR, seriesR, pages, channels, clicksByPage, clicksTotalR] = await Promise.all([
+      report(pid, token, { dateRanges: r30, metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }, { name: "screenPageViews" }, { name: "engagedSessions" }, { name: "userEngagementDuration" }] }),
+      report(pid, token, { dateRanges: rAll, metrics: [{ name: "totalUsers" }] }),
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "date" }], metrics: [{ name: "activeUsers" }], orderBys: [{ dimension: { dimensionName: "date" } }], limit: 40 }),
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: 8 }),
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: 6 }),
+      report(pid, token, { dateRanges: r30, dimensions: [{ name: "pagePath" }], metrics: [{ name: "eventCount" }], dimensionFilter: clickFilter, orderBys: [{ metric: { metricName: "eventCount" }, desc: true }], limit: 8 }),
+      report(pid, token, { dateRanges: r30, metrics: [{ name: "eventCount" }], dimensionFilter: clickFilter }),
     ]);
 
     let realtime = null;
     try { const rt = await report(pid, token, { metrics: [{ name: "activeUsers" }] }, true); realtime = num(rt.rows?.[0]?.metricValues?.[0]?.value); } catch { /* realtime optional */ }
 
-    const m = totals.rows?.[0]?.metricValues || [];
+    const t = totalsR.rows?.[0]?.metricValues || [];
+    const activeUsers = num(t[0]?.value), newUsers = num(t[1]?.value), sessions = num(t[2]?.value),
+      pageviews = num(t[3]?.value), engagedSessions = num(t[4]?.value), engDur = num(t[5]?.value);
+    const series = (seriesR.rows || []).map((r) => ({ date: r.dimensionValues[0].value, users: num(r.metricValues[0].value) }));
+    const mean = (arr) => (arr.length ? arr.reduce((s, x) => s + x.users, 0) / arr.length : 0);
+    const r1 = (n) => Math.round(n * 10) / 10;
+    const total_users = num(allR.rows?.[0]?.metricValues?.[0]?.value);
+    const clicks_total = num(clicksTotalR.rows?.[0]?.metricValues?.[0]?.value);
+
     cache = {
       connected: true,
       updated: new Date().toISOString(),
-      totals: { sessions: num(m[0]?.value), users: num(m[1]?.value), pageviews: num(m[2]?.value) },
+      totals: { sessions, users: activeUsers, pageviews, newUsers },
+      total_users,
+      dau: { avg7: r1(mean(series.slice(-7))), avg30: r1(mean(series)), today: series.length ? series[series.length - 1].users : 0 },
+      dau_series: series,
+      engagement: { avg_sec_per_user: activeUsers ? Math.round(engDur / activeUsers) : 0, rate_pct: sessions ? r1((engagedSessions / sessions) * 100) : 0 },
+      new_pct: activeUsers ? r1((newUsers / activeUsers) * 100) : 0,
       realtime,
+      conversion: { app_store_clicks: clicks_total, click_rate_pct: activeUsers ? r1((clicks_total / activeUsers) * 100) : 0 },
       top_pages: rows(pages),
       channels: rows(channels),
-      app_store_clicks: rows(clicks),
+      app_store_clicks: rows(clicksByPage),
     };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
