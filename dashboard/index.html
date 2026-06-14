@@ -22,8 +22,8 @@ body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var
 .brand img { width:clamp(2.4rem,6vw,3.6rem); height:clamp(2.4rem,6vw,3.6rem); border-radius:50%; background:#000; padding:18%; object-fit:contain; }
 h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2.2rem,5.5vw,3.4rem); margin:0; letter-spacing:-.04em; line-height:.98; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .sub { color:var(--faint); font-size:.84rem; margin:.35rem 0 0; }
-.bigbtn { padding:.7rem 1.4rem; border-radius:100px; font-weight:800; font-size:.92rem; cursor:pointer; border:none; font-family:'Geologica',sans-serif; background:var(--grad); color:#06140C; transition:transform .2s, box-shadow .2s, filter .2s; white-space:nowrap; }
-.bigbtn:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 10px 28px rgba(46,125,246,.25); filter:brightness(1.04); }
+.bigbtn { padding:.7rem 1.4rem; border-radius:100px; font-weight:800; font-size:.92rem; cursor:pointer; border:none; font-family:'Geologica',sans-serif; background:#FA2A52; color:#fff; transition:transform .2s, box-shadow .2s, background .2s; white-space:nowrap; }
+.bigbtn:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 6px 18px rgba(250,42,82,.3); background:#e0234a; }
 .bigbtn:disabled { opacity:.55; cursor:default; }
 .bstatus { font-size:.78rem; margin-top:.4rem; text-align:right; }
 
@@ -104,7 +104,7 @@ a { color:var(--blue); }
       </div>
     </div>
     <div>
-      <button class="bigbtn" id="allBtn">↻ Show me everything</button>
+      <button class="bigbtn" id="allBtn">↻ Give me everything</button>
       <div class="bstatus" id="allStatus"></div>
     </div>
   </div>
@@ -166,7 +166,7 @@ a { color:var(--blue); }
 
   <!-- SOCIALS -->
   <div class="panel" id="tab-socials">
-    <p class="sec-sub">Pulled on demand by "Show me everything." Reels are the reach lever.</p>
+    <p class="sec-sub">Pulled on demand by "Give me everything." Reels are the reach lever.</p>
     <div class="grid g3">
       <div class="card" id="socials"><h3>Account</h3><div class="big muted" id="ig-headline" style="font-size:1rem">Loading…</div><div id="ig-body"></div></div>
       <div class="card"><h3>Reels vs Static</h3><div id="ig-rv" class="muted" style="font-size:.85rem">Run a refresh.</div></div>
@@ -390,7 +390,7 @@ function renderSubs(subs){
 
 function renderSocials(ins){
   const head=document.getElementById("ig-headline");
-  if(!ins){ head.classList.add("muted"); head.innerHTML='No data yet'; document.getElementById("ig-body").innerHTML='<p class="help">Hit "Show me everything" to pull it.</p>'; return; }
+  if(!ins){ head.classList.add("muted"); head.innerHTML='No data yet'; document.getElementById("ig-body").innerHTML='<p class="help">Hit "Give me everything" to pull it.</p>'; return; }
   const a=ins.account||{}; head.classList.remove("muted");
   head.innerHTML=fmt(a.followers)+' <small>followers · '+fmt(a.posts)+' posts</small>';
   document.getElementById("ig-body").innerHTML=`<p class="help">@${esc(a.username||"")} · updated ${esc((ins.updated||"").replace("T"," ").slice(0,16))}</p>`;
