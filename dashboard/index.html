@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Mission Control — Leaf People</title>
+<title>Situation Room — Leaf People</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -17,24 +17,31 @@
 * { box-sizing:border-box; }
 body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); margin:0; padding:1.6rem; line-height:1.6; }
 .wrap { max-width:1140px; margin:0 auto; }
-h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:1.8rem; margin:0; letter-spacing:-.02em; }
-.sub { color:var(--faint); font-size:.84rem; margin:.3rem 0 0; }
-.topbar { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap; }
+.topbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+.brand { display:flex; align-items:center; gap:.8rem; }
+.brand img { width:46px; height:46px; border-radius:12px; }
+h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2rem,4.5vw,2.9rem); margin:0; letter-spacing:-.03em; line-height:1; }
+.sub { color:var(--faint); font-size:.84rem; margin:.35rem 0 0; }
 .bigbtn { padding:.7rem 1.4rem; border-radius:100px; font-weight:800; font-size:.92rem; cursor:pointer; border:none; font-family:'Geologica',sans-serif; background:var(--grad); color:#06140C; transition:transform .2s, box-shadow .2s, filter .2s; white-space:nowrap; }
 .bigbtn:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 10px 28px rgba(46,125,246,.25); filter:brightness(1.04); }
 .bigbtn:disabled { opacity:.55; cursor:default; }
 .bstatus { font-size:.78rem; margin-top:.4rem; text-align:right; }
 
-/* sections */
-.sec { margin-top:1.7rem; padding-top:1rem; border-top:2px solid var(--border); }
-.sec-h { font-family:'Geologica',sans-serif; font-weight:800; font-size:1.05rem; letter-spacing:-.01em; margin:0 0 .2rem; display:flex; align-items:center; gap:.5rem; }
-.sec-sub { color:var(--faint); font-size:.8rem; margin:0 0 .9rem; }
+.kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:.9rem; margin-top:1.2rem; }
+@media (max-width:820px){ .kpis { grid-template-columns:repeat(2,1fr); } }
+
+/* tabs */
+.tabs { display:flex; gap:.3rem; margin:1.6rem 0 1.1rem; border-bottom:2px solid var(--border); overflow-x:auto; }
+.tabs button { font-family:'Geologica',sans-serif; font-weight:700; font-size:.92rem; color:var(--faint); background:none; border:none; border-bottom:3px solid transparent; padding:.6rem .9rem; cursor:pointer; white-space:nowrap; margin-bottom:-2px; }
+.tabs button:hover { color:var(--dim); }
+.tabs button.active { color:var(--text); border-bottom-color:#2E7DF6; }
+.panel { display:none; } .panel.active { display:block; }
 
 .grid { display:grid; gap:.9rem; }
 .g2 { grid-template-columns:repeat(2,1fr); } .g3 { grid-template-columns:repeat(3,1fr); }
-.kpis { grid-template-columns:repeat(5,1fr); }
-@media (max-width:820px){ .g3,.kpis { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:820px){ .g3 { grid-template-columns:repeat(2,1fr); } }
 @media (max-width:560px){ .g2,.g3,.kpis { grid-template-columns:1fr; } }
+.row-sp { margin-top:.9rem; }
 
 .card { background:var(--card); border:1px solid var(--border-card); border-radius:16px; padding:1.05rem 1.15rem; }
 .card h3 { margin:0 0 .5rem; font-size:.7rem; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); font-weight:700; }
@@ -45,37 +52,43 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:1.8rem; marg
 .kv { display:flex; justify-content:space-between; gap:.6rem; font-size:.85rem; padding:.28rem 0; border-bottom:1px solid var(--border); }
 .kv:last-child { border-bottom:0; } .kv b { font-weight:700; }
 .help { font-size:.74rem; color:var(--faint); margin-top:.5rem; line-height:1.45; }
-.row { font-size:.82rem; padding:.3rem 0; border-bottom:1px solid var(--border); display:flex; gap:.6rem; align-items:baseline; }
-.row:last-child { border-bottom:0; }
-.row .d { color:var(--faint); font-variant-numeric:tabular-nums; min-width:3.4rem; text-align:right; }
-.pill { display:inline-block; font-size:.6rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 8px; border-radius:20px; }
+.list-row { font-size:.82rem; padding:.3rem 0; border-bottom:1px solid var(--border); display:flex; gap:.6rem; align-items:baseline; }
+.list-row:last-child { border-bottom:0; }
+.list-row .d { color:var(--faint); font-variant-numeric:tabular-nums; min-width:3.4rem; text-align:right; }
+.pill { display:inline-block; font-size:.58rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:1px 7px; border-radius:20px; vertical-align:middle; }
 .p-ok{background:rgba(31,157,87,.12);color:var(--green)} .p-warn{background:rgba(180,83,9,.12);color:var(--amber)}
-.p-low{background:rgba(250,42,82,.1);color:var(--pink)} .p-off{background:rgba(0,0,0,.05);color:var(--faint)} .p-blue{background:rgba(37,99,235,.1);color:var(--blue)}
+.p-low{background:rgba(250,42,82,.1);color:var(--pink)} .p-off{background:rgba(0,0,0,.05);color:var(--faint)}
+.p-blue{background:rgba(37,99,235,.1);color:var(--blue)} .p-pink{background:var(--pink);color:#fff}
 
-/* labeled bar chart */
-.chart { display:flex; align-items:flex-end; gap:2px; height:52px; }
-.chart .bar { flex:1; background:var(--grad); border-radius:2px 2px 0 0; min-height:2px; opacity:.85; }
-.chart .bar.zero { background:rgba(0,0,0,.08); }
+/* charts */
+.chart { display:flex; align-items:flex-end; gap:3px; height:54px; }
+.chart .bar { flex:1; background:var(--grad); border-radius:2px 2px 0 0; min-height:3px; cursor:default; }
+.chart .bar.zero { background:rgba(0,0,0,.09); }
+.chart .bar:hover { filter:brightness(1.15); }
 .chart-x { display:flex; justify-content:space-between; font-size:.68rem; color:var(--faint); margin-top:.35rem; }
+.tip { position:fixed; display:none; background:#1a1a1a; color:#fff; font-size:.72rem; font-weight:600; padding:3px 9px; border-radius:6px; pointer-events:none; z-index:1000; white-space:nowrap; }
 
-/* timeline table */
-.tl { width:100%; border-collapse:collapse; font-size:.82rem; }
-.tl th { text-align:left; font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:var(--faint); font-weight:700; padding:.4rem .5rem; border-bottom:1px solid var(--border); }
-.tl td { padding:.45rem .5rem; border-bottom:1px solid var(--border); vertical-align:top; }
-.tl tr.hot td { background:rgba(31,157,87,.06); }
+/* timeline */
+.tl { width:100%; border-collapse:collapse; font-size:.83rem; }
+.tl th { text-align:left; font-size:.64rem; text-transform:uppercase; letter-spacing:.06em; color:var(--faint); font-weight:700; padding:.45rem .55rem; border-bottom:1px solid var(--border); }
+.tl td { padding:.5rem .55rem; border-bottom:1px solid var(--border); vertical-align:top; }
+.tl tr.today td { background:rgba(250,42,82,.07); }
+.tl tr.hot td { box-shadow:inset 3px 0 0 var(--green); }
 .tl .n { font-variant-numeric:tabular-nums; font-weight:700; }
 .tl .ig { color:var(--dim); }
 
 /* insight -> action */
-.rec { background:#fff; border:1px solid var(--border-card); border-left:3px solid var(--faint); border-radius:12px; padding:.7rem .9rem; margin-top:.6rem; }
+.rec { background:var(--card); border:1px solid var(--border-card); border-left:3px solid var(--faint); border-radius:12px; padding:.75rem .95rem; margin-top:.7rem; }
 .rec.high{border-left-color:var(--pink)} .rec.medium{border-left-color:var(--amber)} .rec.low{border-left-color:rgba(0,0,0,.18)}
-.rec .ins { font-size:.84rem; } .rec .ins b { font-weight:700; }
-.rec .act { font-size:.84rem; color:var(--blue); margin-top:.25rem; } .rec .act::before { content:"→ "; }
+.rec .ins { font-size:.86rem; } .rec .ins b { font-weight:700; }
+.rec .act { font-size:.86rem; color:var(--blue); margin-top:.3rem; } .rec .act::before { content:"→ "; }
 .rec .by { font-size:.7rem; color:var(--faint); margin-top:.25rem; }
+.recs-h { font-family:'Geologica'; font-weight:800; font-size:.95rem; margin:1.4rem 0 .2rem; }
 
-.links { display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.2rem; }
+.links { display:flex; gap:.6rem; flex-wrap:wrap; margin:.2rem 0 1rem; }
 .links a { font-size:.8rem; text-decoration:none; color:var(--blue); background:rgba(37,99,235,.07); border:1px solid rgba(37,99,235,.15); border-radius:8px; padding:.35rem .7rem; font-weight:600; }
 .links a:hover { background:rgba(37,99,235,.13); }
+.sec-sub { color:var(--faint); font-size:.82rem; margin:0 0 .9rem; }
 code { background:rgba(0,0,0,.05); padding:1px 5px; border-radius:5px; font-size:.85em; }
 a { color:var(--blue); }
 </style>
@@ -83,9 +96,12 @@ a { color:var(--blue); }
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div>
-      <h1>🌿 Mission Control</h1>
-      <p class="sub">Everything Leaf People — insight → action. <span id="freshness"></span> Private (noindex).</p>
+    <div class="brand">
+      <img src="/images/icon-64.png" alt="Leaf People">
+      <div>
+        <h1>Situation Room</h1>
+        <p class="sub">Everything Leaf People — insight → action. <span id="freshness"></span></p>
+      </div>
     </div>
     <div>
       <button class="bigbtn" id="allBtn">↻ Show me everything</button>
@@ -93,109 +109,107 @@ a { color:var(--blue); }
     </div>
   </div>
 
-  <!-- KPIs -->
-  <div class="grid kpis" style="margin-top:1.2rem">
+  <div class="kpis">
     <div class="card kpi"><h3>Unique users · 30d</h3><div class="big" id="kpi-users">—</div></div>
     <div class="card kpi"><h3>Avg daily users</h3><div class="big" id="kpi-dau">—</div></div>
     <div class="card kpi"><h3>Downloads · all-time</h3><div class="big" id="kpi-downloads">—</div></div>
     <div class="card kpi"><h3>Install taps · 30d</h3><div class="big" id="kpi-taps">—</div></div>
-    <div class="card kpi"><h3>IG followers</h3><div class="big" id="kpi-followers">—</div></div>
+    <div class="card kpi"><h3>Subscribers</h3><div class="big" id="kpi-subs">—</div></div>
   </div>
 
-  <!-- WHAT'S WORKING -->
-  <div class="sec">
-    <div class="sec-h">🔎 What's working / what's not</div>
-    <p class="sec-sub">Web users, app downloads, and what posted on Instagram — on one timeline, so cause and effect line up. Correlation, not proof, at this volume.</p>
+  <div class="tabs" id="tabs">
+    <button data-tab="overview" class="active">🔎 Overview</button>
+    <button data-tab="traffic">📈 Traffic</button>
+    <button data-tab="conversion">🔗 Conversion</button>
+    <button data-tab="socials">📱 Socials</button>
+    <button data-tab="downloads">⬇️ Downloads</button>
+    <button data-tab="ops">🛠 Ops</button>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="panel active" id="tab-overview">
+    <p class="sec-sub">Web users, app installs, and what posted on Instagram — one timeline since launch (Jun 9). Today is highlighted; correlation, not proof, at this volume.</p>
     <div class="card"><div id="timeline-body" class="muted" style="font-size:.85rem">Loading…</div></div>
+    <div class="recs-h">What to do</div>
     <div id="rec-overall"></div>
   </div>
 
   <!-- TRAFFIC -->
-  <div class="sec">
-    <div class="sec-h">📈 Traffic · Web <span class="pill p-blue">GA4</span></div>
-    <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them) unless noted. Last 30 days.</p>
+  <div class="panel" id="tab-traffic">
+    <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them). Last 30 days.</p>
     <div class="grid g3">
-      <div class="card" id="traffic"><h3>Audience</h3><div class="muted" style="font-size:.85rem">Connect / load GA4.</div></div>
+      <div class="card" id="traffic"><h3>Audience</h3><div class="muted" style="font-size:.85rem">Load GA4.</div></div>
       <div class="card"><h3>Daily unique users · 14d</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">—</div></div>
       <div class="card"><h3>Engagement</h3><div id="ga-eng-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
-    <div class="grid g2" style="margin-top:.9rem">
+    <div class="grid g2 row-sp">
       <div class="card"><h3>Where users come from · channels</h3><div id="ga-channels-body" class="muted" style="font-size:.85rem">—</div></div>
       <div class="card"><h3>Top articles · unique readers</h3><div id="ga-pages-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
+    <div class="recs-h">What to do</div>
     <div id="rec-traffic"></div>
   </div>
 
-  <!-- WEB -> APP -->
-  <div class="sec">
-    <div class="sec-h">🔗 Web → App download</div>
-    <p class="sec-sub">The bridge: people who tapped the <b>App Store</b> button on the site (the install funnel). Unique users.</p>
-    <div class="grid g2">
-      <div class="card" id="ga-conv"><h3>Install-button taps</h3><div id="ga-conv-body" class="muted" style="font-size:.85rem">—</div></div>
+  <!-- CONVERSION -->
+  <div class="panel" id="tab-conversion">
+    <p class="sec-sub">The path: read → install → subscribe. Where does it leak?</p>
+    <div class="card"><h3>Conversion funnel</h3><div id="funnel-body" class="muted" style="font-size:.85rem">—</div></div>
+    <div class="grid g2 row-sp">
+      <div class="card"><h3>Install-button taps</h3><div id="ga-conv-body" class="muted" style="font-size:.85rem">—</div></div>
       <div class="card"><h3>Articles that drove install taps</h3><div id="ga-attr-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
+    <div class="card row-sp"><h3>Subscriptions</h3><div id="subs-body" class="muted" style="font-size:.85rem">—</div></div>
+    <div class="recs-h">What to do</div>
     <div id="rec-conversion"></div>
-  </div>
-
-  <!-- SUBSCRIPTIONS / FUNNEL -->
-  <div class="sec">
-    <div class="sec-h">💳 Subscriptions & funnel</div>
-    <p class="sec-sub">The whole path: read → install → subscribe. Subscriptions come from App Store Connect (all subs originate there; web is unlock-only).</p>
-    <div class="grid g2">
-      <div class="card"><h3>Conversion funnel</h3><div id="funnel-body" class="muted" style="font-size:.85rem">—</div></div>
-      <div class="card"><h3>Subscriptions</h3><div id="subs-body" class="muted" style="font-size:.85rem">—</div></div>
-    </div>
     <div id="rec-revenue"></div>
   </div>
 
   <!-- SOCIALS -->
-  <div class="sec">
-    <div class="sec-h">📱 Socials · Instagram</div>
+  <div class="panel" id="tab-socials">
     <p class="sec-sub">Pulled on demand by "Show me everything." Reels are the reach lever.</p>
     <div class="grid g3">
       <div class="card" id="socials"><h3>Account</h3><div class="big muted" id="ig-headline" style="font-size:1rem">Loading…</div><div id="ig-body"></div></div>
       <div class="card"><h3>Reels vs Static</h3><div id="ig-rv" class="muted" style="font-size:.85rem">Run a refresh.</div></div>
       <div class="card"><h3>Top posts · reach</h3><div id="ig-topbody" class="muted" style="font-size:.85rem">—</div></div>
     </div>
+    <div class="recs-h">What to do</div>
     <div id="rec-socials"></div>
   </div>
 
   <!-- DOWNLOADS -->
-  <div class="sec">
-    <div class="sec-h">⬇️ App downloads <span class="pill p-blue">App Store</span></div>
-    <p class="sec-sub">First-time installs. Apple data lags ~24–48h, so "latest" is a day or two back.</p>
-    <div class="grid g3">
-      <div class="card" id="downloads"><h3>Downloads</h3><div class="muted" style="font-size:.85rem">Connect / load App Store.</div></div>
+  <div class="panel" id="tab-downloads">
+    <p class="sec-sub">First-time installs. Apple data lags ~24–48h.</p>
+    <div class="grid g2">
+      <div class="card" id="downloads"><h3>Downloads</h3><div class="muted" style="font-size:.85rem">Load App Store.</div></div>
       <div class="card"><h3>Daily downloads · 14d</h3><div id="asc-trend-body" class="muted" style="font-size:.85rem">—</div></div>
-      <div class="card"><h3>Read this with the timeline</h3><div class="help" style="margin-top:0">Each install is rare right now — check the timeline above to see which post/day each download lined up with, so you can repeat it.</div></div>
     </div>
   </div>
 
   <!-- OPS -->
-  <div class="sec">
-    <div class="sec-h">🛠 Ops</div>
-    <p class="sec-sub">The content engine + quick links to the tools that drive it.</p>
+  <div class="panel" id="tab-ops">
     <div class="links">
       <a href="/instagram" target="_blank">/instagram ↗</a>
       <a href="/articledrip" target="_blank">/articledrip ↗</a>
       <a href="/review" target="_blank">/review ↗</a>
       <a href="/review-images" target="_blank">/review-images ↗</a>
     </div>
-    <div class="grid g3" style="margin-top:.9rem">
+    <div class="grid g3">
       <div class="card"><h3>Content live</h3><div class="big" id="content-big">—</div><div id="content-kv" style="margin-top:.5rem"></div></div>
       <div class="card"><h3>Queue runway</h3><div id="runway-body" class="muted">—</div></div>
       <div class="card"><h3>Automation health</h3><div id="auto-body" class="muted">—</div></div>
     </div>
-    <div class="card" style="margin-top:.9rem">
+    <div class="card row-sp">
       <h3>Front of the drip — next stories for a NEW subscriber</h3>
       <div id="drip-body" class="muted" style="font-size:.85rem">—</div>
-      <div class="help">This is the fixed sequence any new subscriber's Stories drop in (welcome pair, then one every 2 days) — same for everyone, anchored to their join date. Reorder it on <a href="/articledrip" target="_blank">/articledrip</a>.</div>
+      <div class="help">Fixed sequence any new subscriber's Stories drop in (welcome pair, then one every 2 days) — same for everyone, anchored to their join date. Reorder on <a href="/articledrip" target="_blank">/articledrip</a>.</div>
     </div>
+    <div class="recs-h">What to do</div>
     <div id="rec-ops"></div>
   </div>
 
-  <p class="help" id="rec-meta" style="margin-top:1.5rem"></p>
+  <p class="help" id="rec-meta" style="margin-top:1.6rem"></p>
 </div>
+<div class="tip" id="tip"></div>
 
 <script>
 const J = (u) => fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null);
@@ -204,33 +218,49 @@ const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
 const esc = (s) => (s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const fmtDur = (s) => { s=Math.round(s||0); if(s<60) return s+"s"; const m=Math.floor(s/60),r=s%60; return m+"m"+(r?" "+r+"s":""); };
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const iso2 = (s) => s && s.length===8 ? s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6,8) : s;   // GA YYYYMMDD -> YYYY-MM-DD
+const iso2 = (s) => s && s.length===8 ? s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6,8) : s;
 const dlabel = (iso) => { if(!iso) return ""; const [y,m,d]=iso.split("-"); return MON[+m-1]+" "+(+d); };
-const postDate = (day) => { const d=new Date("2026-06-07T00:00:00"); d.setDate(d.getDate()+(day-1)); return d.toISOString().slice(0,10); };  // auto-poster start_date
+const localISO = (dt) => new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,10);
+const LAUNCH = "2026-06-09";
+// d1-d3 launched Jun 9; then 1/day. dN -> Jun 9 for N<=3, else Jun 6 + N.
+const realPostDate = (day) => { const b=new Date(LAUNCH+"T00:00:00"); b.setDate(b.getDate()+(day<=3?0:day-3)); return localISO(b); };
 
 const CHANNEL_HELP = {
-  "Direct":"No referrer — typed URL, bookmark, the app, or an untagged link. Your Instagram bio link (no UTM tags) lands here.",
+  "Direct":"No referrer — typed URL, bookmark, the app, or an untagged link. (Your old bio link landed here; the new leafpeople.app/ig fixes that.)",
   "Organic Search":"Found you via Google/Bing — your SEO at work.",
-  "Organic Social":"Came from a social platform (Instagram etc.), unpaid.",
+  "Organic Social":"Came from a social platform (Instagram etc.), unpaid — what the tagged bio link now produces.",
   "Referral":"Clicked a link from another website.",
   "Email":"From an email link.",
   "Unassigned":"GA couldn't categorize the source.",
 };
 
+// hover tooltip for charts
+const tip = document.getElementById("tip");
+document.addEventListener("mouseover", e=>{ const b=e.target.closest&&e.target.closest(".bar"); if(b&&b.dataset.l){ tip.textContent=b.dataset.l+": "+b.dataset.v; tip.style.display="block"; }});
+document.addEventListener("mousemove", e=>{ if(tip.style.display==="block"){ tip.style.left=(e.clientX+12)+"px"; tip.style.top=(e.clientY-30)+"px"; }});
+document.addEventListener("mouseout", e=>{ if(e.target.closest&&e.target.closest(".bar")) tip.style.display="none"; });
+
 function chart(points){
   if(!points || !points.length) return '<span class="muted">no data yet</span>';
   const max = Math.max(...points.map(p=>p.value), 1);
-  const bars = points.map(p=>`<div class="bar${p.value?'':' zero'}" title="${esc(dlabel(p.date))}: ${p.value}" style="height:${p.value?Math.max(4,p.value/max*100):4}%"></div>`).join("");
-  return `<div class="chart">${bars}</div><div class="chart-x"><span>${esc(dlabel(points[0].date))}</span><span>peak ${max}</span><span>${esc(dlabel(points[points.length-1].date))}</span></div>`;
+  const bars = points.map(p=>`<div class="bar${p.value?'':' zero'}" data-l="${esc(dlabel(p.date))}" data-v="${p.value}" style="height:${p.value?Math.max(5,p.value/max*100):5}%"></div>`).join("");
+  return `<div class="chart">${bars}</div><div class="chart-x"><span>${esc(dlabel(points[0].date))}</span><span>hover for counts · peak ${max}</span><span>${esc(dlabel(points[points.length-1].date))}</span></div>`;
 }
+
+// tabs
+document.getElementById("tabs").addEventListener("click", e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active", x===b));
+  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active", p.id==="tab-"+b.dataset.tab));
+});
 
 async function load() {
   const [feed, drip, posts, insights, recs, ga, asc, subs] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"), J("/api/subscriptions"),
   ]);
-  renderKPIs(ga, asc, insights);
-  renderTimeline(ga, asc, posts, insights, feed);
+  renderKPIs(ga, asc, subs);
+  renderTimeline(ga, asc, posts);
   renderGA(ga, feed);
   renderFunnel(ga, asc, subs);
   renderSubs(subs);
@@ -238,43 +268,52 @@ async function load() {
   renderASC(asc);
   renderOps(feed, drip, posts);
   renderRecs(recs);
-  document.getElementById("freshness").textContent = "Updated " + new Date().toLocaleTimeString();
+  document.getElementById("freshness").textContent = "· updated " + new Date().toLocaleTimeString();
 }
 
 function setBig(id, html, gradient){ const el=document.getElementById(id); if(!el) return; el.innerHTML=html; el.style.cssText = gradient?"":"background:none;-webkit-text-fill-color:initial;color:var(--text)"; }
 
-function renderKPIs(ga, asc, ins){
+function renderKPIs(ga, asc, subs){
   if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>30d</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
   if(asc&&asc.connected) setBig("kpi-downloads", fmt(asc.total)+' <small>installs</small>', true);
-  if(ins&&ins.account) setBig("kpi-followers", fmt(ins.account.followers)+' <small>'+fmt(ins.account.posts)+' posts</small>', true);
+  if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
 }
 
-function renderTimeline(ga, asc, posts, ins, feed){
+function renderTimeline(ga, asc, posts){
   const el = document.getElementById("timeline-body");
+  const today = localISO(new Date());
   const users = {}; (ga&&ga.dau_series||[]).forEach(p=>users[iso2(p.date)]=p.users);
   const dls = {}; (asc&&asc.series||[]).forEach(p=>dls[p.date]=p.units);
-  // IG column comes ONLY from real Graph API data (insights.json) — real timestamps + real
-  // captions — so it reflects what actually posted (incl. multiple posts on the same day).
-  const igByDate = {};
-  (ins&&ins.posts||[]).forEach(p=>{ if(!p.date) return; (igByDate[p.date]=igByDate[p.date]||[]).push({title:p.label, reel:p.is_reel, hook:p.hook, reach:p.reach}); });
 
-  // last 14 days
-  const days=[]; const base=new Date();
-  for(let i=0;i<14;i++){ const d=new Date(base); d.setDate(d.getDate()-i); days.push(d.toISOString().slice(0,10)); }
-  const anyData = days.some(d=>users[d]||dls[d]);
-  if(!anyData && !Object.keys(igByDate).length){ el.innerHTML='<p class="muted">No overlapping data yet — load GA/App Store and run an Instagram refresh.</p>'; return; }
+  // group authored posts by their REAL post date (since launch), incl. today's not-yet-posted
+  const byDate = {};
+  (posts||[]).forEach(p=>{
+    if(!p.day) return;
+    const dt = realPostDate(p.day);
+    if(dt < LAUNCH || dt > today) return;
+    const posted = p.status === "posted";
+    if(!posted && dt !== today) return;          // only posted history + today's scheduled
+    (byDate[dt]=byDate[dt]||[]).push({ title:(p.caption||p.title||"").split("\n")[0], reel:!!p.reel, hook:p.hook, posted });
+  });
 
-  let rows = days.map(d=>{
-    const u=users[d]||0, dl=dls[d]||0, ig=igByDate[d];
-    const igTxt = (ig && ig.length)
-      ? ig.map(x=>`${x.reel?'▶ ':'🖼 '}${esc(x.title||"")}${x.hook?' 🪝':''}`).join('<br>')
-        + (ig.some(x=>x.reach!=null) ? ` <span class="muted">· ${fmt(ig.reduce((s,x)=>s+(x.reach||0),0))} reach</span>` : '')
-      : '<span class="muted">—</span>';
-    const hot = dl>0 || (ig && ig.length && u>0);
-    return `<tr class="${hot?'hot':''}"><td class="muted">${esc(dlabel(d))}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
+  // dates from today back to launch
+  const dates=[]; let d=new Date(today+"T00:00:00"); const L=new Date(LAUNCH+"T00:00:00");
+  while(d>=L){ dates.push(localISO(d)); d.setDate(d.getDate()-1); }
+
+  const rows = dates.map(dt=>{
+    const isToday = dt===today, isLaunch = dt===LAUNCH;
+    const u=users[dt]||0, dl=dls[dt]||0, ps=byDate[dt]||[];
+    const igTxt = ps.length ? ps.map(x=>{
+      const pend = x.posted ? "" : ` <span class="pill p-pink">posts 10am PT</span>`;
+      return `${x.reel?'▶ ':'🖼 '}${esc((x.title||"").slice(0,46))}${x.hook?' 🪝':''}${pend}`;
+    }).join('<br>') : '<span class="muted">—</span>';
+    const tag = isLaunch ? ' <span class="pill p-blue">launch</span>' : '';
+    const hot = dl>0;
+    return `<tr class="${isToday?'today':''} ${hot?'hot':''}"><td class="muted" style="white-space:nowrap">${esc(dlabel(dt))}${tag}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
   }).join("");
+
   el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
-    <p class="help">Green rows = an install happened or a post landed with traffic. Read down: when an install lines up with a post, that's a repeatable pattern. Subscriptions aren't shown — that needs RevenueCat (not wired yet), so we can't yet see if readers convert to paying.</p>`;
+    <p class="help">Pink = today. Green edge = an install happened. Subscriptions aren't a column — see the Conversion tab; they need the App Store report (0 so far).</p>`;
 }
 
 function renderGA(ga, feed){
@@ -291,20 +330,16 @@ function renderGA(ga, feed){
       <div class="kv"><span class="muted">Total users · all-time</span><b>${fmt(ga.total_users)}</b></div>
       <div class="kv"><span class="muted">New users</span><b>${ga.new_pct}%</b></div>
     </div>
-    <div class="help">"Unique users" = distinct people (GA dedupes). Not pageviews (${fmt(T.pageviews)} total views incl. repeats).</div>`;
+    <div class="help">Distinct people (GA dedupes). Pageviews (incl. repeats): ${fmt(T.pageviews)}.</div>`;
 
   document.getElementById("ga-trend-body").innerHTML =
     `<div class="big">${fmt(D.avg30)} <small>avg/day · 30d</small></div>
-     <div style="margin:.5rem 0 0">${chart((ga.dau_series||[]).slice(-14).map(p=>({date:iso2(p.date), value:p.users})))}</div>
-     <div class="help">Unique users per day. Bars hover for the exact date + count.</div>`;
+     <div style="margin:.5rem 0 0">${chart((ga.dau_series||[]).slice(-14).map(p=>({date:iso2(p.date), value:p.users})))}</div>`;
 
   document.getElementById("ga-eng-body").innerHTML =
     `<div class="big">${fmtDur(E.avg_sec_per_user)} <small>avg / user</small></div>
-     <div style="margin-top:.5rem">
-       <div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div>
-       <div class="kv"><span class="muted">Sessions · 30d</span><b>${fmt(T.sessions)}</b></div>
-     </div>
-     <div class="help">Engagement rate = share of visits that were "engaged" (>10s, or 2+ pages, or converted). Higher = real reads, not bounces.</div>`;
+     <div style="margin-top:.5rem"><div class="kv"><span class="muted">Engagement rate</span><b>${E.rate_pct}%</b></div><div class="kv"><span class="muted">Sessions · 30d</span><b>${fmt(T.sessions)}</b></div></div>
+     <div class="help">Engagement rate = share of visits that were "engaged" (>10s / 2+ pages / converted). Higher = real reads.</div>`;
 
   const ch = ga.channels||[];
   document.getElementById("ga-channels-body").innerHTML = ch.map(c=>
@@ -312,17 +347,44 @@ function renderGA(ga, feed){
     `<div class="help">${ch.slice(0,3).map(c=>`<b>${esc(c.key)}:</b> ${esc(CHANNEL_HELP[c.key]||"")}`).join("<br>")}</div>`;
 
   document.getElementById("ga-pages-body").innerHTML = (ga.top_pages||[]).map(r=>
-    `<div class="row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("") || "—";
+    `<div class="list-row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("") || "—";
 
   document.getElementById("ga-conv-body").innerHTML =
     `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · 30d</small></div>
      <div class="kv" style="margin-top:.5rem"><span class="muted">Of all users (30d)</span><b>${C.click_rate_pct}%</b></div>
-     <div class="help">Tapped the App Store button on the site. The bridge from reading → installing. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, expected; watch this as traffic grows.':''}</div>`;
+     <div class="help">Tapped the App Store button on the site. ${C.app_store_clicks===0?'None yet — at '+fmt(T.users)+' users, there isn\\'t enough traffic to even test this. The failure point right now is upstream (traffic), not the CTA.':''}</div>`;
 
   const clicks=ga.app_store_clicks||[];
   document.getElementById("ga-attr-body").innerHTML = clicks.length
-    ? clicks.map(r=>`<div class="row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
-    : '<p class="help" style="margin-top:0">No App Store taps in the last 30 days yet — the moment one happens, the article that drove it shows here. That\'s your repeatable conversion content.</p>';
+    ? clicks.map(r=>`<div class="list-row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("")
+    : '<p class="help" style="margin-top:0">No taps in 30d yet — the first article to drive one shows here, and that\'s your repeatable converter.</p>';
+}
+
+function renderFunnel(ga, asc, subs){
+  const el=document.getElementById("funnel-body");
+  const gc=ga&&ga.connected, ac=asc&&asc.connected, sc=subs&&subs.connected;
+  const rows=[
+    ["Web users","30d", gc?ga.totals.users:null],
+    ["Tapped Install","30d", gc?ga.conversion.app_store_clicks:null],
+    ["Downloads","all-time", ac?asc.total:null],
+    ["Active subscribers","now", sc?subs.active:null],
+  ];
+  el.innerHTML = rows.map(([l,tf,v])=>`<div class="kv"><span class="muted">${l} <span style="font-size:.68rem">· ${tf}</span></span><b>${v==null?'—':fmt(v)}</b></div>`).join("")
+    + `<div class="help">Each step should shrink — the biggest drop is your leak. Right now it collapses at the very top: too little traffic to even fill the lower steps. Fix traffic first; only then is the install/paywall testable. (Timeframes differ; read as direction.)</div>`;
+}
+
+function renderSubs(subs){
+  const el=document.getElementById("subs-body");
+  if(!subs||!subs.connected){ el.innerHTML = (subs&&subs.error)? `<p class="help" style="margin-top:0">Couldn't load: ${esc(subs.error)}</p>` : '<p class="help" style="margin-top:0">App Store creds not set.</p>'; return; }
+  const e=subs.events30||{}; const zero = subs.active===0 && !e.subscribe;
+  el.innerHTML = `<div class="big">${fmt(subs.active)} <small>active subscribers</small></div>
+    <div style="margin-top:.5rem">
+      <div class="kv"><span class="muted">Active trials</span><b>${fmt(subs.trials)}</b></div>
+      <div class="kv"><span class="muted">New subscribes · 30d</span><b>${fmt(e.subscribe)}</b></div>
+      <div class="kv"><span class="muted">Trial → paid · 30d</span><b>${fmt(e.conversion)}</b></div>
+      <div class="kv"><span class="muted">Cancellations · 30d</span><b>${fmt(e.cancel)}</b></div>
+    </div>
+    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}${zero?'Zero so far — but with ~0 installs there\\'s nothing to convert yet. This becomes meaningful once installs climb.':'App Store sub reports lag a few days.'}</div>`;
 }
 
 function renderSocials(ins){
@@ -337,11 +399,11 @@ function renderSocials(ins){
     document.getElementById("ig-rv").innerHTML=
       `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>reach <b>${fmt(s.reels.avg_reach)}</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>`+
       `<div class="kv"><span class="muted">🖼 Static (${s.images.count})</span><span>reach <b>${fmt(s.images.avg_reach)}</b></span></div>`+
-      `<div class="help">Reels reach <b style="color:var(--green)">${mult}×</b> the static posts — static images are low-leverage but cheap to keep posting.</div>`;
+      `<div class="help">Reels reach <b style="color:var(--green)">${mult}×</b> static. Reach is 0 across the board for now — a 0-follower, days-old account (it builds as you grow / posts age).</div>`;
   }
   const top=(ins.posts||[]).slice().sort((x,y)=>(y.reach||0)-(x.reach||0)).slice(0,5);
   document.getElementById("ig-topbody").innerHTML=top.map(p=>
-    `<div class="row"><span class="d">${fmt(p.reach)}</span><span>${p.is_reel?"▶":"🖼"} ${esc(p.label||"")}${p.hook?" 🪝":""}</span></div>`).join("")||"—";
+    `<div class="list-row"><span class="d">${fmt(p.reach)}</span><span>${p.is_reel?"▶":"🖼"} ${esc(p.label||"")}${p.hook?" 🪝":""}</span></div>`).join("")||"—";
 }
 
 function renderASC(asc){
@@ -350,14 +412,11 @@ function renderASC(asc){
   const latest=asc.latest||{};
   el.innerHTML=`<h3>Downloads · since launch</h3>
     <div class="big">${fmt(asc.total)} <small>installs</small></div>
-    <div style="margin-top:.5rem">
-      <div class="kv"><span class="muted">Latest · ${esc(dlabel(latest.date)||"—")}</span><b>${fmt(latest.units)}</b></div>
-      <div class="kv"><span class="muted">Last 7 days</span><b>${fmt(asc.last7)}</b></div>
-    </div>`;
+    <div style="margin-top:.5rem"><div class="kv"><span class="muted">Latest · ${esc(dlabel(latest.date)||"—")}</span><b>${fmt(latest.units)}</b></div><div class="kv"><span class="muted">Last 7 days</span><b>${fmt(asc.last7)}</b></div></div>`;
   document.getElementById("asc-trend-body").innerHTML =
     `<div class="big">${fmt(asc.last7)} <small>last 7 days</small></div>
      <div style="margin:.5rem 0 0">${chart((asc.series||[]).slice(-14).map(p=>({date:p.date, value:p.units})))}</div>
-     <div class="help">First-time installs per day (Apple, ~2-day lag).</div>`;
+     <div class="help">First-time installs/day (Apple, ~2-day lag).</div>`;
 }
 
 function renderOps(feed, drip, posts){
@@ -370,50 +429,21 @@ function renderOps(feed, drip, posts){
       html+=`<div class="kv"><span class="muted">${label}</span><span><b>${pend}</b> queued <span class="pill ${cls}">~${txt}</span></span></div>`; }
     if(worst<2) html+=`<p class="help" style="color:var(--amber)">⚠️ A section is nearly dry — top up the queue.</p>`;
     document.getElementById("runway-body").innerHTML=html;
-    document.getElementById("drip-body").innerHTML=feed?(feed.items||[]).slice(0,6).map((i,n)=>`<div class="row"><span class="d">#${n+1}</span><span>${esc(i.title)} <span class="muted">· ${esc(i.section_label)}</span></span></div>`).join(""):"—"; }
+    document.getElementById("drip-body").innerHTML=feed?(feed.items||[]).slice(0,6).map((i,n)=>`<div class="list-row"><span class="d">#${n+1}</span><span>${esc(i.title)} <span class="muted">· ${esc(i.section_label)}</span></span></div>`).join(""):"—"; }
   if(posts){ const posted=posts.filter(p=>p.status==="posted"||p.postedAt); const reels=posts.filter(p=>p.reel).length;
-    const next=posts.filter(p=>!(p.status==="posted"||p.postedAt)).sort((a,b)=>a.day-b.day)[0]; const last=posted.sort((a,b)=>b.day-a.day)[0];
+    const next=posts.filter(p=>!(p.status==="posted"||p.postedAt)).sort((a,b)=>a.day-b.day)[0];
     document.getElementById("auto-body").innerHTML=
       `<div class="kv"><span class="muted">Posted</span><b>${posted.length}/${posts.length}</b></div>`+
-      `<div class="kv"><span class="muted">Last post</span><b>${last?"d"+last.day:"—"}</b></div>`+
-      `<div class="kv"><span class="muted">Next up</span><b>${next?"d"+next.day+" · "+dlabel(postDate(next.day)):"—"}</b></div>`+
+      `<div class="kv"><span class="muted">Next up</span><b>${next?"d"+next.day+" · "+dlabel(realPostDate(next.day)):"—"}</b></div>`+
+      `<div class="kv"><span class="muted">Posts daily at</span><b>10am PT</b></div>`+
       `<div class="kv"><span class="muted">Reels queued</span><b>${reels}</b></div>`; }
-}
-
-function renderFunnel(ga, asc, subs){
-  const el=document.getElementById("funnel-body");
-  const gc=ga&&ga.connected, ac=asc&&asc.connected, sc=subs&&subs.connected;
-  const rows=[
-    ["Web users","30d", gc?ga.totals.users:null],
-    ["Tapped Install","30d", gc?ga.conversion.app_store_clicks:null],
-    ["Downloads","all-time", ac?asc.total:null],
-    ["Active subscribers","now", sc?subs.active:null],
-  ];
-  el.innerHTML = rows.map(([l,tf,v])=>`<div class="kv"><span class="muted">${l} <span style="font-size:.68rem">· ${tf}</span></span><b>${v==null?'—':fmt(v)}</b></div>`).join("")
-    + `<div class="help">Each step should shrink — the biggest drop is where you lose people. Timeframes differ (users/taps 30d, downloads/subs all-time), so read it as direction, not exact ratios. This is the literal answer to "are readers converting?" — follow it down.</div>`;
-}
-
-function renderSubs(subs){
-  const el=document.getElementById("subs-body");
-  if(!subs||!subs.connected){ el.innerHTML = (subs&&subs.error)? `<p class="help" style="margin-top:0">Couldn't load: ${esc(subs.error)}</p>` : '<p class="help" style="margin-top:0">App Store creds not set.</p>'; return; }
-  const e=subs.events30||{};
-  const zero = subs.active===0 && !e.subscribe;
-  el.innerHTML = `<div class="big">${fmt(subs.active)} <small>active subscribers</small></div>
-    <div style="margin-top:.5rem">
-      <div class="kv"><span class="muted">Active trials</span><b>${fmt(subs.trials)}</b></div>
-      <div class="kv"><span class="muted">New subscribes · 30d</span><b>${fmt(e.subscribe)}</b></div>
-      <div class="kv"><span class="muted">Trial → paid · 30d</span><b>${fmt(e.conversion)}</b></div>
-      <div class="kv"><span class="muted">Cancellations · 30d</span><b>${fmt(e.cancel)}</b></div>
-    </div>
-    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}App Store sub reports lag a few days.${zero?' Zero so far — installers aren’t converting to paid yet; that’s the funnel’s real leak, not traffic.':''}</div>`;
 }
 
 function renderRecs(recs){
   if(!recs) return;
   document.getElementById("rec-meta").textContent = (recs.note||"") + (recs.updated?(" · updated "+recs.updated):"");
-  const pri={high:"high",medium:"medium",low:"low"};
-  const card=(r)=>`<div class="rec ${pri[r.priority]||'low'}"><div class="ins"><b>Insight:</b> ${esc(r.insight)}</div><div class="act">${esc(r.action)}</div>${r.by?`<div class="by">by ${esc(r.by)}</div>`:""}</div>`;
-  const fill=(id,arr)=>{ const el=document.getElementById(id); if(el&&arr) el.innerHTML=(arr||[]).map(card).join(""); };
+  const card=(r)=>`<div class="rec ${r.priority||'low'}"><div class="ins"><b>Insight:</b> ${esc(r.insight)}</div><div class="act">${esc(r.action)}</div>${r.by?`<div class="by">by ${esc(r.by)}</div>`:""}</div>`;
+  const fill=(id,arr)=>{ const el=document.getElementById(id); if(el) el.innerHTML=(arr||[]).map(card).join(""); };
   const S=recs.sections||{};
   fill("rec-overall", S.overall); fill("rec-traffic", S.traffic); fill("rec-conversion", S.conversion);
   fill("rec-revenue", S.revenue); fill("rec-socials", S.socials); fill("rec-ops", S.ops);
@@ -421,7 +451,7 @@ function renderRecs(recs){
 
 document.getElementById("allBtn").addEventListener("click", async function(){
   const btn=this, st=document.getElementById("allStatus");
-  btn.disabled=true; const label=btn.textContent; btn.textContent="Refreshing everything…"; st.style.color="var(--faint)"; st.textContent="";
+  btn.disabled=true; const label=btn.textContent; btn.textContent="Refreshing…"; st.style.color="var(--faint)"; st.textContent="";
   try { await fetch("/api/run-insights",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({limit:40})}); } catch(e){}
   await load();
   st.style.color="var(--green)"; st.textContent="✓ refreshed — Instagram numbers land in ~1 min (refresh again)";

@@ -33,17 +33,17 @@
     "conversion": [
       {
         "priority": "high",
-        "insight": "0 web install-taps in 30 days — the read→install bridge isn't converting yet (partly just too little traffic to register).",
-        "action": "Make the App Store CTA more prominent on article pages; re-check as traffic grows. The 'articles that drove install taps' panel will name the first converter — then make more like it.",
+        "insight": "Point of failure = the TOP of the funnel, not the CTA or paywall. With ~8 unique users and 0 install-taps in 30 days, there isn't enough traffic to even test whether the install button or the offer is the problem — you can't diagnose a conversion step that nothing reaches.",
+        "action": "Don't tweak the CTA/paywall yet — it's premature. Drive traffic first (reels + Search Console). Once a few hundred users flow through, the 'articles that drove install taps' panel will reveal the real conversion leak, and THEN it's worth optimizing.",
         "by": "2026-06-27"
       }
     ],
     "revenue": [
       {
         "priority": "high",
-        "insight": "The funnel collapses at install → subscribe: readers exist, but ~0 web install-taps and ~0 active subscribers. People consume free/preview content and stop before paying.",
-        "action": "As installs grow, watch trial-starts vs trial→paid. If trials start but don't convert, the first-session value isn't landing before the ask — front-load the 'aha' (a real ID + care guide) before the paywall, not after.",
-        "by": "2026-06-28"
+        "insight": "0 subscribers — but that's NOT a paywall problem yet. With ~0 installs there's simply nobody in the app to subscribe. 'Readers don't buy' isn't measurable until installs exist, so don't over-read the zero.",
+        "action": "Treat subscriptions as a later milestone. When installs reach a steady trickle, the trial-start vs trial→paid numbers here will show if the paywall/onboarding converts — if trials start but don't convert, front-load the 'aha' (a real ID + care guide) before the ask. Not actionable today.",
+        "by": "2026-07-05"
       }
     ],
     "socials": [
