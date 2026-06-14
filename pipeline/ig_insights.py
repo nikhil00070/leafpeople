@@ -17,6 +17,7 @@ Run via .github/workflows/ig-insights.yml (uses the IG_TOKEN/IG_USER_ID secrets)
 import datetime as dt
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -57,19 +58,22 @@ def media_insights(m):
     return {}
 
 
-def posts_by_date():
-    """date 'YYYY-MM-DD' -> {day,title,reel,hook} from posts.json (day 1 = 2026-06-02)."""
+def _norm(s):
+    return re.sub(r"\s+", " ", (s or "")).strip().lower()[:60]
+
+
+def posts_index():
+    """normalized first caption line -> {day,title,reel,hook}. Matches a real IG media to its
+    authored post by CAPTION (robust) — NOT by guessing the date from a 1/day schedule, which
+    broke when 3 posts went out on day 1 then 1/day."""
     out = {}
     try:
         posts = json.load(open(os.path.join(ROOT, "instagram", "posts.json")))
-        day1 = dt.date(2026, 6, 2)
         for p in posts:
-            d = p.get("day")
-            if not d:
-                continue
-            key = (day1 + dt.timedelta(days=d - 1)).isoformat()
-            out[key] = {"day": d, "title": p.get("title", ""), "reel": bool(p.get("reel")),
-                        "hook": p.get("hook")}
+            key = _norm((p.get("caption") or "").split("\n")[0])
+            if key:
+                out[key] = {"day": p.get("day"), "title": p.get("title", ""),
+                            "reel": bool(p.get("reel")), "hook": p.get("hook")}
     except Exception:
         pass
     return out
@@ -91,7 +95,7 @@ def main():
     if not TOKEN or not uid:
         sys.exit("IG_TOKEN / IG_USER_ID not set")
     limit = int(os.environ.get("IG_LIMIT", "40"))
-    pmap = posts_by_date()
+    pidx = posts_index()
 
     acct = graph(uid, {"fields": "username,followers_count,media_count"})
     print("=" * 72)
@@ -114,7 +118,7 @@ def main():
     for m in media:
         ins = media_insights(m)
         date = (m.get("timestamp", "")[:10])
-        meta = pmap.get(date, {})
+        meta = pidx.get(_norm((m.get("caption") or "").split("\n")[0]), {})
         rows.append({
             "date": date,
             "type": "REEL" if m.get("media_product_type") == "REELS" else m.get("media_type", "?"),

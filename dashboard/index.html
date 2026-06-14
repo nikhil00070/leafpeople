@@ -206,7 +206,7 @@ const fmtDur = (s) => { s=Math.round(s||0); if(s<60) return s+"s"; const m=Math.
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const iso2 = (s) => s && s.length===8 ? s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6,8) : s;   // GA YYYYMMDD -> YYYY-MM-DD
 const dlabel = (iso) => { if(!iso) return ""; const [y,m,d]=iso.split("-"); return MON[+m-1]+" "+(+d); };
-const postDate = (day) => { const d=new Date("2026-06-02T00:00:00"); d.setDate(d.getDate()+(day-1)); return d.toISOString().slice(0,10); };
+const postDate = (day) => { const d=new Date("2026-06-07T00:00:00"); d.setDate(d.getDate()+(day-1)); return d.toISOString().slice(0,10); };  // auto-poster start_date
 
 const CHANNEL_HELP = {
   "Direct":"No referrer — typed URL, bookmark, the app, or an untagged link. Your Instagram bio link (no UTM tags) lands here.",
@@ -253,9 +253,10 @@ function renderTimeline(ga, asc, posts, ins, feed){
   const el = document.getElementById("timeline-body");
   const users = {}; (ga&&ga.dau_series||[]).forEach(p=>users[iso2(p.date)]=p.users);
   const dls = {}; (asc&&asc.series||[]).forEach(p=>dls[p.date]=p.units);
+  // IG column comes ONLY from real Graph API data (insights.json) — real timestamps + real
+  // captions — so it reflects what actually posted (incl. multiple posts on the same day).
   const igByDate = {};
-  (posts||[]).forEach(p=>{ if(!p.day) return; const dt=postDate(p.day); if(p.status==="posted"||p.postedAt) igByDate[dt]={title:p.title,reel:!!p.reel,hook:p.hook}; });
-  (ins&&ins.posts||[]).forEach(p=>{ if(p.date){ igByDate[p.date]=Object.assign(igByDate[p.date]||{}, {title:(igByDate[p.date]&&igByDate[p.date].title)||p.label, reel:p.is_reel, hook:p.hook, reach:p.reach}); }});
+  (ins&&ins.posts||[]).forEach(p=>{ if(!p.date) return; (igByDate[p.date]=igByDate[p.date]||[]).push({title:p.label, reel:p.is_reel, hook:p.hook, reach:p.reach}); });
 
   // last 14 days
   const days=[]; const base=new Date();
@@ -265,8 +266,11 @@ function renderTimeline(ga, asc, posts, ins, feed){
 
   let rows = days.map(d=>{
     const u=users[d]||0, dl=dls[d]||0, ig=igByDate[d];
-    const igTxt = ig ? `${ig.reel?'▶ ':'🖼 '}${esc(ig.title||"")}${ig.hook?' 🪝':''}${ig.reach!=null?` <span class="muted">· ${fmt(ig.reach)} reach</span>`:''}` : '<span class="muted">—</span>';
-    const hot = dl>0 || (ig && u>0);
+    const igTxt = (ig && ig.length)
+      ? ig.map(x=>`${x.reel?'▶ ':'🖼 '}${esc(x.title||"")}${x.hook?' 🪝':''}`).join('<br>')
+        + (ig.some(x=>x.reach!=null) ? ` <span class="muted">· ${fmt(ig.reduce((s,x)=>s+(x.reach||0),0))} reach</span>` : '')
+      : '<span class="muted">—</span>';
+    const hot = dl>0 || (ig && ig.length && u>0);
     return `<tr class="${hot?'hot':''}"><td class="muted">${esc(dlabel(d))}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
   }).join("");
   el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
