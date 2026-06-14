@@ -10,10 +10,10 @@
         "by": "2026-06-21"
       },
       {
-        "priority": "high",
-        "insight": "We can't yet see whether readers convert to paying — subscription data lives in RevenueCat, which isn't wired. So 'people read gated articles but don't subscribe' is a hypothesis we can't prove or fix blind.",
-        "action": "Wire RevenueCat into the dashboard (subscribers, trial→paid, churn) so conversion becomes visible — then we can act on it.",
-        "by": "2026-06-28"
+        "priority": "medium",
+        "insight": "Subscription conversion IS now visible (Conversion tab: active subs, trials, trial→paid, churn) — wired from App Store Connect, not RevenueCat. It reads 0 across the board, but with ~0 installs that's expected, not a paywall failure. We are NOT blind anymore.",
+        "action": "Watch the Conversion tab as installs grow — trial→paid is the real signal once people are in the app. RevenueCat is only worth adding later if you want near-real-time MRR or ever sell web-native subscriptions.",
+        "by": "2026-07-15"
       }
     ],
     "traffic": [
