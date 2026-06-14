@@ -32,6 +32,13 @@ async function fetchReport(jwt, params) {
   return zlib.gunzipSync(Buffer.from(await r.arrayBuffer())).toString("utf8");
 }
 
+// Apple throws "invalid vendor number" for a report TYPE that has no data yet (a known quirk) —
+// the SAME vendor works for SALES, so treat that specific error as "no data" (real zero), not failure.
+async function tryReport(jwt, params) {
+  try { return await fetchReport(jwt, params); }
+  catch (e) { if (/vendor number/i.test(String(e.message))) return "NODATA"; throw e; }
+}
+
 function parse(raw) {
   const lines = raw.split("\n").filter(Boolean);
   const head = lines[0].split("\t").map((h) => h.trim());
@@ -51,10 +58,11 @@ export default async function handler(req, res) {
     const base = new Date();
 
     // Snapshot: most recent SUBSCRIPTION report with data (active subs + trials)
-    let active = 0, trials = 0, snapDate = null;
+    let active = 0, trials = 0, snapDate = null, noData = false;
     const TRIAL_COLS = ["Active Free Trial Introductory Offer Subscriptions", "Active Pay As You Go Introductory Offer Subscriptions", "Active Pay Up Front Introductory Offer Subscriptions"];
     for (let i = 1; i <= 12; i++) {
-      const raw = await fetchReport(jwt, { ...common, "filter[reportType]": "SUBSCRIPTION", "filter[reportDate]": ymd(base, i) });
+      const raw = await tryReport(jwt, { ...common, "filter[reportType]": "SUBSCRIPTION", "filter[reportDate]": ymd(base, i) });
+      if (raw === "NODATA") { noData = true; break; }
       if (!raw) continue;
       const { rows, col } = parse(raw);
       const std = col("Active Standard Price Subscriptions");
@@ -70,9 +78,9 @@ export default async function handler(req, res) {
     // Events (last 30d): new subscribes, trial conversions, cancels
     const ev = { subscribe: 0, conversion: 0, cancel: 0 };
     const evRaw = await Promise.all(Array.from({ length: 30 }, (_, i) =>
-      fetchReport(jwt, { ...common, "filter[reportType]": "SUBSCRIPTION_EVENT", "filter[reportDate]": ymd(base, i + 1) }).catch(() => null)));
+      tryReport(jwt, { ...common, "filter[reportType]": "SUBSCRIPTION_EVENT", "filter[reportDate]": ymd(base, i + 1) }).catch(() => null)));
     for (const raw of evRaw) {
-      if (!raw) continue;
+      if (!raw || raw === "NODATA") continue;
       const { rows, col } = parse(raw);
       const ei = col("Event"), qi = col("Quantity");
       if (ei < 0 || qi < 0) continue;
@@ -84,7 +92,7 @@ export default async function handler(req, res) {
       }
     }
 
-    cache = { connected: true, updated: new Date().toISOString(), active, trials, snapDate, events30: ev };
+    cache = { connected: true, updated: new Date().toISOString(), active, trials, snapDate, events30: ev, noData };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
