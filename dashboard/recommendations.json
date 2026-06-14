@@ -48,16 +48,16 @@
     ],
     "socials": [
       {
-        "priority": "medium",
-        "insight": "Static IG images get a fraction of reels' reach — near-zero growth leverage, though cheap to keep posting for consistency.",
-        "action": "Treat reels as the growth driver (keep the every-other-day cadence); don't pour effort into image days — they're filler, not a lever.",
-        "by": "rolling"
+        "priority": "high",
+        "insight": "Reach is 0 on every post — a 0-follower, days-old account is posting into the void. The bottleneck is NOT reel-vs-image, it's that nobody is discovering the account yet.",
+        "action": "Prioritize distribution before optimization: engage daily in rare-plant communities (follow + comment on target collector accounts), use specific niche hashtags, and lean on reels for explore reach. Don't judge format performance until posts actually reach people.",
+        "by": "2026-06-28"
       },
       {
         "priority": "medium",
-        "insight": "Hooked reels (days 8-46) are the bet to beat the 79% skip rate; need ~5 live to read a signal.",
-        "action": "Once ~5 hooked reels have posted, compare avg watch time hooked (🪝) vs non-hooked in the insights — expand hooks if it lifts, iterate copy if flat.",
-        "by": "2026-06-27"
+        "insight": "Reels are still the right format bet (explore-friendly) and the hooks on days 8-46 target retention — but reach has to exist before retention matters.",
+        "action": "Keep posting reels. The moment reach climbs above 0, compare hooked (🪝) vs non-hooked watch time to validate the hooks; until then it's not measurable.",
+        "by": "2026-07-05"
       }
     ],
     "ops": [

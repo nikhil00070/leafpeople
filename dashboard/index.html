@@ -19,7 +19,7 @@ body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var
 .wrap { max-width:1140px; margin:0 auto; }
 .topbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
 .brand { display:flex; align-items:center; gap:.8rem; }
-.brand img { width:clamp(2.4rem,6vw,3.6rem); height:clamp(2.4rem,6vw,3.6rem); border-radius:50%; background:#000; padding:18%; object-fit:contain; }
+.brand img { width:clamp(2.8rem,7vw,4rem); height:clamp(2.8rem,7vw,4rem); border-radius:14px; display:block; }
 h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2.2rem,5.5vw,3.4rem); margin:0; letter-spacing:-.04em; line-height:.98; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .sub { color:var(--faint); font-size:.84rem; margin:.35rem 0 0; }
 .bigbtn { padding:.7rem 1.4rem; border-radius:100px; font-weight:800; font-size:.92rem; cursor:pointer; border:none; font-family:'Geologica',sans-serif; background:#FA2A52; color:#fff; transition:transform .2s, box-shadow .2s, background .2s; white-space:nowrap; }
@@ -144,7 +144,7 @@ a { color:var(--blue); }
     </div>
     <div class="grid g2 row-sp">
       <div class="card"><h3>Where users come from · channels</h3><div id="ga-channels-body" class="muted" style="font-size:.85rem">—</div></div>
-      <div class="card"><h3>Top articles · unique readers</h3><div id="ga-pages-body" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Top pages · views &amp; readers</h3><div id="ga-pages-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
     <div class="recs-h">What to do</div>
     <div id="rec-traffic"></div>
@@ -347,8 +347,10 @@ function renderGA(ga, feed){
     `<div class="kv"><span class="muted">${esc(c.key||"")}</span><b>${fmt(c.value)}</b></div>`).join("") +
     `<div class="help">${ch.slice(0,3).map(c=>`<b>${esc(c.key)}:</b> ${esc(CHANNEL_HELP[c.key]||"")}`).join("<br>")}</div>`;
 
-  document.getElementById("ga-pages-body").innerHTML = (ga.top_pages||[]).map(r=>
-    `<div class="list-row"><span class="d">${fmt(r.value)}</span><span>${label(r.key)}</span></div>`).join("") || "—";
+  document.getElementById("ga-pages-body").innerHTML =
+    `<div class="kv" style="border-bottom:1px solid var(--border)"><span class="muted">All page views · 30d</span><b>${fmt(T.pageviews)}</b></div>` +
+    (ga.top_pages||[]).map(r=>
+    `<div class="list-row"><span class="d">${fmt(r.views)}</span><span>${label(r.key)} <span class="muted">· ${fmt(r.users)} ${r.users===1?'reader':'readers'}</span></span></div>`).join("");
 
   document.getElementById("ga-conv-body").innerHTML =
     `<div class="big">${fmt(C.app_store_clicks)} <small>unique users tapped Install · 30d</small></div>
@@ -396,11 +398,12 @@ function renderSocials(ins){
   document.getElementById("ig-body").innerHTML=`<p class="help">@${esc(a.username||"")} · updated ${esc((ins.updated||"").replace("T"," ").slice(0,16))}</p>`;
   const s=ins.summary||{};
   if(s.reels&&s.images){
-    const mult=s.images.avg_reach?(s.reels.avg_reach/s.images.avg_reach).toFixed(1):"—";
+    const haveReach=(s.reels.avg_reach||0)+(s.images.avg_reach||0)>0;
+    const mult=s.images.avg_reach?(s.reels.avg_reach/s.images.avg_reach).toFixed(1):null;
     document.getElementById("ig-rv").innerHTML=
       `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>reach <b>${fmt(s.reels.avg_reach)}</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>`+
       `<div class="kv"><span class="muted">🖼 Static (${s.images.count})</span><span>reach <b>${fmt(s.images.avg_reach)}</b></span></div>`+
-      `<div class="help">Reels reach <b style="color:var(--green)">${mult}×</b> static. Reach is 0 across the board for now — a 0-follower, days-old account (it builds as you grow / posts age).</div>`;
+      `<div class="help">${haveReach&&mult?`Reels reach <b style="color:var(--green)">${mult}×</b> static.`:`<b>0 reach on every post.</b> A 0-follower, days-old account is not getting discovered yet — so the lever is distribution (first followers + explore reach), not reel-vs-image. There is nothing to compare until posts actually reach people.`}</div>`;
   }
   const top=(ins.posts||[]).slice().sort((x,y)=>(y.reach||0)-(x.reach||0)).slice(0,5);
   document.getElementById("ig-topbody").innerHTML=top.map(p=>
