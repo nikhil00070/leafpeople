@@ -14,6 +14,17 @@
   gtag("js", new Date());
   gtag("config", GA_ID, { anonymize_ip: true });
 
+  // Tidy the address bar: GA has captured any ?utm_* on the page_view above, so strip the
+  // campaign params (and gclid) for a clean leafpeople.app — attribution is already recorded.
+  try {
+    if (/[?&](utm_|gclid)/i.test(location.search)) {
+      var pr = new URLSearchParams(location.search);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id", "gclid"].forEach(function (k) { pr.delete(k); });
+      var q = pr.toString();
+      history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash);
+    }
+  } catch (e) {}
+
   // Custom events: App Store / "Get the App" CTA clicks + outbound links.
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a");
