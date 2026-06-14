@@ -305,7 +305,8 @@ function renderTimeline(ga, asc, posts){
     const u=users[dt]||0, dl=dls[dt]||0, ps=byDate[dt]||[];
     const igTxt = ps.length ? ps.map(x=>{
       const pend = x.posted ? "" : ` <span class="pill p-pink">posts 10am PT</span>`;
-      return `${x.reel?'▶ ':'🖼 '}${esc((x.title||"").slice(0,46))}${x.hook?' 🪝':''}${pend}`;
+      const tag = x.reel ? '<span class="pill p-ok">▶ REEL</span>' : '<span class="pill p-off">🖼 IMAGE</span>';
+      return `${tag} ${esc((x.title||"").slice(0,46))}${x.hook?' 🪝':''}${pend}`;
     }).join('<br>') : '<span class="muted">—</span>';
     const tag = isLaunch ? ' <span class="pill p-blue">launch</span>' : '';
     const hot = dl>0;
