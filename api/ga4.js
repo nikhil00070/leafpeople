@@ -60,7 +60,8 @@ export default async function handler(req, res) {
   const isDay = /^\d{4}-\d{2}-\d{2}$/.test(dateParam);
   const ck = isDay ? dateParam : "total";
 
-  if (cache[ck] && Date.now() - cacheAt[ck] < CACHE_MS) {
+  const skipCache = !!(req.query && req.query.fresh);
+  if (!skipCache && cache[ck] && Date.now() - cacheAt[ck] < CACHE_MS) {
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache[ck]);
   }
