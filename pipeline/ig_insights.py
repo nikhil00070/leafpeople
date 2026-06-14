@@ -27,6 +27,7 @@ GRAPH = "https://graph.facebook.com/v21.0"
 UA = "leafpeople-insights/1.0"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOKEN = None
+DIAG = []   # captures the first insights-read error (e.g. missing instagram_manage_insights scope)
 
 
 def graph(path, params):
@@ -55,8 +56,9 @@ def _metric_group(mid, metrics):
                 data = graph(f"{mid}/insights", {"metric": mt})
                 for d in data.get("data", []):
                     out[d["name"]] = d["values"][0]["value"]
-            except RuntimeError:
-                pass
+            except RuntimeError as e:
+                if len(DIAG) < 2:
+                    DIAG.append(f"{mt}: {str(e)[:200]}")
         return out
 
 
@@ -179,6 +181,7 @@ def main():
                        "avg_eng_pct": round(sum(rate(r) for r in imgs) / len(imgs) * 100, 1) if imgs else 0},
         },
         "posts": [{**r, "eng_pct": round(rate(r) * 100, 1)} for r in rows],
+        "diag": DIAG or None,   # non-null = insights reads are failing (likely a missing scope)
     }
     try:
         json.dump(result, open(os.path.join(ROOT, "instagram", "insights.json"), "w"), indent=2)
