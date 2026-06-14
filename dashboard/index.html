@@ -172,6 +172,7 @@ a { color:var(--blue); }
       <div class="card"><h3>Reels vs Static</h3><div id="ig-rv" class="muted" style="font-size:.85rem">Run a refresh.</div></div>
       <div class="card"><h3>Top posts · reach</h3><div id="ig-topbody" class="muted" style="font-size:.85rem">—</div></div>
     </div>
+    <div class="card row-sp"><h3>Reel retention · skip-rate (watch it trend down on hooked reels 🪝)</h3><div id="reel-ret-body" class="muted" style="font-size:.85rem">—</div></div>
     <div class="recs-h">What to do</div>
     <div id="rec-socials"></div>
   </div>
@@ -255,16 +256,18 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4"), J("/api/asc"), J("/api/subscriptions"),
+    J("/videos/instagram/reel_durations.json"),
   ]);
   renderKPIs(ga, asc, subs);
-  renderTimeline(ga, asc, posts);
+  renderTimeline(ga, asc, posts, insights);
   renderGA(ga, feed);
   renderFunnel(ga, asc, subs);
   renderSubs(subs);
   renderSocials(insights);
+  renderReelRetention(insights, durations);
   renderASC(asc);
   renderOps(feed, drip, posts);
   renderRecs(recs);
@@ -279,42 +282,43 @@ function renderKPIs(ga, asc, subs){
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
 }
 
-function renderTimeline(ga, asc, posts){
+function renderTimeline(ga, asc, posts, ins){
   const el = document.getElementById("timeline-body");
   const today = localISO(new Date());
   const users = {}; (ga&&ga.dau_series||[]).forEach(p=>users[iso2(p.date)]=p.users);
   const dls = {}; (asc&&asc.series||[]).forEach(p=>dls[p.date]=p.units);
+  // real IG reach per content-day (from insights.json)
+  const reachByDay={}; (ins&&ins.posts||[]).forEach(p=>{ const m=(p.label||"").match(/^d(\d+)/); if(m) reachByDay[+m[1]]=(reachByDay[+m[1]]||0)+(p.reach||0); });
 
-  // group authored posts by their REAL post date (since launch), incl. today's not-yet-posted
   const byDate = {};
   (posts||[]).forEach(p=>{
     if(!p.day) return;
     const dt = realPostDate(p.day);
     if(dt < LAUNCH || dt > today) return;
     const posted = p.status === "posted";
-    if(!posted && dt !== today) return;          // only posted history + today's scheduled
-    (byDate[dt]=byDate[dt]||[]).push({ title:(p.caption||p.title||"").split("\n")[0], reel:!!p.reel, hook:p.hook, posted });
+    if(!posted && dt !== today) return;
+    (byDate[dt]=byDate[dt]||[]).push({ title:(p.caption||p.title||"").split("\n")[0], reel:!!p.reel, hook:p.hook, posted, day:p.day });
   });
 
-  // dates from today back to launch
   const dates=[]; let d=new Date(today+"T00:00:00"); const L=new Date(LAUNCH+"T00:00:00");
   while(d>=L){ dates.push(localISO(d)); d.setDate(d.getDate()-1); }
 
   const rows = dates.map(dt=>{
     const isToday = dt===today, isLaunch = dt===LAUNCH;
     const u=users[dt]||0, dl=dls[dt]||0, ps=byDate[dt]||[];
+    const reach = ps.reduce((s,x)=> s + (reachByDay[x.day]||0), 0);
     const igTxt = ps.length ? ps.map(x=>{
       const pend = x.posted ? "" : ` <span class="pill p-pink">posts 10am PT</span>`;
       const tag = x.reel ? '<span class="pill p-ok">▶ REEL</span>' : '<span class="pill p-off">🖼 IMAGE</span>';
-      return `${tag} ${esc((x.title||"").slice(0,46))}${x.hook?' 🪝':''}${pend}`;
+      return `${tag} ${esc((x.title||"").slice(0,42))}${x.hook?' 🪝':''}${pend}`;
     }).join('<br>') : '<span class="muted">—</span>';
     const tag = isLaunch ? ' <span class="pill p-blue">launch</span>' : '';
     const hot = dl>0;
-    return `<tr class="${isToday?'today':''} ${hot?'hot':''}"><td class="muted" style="white-space:nowrap">${esc(dlabel(dt))}${tag}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
+    return `<tr class="${isToday?'today':''} ${hot?'hot':''}"><td class="muted" style="white-space:nowrap">${esc(dlabel(dt))}${tag}</td><td class="n">${reach||'·'}</td><td class="n">${u||'·'}</td><td class="n">${dl||'·'}</td><td class="ig">${igTxt}</td></tr>`;
   }).join("");
 
-  el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
-    <p class="help">Pink = today. Green edge = an install happened. Subscriptions aren't a column — see the Conversion tab; they need the App Store report (0 so far).</p>`;
+  el.innerHTML = `<table class="tl"><thead><tr><th>Date</th><th>IG reach</th><th>Web users</th><th>Installs</th><th>Instagram that day</th></tr></thead><tbody>${rows}</tbody></table>
+    <p class="help"><b>Read it left to right: IG reach → web users → installs.</b> That's the funnel. Your d6 reel reached <b>112</b> on Instagram, but only a trickle reached the website and 1 installed — so the leak is the <b>Instagram → website</b> step (the bio-link tap), not reach. Reels are earning reach; converting that reach into clicks is the next job. Images get ~0 reach, so they can't drive anything. Pink = today.</p>`;
 }
 
 function renderGA(ga, feed){
@@ -398,16 +402,38 @@ function renderSocials(ins){
   document.getElementById("ig-body").innerHTML=`<p class="help">@${esc(a.username||"")} · updated ${esc((ins.updated||"").replace("T"," ").slice(0,16))}</p>`;
   const s=ins.summary||{};
   if(s.reels&&s.images){
-    const haveReach=(s.reels.avg_reach||0)+(s.images.avg_reach||0)>0;
-    const mult=s.images.avg_reach?(s.reels.avg_reach/s.images.avg_reach).toFixed(1):null;
+    const rr=s.reels.avg_reach||0, ir=s.images.avg_reach||0;
+    const mult=ir?(rr/ir).toFixed(1):null;
+    let msg;
+    if(rr>0&&ir>0) msg=`Reels reach <b style="color:var(--green)">${mult}×</b> static.`;
+    else if(rr>0) msg=`Reels ARE reaching people (avg <b style="color:var(--green)">${fmt(rr)}</b> per reel); static posts reach <b>~0</b>. Reels are the only format getting discovered — images are dead weight for reach.`;
+    else msg=`<b>0 reach on every post</b> — too new / not discovered yet.`;
     document.getElementById("ig-rv").innerHTML=
-      `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>reach <b>${fmt(s.reels.avg_reach)}</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>`+
-      `<div class="kv"><span class="muted">🖼 Static (${s.images.count})</span><span>reach <b>${fmt(s.images.avg_reach)}</b></span></div>`+
-      `<div class="help">${haveReach&&mult?`Reels reach <b style="color:var(--green)">${mult}×</b> static.`:`<b>0 reach on every post.</b> A 0-follower, days-old account is not getting discovered yet — so the lever is distribution (first followers + explore reach), not reel-vs-image. There is nothing to compare until posts actually reach people.`}</div>`;
+      `<div class="kv"><span class="muted">▶ Reels (${s.reels.count})</span><span>avg reach <b>${fmt(rr)}</b> · watch <b>${s.reels.avg_watch_s}s</b></span></div>`+
+      `<div class="kv"><span class="muted">🖼 Static (${s.images.count})</span><span>avg reach <b>${fmt(ir)}</b></span></div>`+
+      `<div class="help">${msg} <span class="muted">(averages — one reel is hours old; d6 reached 112.)</span></div>`;
   }
   const top=(ins.posts||[]).slice().sort((x,y)=>(y.reach||0)-(x.reach||0)).slice(0,5);
   document.getElementById("ig-topbody").innerHTML=top.map(p=>
     `<div class="list-row"><span class="d">${fmt(p.reach)}</span><span>${p.is_reel?"▶":"🖼"} ${esc(p.label||"")}${p.hook?" 🪝":""}</span></div>`).join("")||"—";
+}
+
+function renderReelRetention(ins, durations){
+  const el=document.getElementById("reel-ret-body"); if(!el) return;
+  if(!ins){ el.innerHTML='<p class="help">Hit "Give me everything" to pull it.</p>'; return; }
+  const reels=(ins.posts||[]).filter(p=>p.is_reel).slice().sort((a,b)=> a.date<b.date?-1:1);
+  if(!reels.length){ el.innerHTML='<span class="muted">No reels posted yet.</span>'; return; }
+  el.innerHTML = reels.map(p=>{
+    const m=(p.label||"").match(/^d(\d+)/); const day=m?m[1]:null;
+    const dur=(durations&&day)?durations[day]:null;
+    const watch=(p.watch_ms||0)/1000, plays=p.plays||0;
+    if(plays===0 && watch===0) return `<div class="list-row"><span class="d">${esc(dlabel(p.date))}</span><span>${p.hook?'🪝 ':''}${esc(p.label||'')} <span class="muted">· no plays yet</span></span></div>`;
+    const ret=dur?Math.round(watch/dur*100):null;
+    const skip=ret!=null?Math.max(0,100-ret):null;
+    const pill=skip!=null?`<span class="pill ${skip<=40?'p-ok':skip<=65?'p-warn':'p-low'}">~${skip}% skip</span>`:'';
+    return `<div class="list-row"><span class="d">${esc(dlabel(p.date))}</span><span>${p.hook?'🪝 ':''}${esc(p.label||'')} <span class="muted">· ${watch.toFixed(1)}s / ${dur||'?'}s${ret!=null?` · ${ret}% watched`:''}</span> ${pill}</span></div>`;
+  }).join("");
+  el.innerHTML += `<div class="help">Skip ≈ 100% − (avg watch ÷ reel length). Watch it trend <b>down</b> across hooked reels (🪝) — that means the cold-open hook is holding people. Proxy metric, so compare reels to each other rather than to Instagram's in-app number.</div>`;
 }
 
 function renderASC(asc){
