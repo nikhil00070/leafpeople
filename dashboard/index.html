@@ -130,6 +130,7 @@ a { color:var(--blue); }
   <!-- OVERVIEW -->
   <div class="panel active" id="tab-overview">
     <p class="sec-sub">Web users, app installs, and what posted on Instagram — one timeline since launch (Jun 9). Today is highlighted; correlation, not proof, at this volume.</p>
+    <div class="card" id="spikes" style="margin-bottom:.9rem"><h3>📈 What moved the needle</h3><div id="spikes-body" class="muted" style="font-size:.85rem">—</div></div>
     <div class="card"><div id="timeline-body" class="muted" style="font-size:.85rem">Loading…</div></div>
     <div class="recs-h">What to do</div>
     <div id="rec-overall"></div>
@@ -140,7 +141,7 @@ a { color:var(--blue); }
     <p class="sec-sub">All figures are <b>unique users</b> (GA dedupes them). Last 30 days.</p>
     <div class="grid g3">
       <div class="card" id="traffic"><h3>Audience</h3><div class="muted" style="font-size:.85rem">Load GA4.</div></div>
-      <div class="card"><h3>Daily unique users · 14d</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Daily unique users</h3><div id="ga-trend-body" class="muted" style="font-size:.85rem">—</div></div>
       <div class="card"><h3>Engagement</h3><div id="ga-eng-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
     <div class="grid g2 row-sp">
@@ -173,7 +174,7 @@ a { color:var(--blue); }
       <div class="card"><h3>Reels vs Static</h3><div id="ig-rv" class="muted" style="font-size:.85rem">Run a refresh.</div></div>
       <div class="card"><h3>Top posts · reach</h3><div id="ig-topbody" class="muted" style="font-size:.85rem">—</div></div>
     </div>
-    <div class="card row-sp"><h3>Reel retention · skip-rate (watch it trend down on hooked reels 🪝)</h3><div id="reel-ret-body" class="muted" style="font-size:.85rem">—</div></div>
+    <div class="card row-sp"><h3>Reel avg watch · hook signal (should rise on hooked reels 🪝)</h3><div id="reel-ret-body" class="muted" style="font-size:.85rem">—</div></div>
     <div class="recs-h">What to do</div>
     <div id="rec-socials"></div>
   </div>
@@ -263,6 +264,7 @@ async function load() {
     J("/videos/instagram/reel_durations.json"),
   ]);
   renderKPIs(ga, asc, subs);
+  renderSpikes(ga, asc, posts);
   renderTimeline(ga, asc, posts, insights);
   renderGA(ga, feed);
   renderFunnel(ga, asc, subs);
@@ -281,6 +283,26 @@ function renderKPIs(ga, asc, subs){
   if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>30d</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
   if(asc&&asc.connected) setBig("kpi-downloads", fmt(asc.total)+' <small>installs</small>', true);
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
+}
+
+function renderSpikes(ga, asc, posts){
+  const el=document.getElementById("spikes-body"); if(!el) return;
+  const out=[];
+  const postByDate={};
+  (posts||[]).forEach(p=>{ if(p.day && p.status==="posted"){ const dt=realPostDate(p.day); (postByDate[dt]=postByDate[dt]||[]).push({title:(p.caption||p.title||"").split("\n")[0], reel:!!p.reel}); }});
+  const us=(ga&&ga.dau_series||[]).map(p=>({date:iso2(p.date),v:p.users})).filter(p=>p.v>0);
+  if(us.length){ const pk=us.reduce((a,b)=>b.v>a.v?b:a); const ps=postByDate[pk.date];
+    out.push(`📈 <span class="hl">${dlabel(pk.date)}</span> — peak <b>${pk.v}</b> web users${ps?`, the day ${ps.some(x=>x.reel)?'a reel went out':'you posted'}: ${esc(ps.map(x=>x.title).join(', ').slice(0,55))}`:''}.`);
+  }
+  const osoc=(ga&&ga.channels||[]).find(c=>c.key==="Organic Social");
+  if(osoc&&osoc.value>0) out.push(`🎉 <span class="hl">Organic Social = ${osoc.value}</span> — the tagged bio link is now attributing Instagram visits (it was all "Direct" before). A reel is the likely driver.`);
+  const dls=(asc&&asc.series||[]).filter(p=>p.units>0);
+  if(dls.length){ const pk=dls.reduce((a,b)=>b.units>a.units?b:a); const ps=postByDate[pk.date];
+    out.push(`📥 <span class="hl">${dlabel(pk.date)}</span> — best install day (<b>${pk.units}</b>)${ps?`, posted: ${esc(ps.map(x=>x.title).join(', ').slice(0,45))}`:''}.`);
+  }
+  el.innerHTML = out.length
+    ? out.map(x=>`<div class="list-row"><span>${x}</span></div>`).join("")+`<div class="help">Auto-spotted from the data. As more days accrue this will surface weekday-vs-weekend patterns and which reels drove the jumps.</div>`
+    : '<span class="muted">Not enough data to spot a spike yet — needs a few more days.</span>';
 }
 
 function renderTimeline(ga, asc, posts, ins){
@@ -339,7 +361,7 @@ function renderGA(ga, feed){
     <div class="help">Distinct people (GA dedupes). Pageviews (incl. repeats): ${fmt(T.pageviews)}.</div>`;
 
   document.getElementById("ga-trend-body").innerHTML =
-    `<div class="big">${fmt(D.avg30)} <small>avg/day · 30d</small></div>
+    `<div class="big">${fmt(D.avg30)} <small>avg/day (since data began)</small></div>
      <div style="margin:.5rem 0 0">${chart((ga.dau_series||[]).slice(-14).map(p=>({date:iso2(p.date), value:p.users})))}</div>`;
 
   document.getElementById("ga-eng-body").innerHTML =
@@ -427,14 +449,12 @@ function renderReelRetention(ins, durations){
   el.innerHTML = reels.map(p=>{
     const m=(p.label||"").match(/^d(\d+)/); const day=m?m[1]:null;
     const dur=(durations&&day)?durations[day]:null;
-    const watch=(p.watch_ms||0)/1000, plays=p.plays||0;
+    const watch=(p.watch_ms||0)/1000, plays=p.plays||0, reach=p.reach||0;
     if(plays===0 && watch===0) return `<div class="list-row"><span class="d">${esc(dlabel(p.date))}</span><span>${p.hook?'🪝 ':''}${esc(p.label||'')} <span class="muted">· no plays yet</span></span></div>`;
-    const ret=dur?Math.round(watch/dur*100):null;
-    const skip=ret!=null?Math.max(0,100-ret):null;
-    const pill=skip!=null?`<span class="pill ${skip<=40?'p-ok':skip<=65?'p-warn':'p-low'}">~${skip}% skip</span>`:'';
-    return `<div class="list-row"><span class="d">${esc(dlabel(p.date))}</span><span>${p.hook?'🪝 ':''}${esc(p.label||'')} <span class="muted">· ${watch.toFixed(1)}s / ${dur||'?'}s${ret!=null?` · ${ret}% watched`:''}</span> ${pill}</span></div>`;
+    const noisy = plays < 30;
+    return `<div class="list-row"><span class="d">${esc(dlabel(p.date))}</span><span>${p.hook?'🪝 ':''}${esc(p.label||'')} <span class="muted">· avg watch <b class="hl">${watch.toFixed(1)}s</b>${dur?` of ${dur}s`:''} · ${reach} reach · ${plays} plays${noisy?' <span class="pill p-off">tiny sample</span>':''}</span></span></div>`;
   }).join("");
-  el.innerHTML += `<div class="help">Skip ≈ 100% − (avg watch ÷ reel length). Watch it trend <b>down</b> across hooked reels (🪝) — that means the cold-open hook is holding people. Proxy metric, so compare reels to each other rather than to Instagram's in-app number.</div>`;
+  el.innerHTML += `<div class="help"><b>Track avg watch time</b> — it should rise on hooked reels (🪝) if the cold-open is holding people. This is NOT Instagram's in-app "skip rate" — the Graph API doesn't expose that (different metric: % who swiped past), so check the app for the real skip %. At &lt;30 plays everything here is noise.</div>`;
 }
 
 function renderASC(asc){
