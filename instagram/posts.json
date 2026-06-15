@@ -277,7 +277,7 @@
     "date": "2026-06-10",
     "phase": "welcome",
     "branch": "rarest-jungle",
-    "status": "draft",
+    "status": "posted",
     "title": "Silver lightning",
     "image": "/images/instagram/anthurium-crystalanium.jpeg",
     "caption": "Silver lightning.\n\nThose veins on Anthurium crystallinum aren't painted \u2014 it's the way the velvet scatters light. Sugar-white over deep forest green.\n\nNature engineered this. We just can't stop staring.\n\nLink in bio \u2728",
@@ -301,7 +301,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-15",
+    "ig_media_id": "18132157432607408"
   },
   {
     "id": "model-01",
