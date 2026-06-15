@@ -1,25 +1,41 @@
 {
-  "updated": "2026-06-15T18:06:08+00:00",
+  "updated": "2026-06-15T22:20:59+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 0,
-    "posts": 8
+    "posts": 9
   },
   "summary": {
     "reels": {
       "count": 2,
       "avg_reach": 58,
       "avg_eng_pct": 0.0,
-      "avg_watch_s": 4.9,
+      "avg_watch_s": 4.8,
       "avg_plays": 64
     },
     "images": {
-      "count": 6,
+      "count": 7,
       "avg_reach": 0,
-      "avg_eng_pct": 16.7
+      "avg_eng_pct": 14.3
     }
   },
   "posts": [
+    {
+      "date": "2026-06-15",
+      "type": "IMAGE",
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d9 Silver lightning",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-06-14",
       "type": "REEL",
@@ -29,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 7190,
+      "watch_ms": 6863,
       "plays": 5,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
