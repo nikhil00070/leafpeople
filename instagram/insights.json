@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-15T22:20:59+00:00",
+  "updated": "2026-06-16T21:29:04+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 0,
-    "posts": 9
+    "posts": 10
   },
   "summary": {
     "reels": {
-      "count": 2,
-      "avg_reach": 58,
+      "count": 3,
+      "avg_reach": 44,
       "avg_eng_pct": 0.0,
-      "avg_watch_s": 4.8,
-      "avg_plays": 64
+      "avg_watch_s": 3.6,
+      "avg_plays": 48
     },
     "images": {
       "count": 7,
@@ -20,6 +20,22 @@
     }
   },
   "posts": [
+    {
+      "date": "2026-06-16",
+      "type": "REEL",
+      "reach": 16,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 2102,
+      "plays": 17,
+      "label": "d10 Morning green",
+      "hook": "Some mornings you just need to see something green.",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-06-15",
       "type": "IMAGE",
@@ -45,7 +61,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 6863,
+      "watch_ms": 5861,
       "plays": 5,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
@@ -77,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2688,
+      "watch_ms": 2742,
       "plays": 123,
       "label": "d6 Blackest leaf",
       "hook": null,
