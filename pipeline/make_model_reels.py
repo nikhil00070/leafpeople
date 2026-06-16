@@ -39,19 +39,31 @@ _BASE = ("Cinematic vertical 9:16 video, shot like a cozy phone video. {who} {ac
          "softly, in {room}. ")
 
 # (who, plant, room) — varied leaf forms, hair, and interiors.
-SPECS = [
-    ("a young woman with long brunette hair in a cream knit sweater", "large potted dark velvety anthurium with big heart-shaped leaves and silvery veins", "a bright modern plant-filled living room with a linen sofa and soft morning light"),
-    ("a young blonde woman in a beige tee", "tall potted Monstera deliciosa with big glossy fenestrated split leaves", "a sunny minimalist white living room with oak floors"),
-    ("a young woman with dark wavy hair", "potted silvery velvet philodendron with pale-veined heart-shaped leaves", "a cozy boho reading nook with rattan and warm lamplight"),
-    ("a young blonde woman in a linen shirt", "trailing hoya in a hanging terracotta pot with cascading waxy vines", "a bright sunroom window full of plants"),
-    ("a young woman with brunette hair in a bun", "potted fuzzy textured begonia with patterned silver-spotted leaves", "a warm mid-century living room with wooden shelves"),
-    ("a young blonde woman", "potted anthurium with very long strappy dark velvet leaves draping down", "a soft neutral modern apartment with a big window"),
-    ("a young woman with long brown hair", "potted Philodendron melanochrysum with long dark velvet drop-shaped leaves", "a cozy green plant corner with a jute rug"),
-    ("a young blonde woman in an oversized sweater", "potted variegated Monstera with white-and-green marbled split leaves", "a bright Scandinavian living room"),
-    ("a young woman with dark hair", "potted Alocasia with dramatic dark arrow-shaped leaves and pale veins", "a moody modern loft with soft window light"),
-    ("a young blonde woman", "potted philodendron with pink-and-green variegated heart-shaped leaves", "a cheerful sunlit living room with a cane chair"),
+# All six are funny "plant-person confession" concept reels — each its own distinct scene.
+CONCEPT_PROMPTS = [
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young smiling woman sits in the "
+     "driver's seat of a car absolutely packed full of potted houseplants — plants filling the passenger "
+     "seat, the back seats and the footwells, big green leaves and trailing vines pressed against every "
+     "window. She turns to the camera with a guilty, delighted grin. Warm afternoon light. " + _GUARD),
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman opens her front door with "
+     "a delighted, surprised smile, and a cheerful little parade of small potted houseplants on tiny legs "
+     "walks in through the doorway one after another into a sunlit living room. Whimsical and charming, "
+     "photorealistic. " + _GUARD),
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman stands in a lush plant "
+     "shop holding a precarious overflowing armful of potted plants — far more than she can carry, leaves "
+     "half-covering her face — grinning with delight, surrounded by shelves of greenery. Bright daylight. " + _GUARD),
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman happily struggles to "
+     "carry an enormous potted plant much bigger than herself across a sunlit living room, huge leaves "
+     "towering over her, with a determined delighted smile. " + _GUARD),
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman sits happily on a small "
+     "couch that is completely surrounded and overtaken by dozens of potted houseplants — plants on every "
+     "cushion and all around her, barely room for her — giving a playful shrug and grin to the camera. "
+     "Warm cozy living room. " + _GUARD),
+    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman kneels on the floor "
+     "excitedly unboxing a mail-order plant from a cardboard shipping box, bubble wrap and packing paper "
+     "around her, lifting out a healthy potted plant with an ecstatic delighted smile. Cozy home, warm light. " + _GUARD),
 ]
-PROMPTS = [_BASE.format(who=w, action="holds", plant=p, room=r) + _GUARD for (w, p, r) in SPECS]
+PROMPTS = CONCEPT_PROMPTS
 
 
 def build_input(prompt):
