@@ -35,6 +35,9 @@
   "publisher": {"@type": "Organization", "name": "Leaf People", "logo": {"@type": "ImageObject", "url": "https://leafpeople.app/images/icon-512.png"}},
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://leafpeople.app/the-leaf/{{ slug }}"},
   "articleSection": {{ category | tojson }},
+  {% if keywords %}"keywords": {{ keywords | tojson }},{% endif %}
+  {% if about %}"about": {{ about | tojson }},{% endif %}
+  {% if mentions %}"mentions": {{ mentions | tojson }},{% endif %}
   "inLanguage": "en",
   "isAccessibleForFree": false,
   "hasPart": { "@type": "WebPageElement", "isAccessibleForFree": false, "cssSelector": ".prose" }

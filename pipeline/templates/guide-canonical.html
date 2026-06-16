@@ -34,7 +34,9 @@
   "author": {"@type": "Organization", "name": "Leaf People", "url": "https://leafpeople.app/"},
   "publisher": {"@type": "Organization", "name": "Leaf People", "logo": {"@type": "ImageObject", "url": "https://leafpeople.app/images/icon-512.png"}},
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://leafpeople.app/field-guide/{{ slug }}"},
-  "about": {"@type": "Thing", "name": {{ genus | tojson }}},
+  {% if about %}"about": {{ about | tojson }},{% else %}"about": {"@type": "Thing", "name": {{ genus | tojson }}},{% endif %}
+  {% if keywords %}"keywords": {{ keywords | tojson }},{% endif %}
+  {% if mentions %}"mentions": {{ mentions | tojson }},{% endif %}
   "articleSection": "Field Guide",
   "inLanguage": "en",
   "isAccessibleForFree": false,
