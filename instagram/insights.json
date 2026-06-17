@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-16T22:07:11+00:00",
+  "updated": "2026-06-17T01:58:45+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 0,
+    "followers": 1,
     "posts": 10
   },
   "summary": {
     "reels": {
       "count": 3,
-      "avg_reach": 44,
+      "avg_reach": 45,
       "avg_eng_pct": 0.0,
-      "avg_watch_s": 4.5,
-      "avg_plays": 49
+      "avg_watch_s": 4.3,
+      "avg_plays": 50
     },
     "images": {
       "count": 7,
@@ -23,14 +23,14 @@
     {
       "date": "2026-06-16",
       "type": "REEL",
-      "reach": 17,
+      "reach": 20,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5186,
-      "plays": 18,
+      "watch_ms": 4723,
+      "plays": 21,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
       "is_reel": true,
