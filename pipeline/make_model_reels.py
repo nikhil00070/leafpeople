@@ -31,39 +31,32 @@ DUR = int(os.environ.get("VEO_DUR", "8"))
 RES = os.environ.get("VEO_RES", "720p")
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
-_GUARD = ("Natural realistic hands, correct number of fingers, no warping, no morphing, steady "
-          "gentle motion, photorealistic. No text, no logos. Ambient sound: calm indoor room tone "
-          "with faint birdsong.")
+_GUARD = ("Photorealistic, cinematic, natural, no warping, no morphing, steady gentle camera. No "
+          "text, no logos. Ambient sound: an immersive rainforest soundscape — birdsong, insects, "
+          "dripping water, distant calls and a soft breeze. No music.")
 _BASE = ("Cinematic vertical 9:16 video, shot like a cozy phone video. {who} {action} a {plant}, "
          "lifting it gently toward the camera and slowly turning it to show the leaves, smiling "
          "softly, in {room}. ")
 
 # (who, plant, room) — varied leaf forms, hair, and interiors.
-# All six are funny "plant-person confession" concept reels — each its own distinct scene.
-CONCEPT_PROMPTS = [
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young smiling woman sits in the "
-     "driver's seat of a car absolutely packed full of potted houseplants — plants filling the passenger "
-     "seat, the back seats and the footwells, big green leaves and trailing vines pressed against every "
-     "window. She turns to the camera with a guilty, delighted grin. Warm afternoon light. " + _GUARD),
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman opens her front door with "
-     "a delighted, surprised smile, and a cheerful little parade of small potted houseplants on tiny legs "
-     "walks in through the doorway one after another into a sunlit living room. Whimsical and charming, "
-     "photorealistic. " + _GUARD),
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman stands in a lush plant "
-     "shop holding a precarious overflowing armful of potted plants — far more than she can carry, leaves "
-     "half-covering her face — grinning with delight, surrounded by shelves of greenery. Bright daylight. " + _GUARD),
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman happily struggles to "
-     "carry an enormous potted plant much bigger than herself across a sunlit living room, huge leaves "
-     "towering over her, with a determined delighted smile. " + _GUARD),
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman sits happily on a small "
-     "couch that is completely surrounded and overtaken by dozens of potted houseplants — plants on every "
-     "cushion and all around her, barely room for her — giving a playful shrug and grin to the camera. "
-     "Warm cozy living room. " + _GUARD),
-    ("Cinematic vertical 9:16 video, shot like a cozy phone video. A young woman kneels on the floor "
-     "excitedly unboxing a mail-order plant from a cardboard shipping box, bubble wrap and packing paper "
-     "around her, lifting out a healthy potted plant with an ecstatic delighted smile. Cozy home, warm light. " + _GUARD),
+# Atmospheric rainforest reels — a woman seen FROM BEHIND, sipping coffee, gazing into a named real rainforest.
+_RF = ("Cinematic vertical 9:16 video, calm, slow and immersive. Seen from behind, over her shoulder, a "
+       "young woman {who} sits quietly at the edge of {place}, holding a cup of coffee and slowly sipping "
+       "as she gazes out at the lush, misty understory — {detail}. Her face is not shown. Soft natural "
+       "light, gentle drifting mist, a deep sense of peace. ")
+RF_SPECS = [
+    ("with long dark hair", "the dripping, ultra-wet Chocó rainforest of Colombia", "giant philodendrons and velvet anthuriums, thick mist, water beading on every leaf"),
+    ("with a loose braid", "the vast Amazon rainforest in Peru", "a slow river below a dense green canopy, morning mist rising, tangled lush understory"),
+    ("with dark wavy hair", "the Monteverde cloud forest of Costa Rica", "moss-draped trees, ferns and bromeliads everywhere, swirling mist, soft filtered light"),
+    ("with straight black hair", "the ancient rainforest of Borneo", "enormous buttress-rooted trees, giant Alocasia leaves, humid jungle, shafts of light"),
+    ("with curly hair", "the dense Atlantic Forest of Brazil", "a layered green canopy, tree ferns and epiphytes, warm golden light filtering through"),
+    ("with long brown hair", "the Mindo cloud forest in the Andes of Ecuador", "misty mountain rainforest, hanging mosses, hummingbirds, dramatic green ridges"),
+    ("with blonde hair", "the ancient Daintree rainforest of Australia", "primeval ferns and fan palms, a clear creek, dappled emerald light"),
+    ("with dark coiled hair", "the deep Congo Basin rainforest of Africa", "towering old-growth trees, broad green leaves, humid haze, a sense of vastness"),
+    ("with straight dark hair", "the steaming lowland rainforest of Gunung Leuser in Sumatra", "dense dripping jungle, huge leaves, fog drifting over the canopy"),
+    ("with long dark hair", "the emerald rainforest of Kauai, Hawaii", "jagged misty green cliffs, ferns and tropical foliage, a distant waterfall, soft rain"),
 ]
-PROMPTS = CONCEPT_PROMPTS
+PROMPTS = [_RF.format(who=w, place=p, detail=d) + _GUARD for (w, p, d) in RF_SPECS]
 
 
 def build_input(prompt):
