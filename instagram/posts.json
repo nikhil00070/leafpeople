@@ -347,7 +347,7 @@
     "date": "2026-06-17",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
-    "status": "draft",
+    "status": "posted",
     "title": "The House of Monstera",
     "image": "/images/source/atmo/atmo-d10.jpg",
     "caption": "The House of Monstera \ud83c\udf3f\n\nImagine a greenhouse given over to a single genus \u2014 wall to wall, floor to ceiling, every fenestration its own. Step inside.\n\nEvery plant here is one tap away on Leaf People \u2014 link in bio.",
@@ -374,7 +374,9 @@
     "reel": true,
     "hook": "A room that's only Monstera",
     "img_ready": "/images/ig_ready/d10.jpg",
-    "video": "/videos/instagram/d10.mp4"
+    "video": "/videos/instagram/d10.mp4",
+    "posted_at": "2026-06-17",
+    "ig_media_id": "18082662404173437"
   },
   {
     "id": "d11",
