@@ -56,31 +56,39 @@ async function reportsFor(jwt, reqId) {
   return out;
 }
 
-// Pull the newest usable instance's CSV for a report. Tries DAILY→WEEKLY→MONTHLY, newest first,
-// only COMPLETED instances with downloadable segments. Returns { csv, date, header, diag }.
-async function fetchData(jwt, reportId) {
+async function instanceCsv(jwt, instanceId) {
+  const seg = await api(jwt, `/v1/analyticsReportInstances/${instanceId}/segments?limit=100`);
+  let csv = "";
+  for (const s of (seg.data || [])) {
+    const u = s.attributes && s.attributes.url; if (!u) continue;
+    const buf = Buffer.from(await (await fetch(u)).arrayBuffer());
+    let t; try { t = zlib.gunzipSync(buf).toString("utf8"); } catch { t = buf.toString("utf8"); }
+    csv += (csv ? "\n" : "") + t;
+  }
+  return csv;
+}
+
+// Sum a report's metrics across the most-recent `days` DAILY instances — so totals match ASC's
+// "Last 30 Days" view rather than a single day. Returns { totals, header, from, to, days, diag }.
+async function fetchWindow(jwt, reportId, days = 30) {
   const inst = await api(jwt, `/v1/analyticsReports/${reportId}/instances?limit=200`);
   const all = (inst.data || []).map((i) => ({ id: i.id, ...(i.attributes || {}) }));
   const diag = { instances: all.length, sample: all.slice(0, 4).map((i) => ({ g: i.granularity, d: i.processingDate, s: i.state })) };
-  const order = { DAILY: 0, WEEKLY: 1, MONTHLY: 2 };
-  const usable = all
-    .filter((i) => !i.state || i.state === "COMPLETED")
-    .sort((a, b) => (order[a.granularity] ?? 9) - (order[b.granularity] ?? 9) || (a.processingDate < b.processingDate ? 1 : -1));
-  for (const it of usable) {
-    const seg = await api(jwt, `/v1/analyticsReportInstances/${it.id}/segments?limit=100`);
-    let csv = "";
-    for (const s of (seg.data || [])) {
-      const u = s.attributes && s.attributes.url; if (!u) continue;
-      const buf = Buffer.from(await (await fetch(u)).arrayBuffer());
-      let t; try { t = zlib.gunzipSync(buf).toString("utf8"); } catch { t = buf.toString("utf8"); }
-      csv += (csv ? "\n" : "") + t;
-    }
-    if (csv.trim()) {
-      const header = csv.split(/\r?\n/, 1)[0];
-      return { csv, date: it.processingDate, header, diag };
-    }
+  const daily = all.filter((i) => i.granularity === "DAILY" && (!i.state || i.state === "COMPLETED"))
+    .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1)).slice(0, days);
+  if (!daily.length) return { totals: null, diag };
+  const totals = { impressions: 0, pageViews: 0, firstTime: 0, redownloads: 0, totalDownloads: 0 };
+  let header = null; const dates = [];
+  for (const it of daily) {
+    const csv = await instanceCsv(jwt, it.id);
+    if (!csv.trim()) continue;
+    const m = sumMetrics(csv);
+    if (!header) header = m.header;
+    for (const k of ["impressions", "pageViews", "firstTime", "redownloads", "totalDownloads"]) totals[k] += m[k] || 0;
+    dates.push(it.processingDate);
   }
-  return { csv: null, diag };
+  if (!dates.length) return { totals: null, diag };
+  return { totals, header, from: dates[dates.length - 1], to: dates[0], days: dates.length, diag };
 }
 
 // Sum metric columns from an analytics CSV. Handles both WIDE (a column per metric) and TALL
@@ -138,17 +146,17 @@ export default async function handler(req, res) {
     const engagement = pick(/discovery and engagement standard/) || pick(/discovery and engagement/);
     const downloads = pick(/^app downloads standard/) || pick(/^app downloads/);
 
-    const out = { connected: true, updated: new Date().toISOString(), diag: {} };
+    const out = { connected: true, updated: new Date().toISOString(), window: 30, diag: {} };
     let gotAny = false;
     if (engagement) {
-      const d = await fetchData(jwt, engagement.id);
-      out.diag.engagement = { header: d.header, ...d.diag };
-      if (d.csv) { const m = sumMetrics(d.csv); out.date = d.date; out.impressions = m.impressions; out.pageViews = m.pageViews; gotAny = true; }
+      const w = await fetchWindow(jwt, engagement.id);
+      out.diag.engagement = { header: w.header, days: w.days, ...w.diag };
+      if (w.totals) { out.impressions = w.totals.impressions; out.pageViews = w.totals.pageViews; out.from = w.from; out.to = w.to; gotAny = true; }
     }
     if (downloads && (!engagement || downloads.id !== engagement.id)) {
-      const d = await fetchData(jwt, downloads.id);
-      out.diag.downloads = { header: d.header, ...d.diag };
-      if (d.csv) { const m = sumMetrics(d.csv); out.firstTimeDownloads = m.firstTime; out.redownloads = m.redownloads; out.totalDownloads = m.totalDownloads || (m.firstTime + m.redownloads); gotAny = true; }
+      const w = await fetchWindow(jwt, downloads.id);
+      out.diag.downloads = { header: w.header, days: w.days, ...w.diag };
+      if (w.totals) { out.firstTimeDownloads = w.totals.firstTime; out.redownloads = w.totals.redownloads; out.totalDownloads = w.totals.totalDownloads || (w.totals.firstTime + w.totals.redownloads); out.from = out.from || w.from; out.to = out.to || w.to; gotAny = true; }
     }
     if (!gotAny) return done({ connected: true, pending: true, note: "Reports cataloged; daily data files not generated yet (Apple takes up to ~48h from setup). Filling in soon.", diag: out.diag });
     const dl = out.totalDownloads || out.firstTimeDownloads || 0;
