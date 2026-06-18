@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T06:41:02+00:00",
+  "updated": "2026-06-18T13:48:34+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
@@ -8,10 +8,10 @@
   "summary": {
     "reels": {
       "count": 4,
-      "avg_reach": 39,
-      "avg_eng_pct": 3.6,
-      "avg_watch_s": 4.9,
-      "avg_plays": 43
+      "avg_reach": 41,
+      "avg_eng_pct": 3.3,
+      "avg_watch_s": 4.3,
+      "avg_plays": 45
     },
     "images": {
       "count": 7,
@@ -23,18 +23,18 @@
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 7,
-      "likes": 1,
+      "reach": 15,
+      "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 1,
-      "watch_ms": 7634,
-      "plays": 7,
+      "total_interactions": 2,
+      "watch_ms": 5372,
+      "plays": 15,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 14.3
+      "eng_pct": 13.3
     },
     {
       "date": "2026-06-16",
