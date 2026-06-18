@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-17T01:58:45+00:00",
+  "updated": "2026-06-18T02:04:26+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
-    "posts": 10
+    "posts": 11
   },
   "summary": {
     "reels": {
-      "count": 3,
-      "avg_reach": 45,
-      "avg_eng_pct": 0.0,
-      "avg_watch_s": 4.3,
-      "avg_plays": 50
+      "count": 4,
+      "avg_reach": 39,
+      "avg_eng_pct": 3.6,
+      "avg_watch_s": 4.9,
+      "avg_plays": 43
     },
     "images": {
       "count": 7,
@@ -21,16 +21,32 @@
   },
   "posts": [
     {
+      "date": "2026-06-17",
+      "type": "REEL",
+      "reach": 7,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 1,
+      "watch_ms": 7683,
+      "plays": 7,
+      "label": "d11 The House of Monstera",
+      "hook": "A room that's only Monstera",
+      "is_reel": true,
+      "eng_pct": 14.3
+    },
+    {
       "date": "2026-06-16",
       "type": "REEL",
-      "reach": 20,
+      "reach": 35,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4723,
-      "plays": 21,
+      "watch_ms": 4046,
+      "plays": 37,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
       "is_reel": true,
@@ -61,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5485,
+      "watch_ms": 5323,
       "plays": 5,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
@@ -93,7 +109,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2744,
+      "watch_ms": 2741,
       "plays": 123,
       "label": "d6 Blackest leaf",
       "hook": null,
