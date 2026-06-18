@@ -260,10 +260,10 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs, durations] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
-    J("/videos/instagram/reel_durations.json"),
+    J("/videos/instagram/reel_durations.json"), J("/api/analytics"),
   ]);
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs);
@@ -274,7 +274,7 @@ async function load() {
   renderSubs(subs);
   renderSocials(insights);
   renderReelRetention(insights, durations);
-  renderASC(asc);
+  renderASC(asc, analytics);
   renderOps(feed, drip, posts);
   renderRecs(recs);
   document.getElementById("freshness").textContent = "· updated " + new Date().toLocaleTimeString();
@@ -411,15 +411,17 @@ function renderFunnel(ga, asc, subs){
 function renderSubs(subs){
   const el=document.getElementById("subs-body");
   if(!subs||!subs.connected){ el.innerHTML = (subs&&subs.error)? `<p class="help" style="margin-top:0">Couldn't load: ${esc(subs.error)}</p>` : '<p class="help" style="margin-top:0">App Store creds not set.</p>'; return; }
-  const e=subs.events30||{}; const zero = subs.active===0 && !e.subscribe;
-  el.innerHTML = `<div class="big">${fmt(subs.active)} <small>active subscribers</small></div>
+  const e=subs.events30||{}; const p=subs.plans||{}; const zero = subs.active===0 && !e.subscribe;
+  el.innerHTML = `<div class="big">${fmt(subs.active)} <small>paid subscribers</small></div>
     <div style="margin-top:.5rem">
+      <div class="kv"><span class="muted">Active plans (paid + trial)</span><b>${fmt(p.active!=null?p.active:subs.active)}</b></div>
       <div class="kv"><span class="muted">Active trials</span><b>${fmt(subs.trials)}</b></div>
+      <div class="kv"><span class="muted">Est. MRR</span><b>$${fmt(subs.mrr_est||0)} <span class="muted" style="font-weight:400">est.</span></b></div>
       <div class="kv"><span class="muted">New subscribes · 30d</span><b>${fmt(e.subscribe)}</b></div>
       <div class="kv"><span class="muted">Trial → paid · 30d</span><b>${fmt(e.conversion)}</b></div>
       <div class="kv"><span class="muted">Cancellations · 30d</span><b>${fmt(e.cancel)}</b></div>
     </div>
-    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}${zero?'Zero so far — but with ~0 installs there\'s nothing to convert yet. This becomes meaningful once installs climb.':'App Store sub reports lag a few days.'}</div>`;
+    <div class="help">${subs.snapDate?('Snapshot '+esc(subs.snapDate)+'. '):''}${zero?'Zero so far — but with ~0 installs there\'s nothing to convert yet. This becomes meaningful once installs climb.':'App Store sub reports lag a few days. MRR is estimated (paid × ~$0.99/mo) until Apple has enough history.'}</div>`;
 }
 
 function renderSocials(ins){
@@ -462,13 +464,31 @@ function renderReelRetention(ins, durations){
   el.innerHTML += `<div class="help"><b>Track avg watch time</b> — it should rise on hooked reels (🪝) if the cold-open is holding people. This is NOT Instagram's in-app "skip rate" — the Graph API doesn't expose that (different metric: % who swiped past), so check the app for the real skip %. At &lt;30 plays everything here is noise.</div>`;
 }
 
-function renderASC(asc){
+function renderASC(asc, an){
   const el=document.getElementById("downloads");
   if(!asc||!asc.connected){ if(asc&&asc.error){const d=el.querySelector("div"); if(d)d.textContent="App Store: "+asc.error;} return; }
-  const latest=asc.latest||{};
-  el.innerHTML=`<h3>Downloads · since launch</h3>
+  const latest=asc.latest||{}, proc=asc.proceeds||{}, upd=asc.updates||{}, iap=asc.iap||{};
+  let anHtml="";
+  if(an&&an.connected&&an.pending){ anHtml=`<div class="help" style="margin-top:.7rem">App Analytics (impressions · page views · conversion): ${esc(an.note||"generating…")}</div>`; }
+  else if(an&&an.connected){
+    const conv=an.conversionRate!=null?an.conversionRate+'%':'—';
+    anHtml=`<div style="margin-top:.7rem;border-top:1px solid var(--border);padding-top:.55rem">
+      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Analytics${an.date?` · ${esc(an.date)}`:''}</div>
+      <div class="kv"><span class="muted">Impressions</span><b>${fmt(an.impressions)}</b></div>
+      <div class="kv"><span class="muted">Product page views</span><b>${fmt(an.pageViews)}</b></div>
+      <div class="kv"><span class="muted">Conversion rate</span><b>${conv}</b></div>
+      ${an.firstTimeDownloads!=null?`<div class="kv"><span class="muted">First-time downloads</span><b>${fmt(an.firstTimeDownloads)}</b></div>`:''}
+      ${an.redownloads!=null?`<div class="kv"><span class="muted">Redownloads</span><b>${fmt(an.redownloads)}</b></div>`:''}</div>`;
+  } else if(an&&an.error){ anHtml=`<div class="help" style="margin-top:.7rem">App Analytics: ${esc(an.error)}</div>`; }
+  el.innerHTML=`<h3>Downloads &amp; revenue · since launch</h3>
     <div class="big">${fmt(asc.total)} <small>installs</small></div>
-    <div style="margin-top:.5rem"><div class="kv"><span class="muted">Latest · ${esc(dlabel(latest.date)||"—")}</span><b>${fmt(latest.units)}</b></div><div class="kv"><span class="muted">Last 7 days</span><b>${fmt(asc.last7)}</b></div></div>`;
+    <div style="margin-top:.5rem">
+      <div class="kv"><span class="muted">Latest · ${esc(dlabel(latest.date)||"—")}</span><b>${fmt(latest.units)}</b></div>
+      <div class="kv"><span class="muted">Last 7 days</span><b>${fmt(asc.last7)}</b></div>
+      <div class="kv"><span class="muted">Updates · 7d</span><b>${fmt(upd.last7)}</b></div>
+      <div class="kv"><span class="muted">In-app purchases · 7d</span><b>${fmt(iap.last7)}</b></div>
+      <div class="kv"><span class="muted">Proceeds · since launch</span><b>$${fmt(proc.total)}</b></div>
+    </div>${anHtml}`;
   document.getElementById("asc-trend-body").innerHTML =
     `<div class="big">${fmt(asc.last7)} <small>last 7 days</small></div>
      <div style="margin:.5rem 0 0">${chart((asc.series||[]).slice(-14).map(p=>({date:p.date, value:p.units})))}</div>

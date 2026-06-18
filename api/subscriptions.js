@@ -92,7 +92,12 @@ export default async function handler(req, res) {
       }
     }
 
-    cache = { connected: true, updated: new Date().toISOString(), active, trials, snapDate, events30: ev, noData };
+    const net30 = ev.subscribe + ev.conversion - ev.cancel;
+    cache = {
+      connected: true, updated: new Date().toISOString(), active, trials, snapDate, events30: ev, noData,
+      plans: { active: active + trials, paid: active, trials, net30 },   // Active = paid + trials; Paid = paying
+      mrr_est: Math.round(active * 0.99 * 100) / 100,                    // rough: paying subs × ~$0.99/mo-equivalent
+    };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
