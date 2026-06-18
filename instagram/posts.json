@@ -384,7 +384,7 @@
     "date": "2026-06-18",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "Morning mist",
     "image": "/images/plants/plant-13.jpg",
     "caption": "Morning mist.\n\nFor an hour after dawn the cloud forest disappears into white \u2014 every leaf beaded with water, the whole world hushed and dripping.\n\nThis is the calm we're chasing. A pocket of jungle, two feet from your couch.",
@@ -410,7 +410,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d11.jpg"
+    "img_ready": "/images/ig_ready/d11.jpg",
+    "posted_at": "2026-06-18",
+    "ig_media_id": "17970290319117070"
   },
   {
     "id": "model-02",
