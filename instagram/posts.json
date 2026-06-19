@@ -420,7 +420,7 @@
     "date": "2026-06-19",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "7am check",
     "image": "/images/instagram/model-02-cover.jpg",
     "img_ready": "/images/instagram/model-02-cover.jpg",
@@ -446,7 +446,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-19",
+    "ig_media_id": "18176004130408922"
   },
   {
     "id": "b2-01",
