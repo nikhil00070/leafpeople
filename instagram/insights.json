@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T20:52:38+00:00",
+  "updated": "2026-06-19T20:55:03+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
@@ -30,7 +30,7 @@
       "shares": 0,
       "total_interactions": 0,
       "watch_ms": 4555,
-      "plays": 24,
+      "plays": 25,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
       "is_reel": true,
