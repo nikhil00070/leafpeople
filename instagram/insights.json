@@ -1,40 +1,72 @@
 {
-  "updated": "2026-06-18T17:57:45+00:00",
+  "updated": "2026-06-19T20:52:38+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
-    "posts": 11
+    "posts": 13
   },
   "summary": {
     "reels": {
-      "count": 4,
-      "avg_reach": 42,
-      "avg_eng_pct": 3.1,
-      "avg_watch_s": 4.4,
-      "avg_plays": 45
+      "count": 5,
+      "avg_reach": 38,
+      "avg_eng_pct": 2.4,
+      "avg_watch_s": 4.3,
+      "avg_plays": 41
     },
     "images": {
-      "count": 7,
+      "count": 8,
       "avg_reach": 0,
-      "avg_eng_pct": 14.3
+      "avg_eng_pct": 12.5
     }
   },
   "posts": [
     {
+      "date": "2026-06-19",
+      "type": "REEL",
+      "reach": 22,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 4555,
+      "plays": 24,
+      "label": "d13 7am check",
+      "hook": "The 7am plant check. Before I've spoken to a soul.",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-06-18",
+      "type": "IMAGE",
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d12 Morning mist",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
+    {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 16,
+      "reach": 17,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 5356,
-      "plays": 16,
+      "watch_ms": 4887,
+      "plays": 17,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 12.5
+      "eng_pct": 11.8
     },
     {
       "date": "2026-06-16",
@@ -45,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4483,
+      "watch_ms": 4452,
       "plays": 37,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
