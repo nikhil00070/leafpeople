@@ -456,7 +456,7 @@
     "date": "2026-06-20",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Went in for one",
     "image": "/images/instagram/b2-01-cover.jpg",
     "img_ready": "/images/instagram/b2-01-cover.jpg",
@@ -481,7 +481,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-20",
+    "ig_media_id": "17874009264616182"
   },
   {
     "id": "d12",
