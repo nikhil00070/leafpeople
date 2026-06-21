@@ -125,6 +125,7 @@ a { color:var(--blue); }
     <button data-tab="conversion">🔗 Conversion</button>
     <button data-tab="socials">📱 Socials</button>
     <button data-tab="downloads">⬇️ Downloads</button>
+    <button data-tab="app">📲 App</button>
     <button data-tab="ops">🛠 Ops</button>
   </div>
 
@@ -187,6 +188,21 @@ a { color:var(--blue); }
       <div class="card" id="downloads"><h3>Downloads</h3><div class="muted" style="font-size:.85rem">Load App Store.</div></div>
       <div class="card"><h3>Daily downloads · 14d</h3><div id="asc-trend-body" class="muted" style="font-size:.85rem">—</div></div>
     </div>
+  </div>
+
+  <!-- APP ANALYTICS -->
+  <div class="panel" id="tab-app">
+    <p class="sec-sub">In-app behavior (iOS) from GA4 — screens, the paywall funnel, and free-vs-premium. Fills in once the instrumented build is live; data flows going forward and lags ~24–48h.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Active users · 30d</h3><div class="big" id="app-users">—</div><div id="app-eng" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
+      <div class="card"><h3>Paywall funnel · 30d</h3><div id="app-funnel" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Free vs Premium</h3><div id="app-membership" class="muted" style="font-size:.85rem">—</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>Which gate (paywall source)</h3><div id="app-bysource" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Top screens</h3><div id="app-screens" class="muted" style="font-size:.85rem">—</div></div>
+    </div>
+    <div class="card row-sp"><h3>Key actions · 30d</h3><div id="app-actions" class="muted" style="font-size:.85rem">—</div></div>
   </div>
 
   <!-- OPS -->
@@ -260,10 +276,10 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
-    J("/videos/instagram/reel_durations.json"), J("/api/analytics"),
+    J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"),
   ]);
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs);
@@ -275,12 +291,46 @@ async function load() {
   renderSocials(insights);
   renderReelRetention(insights, durations);
   renderASC(asc, analytics);
+  renderAppAnalytics(appx);
   renderOps(feed, drip, posts);
   renderRecs(recs);
   document.getElementById("freshness").textContent = "· updated " + new Date().toLocaleTimeString();
 }
 
 function setBig(id, html, gradient){ const el=document.getElementById(id); if(!el) return; el.innerHTML=html; el.style.cssText = gradient?"":"background:none;-webkit-text-fill-color:initial;color:var(--text)"; }
+
+function renderAppAnalytics(a){
+  const $ = id => document.getElementById(id);
+  const fm = (typeof fmt==="function") ? fmt : (x=>x==null?"0":String(x));
+  const row = c => '<div style="display:flex;justify-content:space-between;gap:1rem;padding:.28rem 0;border-bottom:1px solid var(--border)"><span>'+c[0]+'</span><span class="muted">'+c.slice(1).join(' · ')+'</span></div>';
+  if(!a || !a.connected){
+    if($("app-funnel")) $("app-funnel").textContent = (a&&a.error) ? "GA4 error: "+a.error : "Waiting on the instrumented build — app events flow from when it ships.";
+    return;
+  }
+  const t=a.totals||{}, f=a.funnel||{};
+  setBig("app-users", fm(t.active_users)+' <small>30d</small>', true);
+  if($("app-eng")) $("app-eng").innerHTML = fm(t.total_users)+" all-time · "+(t.avg_sec_per_user||0)+"s/user · "+(t.engaged_rate_pct||0)+"% engaged";
+  if($("app-funnel")) $("app-funnel").innerHTML = [
+    ["Paywall shown", fm(f.paywall_shown)+" ("+fm(f.paywall_shown_users)+" users)"],
+    ["→ Subscribe tapped", fm(f.subscribe_tapped)+" · "+(f.shown_to_tapped_pct||0)+"%"],
+    ["→ Purchased", fm(f.purchase_completed)+" · "+(f.tapped_to_bought_pct||0)+"% of taps"],
+    ["Dismissed", fm(f.paywall_dismissed)],
+    ["Failed / cancelled", fm(f.purchase_failed)],
+    ["Shown → bought", (f.shown_to_bought_pct||0)+"%"],
+  ].map(row).join("");
+  if($("app-membership")) $("app-membership").innerHTML = (a.membership&&a.membership.length)
+    ? a.membership.map(m=>row([m.membership, fm(m.users)+" users", (m.avg_sec||0)+"s"])).join("")
+    : '<span class="muted">Register a user-scoped GA4 custom dimension "membership" to split free vs premium.</span>';
+  if($("app-bysource")) $("app-bysource").innerHTML = (a.by_source&&a.by_source.length)
+    ? a.by_source.map(s=>row([s.source||"(unknown)", fm(s.shown)+" shown", fm(s.users)+" users"])).join("")
+    : '<span class="muted">Aggregate funnel only until the "source" custom dimension is registered in GA4.</span>';
+  if($("app-screens")) $("app-screens").innerHTML = (a.top_screens&&a.top_screens.length)
+    ? a.top_screens.map(s=>row([s.screen||"(unknown)", fm(s.views)+" views", (s.avg_sec||0)+"s"])).join("")
+    : '<span class="muted">No screen data yet.</span>';
+  if($("app-actions")) $("app-actions").innerHTML = (a.actions&&a.actions.length)
+    ? a.actions.map(s=>row([s.name, fm(s.count)+"×", fm(s.users)+" users"])).join("")
+    : '<span class="muted">No action data yet.</span>';
+}
 
 function renderKPIs(ga, asc, subs){
   if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>'+GAVLABEL+'</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
