@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-19T20:55:03+00:00",
+  "updated": "2026-06-21T04:19:11+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
-    "posts": 13
+    "posts": 14
   },
   "summary": {
     "reels": {
-      "count": 5,
-      "avg_reach": 38,
+      "count": 6,
+      "avg_reach": 41,
       "avg_eng_pct": 2.4,
-      "avg_watch_s": 4.3,
-      "avg_plays": 41
+      "avg_watch_s": 4.0,
+      "avg_plays": 46
     },
     "images": {
       "count": 8,
@@ -21,25 +21,41 @@
   },
   "posts": [
     {
-      "date": "2026-06-19",
+      "date": "2026-06-20",
       "type": "REEL",
-      "reach": 22,
+      "reach": 1,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4555,
-      "plays": 25,
-      "label": "d13 7am check",
-      "hook": "The 7am plant check. Before I've spoken to a soul.",
+      "watch_ms": 416,
+      "plays": 2,
+      "label": "d14 Went in for one",
+      "hook": "POV: you went in for ONE plant.",
       "is_reel": true,
       "eng_pct": 0.0
     },
     {
+      "date": "2026-06-19",
+      "type": "REEL",
+      "reach": 76,
+      "likes": 2,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 2,
+      "watch_ms": 6363,
+      "plays": 91,
+      "label": "d13 7am check",
+      "hook": "The 7am plant check. Before I've spoken to a soul.",
+      "is_reel": true,
+      "eng_pct": 2.6
+    },
+    {
       "date": "2026-06-18",
       "type": "IMAGE",
-      "reach": 0,
+      "reach": 1,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -61,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 4887,
+      "watch_ms": 5027,
       "plays": 17,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
@@ -77,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4452,
+      "watch_ms": 4498,
       "plays": 37,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
@@ -109,7 +125,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4997,
+      "watch_ms": 4843,
       "plays": 5,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
@@ -141,7 +157,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2793,
+      "watch_ms": 2784,
       "plays": 123,
       "label": "d6 Blackest leaf",
       "hook": null,
