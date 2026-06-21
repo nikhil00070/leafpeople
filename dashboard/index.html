@@ -126,6 +126,7 @@ a { color:var(--blue); }
     <button data-tab="socials">📱 Socials</button>
     <button data-tab="downloads">⬇️ Downloads</button>
     <button data-tab="app">📲 App</button>
+    <button data-tab="users">👤 Users</button>
     <button data-tab="ops">🛠 Ops</button>
   </div>
 
@@ -205,6 +206,13 @@ a { color:var(--blue); }
     <div class="card row-sp"><h3>Key actions · 30d</h3><div id="app-actions" class="muted" style="font-size:.85rem">—</div></div>
   </div>
 
+  <!-- USERS (per-user, PostHog) -->
+  <div class="panel" id="tab-users">
+    <p class="sec-sub">Per-user behavior from PostHog — each person's taps, time, funnel, and a one-line read from Claude. Fills in once users generate sessions; session recordings are in PostHog itself.</p>
+    <div class="card row-sp"><h3>📈 Trend</h3><div id="users-trend" class="muted" style="font-size:.9rem">—</div></div>
+    <div class="card row-sp"><h3>Users <span id="users-count" class="muted" style="font-weight:400"></span></h3><div id="users-list" class="muted" style="font-size:.85rem">—</div></div>
+  </div>
+
   <!-- OPS -->
   <div class="panel" id="tab-ops">
     <div class="links">
@@ -276,10 +284,10 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx, appusers] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
-    J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"),
+    J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"), J("/api/app-users"),
   ]);
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs);
@@ -292,6 +300,7 @@ async function load() {
   renderReelRetention(insights, durations);
   renderASC(asc, analytics);
   renderAppAnalytics(appx);
+  renderAppUsers(appusers);
   renderOps(feed, drip, posts);
   renderRecs(recs);
   document.getElementById("freshness").textContent = "· updated " + new Date().toLocaleTimeString();
@@ -330,6 +339,31 @@ function renderAppAnalytics(a){
   if($("app-actions")) $("app-actions").innerHTML = (a.actions&&a.actions.length)
     ? a.actions.map(s=>row([s.name, fm(s.count)+"×", fm(s.users)+" users"])).join("")
     : '<span class="muted">No action data yet.</span>';
+}
+
+function renderAppUsers(d){
+  const $ = id => document.getElementById(id);
+  const fm = (typeof fmt==="function")?fmt:(x=>x==null?"0":String(x));
+  if(!d || !d.connected){
+    if($("users-trend")) $("users-trend").textContent = (d&&d.error) ? ("PostHog error: "+d.error) : "Add the PostHog read key + ship the build — per-user data flows from then on.";
+    return;
+  }
+  if($("users-count")) $("users-count").textContent = "· "+fm(d.count)+" recent";
+  if($("users-trend")) $("users-trend").textContent = d.trend || "Not enough data yet for a trend read.";
+  const users = d.users || [];
+  if($("users-list")) $("users-list").innerHTML = users.length ? users.map(u=>{
+    const taps = (u.top_taps||[]).map(t=>t.event+"·"+fm(t.n)).join(", ") || "—";
+    const screens = (u.top_screens||[]).map(s=>s.screen).slice(0,3).join(" › ") || "—";
+    const funnel = u.paywall_shown ? (" · paywall×"+fm(u.paywall_shown)+(u.purchases?(" → bought"):(u.subscribe_tapped?" → tapped, no buy":" → no sub"))) : "";
+    const badge = (u.membership==="premium") ? '<span style="color:#2E7DF6">●&nbsp;premium</span>' : '<span class="muted">○&nbsp;free</span>';
+    return '<div style="padding:.55rem 0;border-bottom:1px solid var(--border)">'
+      + '<div style="display:flex;justify-content:space-between;gap:1rem"><span><b>'+u.pid.slice(0,8)+'</b> &nbsp;'+badge+'</span>'
+      + '<span class="muted">'+fm(u.events)+' events · '+fm(u.sessions)+' sess · '+fm(u.days_active)+'d</span></div>'
+      + (u.summary ? ('<div style="margin:.25rem 0;color:var(--text)">'+u.summary+'</div>') : '')
+      + '<div class="muted" style="font-size:.8rem">taps: '+taps+'</div>'
+      + '<div class="muted" style="font-size:.8rem">screens: '+screens+funnel+'</div>'
+      + '</div>';
+  }).join("") : '<span class="muted">No users with sessions in the last 30 days yet.</span>';
 }
 
 function renderKPIs(ga, asc, subs){
