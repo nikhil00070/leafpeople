@@ -29,10 +29,11 @@ async function claudeSummaries(apiKey, users) {
     events: u.events, sessions: u.sessions,
     paywalls: u.paywall_shown, subscribe_taps: u.subscribe_tapped, purchases: u.purchases,
     top_taps: u.top_taps, top_screens: u.top_screens,
+    plants_viewed: u.top_plants.map((p) => p.plant), searches: u.searches,
     days_active: u.days_active,
   }));
   const prompt = `You are analyzing users of a rare-plant iOS app (identify, browse, care, marketplace, paywall at $0.99/mo).
-For EACH user below, write a punchy one-line behavioral summary (max ~16 words) — what they did, where they lingered, and (if they hit a paywall) why they likely didn't subscribe.
+For EACH user below, write a punchy one-line behavioral summary (max ~18 words) — naming the SPECIFIC plants they viewed and terms they searched when notable, where they lingered, and (if they hit a paywall) why they likely didn't subscribe.
 Also write a 2-sentence overall TREND summary across all users.
 Return ONLY valid JSON, no prose: {"trend":"...","users":[{"id":"<id>","summary":"..."}]}
 Users JSON:
@@ -76,7 +77,7 @@ export default async function handler(req, res) {
       pid: r[0], membership: r[1], events: Number(r[2]) || 0, sessions: Number(r[3]) || 0,
       days_active: Number(r[4]) || 0, first_seen: r[5], last_seen: r[6],
       paywall_shown: Number(r[7]) || 0, subscribe_tapped: Number(r[8]) || 0, purchases: Number(r[9]) || 0,
-      top_taps: [], top_screens: [], summary: "",
+      top_taps: [], top_screens: [], top_plants: [], searches: [], summary: "",
     }));
     const byId = Object.fromEntries(users.map((u) => [u.pid, u]));
 
@@ -94,6 +95,17 @@ export default async function handler(req, res) {
         WHERE ${W} AND event='$screen' AND toString(person_id) IN (${ids})
         GROUP BY pid, screen ORDER BY c DESC`).catch(() => []);
       for (const r of scr) { const u = byId[r[0]]; if (u && r[1] && u.top_screens.length < 5) u.top_screens.push({ screen: r[1], n: Number(r[2]) || 0 }); }
+      // The actionable specifics — WHICH plants they viewed + WHAT they searched.
+      const plants = await hog(host, pid, key, `
+        SELECT toString(person_id) AS pid, properties.plant AS v, count() AS c FROM events
+        WHERE ${W} AND event='plant_viewed' AND toString(person_id) IN (${ids})
+        GROUP BY pid, v ORDER BY c DESC`).catch(() => []);
+      for (const r of plants) { const u = byId[r[0]]; if (u && r[1] && u.top_plants.length < 6) u.top_plants.push({ plant: r[1], n: Number(r[2]) || 0 }); }
+      const searches = await hog(host, pid, key, `
+        SELECT toString(person_id) AS pid, properties.q AS v, count() AS c FROM events
+        WHERE ${W} AND event='library_searched' AND toString(person_id) IN (${ids})
+        GROUP BY pid, v ORDER BY c DESC`).catch(() => []);
+      for (const r of searches) { const u = byId[r[0]]; if (u && r[1] && u.searches.length < 6) u.searches.push(r[1]); }
     }
 
     let trend = "";

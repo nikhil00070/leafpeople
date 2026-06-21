@@ -348,6 +348,8 @@ function renderAppUsers(d){
   if($("users-list")) $("users-list").innerHTML = users.length ? users.map(u=>{
     const taps = (u.top_taps||[]).map(t=>t.event+"·"+fm(t.n)).join(", ") || "—";
     const screens = (u.top_screens||[]).map(s=>s.screen).slice(0,3).join(" › ") || "—";
+    const plants = (u.top_plants||[]).map(p=>p.plant).slice(0,4).join(", ");
+    const searches = (u.searches||[]).slice(0,4).join(", ");
     const funnel = u.paywall_shown ? (" · paywall×"+fm(u.paywall_shown)+(u.purchases?(" → bought"):(u.subscribe_tapped?" → tapped, no buy":" → no sub"))) : "";
     const badge = (u.membership==="premium") ? '<span style="color:#2E7DF6">●&nbsp;premium</span>' : '<span class="muted">○&nbsp;free</span>';
     return '<div style="padding:.55rem 0;border-bottom:1px solid var(--border)">'
@@ -355,6 +357,8 @@ function renderAppUsers(d){
       + '<span class="muted">'+fm(u.events)+' events · '+fm(u.sessions)+' sess · '+fm(u.days_active)+'d</span></div>'
       + (u.summary ? ('<div style="margin:.25rem 0;color:var(--text)">'+u.summary+'</div>') : '')
       + '<div class="muted" style="font-size:.8rem">taps: '+taps+'</div>'
+      + (plants?('<div class="muted" style="font-size:.8rem">plants: '+plants+'</div>'):'')
+      + (searches?('<div class="muted" style="font-size:.8rem">searched: '+searches+'</div>'):'')
       + '<div class="muted" style="font-size:.8rem">screens: '+screens+funnel+'</div>'
       + '</div>';
   }).join("") : '<span class="muted">No users with sessions in the last 30 days yet.</span>';
