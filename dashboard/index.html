@@ -126,7 +126,6 @@ a { color:var(--blue); }
     <button data-tab="socials">📱 Socials</button>
     <button data-tab="downloads">⬇️ Downloads</button>
     <button data-tab="app">📲 App</button>
-    <button data-tab="users">👤 Users</button>
     <button data-tab="ops">🛠 Ops</button>
   </div>
 
@@ -191,9 +190,10 @@ a { color:var(--blue); }
     </div>
   </div>
 
-  <!-- APP ANALYTICS -->
+  <!-- APP ANALYTICS (aggregate + per-user, all in one) -->
   <div class="panel" id="tab-app">
-    <p class="sec-sub">In-app behavior (iOS) from GA4 — screens, the paywall funnel, and free-vs-premium. Fills in once the instrumented build is live; data flows going forward and lags ~24–48h.</p>
+    <p class="sec-sub">In-app behavior (iOS): the aggregate picture (GA4) plus every user's moves with a one-line Claude read (PostHog). Full session recordings live in PostHog → Session Replay. Fills in once the build is live.</p>
+    <div class="card row-sp"><h3>📈 Trend</h3><div id="users-trend" class="muted" style="font-size:.9rem">—</div></div>
     <div class="grid g3">
       <div class="card"><h3>Active users · 30d</h3><div class="big" id="app-users">—</div><div id="app-eng" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
       <div class="card"><h3>Paywall funnel · 30d</h3><div id="app-funnel" class="muted" style="font-size:.85rem">—</div></div>
@@ -204,13 +204,7 @@ a { color:var(--blue); }
       <div class="card"><h3>Top screens</h3><div id="app-screens" class="muted" style="font-size:.85rem">—</div></div>
     </div>
     <div class="card row-sp"><h3>Key actions · 30d</h3><div id="app-actions" class="muted" style="font-size:.85rem">—</div></div>
-  </div>
-
-  <!-- USERS (per-user, PostHog) -->
-  <div class="panel" id="tab-users">
-    <p class="sec-sub">Per-user behavior from PostHog — each person's taps, time, funnel, and a one-line read from Claude. Fills in once users generate sessions; session recordings are in PostHog itself.</p>
-    <div class="card row-sp"><h3>📈 Trend</h3><div id="users-trend" class="muted" style="font-size:.9rem">—</div></div>
-    <div class="card row-sp"><h3>Users <span id="users-count" class="muted" style="font-weight:400"></span></h3><div id="users-list" class="muted" style="font-size:.85rem">—</div></div>
+    <div class="card row-sp"><h3>Per-user moves <span id="users-count" class="muted" style="font-weight:400"></span></h3><div id="users-list" class="muted" style="font-size:.85rem">—</div></div>
   </div>
 
   <!-- OPS -->
