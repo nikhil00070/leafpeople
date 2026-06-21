@@ -491,7 +491,7 @@
     "date": "2026-06-21",
     "phase": "welcome",
     "branch": "rarest-jungle",
-    "status": "draft",
+    "status": "posted",
     "title": "The deep end",
     "image": "/images/source/inat/the-cuttings-resale-market.jpg",
     "caption": "The ones collectors whisper about.\n\nAnthurium papillilaminum \u2014 deep, suede-dark, impossibly velvet. The kind of plant that starts bidding wars and long flights to nurseries you've never heard of.\n\nThis is the deep end. Welcome.\n\n\ud83c\udf3f Link in bio",
@@ -519,7 +519,9 @@
     "reel": true,
     "hook": "The ones collectors whisper about",
     "img_ready": "/images/ig_ready/d12.jpg",
-    "video": "/videos/instagram/d12.mp4"
+    "video": "/videos/instagram/d12.mp4",
+    "posted_at": "2026-06-21",
+    "ig_media_id": "17877563769672475"
   },
   {
     "id": "d13",
