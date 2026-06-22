@@ -59,7 +59,8 @@ export default async function handler(req, res) {
   const fresh = !!(req.query && req.query.fresh);
   if (cache && !fresh && Date.now() - cacheAt < CACHE_MS) { res.setHeader("cache-control", "no-store"); return res.status(200).json(cache); }
 
-  const W = "timestamp > now() - INTERVAL 30 DAY";
+  // 30-day window, excluding the admin's own (internal-tagged) sessions.
+  const W = "timestamp > now() - INTERVAL 30 DAY AND coalesce(toString(properties.internal), '') != 'true'";
   try {
     // Per-user aggregate (the table rows).
     const agg = await hog(host, pid, key, `
