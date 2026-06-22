@@ -24,7 +24,7 @@ const appId = () => process.env.ASC_APP_ID || "6760627345";
 // (~Jun 19), so these lifetime values are seeded from App Store Connect and the API adds the days
 // AFTER `asOf` on top — ties to ASC today and stays in sync as new days stream in.
 // To re-snapshot: read the lifetime totals in ASC → Analytics and update these four + asOf.
-const ASC_BASELINE = { asOf: "2026-06-21", impressions: 601, pageViews: 88, firstTime: 8, redownloads: 1 };
+const ASC_BASELINE = { asOf: "2026-06-21", impressions: 601, pageViews: 88, firstTime: 8, redownloads: 1, conversionRate: 2.08 };
 
 function token(issuer, keyId, p8) {
   const key = p8.includes("\\n") ? p8.replace(/\\n/g, "\n") : p8;
@@ -168,7 +168,9 @@ export default async function handler(req, res) {
       out.redownloads = ASC_BASELINE.redownloads + (w.totals ? w.totals.redownloads : 0);
     } else { out.firstTimeDownloads = ASC_BASELINE.firstTime; out.redownloads = ASC_BASELINE.redownloads; }
     out.totalDownloads = out.firstTimeDownloads + out.redownloads;
-    if (out.impressions && out.totalDownloads) out.conversionRate = Math.round((out.totalDownloads / out.impressions) * 10000) / 100;
+    // ASC computes conversion off a "unique impressions" base we don't get via the API, so anchor
+    // it to ASC's value too (rather than show a different number from total impressions).
+    out.conversionRate = ASC_BASELINE.conversionRate;
     return done(out);
   } catch (e) {
     return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 300) });
