@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-21T04:19:11+00:00",
+  "updated": "2026-06-22T14:15:56+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
-    "posts": 14
+    "posts": 15
   },
   "summary": {
     "reels": {
-      "count": 6,
-      "avg_reach": 41,
-      "avg_eng_pct": 2.4,
-      "avg_watch_s": 4.0,
-      "avg_plays": 46
+      "count": 7,
+      "avg_reach": 36,
+      "avg_eng_pct": 2.1,
+      "avg_watch_s": 4.9,
+      "avg_plays": 41
     },
     "images": {
       "count": 8,
@@ -21,16 +21,32 @@
   },
   "posts": [
     {
-      "date": "2026-06-20",
+      "date": "2026-06-21",
       "type": "REEL",
-      "reach": 1,
+      "reach": 5,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 416,
-      "plays": 2,
+      "watch_ms": 3063,
+      "plays": 6,
+      "label": "d15 The deep end",
+      "hook": "The ones collectors whisper about",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-06-20",
+      "type": "REEL",
+      "reach": 6,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 7767,
+      "plays": 7,
       "label": "d14 Went in for one",
       "hook": "POV: you went in for ONE plant.",
       "is_reel": true,
@@ -45,7 +61,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6363,
+      "watch_ms": 6479,
       "plays": 91,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
