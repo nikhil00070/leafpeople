@@ -1,25 +1,41 @@
 {
-  "updated": "2026-06-22T18:21:56+00:00",
+  "updated": "2026-06-22T20:56:38+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 1,
-    "posts": 15
+    "posts": 16
   },
   "summary": {
     "reels": {
       "count": 7,
-      "avg_reach": 36,
-      "avg_eng_pct": 2.1,
-      "avg_watch_s": 5.1,
+      "avg_reach": 37,
+      "avg_eng_pct": 2.0,
+      "avg_watch_s": 5.2,
       "avg_plays": 41
     },
     "images": {
-      "count": 8,
+      "count": 9,
       "avg_reach": 0,
-      "avg_eng_pct": 12.5
+      "avg_eng_pct": 11.1
     }
   },
   "posts": [
+    {
+      "date": "2026-06-22",
+      "type": "IMAGE",
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d16 You're not the only one",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-06-21",
       "type": "REEL",
@@ -39,14 +55,14 @@
     {
       "date": "2026-06-20",
       "type": "REEL",
-      "reach": 6,
+      "reach": 7,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 7040,
-      "plays": 7,
+      "watch_ms": 7546,
+      "plays": 9,
       "label": "d14 Went in for one",
       "hook": "POV: you went in for ONE plant.",
       "is_reel": true,
@@ -61,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6608,
+      "watch_ms": 6650,
       "plays": 91,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
@@ -87,18 +103,18 @@
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 17,
+      "reach": 18,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 4936,
-      "plays": 17,
+      "watch_ms": 5087,
+      "plays": 19,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 11.8
+      "eng_pct": 11.1
     },
     {
       "date": "2026-06-16",
@@ -109,7 +125,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4612,
+      "watch_ms": 4599,
       "plays": 37,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
