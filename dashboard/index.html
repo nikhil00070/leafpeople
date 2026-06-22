@@ -552,11 +552,17 @@ function renderASC(asc, an){
   const proc=asc.proceeds||{}, upd=asc.updates||{}, iap=asc.iap||{};
   // Headline downloads come from Apple's App Analytics (first-time + redownloads) so they MATCH
   // App Store Connect exactly; fall back to Sales-report units (labeled) until Analytics lands.
-  const anReady = an&&an.connected&&!an.pending&&(an.firstTimeDownloads!=null||an.totalDownloads!=null);
+  // App Analytics download counts match App Store Connect, but those reports lag ~48h and read 0
+  // until they land — so only use them when actually present (>0); otherwise fall back to the
+  // reliable Sales total. Impressions/conversion show whenever the engagement report has landed,
+  // independent of the downloads report (that's why impressions can show while downloads is 0).
+  const ft=(an&&an.firstTimeDownloads)||0, re=(an&&an.redownloads)||0;
+  const anDlTot=(an&&an.totalDownloads)||(ft+re);
+  const dlReady = an&&an.connected&&!an.pending&&anDlTot>0;
+  const anEng = an&&an.connected&&!an.pending&&(an.impressions!=null||an.pageViews!=null);
   let bigVal, bigLbl, dlRows="";
-  if(anReady){
-    const ft=an.firstTimeDownloads||0, re=an.redownloads||0, tot=an.totalDownloads||(ft+re);
-    bigVal=fmt(tot); bigLbl='downloads · last 30d';
+  if(dlReady){
+    bigVal=fmt(anDlTot); bigLbl='downloads · last 30d';
     dlRows=`<div class="kv"><span class="muted">First-time downloads</span><b>${fmt(ft)}</b></div>
       <div class="kv"><span class="muted">Redownloads</span><b>${fmt(re)}</b></div>`;
   } else { bigVal=fmt(asc.total); bigLbl='installs (Sales)'; }
@@ -565,7 +571,8 @@ function renderASC(asc, an){
   else if(anReady){
     const conv=an.conversionRate!=null?an.conversionRate+'%':'—';
     anHtml=`<div style="margin-top:.7rem;border-top:1px solid var(--border);padding-top:.55rem">
-      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.to?` · 30d to ${esc(an.to)}`:''}</div>
+      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.from?` · ${esc(an.from)}→${esc(an.to)}`:''}</div>
+      <div class="help" style="margin:0 0 .4rem">Lower than ASC's lifetime total — Apple's Analytics API only streams from when we enabled it (~Jun 19) and can't backfill. It'll climb daily.</div>
       <div class="kv"><span class="muted">Impressions</span><b>${fmt(an.impressions)}</b></div>
       <div class="kv"><span class="muted">Product page views</span><b>${fmt(an.pageViews)}</b></div>
       <div class="kv"><span class="muted">Conversion rate</span><b>${conv}</b></div></div>`;
@@ -574,9 +581,9 @@ function renderASC(asc, an){
     <div class="big">${bigVal} <small>${bigLbl}</small></div>
     <div style="margin-top:.5rem">
       ${dlRows}
-      <div class="kv"><span class="muted">Updates · 7d</span><b>${fmt(upd.last7)}</b></div>
-      <div class="kv"><span class="muted">In-app purchases · 7d</span><b>${fmt(iap.last7)}</b></div>
-      <div class="kv"><span class="muted">Proceeds · current version</span><b>$${fmt(proc.total)}</b></div>
+      <div class="kv"><span class="muted">Updates · all-time</span><b>${fmt(upd.total)}</b></div>
+      <div class="kv"><span class="muted">In-app purchases · all-time</span><b>${fmt(iap.total)}</b></div>
+      <div class="kv"><span class="muted">Proceeds · all-time</span><b>$${fmt(proc.total)}</b></div>
     </div>${anHtml}`;
   document.getElementById("asc-trend-body").innerHTML =
     `<div class="big">${fmt(asc.last7)} <small>last 7 days</small></div>

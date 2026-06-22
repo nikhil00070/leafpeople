@@ -78,7 +78,9 @@ export default async function handler(req, res) {
     const jwt = token(issuer, keyId, p8);
     const dates = [];
     const base = new Date();
-    for (let i = 1; i <= 16; i++) { const d = new Date(base); d.setUTCDate(d.getUTCDate() - i); dates.push(d.toISOString().slice(0, 10)); }
+    // Look back far enough to cover the app's whole life so totals (downloads, IAP, proceeds)
+    // match App Store Connect's all-time view rather than a rolling 2-week slice.
+    for (let i = 1; i <= 90; i++) { const d = new Date(base); d.setUTCDate(d.getUTCDate() - i); dates.push(d.toISOString().slice(0, 10)); }
 
     const got = await Promise.all(dates.map(async (date) => {
       try { const s = await dayStats(jwt, vendor, date); return s == null ? null : { date, ...s }; }
