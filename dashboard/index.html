@@ -556,23 +556,25 @@ function renderASC(asc, an){
   // until they land — so only use them when actually present (>0); otherwise fall back to the
   // reliable Sales total. Impressions/conversion show whenever the engagement report has landed,
   // independent of the downloads report (that's why impressions can show while downloads is 0).
-  const ft=(an&&an.firstTimeDownloads)||0, re=(an&&an.redownloads)||0;
-  const anDlTot=(an&&an.totalDownloads)||(ft+re);
-  const dlReady = an&&an.connected&&!an.pending&&anDlTot>0;
-  const anEng = an&&an.connected&&!an.pending&&(an.impressions!=null||an.pageViews!=null);
+  // Headline = first-time installs (matches ASC), broken out: first-time + redownloads/reinstalls
+  // = total install events from Sales. first-time is anchored to ASC via /api/analytics.
+  const ft=(an&&an.connected&&an.firstTimeDownloads!=null)?an.firstTimeDownloads:null;
+  const anEng = an&&an.connected&&(an.impressions!=null||an.pageViews!=null);
+  const totalInstalls = asc.total||0;
   let bigVal, bigLbl, dlRows="";
-  if(dlReady){
-    bigVal=fmt(anDlTot); bigLbl='downloads · last 30d';
-    dlRows=`<div class="kv"><span class="muted">First-time downloads</span><b>${fmt(ft)}</b></div>
-      <div class="kv"><span class="muted">Redownloads</span><b>${fmt(re)}</b></div>`;
-  } else { bigVal=fmt(asc.total); bigLbl='installs (Sales)'; }
+  if(ft!=null){
+    const other=Math.max(0, totalInstalls-ft);
+    bigVal=fmt(ft); bigLbl='first-time installs';
+    dlRows=`<div class="kv"><span class="muted">First-time</span><b>${fmt(ft)}</b></div>
+      <div class="kv"><span class="muted">Redownloads &amp; reinstalls</span><b>${fmt(other)}</b></div>
+      <div class="kv"><span class="muted">Total install events (Sales)</span><b>${fmt(totalInstalls)}</b></div>`;
+  } else { bigVal=fmt(totalInstalls); bigLbl='installs (Sales)'; }
   let anHtml="";
   if(an&&an.connected&&an.pending){ anHtml=`<div class="help" style="margin-top:.7rem">Impressions · page views · conversion · first-time/redownloads (from App Store Analytics): ${esc(an.note||"generating…")}</div>`; }
   else if(anReady){
     const conv=an.conversionRate!=null?an.conversionRate+'%':'—';
     anHtml=`<div style="margin-top:.7rem;border-top:1px solid var(--border);padding-top:.55rem">
-      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.from?` · ${esc(an.from)}→${esc(an.to)}`:''}</div>
-      <div class="help" style="margin:0 0 .4rem">Lower than ASC's lifetime total — Apple's Analytics API only streams from when we enabled it (~Jun 19) and can't backfill. It'll climb daily.</div>
+      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.baselineAsOf?` · anchored to ASC ${esc(an.baselineAsOf)}`:''}</div>
       <div class="kv"><span class="muted">Impressions</span><b>${fmt(an.impressions)}</b></div>
       <div class="kv"><span class="muted">Product page views</span><b>${fmt(an.pageViews)}</b></div>
       <div class="kv"><span class="muted">Conversion rate</span><b>${conv}</b></div></div>`;

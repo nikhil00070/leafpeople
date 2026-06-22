@@ -20,6 +20,12 @@ const CACHE_MS = 3 * 60 * 60 * 1000;
 const BASE = "https://api.appstoreconnect.apple.com";
 const appId = () => process.env.ASC_APP_ID || "6760627345";
 
+// ASC snapshot to anchor to. Apple's Analytics Reports API can't backfill before it was enabled
+// (~Jun 19), so these lifetime values are seeded from App Store Connect and the API adds the days
+// AFTER `asOf` on top — ties to ASC today and stays in sync as new days stream in.
+// To re-snapshot: read the lifetime totals in ASC → Analytics and update these four + asOf.
+const ASC_BASELINE = { asOf: "2026-06-21", impressions: 601, pageViews: 88, firstTime: 8, redownloads: 1 };
+
 function token(issuer, keyId, p8) {
   const key = p8.includes("\\n") ? p8.replace(/\\n/g, "\n") : p8;
   const now = Math.floor(Date.now() / 1000);
@@ -70,13 +76,14 @@ async function instanceCsv(jwt, instanceId) {
 
 // Sum a report's metrics across the most-recent `days` DAILY instances — so totals match ASC's
 // "Last 30 Days" view rather than a single day. Returns { totals, header, from, to, days, diag }.
-async function fetchWindow(jwt, reportId, days = 30) {
+async function fetchWindow(jwt, reportId, after) {
   const inst = await api(jwt, `/v1/analyticsReports/${reportId}/instances?limit=200`);
   const all = (inst.data || []).map((i) => ({ id: i.id, ...(i.attributes || {}) }));
   const diag = { instances: all.length, sample: all.slice(0, 4).map((i) => ({ g: i.granularity, d: i.processingDate, s: i.state })) };
-  const daily = all.filter((i) => i.granularity === "DAILY" && (!i.state || i.state === "COMPLETED"))
-    .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1)).slice(0, days);
-  if (!daily.length) return { totals: null, diag };
+  // Sum only DAILY instances AFTER the ASC baseline date — those are the days the API can see
+  // that the hardcoded baseline doesn't already include, so the two add up without double-counting.
+  const daily = all.filter((i) => i.granularity === "DAILY" && (!i.state || i.state === "COMPLETED") && (!after || i.processingDate > after))
+    .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1));
   const totals = { impressions: 0, pageViews: 0, firstTime: 0, redownloads: 0, totalDownloads: 0 };
   let header = null; const dates = [];
   for (const it of daily) {
@@ -87,7 +94,6 @@ async function fetchWindow(jwt, reportId, days = 30) {
     for (const k of ["impressions", "pageViews", "firstTime", "redownloads", "totalDownloads"]) totals[k] += m[k] || 0;
     dates.push(it.processingDate);
   }
-  if (!dates.length) return { totals: null, diag };
   return { totals, header, from: dates[dates.length - 1], to: dates[0], days: dates.length, diag };
 }
 
@@ -146,21 +152,23 @@ export default async function handler(req, res) {
     const engagement = pick(/discovery and engagement standard/) || pick(/discovery and engagement/);
     const downloads = pick(/^app downloads standard/) || pick(/^app downloads/);
 
-    const out = { connected: true, updated: new Date().toISOString(), window: 30, diag: {} };
-    let gotAny = false;
+    // Anchor to the ASC baseline + add the days the API can see since `asOf` (no double-count).
+    const out = { connected: true, updated: new Date().toISOString(), baselineAsOf: ASC_BASELINE.asOf, diag: {} };
     if (engagement) {
-      const w = await fetchWindow(jwt, engagement.id);
-      out.diag.engagement = { header: w.header, days: w.days, ...w.diag };
-      if (w.totals) { out.impressions = w.totals.impressions; out.pageViews = w.totals.pageViews; out.from = w.from; out.to = w.to; gotAny = true; }
-    }
+      const w = await fetchWindow(jwt, engagement.id, ASC_BASELINE.asOf);
+      out.diag.engagement = { header: w.header, daysSinceBaseline: w.days, ...w.diag };
+      out.impressions = ASC_BASELINE.impressions + (w.totals ? w.totals.impressions : 0);
+      out.pageViews = ASC_BASELINE.pageViews + (w.totals ? w.totals.pageViews : 0);
+      out.to = w.to;
+    } else { out.impressions = ASC_BASELINE.impressions; out.pageViews = ASC_BASELINE.pageViews; }
     if (downloads && (!engagement || downloads.id !== engagement.id)) {
-      const w = await fetchWindow(jwt, downloads.id);
-      out.diag.downloads = { header: w.header, days: w.days, ...w.diag };
-      if (w.totals) { out.firstTimeDownloads = w.totals.firstTime; out.redownloads = w.totals.redownloads; out.totalDownloads = w.totals.totalDownloads || (w.totals.firstTime + w.totals.redownloads); out.from = out.from || w.from; out.to = out.to || w.to; gotAny = true; }
-    }
-    if (!gotAny) return done({ connected: true, pending: true, note: "Reports cataloged; daily data files not generated yet (Apple takes up to ~48h from setup). Filling in soon.", diag: out.diag });
-    const dl = out.totalDownloads || out.firstTimeDownloads || 0;
-    if (out.impressions && dl) out.conversionRate = Math.round((dl / out.impressions) * 10000) / 100;
+      const w = await fetchWindow(jwt, downloads.id, ASC_BASELINE.asOf);
+      out.diag.downloads = { header: w.header, daysSinceBaseline: w.days, ...w.diag };
+      out.firstTimeDownloads = ASC_BASELINE.firstTime + (w.totals ? w.totals.firstTime : 0);
+      out.redownloads = ASC_BASELINE.redownloads + (w.totals ? w.totals.redownloads : 0);
+    } else { out.firstTimeDownloads = ASC_BASELINE.firstTime; out.redownloads = ASC_BASELINE.redownloads; }
+    out.totalDownloads = out.firstTimeDownloads + out.redownloads;
+    if (out.impressions && out.totalDownloads) out.conversionRate = Math.round((out.totalDownloads / out.impressions) * 10000) / 100;
     return done(out);
   } catch (e) {
     return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 300) });
