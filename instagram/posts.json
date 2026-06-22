@@ -529,7 +529,7 @@
     "date": "2026-06-22",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
-    "status": "draft",
+    "status": "posted",
     "title": "You're not the only one",
     "image": "/images/plants/collector-culture.jpg",
     "caption": "You're not the only one. \ud83c\udf3f\n\nThere's a whole community of people who love these plants like family \u2014 who name them, photograph them, mourn a lost leaf.\n\nLeaf People is home base for all of us. Pull up a chair.\n\nLink in bio",
@@ -553,7 +553,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d13.jpg"
+    "img_ready": "/images/ig_ready/d13.jpg",
+    "posted_at": "2026-06-22",
+    "ig_media_id": "18452678143115244"
   },
   {
     "id": "b3-01",
