@@ -578,7 +578,7 @@ function renderASC(asc, an){
   } else { bigVal=fmt(totalInstalls); bigLbl='installs (Sales)'; }
   let anHtml="";
   if(an&&an.connected&&an.pending){ anHtml=`<div class="help" style="margin-top:.7rem">Impressions · page views · conversion · first-time/redownloads (from App Store Analytics): ${esc(an.note||"generating…")}</div>`; }
-  else if(anReady){
+  else if(anEng){
     const conv=an.conversionRate!=null?an.conversionRate+'%':'—';
     anHtml=`<div style="margin-top:.7rem;border-top:1px solid var(--border);padding-top:.55rem">
       <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.baselineAsOf?` · anchored to ASC ${esc(an.baselineAsOf)}`:''}</div>
