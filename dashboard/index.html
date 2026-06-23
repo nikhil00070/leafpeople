@@ -625,11 +625,27 @@ function renderRecs(recs){
 
 document.getElementById("allBtn").addEventListener("click", async function(){
   const btn=this, st=document.getElementById("allStatus");
-  btn.disabled=true; const label=btn.textContent; btn.textContent="Refreshing…"; st.style.color="var(--faint)"; st.textContent="";
-  try { await fetch("/api/run-insights",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({limit:40})}); } catch(e){}
-  await load();
-  st.style.color="var(--green)"; st.textContent="✓ refreshed — Instagram numbers land in ~1 min (refresh again)";
-  btn.disabled=false; btn.textContent=label; setTimeout(()=>st.textContent="", 9000);
+  const label="↻ Give me everything";
+  btn.disabled=true; st.style.color="var(--faint)";
+  // Live elapsed-time ticker + current-step label so it's never ambiguous whether it's working.
+  let step="Starting…", t0=Date.now(), done=false;
+  const tick=()=>{ if(done) return; const s=Math.round((Date.now()-t0)/1000); btn.textContent="⏳ "+step+" · "+s+"s"; };
+  const timer=setInterval(tick, 250); tick();
+  // Watchdog: if a hung fetch stalls past 90s, say so instead of spinning forever.
+  const watchdog=setTimeout(()=>{ if(!done){ st.style.color="var(--faint)"; st.textContent="Still working — Instagram pulls can be slow. Leave it, or refresh the page to cancel."; } }, 90000);
+  try {
+    step="Refreshing Instagram insights";
+    try { await fetch("/api/run-insights",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({limit:40})}); } catch(e){}
+    step="Loading dashboard data";
+    await load();
+    done=true; clearInterval(timer); clearTimeout(watchdog);
+    const s=Math.round((Date.now()-t0)/1000);
+    st.style.color="var(--green)"; st.textContent="✓ refreshed in "+s+"s — Instagram numbers may take ~1 min more (refresh again)";
+  } catch(e){
+    done=true; clearInterval(timer); clearTimeout(watchdog);
+    st.style.color="var(--faint)"; st.textContent="⚠ refresh failed: "+(e&&e.message?e.message:"network")+" — try again";
+  }
+  btn.disabled=false; btn.textContent=label; setTimeout(()=>{ if(done) st.textContent=""; }, 12000);
 });
 
 function buildGaDropdown(){
