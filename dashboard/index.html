@@ -234,7 +234,14 @@ a { color:var(--blue); }
 <div class="tip" id="tip"></div>
 
 <script>
-const J = (u) => fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null);
+// Every fetch gets a hard timeout via AbortController — without it, one endpoint that hangs open
+// (never responds) makes Promise.all in load() wait forever and the button stays grey indefinitely.
+const J = (u, ms=25000) => {
+  const ctrl = new AbortController();
+  const to = setTimeout(() => ctrl.abort(), ms);
+  return fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store", signal:ctrl.signal})
+    .then(r => r.ok ? r.json() : null).catch(() => null).finally(() => clearTimeout(to));
+};
 const PUB_RATE = { "the-leaf": 3, "field-guide": 5 };
 let GAVIEW = "total", GAVLABEL = "all time";   // GA view: "total" or a specific YYYY-MM-DD day
 const fmt = (n) => (n == null ? "—" : Number(n).toLocaleString());
@@ -635,7 +642,10 @@ document.getElementById("allBtn").addEventListener("click", async function(){
   const watchdog=setTimeout(()=>{ if(!done){ st.style.color="var(--faint)"; st.textContent="Still working — Instagram pulls can be slow. Leave it, or refresh the page to cancel."; } }, 90000);
   try {
     step="Refreshing Instagram insights";
-    try { await fetch("/api/run-insights",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({limit:40})}); } catch(e){}
+    try {
+      const ic=new AbortController(); const ito=setTimeout(()=>ic.abort(), 45000);
+      await fetch("/api/run-insights",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({limit:40}),signal:ic.signal}).finally(()=>clearTimeout(ito));
+    } catch(e){}
     step="Loading dashboard data";
     await load();
     done=true; clearInterval(timer); clearTimeout(watchdog);
