@@ -1,25 +1,41 @@
 {
-  "updated": "2026-06-23T16:13:46+00:00",
+  "updated": "2026-06-23T23:18:01+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 5,
-    "posts": 16
+    "followers": 10,
+    "posts": 17
   },
   "summary": {
     "reels": {
-      "count": 7,
-      "avg_reach": 38,
-      "avg_eng_pct": 1.9,
-      "avg_watch_s": 5.2,
-      "avg_plays": 43
+      "count": 8,
+      "avg_reach": 33,
+      "avg_eng_pct": 1.6,
+      "avg_watch_s": 9.9,
+      "avg_plays": 38
     },
     "images": {
       "count": 9,
-      "avg_reach": 1,
-      "avg_eng_pct": 11.1
+      "avg_reach": 2,
+      "avg_eng_pct": 9.3
     }
   },
   "posts": [
+    {
+      "date": "2026-06-23",
+      "type": "REEL",
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 43369,
+      "plays": 0,
+      "label": "d17 The Choc\u00f3",
+      "hook": "The Choc\u00f3 \u00b7 Colombia",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-06-22",
       "type": "IMAGE",
@@ -45,7 +61,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5043,
+      "watch_ms": 4899,
       "plays": 9,
       "label": "d15 The deep end",
       "hook": "The ones collectors whisper about",
@@ -61,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 7063,
+      "watch_ms": 6771,
       "plays": 10,
       "label": "d14 Went in for one",
       "hook": "POV: you went in for ONE plant.",
@@ -77,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6796,
+      "watch_ms": 6858,
       "plays": 95,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
@@ -109,7 +125,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 5287,
+      "watch_ms": 5141,
       "plays": 20,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
@@ -125,7 +141,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5034,
+      "watch_ms": 4966,
       "plays": 37,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
@@ -151,14 +167,14 @@
     {
       "date": "2026-06-14",
       "type": "REEL",
-      "reach": 4,
+      "reach": 5,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4282,
-      "plays": 5,
+      "watch_ms": 4198,
+      "plays": 7,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
       "is_reel": true,
@@ -167,7 +183,7 @@
     {
       "date": "2026-06-13",
       "type": "IMAGE",
-      "reach": 1,
+      "reach": 2,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -183,14 +199,14 @@
     {
       "date": "2026-06-12",
       "type": "REEL",
-      "reach": 113,
+      "reach": 114,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2741,
-      "plays": 123,
+      "watch_ms": 2698,
+      "plays": 124,
       "label": "d6 Blackest leaf",
       "hook": null,
       "is_reel": true,
@@ -199,7 +215,7 @@
     {
       "date": "2026-06-11",
       "type": "IMAGE",
-      "reach": 0,
+      "reach": 1,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -215,7 +231,7 @@
     {
       "date": "2026-06-10",
       "type": "IMAGE",
-      "reach": 1,
+      "reach": 2,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -247,7 +263,7 @@
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 1,
+      "reach": 2,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -263,7 +279,7 @@
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 2,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -274,7 +290,7 @@
       "label": "d1 Welcome home",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 50.0
+      "eng_pct": 33.3
     }
   ],
   "diag": null
