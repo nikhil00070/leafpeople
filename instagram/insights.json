@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T04:36:58+00:00",
+  "updated": "2026-06-24T04:52:52+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 10,
@@ -10,7 +10,7 @@
       "count": 8,
       "avg_reach": 34,
       "avg_eng_pct": 1.6,
-      "avg_watch_s": 6.6,
+      "avg_watch_s": 6.7,
       "avg_plays": 39
     },
     "images": {
@@ -93,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6833,
+      "watch_ms": 6864,
       "plays": 96,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
