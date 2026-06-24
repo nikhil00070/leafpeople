@@ -147,7 +147,7 @@ export default async function handler(req, res) {
   // Display the ASC snapshot verbatim — guarantees the dashboard TIES to App Store Connect.
   // (Apple's Analytics API lags ~2 days and double-counts impressions if summed live, so a
   // dated snapshot is the trustworthy source. Refresh ASC_BASELINE when you check ASC.)
-  return done({
+  const out = {
     connected: true,
     updated: new Date().toISOString(),
     baselineAsOf: ASC_BASELINE.asOf,
@@ -157,5 +157,8 @@ export default async function handler(req, res) {
     redownloads: ASC_BASELINE.redownloads,
     totalDownloads: ASC_BASELINE.firstTime + ASC_BASELINE.redownloads,
     conversionRate: ASC_BASELINE.conversionRate,
-  });
+  };
+  cache = out; cacheAt = Date.now();
+  res.setHeader("cache-control", "no-store");
+  return res.status(200).json(out);
 }
