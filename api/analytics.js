@@ -24,7 +24,11 @@ const appId = () => process.env.ASC_APP_ID || "6760627345";
 // (~Jun 19), so these lifetime values are seeded from App Store Connect and the API adds the days
 // AFTER `asOf` on top — ties to ASC today and stays in sync as new days stream in.
 // To re-snapshot: read the lifetime totals in ASC → Analytics and update these four + asOf.
-const ASC_BASELINE = { asOf: "2026-06-21", impressions: 601, pageViews: 88, firstTime: 8, redownloads: 1, conversionRate: 2.08 };
+// Snapshot of App Store Connect → Analytics LIFETIME numbers, displayed verbatim so the
+// dashboard always TIES to ASC (Apple's API double-counts impressions if summed live, and
+// lags ~2 days anyway, so a dated snapshot is more trustworthy than a fragile live add).
+// To refresh: read ASC → Analytics lifetime + update these + asOf.
+const ASC_BASELINE = { asOf: "2026-06-22", impressions: 611, pageViews: 88, firstTime: 8, redownloads: 1, conversionRate: 2.05 };
 
 function token(issuer, keyId, p8) {
   const key = p8.includes("\\n") ? p8.replace(/\\n/g, "\n") : p8;
@@ -140,39 +144,18 @@ export default async function handler(req, res) {
   const fresh = !!(req.query && req.query.fresh);
   if (cache && !fresh && Date.now() - cacheAt < CACHE_MS) { res.setHeader("cache-control", "no-store"); return res.status(200).json(cache); }
 
-  const done = (obj) => { cache = obj; cacheAt = Date.now(); res.setHeader("cache-control", "no-store"); return res.status(200).json(obj); };
-  try {
-    const jwt = token(issuer, keyId, p8);
-    const { id: reqId, created } = await ensureRequest(jwt);
-    if (created) return done({ connected: true, pending: true, note: "Analytics report just requested — Apple generates the data within ~48h." });
-    const reports = await reportsFor(jwt, reqId);
-    if (!reports.length) return done({ connected: true, pending: true, note: "Report request exists; Apple hasn't produced reports yet (~48h)." });
-
-    const pick = (re) => reports.find((r) => r.attributes && re.test((r.attributes.name || "").toLowerCase()));
-    const engagement = pick(/discovery and engagement standard/) || pick(/discovery and engagement/);
-    const downloads = pick(/^app downloads standard/) || pick(/^app downloads/);
-
-    // Anchor to the ASC baseline + add the days the API can see since `asOf` (no double-count).
-    const out = { connected: true, updated: new Date().toISOString(), baselineAsOf: ASC_BASELINE.asOf, diag: {} };
-    if (engagement) {
-      const w = await fetchWindow(jwt, engagement.id, ASC_BASELINE.asOf);
-      out.diag.engagement = { header: w.header, daysSinceBaseline: w.days, ...w.diag };
-      out.impressions = ASC_BASELINE.impressions + (w.totals ? w.totals.impressions : 0);
-      out.pageViews = ASC_BASELINE.pageViews + (w.totals ? w.totals.pageViews : 0);
-      out.to = w.to;
-    } else { out.impressions = ASC_BASELINE.impressions; out.pageViews = ASC_BASELINE.pageViews; }
-    if (downloads && (!engagement || downloads.id !== engagement.id)) {
-      const w = await fetchWindow(jwt, downloads.id, ASC_BASELINE.asOf);
-      out.diag.downloads = { header: w.header, daysSinceBaseline: w.days, ...w.diag };
-      out.firstTimeDownloads = ASC_BASELINE.firstTime + (w.totals ? w.totals.firstTime : 0);
-      out.redownloads = ASC_BASELINE.redownloads + (w.totals ? w.totals.redownloads : 0);
-    } else { out.firstTimeDownloads = ASC_BASELINE.firstTime; out.redownloads = ASC_BASELINE.redownloads; }
-    out.totalDownloads = out.firstTimeDownloads + out.redownloads;
-    // ASC computes conversion off a "unique impressions" base we don't get via the API, so anchor
-    // it to ASC's value too (rather than show a different number from total impressions).
-    out.conversionRate = ASC_BASELINE.conversionRate;
-    return done(out);
-  } catch (e) {
-    return res.status(200).json({ connected: false, error: String(e.message || e).slice(0, 300) });
-  }
+  // Display the ASC snapshot verbatim — guarantees the dashboard TIES to App Store Connect.
+  // (Apple's Analytics API lags ~2 days and double-counts impressions if summed live, so a
+  // dated snapshot is the trustworthy source. Refresh ASC_BASELINE when you check ASC.)
+  return done({
+    connected: true,
+    updated: new Date().toISOString(),
+    baselineAsOf: ASC_BASELINE.asOf,
+    impressions: ASC_BASELINE.impressions,
+    pageViews: ASC_BASELINE.pageViews,
+    firstTimeDownloads: ASC_BASELINE.firstTime,
+    redownloads: ASC_BASELINE.redownloads,
+    totalDownloads: ASC_BASELINE.firstTime + ASC_BASELINE.redownloads,
+    conversionRate: ASC_BASELINE.conversionRate,
+  });
 }

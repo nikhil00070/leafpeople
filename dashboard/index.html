@@ -291,7 +291,7 @@ async function load() {
     J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"), J("/api/app-users"),
   ]);
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
-  renderKPIs(ga, asc, subs);
+  renderKPIs(ga, asc, subs, analytics);
   renderSpikes(ga, asc, posts);
   renderTimeline(ga, asc, posts, insights);
   renderGA(ga, feed);
@@ -371,9 +371,12 @@ function renderAppUsers(d){
   }).join("") : '<span class="muted">No users with sessions in the last 30 days yet.</span>';
 }
 
-function renderKPIs(ga, asc, subs){
+function renderKPIs(ga, asc, subs, an){
   if(ga&&ga.connected){ setBig("kpi-users", fmt(ga.totals?.users)+' <small>'+GAVLABEL+'</small>', true); setBig("kpi-dau", fmt(ga.dau?.avg7)+' <small>avg/day</small>', true); setBig("kpi-taps", fmt(ga.conversion?.app_store_clicks)+' <small>tapped Install</small>', true); }
-  if(asc&&asc.connected) setBig("kpi-downloads", fmt(asc.total)+' <small>installs</small>', true);
+  // Show FIRST-TIME downloads (matches ASC + the Downloads tab), not Sales-total which
+  // also counts redownloads/restores. Fall back to Sales total only if the snapshot's absent.
+  const ft = (an&&an.connected&&an.firstTimeDownloads!=null) ? an.firstTimeDownloads : (asc&&asc.connected?asc.total:null);
+  if(ft!=null) setBig("kpi-downloads", fmt(ft)+' <small>first-time installs</small>', true);
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
 }
 
