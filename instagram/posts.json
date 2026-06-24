@@ -600,7 +600,7 @@
     "date": "2026-06-24",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Color of life",
     "image": "/images/instagram/model-03-cover.jpg",
     "img_ready": "/images/instagram/model-03-cover.jpg",
@@ -626,7 +626,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-24",
+    "ig_media_id": "18085939199416008"
   },
   {
     "id": "d14",
