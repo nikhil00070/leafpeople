@@ -636,7 +636,7 @@
     "date": "2026-06-25",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "Your pocket of jungle",
     "image": "/images/plants/plant-01.jpg",
     "caption": "Your own pocket of jungle.\n\nYou don't need a greenhouse or a plane ticket. One rare leaf on a shelf, catching the morning light, is enough to take your whole mind somewhere greener.\n\nThat's the magic. That's why we're here.",
@@ -665,7 +665,9 @@
     "reel": true,
     "hook": "A jungle, two feet from your couch",
     "img_ready": "/images/ig_ready/d14.jpg",
-    "video": "/videos/instagram/d14.mp4"
+    "video": "/videos/instagram/d14.mp4",
+    "posted_at": "2026-06-25",
+    "ig_media_id": "18103125590274007"
   },
   {
     "id": "d15",
