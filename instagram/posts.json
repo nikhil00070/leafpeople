@@ -675,7 +675,7 @@
     "date": "2026-06-26",
     "phase": "welcome",
     "branch": "welcome-leafpeople",
-    "status": "draft",
+    "status": "posted",
     "title": "Welcome home (bridge)",
     "image": "/images/instagram/anthurium-carla-blackie.jpeg",
     "caption": "If you've made it this far \u2014 welcome home. \ud83c\udf3f\n\nLeaf People is your daily escape to the rainforest, plus the tools to bring a piece of it home: identify any rare aroid, track its care, learn from a real field guide, trade with collectors.\n\nHit follow. Tomorrow we go deeper \u2014 the rarest, strangest, most beautiful leaves on earth.\n\nLink in bio",
@@ -699,7 +699,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d15.jpg"
+    "img_ready": "/images/ig_ready/d15.jpg",
+    "posted_at": "2026-06-26",
+    "ig_media_id": "18429773788126992"
   },
   {
     "id": "model-04",
