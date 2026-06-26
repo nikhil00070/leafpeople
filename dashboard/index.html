@@ -311,12 +311,13 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx, appusers, gsc, aeo] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx, appusers, seo] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
     J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"), J("/api/app-users"),
-    J("/api/gsc"), J("/api/aeo"),
+    J("/api/seo"),
   ]);
+  const gsc = seo && seo.gsc, aeo = seo && seo.aeo;   // /api/gsc + /api/aeo merged into /api/seo (Vercel 12-fn cap)
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs, analytics);
   renderSpikes(ga, asc, posts);
