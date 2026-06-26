@@ -46,9 +46,12 @@ function aiBotName(ua) {
   for (const [needle, name] of AI_BOT_NAMES) if (s.includes(needle)) return name;
   return null;
 }
-// Fire-and-forget INCR via the Vercel KV (Upstash) REST API — no package needed.
+// Fire-and-forget INCR via the Redis REST API (Upstash/Vercel KV) — no package needed.
+// Accepts either env naming (KV_REST_API_* from Vercel KV, or UPSTASH_REDIS_REST_* from
+// the Upstash marketplace integration).
 function kvIncr(key) {
-  const url = process.env.KV_REST_API_URL, tok = process.env.KV_REST_API_TOKEN;
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const tok = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!url || !tok) return Promise.resolve();
   return fetch(`${url}/incr/${encodeURIComponent(key)}`, { headers: { Authorization: `Bearer ${tok}` } }).catch(() => {});
 }

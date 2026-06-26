@@ -97,7 +97,8 @@ async function siteText(path) {
 // Read AI-crawler hit counters the middleware writes to Vercel KV (Upstash REST).
 const AEO_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "Claude-Web", "Anthropic-AI", "Google-Extended", "Applebot-Extended", "Amazonbot", "CCBot", "Bytespider"];
 async function crawlerHits() {
-  const url = process.env.KV_REST_API_URL, tok = process.env.KV_REST_API_TOKEN;
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const tok = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!url || !tok) return null;
   try {
     const keys = AEO_BOTS.map((b) => `aeo:hit:${b}`);
