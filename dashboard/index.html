@@ -126,6 +126,8 @@ a { color:var(--blue); }
     <button data-tab="socials">📱 Socials</button>
     <button data-tab="downloads">⬇️ Downloads</button>
     <button data-tab="app">📲 App</button>
+    <button data-tab="seo">🔍 SEO</button>
+    <button data-tab="aeo">🤖 AEO</button>
     <button data-tab="ops">🛠 Ops</button>
   </div>
 
@@ -207,6 +209,30 @@ a { color:var(--blue); }
     <div class="card row-sp"><h3>Per-user moves <span id="users-count" class="muted" style="font-weight:400"></span></h3><div id="users-list" class="muted" style="font-size:.85rem">—</div></div>
   </div>
 
+  <!-- SEO -->
+  <div class="panel" id="tab-seo">
+    <p class="sec-sub">How we're doing in search. Google Search Console is the scorecard (clicks, impressions, queries, position); GA4 shows organic-search traffic to the site.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Search clicks · 28d</h3><div class="big" id="seo-clicks">—</div><div id="seo-clicks-sub" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
+      <div class="card"><h3>Impressions · 28d</h3><div class="big" id="seo-impr">—</div><div id="seo-impr-sub" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
+      <div class="card"><h3>Organic visitors (GA4)</h3><div class="big" id="seo-organic">—</div><div id="seo-organic-sub" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>Top search queries</h3><div id="seo-queries" class="muted" style="font-size:.85rem">—</div></div>
+      <div class="card"><h3>Top landing pages (search)</h3><div id="seo-pages" class="muted" style="font-size:.85rem">—</div></div>
+    </div>
+  </div>
+
+  <!-- AEO -->
+  <div class="panel" id="tab-aeo">
+    <p class="sec-sub">Answer-Engine Optimization — are we set up to be found and cited by AI answer engines (ChatGPT, Perplexity, Claude)? This is the readiness view; actual crawler hit-counts come once a request logger is in place.</p>
+    <div class="grid g2">
+      <div class="card"><h3>Readiness</h3><div class="big" id="aeo-score">—</div><div id="aeo-checks" class="muted" style="font-size:.85rem;margin-top:.5rem">—</div></div>
+      <div class="card"><h3>AI crawlers welcomed</h3><div id="aeo-bots" class="muted" style="font-size:.85rem">—</div></div>
+    </div>
+    <div class="card row-sp"><h3>AI crawler activity</h3><div id="aeo-hits" class="muted" style="font-size:.85rem">—</div></div>
+  </div>
+
   <!-- OPS -->
   <div class="panel" id="tab-ops">
     <div class="links">
@@ -285,10 +311,11 @@ document.getElementById("tabs").addEventListener("click", e=>{
 });
 
 async function load() {
-  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx, appusers] = await Promise.all([
+  const [feed, drip, posts, insights, recs, ga, asc, subs, durations, analytics, appx, appusers, gsc, aeo] = await Promise.all([
     J("/feed.json"), J("/articledrip/drip.json"), J("/instagram/posts.json"),
     J("/instagram/insights.json"), J("/dashboard/recommendations.json"), J("/api/ga4?date="+GAVIEW), J("/api/asc"), J("/api/subscriptions"),
     J("/videos/instagram/reel_durations.json"), J("/api/analytics"), J("/api/app-analytics"), J("/api/app-users"),
+    J("/api/gsc"), J("/api/aeo"),
   ]);
   GAVLABEL = GAVIEW==="total" ? "all time" : dlabel(GAVIEW);
   renderKPIs(ga, asc, subs, analytics);
@@ -302,6 +329,8 @@ async function load() {
   renderASC(asc, analytics);
   renderAppAnalytics(appx);
   renderAppUsers(appusers);
+  renderSEO(ga, gsc);
+  renderAEO(aeo);
   renderOps(feed, drip, posts);
   renderRecs(recs);
   document.getElementById("freshness").textContent = "· updated " + new Date().toLocaleTimeString();
@@ -340,6 +369,53 @@ function renderAppAnalytics(a){
   if($("app-actions")) $("app-actions").innerHTML = (a.actions&&a.actions.length)
     ? a.actions.map(s=>row([s.name, fm(s.count)+"×", fm(s.users)+" users"])).join("")
     : '<span class="muted">No action data yet.</span>';
+}
+
+function renderSEO(ga, gsc){
+  const $ = id => document.getElementById(id);
+  const fm = (typeof fmt==="function")?fmt:(x=>x==null?"0":String(x));
+  const row = c => '<div style="display:flex;justify-content:space-between;gap:1rem;padding:.28rem 0;border-bottom:1px solid var(--border)"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:62%">'+c[0]+'</span><span class="muted">'+c.slice(1).join(' · ')+'</span></div>';
+  // GA4 organic-search visitors
+  const org = (ga && ga.connected && (ga.channels||[]).find(c => /organic search/i.test(c.key||"")));
+  if($("seo-organic")) setBig && setBig("seo-organic", fm(org? org.value : 0)+' <small>'+(GAVLABEL||'')+'</small>', true);
+  if($("seo-organic-sub")) $("seo-organic-sub").textContent = org ? "unique visitors from Google/search" : "no organic visitors recorded yet";
+  // Search Console
+  if(!gsc || !gsc.connected){
+    const msg = (gsc&&gsc.error) ? ("Search Console not linked yet: "+gsc.error) : "Connect Search Console to see clicks, impressions, queries & position. (Grant the GA4 service account access in Search Console.)";
+    ["seo-clicks","seo-impr"].forEach(id=>{ if($(id)) setBig && setBig(id, "—", true); });
+    if($("seo-queries")) $("seo-queries").textContent = msg;
+    if($("seo-pages")) $("seo-pages").textContent = "";
+    if($("seo-clicks-sub")) $("seo-clicks-sub").textContent = "awaiting Search Console";
+    if($("seo-impr-sub")) $("seo-impr-sub").textContent = "";
+    return;
+  }
+  const t = gsc.totals||{};
+  if($("seo-clicks")) setBig && setBig("seo-clicks", fm(t.clicks)+' <small>clicks</small>', true);
+  if($("seo-clicks-sub")) $("seo-clicks-sub").textContent = "CTR "+(t.ctr_pct||0)+"% · avg position "+(t.position||0);
+  if($("seo-impr")) setBig && setBig("seo-impr", fm(t.impressions)+' <small>shown</small>', true);
+  if($("seo-impr-sub")) $("seo-impr-sub").textContent = (gsc.from||'')+" → "+(gsc.to||'');
+  if($("seo-queries")) $("seo-queries").innerHTML = (gsc.top_queries&&gsc.top_queries.length)
+    ? gsc.top_queries.map(q=>row([q.key, fm(q.clicks)+" clk", fm(q.impressions)+" imp", "pos "+q.position])).join("")
+    : '<span class="muted">No query data in the window yet.</span>';
+  if($("seo-pages")) $("seo-pages").innerHTML = (gsc.top_pages&&gsc.top_pages.length)
+    ? gsc.top_pages.map(p=>row([p.key, fm(p.clicks)+" clk", "pos "+p.position])).join("")
+    : '<span class="muted">No page data yet.</span>';
+}
+
+function renderAEO(d){
+  const $ = id => document.getElementById(id);
+  if(!d || !d.connected){ if($("aeo-checks")) $("aeo-checks").textContent = "Couldn't read site AEO assets."; return; }
+  if($("aeo-score") && typeof setBig==="function") setBig("aeo-score", d.ready+'/'+d.total+' <small>ready</small>', true);
+  if($("aeo-checks")) $("aeo-checks").innerHTML = (d.checks||[]).map(c =>
+    '<div style="padding:.3rem 0;border-bottom:1px solid var(--border)"><span style="color:'+(c.ok?'#3FB950':'#d29922')+'">'+(c.ok?'✓':'⚠')+'</span> '+c.label+'<div class="muted" style="font-size:.78rem">'+c.detail+'</div></div>'
+  ).join("");
+  if($("aeo-bots")) $("aeo-bots").innerHTML = (d.ai_bots_allowed&&d.ai_bots_allowed.length)
+    ? d.ai_bots_allowed.map(b=>'<span style="display:inline-block;margin:.15rem .25rem 0 0;padding:.15rem .5rem;border:1px solid var(--border);border-radius:99px;font-size:.78rem">'+b+'</span>').join("")
+      + '<div class="muted" style="font-size:.78rem;margin-top:.5rem">llms.txt: '+(d.llms_refs||0)+' references · sitemap: '+(d.sitemap_urls||0)+' URLs</div>'
+    : '<span class="muted">No AI bots explicitly welcomed in robots.txt.</span>';
+  if($("aeo-hits")) $("aeo-hits").innerHTML = d.crawler_hits
+    ? Object.entries(d.crawler_hits).map(([b,n])=>'<div style="display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid var(--border)"><span>'+b+'</span><span class="muted">'+n+' hits</span></div>').join("")
+    : '<span class="muted">'+(d.note||"Crawler hit-counts pending a request logger.")+'</span>';
 }
 
 function renderAppUsers(d){
