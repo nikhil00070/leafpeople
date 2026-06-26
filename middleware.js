@@ -33,7 +33,37 @@ const PROJECT_ID = "leafpeople-1c8d1";
 let jwksCache = null;
 let jwksAt = 0;
 
-export default async function middleware(request) {
+// AEO crawler logging — which AI answer engines actually fetch our content. Map a
+// user-agent to a clean bot name; /api/seo reads the KV counters for the dashboard.
+const AI_BOT_NAMES = [
+  ["gptbot", "GPTBot"], ["oai-searchbot", "OAI-SearchBot"], ["chatgpt-user", "ChatGPT-User"],
+  ["perplexitybot", "PerplexityBot"], ["claudebot", "ClaudeBot"], ["claude-web", "Claude-Web"],
+  ["anthropic-ai", "Anthropic-AI"], ["google-extended", "Google-Extended"], ["applebot-extended", "Applebot-Extended"],
+  ["amazonbot", "Amazonbot"], ["ccbot", "CCBot"], ["bytespider", "Bytespider"],
+];
+function aiBotName(ua) {
+  const s = (ua || "").toLowerCase();
+  for (const [needle, name] of AI_BOT_NAMES) if (s.includes(needle)) return name;
+  return null;
+}
+// Fire-and-forget INCR via the Vercel KV (Upstash) REST API — no package needed.
+function kvIncr(key) {
+  const url = process.env.KV_REST_API_URL, tok = process.env.KV_REST_API_TOKEN;
+  if (!url || !tok) return Promise.resolve();
+  return fetch(`${url}/incr/${encodeURIComponent(key)}`, { headers: { Authorization: `Bearer ${tok}` } }).catch(() => {});
+}
+
+export default async function middleware(request, context) {
+  // AEO: log AI-crawler fetches regardless of paywall state (runs before the dormant check).
+  try {
+    const bot = aiBotName(request.headers.get("user-agent"));
+    if (bot) {
+      const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+      const p = Promise.all([kvIncr(`aeo:hit:${bot}`), kvIncr(`aeo:hit:${bot}:${day}`)]);
+      if (context && context.waitUntil) context.waitUntil(p);
+    }
+  } catch { /* never let logging affect the response */ }
+
   try {
     const flag = (process.env.LP_PAYWALL || "").trim().toLowerCase();
     if (flag !== "on") return; // dormant -> serve normally

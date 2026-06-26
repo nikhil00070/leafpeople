@@ -94,8 +94,23 @@ async function getGSC() {
 async function siteText(path) {
   try { const r = await fetch(BASE + path, { headers: { "user-agent": "LeafPeople-Dashboard" } }); return r.ok ? await r.text() : null; } catch { return null; }
 }
+// Read AI-crawler hit counters the middleware writes to Vercel KV (Upstash REST).
+const AEO_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "Claude-Web", "Anthropic-AI", "Google-Extended", "Applebot-Extended", "Amazonbot", "CCBot", "Bytespider"];
+async function crawlerHits() {
+  const url = process.env.KV_REST_API_URL, tok = process.env.KV_REST_API_TOKEN;
+  if (!url || !tok) return null;
+  try {
+    const keys = AEO_BOTS.map((b) => `aeo:hit:${b}`);
+    const r = await fetch(`${url}/mget/${keys.map(encodeURIComponent).join("/")}`, { headers: { Authorization: `Bearer ${tok}` } });
+    const j = await r.json();
+    const vals = j.result || [];
+    const hits = {};
+    AEO_BOTS.forEach((b, i) => { const n = Number(vals[i]) || 0; if (n > 0) hits[b] = n; });
+    return hits;
+  } catch { return null; }
+}
 async function getAEO() {
-  const [robots, llms, sitemap] = await Promise.all([siteText("/robots.txt"), siteText("/llms.txt"), siteText("/sitemap.xml")]);
+  const [robots, llms, sitemap, hits] = await Promise.all([siteText("/robots.txt"), siteText("/llms.txt"), siteText("/sitemap.xml"), crawlerHits()]);
   const robotsLc = (robots || "").toLowerCase();
   const aiAllowed = AI_BOTS.filter((b) => {
     const i = robotsLc.indexOf(b.toLowerCase()); if (i < 0) return false;
@@ -114,8 +129,10 @@ async function getAEO() {
   return {
     connected: true, ready: checks.filter((c) => c.ok).length, total: checks.length, checks,
     ai_bots_allowed: aiAllowed, llms_refs: llmsRefs, sitemap_urls: sitemapUrls,
-    crawler_hits: null,
-    note: "AI-crawler hit counts need a request logger (pending Vercel access). This shows readiness — the doors are open and signposted.",
+    crawler_hits: (hits && Object.keys(hits).length) ? hits : null,
+    note: hits == null
+      ? "Connect a Vercel KV store (KV_REST_API_URL/TOKEN) so the middleware can log AI-crawler hits."
+      : "No AI-crawler hits recorded yet — they'll appear here as bots fetch your articles.",
   };
 }
 
