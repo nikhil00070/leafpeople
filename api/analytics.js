@@ -138,10 +138,56 @@ function sumMetrics(csv) {
   return { ...t, header: head };
 }
 
+// DIAG: per-day, group every row by its Event value and sum Counts + Unique Counts, so we can
+// see exactly which event(s) to add (and whether Counts or Unique matches ASC). Inspect-only.
+async function eventDump(jwt, reportId, n) {
+  const inst = await api(jwt, `/v1/analyticsReports/${reportId}/instances?limit=200`);
+  const daily = (inst.data || []).map((i) => ({ id: i.id, ...(i.attributes || {}) }))
+    .filter((i) => i.granularity === "DAILY" && (!i.state || i.state === "COMPLETED"))
+    .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1)).slice(0, n);
+  const out = [];
+  for (const it of daily) {
+    const csv = await instanceCsv(jwt, it.id);
+    const lines = csv.split(/\r?\n/).filter(Boolean);
+    if (lines.length < 2) { out.push({ date: it.processingDate, empty: true }); continue; }
+    const sep = lines[0].includes("\t") ? "\t" : ",";
+    const head = lines[0].split(sep).map((h) => h.trim());
+    const evi = head.findIndex((h) => /^event$/i.test(h));
+    const ci = head.findIndex((h) => /^counts?$/i.test(h));
+    const ui = head.findIndex((h) => /unique count/i.test(h));
+    const num = (x) => Number((x || "").replace(/[,\s"]/g, "")) || 0;
+    const byEvent = {};
+    for (let i = 1; i < lines.length; i++) {
+      const c = lines[i].split(sep);
+      const ev = (c[evi] || "").trim() || "(blank)";
+      if (!byEvent[ev]) byEvent[ev] = { counts: 0, unique: 0, rows: 0 };
+      byEvent[ev].counts += num(c[ci]); byEvent[ev].unique += num(c[ui]); byEvent[ev].rows++;
+    }
+    out.push({ date: it.processingDate, header: evi < 0 ? head : undefined, events: byEvent });
+  }
+  return out;
+}
+
 export default async function handler(req, res) {
   const issuer = process.env.ASC_ISSUER_ID, keyId = process.env.ASC_KEY_ID, p8 = process.env.ASC_P8;
   if (!issuer || !keyId || !p8) return res.status(200).json({ connected: false });
   const fresh = !!(req.query && req.query.fresh);
+
+  if (req.query && req.query.diag) {
+    try {
+      const jwt = token(issuer, keyId, p8);
+      const { id: reqId } = await ensureRequest(jwt);
+      const reports = await reportsFor(jwt, reqId);
+      const pick = (re) => reports.find((r) => r.attributes && re.test((r.attributes.name || "").toLowerCase()));
+      const eng = pick(/discovery and engagement/), dl = pick(/app downloads/);
+      return res.status(200).json({
+        reports: reports.map((r) => r.attributes && r.attributes.name),
+        engagement: eng ? await eventDump(jwt, eng.id, 9) : null,
+        downloads: dl ? await eventDump(jwt, dl.id, 9) : null,
+      });
+    } catch (e) { return res.status(200).json({ diagError: String(e.message || e).slice(0, 300) }); }
+  }
+
   if (cache && !fresh && Date.now() - cacheAt < CACHE_MS) { res.setHeader("cache-control", "no-store"); return res.status(200).json(cache); }
 
   // Display the ASC snapshot verbatim — guarantees the dashboard TIES to App Store Connect.
