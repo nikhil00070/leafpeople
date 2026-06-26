@@ -170,6 +170,32 @@ async function eventDump(jwt, reportId, n) {
   return out;
 }
 
+// Sum the live Apple Analytics daily instances (rolling ~30d). Skips days Apple 500s on.
+// engagement → Impression + Page view counts; downloads → all rows (total app downloads).
+async function sumDaily(jwt, reportId, kind) {
+  const inst = await api(jwt, `/v1/analyticsReports/${reportId}/instances?limit=200`);
+  const daily = (inst.data || []).map((i) => ({ id: i.id, ...(i.attributes || {}) }))
+    .filter((i) => i.granularity === "DAILY" && (!i.state || i.state === "COMPLETED"))
+    .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1)).slice(0, 32);
+  let impressions = 0, pageViews = 0, downloads = 0, days = 0, skipped = 0, from = null, to = null;
+  for (const it of daily) {
+    let csv; try { csv = await instanceCsv(jwt, it.id); } catch { skipped++; continue; }
+    const lines = csv.split(/\r?\n/).filter(Boolean); if (lines.length < 2) continue;
+    const sep = lines[0].includes("\t") ? "\t" : ",";
+    const head = lines[0].split(sep).map((h) => h.trim().toLowerCase());
+    const evi = head.findIndex((h) => /^event$/.test(h));
+    const ci = head.findIndex((h) => /^counts?$/.test(h));
+    const num = (x) => Number((x || "").replace(/[,\s"]/g, "")) || 0;
+    for (let i = 1; i < lines.length; i++) {
+      const c = lines[i].split(sep); const v = num(c[ci]);
+      if (kind === "downloads") downloads += v;
+      else { const ev = (c[evi] || "").toLowerCase(); if (ev === "impression") impressions += v; else if (ev === "page view") pageViews += v; }
+    }
+    days++; to = to || it.processingDate; from = it.processingDate;
+  }
+  return { impressions, pageViews, downloads, days, skipped, from, to };
+}
+
 export default async function handler(req, res) {
   const issuer = process.env.ASC_ISSUER_ID, keyId = process.env.ASC_KEY_ID, p8 = process.env.ASC_P8;
   if (!issuer || !keyId || !p8) return res.status(200).json({ connected: false });
@@ -192,21 +218,42 @@ export default async function handler(req, res) {
 
   if (cache && !fresh && Date.now() - cacheAt < CACHE_MS) { res.setHeader("cache-control", "no-store"); return res.status(200).json(cache); }
 
-  // Display the ASC snapshot verbatim — guarantees the dashboard TIES to App Store Connect.
-  // (Apple's Analytics API lags ~2 days and double-counts impressions if summed live, so a
-  // dated snapshot is the trustworthy source. Refresh ASC_BASELINE when you check ASC.)
-  const out = {
-    connected: true,
-    updated: new Date().toISOString(),
-    baselineAsOf: ASC_BASELINE.asOf,
-    impressions: ASC_BASELINE.impressions,
-    pageViews: ASC_BASELINE.pageViews,
-    firstTimeDownloads: ASC_BASELINE.firstTime,
-    redownloads: ASC_BASELINE.redownloads,
-    totalDownloads: ASC_BASELINE.firstTime + ASC_BASELINE.redownloads,
-    conversionRate: ASC_BASELINE.conversionRate,
-  };
-  cache = out; cacheAt = Date.now();
-  res.setHeader("cache-control", "no-store");
-  return res.status(200).json(out);
+  // AUTO / LIVE: pull Apple's Analytics API directly (rolling ~30d) so nothing is pasted by hand.
+  // These are Apple's own engagement counts — they won't pixel-match the deduplicated ASC website
+  // totals, but they update daily on their own. Installs/revenue come from the Sales API (/api/asc).
+  const r2 = (n) => Math.round(n * 100) / 100;
+  try {
+    const jwt = token(issuer, keyId, p8);
+    const { id: reqId, created } = await ensureRequest(jwt);
+    if (created) throw new Error("analytics report just requested");
+    const reports = await reportsFor(jwt, reqId);
+    const pick = (re) => reports.find((r) => r.attributes && re.test((r.attributes.name || "").toLowerCase()));
+    const eng = pick(/discovery and engagement standard/) || pick(/discovery and engagement/);
+    const dl = pick(/^app downloads standard/) || pick(/^app downloads/);
+    const e = eng ? await sumDaily(jwt, eng.id, "engagement") : { impressions: 0, pageViews: 0, days: 0 };
+    const d = dl ? await sumDaily(jwt, dl.id, "downloads") : { downloads: 0, days: 0 };
+    const impressions = e.impressions, pageViews = e.pageViews, downloads = d.downloads;
+    const out = {
+      connected: true, source: "live", updated: new Date().toISOString(),
+      window: "rolling ~30d (Apple Analytics API)", from: e.from || d.from, to: e.to || d.to,
+      impressions, pageViews, downloads30: downloads,
+      conversionRate: impressions ? r2((downloads / impressions) * 100) : 0,
+      daysEngagement: e.days, daysDownloads: d.days, skipped: (e.skipped || 0) + (d.skipped || 0),
+    };
+    // Sanity: if Apple returned essentially nothing (all instances 500'd / not generated), fall back
+    // to the last known snapshot so the tab never goes blank.
+    if (!impressions && !downloads) throw new Error("no live data this fetch");
+    cache = out; cacheAt = Date.now();
+    res.setHeader("cache-control", "no-store");
+    return res.status(200).json(out);
+  } catch (e) {
+    const out = {
+      connected: true, source: "snapshot", note: "Apple Analytics API unavailable this fetch — showing last snapshot. " + String(e.message || e).slice(0, 80),
+      updated: new Date().toISOString(), baselineAsOf: ASC_BASELINE.asOf,
+      impressions: ASC_BASELINE.impressions, pageViews: ASC_BASELINE.pageViews,
+      conversionRate: ASC_BASELINE.conversionRate,
+    };
+    res.setHeader("cache-control", "no-store");
+    return res.status(200).json(out);
+  }
 }

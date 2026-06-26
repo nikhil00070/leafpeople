@@ -661,7 +661,8 @@ function renderASC(asc, an){
   else if(anEng){
     const conv=an.conversionRate!=null?an.conversionRate+'%':'—';
     anHtml=`<div style="margin-top:.7rem;border-top:1px solid var(--border);padding-top:.55rem">
-      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.baselineAsOf?` · anchored to ASC ${esc(an.baselineAsOf)}`:''}</div>
+      <div class="muted" style="font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem">App Store Analytics${an.source==='live'?` · live · ${esc(an.window||'~30d')}`:(an.baselineAsOf?` · snapshot ${esc(an.baselineAsOf)}`:'')}</div>
+      ${an.source==='live'?'<div class="help" style="margin:0 0 .4rem">Apple-reported engagement counts, updated daily — close to but not pixel-matched with the ASC website (Apple dedupes differently). Installs and revenue above are exact, from the Sales API.</div>':''}
       <div class="kv"><span class="muted">Impressions</span><b>${fmt(an.impressions)}</b></div>
       <div class="kv"><span class="muted">Product page views</span><b>${fmt(an.pageViews)}</b></div>
       <div class="kv"><span class="muted">Conversion rate</span><b>${conv}</b></div></div>`;
