@@ -10,7 +10,7 @@
 
 import crypto from "crypto";
 
-let cache = null, cacheAt = 0, tok = null, tokExp = 0;
+let cache = null, cacheAt = 0, tok = null, tokExp = 0, SITE_RESOLVED = null;
 const CACHE_MS = 3 * 60 * 60 * 1000;
 const SITE = () => process.env.GSC_SITE_URL || "sc-domain:leafpeople.app";
 const BASE = "https://leafpeople.app";
@@ -40,12 +40,26 @@ async function gscToken(sa) {
   return tok;
 }
 async function gscQuery(token, body) {
-  const r = await fetch(`https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(SITE())}/searchAnalytics/query`, {
+  const r = await fetch(`https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(SITE_RESOLVED || SITE())}/searchAnalytics/query`, {
     method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: JSON.stringify(body),
   });
   if (!r.ok) throw new Error(`gsc ${r.status}: ${(await r.text()).slice(0, 200)}`);
   return r.json();
 }
+// Discover which Search Console property the service account actually has access to,
+// so it works whether the property is a Domain (sc-domain:…) or URL-prefix (https://…)
+// one — no env guessing. Prefers an explicit GSC_SITE_URL, else the first leafpeople match.
+async function resolveSite(token) {
+  if (process.env.GSC_SITE_URL) return { site: process.env.GSC_SITE_URL, available: [process.env.GSC_SITE_URL] };
+  try {
+    const r = await fetch("https://searchconsole.googleapis.com/webmasters/v3/sites", { headers: { Authorization: `Bearer ${token}` } });
+    const j = await r.json();
+    const sites = (j.siteEntry || []).map((s) => s.siteUrl);
+    const lp = sites.find((s) => /leafpeople\.app/i.test(s)) || null;
+    return { site: lp, available: sites };
+  } catch { return { site: null, available: [] }; }
+}
+
 async function getGSC() {
   const saRaw = process.env.GA4_SA_JSON;
   if (!saRaw) return { connected: false };
@@ -53,6 +67,11 @@ async function getGSC() {
   const startDate = ymd(31), endDate = ymd(3);
   try {
     const token = await gscToken(sa);
+    const { site, available } = await resolveSite(token);
+    if (!site) {
+      return { connected: false, error: "Service account has access to no Search Console property yet (grant may still be propagating, or was added to a different property). Visible: " + (available.length ? available.join(", ") : "none"), available };
+    }
+    SITE_RESOLVED = site;
     const [totals, queries, pages, byDate] = await Promise.all([
       gscQuery(token, { startDate, endDate, dimensions: [] }),
       gscQuery(token, { startDate, endDate, dimensions: ["query"], rowLimit: 15, orderBy: [{ field: "clicks", descending: true }] }).catch(() => ({ rows: [] })),
@@ -62,7 +81,7 @@ async function getGSC() {
     const t = (totals.rows && totals.rows[0]) || { clicks: 0, impressions: 0, ctr: 0, position: 0 };
     const path = (u) => { try { return new URL(u).pathname || u; } catch { return u; } };
     return {
-      connected: true, site: SITE(), from: startDate, to: endDate,
+      connected: true, site: site, from: startDate, to: endDate,
       totals: { clicks: t.clicks || 0, impressions: t.impressions || 0, ctr_pct: r2((t.ctr || 0) * 100), position: r2(t.position || 0) },
       top_queries: (queries.rows || []).map((r) => ({ key: r.keys[0], clicks: r.clicks, impressions: r.impressions, ctr_pct: r2((r.ctr || 0) * 100), position: r2(r.position) })),
       top_pages: (pages.rows || []).map((r) => ({ key: path(r.keys[0]), clicks: r.clicks, impressions: r.impressions, position: r2(r.position) })),
