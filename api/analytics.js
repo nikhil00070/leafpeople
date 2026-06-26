@@ -147,7 +147,9 @@ async function eventDump(jwt, reportId, n) {
     .sort((a, b) => (a.processingDate < b.processingDate ? 1 : -1)).slice(0, n);
   const out = [];
   for (const it of daily) {
-    const csv = await instanceCsv(jwt, it.id);
+    let csv;
+    try { csv = await instanceCsv(jwt, it.id); }
+    catch (e) { out.push({ date: it.processingDate, error: String(e.message || e).slice(0, 60) }); continue; }
     const lines = csv.split(/\r?\n/).filter(Boolean);
     if (lines.length < 2) { out.push({ date: it.processingDate, empty: true }); continue; }
     const sep = lines[0].includes("\t") ? "\t" : ",";
