@@ -132,8 +132,10 @@ async function getAEO() {
     ai_bots_allowed: aiAllowed, llms_refs: llmsRefs, sitemap_urls: sitemapUrls,
     crawler_hits: (hits && Object.keys(hits).length) ? hits : null,
     note: hits == null
-      ? "Connect a Vercel KV store (KV_REST_API_URL/TOKEN) so the middleware can log AI-crawler hits."
-      : "No AI-crawler hits recorded yet — they'll appear here as bots fetch your articles.",
+      ? "Connect a Redis (Upstash) store so the middleware can log AI-crawler hits."
+      : (Object.keys(hits).length
+          ? "Live — counting AI answer-engine fetches of your articles (all-time)."
+          : "Connected — no AI-crawler hits recorded yet (forward-only; bots crawl periodically)."),
   };
 }
 
