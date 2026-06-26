@@ -129,9 +129,11 @@
     onProg();
   }
 
-  // "More from…" related cards (article pages) — pulled from the section manifest
+  // "More from…" related cards (article pages). Articles now ship STATIC, genus-matched,
+  // orphan-covering related links baked into the HTML (so Google crawls them) — only
+  // fall back to JS-filling when the grid is empty (e.g. a not-yet-reprocessed draft).
   const relGrid = document.getElementById("relatedGrid");
-  if (relGrid) {
+  if (relGrid && !relGrid.children.length) {
     const path = location.pathname.replace(/\/$/, "");
     const section = path.indexOf("/field-guide/") !== -1 ? "field-guide" : "the-leaf";
     const slug = path.split("/").pop();
