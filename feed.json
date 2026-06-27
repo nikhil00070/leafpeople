@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 162,
+  "count": 163,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2070,6 +2070,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-ovatifolium-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-bipennifolium-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-bipennifolium-care",
+      "title": "Philodendron bipennifolium: Growing the Fiddleleaf",
+      "category": "Philodendron",
+      "description": "A field guide to Philodendron bipennifolium — the fiddleleaf philodendron — with care specifics, cultivar picks, and collector notes.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-bipennifolium-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-bipennifolium-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-bipennifolium-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-brandtianum-care",
