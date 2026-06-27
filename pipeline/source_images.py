@@ -290,6 +290,10 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
     scored.sort(key=_rank)
 
     result = {}
+    # had_species: a true 'Genus species' binomial was queryable (not a bare genus
+    # or cultivar). Required for the quality gate — only species-exact iNat photos
+    # are provably the right plant.
+    had_species = bool(subj["inat"]) and len(subj["inat"].split()) >= 2
 
     def place(field, short, attr_field, id_field, pick):
         _, c, src = pick
@@ -303,6 +307,8 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
         result[field] = f"/images/source/stock/{slug}-{short}.jpg"
         result[attr_field] = c["attribution"]
         result[id_field] = c["id"]
+        result[f"{field}_src"] = c.get("source")
+        result[f"{field}_tier"] = c.get("_tier", 0)
 
     if scored:
         hero = scored[0]
@@ -317,6 +323,40 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
             result["image_needs_review"] = True
     else:
         result.update({"hero": PLACEHOLDER, "body_image": PLACEHOLDER, "image_needs_review": True})
+
+    # ---- Quality gate -------------------------------------------------------
+    # GOOD only if BOTH hero & body are iNaturalist species-exact (tier 0), real
+    # photos of the proven-correct plant, at a decent size and not washed-out.
+    # Editorial/genus-only (no species) and Wikimedia keyword scrapes fail here —
+    # the caller skips the article entirely rather than ship a wrong/weak image.
+    hsat, hshort = 0.0, 0
+    if result.get("hero", "").startswith("/images/"):
+        try:
+            from PIL import Image as _I
+            _im = _I.open(STOCK / f"{slug}-hero.jpg").convert("RGB")
+            hshort = min(_im.size)
+            _s = _im.resize((96, 96)).convert("HSV").split()[1].getdata()
+            hsat = sum(_s) / len(_s)
+        except Exception:
+            pass
+    result["hero_sat"] = round(hsat, 1)
+    result["hero_short"] = hshort
+    reasons = []
+    if result.get("image_needs_review"):
+        reasons.append("missing/placeholder image")
+    if not had_species:
+        reasons.append("no species to verify (editorial/genus-only/cultivar)")
+    if not (str(result.get("hero_source_id", "")).startswith("inat")
+            and str(result.get("body_image_source_id", "")).startswith("inat")):
+        reasons.append("hero/body not both iNaturalist")
+    if result.get("hero_tier", 1) != 0 or result.get("body_image_tier", 1) != 0:
+        reasons.append("fell back to genus-tier")
+    if hshort and hshort < 640:
+        reasons.append(f"hero too small ({hshort}px)")
+    if hsat and hsat < 35:
+        reasons.append(f"hero washed-out (sat {hsat:.0f})")
+    result["image_ok"] = not reasons
+    result["image_reasons"] = reasons
 
     for f in tmp.glob("*.jpg"):
         f.unlink()

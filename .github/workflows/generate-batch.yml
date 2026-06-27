@@ -52,16 +52,28 @@ jobs:
           STREAM="${{ inputs.stream }}"
           echo "Generating up to $COUNT per stream ($STREAM) with model $LP_MODEL"
 
+          # Keep generating until COUNT GOOD articles land. Exit codes from the
+          # generators: 0=generated, 3=skipped on image quality (try next topic),
+          # 4=queue empty (stop), other=transient failure (continue). Skips don't
+          # count toward COUNT, so the batch is COUNT *publishable* drafts, not
+          # COUNT attempts. Image gate runs before Claude, so skips cost no credits.
           run_stream () {
             local script="$1" label="$2"
-            for i in $(seq 1 "$COUNT"); do
-              echo "::group::$label $i/$COUNT"
-              # generate_*.py pulls the next 'queued' topic; non-zero on a slop
-              # reject or empty queue — keep going so one bad draft doesn't abort.
-              python "$script" || echo "  ($label $i skipped — slop reject or queue empty)"
+            local good=0 attempts=0 cap=$((COUNT * 10))
+            while [ "$good" -lt "$COUNT" ] && [ "$attempts" -lt "$cap" ]; do
+              attempts=$((attempts + 1))
+              echo "::group::$label attempt $attempts (good $good/$COUNT)"
+              set +e; python "$script"; rc=$?; set -e
               echo "::endgroup::"
-              sleep 6   # rate-limit cushion
+              case $rc in
+                0) good=$((good + 1)); echo "  ✓ $label generated ($good/$COUNT)";;
+                3) echo "  ↷ $label skipped (no good image) — next topic";;
+                4) echo "  ⌀ $label queue empty — stopping"; break;;
+                *) echo "  ! $label rc=$rc — continuing";;
+              esac
+              sleep 4
             done
+            echo "$label: produced $good good article(s) over $attempts attempt(s)."
           }
 
           if [ "$STREAM" = "both" ] || [ "$STREAM" = "field-guide" ]; then

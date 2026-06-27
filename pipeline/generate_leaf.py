@@ -91,7 +91,39 @@ def main() -> int:
     idx, item = common.next_queued(queue)
     if item is None:
         print("[leaf] queue empty — nothing to publish.")
-        return 0
+        return 4  # distinct code: queue exhausted
+
+    # IMAGE-FIRST QUALITY GATE (see generate_guide.py). Source BEFORE Claude.
+    # Plant stories that pin their own app photo as the hero are curated and
+    # always pass. Pure editorial pieces (no species to verify) only pass if iNat
+    # supplies species-exact hero+body — otherwise skip rather than ship a
+    # wrong/generic image. (User directive: don't write it if the image isn't good.)
+    import source_images
+    _cat = (item.get("category") or "").strip()
+    _genus_hint = _cat if _cat in source_images.AROID_GENERA else "Anthurium"
+    imgs = source_images.source_for_article(
+        "the-leaf", item["slug"], _genus_hint, item.get("title_hint", item["slug"]))
+
+    # Plant-story app-photo overrides (curated, count as good images).
+    has_app_hero = bool(item.get("hero"))
+    if has_app_hero:
+        imgs["hero"] = item["hero"]
+        imgs["hero_attribution"] = item.get("hero_attribution", "Leaf People")
+        imgs.pop("hero_source_id", None)
+    if imgs.get("image_needs_review") and item.get("body_fallback"):
+        imgs["body_image"] = item["body_fallback"]
+        imgs["body_image_attribution"] = item.get("body_image_attribution", "Leaf People")
+        imgs.pop("body_image_source_id", None)
+        if has_app_hero:
+            imgs["image_needs_review"] = False  # app hero + app body fallback = two real images
+
+    if not (has_app_hero or imgs.get("image_ok")):
+        print(f"[leaf] SKIP {item['slug']} — image gate: {'; '.join(imgs.get('image_reasons', []))}")
+        for f in (common.SITE_ROOT / "images" / "source" / "stock").glob(f"{item['slug']}-*.jpg"):
+            f.unlink()
+        queue[idx]["status"] = "skipped_no_image"
+        common.save_queue(QUEUE, queue)
+        return 3  # distinct code: skipped on image quality
 
     print(f"[leaf] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
@@ -111,30 +143,6 @@ def main() -> int:
         print(f"[leaf] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    # Source on-topic, globally-unique photos, iNat-led. Understory is editorial
-    # (often no single species), so seed the genus hint from the item's CATEGORY
-    # when it names a genus (e.g. Philodendron essays), else the brand's signature
-    # Anthurium — while still honoring any species named in the title. Deduped
-    # against every image already on the site; flagged placeholder if iNat can't
-    # supply two unique shots, caught at /review.
-    import source_images
-    _cat = (item.get("category") or "").strip()
-    _genus_hint = _cat if _cat in source_images.AROID_GENERA else "Anthurium"
-    imgs = source_images.source_for_article("the-leaf", item["slug"], _genus_hint, article["title"])
-    # Plant stories: pin the app's own plant-profile photo as the hero; let the body image
-    # come from FREE STOCK (Wikimedia / Openverse / iNaturalist). If the sourcer can't find a
-    # usable body (common for cultivars iNat won't have), fall back to the app photo rather
-    # than the placeholder — so no plant story ever lands with a broken second image.
-    if item.get("hero"):
-        imgs["hero"] = item["hero"]
-        imgs["hero_attribution"] = item.get("hero_attribution", "Leaf People")
-        imgs.pop("hero_source_id", None)
-    if imgs.get("image_needs_review") and item.get("body_fallback"):
-        imgs["body_image"] = item["body_fallback"]
-        imgs["body_image_attribution"] = item.get("body_image_attribution", "Leaf People")
-        imgs.pop("body_image_source_id", None)
-        if item.get("hero"):
-            imgs["image_needs_review"] = False  # app hero + app body fallback = two real images
     hero = imgs["hero"]
     body_image = imgs["body_image"]
     html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image,

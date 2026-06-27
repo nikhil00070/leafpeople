@@ -133,7 +133,23 @@ def main() -> int:
     idx, item = common.next_queued(queue)
     if item is None:
         print("[guide] queue empty — nothing to publish.")
-        return 0
+        return 4  # distinct code: queue exhausted
+
+    # IMAGE-FIRST QUALITY GATE. Source photos BEFORE spending Claude credits.
+    # We only write an article when both hero & body are iNaturalist species-exact
+    # (provably the right plant, real photo). No good image -> skip the topic
+    # entirely; never ship a wrong/weak image. (User directive: don't even write
+    # the article if the images aren't good.)
+    import source_images
+    imgs = source_images.source_for_article(
+        "field-guide", item["slug"], item["genus"], item.get("title_hint", item["slug"]))
+    if not imgs.get("image_ok"):
+        print(f"[guide] SKIP {item['slug']} — image gate: {'; '.join(imgs.get('image_reasons', []))}")
+        for f in (common.SITE_ROOT / "images" / "source" / "stock").glob(f"{item['slug']}-*.jpg"):
+            f.unlink()  # drop orphan images; no article will reference them
+        queue[idx]["status"] = "skipped_no_image"
+        common.save_queue(QUEUE, queue)
+        return 3  # distinct code: skipped on image quality
 
     print(f"[guide] generating: {item['slug']}")
     article = common.generate(common.voice(), build_prompt(item), SCHEMA)
@@ -157,11 +173,6 @@ def main() -> int:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    # Source on-topic, globally-unique photos from iNaturalist (species-matched,
-    # deduped against every image already on the site). Falls back to a flagged
-    # placeholder if iNat can't supply two unique usable shots — caught at /review.
-    import source_images
-    imgs = source_images.source_for_article("field-guide", item["slug"], article["genus"], article["title"])
     hero = imgs["hero"]
     body_image = imgs["body_image"]
     html = render("guide-canonical.html", hero=hero, og_image=hero, body_image=body_image,
