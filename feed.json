@@ -2124,6 +2124,19 @@
       "image": "https://leafpeople.app/images/source/stock/philodendron-camposportoanum-care-hero.jpg"
     },
     {
+      "id": "field-guide/philodendron-erubescens-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-erubescens-care",
+      "title": "Philodendron erubescens and Its Red-Stem Heritage",
+      "category": "Philodendron",
+      "description": "A working guide to Philodendron erubescens — care, climbing habit, and the red-stemmed cultivars worth growing well.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-erubescens-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-erubescens-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-erubescens-care-hero.jpg"
+    },
+    {
       "id": "field-guide/philodendron-mexicanum-care",
       "section": "field-guide",
       "section_label": "Field Guide",
