@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 146,
+  "count": 147,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1823,6 +1823,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-gigas",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-gigas/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-gigas-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-mint",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-mint",
+      "title": "The Mint Unicorn",
+      "category": "Monstera",
+      "description": "Monstera deliciosa 'Mint' is rare, unstable, and possibly mythologized. A close look at what makes it real — and what makes it rumor.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-mint",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-mint/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-mint.jpg"
     },
     {
       "id": "the-leaf/monstera-dubia",
