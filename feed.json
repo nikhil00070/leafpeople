@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 164,
+  "count": 165,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2122,6 +2122,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-mexicanum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-plowmanii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-plowmanii-care",
+      "title": "Philodendron plowmanii Care and the Ruffled-Petiole Crawler",
+      "category": "Philodendron",
+      "description": "How to grow Philodendron plowmanii: the ruffled petioles, the creeping rhizome, and the substrate and humidity that keep it pushing fresh leaves.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-plowmanii-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-plowmanii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-plowmanii-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-rugosum-care",
