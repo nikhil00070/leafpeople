@@ -1,0 +1,123 @@
+{
+  "meta_title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
+  "meta_description": "A field guide to Anthurium polydactylum: substrate, humidity, and the other palmate-leafed climbers worth a place on the pole.",
+  "genus": "Anthurium",
+  "title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
+  "deck": "A palmate-leafed climber from the Chocó that rewards a tall pole, chunky mix, and patience through its awkward juvenile years.",
+  "stat_number": "7–11",
+  "stat_label": "Leaflets per mature blade",
+  "picks": [
+    {
+      "name": "Anthurium polydactylum",
+      "location": "Hemiepiphytic climber · palmate leaves",
+      "description": "The reason you're here. Juveniles produce simple, slightly lobed leaves that look nothing like the species; mature plants throw deeply divided blades with seven to eleven finger-like leaflets radiating from a single point. Native to wet forests from Panama through the Chocó of Colombia and Ecuador. Slow to mature but unmistakable once it does.",
+      "tag": "The subject"
+    },
+    {
+      "name": "Anthurium pedatoradiatum",
+      "location": "Terrestrial · palmately lobed",
+      "description": "Mexico's answer to _polydactylum_, sometimes sold as 'Fingers'. Leaves are palmately divided with narrower, more numerous lobes and a more horizontal posture. Easier than _polydactylum_ in average home humidity and tolerates a wider temperature range. A good gateway if the Chocó species feels intimidating.",
+      "tag": "Easier cousin"
+    },
+    {
+      "name": "Anthurium polyschistum",
+      "location": "Climber · pedately divided",
+      "description": "Often confused with _polydactylum_ in trade, but the leaflets are narrower, more numerous, and arranged pedately rather than truly palmately. Native to western Amazonia. Faster than _polydactylum_ and happy on a slimmer pole, though it wants the same chunky, airy mix and consistent moisture.",
+      "tag": "Faster grower"
+    },
+    {
+      "name": "Anthurium clarinervium",
+      "location": "Lithophytic · velvet cardiac leaf",
+      "description": "Not a climber and not palmate, but worth listing because most _polydactylum_ buyers also keep a clarinervium and the care diverges sharply. Chiapas endemic with bright silver venation on a dark velvet blade. Wants brighter light, a more mineral substrate, and a drier cycle than the divided-leaf climbers.",
+      "tag": "Different beast"
+    },
+    {
+      "name": "Anthurium pentaphyllum",
+      "location": "Climber · truly compound leaves",
+      "description": "The oddity. Unlike _polydactylum_, whose blade is deeply divided but still a single leaf, _pentaphyllum_ produces genuinely compound leaves of five separate leaflets on tiny petiolules. Wide neotropical distribution and surprisingly tractable on a pole. Looks like a small umbrella tree pretending to be an anthurium.",
+      "tag": "Collector's curio"
+    }
+  ],
+  "body_image_caption": "A juvenile blade beginning its first true division.",
+  "body_sections": [
+    {
+      "heading": "Substrate and the pole",
+      "paragraphs": [
+        " _A. polydactylum_ is hemiepiphytic in the wild — it germinates on the forest floor, finds a trunk, and climbs. That biography dictates the pot. Use a chunky, structural mix: roughly equal parts coarse orchid bark, perlite or pumice, and a smaller fraction of charcoal, with maybe 10–15% coco coir or sphagnum to hold a little moisture. The finished mix should drain a watering can in seconds and never pack down.",
+        "Give it a pole from day one, even when the juvenile leaves are still simple and undivided. A damp sphagnum-wrapped pole or a tree-fern slab is ideal; a plain wooden stake will work if you keep the aerial roots in contact with humid air. Mature leaves only appear when the plant is climbing and the roots are anchoring into something moist. Plants kept staked to a thin bamboo cane often refuse to morph, no matter how long you wait.",
+        "Repot when roots are visibly circling the inside of a clear nursery pot, usually every 18–24 months. Don't bury the crown, and resist the urge to upsize aggressively — anthuriums sulk in oversized pots that stay wet."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity",
+      "paragraphs": [
+        "Bright indirect light, full stop. Think the brightness of a north-facing greenhouse or a meter back from an east window. Direct midday sun bleaches the blade and crisps the leaflet tips, which on a palmate leaf is especially ugly because every finger shows the damage. If you're growing under LEDs, 150–250 µmol/m²/s at the leaf surface is plenty.",
+        "Water when the top inch of substrate is just dry to the touch. With a chunky mix this usually means a thorough flush every 4–7 days indoors, more often in summer. Use rainwater, RO, or filtered water if your tap runs hard — _polydactylum_ shows tip burn from accumulated salts before most other anthuriums do. Never let it sit in a saucer.",
+        "Humidity is the non-negotiable. Below 60% the new leaves emerge smaller, less divided, and sometimes stuck inside the cataphyll. A cabinet, an IKEA Milsbo, or a humidified grow tent solves this permanently; pebble trays do not. Pair the humidity with gentle airflow from a small clip fan — stagnant wet air is how you get bacterial blight, which on anthuriums looks like translucent water-soaked lesions spreading along the veins."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Buying a juvenile and expecting fingers immediately.** Simple juvenile leaves can persist for two or three years before the first real division appears. The transition is gradual: a shallow lobe, then a deeper one, then a true palmate blade. Buy a plant with at least one divided leaf if you want a shortcut, and expect to pay for it.",
+        "**Treating it like a clarinervium.** The velvet-leaf, Mexican lithophytic anthuriums want a more mineral mix, brighter light, and a drier cycle between waterings. _Polydactylum_ comes from wetter, lower-elevation forest and rots faster in pumice-heavy mixes that suit _clarinervium_, _forgetii_, or _crystallinum_ var. _crystallinum_. Don't apply one care sheet to the whole genus.",
+        "**Overfeeding.** A weak liquid feed (around 100–150 ppm N) every second or third watering during active growth is plenty. Heavy granular fertilizers in a bark mix burn the fine roots quickly, and a stressed _polydactylum_ will drop a leaf for every one it pushes — a net loss you can't afford on a slow grower."
+      ]
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Light",
+      "value": "Bright indirect, no direct sun"
+    },
+    {
+      "label": "Water",
+      "value": "Top inch dry, then flush thoroughly"
+    },
+    {
+      "label": "Humidity",
+      "value": "60%+, struggles below 50%"
+    },
+    {
+      "label": "Substrate",
+      "value": "Chunky bark, perlite, charcoal, light sphagnum"
+    },
+    {
+      "label": "Native range",
+      "value": "Panama to Ecuadorian Chocó, lowland wet forest"
+    },
+    {
+      "label": "Difficulty",
+      "value": "Intermediate; slow to mature"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why are my Anthurium polydactylum leaves still undivided?",
+      "a": "Juvenile _polydactylum_ produces simple or shallowly lobed leaves for two to three years before the palmate adult form appears. The morph is triggered by climbing — the plant needs a moist pole or slab to anchor aerial roots into, plus stable humidity above 60%. Plants kept on thin stakes in dry rooms can stay juvenile indefinitely."
+    },
+    {
+      "q": "Is Anthurium polydactylum the same as Anthurium polyschistum?",
+      "a": "No, though they're routinely confused and mislabeled in trade. _Polydactylum_ has fewer, broader leaflets arranged palmately from a single point, while _polyschistum_ has more numerous, narrower leaflets in a pedate arrangement. _Polyschistum_ is also generally faster-growing and from western Amazonia rather than the Chocó."
+    },
+    {
+      "q": "What substrate works best for Anthurium polydactylum?",
+      "a": "A chunky aroid mix heavy on coarse orchid bark and perlite or pumice, with charcoal and a small fraction of sphagnum or coco coir for moisture retention. It should drain almost instantly and resist compaction. Fine peaty mixes hold too much water around the crown and cause root loss within months."
+    },
+    {
+      "q": "Does Anthurium polydactylum need a moss pole?",
+      "a": "Yes — or a tree-fern slab, or a sphagnum-wrapped totem. As a hemiepiphytic climber it only produces mature divided leaves once aerial roots are anchoring into a moist vertical surface. A dry bamboo stake will hold the plant upright but won't trigger the morph to adult foliage."
+    },
+    {
+      "q": "How big do the leaves get at maturity?",
+      "a": "Mature blades commonly reach 40–60 cm across, with seven to eleven leaflets radiating from the petiole insertion. Exceptional cabinet-grown specimens can exceed that, though indoor plants rarely match wild dimensions. The petioles can be nearly a meter long on a well-climbed plant."
+    }
+  ],
+  "slug": "anthurium-polydactylum-care",
+  "hero": "/images/source/stock/anthurium-polydactylum-care-hero.jpg",
+  "hero_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
+  "hero_source_id": "inat-185052113",
+  "body_image": "/images/source/stock/anthurium-polydactylum-care-body.jpg",
+  "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-280177672"
+}

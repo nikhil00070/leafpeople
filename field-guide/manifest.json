@@ -1,5 +1,85 @@
 [
   {
+    "slug": "anthurium-pedatoradiatum-care",
+    "title": "Caring for Anthurium pedatoradiatum, the Fingered Velvet",
+    "category": "Anthurium",
+    "description": "A field guide to Anthurium pedatoradiatum — substrate, light, humidity, and the lobed-leaf siblings worth growing alongside it.",
+    "url": "/field-guide/anthurium-pedatoradiatum-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-pedatoradiatum-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-podophyllum-care",
+    "title": "Anthurium podophyllum and the Cult of the Lobed Leaf",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium podophyllum, the dramatic lobed-leaf Mexican aroid, plus four related species worth a spot in any serious anthurium collection.",
+    "url": "/field-guide/anthurium-podophyllum-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-podophyllum-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-polydactylum-care",
+    "title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
+    "category": "Anthurium",
+    "description": "A field guide to Anthurium polydactylum: substrate, humidity, and the other palmate-leafed climbers worth a place on the pole.",
+    "url": "/field-guide/anthurium-polydactylum-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-polydactylum-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-pedatum-care",
+    "title": "Anthurium pedatum: Care and Lobed-Leaf Identification",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium pedatum and tell it from its lobed-leaf cousins — pedatoradiatum, polyschistum, and the elusive podophyllum.",
+    "url": "/field-guide/anthurium-pedatum-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-pedatum-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-radicans-care",
+    "title": "Anthurium radicans, the Bullate Miniature Worth Growing",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium radicans, the small bullate species prized by collectors, plus its better-known hybrids and a care guide that actually works.",
+    "url": "/field-guide/anthurium-radicans-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-radicans-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-radicans-luxurians-hybrids",
+    "title": "Anthurium radicans × luxurians: The Texture Hybrids Worth Chasing",
+    "category": "Anthurium",
+    "description": "A field guide to Anthurium radicans × luxurians hybrids — the bullate, quilted crosses that taught collectors to chase texture over size.",
+    "url": "/field-guide/anthurium-radicans-luxurians-hybrids",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-radicans-luxurians-hybrids-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-scandens-care",
+    "title": "Anthurium scandens, the pearl-berry epiphyte",
+    "category": "Anthurium",
+    "description": "How to grow Anthurium scandens, the small-leaved climber prized for its translucent white berries — substrate, light, humidity, and four picks worth keeping.",
+    "url": "/field-guide/anthurium-scandens-care",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-scandens-care-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-gracile-red-pearls",
+    "title": "Anthurium gracile and the Red-Pearl Fruiting Display",
+    "category": "Anthurium",
+    "description": "A field guide to Anthurium gracile, the pendent epiphyte famous for its strands of glassy red berries, plus four kin worth growing.",
+    "url": "/field-guide/anthurium-gracile-red-pearls",
+    "date": "2026-06-27",
+    "thumb": "/images/source/stock/anthurium-gracile-red-pearls-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "philodendron-luxurians",
     "title": "Philodendron luxurians and its near-relations: chasing the dark forest blue",
     "category": "Philodendron",

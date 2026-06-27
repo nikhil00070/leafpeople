@@ -1,0 +1,127 @@
+{
+  "meta_title": "Caring for Anthurium pedatoradiatum, the Fingered Velvet",
+  "meta_description": "A field guide to Anthurium pedatoradiatum — substrate, light, humidity, and the lobed-leaf siblings worth growing alongside it.",
+  "genus": "Anthurium",
+  "title": "Caring for Anthurium pedatoradiatum, the Fingered Velvet",
+  "deck": "A Mexican lobed-leaf oddity that grows like a weed once you stop treating it like a velvet queen.",
+  "stat_number": "7–11",
+  "stat_label": "Finger-like lobes per mature leaf",
+  "picks": [
+    {
+      "name": "_Anthurium pedatoradiatum_",
+      "location": "Hemi-epiphyte · matte leaf",
+      "description": "Native to the cloud forests of Veracruz and Oaxaca, this is the easiest of the lobed-leaf anthuriums and the gateway species for the group. Mature leaves split into seven to eleven finger-like segments on a stiff petiole, held almost horizontally. Tolerates ordinary apartment humidity better than nearly any other sectional anthurium, which is why it keeps showing up on collector windowsills. Not a true velvet, despite the nickname — the surface is matte, not crystalline.",
+      "tag": "Best starter"
+    },
+    {
+      "name": "_Anthurium polyschistum_",
+      "location": "Climber · thin segments",
+      "description": "A South American climber from Peru, Colombia, and Brazil with deeply palmate leaves cut into narrow, almost grass-like fingers. Smaller in every dimension than _pedatoradiatum_ and faster to mature on a slim moss pole. Wants more humidity — 70% is comfortable — and resents stagnant air. Often sold as the \"five-fingered anthurium,\" though leaf segment counts vary.",
+      "tag": "Most graceful"
+    },
+    {
+      "name": "_Anthurium podophyllum_",
+      "location": "Terrestrial · giant lobes",
+      "description": "The largest of the commonly grown lobed anthuriums, with mature leaves that can exceed two feet across and dissect into deeply pinnatifid segments. Endemic to Mexico, it behaves more like a terrestrial than its cousins and appreciates a heavier, soil-inclusive mix. Slow to size up but spectacular once it does. Needs floor space, not shelf space.",
+      "tag": "Statement plant"
+    },
+    {
+      "name": "_Anthurium pentaphyllum_ var. _bombacifolium_",
+      "location": "Climber · palmate compound",
+      "description": "Unusual among anthuriums in producing truly compound leaves — five separate leaflets radiating from a central point, like a schefflera designed by someone with better taste. Climbs aggressively given a damp pole and humidity above 65%. Found from Mexico through northern South America in a confusing tangle of varieties. Worth tracking down if you already grow the simpler lobed species well.",
+      "tag": "Collector's pick"
+    },
+    {
+      "name": "_Anthurium fissum_",
+      "location": "Hemi-epiphyte · pendant lobes",
+      "description": "A less common Colombian species with elongated, deeply divided leaves that hang rather than spread. Grows best mounted or in a net pot where the petioles can arch. Care overlaps with _pedatoradiatum_, but it asks for steadier humidity and dislikes drying out fully. A good next step once the entry-level lobed species is thriving.",
+      "tag": "Underrated"
+    }
+  ],
+  "body_image_caption": "Mature lobes on a three-year-old specimen, side-lit.",
+  "body_sections": [
+    {
+      "heading": "Substrate and roots",
+      "paragraphs": [
+        " _Anthurium pedatoradiatum_ is a hemi-epiphyte, which means its roots want air at least as much as moisture. A working mix is roughly 40% chunky orchid bark, 20% perlite or pumice, 20% coco chunks or charcoal, and 20% sphagnum to hold tension. The goal is a substrate that drains in seconds but stays cool and slightly damp at depth for a day or two after watering.",
+        "Skip dense peat-based houseplant soils. They compact, stay wet at the core, and rot the thick fleshy roots this species produces. If you only have bagged aroid mix, cut it 50/50 with extra bark and perlite before potting.",
+        "Repot every 18–24 months, or when roots circle the pot and water starts running straight through. Use a pot only one size up — this is not a plant that rewards overpotting, and a too-large volume of wet media is the fastest way to lose one."
+      ]
+    },
+    {
+      "heading": "Light, water, and humidity",
+      "paragraphs": [
+        "Bright indirect light, full stop. An east window, or a few feet back from a south or west window with sheer diffusion, is ideal. Under grow lights, aim for around 150–250 µmol/m²/s at leaf height for 12 hours. Direct midday sun bleaches the matte surface and crisps the lobe tips within a week.",
+        "Water when the top inch of substrate is dry but the core still feels cool to the touch. In a chunky mix that usually means every 5–8 days in summer and every 10–14 in winter. Use room-temperature water; cold tap water on warm leaves will spot them. Rainwater or filtered water is kinder over the long term, but tap is workable if your area is not heavily chlorinated.",
+        "Humidity is where this species earns its reputation as the easy one. It will hold form at 50%, look its best at 60–70%, and does not require a closed cabinet to thrive. What it does need is **airflow** — a small clip fan moving air across the leaves prevents the fungal spotting that plagues stagnant setups."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "**Treating it like a velvet anthurium.** _Pedatoradiatum_ is not _crystallinum_, not _magnificum_, not _papillilaminum_. It does not need a 80% humidity tent and it actively dislikes constant sphagnum wetness around the crown. Grow it more like a _Philodendron_ than like a velvet.",
+        "**Underestimating mature size.** Juvenile leaves are entire or shallowly lobed and look nothing like the adult form. Growers see no fingers after a year and assume they bought a mislabeled plant. The lobing develops as the rhizome gains girth — usually leaf six or seven onward. Patience, not intervention, is the answer.",
+        "**Too-small pot, then too-large pot.** People starve the plant in a 4-inch nursery pot for two years, then panic-pot it into a 10-inch ceramic. The shock of going from root-bound to swimming in wet mix triggers root rot every time. Step up one size, let it settle for a season, then step up again."
+      ]
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Light",
+      "value": "Bright indirect, no direct midday sun"
+    },
+    {
+      "label": "Water",
+      "value": "When top inch dries; every 5–8 days in summer"
+    },
+    {
+      "label": "Humidity",
+      "value": "60%+ ideal, tolerates 50%"
+    },
+    {
+      "label": "Substrate",
+      "value": "Chunky aroid mix, bark-dominant"
+    },
+    {
+      "label": "Difficulty",
+      "value": "Easy for a sectional anthurium"
+    },
+    {
+      "label": "Native range",
+      "value": "Veracruz and Oaxaca, Mexico"
+    },
+    {
+      "label": "Mature size",
+      "value": "Leaves 18–24 inches across"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Anthurium pedatoradiatum a velvet anthurium?",
+      "a": "No — it is sometimes called the \"fingered velvet\" but the leaf surface is matte, not crystalline or velutinous. True velvets like _crystallinum_, _magnificum_, and _papillilaminum_ have specialized epidermal cells that scatter light. _Pedatoradiatum_ just has a clean semi-matte finish, which is partly why it tolerates lower humidity than its velvet cousins."
+    },
+    {
+      "q": "Why doesn't my plant have lobed leaves yet?",
+      "a": "Lobing is age-dependent and usually starts around the sixth or seventh adult leaf, once the rhizome thickens past roughly a half-inch. Juvenile foliage is entire or only shallowly cut and can look like an entirely different plant. Keep growing conditions steady and the fingered form will develop on its own — there is no trick to force it."
+    },
+    {
+      "q": "Can it be grown mounted instead of potted?",
+      "a": "Yes, but it is harder than potting. As a hemi-epiphyte it accepts a bark slab or tree fern mount if humidity stays above 70% and you can mist or dunk daily. Most growers get better results in a chunky mix in a net pot, which mimics the airflow of a mount while buffering moisture."
+    },
+    {
+      "q": "Is Anthurium pedatoradiatum toxic to pets?",
+      "a": "Yes, like all anthuriums it contains insoluble calcium oxalate crystals that cause oral irritation, drooling, and swelling if chewed by cats or dogs. The sap can also irritate human skin on prolonged contact. Keep mature specimens out of reach and wear gloves when dividing or repotting."
+    },
+    {
+      "q": "How fast does it grow?",
+      "a": "Moderately — expect one new leaf every 4–8 weeks in good conditions, slowing in winter. Each successive leaf is larger and more deeply lobed than the last until the plant reaches mature size at around three to four years old. Fertilizing lightly with a balanced liquid feed at quarter strength every other watering noticeably speeds things up."
+    }
+  ],
+  "slug": "anthurium-pedatoradiatum-care",
+  "hero": "/images/source/stock/anthurium-pedatoradiatum-care-hero.jpg",
+  "hero_attribution": "no rights reserved / iNaturalist (CC0)",
+  "hero_source_id": "inat-50863884",
+  "body_image": "/images/source/stock/anthurium-pedatoradiatum-care-body.jpg",
+  "body_image_attribution": "Joseph Greco / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-164048499"
+}
