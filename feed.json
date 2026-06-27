@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-06-26",
-  "count": 145,
+  "updated": "2026-06-27",
+  "count": 146,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1758,6 +1758,19 @@
       "url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata",
       "data_url": "https://leafpeople.app/the-leaf/hoya-kentiana-variegata/_data.json",
       "image": "https://leafpeople.app/images/source/inat/hoya-kentiana-variegata-hero.jpg"
+    },
+    {
+      "id": "the-leaf/begonia-rex-fireworks",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-rex-fireworks",
+      "title": "Silver and Plum Explosion",
+      "category": "Begonia",
+      "description": "How rex begonia cultivars get their otherworldly color, why leaf structure does the painting, and which cultivars are worth the obsession.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-rex-fireworks",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-rex-fireworks/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-fireworks.jpg"
     },
     {
       "id": "the-leaf/hoya-pubicalyx",
