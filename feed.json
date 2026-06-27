@@ -1929,6 +1929,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
     },
     {
+      "id": "field-guide/anthurium-gracile-red-pearls",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-gracile-red-pearls",
+      "title": "Anthurium gracile and the Red-Pearl Fruiting Display",
+      "category": "Anthurium",
+      "description": "A field guide to Anthurium gracile, the pendent epiphyte famous for its strands of glassy red berries, plus four kin worth growing.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-gracile-red-pearls",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-gracile-red-pearls/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-gracile-red-pearls-hero.jpg"
+    },
+    {
       "id": "field-guide/anthurium-scandens-care",
       "section": "field-guide",
       "section_label": "Field Guide",
