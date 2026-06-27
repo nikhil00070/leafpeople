@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 156,
+  "count": 157,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1992,6 +1992,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-andraeanum-id",
       "data_url": "https://leafpeople.app/field-guide/anthurium-andraeanum-id/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-andraeanum-id-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-bakeri-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-bakeri-care",
+      "title": "Anthurium bakeri Care: The Strap-Leaf With Red Berries",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium bakeri, the pendant strap-leaf species famous for its scarlet berry spadix, plus four related strap-leaves worth keeping.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-bakeri-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-bakeri-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-bakeri-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-clavigerum-care",
