@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 158,
+  "count": 159,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2057,6 +2057,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-michelii-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-michelii-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-michelii-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-ovatifolium-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-ovatifolium-care",
+      "title": "Anthurium ovatifolium and the Rounded Velvets",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium ovatifolium — the round-leaved velvet anthurium — plus four related species worth a collector's bench space.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-ovatifolium-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-brandtianum-care",
