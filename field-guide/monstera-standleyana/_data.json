@@ -38,7 +38,7 @@
       "tag": "Best silver"
     }
   ],
-  "body_image_caption": "A large fenestrated Monstera leaf held up beside its grower.",
+  "body_image_caption": "A wild Monstera standleyana climbing a forest trunk.",
   "body_sections": [
     {
       "heading": "Why standleyana keeps getting passed over",
@@ -74,9 +74,9 @@
   ],
   "slug": "monstera-standleyana",
   "hero": "/images/source/stock/monstera-standleyana-hero.jpg",
-  "hero_attribution": "Forest &amp; Kim Starr / Wikimedia Commons (CC BY 3.0)",
-  "hero_source_id": "wmc-6151216",
+  "hero_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
+  "hero_source_id": "inat-50513404",
   "body_image": "/images/source/stock/monstera-standleyana-body.jpg",
-  "body_image_attribution": "Janadume / Wikimedia Commons (CC BY-SA 4.0)",
-  "body_image_source_id": "wmc-167032471"
+  "body_image_attribution": "Attila Oláh / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-191833623"
 }

@@ -38,7 +38,7 @@
       "tag": "Stable variegate"
     }
   ],
-  "body_image_caption": "Fenestrated Monstera leaves climbing a tree in habitat.",
+  "body_image_caption": "A mature siltepecana in habitat: fenestrated leaf and orange spathe.",
   "body_sections": [
     {
       "heading": "So is 'El Salvador' actually different?",
@@ -67,9 +67,9 @@
   ],
   "slug": "monstera-siltepecana-el-salvador",
   "hero": "/images/source/stock/monstera-siltepecana-el-salvador-hero.jpg",
-  "hero_attribution": "Grete Pasch / Wikimedia Commons (CC BY 4.0)",
-  "hero_source_id": "wmc-115928126",
+  "hero_attribution": "Grete Pasch / iNaturalist (CC BY 4.0)",
+  "hero_source_id": "inat-101048483",
   "body_image": "/images/source/stock/monstera-siltepecana-el-salvador-body.jpg",
-  "body_image_attribution": "Daniel Pineda Vera / Wikimedia Commons (CC BY 4.0)",
-  "body_image_source_id": "wmc-115928054"
+  "body_image_attribution": "Aerin Jacob / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-58350731"
 }
