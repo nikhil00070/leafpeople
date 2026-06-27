@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 151,
+  "count": 152,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1927,6 +1927,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-scandens-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-scandens-care",
+      "title": "Anthurium scandens, the pearl-berry epiphyte",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium scandens, the small-leaved climber prized for its translucent white berries — substrate, light, humidity, and four picks worth keeping.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-scandens-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-scandens-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-scandens-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-pedatoradiatum-care",
