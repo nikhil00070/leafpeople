@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 165,
+  "count": 166,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2070,6 +2070,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-ovatifolium-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-warocqueanum-x-magnificum",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-warocqueanum-x-magnificum",
+      "title": "Anthurium warocqueanum × magnificum: Caring for the Hybrid That Got Everyone's Attention",
+      "category": "Anthurium",
+      "description": "Care guide for Anthurium warocqueanum × magnificum and its parent species — substrate, humidity, light, and the mistakes that kill velvets.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-x-magnificum",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-warocqueanum-x-magnificum/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-warocqueanum-x-magnificum-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-bipennifolium-care",
