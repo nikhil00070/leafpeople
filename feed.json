@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 155,
+  "count": 156,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2005,6 +2005,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-clavigerum-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-clavigerum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-clavigerum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-michelii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-michelii-care",
+      "title": "Anthurium michelii care, the strap-leaf rosette",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium michelii, the pendulous strap-leaf rosette from Panama, plus four bird's-nest type anthuriums worth a collector's bench space.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-michelii-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-michelii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-michelii-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-brandtianum-care",
