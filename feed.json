@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 154,
+  "count": 155,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1979,6 +1979,19 @@
       "url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse",
       "data_url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse/_data.json",
       "image": "https://leafpeople.app/images/source/stock/velvet-anthurium-winter-collapse-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-andraeanum-id",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-andraeanum-id",
+      "title": "Anthurium andraeanum: Telling the Florist Anthurium from Collector Species",
+      "category": "Anthurium",
+      "description": "How to tell the supermarket flamingo flower from the velvet-leaved anthuriums collectors actually chase — with picks, care, and quick facts.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-andraeanum-id",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-andraeanum-id/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-andraeanum-id-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-clavigerum-care",
