@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 161,
+  "count": 162,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2096,6 +2096,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-camposportoanum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-camposportoanum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-camposportoanum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-mexicanum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-mexicanum-care",
+      "title": "Philodendron mexicanum and the Arrowhead Philodendrons",
+      "category": "Philodendron",
+      "description": "How to grow Philodendron mexicanum well — substrate, light, humidity — plus four arrowhead-leaved philodendrons worth a collector's bench space.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-mexicanum-care-hero.jpg"
     }
   ]
 }
