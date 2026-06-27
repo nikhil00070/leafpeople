@@ -709,7 +709,7 @@
     "date": "2026-06-27",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Chaos vs green",
     "image": "/images/instagram/model-04-cover.jpg",
     "img_ready": "/images/instagram/model-04-cover.jpg",
@@ -735,7 +735,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-27",
+    "ig_media_id": "18127231234724871"
   },
   {
     "id": "d16",
