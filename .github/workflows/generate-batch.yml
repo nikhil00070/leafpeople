@@ -71,26 +71,41 @@ jobs:
             run_stream generate_leaf.py "Understory"
           fi
 
-      - name: Regenerate sitemap + feed
-        run: |
-          cd pipeline
-          python generate_sitemap.py
-          python generate_feed.py
-
-      - name: Commit & push
+      # NOTE: deliberately NO sitemap/feed regeneration here. Pending drafts are
+      # excluded from both (generate_sitemap.py:26 / generate_feed.py:37), so the
+      # batch has nothing to add — and regenerating feed.json is what collided with
+      # concurrent /review publishes and lost a whole batch. Publishing an article
+      # (publish.yml) regenerates them at the moment it actually goes public.
+      - name: Commit & push (conflict-safe)
         run: |
           git config user.name "leaf-people-bot"
           git config user.email "bot@percentearth.co"
           git add -A
           if git diff --cached --quiet; then
-            echo "Nothing generated (queue empty for the selected stream)."
-          else
-            git commit -m "Batch: generated pending drafts for review (${{ inputs.stream }} ×${{ inputs.count }})"
-            for attempt in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && break
-              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
-            done
+            echo "Nothing generated (queue empty for the selected stream) — ok."
+            exit 0
           fi
+          git commit -m "Batch: generated pending drafts for review (${{ inputs.stream }} ×${{ inputs.count }})"
+
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            # New article dirs + images never conflict; manifests line-merge cleanly.
+            if git rebase origin/main; then
+              if git push; then pushed=1; break; fi
+              echo "push attempt $attempt rejected (remote advanced); retrying"
+            else
+              echo "rebase conflict on attempt $attempt — aborting and retrying"
+              git rebase --abort || true
+            fi
+            sleep $((attempt * 5))
+          done
+
+          if [ "$pushed" != "1" ]; then
+            echo "::error::Batch generated drafts but could NOT push them to main after 5 attempts. Nothing landed — re-run the workflow."
+            exit 1
+          fi
+          echo "Pushed batch to main."
 
       - name: Summary review issue
         env:
@@ -100,6 +115,7 @@ jobs:
           pend_guide=$(python3 -c "import json; print(sum(1 for e in json.load(open('field-guide/manifest.json')) if e.get('status')=='pending'))" 2>/dev/null || echo "?")
           q_guide=$(python3 -c "import json; print(sum(1 for e in json.load(open('pipeline/guide_queue.json')) if e.get('status','queued')=='queued'))" 2>/dev/null || echo "?")
           q_leaf=$(python3 -c "import json; print(sum(1 for e in json.load(open('pipeline/leaf_queue.json')) if e.get('status','queued')=='queued'))" 2>/dev/null || echo "?")
+          gh label create review-queue --color B5E853 --description "Drafts awaiting review" 2>/dev/null || true
           gh issue create \
             --title "Batch ready for review ($pend_guide Field Guide + $pend_leaf Understory pending)" \
             --label "review-queue" \
