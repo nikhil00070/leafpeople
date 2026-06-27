@@ -1,0 +1,129 @@
+{
+  "meta_title": "Anthurium friedrichsthalii, the Fenestrated Anthurium",
+  "meta_description": "A field guide to Anthurium friedrichsthalii and its closest relatives — the rare pendant anthuriums that punch holes in their own leaves.",
+  "genus": "Anthurium",
+  "title": "Anthurium friedrichsthalii, the Fenestrated Anthurium",
+  "deck": "The pendant anthurium that grows windows into its own leaves — and the small club of relatives worth growing beside it.",
+  "stat_number": "5–9",
+  "stat_label": "fenestrations per mature leaf",
+  "picks": [
+    {
+      "name": "Anthurium friedrichsthalii",
+      "location": "Epiphyte · pendant strap leaves",
+      "description": "The classic fenestrated anthurium, native from Nicaragua south to Colombia. Mature leaves hang in long pendant straps, 18 to 30 inches, perforated with neat oval holes along the midrib. Juveniles are unholed and easy to mistake for any number of strap-leaf species — patience is the price of entry. Grows fastest mounted or in a shallow basket with chunky bark.",
+      "tag": "The original"
+    },
+    {
+      "name": "Anthurium pendens",
+      "location": "Epiphyte · narrow pendant leaves",
+      "description": "Often confused with _friedrichsthalii_ and sometimes sold as it. The leaves are narrower, the fenestrations smaller and more numerous, and the overall habit even more pendulous. A true _pendens_ is harder to source than the trade suggests; provenance matters here. Treat it identically to its cousin.",
+      "tag": "The look-alike"
+    },
+    {
+      "name": "Anthurium pentaphyllum",
+      "location": "Climber · palmate compound leaves",
+      "description": "Not fenestrated in the windowed sense, but worth knowing because it solves the same problem differently — splitting the leaf into five to seven leaflets instead of perforating it. Native across Central America and the Caribbean. Climbs hard with age and benefits from a tall, damp pole. The juvenile-to-adult transition is dramatic.",
+      "tag": "Compound oddity"
+    },
+    {
+      "name": "Anthurium clavigerum",
+      "location": "Climber · deeply lobed leaves",
+      "description": "The giant of the deeply-divided anthuriums, throwing palmate leaves that can clear three feet across on a mature climbing specimen. Found from Costa Rica into Amazonia. Closer in spirit to _pentaphyllum_ than _friedrichsthalii_, but it scratches the same itch: an anthurium that refuses to be a plain heart. Needs height, humidity, and time.",
+      "tag": "For the patient"
+    },
+    {
+      "name": "Anthurium polyschistum",
+      "location": "Climber · digitate juvenile leaves",
+      "description": "A western Amazonian climber with finely divided, almost fern-like juvenile foliage. Less commonly grown than the others here, and the easiest of this group to lose to dry air. Worth seeking out if you already keep a humid wall or cabinet. The leaves read more like a philodendron than an anthurium at first glance.",
+      "tag": "Connoisseur pick"
+    }
+  ],
+  "body_image_caption": "A mature pendant strap, fenestrations open along the midrib.",
+  "body_sections": [
+    {
+      "heading": "Why the holes, and when to expect them",
+      "paragraphs": [
+        "Fenestration in _Anthurium friedrichsthalii_ is not a sign of stress or age alone — it's the adult leaf form, and it appears when the plant is rooted well, fed steadily, and given enough light to push real growth. Seedlings and freshly imported juveniles produce plain, unperforated straps for months, sometimes a year or more. Growers who panic and repot every few weeks tend to keep their plants stuck in juvenile habit indefinitely.",
+        "The holes themselves form as the leaf unfurls; they are not chewed or torn into existing tissue. Each new leaf is the test of whether conditions are right. If your plant produces a slightly larger, slightly longer strap with the first faint perforations near the midrib, you're on track. If new leaves come in smaller than the last, something — usually light or root health — is wrong."
+      ]
+    },
+    {
+      "heading": "Substrate, mount, and root care",
+      "paragraphs": [
+        "_Friedrichsthalii_ is an epiphyte. Its roots want air at least as much as they want moisture, and a dense peat-heavy mix will rot them within a season. The reliable approach is a chunky aroid blend: medium orchid bark, perlite or pumice, a handful of charcoal, and only a small fraction of something water-retentive like coco chips or sphagnum. Shallow, wide containers beat deep pots — the root system runs out, not down.",
+        "Mounting is the other honest option, and arguably the better one for a pendant species. A slab of cork or tree fern with a pad of damp sphagnum at the base lets the leaves hang the way they want to. Mounted plants dry faster and need either daily misting, a humid room, or both. Whichever route you choose, do not bury the crown; the point where leaves emerge should sit at or just above the media line."
+      ]
+    },
+    {
+      "heading": "Light, water, humidity, and the mistakes that kill them",
+      "paragraphs": [
+        "Bright, indirect light — the kind that throws a soft shadow — is the target. Direct midday sun bleaches the straps to a yellow-green and scorches the thinner tissue around the fenestrations. Too little light and the plant stays juvenile, refusing to perforate. An east window, a shaded south window, or a grow light pulling around 150–250 µmol/m²/s at leaf height all work.",
+        "Water when the top inch of mix is dry but the lower root zone is still faintly damp. In a chunky mix this usually means every 4–7 days indoors, more often if mounted. Humidity should sit above 60 percent; below 50 it stalls and the leaf tips brown. Airflow matters as much as humidity — stagnant humid air is how bacterial blight, the genus's worst enemy, gets started.",
+        "The mistakes that take these plants out are predictable. Dense soil, deep pots, overwatering a recently-imported plant with damaged roots, and cold drafts from a nearby window in winter. Bacterial blight shows as water-soaked yellow patches that spread along veins; isolate immediately, cut well past the margin with sterilized blades, and reduce overhead moisture. Fertilize lightly and constantly rather than heavily and occasionally — a quarter-strength balanced feed with most waterings keeps growth steady without burning the fine epiphytic roots."
+      ]
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Light",
+      "value": "Bright indirect, no direct midday sun"
+    },
+    {
+      "label": "Water",
+      "value": "Top inch dry, then thorough soak"
+    },
+    {
+      "label": "Humidity",
+      "value": "60%+, struggles below 50%"
+    },
+    {
+      "label": "Substrate",
+      "value": "Chunky aroid mix or mounted on cork"
+    },
+    {
+      "label": "Native range",
+      "value": "Nicaragua to Colombia, lowland forest"
+    },
+    {
+      "label": "Mature size",
+      "value": "Pendant leaves 18–30 inches"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why isn't my Anthurium friedrichsthalii producing fenestrations?",
+      "a": "It's still in juvenile form, which is normal for months after import or propagation. Fenestrations appear only once the plant is well-rooted, getting enough light to push larger leaves each cycle, and fed consistently. If new leaves are the same size or smaller than the last, increase light first and check root health before changing anything else."
+    },
+    {
+      "q": "Is Anthurium friedrichsthalii the same as Anthurium pendens?",
+      "a": "No, though they are routinely sold under each other's names in the trade. _Friedrichsthalii_ has broader straps with larger, fewer oval fenestrations; _pendens_ is narrower with smaller, more numerous holes. Provenance from a known collector or grower is the only reliable way to be sure which one you have."
+    },
+    {
+      "q": "Should I mount it or pot it?",
+      "a": "Either works, but mounting suits the pendant habit better and reduces root rot risk. Potted plants need a shallow, wide container and a very chunky aroid mix; mounted plants need higher ambient humidity or daily misting because they dry faster. Beginners with average room humidity usually do better in a pot."
+    },
+    {
+      "q": "What causes the yellow water-soaked patches on the leaves?",
+      "a": "Almost always bacterial blight (_Xanthomonas_), which thrives in warm, stagnant, wet conditions. Isolate the plant immediately, cut affected tissue well past the margin with a sterilized blade, stop overhead watering, and improve airflow. There is no cure once it's systemic, so early action and prevention through air movement are everything."
+    },
+    {
+      "q": "How fast does it grow indoors?",
+      "a": "Slowly compared to common houseplant aroids — expect one new leaf every 4 to 8 weeks under good conditions. Growth accelerates noticeably once the plant transitions to producing fenestrated adult leaves and the root system fills its mount or pot. Pushing it with heavy feeding rarely helps and often burns roots."
+    }
+  ],
+  "slug": "anthurium-friedrichsthalii-care",
+  "hero": "/images/source/stock/anthurium-friedrichsthalii-care-hero.jpg",
+  "hero_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
+  "hero_source_id": "inat-615301203",
+  "hero_src": "inaturalist",
+  "hero_tier": 0,
+  "body_image": "/images/source/stock/anthurium-friedrichsthalii-care-body.jpg",
+  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-614224143",
+  "body_image_src": "inaturalist",
+  "body_image_tier": 0,
+  "hero_sat": 112.7,
+  "hero_short": 683,
+  "image_ok": true,
+  "image_reasons": []
+}

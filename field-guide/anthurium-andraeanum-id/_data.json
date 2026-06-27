@@ -1,0 +1,135 @@
+{
+  "meta_title": "Anthurium andraeanum: Florist vs. Collector Species",
+  "meta_description": "How to tell the supermarket flamingo flower from the velvet-leaved anthuriums collectors actually chase — with picks, care, and quick facts.",
+  "genus": "Anthurium",
+  "title": "Anthurium andraeanum: Telling the Florist Anthurium from Collector Species",
+  "deck": "The waxy red bract on your grocery-store shelf and the matte-black _Anthurium papillilaminum_ share a genus — and almost nothing else.",
+  "stat_number": "~1,000",
+  "stat_label": "described Anthurium species",
+  "picks": [
+    {
+      "name": "Anthurium andraeanum",
+      "location": "Epiphyte · glossy cordate leaf",
+      "description": "The florist anthurium, native to wet forests of western Colombia and Ecuador. Bred for decades into hundreds of cultivars with lacquered red, pink, white, or coral spathes that hold for weeks. Leaves are smooth, semi-glossy, and cordate — not velvet, not deeply sulcate. It is the easiest _Anthurium_ to grow indoors and the one least likely to interest a collector after the first year.",
+      "tag": "The florist"
+    },
+    {
+      "name": "Anthurium clarinervium",
+      "location": "Lithophyte · velvet cordate leaf",
+      "description": "A Chiapas endemic that grows on limestone outcrops, with thick cardboard-stiff leaves and bone-white primary veins on a deep green velvet field. Smaller than _A. crystallinum_ and considerably more forgiving of household humidity. The inflorescence is unremarkable; nobody grows this plant for its bloom. A solid first step into the velvet-leaved section _Cardiolonchium_.",
+      "tag": "Best gateway"
+    },
+    {
+      "name": "Anthurium crystallinum",
+      "location": "Epiphyte · velvet sagittate leaf",
+      "description": "Widespread from Panama through Peru, with elongated heart-shaped leaves that emerge coppery and harden off to dark green with bright silver venation. New leaves can push 18 inches in a mature plant. Often confused with — and frequently sold as — the larger _A. magnificum_, which has a terete (round) petiole versus _crystallinum_'s square-winged one. Worth buying from a vendor who can tell the difference.",
+      "tag": "Collector classic"
+    },
+    {
+      "name": "Anthurium papillilaminum",
+      "location": "Terrestrial · matte velvet leaf",
+      "description": "A Panamanian species with long, pendant, almost black velvet leaves and a sandpaper-fine papillate surface that swallows light. True _papillilaminum_ has become difficult to source clean; the market is thick with hybrids passed off as the species. Demands very high humidity, perfect airflow, and an extremely airy substrate. The grail leaf of section _Cardiolonchium_ for most collectors.",
+      "tag": "The grail"
+    },
+    {
+      "name": "Anthurium warocqueanum",
+      "location": "Pendant epiphyte · strap leaf",
+      "description": "The Queen Anthurium, a Colombian cloud-forest species with pendulous lance-shaped leaves that can exceed four feet on mature specimens. Velvet surface, silver midrib, slow to establish and quick to spite you if humidity crashes. Grows best mounted or in a net pot with mostly bark and perlite, where roots can breathe. Worth the trouble once it settles.",
+      "tag": "The queen"
+    }
+  ],
+  "body_image_caption": "New leaf hardening off on a mature _A. crystallinum_.",
+  "body_sections": [
+    {
+      "heading": "How to tell a florist anthurium from a collector species",
+      "paragraphs": [
+        "The fastest tell is the leaf surface. _A. andraeanum_ and its cultivars have a glossy, almost plastic cuticle that reflects light evenly. Collector species in section _Cardiolonchium_ — _clarinervium_, _crystallinum_, _magnificum_, _papillilaminum_, _forgetii_ — have a matte velvet finish caused by papillate epidermal cells that scatter light. Hold the leaf at an angle to a window: glossy bounces, velvet absorbs.",
+        "The second tell is venation. Florist anthuriums have faint, evenly colored veins. Velvet collector species have bright primary and secondary veins that read as silver or white against dark green, the network running like circuitry across the blade. _A. clarinervium_ shows the boldest contrast; _A. crystallinum_ runs finer and more filigreed.",
+        "Petioles matter too. _A. crystallinum_ has a square, winged petiole. _A. magnificum_ has a terete, four-angled one — this is the single most reliable feature distinguishing the two, and most mislabeled plants in commerce fail this test. The spathe is the least useful character in the genus for ID; ignore the flower and look at the petiole cross-section."
+      ]
+    },
+    {
+      "heading": "Substrate, light, water",
+      "paragraphs": [
+        "Every _Anthurium_ worth growing is epiphytic or lithophytic in habit, which means roots want air. A mix that stays soggy will rot a collector species in weeks. Build a chunky substrate: roughly equal parts orchid bark, perlite or pumice, and coarse coco chips, with a handful of charcoal and a smaller fraction of sphagnum to hold moisture without compacting. Pot in something that breathes — net pots, slotted orchid pots, or terracotta.",
+        "Light should be bright and indirect. East-facing windows are ideal; a south or west window works behind a sheer. Direct midday sun bleaches velvet leaves and crisps the margins of _A. warocqueanum_ within an afternoon. Under grow lights, aim for 100–250 µmol/m²/s at leaf height, 12 hours on.",
+        "Water when the top inch of mix is dry but the core is still faintly moist. Anthuriums are not succulents, but they will not tolerate a wet substrate against the root crown. Rainwater, distilled, or RO is strongly preferred for the velvets — tap minerals accumulate fast in chunky mixes and burn root tips. Humidity should sit at 65–80% for velvets; _A. andraeanum_ is content at 50%."
+      ]
+    },
+    {
+      "heading": "Common mistakes",
+      "paragraphs": [
+        "The most common kill is overpotting. A young _A. clarinervium_ in a six-inch pot of dense mix will sulk and then collapse. Pot tight, in an airy medium, and step up only when roots fill the container.",
+        "The second is buying on a photo. Velvet anthurium ID is genuinely hard, and the trade is full of mislabeled _magnificum_, _crystallinum_, _papillilaminum_, and their hybrids. If you want a species, buy from a vendor who shows the petiole and parent plant, not just a glamour shot of a single leaf.",
+        "The third is chasing humidity without airflow. A sealed cabinet at 90% with no fan grows bacterial blight faster than it grows leaves. Keep air moving — a small clip fan on low, 24 hours — and your velvets will thank you."
+      ]
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Light",
+      "value": "Bright indirect; no direct midday sun"
+    },
+    {
+      "label": "Water",
+      "value": "When top inch dries; never soggy"
+    },
+    {
+      "label": "Humidity",
+      "value": "65%+ for velvets; 50% fine for _andraeanum_"
+    },
+    {
+      "label": "Substrate",
+      "value": "Chunky: bark, perlite, coco, charcoal"
+    },
+    {
+      "label": "Difficulty",
+      "value": "Easy (_andraeanum_) to advanced (_warocqueanum_)"
+    },
+    {
+      "label": "Native range",
+      "value": "Neotropics, Mexico to Bolivia"
+    },
+    {
+      "label": "Mature size",
+      "value": "12 in to 4+ ft leaf length by species"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Anthurium andraeanum the same as the velvet anthuriums collectors grow?",
+      "a": "No — _A. andraeanum_ is a single glossy-leaved species from western Colombia and Ecuador, bred for its lacquered spathe. The velvet collector anthuriums (_clarinervium_, _crystallinum_, _magnificum_, _papillilaminum_) belong to a different section, _Cardiolonchium_, and are grown for the leaf, not the flower. They share a genus and very little else in care or appearance."
+    },
+    {
+      "q": "How do I tell Anthurium crystallinum from Anthurium magnificum?",
+      "a": "Look at the petiole in cross-section. _A. crystallinum_ has a square, winged petiole; _A. magnificum_ has a terete, four-angled one. Leaf size and venation overlap enough that they are unreliable on their own, especially in juveniles, so the petiole is the diagnostic character."
+    },
+    {
+      "q": "Why is my velvet anthurium getting brown crispy leaf edges?",
+      "a": "The usual cause is mineral buildup from tap water or fertilizer salts accumulating in a chunky mix. Flush the substrate thoroughly with rainwater, distilled, or RO every few weeks, and switch to a low-EC fertilizer at quarter strength. Low humidity and direct sun produce similar damage, so rule those out as well."
+    },
+    {
+      "q": "Can Anthurium andraeanum be grown as a houseplant long-term?",
+      "a": "Yes — it is the most forgiving _Anthurium_ for indoor culture and routinely lives for years on a bright windowsill. Give it bright indirect light, water when the top of the mix dries, and feed lightly through spring and summer. It will rebloom indoors under decent light, unlike most collector species, which flower without spectacle."
+    },
+    {
+      "q": "Do anthuriums need a grow cabinet or terrarium?",
+      "a": "The velvet species benefit from one, but it is not strictly required. _A. clarinervium_ and _A. crystallinum_ adapt to 55–65% room humidity if airflow is steady and the substrate is airy. _A. warocqueanum_ and _A. papillilaminum_ are far easier in a cabinet at 75%+ with active ventilation."
+    }
+  ],
+  "slug": "anthurium-andraeanum-id",
+  "hero": "/images/source/stock/anthurium-andraeanum-id-hero.jpg",
+  "hero_attribution": "no rights reserved / iNaturalist (CC0)",
+  "hero_source_id": "inat-132462536",
+  "hero_src": "inaturalist",
+  "hero_tier": 0,
+  "body_image": "/images/source/stock/anthurium-andraeanum-id-body.jpg",
+  "body_image_attribution": "Diogo Luiz / iNaturalist (CC BY 4.0)",
+  "body_image_source_id": "inat-498051243",
+  "body_image_src": "inaturalist",
+  "body_image_tier": 0,
+  "hero_sat": 197.2,
+  "hero_short": 766,
+  "image_ok": true,
+  "image_reasons": []
+}
