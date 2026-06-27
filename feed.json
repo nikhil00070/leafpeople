@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 157,
+  "count": 158,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2018,6 +2018,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-clavigerum-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-clavigerum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-clavigerum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-hookeri-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-hookeri-care",
+      "title": "Anthurium hookeri and the Bird's-Nest Form",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium hookeri and its bird's-nest cousins: substrate, light, humidity, and the species worth collecting.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-hookeri-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-hookeri-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-hookeri-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-michelii-care",
