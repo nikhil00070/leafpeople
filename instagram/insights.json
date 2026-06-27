@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-27T13:48:18+00:00",
+  "updated": "2026-06-27T17:24:33+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 47,
+    "followers": 52,
     "posts": 20
   },
   "summary": {
@@ -77,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 7442,
+      "watch_ms": 7310,
       "plays": 18,
       "label": "d17 The Choc\u00f3",
       "hook": "The Choc\u00f3 \u00b7 Colombia",
@@ -173,7 +173,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 6050,
+      "watch_ms": 6000,
       "plays": 45,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
@@ -189,7 +189,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 3,
-      "watch_ms": 5176,
+      "watch_ms": 5159,
       "plays": 56,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
