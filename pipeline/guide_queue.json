@@ -283,8 +283,7 @@
     "slug": "philodendron-luxurians",
     "genus": "Philodendron",
     "title_hint": "Philodendron luxurians — the dark forest blue, what's a real one, and the cultivation patience it asks for",
-    "status": "pending_review",
-    "published_at": "2026-05-29"
+    "status": "queued"
   },
   {
     "slug": "philodendron-mamei-silver",
@@ -304,29 +303,25 @@
     "slug": "anthurium-luxurians",
     "genus": "Anthurium",
     "title_hint": "Anthurium luxurians — the bullate Colombian and how to keep its texture in cultivation",
-    "status": "pending_review",
-    "published_at": "2026-05-26"
+    "status": "queued"
   },
   {
     "slug": "anthurium-splendidum",
     "genus": "Anthurium",
     "title_hint": "Anthurium splendidum — quilted, slow, and what makes the new leaves succeed or fail",
-    "status": "pending_review",
-    "published_at": "2026-05-25"
+    "status": "queued"
   },
   {
     "slug": "anthurium-dressleri",
     "genus": "Anthurium",
     "title_hint": "Anthurium dressleri — the Panamanian velvet that punishes wet feet and rewards airy mix",
-    "status": "pending_review",
-    "published_at": "2026-05-22"
+    "status": "skipped_no_image"
   },
   {
     "slug": "monstera-deliciosa-albo",
     "genus": "Monstera",
     "title_hint": "Monstera deliciosa albo-borsigiana — what makes a top cut versus a flip, and how to read variegation stability",
-    "status": "pending_review",
-    "published_at": "2026-05-21"
+    "status": "queued"
   },
   {
     "slug": "monstera-adansonii-archipelago",
@@ -360,15 +355,13 @@
     "slug": "amorphophallus-bloom-giants",
     "genus": "Amorphophallus",
     "title_hint": "Amorphophallus — growing the bloom giants at home without losing the corm in dormancy",
-    "status": "pending_review",
-    "published_at": "2026-05-14"
+    "status": "skipped_no_image"
   },
   {
     "slug": "geogenanthus-pewter-plant",
     "genus": "Geogenanthus",
     "title_hint": "Geogenanthus ciliatus and the pewter-plant velvet — a humidity-loving understory perennial that earns the bell jar",
-    "status": "pending_review",
-    "published_at": "2026-05-13"
+    "status": "skipped_no_image"
   },
   {
     "slug": "ctenanthe-never-never",
@@ -381,8 +374,7 @@
     "slug": "tradescantia-zebrina-purples",
     "genus": "Tradescantia",
     "title_hint": "Tradescantia zebrina and the easy purples — what makes a deep-color form versus a washed-out one",
-    "status": "pending_review",
-    "published_at": "2026-05-11"
+    "status": "skipped_no_image"
   },
   {
     "slug": "anthurium-pedatoradiatum-care",

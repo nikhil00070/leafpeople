@@ -50,16 +50,6 @@
     "status": "pending"
   },
   {
-    "slug": "philodendron-luxurians",
-    "title": "Philodendron luxurians and its near-relations: chasing the dark forest blue",
-    "category": "Philodendron",
-    "description": "What separates a real Philodendron luxurians from its lookalikes, and the slow, humid patience it asks of growers willing to chase it.",
-    "url": "/field-guide/philodendron-luxurians",
-    "date": "2026-05-29",
-    "thumb": "/images/source/stock/philodendron-luxurians-hero.jpg",
-    "status": "pending"
-  },
-  {
     "slug": "anthurium-clarinervium-id-gold-standard",
     "title": "Anthurium clarinervium: The ID Gold Standard",
     "category": "Anthurium",
@@ -308,26 +298,6 @@
     "thumb": "/images/source/stock/monstera-variegated-worth-it-hero.jpg"
   },
   {
-    "slug": "anthurium-luxurians",
-    "title": "Anthurium luxurians and the Cult of the Bullate Leaf",
-    "category": "Anthurium",
-    "description": "How to grow Anthurium luxurians without losing its hammered, quilted texture — substrate, humidity, and the related bullate anthuriums worth chasing.",
-    "url": "/field-guide/anthurium-luxurians",
-    "date": "2026-05-26",
-    "thumb": "/images/source/stock/anthurium-luxurians-hero.jpg",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-splendidum",
-    "title": "Anthurium splendidum: Why the New Leaf Wins or Loses",
-    "category": "Anthurium",
-    "description": "A field guide to growing Anthurium splendidum and its quilted relatives — substrate, humidity, and the slow art of pushing a clean new leaf.",
-    "url": "/field-guide/anthurium-splendidum",
-    "date": "2026-05-25",
-    "thumb": "/images/source/p50.jpg",
-    "status": "pending"
-  },
-  {
     "slug": "philodendron-beginners",
     "title": "Five Philodendrons Worth Starting With",
     "category": "Philodendron",
@@ -346,16 +316,6 @@
     "thumb": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg"
   },
   {
-    "slug": "anthurium-dressleri",
-    "title": "Anthurium dressleri: Panama's Velvet That Punishes Wet Feet",
-    "category": "Anthurium",
-    "description": "How to grow Anthurium dressleri at home — the airy substrate, low water, and patient humidity that keep this Panamanian velvet alive.",
-    "url": "/field-guide/anthurium-dressleri",
-    "date": "2026-05-22",
-    "thumb": "/images/source/p50.jpg",
-    "status": "pending"
-  },
-  {
     "slug": "monstera-obliqua-real-versus-fake",
     "title": "The obliqua Problem",
     "category": "Monstera",
@@ -363,16 +323,6 @@
     "url": "/field-guide/monstera-obliqua-real-versus-fake",
     "date": "2026-05-21",
     "thumb": "/images/source/stock/monstera-obliqua-real-versus-fake-hero.jpg"
-  },
-  {
-    "slug": "monstera-deliciosa-albo",
-    "title": "Monstera deliciosa albo-borsigiana: Top Cuts vs. Flips",
-    "category": "Monstera",
-    "description": "How to judge a Monstera deliciosa albo-borsigiana cutting — variegation stability, node quality, and the difference between a keeper and a flip.",
-    "url": "/field-guide/monstera-deliciosa-albo",
-    "date": "2026-05-21",
-    "thumb": "/images/source/stock/monstera-deliciosa-albo-hero.jpg",
-    "status": "pending"
   },
   {
     "slug": "hoya-leaf-based-id",
@@ -460,16 +410,6 @@
     "thumb": "/images/source/stock/amydrium-medium-care-hero.jpg"
   },
   {
-    "slug": "amorphophallus-bloom-giants",
-    "title": "Amorphophallus at Home: Growing the Bloom Giants Without Losing the Corm",
-    "category": "Amorphophallus",
-    "description": "A practical guide to growing Amorphophallus indoors — substrate, light, water, and how to overwinter the corm through dormancy without rot.",
-    "url": "/field-guide/amorphophallus-bloom-giants",
-    "date": "2026-05-14",
-    "thumb": "/images/source/stock/amorphophallus-bloom-giants-hero.jpg",
-    "status": "pending"
-  },
-  {
     "slug": "caladium-dormancy-window",
     "title": "Caladium Dormancy and the Wake-Up Window",
     "category": "Caladium",
@@ -477,16 +417,6 @@
     "url": "/field-guide/caladium-dormancy-window",
     "date": "2026-05-13",
     "thumb": "/images/source/stock/caladium-dormancy-window-hero.jpg"
-  },
-  {
-    "slug": "geogenanthus-pewter-plant",
-    "title": "Geogenanthus ciliatus and the pewter-plant velvet — a humidity-loving understory perennial that earns the bell jar",
-    "category": "Geogenanthus",
-    "description": "A field guide to Geogenanthus — the slow, humidity-bound velvet perennials worth keeping under glass, with ranked picks and care that actually works.",
-    "url": "/field-guide/geogenanthus-pewter-plant",
-    "date": "2026-05-13",
-    "thumb": "/images/source/stock/geogenanthus-pewter-plant-hero.jpg",
-    "status": "pending"
   },
   {
     "slug": "homalomena-under-collected",
@@ -515,16 +445,6 @@
     "url": "/field-guide/syngonium-rare-cultivars",
     "date": "2026-05-11",
     "thumb": "/images/source/stock/syngonium-rare-cultivars-hero.jpg"
-  },
-  {
-    "slug": "tradescantia-zebrina-purples",
-    "title": "Tradescantia zebrina and the Easy Purples",
-    "category": "Tradescantia",
-    "description": "What separates a deep-pigmented Tradescantia zebrina from a washed-out one — and four trailing purples worth growing well.",
-    "url": "/field-guide/tradescantia-zebrina-purples",
-    "date": "2026-05-11",
-    "thumb": "/images/source/p50.jpg",
-    "status": "pending"
   },
   {
     "slug": "rhaphidophora-tetrasperma-versus-monstera",

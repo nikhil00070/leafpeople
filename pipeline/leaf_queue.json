@@ -276,8 +276,7 @@
     "slug": "repotting-mature-anthuriums",
     "title_hint": "Repotting a mature collector Anthurium — when to upsize, what fails, and how to keep the root mass intact",
     "category": "Field Skills",
-    "status": "pending_review",
-    "published_at": "2026-05-29"
+    "status": "skipped_no_image"
   },
   {
     "slug": "humidity-cabinets-versus-tents",
@@ -804,10 +803,9 @@
     "category": "Monstera",
     "slug": "monstera-standleyana-variegata",
     "title_hint": "Not even a true Monstera question: the dark glossy climber with paint-splatter variegation, the albo-versus-aurea split, and an underrated easy variegate.",
-    "status": "pending_review",
+    "status": "queued",
     "hero": "/images/plants/profiles/monstera-standleyana-variegata.png",
-    "body_fallback": "/images/plants/profiles/monstera-standleyana-variegata.png",
-    "published_at": "2026-06-02"
+    "body_fallback": "/images/plants/profiles/monstera-standleyana-variegata.png"
   },
   {
     "category": "Hoya",
