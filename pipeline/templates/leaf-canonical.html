@@ -54,6 +54,17 @@
   ]
 }
 </script>
+{% if faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for f in faqs %}{"@type": "Question", "name": {{ f.q | tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
 </head>
 <body>
 
@@ -111,6 +122,18 @@
     {% endfor %}
   </article>
   {% if gated %}{% include 'partials/wall.html' %}{% endif %}
+
+  {% if faqs %}
+  <section class="faq-section" style="margin:3rem 0 0">
+    <h2 style="font-family:Geologica,sans-serif;font-size:1.5rem;margin:0 0 1rem">Common questions</h2>
+    {% for f in faqs %}
+    <details class="faq-item" style="border-top:1px solid rgba(255,255,255,.12);padding:1rem 0"{% if loop.first %} open{% endif %}>
+      <summary style="cursor:pointer;font-weight:600;font-size:1.05rem">{{ f.q }}</summary>
+      <div class="faq-a" style="margin-top:.65rem;opacity:.88;line-height:1.65">{{ f.a | md }}</div>
+    </details>
+    {% endfor %}
+  </section>
+  {% endif %}
 
   <div class="news">
     <h3>Rare plants, real stories — a few times a week.</h3>

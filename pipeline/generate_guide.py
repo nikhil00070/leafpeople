@@ -69,9 +69,36 @@ SCHEMA = {
                 "required": ["heading", "paragraphs"],
             },
         },
+        # AEO: extractable structured facts (fuel featured snippets + AI answers)
+        "quick_facts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {
+                    "label": {"type": "string"},
+                    "value": {"type": "string"},
+                },
+                "required": ["label", "value"],
+            },
+        },
+        # AEO: Q&A pairs rendered visibly + as FAQPage JSON-LD
+        "faqs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {
+                    "q": {"type": "string"},
+                    "a": {"type": "string"},
+                },
+                "required": ["q", "a"],
+            },
+        },
     },
     "required": ["meta_title", "meta_description", "genus", "title", "deck",
-                 "stat_number", "stat_label", "picks", "body_sections", "body_image_caption"],
+                 "stat_number", "stat_label", "picks", "body_sections",
+                 "body_image_caption", "quick_facts", "faqs"],
 }
 
 
@@ -87,6 +114,14 @@ def build_prompt(item: dict) -> str:
         "The `location` field is the plant's habit/type (e.g. 'Climber · velvet leaf'), not a place.\n"
         "Also write `body_image_caption`: one short editorial-feeling caption "
         "(5-10 words) for an inset photo placed mid-article.\n"
+        "Write `quick_facts`: 5-6 at-a-glance rows for the article's primary plant — "
+        "labels like Light, Water, Humidity, Difficulty, Native range, Mature size — "
+        "each value a short concrete phrase (no full sentences). These are scannable "
+        "facts, so be specific (e.g. 'Bright indirect, no direct sun', '60%+, struggles below 50%').\n"
+        "Write `faqs`: 3-5 genuine questions a collector would search for about this "
+        "plant/topic, each with a direct, factual 2-4 sentence answer that stands on its "
+        "own (the question may be read without the article). Answer the question in the "
+        "first sentence, then add detail. No fluff, no restating the question.\n"
         "Write meta_title as the bare headline only — do not append 'Field Guide', "
         "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Return JSON only, matching the schema."
@@ -113,6 +148,10 @@ def main() -> int:
     for s in article["body_sections"]:
         texts.append(s["heading"])
         texts.extend(s["paragraphs"])
+    for qf in article.get("quick_facts", []):
+        texts.append(qf["value"])
+    for f in article.get("faqs", []):
+        texts.extend([f["q"], f["a"]])
     hits = slop_repair.check_article(texts)
     if hits:
         print(f"[guide] SLOP DETECTED, not publishing: {hits}")

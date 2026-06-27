@@ -47,9 +47,22 @@ SCHEMA = {
                 "required": ["heading", "paragraphs"],
             },
         },
+        # AEO: Q&A pairs rendered visibly + as FAQPage JSON-LD
+        "faqs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {
+                    "q": {"type": "string"},
+                    "a": {"type": "string"},
+                },
+                "required": ["q", "a"],
+            },
+        },
     },
     "required": ["meta_title", "meta_description", "category", "title", "deck",
-                 "intro", "pull_quote", "sections", "body_image_caption"],
+                 "intro", "pull_quote", "sections", "body_image_caption", "faqs"],
 }
 
 
@@ -66,6 +79,9 @@ def build_prompt(item: dict) -> str:
         "'Leaf People', or any brand/site name; the template adds branding.\n"
         "Also write `body_image_caption`: one short editorial-feeling caption "
         "(5-10 words) for an inset photo placed mid-article.\n"
+        "Write `faqs`: 3-4 genuine questions a reader would search for on this topic, "
+        "each with a direct, factual 2-4 sentence answer that stands on its own. Answer "
+        "in the first sentence, then add detail. No fluff, no restating the question.\n"
         "Return JSON only, matching the schema."
     )
 
@@ -85,6 +101,8 @@ def main() -> int:
 
     # Slop gate
     texts = [article["title"], article["deck"], article["pull_quote"], article.get("body_image_caption", ""), *article.get("intro", [])]
+    for f in article.get("faqs", []):
+        texts.extend([f["q"], f["a"]])
     for s in article["sections"]:
         texts.append(s["heading"])
         texts.extend(s["paragraphs"])
@@ -93,13 +111,16 @@ def main() -> int:
         print(f"[leaf] SLOP DETECTED, not publishing: {hits}")
         return 1
 
-    # Source on-topic, globally-unique photos from iNaturalist. Understory is
-    # editorial (no single species), so default the genus to Anthurium — the
-    # brand's signature — while still honoring any species named in the title.
-    # Deduped against every image already on the site; flagged placeholder if
-    # iNat can't supply two unique shots, caught at /review.
+    # Source on-topic, globally-unique photos, iNat-led. Understory is editorial
+    # (often no single species), so seed the genus hint from the item's CATEGORY
+    # when it names a genus (e.g. Philodendron essays), else the brand's signature
+    # Anthurium — while still honoring any species named in the title. Deduped
+    # against every image already on the site; flagged placeholder if iNat can't
+    # supply two unique shots, caught at /review.
     import source_images
-    imgs = source_images.source_for_article("the-leaf", item["slug"], "Anthurium", article["title"])
+    _cat = (item.get("category") or "").strip()
+    _genus_hint = _cat if _cat in source_images.AROID_GENERA else "Anthurium"
+    imgs = source_images.source_for_article("the-leaf", item["slug"], _genus_hint, article["title"])
     # Plant stories: pin the app's own plant-profile photo as the hero; let the body image
     # come from FREE STOCK (Wikimedia / Openverse / iNaturalist). If the sourcer can't find a
     # usable body (common for cultivars iNat won't have), fall back to the app photo rather

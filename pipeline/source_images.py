@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 """Source two on-topic, visually-distinct, globally-unique photos for an article.
 
-Source priority:
-  1. Wikimedia Commons  — RELIABLE (no aggressive anon throttling), has the rare
-     species (it's where Openverse's good specimens come from anyway).
-  2. Openverse          — best-effort secondary (aggregates Flickr etc.), but its
+Source priority (tuned for rare aroids — Anthurium / Philodendron):
+  1. iNaturalist        — PRIMARY for true species. Its `taxon_name` query is
+     taxonomically exact (an Anthurium pedatoradiatum query returns actual
+     pedatoradiatum observations, vote-ranked = the best collector photos).
+     Wikimedia has almost no good photos of rare aroids, so for species we lead
+     with iNat. On by default; set LP_ALLOW_INAT=0 to disable.
+  2. Wikimedia Commons  — fallback, and the lead source for *cultivars* (e.g.
+     Philodendron 'Pink Princess') that iNat does not carry as taxa.
+  3. Openverse          — best-effort tertiary (aggregates Flickr etc.); its
      anonymous tier 401s intermittently, so it's a bonus not a dependency.
-  3. iNaturalist        — last resort, gated behind LP_ALLOW_INAT=1.
 
-Pipeline: derive query from genus+species in the title → gather CC candidates
-(commercial-OK: CC0 / PDM / CC-BY / CC-BY-SA, never NC/ND) → drop any whose
-source-id is already used site-wide → download, score by colorfulness x
-resolution → hero = best; body = best that's perceptually distinct from hero.
-Save to /images/source/stock/<slug>-hero|body.jpg.
+Pipeline: derive an iNat taxon + a keyword subject from genus+species/cultivar in
+the title → gather CC candidates (commercial-OK: CC0 / PDM / CC-BY / CC-BY-SA,
+never NC/ND) → drop any whose source-id is already used site-wide → download,
+score by colorfulness x resolution → rank species-tier above genus-tier, and
+species-exact iNat above keyword matches → hero = best; body = best that's
+perceptually distinct from hero. Save to /images/source/stock/<slug>-hero|body.jpg.
 
 Fewer than two usable unique photos → image_needs_review=true + placeholder, so
 /review catches it.
@@ -56,14 +61,41 @@ def used_source_ids() -> set:
     return used
 
 
-def derive_subject(genus: str, title: str) -> tuple:
-    genus = (genus or "").strip()
-    species_q = genus
-    if genus and title:
-        m = re.search(rf"{re.escape(genus)}\s+([a-z][a-z\-]+)", title)
-        if m:
-            species_q = f"{genus} {m.group(1)}"
-    return species_q or title, genus or title
+AROID_GENERA = ("Anthurium", "Philodendron", "Monstera", "Hoya", "Begonia",
+                "Alocasia", "Scindapsus", "Epipremnum", "Syngonium",
+                "Rhaphidophora", "Caladium", "Aglaonema", "Homalomena", "Amydrium")
+# Lowercase words that can follow a genus token but are NOT species epithets.
+_NOT_EPITHET = {"care", "and", "the", "for", "versus", "hybrid", "velvet", "giant",
+                "true", "dark", "silver", "id", "aff", "sp", "complex", "family",
+                "section", "real", "care.", "care,", "vs", "vs.", "or", "x"}
+
+
+def derive_subject(genus: str, title: str) -> dict:
+    """Return {inat, search, genus}:
+      inat   = exact 'Genus species' for iNat taxon_name, or None (cultivar / unknown)
+      search = best keyword string for Wikimedia/Openverse (includes cultivar name)
+      genus  = resolved genus token (from the TITLE first — the-leaf passes a
+               hard-coded genus that is often wrong for Philodendron pieces).
+    """
+    title = title or ""
+    genusset = "|".join(AROID_GENERA)
+    # 1) explicit binomial in the title -> species-exact (best case)
+    m = re.search(rf"\b({genusset})\s+(?:x\s+)?([a-z][a-z\-]{{3,}})\b", title)
+    if m and m.group(2) not in _NOT_EPITHET:
+        g, sp = m.group(1), m.group(2)
+        return {"inat": f"{g} {sp}", "search": f"{g} {sp}", "genus": g}
+    # 2) quoted cultivar -> keyword search only (iNat has no cultivar taxa)
+    m = re.search(rf"\b({genusset})\s+['‘]([^'’]+)['’]", title)
+    if m:
+        g, cv = m.group(1), m.group(2).strip()
+        return {"inat": None, "search": f"{g} {cv}", "genus": g}
+    # 3) capitalised cultivar token (unquoted) -> keyword search only
+    m = re.search(rf"\b({genusset})\s+([A-Z][A-Za-z\-]+)", title)
+    if m and m.group(2).lower() not in _NOT_EPITHET:
+        return {"inat": None, "search": f"{m.group(1)} {m.group(2)}", "genus": m.group(1)}
+    # 4) genus only — prefer a genus actually named in the title over passed-in
+    g = next((x for x in AROID_GENERA if x.lower() in title.lower()), (genus or "").strip())
+    return {"inat": g or None, "search": g or title, "genus": g or (genus or "").strip()}
 
 
 def _get(url: str):
@@ -142,25 +174,33 @@ def _openverse(subject: str, page_size: int = 30) -> list:
 
 
 def _inat(subject: str) -> list:
+    """Taxon-exact, vote-ranked observations. One photo per observation maximises
+    visual diversity (different plants/angles) for distinct hero vs body picks."""
     url = ("https://api.inaturalist.org/v1/observations"
            f"?taxon_name={urllib.parse.quote(subject)}&photo_license=cc0,cc-by"
-           "&order=desc&order_by=votes&per_page=20")
+           "&order=desc&order_by=votes&per_page=30")
     try:
         data = _get(url)
     except Exception:
         return []
     out, seen = [], set()
     for obs in data.get("results", []):
-        for ph in obs.get("photos", []):
-            pid = ph.get("id")
-            if not pid or pid in seen:
-                continue
-            seen.add(pid)
-            u = (ph.get("url") or "").replace("square", "large")
-            if u:
-                who = (ph.get("attribution") or "").replace("(c) ", "").split(",")[0]
-                out.append({"id": f"inat-{pid}", "url": u, "source": "inaturalist",
-                            "attribution": f"{who} / iNaturalist (CC BY 4.0)"})
+        photos = obs.get("photos") or []
+        if not photos:
+            continue
+        ph = photos[0]                      # lead photo of each observation only
+        pid = ph.get("id")
+        if not pid or pid in seen:
+            continue
+        seen.add(pid)
+        # square -> large (≈1024px); falls back gracefully if size token differs
+        u = (ph.get("url") or "").replace("square", "large")
+        if not u:
+            continue
+        who = (ph.get("attribution") or "").replace("(c) ", "").split(",")[0]
+        lic = "CC0" if "cc0" in (ph.get("license_code") or "").lower() else "CC BY 4.0"
+        out.append({"id": f"inat-{pid}", "url": u, "source": "inaturalist",
+                    "attribution": f"{who} / iNaturalist ({lic})"})
     return out
 
 
@@ -202,40 +242,52 @@ def source_for_article(section: str, slug: str, genus: str, title: str) -> dict:
 
     STOCK.mkdir(parents=True, exist_ok=True)
     used = used_source_ids()
-    species_q, genus_q = derive_subject(genus, title)
+    subj = derive_subject(genus, title)
+    # iNat on by default for these aroid articles; LP_ALLOW_INAT=0 disables.
+    inat_ok = os.environ.get("LP_ALLOW_INAT", "1") != "0"
 
-    # Tier 0 = species query, tier 1 = genus fallback. Species-tier candidates
-    # are ALWAYS preferred over genus-tier (a clarinervium article must show
-    # clarinervium, not a colorful generic Anthurium that happens to score higher).
+    # Tier 0 = species/cultivar query, tier 1 = genus fallback. Species-tier
+    # candidates ALWAYS beat genus-tier, and within a tier species-EXACT iNat
+    # photos beat keyword (Wikimedia/Openverse) matches — a pedatoradiatum
+    # article must show pedatoradiatum, not a vivid generic Anthurium.
     cands, seen = [], set()
 
-    def gather(query, tier):
-        srcs = [lambda: _wikimedia(query), lambda: _openverse(query)]
-        if os.environ.get("LP_ALLOW_INAT") == "1":
-            srcs.append(lambda: _inat(query))
+    def gather(search_q, inat_taxon, tier):
+        srcs = []
+        if inat_ok and inat_taxon:
+            srcs.append(lambda: _inat(inat_taxon))        # FIRST: taxon-exact
+        srcs += [lambda: _wikimedia(search_q), lambda: _openverse(search_q)]
         for j, fn in enumerate(srcs):
             if j:
-                time.sleep(1.0)
+                time.sleep(0.8)
             for c in fn():
                 if c["id"] in seen or str(c["id"]) in used:
                     continue
                 c["_tier"] = tier
                 seen.add(c["id"]); cands.append(c)
 
-    gather(species_q, 0)
-    if genus_q and genus_q != species_q:
-        time.sleep(1.0)
-        gather(genus_q, 1)
+    gather(subj["search"], subj["inat"], 0)
+    genus_q = subj["genus"]
+    if genus_q and genus_q != subj["search"]:
+        time.sleep(0.8)
+        # genus fallback: iNat taxon = bare genus only when the subject was a true
+        # species (so cultivars don't pull generic genus shots into the species tier)
+        gather(genus_q, genus_q if subj["inat"] else None, 1)
 
     tmp = STOCK / ".tmp"
     tmp.mkdir(exist_ok=True)
     scored = []
-    for c in cands[:12]:
+    for c in cands[:14]:
         p = tmp / f"cand-{abs(hash(c['id']))}.jpg"
         if _download(c["url"], p):
             scored.append((_score(p), c, p))
-    # species-tier (0) always ranks above genus-tier (1); within a tier, by score
-    scored.sort(key=lambda x: (x[1].get("_tier", 0), -x[0]))
+    # (tier, source) then score: species-tier (0) > genus-tier (1); within a tier,
+    # species-exact iNat (src 0) > keyword matches (src 1); then most colorful/hi-res.
+    def _rank(x):
+        c = x[1]
+        src = 0 if c.get("source") == "inaturalist" else 1
+        return (c.get("_tier", 0), src, -x[0])
+    scored.sort(key=_rank)
 
     result = {}
 

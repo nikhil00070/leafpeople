@@ -1,0 +1,120 @@
+name: Generate batch (pending review)
+
+# Manual, on-demand: drain N items from the topic queues (guide_queue.json /
+# leaf_queue.json) into PENDING drafts that land on /review. Nothing goes public
+# automatically — you review each, then publish via the Publish workflow.
+#
+# Each generated article gets: iNaturalist-led species images (deduped), a
+# Quick Facts card + FAQ (FAQPage schema) for AEO, and full Article/Breadcrumb
+# JSON-LD. Run it, review the batch, publish the keepers, run it again.
+
+on:
+  workflow_dispatch:
+    inputs:
+      stream:
+        description: "Which queue(s) to generate from"
+        type: choice
+        required: true
+        default: "both"
+        options: ["both", "field-guide", "understory"]
+      count:
+        description: "How many to generate PER selected stream"
+        required: false
+        default: "8"
+      model:
+        description: "LP_MODEL (opus = best quality for a review batch)"
+        required: false
+        default: "claude-opus-4-7"
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Generate drafts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LP_MODEL: ${{ inputs.model }}
+          LP_ALLOW_INAT: "1"   # species images lead with iNaturalist (free, CC BY)
+        run: |
+          cd pipeline
+          COUNT="${{ inputs.count }}"
+          STREAM="${{ inputs.stream }}"
+          echo "Generating up to $COUNT per stream ($STREAM) with model $LP_MODEL"
+
+          run_stream () {
+            local script="$1" label="$2"
+            for i in $(seq 1 "$COUNT"); do
+              echo "::group::$label $i/$COUNT"
+              # generate_*.py pulls the next 'queued' topic; non-zero on a slop
+              # reject or empty queue — keep going so one bad draft doesn't abort.
+              python "$script" || echo "  ($label $i skipped — slop reject or queue empty)"
+              echo "::endgroup::"
+              sleep 6   # rate-limit cushion
+            done
+          }
+
+          if [ "$STREAM" = "both" ] || [ "$STREAM" = "field-guide" ]; then
+            run_stream generate_guide.py "Field Guide"
+          fi
+          if [ "$STREAM" = "both" ] || [ "$STREAM" = "understory" ]; then
+            run_stream generate_leaf.py "Understory"
+          fi
+
+      - name: Regenerate sitemap + feed
+        run: |
+          cd pipeline
+          python generate_sitemap.py
+          python generate_feed.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "leaf-people-bot"
+          git config user.email "bot@percentearth.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing generated (queue empty for the selected stream)."
+          else
+            git commit -m "Batch: generated pending drafts for review (${{ inputs.stream }} ×${{ inputs.count }})"
+            for attempt in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $attempt rejected; retrying after fetch"; sleep 5
+            done
+          fi
+
+      - name: Summary review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pend_leaf=$(python3 -c "import json; print(sum(1 for e in json.load(open('the-leaf/manifest.json')) if e.get('status')=='pending'))" 2>/dev/null || echo "?")
+          pend_guide=$(python3 -c "import json; print(sum(1 for e in json.load(open('field-guide/manifest.json')) if e.get('status')=='pending'))" 2>/dev/null || echo "?")
+          q_guide=$(python3 -c "import json; print(sum(1 for e in json.load(open('pipeline/guide_queue.json')) if e.get('status','queued')=='queued'))" 2>/dev/null || echo "?")
+          q_leaf=$(python3 -c "import json; print(sum(1 for e in json.load(open('pipeline/leaf_queue.json')) if e.get('status','queued')=='queued'))" 2>/dev/null || echo "?")
+          gh issue create \
+            --title "Batch ready for review ($pend_guide Field Guide + $pend_leaf Understory pending)" \
+            --label "review-queue" \
+            --body "A batch of drafts was generated and is waiting on review.
+
+          | | Pending now | Still queued |
+          |---|---|---|
+          | Field Guide | $pend_guide | $q_guide |
+          | Understory | $pend_leaf | $q_leaf |
+
+          [**Open the review queue →**](https://leafpeople.app/review)
+
+          For each draft, check the **hero + body image** (right species? shows the diagnostic feature, not just a flower?), the **Quick Facts**, and the **FAQ**, then Publish or Reject via the [Publish workflow](https://github.com/${{ github.repository }}/actions/workflows/publish.yml).
+
+          Re-run **Generate batch** to drain more from the queue.
+
+          ---
+          _One summary issue per batch._" || echo "issue create failed (non-fatal)"

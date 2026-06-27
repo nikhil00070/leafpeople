@@ -988,5 +988,509 @@
     "hero": "/images/plants/profiles/philodendron-heartleaf.jpg",
     "body_fallback": "/images/plants/profiles/philodendron-heartleaf.jpg",
     "published_at": "2026-06-10"
+  },
+  {
+    "slug": "velvet-anthurium-winter-collapse",
+    "title_hint": "Why velvet anthuriums collapse in winter and the humidity floor that saves them",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-aff-and-sp-labels",
+    "title_hint": "What 'aff.' and 'sp.' really mean on an anthurium label",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "sexing-an-anthurium-spadix",
+    "title_hint": "Reading the spadix to sex and pollinate an anthurium bloom",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-hybrid-boom",
+    "title_hint": "Inside the anthurium hybrid boom and what it's doing to prices",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "velvet-vs-birds-nest-anthuriums",
+    "title_hint": "Velvet versus bird's-nest anthuriums: two collectors, two worlds",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-seedling-grow-out",
+    "title_hint": "Growing anthurium seedlings from berry to first velvet leaf",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-leaf-shape-change",
+    "title_hint": "Why your anthurium's leaf shape keeps changing as it matures",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-root-rot-recovery",
+    "title_hint": "Bringing a rotted anthurium back from a single node",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-thrips-on-velvets",
+    "title_hint": "Spotting and stopping thrips before they scar a velvet anthurium",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-blushing-new-leaf",
+    "title_hint": "The science behind an anthurium's red-blushing new leaf",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-clarinervium-vs-magnificum",
+    "title_hint": "Clarinervium versus magnificum: settling the ID once and for all",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-warocqueanum-narrow-vs-wide",
+    "title_hint": "Narrow-form versus wide-form Anthurium warocqueanum",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-besseae-aff-explained",
+    "title_hint": "The Anthurium besseae aff. complex, untangled",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pollination-window",
+    "title_hint": "Timing the anthurium pollination window between female and male phase",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-section-cardiolonchium",
+    "title_hint": "Section Cardiolonchium: the velvet anthurium family tree",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-section-pachyneurium",
+    "title_hint": "Section Pachyneurium: the bird's-nest anthurium lineage",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "collecting-ecuadorian-anthuriums",
+    "title_hint": "Why Ecuadorian anthuriums command the prices they do",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-the-one-that-died",
+    "title_hint": "The anthurium I lost, and what its dying leaf taught me",
+    "category": "Anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-crawlers-vs-climbers",
+    "title_hint": "Crawlers versus climbers: matching support to a philodendron's habit",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-melanochrysum-hybrid-family",
+    "title_hint": "The melanochrysum hybrid family tree, mapped",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-gloriosum-flat-crawl",
+    "title_hint": "Training a Philodendron gloriosum to crawl flat and stay flat",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-verrucosum-petiole-hairs",
+    "title_hint": "Reading petiole hairs to ID a Philodendron verrucosum",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-moss-pole-transition",
+    "title_hint": "Getting a climbing philodendron to size up on a moss pole",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-variegation-reversion",
+    "title_hint": "Why variegated philodendrons revert and how to pull them back",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-pink-princess-vs-marble",
+    "title_hint": "Pink Princess versus Pink Marble: a buyer's ID guide",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-white-knight-wizard-princess",
+    "title_hint": "White Knight, White Wizard, White Princess: three plants, one confusion",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-self-heading-vs-vining",
+    "title_hint": "Self-heading versus vining philodendrons for shelf planning",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-aerial-root-management",
+    "title_hint": "What to do with a philodendron's aerial roots",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-cataphyll-reading",
+    "title_hint": "Reading cataphylls to predict a philodendron's next leaf",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-dry-season-dormancy",
+    "title_hint": "Dry-season dormancy in Philodendron warszewiczii and stenolobum",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-spiritus-sancti-market",
+    "title_hint": "The Philodendron spiritus-sancti market, from $0 to five figures",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-node-propagation",
+    "title_hint": "Node propagation for slow philodendrons that resent cutting",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-velvet-leaf-care",
+    "title_hint": "Caring for velvet-leaf philodendrons in low humidity",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-juvenile-to-mature-morph",
+    "title_hint": "When a philodendron's juvenile leaf is nothing like its adult",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-andean-vs-lowland",
+    "title_hint": "Andean versus lowland philodendrons and the heat they tolerate",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-the-first-crawler",
+    "title_hint": "My first crawling philodendron and the rhizome I almost rotted",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "velvet-leaf-humidity-floor",
+    "title_hint": "The humidity floor velvet anthuriums and philodendrons actually need",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "semi-hydro-for-velvet-aroids",
+    "title_hint": "Moving a velvet aroid to semi-hydro without shocking it",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "leca-vs-pon-for-aroids",
+    "title_hint": "LECA versus Pon for anthuriums and philodendrons",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-import-acclimation-90-days",
+    "title_hint": "The first 90 days with an imported anthurium or philodendron",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "reading-a-bareroot-import",
+    "title_hint": "Inspecting a bareroot anthurium import before you pot it",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-light-par-targets",
+    "title_hint": "PAR targets for velvet aroids without burning them",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "water-quality-for-velvets",
+    "title_hint": "Why water quality decides whether a velvet leaf stays perfect",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "the-perfect-leaf-pressure",
+    "title_hint": "The myth of the perfect leaf in the anthurium and philodendron world",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-vs-philodendron-velvet",
+    "title_hint": "Anthurium velvet versus philodendron velvet: same look, different needs",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-mounting-vs-potting",
+    "title_hint": "Mounting versus potting mature anthuriums and philodendrons",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "phyto-certs-for-aroid-imports",
+    "title_hint": "Phytosanitary certs and what they protect on an aroid import",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-tissue-culture-premium",
+    "title_hint": "Tissue culture and the collapse of the rarity premium",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "naming-an-aroid-hybrid",
+    "title_hint": "Who gets to name a new anthurium or philodendron hybrid",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "provenance-clones-anthurium-philo",
+    "title_hint": "Provenance and heritage clones in anthuriums and philodendrons",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-fungus-gnat-control",
+    "title_hint": "Breaking the fungus-gnat cycle in chunky aroid mix",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-fertilizer-for-slow-growers",
+    "title_hint": "Feeding slow-growing velvet aroids without salt burn",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-grower-who-ships-best",
+    "title_hint": "What separates a grower who ships well from one who doesn't",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-quarantine-protocol",
+    "title_hint": "A quarantine protocol for new anthuriums and philodendrons",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-winter-grow-light-setup",
+    "title_hint": "A winter grow-light setup that keeps velvets pushing leaves",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-repot-timing-by-root",
+    "title_hint": "Reading roots to time an anthurium or philodendron repot",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-spider-mite-velvet-rescue",
+    "title_hint": "Rescuing a velvet aroid from a spider-mite outbreak",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-cutting-callus-before-pot",
+    "title_hint": "Why a node cutting should callus before it ever hits substrate",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-substrate-recipe-velvets",
+    "title_hint": "A substrate recipe tuned for velvet anthuriums and crawling philodendrons",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-leaf-cleaning-without-damage",
+    "title_hint": "Cleaning a velvet aroid leaf without crushing the nap",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-plant-i-overpaid-for",
+    "title_hint": "The aroid I overpaid for and would buy again",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-flipping-vs-keeping",
+    "title_hint": "Flipping cuttings versus keeping the mother: the collector's dilemma",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-instagram-drop-economics",
+    "title_hint": "How an Instagram plant drop actually prices itself",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-buying-a-cutting-vs-plant",
+    "title_hint": "Buying a cutting versus an established plant: what you're really paying for",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-greenhouse-vs-cabinet",
+    "title_hint": "Greenhouse versus grow cabinet for high-humidity aroids",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-acclimating-out-of-the-cabinet",
+    "title_hint": "Weaning a velvet aroid out of the cabinet into room air",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-leaf-that-converted-me",
+    "title_hint": "The single leaf that turned me into an anthurium collector",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-philodendron-beginner-path",
+    "title_hint": "A sane beginner's path into anthuriums and philodendrons",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-counterfeit-cuttings",
+    "title_hint": "Counterfeit and mislabeled cuttings in the aroid trade",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-broker-economy",
+    "title_hint": "The broker economy behind rare anthuriums and philodendrons",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-pollination-to-seed-timeline",
+    "title_hint": "From pollination to ripe berry: an aroid seed timeline",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-seed-trading-ethics",
+    "title_hint": "The ethics of wild-collected aroid seed",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-when-to-walk-away",
+    "title_hint": "When to walk away from a rare aroid deal",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-collection-i-respect",
+    "title_hint": "The private anthurium collection that reset my standards",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-cold-shipping-survival",
+    "title_hint": "Getting an aroid through a winter shipping cold-snap",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-new-leaf-deformity-causes",
+    "title_hint": "Why a new aroid leaf opens deformed and how to prevent it",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-hard-water-spotting",
+    "title_hint": "Hard-water spotting on velvet leaves and how to undo it",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-most-overrated-plant",
+    "title_hint": "The most overrated anthurium and the one it should be",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-stem-rot-triage",
+    "title_hint": "Triaging stem rot on a prized philodendron or anthurium",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-light-acclimation-burn",
+    "title_hint": "Avoiding light-acclimation burn when a velvet aroid moves shelves",
+    "category": "Field Skills",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-the-cutting-that-rooted-slow",
+    "title_hint": "The cutting that took six months to root and why I waited",
+    "category": "Philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-pricing-a-first-of-its-kind",
+    "title_hint": "Pricing an anthurium nobody else has yet",
+    "category": "The Market",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-collector-burnout-velvets",
+    "title_hint": "Velvet-aroid burnout and learning to keep fewer, better plants",
+    "category": "Collector Culture",
+    "status": "queued"
+  },
+  {
+    "slug": "aroid-humidity-without-mold",
+    "title_hint": "Running high humidity for aroids without inviting mold",
+    "category": "Field Skills",
+    "status": "queued"
   }
 ]

@@ -383,5 +383,701 @@
     "title_hint": "Tradescantia zebrina and the easy purples — what makes a deep-color form versus a washed-out one",
     "status": "pending_review",
     "published_at": "2026-05-11"
+  },
+  {
+    "slug": "anthurium-pedatoradiatum-care",
+    "genus": "Anthurium",
+    "title_hint": "Caring for Anthurium pedatoradiatum, the fingered velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-podophyllum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium podophyllum care and its deeply lobed leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-polydactylum-care",
+    "genus": "Anthurium",
+    "title_hint": "Growing Anthurium polydactylum, the many-fingered climber",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pedatum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium pedatum care and lobed-leaf identification",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-radicans-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium radicans care, the bullate miniature",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-radicans-luxurians-hybrids",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium radicans x luxurians hybrids and their texture",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-scandens-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium scandens care, the pearl-berry epiphyte",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-gracile-red-pearls",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium gracile and its red-pearl fruiting display",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-bakeri-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium bakeri care, the strap-leaf with red berries",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-hookeri-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium hookeri care and bird's-nest form",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-superbum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium superbum care, the ribbed bird's-nest",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-plowmanii-ruffles",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium plowmanii care and its rippled bird's-nest leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-schlechtendalii-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium schlechtendalii, the giant bird's-nest anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-faustomirandae-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium faustomirandae care, the paddle-leaf giant",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-jenmanii-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium jenmanii care and the bird's-nest collector market",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pallidiflorum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium pallidiflorum care, the long strap-leaf velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-willifordii-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium willifordii care and its pendant strap leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-fortgensei-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium fortgensei care, an overlooked velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-metallicum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium metallicum care and its metallic sheen",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-nigrolaminum-gigi",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium nigrolaminum 'Gigi' care and dark-leaf form",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-michelii-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium michelii care, the strap-leaf rosette",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-queremalense-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium queremalense care, the Colombian cordate velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-marmoratum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium marmoratum care and long-leaf venation",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-dolichostachyum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium dolichostachyum care and identification",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-rugulosum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium rugulosum care, the textured velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-balaoanum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium balaoanum, the giant pendant-leaf species",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pendens-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium pendens care, the cascading narrow-leaf",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-reflexinervium-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium reflexinervium care and its sunken veins",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-villenaorum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium villenaorum care, a Peruvian velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-angamarcanum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium angamarcanum care and elongated form",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-portillae-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium portillae care, the pendant cloud-forest species",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-watermaliense-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium watermaliense care and its dark spathe",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-leuconeurum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium leuconeurum care, the cordate white-veined velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-friedrichsthalii-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium friedrichsthalii, the fenestrated anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-spectabile-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium spectabile care and pendant velvet straps",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pseudospectabile-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium pseudospectabile care and identification",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-ovatifolium-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium ovatifolium care, the rounded velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-subsignatum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium subsignatum care and form",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-rubrinervium-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium rubrinervium care and red-veined leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-decipiens-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium decipiens care, the large simple-leaf species",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-argyrostachyum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium argyrostachyum care and silvery spadix",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-ranchoanum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium ranchoanum care and identification",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-andraeanum-id",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium andraeanum: telling the florist anthurium from collector species",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-scherzerianum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium scherzerianum, the curled-spadix flamingo flower",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pterodactyl-hybrid",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium 'Pterodactyl' care and its winged hybrid leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-king-of-spades",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium 'King of Spades' care and hybrid lineage",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-queen-of-spades",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium 'Queen of Spades' care and dark velvet form",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-red-crystallinum",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium 'Red Crystallinum' care and new-leaf color",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-dark-phoenix",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium 'Dark Phoenix' hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-crystallinum-x-magnificum",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium crystallinum x magnificum hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-warocqueanum-x-magnificum",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium warocqueanum x magnificum hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-besseae-x-papillilaminum",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium besseae x papillilaminum hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-debilis-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium debilis care, the trailing miniature",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-pentaphyllum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium pentaphyllum care and its compound leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-clavigerum-care",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium clavigerum, the giant climbing anthurium",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-papillilaminum-x-dressleri",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium papillilaminum x dressleri hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "anthurium-luxurians-x-dressleri",
+    "genus": "Anthurium",
+    "title_hint": "Anthurium luxurians x dressleri hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-erubescens-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron erubescens care and its red-stem heritage",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-esmeraldense-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron esmeraldense care, the corrugated giant",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-patriciae-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron patriciae care and its rippled pendant leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-nangaritense-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron nangaritense care, the fuzzy-petiole species",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-caudatum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron caudatum care and long-leaf form",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-plowmanii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron plowmanii care and ruffled-petiole crawler",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-rugosum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron rugosum, the pigskin philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-bipennifolium-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron bipennifolium, the fiddleleaf philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-joepii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron joepii care and its oddly lobed leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-atabapoense-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron atabapoense care and bicolor underside",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-mexicanum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron mexicanum care and its arrowhead leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-sodiroi-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron sodiroi care, the silver-leaf climber",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-camposportoanum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron camposportoanum care and leaf morphs",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-brandtianum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron brandtianum, the silver-patterned climber",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-hederaceum-brasil",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron hederaceum 'Brasil' and heartleaf variants",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-micans-velvet",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron hederaceum micans, the velvet heartleaf",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-grazielae-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron grazielae care, the glossy heart climber",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-bernardopazii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron bernardopazii care and silver venation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-martianum-fat-boy",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron martianum 'Fat Boy' and its swollen petioles",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-goeldii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron goeldii care, the finger-leaf whorl",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-warszewiczii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron warszewiczii, the dissected dry-season dormant",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-stenolobum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron stenolobum care and strap-lobed leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-williamsii-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron williamsii care, the giant heart species",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-speciosum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron speciosum care and its enormous leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-crassinervium-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron crassinervium care and strap leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-glanduliferum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron glanduliferum care and identification",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-ornatum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron ornatum care and silvery markings",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-giganteum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron giganteum care and variegated forms",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-pedatum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron pedatum care, the oak-leaf philodendron",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-radiatum-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron radiatum care and its lobed leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-elegans-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron elegans care and finely dissected leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-tenue-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron tenue care, the broad upright species",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-hastatum-silver-sword",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron hastatum 'Silver Sword' care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-ring-of-fire",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Ring of Fire' care and serrated variegation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-jungle-boogie-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Jungle Boogie' care and its toothed leaves",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-birkin-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Birkin' care and its pinstripe variegation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-prince-of-orange",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Prince of Orange' care and color shift",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-moonlight-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Moonlight' care and chartreuse flush",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-mccolleys-finale",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'McColley's Finale' care and red new growth",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-painted-lady-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Painted Lady' care and speckled juveniles",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-florida-beauty",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Florida Beauty' care and variegation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-majestic-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Majestic' (sodiroi x verrucosum) care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-splendid-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Splendid' (verrucosum x melanochrysum) care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-glorious-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Glorious' (gloriosum x melanochrysum) care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-dark-lord-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Dark Lord' care and its blood-red backs",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-caramel-marble",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Caramel Marble' care and variegation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-white-wizard",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'White Wizard' care vs White Knight and Princess",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-white-princess",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'White Princess' care and variegation stability",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-golden-dragon",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Golden Dragon' care and citrus variegation",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-el-choco-red",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'El Choco Red' care, the red-back velvet",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-red-emerald",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Red Emerald' care and red petioles",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-black-cardinal",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Black Cardinal' care and dark new growth",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-congo-rojo",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Rojo Congo' care and self-heading habit",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-imperial-red-green",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 'Imperial Red' and 'Imperial Green' care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-bipinnatifidum-selloum",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron bipinnatifidum (selloum) care and tree form",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-69686-care",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron 69686 care, the giant lobed hybrid",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-pastazanum-x-gloriosum",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron pastazanum x gloriosum crawler hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-mamei-x-pastazanum",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron mamei x pastazanum crawler hybrid care",
+    "status": "queued"
+  },
+  {
+    "slug": "philodendron-spiritus-sancti-care-vs-fakes",
+    "genus": "Philodendron",
+    "title_hint": "Philodendron spiritus-sancti: real care versus mislabels",
+    "status": "queued"
   }
 ]

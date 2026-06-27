@@ -54,6 +54,17 @@
   ]
 }
 </script>
+{% if faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for f in faqs %}{"@type": "Question", "name": {{ f.q | tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
 </head>
 <body>
 
@@ -73,7 +84,7 @@
 </nav>
 
 <header class="guide-hero">
-  <img class="guide-hero-img" src="{{ hero }}" alt="">
+  <img class="guide-hero-img" src="{{ hero }}" alt="{{ hero_alt or title }}">
   <div class="hero-grain"></div>
   <div class="guide-hero-overlay"></div>
   {% if hero_attribution and hero_attribution != 'Leaf People' %}<div style="position:absolute;bottom:8px;right:10px;z-index:4;font-size:.6rem;color:rgba(255,255,255,.78);background:rgba(0,0,0,.45);padding:2px 7px;border-radius:6px">📷 {{ hero_attribution }}</div>{% endif %}
@@ -92,6 +103,14 @@
   </div>
 
   <p class="deck">{{ deck | md }}</p>
+
+  {% if quick_facts %}
+  <dl class="quick-facts" aria-label="Quick facts" style="display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.1rem;margin:1.75rem 0 .5rem;padding:1.15rem 1.35rem;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.035)">
+    {% for qf in quick_facts %}
+    <dt style="font-weight:600;color:#7fd39b;font-size:.9rem">{{ qf.label }}</dt><dd style="margin:0;opacity:.92;font-size:.95rem">{{ qf.value | md }}</dd>
+    {% endfor %}
+  </dl>
+  {% endif %}
 
   <div class="picks-label">The picks</div>
   {% for pick in (picks[:1] if gated else picks) %}
@@ -137,6 +156,18 @@
     </form>
   </div>
 </div>
+
+{% if faqs %}
+<section class="faq-section" style="max-width:760px;margin:3.5rem auto 0;padding:0 1.5rem">
+  <h2 style="font-family:Geologica,sans-serif;font-size:1.55rem;margin:0 0 1.1rem">Common questions</h2>
+  {% for f in faqs %}
+  <details class="faq-item" style="border-top:1px solid rgba(255,255,255,.12);padding:1rem 0"{% if loop.first %} open{% endif %}>
+    <summary style="cursor:pointer;font-weight:600;font-size:1.05rem">{{ f.q }}</summary>
+    <div class="faq-a" style="margin-top:.65rem;opacity:.88;line-height:1.65">{{ f.a | md }}</div>
+  </details>
+  {% endfor %}
+</section>
+{% endif %}
 
 <section class="related related--narrow">
   <div class="related-label">More from the Field Guide</div>
