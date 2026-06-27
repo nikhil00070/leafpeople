@@ -22,7 +22,18 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 W, H = 1080, 1920
 KICKER = os.environ.get("HOOK_KICKER", "LEAF PEOPLE")
-ACCENT = (124, 179, 66, 255)        # muted leaf green
+def _accent():
+    v = os.environ.get("HOOK_ACCENT")   # "r,g,b" override (e.g. ForkFox pink 250,42,82); default leaf green
+    if v:
+        try:
+            r, g, b = (int(x) for x in v.split(",")[:3])
+            return (r, g, b, 255)
+        except Exception:
+            pass
+    return (124, 179, 66, 255)
+
+
+ACCENT = _accent()
 LEFT = 84                            # left margin (the "one side")
 
 
@@ -53,6 +64,21 @@ def _wrap(draw, text, font, maxw):
     return lines
 
 
+def _emoji_img(ch, px):
+    """Render a color emoji (e.g. 🦊) as an RGBA image ~px tall via Apple Color Emoji."""
+    try:
+        ef = ImageFont.truetype("/System/Library/Fonts/Apple Color Emoji.ttc", 160)  # valid Apple strike size
+    except Exception:
+        return None
+    canvas = Image.new("RGBA", (180, 180), (0, 0, 0, 0))
+    ImageDraw.Draw(canvas).text((4, 4), ch, font=ef, embedded_color=True)
+    bbox = canvas.getbbox()
+    if not bbox:
+        return None
+    g = canvas.crop(bbox)
+    return g.resize((max(1, int(g.width * px / g.height)), px), Image.LANCZOS)
+
+
 def make_overlay(hook, dst):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     # soft bottom gradient scrim (legibility) — 0 until ~52% height, ramp to ~170 at bottom
@@ -73,9 +99,16 @@ def make_overlay(hook, dst):
     head_top = H - 220 - len(lines) * lh
     kick_y = head_top - 52
 
-    # kicker — letter-spaced small caps
+    # kicker — rendered AS GIVEN (no forced upper, so "ForkFox" stays proper case);
+    # color emoji like 🦊 are drawn as an image since PIL can't render them with a text font.
     cx = tx
-    for ch in KICKER.upper():
+    for ch in KICKER:
+        if not ch.isascii() and not ch.isspace():
+            em = _emoji_img(ch, 31)
+            if em is not None:
+                img.alpha_composite(em, (int(cx), kick_y - 3))
+                cx += em.width + 6
+                continue
         d.text((cx, kick_y), ch, font=kick_f, fill=(235, 238, 235, 220))
         cx += d.textlength(ch, font=kick_f) + 6
 

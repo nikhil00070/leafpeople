@@ -38,6 +38,15 @@ service cloud.firestore {
         && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
     }
 
+    // Cloud CORRECTIONS to the bundled built-in plants (matched by scientific name,
+    // applied in place by PlantLibrarySync.applyBundledOverrides). Separate collection
+    // from plantLibrary so older builds never read it. READ public; WRITE admin-only.
+    match /plantOverrides/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
     // Everything else: NO direct client access. The RevenueCat webhook writes
     // users/{uid} via the Firebase Admin SDK, which bypasses these rules — so
     // subscription claims keep working. The app uses no other Firestore client
