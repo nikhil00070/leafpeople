@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 149,
+  "count": 150,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1927,6 +1927,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-leaf-shape-change",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-leaf-shape-change",
+      "title": "The Long Argument Between an Anthurium and Itself",
+      "category": "Anthurium",
+      "description": "Anthurium leaves shift dramatically from juvenile to adult. Here's the biology behind heteroblasty, and why your plant looks nothing like the listing photo.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/the-leaf/anthurium-leaf-shape-change",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-leaf-shape-change/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-leaf-shape-change-hero.jpg"
     },
     {
       "id": "the-leaf/velvet-anthurium-winter-collapse",
