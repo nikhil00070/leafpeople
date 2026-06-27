@@ -1934,5 +1934,181 @@
     "thumb": "/images/plants/profiles/philodendron-heartleaf.jpg",
     "date": "2026-06-10",
     "status": "published"
+  },
+  {
+    "slug": "anthurium-gracile-red-pearls",
+    "title": "Anthurium gracile and the Red-Pearl Fruiting Display",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-gracile-red-pearls",
+    "thumb": "/images/source/stock/anthurium-gracile-red-pearls-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-pedatum-care",
+    "title": "Anthurium pedatum: Care and Lobed-Leaf Identification",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-pedatum-care",
+    "thumb": "/images/source/stock/anthurium-pedatum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-podophyllum-care",
+    "title": "Anthurium podophyllum and the Cult of the Lobed Leaf",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-podophyllum-care",
+    "thumb": "/images/source/stock/anthurium-podophyllum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-radicans-luxurians-hybrids",
+    "title": "Anthurium radicans \u00d7 luxurians: The Texture Hybrids Worth Chasing",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-radicans-luxurians-hybrids",
+    "thumb": "/images/source/stock/anthurium-radicans-luxurians-hybrids-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-radicans-care",
+    "title": "Anthurium radicans, the Bullate Miniature Worth Growing",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-radicans-care",
+    "thumb": "/images/source/stock/anthurium-radicans-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-scandens-care",
+    "title": "Anthurium scandens, the pearl-berry epiphyte",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-scandens-care",
+    "thumb": "/images/source/stock/anthurium-scandens-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-pedatoradiatum-care",
+    "title": "Caring for Anthurium pedatoradiatum, the Fingered Velvet",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-pedatoradiatum-care",
+    "thumb": "/images/source/stock/anthurium-pedatoradiatum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-seedling-grow-out",
+    "title": "Growing Anthurium Seedlings from Berry to First Velvet Leaf",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/anthurium-seedling-grow-out",
+    "thumb": "/images/source/stock/anthurium-seedling-grow-out-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-polydactylum-care",
+    "title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-polydactylum-care",
+    "thumb": "/images/source/stock/anthurium-polydactylum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-hybrid-boom",
+    "title": "Inside the Anthurium Hybrid Boom \u2014 and What It's Doing to Prices",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/anthurium-hybrid-boom",
+    "thumb": "/images/source/stock/anthurium-hybrid-boom-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "sexing-an-anthurium-spadix",
+    "title": "Reading the Spadix",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/sexing-an-anthurium-spadix",
+    "thumb": "/images/source/stock/sexing-an-anthurium-spadix-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-leaf-shape-change",
+    "title": "The Long Argument Between an Anthurium and Itself",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/anthurium-leaf-shape-change",
+    "thumb": "/images/source/stock/anthurium-leaf-shape-change-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-root-rot-recovery",
+    "title": "The One Node That Lived",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/anthurium-root-rot-recovery",
+    "thumb": "/images/source/stock/anthurium-root-rot-recovery-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "velvet-vs-birds-nest-anthuriums",
+    "title": "Velvet Versus Bird's-Nest Anthuriums: Two Collectors, Two Worlds",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/velvet-vs-birds-nest-anthuriums",
+    "thumb": "/images/source/stock/velvet-vs-birds-nest-anthuriums-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-aff-and-sp-labels",
+    "title": "What 'aff.' and 'sp.' Really Mean on an Anthurium Label",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/anthurium-aff-and-sp-labels",
+    "thumb": "/images/source/stock/anthurium-aff-and-sp-labels-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "velvet-anthurium-winter-collapse",
+    "title": "Why Velvet Anthuriums Collapse in Winter and the Humidity Floor That Saves Them",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/velvet-anthurium-winter-collapse",
+    "thumb": "/images/source/stock/velvet-anthurium-winter-collapse-hero.jpg",
+    "date": "2026-06-27",
+    "status": "published"
   }
 ]

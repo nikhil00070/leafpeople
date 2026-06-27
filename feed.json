@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 147,
+  "count": 149,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1927,6 +1927,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-heartleaf",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-heartleaf/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-heartleaf.jpg"
+    },
+    {
+      "id": "the-leaf/velvet-anthurium-winter-collapse",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "velvet-anthurium-winter-collapse",
+      "title": "Why Velvet Anthuriums Collapse in Winter and the Humidity Floor That Saves Them",
+      "category": "Anthurium",
+      "description": "Velvet anthuriums fail in winter not from cold but from collapsing humidity. Here is the floor that keeps crystallinum, magnificum and clarinervium alive.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse",
+      "data_url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/velvet-anthurium-winter-collapse-hero.jpg"
     }
   ]
 }
