@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 163,
+  "count": 164,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2122,6 +2122,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-mexicanum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-mexicanum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-rugosum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-rugosum-care",
+      "title": "Philodendron rugosum, the Pigskin Philodendron",
+      "category": "Philodendron",
+      "description": "A field guide to Philodendron rugosum and its kin — care, substrate, humidity, and the rare forms worth chasing for serious collectors.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-rugosum-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-rugosum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-rugosum-care-hero.jpg"
     }
   ]
 }
