@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 159,
+  "count": 161,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2083,6 +2083,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-brandtianum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-brandtianum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-brandtianum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-camposportoanum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-camposportoanum-care",
+      "title": "Philodendron camposportoanum: Care and the Three-Leaf Trick",
+      "category": "Philodendron",
+      "description": "A compact climber that shifts from heart to trilobed bullets as it matures. Care, substrate, and what to expect from camposportoanum's leaf morphs.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-camposportoanum-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-camposportoanum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-camposportoanum-care-hero.jpg"
     }
   ]
 }
