@@ -1408,94 +1408,6 @@
     "status": "published"
   },
   {
-    "slug": "tradescantia-zebrina-purples",
-    "title": "Tradescantia zebrina and the Easy Purples",
-    "category": "Tradescantia",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/tradescantia-zebrina-purples",
-    "thumb": "/images/source/p50.jpg",
-    "date": "2026-05-11",
-    "status": "pending"
-  },
-  {
-    "slug": "geogenanthus-pewter-plant",
-    "title": "Geogenanthus ciliatus and the pewter-plant velvet \u2014 a humidity-loving understory perennial that earns the bell jar",
-    "category": "Geogenanthus",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/geogenanthus-pewter-plant",
-    "thumb": "/images/source/stock/geogenanthus-pewter-plant-hero.jpg",
-    "date": "2026-05-13",
-    "status": "pending"
-  },
-  {
-    "slug": "amorphophallus-bloom-giants",
-    "title": "Amorphophallus at Home: Growing the Bloom Giants Without Losing the Corm",
-    "category": "Amorphophallus",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/amorphophallus-bloom-giants",
-    "thumb": "/images/source/stock/amorphophallus-bloom-giants-hero.jpg",
-    "date": "2026-05-14",
-    "status": "pending"
-  },
-  {
-    "slug": "monstera-deliciosa-albo",
-    "title": "Monstera deliciosa albo-borsigiana: Top Cuts vs. Flips",
-    "category": "Monstera",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/monstera-deliciosa-albo",
-    "thumb": "/images/source/stock/monstera-deliciosa-albo-hero.jpg",
-    "date": "2026-05-21",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-splendidum",
-    "title": "Anthurium splendidum: Why the New Leaf Wins or Loses",
-    "category": "Anthurium",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/anthurium-splendidum",
-    "thumb": "/images/source/p50.jpg",
-    "date": "2026-05-25",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-luxurians",
-    "title": "Anthurium luxurians and the Cult of the Bullate Leaf",
-    "category": "Anthurium",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/anthurium-luxurians",
-    "thumb": "/images/source/stock/anthurium-luxurians-hero.jpg",
-    "date": "2026-05-26",
-    "status": "pending"
-  },
-  {
-    "slug": "philodendron-luxurians",
-    "title": "Philodendron luxurians and its near-relations: chasing the dark forest blue",
-    "category": "Philodendron",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/philodendron-luxurians",
-    "thumb": "/images/source/stock/philodendron-luxurians-hero.jpg",
-    "date": "2026-05-29",
-    "status": "pending"
-  },
-  {
-    "slug": "repotting-mature-anthuriums",
-    "title": "The Long Quiet Hour: Repotting a Mature Anthurium",
-    "category": "Field Skills",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/repotting-mature-anthuriums",
-    "thumb": "/images/source/stock/repotting-mature-anthuriums-hero.jpg",
-    "date": "2026-05-29",
-    "status": "pending"
-  },
-  {
     "slug": "monstera-thai-constellation",
     "title": "A Galaxy Grown in a Lab",
     "category": "Monstera",
@@ -1591,17 +1503,6 @@
     "section_label": "Understory",
     "url": "/the-leaf/philodendron-green-congo-nuclear",
     "thumb": "/images/plants/profiles/philodendron-green-congo-nuclear.jpg",
-    "date": "2026-06-02",
-    "status": "pending"
-  },
-  {
-    "slug": "monstera-standleyana-variegata",
-    "title": "Not Even a Monstera",
-    "category": "Monstera",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/monstera-standleyana-variegata",
-    "thumb": "/images/source/inat/monstera-standleyana-variegata-hero.jpg",
     "date": "2026-06-02",
     "status": "pending"
   },
@@ -1947,17 +1848,6 @@
     "status": "pending"
   },
   {
-    "slug": "anthurium-pedatum-care",
-    "title": "Anthurium pedatum: Care and Lobed-Leaf Identification",
-    "category": "Anthurium",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/anthurium-pedatum-care",
-    "thumb": "/images/source/stock/anthurium-pedatum-care-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
     "slug": "anthurium-podophyllum-care",
     "title": "Anthurium podophyllum and the Cult of the Lobed Leaf",
     "category": "Anthurium",
@@ -1965,28 +1855,6 @@
     "section_label": "Field Guide",
     "url": "/field-guide/anthurium-podophyllum-care",
     "thumb": "/images/source/stock/anthurium-podophyllum-care-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-radicans-luxurians-hybrids",
-    "title": "Anthurium radicans \u00d7 luxurians: The Texture Hybrids Worth Chasing",
-    "category": "Anthurium",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/anthurium-radicans-luxurians-hybrids",
-    "thumb": "/images/source/stock/anthurium-radicans-luxurians-hybrids-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-radicans-care",
-    "title": "Anthurium radicans, the Bullate Miniature Worth Growing",
-    "category": "Anthurium",
-    "section": "field-guide",
-    "section_label": "Field Guide",
-    "url": "/field-guide/anthurium-radicans-care",
-    "thumb": "/images/source/stock/anthurium-radicans-care-hero.jpg",
     "date": "2026-06-27",
     "status": "pending"
   },
@@ -2013,17 +1881,6 @@
     "status": "published"
   },
   {
-    "slug": "anthurium-seedling-grow-out",
-    "title": "Growing Anthurium Seedlings from Berry to First Velvet Leaf",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/anthurium-seedling-grow-out",
-    "thumb": "/images/source/stock/anthurium-seedling-grow-out-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
     "slug": "anthurium-polydactylum-care",
     "title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
     "category": "Anthurium",
@@ -2031,28 +1888,6 @@
     "section_label": "Field Guide",
     "url": "/field-guide/anthurium-polydactylum-care",
     "thumb": "/images/source/stock/anthurium-polydactylum-care-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-hybrid-boom",
-    "title": "Inside the Anthurium Hybrid Boom \u2014 and What It's Doing to Prices",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/anthurium-hybrid-boom",
-    "thumb": "/images/source/stock/anthurium-hybrid-boom-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "sexing-an-anthurium-spadix",
-    "title": "Reading the Spadix",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/sexing-an-anthurium-spadix",
-    "thumb": "/images/source/stock/sexing-an-anthurium-spadix-hero.jpg",
     "date": "2026-06-27",
     "status": "pending"
   },
@@ -2068,39 +1903,6 @@
     "status": "published"
   },
   {
-    "slug": "anthurium-root-rot-recovery",
-    "title": "The One Node That Lived",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/anthurium-root-rot-recovery",
-    "thumb": "/images/source/stock/anthurium-root-rot-recovery-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "velvet-vs-birds-nest-anthuriums",
-    "title": "Velvet Versus Bird's-Nest Anthuriums: Two Collectors, Two Worlds",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/velvet-vs-birds-nest-anthuriums",
-    "thumb": "/images/source/stock/velvet-vs-birds-nest-anthuriums-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
-    "slug": "anthurium-aff-and-sp-labels",
-    "title": "What 'aff.' and 'sp.' Really Mean on an Anthurium Label",
-    "category": "Anthurium",
-    "section": "the-leaf",
-    "section_label": "Understory",
-    "url": "/the-leaf/anthurium-aff-and-sp-labels",
-    "thumb": "/images/source/stock/anthurium-aff-and-sp-labels-hero.jpg",
-    "date": "2026-06-27",
-    "status": "pending"
-  },
-  {
     "slug": "velvet-anthurium-winter-collapse",
     "title": "Why Velvet Anthuriums Collapse in Winter and the Humidity Floor That Saves Them",
     "category": "Anthurium",
@@ -2110,5 +1912,280 @@
     "thumb": "/images/source/stock/velvet-anthurium-winter-collapse-hero.jpg",
     "date": "2026-06-27",
     "status": "published"
+  },
+  {
+    "slug": "anthurium-andraeanum-id",
+    "title": "Anthurium andraeanum: Telling the Florist Anthurium from Collector Species",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-andraeanum-id",
+    "thumb": "/images/source/stock/anthurium-andraeanum-id-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-bakeri-care",
+    "title": "Anthurium bakeri Care: The Strap-Leaf With Red Berries",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-bakeri-care",
+    "thumb": "/images/source/stock/anthurium-bakeri-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-clavigerum-care",
+    "title": "Anthurium clavigerum, the Giant Climbing Anthurium",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-clavigerum-care",
+    "thumb": "/images/source/stock/anthurium-clavigerum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-decipiens-care",
+    "title": "Anthurium decipiens, and the Quiet Drama of Simple-Leaf Species",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-decipiens-care",
+    "thumb": "/images/source/stock/anthurium-decipiens-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-friedrichsthalii-care",
+    "title": "Anthurium friedrichsthalii, the Fenestrated Anthurium",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-friedrichsthalii-care",
+    "thumb": "/images/source/stock/anthurium-friedrichsthalii-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-hookeri-care",
+    "title": "Anthurium hookeri and the Bird's-Nest Form",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-hookeri-care",
+    "thumb": "/images/source/stock/anthurium-hookeri-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-jenmanii-care",
+    "title": "Anthurium jenmanii Care and the Bird's-Nest Collector Market",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-jenmanii-care",
+    "thumb": "/images/source/stock/anthurium-jenmanii-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-metallicum-care",
+    "title": "Anthurium metallicum and the Pursuit of a Pewter Sheen",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-metallicum-care",
+    "thumb": "/images/source/stock/anthurium-metallicum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-michelii-care",
+    "title": "Anthurium michelii care, the strap-leaf rosette",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-michelii-care",
+    "thumb": "/images/source/stock/anthurium-michelii-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-ovatifolium-care",
+    "title": "Anthurium ovatifolium and the Rounded Velvets",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-ovatifolium-care",
+    "thumb": "/images/source/stock/anthurium-ovatifolium-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-pentaphyllum-care",
+    "title": "Anthurium pentaphyllum and the Strange Case of the Compound Leaf",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-pentaphyllum-care",
+    "thumb": "/images/source/stock/anthurium-pentaphyllum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-plowmanii-ruffles",
+    "title": "Anthurium plowmanii and the Rippled Bird's-Nest Anthuriums",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-plowmanii-ruffles",
+    "thumb": "/images/source/stock/anthurium-plowmanii-ruffles-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-ranchoanum-care",
+    "title": "Anthurium ranchoanum: Care and Identification",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-ranchoanum-care",
+    "thumb": "/images/source/stock/anthurium-ranchoanum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-scherzerianum-care",
+    "title": "Anthurium scherzerianum, the Curled-Spadix Flamingo Flower",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-scherzerianum-care",
+    "thumb": "/images/source/stock/anthurium-scherzerianum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-schlechtendalii-care",
+    "title": "Anthurium schlechtendalii, the Giant Bird's-Nest Anthurium",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-schlechtendalii-care",
+    "thumb": "/images/source/stock/anthurium-schlechtendalii-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-subsignatum-care",
+    "title": "Anthurium subsignatum: Care and Form",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-subsignatum-care",
+    "thumb": "/images/source/stock/anthurium-subsignatum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-warocqueanum-x-magnificum",
+    "title": "Anthurium warocqueanum \u00d7 magnificum: Caring for the Hybrid That Got Everyone's Attention",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-warocqueanum-x-magnificum",
+    "thumb": "/images/source/stock/anthurium-warocqueanum-x-magnificum-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-bipennifolium-care",
+    "title": "Philodendron bipennifolium: Growing the Fiddleleaf",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-bipennifolium-care",
+    "thumb": "/images/source/stock/philodendron-bipennifolium-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-brandtianum-care",
+    "title": "Philodendron brandtianum, the Silver-Patterned Climber",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-brandtianum-care",
+    "thumb": "/images/source/stock/philodendron-brandtianum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "published"
+  },
+  {
+    "slug": "philodendron-camposportoanum-care",
+    "title": "Philodendron camposportoanum: Care and the Three-Leaf Trick",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-camposportoanum-care",
+    "thumb": "/images/source/stock/philodendron-camposportoanum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-erubescens-care",
+    "title": "Philodendron erubescens and Its Red-Stem Heritage",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-erubescens-care",
+    "thumb": "/images/source/stock/philodendron-erubescens-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-mexicanum-care",
+    "title": "Philodendron mexicanum and the Arrowhead Philodendrons",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-mexicanum-care",
+    "thumb": "/images/source/stock/philodendron-mexicanum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-plowmanii-care",
+    "title": "Philodendron plowmanii Care and the Ruffled-Petiole Crawler",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-plowmanii-care",
+    "thumb": "/images/source/stock/philodendron-plowmanii-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-rugosum-care",
+    "title": "Philodendron rugosum, the Pigskin Philodendron",
+    "category": "Philodendron",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/philodendron-rugosum-care",
+    "thumb": "/images/source/stock/philodendron-rugosum-care-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
+  },
+  {
+    "slug": "anthurium-crystallinum-x-magnificum",
+    "title": "The crystallinum \u00d7 magnificum Hybrid, Decoded",
+    "category": "Anthurium",
+    "section": "field-guide",
+    "section_label": "Field Guide",
+    "url": "/field-guide/anthurium-crystallinum-x-magnificum",
+    "thumb": "/images/source/stock/anthurium-crystallinum-x-magnificum-hero.jpg",
+    "date": "2026-06-27",
+    "status": "pending"
   }
 ]

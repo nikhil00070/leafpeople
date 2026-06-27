@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-27",
-  "count": 152,
+  "count": 153,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1979,6 +1979,19 @@
       "url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse",
       "data_url": "https://leafpeople.app/the-leaf/velvet-anthurium-winter-collapse/_data.json",
       "image": "https://leafpeople.app/images/source/stock/velvet-anthurium-winter-collapse-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-brandtianum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-brandtianum-care",
+      "title": "Philodendron brandtianum, the Silver-Patterned Climber",
+      "category": "Philodendron",
+      "description": "A field guide to Philodendron brandtianum: how to grow the silver leaf philodendron, plus four related silver-marked climbers worth chasing.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/philodendron-brandtianum-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-brandtianum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-brandtianum-care-hero.jpg"
     }
   ]
 }
