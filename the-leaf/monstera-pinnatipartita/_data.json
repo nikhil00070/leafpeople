@@ -9,7 +9,7 @@
     "The moment you give it a pole, a plank, or a moss-covered length of PVC, something shifts. Not immediately, not dramatically, but with a quiet accumulating logic. The internodes tighten. The petioles lengthen. Successive leaves arrive incrementally larger, and somewhere in that progression — there is no clean line — the lamina begins to split at the margin, then fenestrate toward the midrib, until you are looking at the plant everyone recognizes. That transformation, that long green argument for patience, is what makes _Monstera_ worth understanding rather than just growing."
   ],
   "pull_quote": "The juvenile leaf isn't a lesser version of the adult — it's a different organism strategy, shaped by a different set of pressures.",
-  "body_image_caption": "Adult pinnate leaves ascending a moss pole, mid-transformation.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "How the Leaf Knows What It Is",
@@ -80,7 +80,5 @@
   "slug": "monstera-pinnatipartita",
   "hero": "/images/plants/profiles/monstera-pinnatipartita.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/monstera-pinnatipartita-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-125529171"
+  "body_image": ""
 }

@@ -9,7 +9,7 @@
     "The confusion is understandable once you know the architecture of variegation involved. These two cultivars are essentially photographic negatives of each other, and both go by names that include the word 'Krimson,' which does not help. Understanding what each one actually is — how the color is distributed, what the new growth looks like, how stable the pattern runs, and which name belongs to which plant — is the kind of foundational knowledge that separates a collector from someone who just keeps plants alive."
   ],
   "pull_quote": "A cream margin and a cream center sound like minor variations until you realize the plant's ability to photosynthesize depends entirely on which one you've got.",
-  "body_image_caption": "New coral growth hardens to cream-margined green.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "The Base Plant: What _Hoya carnosa_ Actually Is",
@@ -71,7 +71,5 @@
   "slug": "hoya-krimson-queen",
   "hero": "/images/plants/profiles/hoya-krimson-queen.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-krimson-queen-body.jpg",
-  "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-280178935"
+  "body_image": ""
 }

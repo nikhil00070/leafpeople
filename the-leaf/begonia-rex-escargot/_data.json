@@ -9,7 +9,7 @@
     "Rex begonias — _Begonia rex-cultorum_, a hybrid group derived primarily from the Assam species _Begonia rex_ — are grown almost entirely for their foliage: layered pigmentation, metallic sheen, surface texture that catches light differently at every angle. They are painterly in a way that reads as almost accidental in nature. The problem, and the reason many growers give up on them, is that they are exacting about humidity and airflow in ways that punish inattention. Get those two variables right and rex begonias are among the most rewarding foliage plants available. Get them wrong and you have crown rot and powdery mildew within a season."
   ],
   "pull_quote": "The spiral is genuinely astonishing — and 'Escargot' is one of the most instructive plants a rex grower can keep.",
-  "body_image_caption": "'Escargot' unfurling: nature outpacing the algorithm.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "Where the Genus Actually Comes From",
@@ -70,7 +70,5 @@
   "slug": "begonia-rex-escargot",
   "hero": "/images/plants/profiles/begonia-rex-escargot.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-rex-escargot-body.jpg",
-  "body_image_attribution": "Attila Oláh / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-278751159"
+  "body_image": ""
 }

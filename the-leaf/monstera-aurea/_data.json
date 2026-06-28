@@ -9,7 +9,7 @@
     "_Monstera deliciosa_ 'Aurea' — sometimes sold as 'Marmorata', occasionally mislabeled 'Yellow Variegated' as though that explained anything — has occupied a strange position in the collector market for the past several years. It is expensive enough to command serious attention, visually distinctive enough to earn a place on anyone's shortlist, and biologically awkward enough to humble growers who assumed that success with albo had taught them everything they needed to know. It hadn't. The pigment is different, the stability is different, and the ideal conditions diverge in ways that matter."
   ],
   "pull_quote": "A near-solid yellow leaf isn't a prize — it's a warning sign that the plant is already spending more than it earns.",
-  "body_image_caption": "Marbled gold and green: what patience actually looks like.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "Two Variegations, Two Mechanisms",
@@ -71,7 +71,5 @@
   "slug": "monstera-aurea",
   "hero": "/images/plants/profiles/monstera-aurea.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/monstera-aurea-body.jpg",
-  "body_image_attribution": "Nicolás Baresch Uribe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-203523956"
+  "body_image": ""
 }

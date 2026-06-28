@@ -9,7 +9,7 @@
     "The strange thing is how long it took the broader aroid community — and the houseplant hobby at large — to notice. For decades, hoyas were the plants your grandmother kept in a hanging basket by the kitchen window, admired for their porcelain flower clusters and their nearly unkillable constitutions. That reputation is not wrong, exactly. But it is badly incomplete. A significant portion of the genus _Hoya_, spanning perhaps 500 to 600 described species, produces leaves of a complexity and structural interest that rival anything in _Philodendron_ or _Anthurium_. The flowers are the opening act. The leaves are the show."
   ],
   "pull_quote": "The venation resolves into a grid of leading — thick, blackish lines dividing pale panels of tissue, exactly the way a glassworker divides light.",
-  "body_image_caption": "_Hoya latifolia_ backlit: venation as architecture.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "The Borneo Problem",
@@ -69,7 +69,5 @@
   "slug": "hoya-callistophylla",
   "hero": "/images/plants/profiles/hoya-callistophylla.png",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/hoya-callistophylla-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012579"
+  "body_image": ""
 }

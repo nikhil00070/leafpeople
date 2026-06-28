@@ -9,7 +9,7 @@
     "Vietnam's contribution to Begoniaceae is disproportionate to the country's land area and almost certainly undercounted. Current estimates place the number of _Begonia_ species native to Vietnam above 120, with new species formally described nearly every year. The country's topography helps explain this: the northern highlands are a mosaic of limestone karst, sandstone ridges, and subtropical forest at varying elevations, a combination that generates high endemism. Many Vietnamese begonias are cliff-dwellers, lithophytes that have adapted to thin, fast-draining substrate, high humidity, and the particular light conditions of a shaded rock face. That ecology, it turns out, translates reasonably well to a well-constructed terrarium or a shaded greenhouse bench — which is why collectors have started paying serious attention."
   ],
   "pull_quote": "Vietnam has described over a dozen new begonia species in the last five years. The frontier is not historical; it's happening now.",
-  "body_image_caption": "Silver-spotted leaves of a Hà Giang cliff dweller.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "The Geology Behind the Diversity",
@@ -63,7 +63,5 @@
   "slug": "begonia-dinhdui",
   "hero": "/images/plants/profiles/begonia-dinhdui.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-dinhdui-body.jpg",
-  "body_image_attribution": "Paúl Gonzáles / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-597504919"
+  "body_image": ""
 }

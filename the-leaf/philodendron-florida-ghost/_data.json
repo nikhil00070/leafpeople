@@ -9,7 +9,7 @@
     "The phenomenon has a loose common name — ghost leaves, or ghost variegation — that covers a handful of related but distinct mechanisms producing similar results: pale new growth that may or may not stabilize into readable variegation. It appears most dramatically in certain hybrid lines descended from _Philodendron_ species with naturally light venation or cataphyll coloration, and it has been selected for, amplified, and traded until the plants commanding serious money are often so far from their source species that provenance becomes genuinely murky. This is the story of that whiteness: what causes it, which hybrids carry it hardest, and what a grower can actually do — or not do — to influence how it resolves."
   ],
   "pull_quote": "The leaf arrives looking like a mistake. Two weeks later you'll know whether it was a gift or just the plant changing its mind.",
-  "body_image_caption": "A ghost leaf mid-unfurl, not yet committed.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "What 'Ghost Variegation' Actually Means",
@@ -71,7 +71,5 @@
   "slug": "philodendron-florida-ghost",
   "hero": "/images/plants/profiles/philodendron-florida-ghost.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/philodendron-florida-ghost-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012570"
+  "body_image": ""
 }

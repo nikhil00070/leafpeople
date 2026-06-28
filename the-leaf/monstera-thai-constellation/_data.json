@@ -9,7 +9,7 @@
     "The break did not come from boredom, exactly. It came from supply catching up to desire in a way that almost never happens in the aroid world. A TC-stable variegated _Monstera_ — one that holds its cream-and-green galaxy pattern through every new leaf, reliably, regardless of light or temperature or the collector's anxious staring — is not the same creature as a chimeric sport. That distinction took a while to land. Once it did, it changed what people were actually buying, and why."
   ],
   "pull_quote": "A TC-stable cultivar does not revert. That single fact reshuffled everything collectors thought they knew about risk and value.",
-  "body_image_caption": "Cream sectors, green islands: 'Thai Constellation' mid-unfurl.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "What Tissue Culture Actually Does",
@@ -71,7 +71,5 @@
   "slug": "monstera-thai-constellation",
   "hero": "/images/plants/profiles/monstera-thai-constellation.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/monstera-thai-constellation-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-51012576"
+  "body_image": ""
 }

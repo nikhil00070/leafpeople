@@ -9,7 +9,7 @@
     "This is the work. Not the flower — a small, waxy thing in blush pink that appears for a few weeks and gets pinched off before it can drain the plant's energy — but the leaf. The zone, the bulla, the edge, the spiral. Begonia breeders working in the rex-type tradition are operating in a discipline that is as demanding and as arbitrary as any art form, and the currency they trade in is pattern stacked on pattern."
   ],
   "pull_quote": "The flower is a distraction. What a rex-type begonia breeder is actually selling is geometry, texture, and light.",
-  "body_image_caption": "Silver bullae catch greenhouse light, Lyon, 2023.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "What 'Rex-Type' Actually Means",
@@ -71,7 +71,5 @@
   "slug": "begonia-caravan",
   "hero": "/images/plants/profiles/begonia-caravan.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/source/stock/begonia-caravan-body.jpg",
-  "body_image_attribution": "Rafael Medina / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-321276551"
+  "body_image": ""
 }
