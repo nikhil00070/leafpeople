@@ -2150,6 +2150,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-plowmanii-ruffles-hero.jpg"
     },
     {
+      "id": "field-guide/anthurium-ranchoanum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-ranchoanum-care",
+      "title": "Anthurium ranchoanum: Care and Identification",
+      "category": "Anthurium",
+      "description": "How to identify and grow Anthurium ranchoanum — substrate, humidity, light, and the velvet anthuriums worth chasing alongside it.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-ranchoanum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-ranchoanum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-ranchoanum-care-hero.jpg"
+    },
+    {
       "id": "field-guide/anthurium-scherzerianum-care",
       "section": "field-guide",
       "section_label": "Field Guide",
