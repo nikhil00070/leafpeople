@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 168,
+  "count": 170,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2083,6 +2083,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-pentaphyllum-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-pentaphyllum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-pentaphyllum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-scherzerianum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-scherzerianum-care",
+      "title": "Anthurium scherzerianum, the Curled-Spadix Flamingo Flower",
+      "category": "Anthurium",
+      "description": "A field guide to Anthurium scherzerianum — the original flamingo flower with its corkscrew spadix — plus four worth-growing relatives.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-scherzerianum-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-warocqueanum-x-magnificum",
