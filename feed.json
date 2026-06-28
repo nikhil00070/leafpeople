@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 170,
+  "count": 172,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2057,6 +2057,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-hookeri-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-hookeri-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-hookeri-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-metallicum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-metallicum-care",
+      "title": "Anthurium metallicum and the Pursuit of a Pewter Sheen",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium metallicum for that pewter sheen — substrate, light, humidity, and the related velvet anthuriums worth collecting.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-metallicum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-metallicum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-metallicum-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-michelii-care",
