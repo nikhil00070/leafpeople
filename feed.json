@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 193,
+  "count": 195,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1784,6 +1784,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-tortum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-tortum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/anthurium-morona",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-morona",
+      "title": "Out of Morona-Santiago: Ecuador's Under-the-Radar Velvet Anthurium",
+      "category": "Anthurium",
+      "description": "Deep in Ecuador's Morona-Santiago province grows a velvet anthurium most collectors have never chased. Here's why that's about to change.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-morona",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-morona/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-morona.jpeg"
     },
     {
       "id": "the-leaf/begonia-dinhdui",
