@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T17:02:39+00:00",
+  "updated": "2026-06-28T21:17:12+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 62,
@@ -8,7 +8,7 @@
   "summary": {
     "reels": {
       "count": 11,
-      "avg_reach": 66,
+      "avg_reach": 67,
       "avg_eng_pct": 6.9,
       "avg_watch_s": 5.3,
       "avg_plays": 82
@@ -23,14 +23,14 @@
     {
       "date": "2026-06-27",
       "type": "REEL",
-      "reach": 142,
+      "reach": 150,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3624,
-      "plays": 163,
+      "watch_ms": 3516,
+      "plays": 169,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
       "is_reel": true,
