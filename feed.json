@@ -1981,6 +1981,19 @@
       "image": "https://leafpeople.app/images/source/inat/philodendron-squamiferum-hero.jpg"
     },
     {
+      "id": "the-leaf/hoya-krimson-princess",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-krimson-princess",
+      "title": "Variegation from the Inside Out",
+      "category": "Hoya",
+      "description": "From 'Krimson Queen' to tricolor sports, one species spawned a whole lineage. A deep look at how Hoya carnosa variegates.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-krimson-princess",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-krimson-princess/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-krimson-princess.jpg"
+    },
+    {
       "id": "the-leaf/monstera-aurea",
       "section": "the-leaf",
       "section_label": "Understory",
