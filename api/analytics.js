@@ -28,7 +28,7 @@ const appId = () => process.env.ASC_APP_ID || "6760627345";
 // dashboard always TIES to ASC (Apple's API double-counts impressions if summed live, and
 // lags ~2 days anyway, so a dated snapshot is more trustworthy than a fragile live add).
 // To refresh: read ASC → Analytics lifetime + update these + asOf.
-const ASC_BASELINE = { asOf: "2026-06-25", impressions: 652, pageViews: 93, firstTime: 12, redownloads: 1, conversionRate: 2.76 };
+const ASC_BASELINE = { asOf: "2026-06-28", impressions: 716, pageViews: 119, firstTime: 15, redownloads: 1, conversionRate: 3.23 };
 
 function token(issuer, keyId, p8) {
   const key = p8.includes("\\n") ? p8.replace(/\\n/g, "\n") : p8;
