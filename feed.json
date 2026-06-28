@@ -1760,6 +1760,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-white-knight.jpg"
     },
     {
+      "id": "the-leaf/philodendron-florida-ghost",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-florida-ghost",
+      "title": "Ghost Leaves",
+      "category": "Philodendron",
+      "description": "New growth that unfurls ghostly white, then slowly greens: why certain philodendron hybrids do it, and whether the white will hold.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-florida-ghost",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-florida-ghost/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-florida-ghost.jpg"
+    },
+    {
       "id": "the-leaf/philodendron-tortum",
       "section": "the-leaf",
       "section_label": "Understory",
