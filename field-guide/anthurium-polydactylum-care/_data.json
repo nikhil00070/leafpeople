@@ -38,7 +38,7 @@
       "tag": "Collector's curio"
     }
   ],
-  "body_image_caption": "Undivided polydactylum leaves, ribbed and pendent.",
+  "body_image_caption": "A polydactylum infructescence, white-to-purple berries.",
   "body_sections": [
     {
       "heading": "Substrate and the pole",
@@ -114,10 +114,10 @@
     }
   ],
   "slug": "anthurium-polydactylum-care",
-  "hero": "/images/source/stock/anthurium-polydactylum-care-hero.jpg",
+  "hero": "/images/source/stock/anthurium-polydactylum-care-hero.jpg?v=2",
   "hero_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
-  "hero_source_id": "inat-185052113",
-  "body_image": "/images/source/stock/anthurium-polydactylum-care-body.jpg",
+  "hero_source_id": "inat-280177672",
+  "body_image": "/images/source/stock/anthurium-polydactylum-care-body.jpg?v=2",
   "body_image_attribution": "Nolan Exe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-280177672"
+  "body_image_source_id": "inat-185052113"
 }

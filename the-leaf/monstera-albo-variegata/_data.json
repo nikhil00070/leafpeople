@@ -9,7 +9,7 @@
     "The cutting economy that followed is well documented in the sense that everyone in the hobby lived through it: nodes trading for hundreds of dollars, single-leaf cuttings photographed on kitchen scales, entire Instagram accounts devoted to tracking the pattern stability of a single mother plant's output. Less examined is the actual biology underneath all of that — why the variegation behaves the way it does, what the plant is doing when it reverts, and why the anxiety baked into ownership of a _Monstera deliciosa_ 'Thai Constellation' or an Albo is not irrational, but is in fact the correct response to a genuinely unstable system."
   ],
   "pull_quote": "The half-moon is not a feature the plant is trying to produce. It is a mistake the plant is trying to correct.",
-  "body_image_caption": "A classic half-moon node, pre-market correction.",
+  "body_image_caption": "",
   "sections": [
     {
       "heading": "Two Variegations, Two Very Different Problems",
@@ -75,6 +75,5 @@
   "slug": "monstera-albo-variegata",
   "hero": "/images/plants/profiles/monstera-albo-variegata.jpg",
   "hero_attribution": "Leaf People",
-  "body_image": "/images/plants/profiles/monstera-thai-constellation.jpg",
-  "body_image_attribution": "Leaf People"
+  "body_image": ""
 }
