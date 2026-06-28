@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 176,
+  "count": 178,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2083,6 +2083,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-hookeri-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-hookeri-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-hookeri-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-jenmanii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-jenmanii-care",
+      "title": "Anthurium jenmanii Care and the Bird's-Nest Collector Market",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium jenmanii and which bird's-nest species are worth the money — substrate, humidity, and a ranked collector's shortlist.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-jenmanii-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-jenmanii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-jenmanii-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-metallicum-care",
