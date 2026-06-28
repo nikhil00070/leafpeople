@@ -2137,6 +2137,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-pentaphyllum-care-hero.jpg"
     },
     {
+      "id": "field-guide/anthurium-plowmanii-ruffles",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-plowmanii-ruffles",
+      "title": "Anthurium plowmanii and the Rippled Bird's-Nest Anthuriums",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium plowmanii's rippled, strap-like leaves, plus four bird's-nest type anthuriums collectors actually keep.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-plowmanii-ruffles",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-plowmanii-ruffles/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-plowmanii-ruffles-hero.jpg"
+    },
+    {
       "id": "field-guide/anthurium-scherzerianum-care",
       "section": "field-guide",
       "section_label": "Field Guide",
