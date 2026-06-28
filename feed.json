@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 178,
+  "count": 179,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2187,6 +2187,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-scherzerianum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-schlechtendalii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-schlechtendalii-care",
+      "title": "Anthurium schlechtendalii, the Giant Bird's-Nest Anthurium",
+      "category": "Anthurium",
+      "description": "A field guide to Anthurium schlechtendalii — the largest bird's-nest anthurium — plus four related species worth growing and how to keep them alive.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-schlechtendalii-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-schlechtendalii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-schlechtendalii-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-subsignatum-care",
