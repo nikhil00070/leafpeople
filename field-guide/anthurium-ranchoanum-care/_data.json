@@ -38,7 +38,7 @@
       "tag": "Collector's curio"
     }
   ],
-  "body_image_caption": "A maroon spathe and pale spadix in habitat.",
+  "body_image_caption": "",
   "body_sections": [
     {
       "heading": "Identifying _ranchoanum_ (and what it isn't)",
@@ -127,9 +127,7 @@
   "hero_source_id": "inat-595386642",
   "hero_src": "inaturalist",
   "hero_tier": 0,
-  "body_image": "/images/source/stock/anthurium-ranchoanum-care-body.jpg",
-  "body_image_attribution": "no rights reserved / iNaturalist (CC0)",
-  "body_image_source_id": "inat-638113592",
+  "body_image": "",
   "body_image_src": "inaturalist",
   "body_image_tier": 0,
   "hero_sat": 150.4,

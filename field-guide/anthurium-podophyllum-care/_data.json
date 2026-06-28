@@ -38,7 +38,7 @@
       "tag": "Sleeper pick"
     }
   ],
-  "body_image_caption": "Dark podophyllum spadices rising above the foliage.",
+  "body_image_caption": "",
   "body_sections": [
     {
       "heading": "Substrate and roots",
@@ -118,7 +118,5 @@
   "hero": "/images/source/stock/anthurium-podophyllum-care-hero.jpg",
   "hero_attribution": "Tereso Hernández Morales / iNaturalist (CC BY 4.0)",
   "hero_source_id": "inat-60857826",
-  "body_image": "/images/source/stock/anthurium-podophyllum-care-body.jpg",
-  "body_image_attribution": "Neptalí Ramírez Marcial / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-195107177"
+  "body_image": ""
 }

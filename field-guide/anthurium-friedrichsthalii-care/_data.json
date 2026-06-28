@@ -38,7 +38,7 @@
       "tag": "Connoisseur pick"
     }
   ],
-  "body_image_caption": "An epiphytic Anthurium friedrichsthalii on a canopy branch.",
+  "body_image_caption": "",
   "body_sections": [
     {
       "heading": "Why the holes, and when to expect them",
@@ -117,9 +117,7 @@
   "hero_source_id": "inat-615301203",
   "hero_src": "inaturalist",
   "hero_tier": 0,
-  "body_image": "/images/source/stock/anthurium-friedrichsthalii-care-body.jpg",
-  "body_image_attribution": "Letizia Weichgrebe / iNaturalist (CC BY 4.0)",
-  "body_image_source_id": "inat-614224143",
+  "body_image": "",
   "body_image_src": "inaturalist",
   "body_image_tier": 0,
   "hero_sat": 112.7,
