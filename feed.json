@@ -1877,6 +1877,19 @@
       "image": "https://leafpeople.app/images/source/inat/philodendron-squamiferum-hero.jpg"
     },
     {
+      "id": "the-leaf/monstera-aurea",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-aurea",
+      "title": "Variegation in Gold: The Marbled-Yellow Deliciosa and the Chase for a Perfect Mustard Leaf",
+      "category": "Monstera",
+      "description": "Why Monstera deliciosa aurea variegation behaves so differently from albo — and what it takes to grow a perfect mustard-and-green leaf.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-aurea",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-aurea/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-aurea.jpg"
+    },
+    {
       "id": "the-leaf/anthurium-carla-blackie",
       "section": "the-leaf",
       "section_label": "Understory",
