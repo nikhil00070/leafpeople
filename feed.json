@@ -1812,6 +1812,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-fireworks.jpg"
     },
     {
+      "id": "the-leaf/monstera-pinnatipartita",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-pinnatipartita",
+      "title": "The Climber That Splits",
+      "category": "Monstera",
+      "description": "Monstera's solid juvenile leaves that tear into pinnate fingers on a pole — why the wait is the whole point of growing one.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-pinnatipartita",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-pinnatipartita/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-pinnatipartita.jpg"
+    },
+    {
       "id": "the-leaf/hoya-pubicalyx",
       "section": "the-leaf",
       "section_label": "Understory",
