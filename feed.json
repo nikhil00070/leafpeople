@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 192,
+  "count": 193,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1771,6 +1771,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-tortum",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-tortum/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
+    },
+    {
+      "id": "the-leaf/begonia-dinhdui",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-dinhdui",
+      "title": "Out of Vietnam",
+      "category": "Begonia",
+      "description": "Vietnam's karst forests hide some of the most striking begonias on earth — and botanists are still finding them.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-dinhdui",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-dinhdui/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-dinhdui.jpg"
     },
     {
       "id": "the-leaf/begonia-caravan",
