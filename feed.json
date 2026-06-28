@@ -2033,6 +2033,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-clavigerum-care-hero.jpg"
     },
     {
+      "id": "field-guide/anthurium-decipiens-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-decipiens-care",
+      "title": "Anthurium decipiens, and the Quiet Drama of Simple-Leaf Species",
+      "category": "Anthurium",
+      "description": "A care guide to Anthurium decipiens and its big-leaved relatives — substrate, light, humidity, and the picks worth growing.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-decipiens-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-decipiens-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-decipiens-care-hero.jpg"
+    },
+    {
       "id": "field-guide/anthurium-hookeri-care",
       "section": "field-guide",
       "section_label": "Field Guide",
