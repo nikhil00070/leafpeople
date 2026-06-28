@@ -2020,6 +2020,19 @@
       "image": "https://leafpeople.app/images/source/inat/monstera-dubia-hero.jpg"
     },
     {
+      "id": "the-leaf/anthurium-antolakii",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "anthurium-antolakii",
+      "title": "The Sleeper: How a Quiet Velvet Anthurium Gets Its Name",
+      "category": "Anthurium",
+      "description": "New anthurium species named for living growers are rewriting who gets credit in taxonomy. Meet the sleeper velvet collectors keep overlooking.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/anthurium-antolakii",
+      "data_url": "https://leafpeople.app/the-leaf/anthurium-antolakii/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/anthurium-antolakii.jpeg"
+    },
+    {
       "id": "the-leaf/philodendron-squamiferum",
       "section": "the-leaf",
       "section_label": "Understory",
