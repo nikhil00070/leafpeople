@@ -1734,6 +1734,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/philodendron-orange-marmalade.png"
     },
     {
+      "id": "the-leaf/philodendron-white-knight",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-white-knight",
+      "title": "Dark Stems, White Leaves: The Patience Tax on a Chimeric Plant",
+      "category": "Philodendron",
+      "description": "Why the most coveted high-contrast variegated philodendrons can't be rushed — and what serious collectors do while they wait.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-white-knight",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-white-knight/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-white-knight.jpg"
+    },
+    {
       "id": "the-leaf/philodendron-tortum",
       "section": "the-leaf",
       "section_label": "Understory",
