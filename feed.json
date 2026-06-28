@@ -2046,6 +2046,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-decipiens-care-hero.jpg"
     },
     {
+      "id": "field-guide/anthurium-friedrichsthalii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-friedrichsthalii-care",
+      "title": "Anthurium friedrichsthalii, the Fenestrated Anthurium",
+      "category": "Anthurium",
+      "description": "A field guide to Anthurium friedrichsthalii and its closest relatives — the rare pendant anthuriums that punch holes in their own leaves.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-friedrichsthalii-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-friedrichsthalii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-friedrichsthalii-care-hero.jpg"
+    },
+    {
       "id": "field-guide/anthurium-hookeri-care",
       "section": "field-guide",
       "section_label": "Field Guide",
