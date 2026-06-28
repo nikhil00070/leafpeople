@@ -1760,6 +1760,19 @@
       "image": "https://leafpeople.app/images/source/inat/philodendron-tortum-hero.jpg"
     },
     {
+      "id": "the-leaf/begonia-caravan",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-caravan",
+      "title": "Pattern on Pattern: Why Begonia Breeders Don't Care About the Flowers",
+      "category": "Begonia",
+      "description": "Rex-type begonia hybrids are bred purely for leaf spectacle. Here's the obsessive world of breeders chasing perfect pattern on pattern.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-caravan",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-caravan/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-caravan.jpg"
+    },
+    {
       "id": "the-leaf/philodendron-strawberry-shake",
       "section": "the-leaf",
       "section_label": "Understory",
