@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 195,
+  "count": 197,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1732,6 +1732,19 @@
       "url": "https://leafpeople.app/the-leaf/hoya-linearis",
       "data_url": "https://leafpeople.app/the-leaf/hoya-linearis/_data.json",
       "image": "https://leafpeople.app/images/source/inat/hoya-linearis-hero.jpg"
+    },
+    {
+      "id": "the-leaf/philodendron-jose-buono",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-jose-buono",
+      "title": "Big Paddles, Honest Splashes",
+      "category": "Philodendron",
+      "description": "Philodendron 'White Wizard' and its large-leaf variegated relatives offer bold color that holds. Here's why collectors trust them.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-jose-buono",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-jose-buono/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-jose-buono.png"
     },
     {
       "id": "the-leaf/philodendron-orange-marmalade",
