@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 188,
+  "count": 190,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1992,6 +1992,19 @@
       "url": "https://leafpeople.app/the-leaf/monstera-aurea",
       "data_url": "https://leafpeople.app/the-leaf/monstera-aurea/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/monstera-aurea.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-krimson-queen",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-krimson-queen",
+      "title": "Variegation on the Edges: The Cream-Margined Carnosa and Its Mirror-Image Sibling",
+      "category": "Hoya",
+      "description": "The cream-margined Hoya carnosa and its reverse-variegated sibling explained — plus the Queen-versus-Princess confusion every collector faces.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-krimson-queen",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-krimson-queen/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-krimson-queen.jpg"
     },
     {
       "id": "the-leaf/anthurium-carla-blackie",
