@@ -1877,6 +1877,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-fireworks.jpg"
     },
     {
+      "id": "the-leaf/philodendron-blizzard",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "philodendron-blizzard",
+      "title": "Snow on Green: Making Sense of White-Variegated Philodendrons",
+      "category": "Philodendron",
+      "description": "From 'White Princess' to 'White Wizard', the white-variegated philodendron family is tangled. Here's how to read the lineage and the leaf.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/philodendron-blizzard",
+      "data_url": "https://leafpeople.app/the-leaf/philodendron-blizzard/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/philodendron-blizzard.jpg"
+    },
+    {
       "id": "the-leaf/hoya-callistophylla",
       "section": "the-leaf",
       "section_label": "Understory",
