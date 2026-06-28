@@ -60,8 +60,8 @@
       // hasn't approved them via /review yet.
       items = items.filter((a) => (a.status || "published") === "published");
       if (!items.length) { document.getElementById("empty").style.display = "block"; return; }
+      // Render in manifest array order (curated: best first), not by date.
       grid.innerHTML = items
-        .sort((a, b) => (a.date < b.date ? 1 : -1))
         .map(
           (a) => `
         <a class="article-card" href="${a.url}">
