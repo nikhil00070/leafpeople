@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 183,
+  "count": 188,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1810,6 +1810,19 @@
       "url": "https://leafpeople.app/the-leaf/begonia-rex-fireworks",
       "data_url": "https://leafpeople.app/the-leaf/begonia-rex-fireworks/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-fireworks.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-callistophylla",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-callistophylla",
+      "title": "Stained Glass: The Case for Hoyas as the Hobby's Greatest Leaf Show",
+      "category": "Hoya",
+      "description": "Dark veining, Bornean forest floors, and why hoyas deserve far more attention than their flowers ever get.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-callistophylla",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-callistophylla/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-callistophylla.png"
     },
     {
       "id": "the-leaf/monstera-pinnatipartita",
