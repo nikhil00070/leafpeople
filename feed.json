@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 172,
+  "count": 174,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1940,6 +1940,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-gracile-red-pearls",
       "data_url": "https://leafpeople.app/field-guide/anthurium-gracile-red-pearls/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-gracile-red-pearls-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-podophyllum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-podophyllum-care",
+      "title": "Anthurium podophyllum and the Cult of the Lobed Leaf",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium podophyllum, the dramatic lobed-leaf Mexican aroid, plus four related species worth a spot in any serious anthurium collection.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-podophyllum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-podophyllum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-podophyllum-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-scandens-care",
