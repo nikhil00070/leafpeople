@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 190,
+  "count": 192,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1849,6 +1849,19 @@
       "url": "https://leafpeople.app/the-leaf/monstera-pinnatipartita",
       "data_url": "https://leafpeople.app/the-leaf/monstera-pinnatipartita/_data.json",
       "image": "https://leafpeople.app/images/plants/profiles/monstera-pinnatipartita.jpg"
+    },
+    {
+      "id": "the-leaf/hoya-hindu-rope",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "hoya-hindu-rope",
+      "title": "The Curled Classic",
+      "category": "Hoya",
+      "description": "The mutation that twists every leaf on Hoya carnosa 'Compacta' — its origins, quirks, and why this old cultivar still earns serious attention.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/hoya-hindu-rope",
+      "data_url": "https://leafpeople.app/the-leaf/hoya-hindu-rope/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/hoya-hindu-rope.jpg"
     },
     {
       "id": "the-leaf/hoya-pubicalyx",
