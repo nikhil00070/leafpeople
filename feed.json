@@ -1903,6 +1903,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/monstera-mint.jpg"
     },
     {
+      "id": "the-leaf/begonia-rex-mclauchlan",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-rex-mclauchlan",
+      "title": "The Painter's Begonia: Silver, Burgundy, and the Art of the Named Rex",
+      "category": "Begonia",
+      "description": "How swirled silver and burgundy turned rex begonias into named cultivars — and what it takes to keep the color honest.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-rex-mclauchlan",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-rex-mclauchlan/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-mclauchlan.jpg"
+    },
+    {
       "id": "the-leaf/monstera-dubia",
       "section": "the-leaf",
       "section_label": "Understory",
