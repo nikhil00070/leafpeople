@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 174,
+  "count": 176,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2161,6 +2161,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-scherzerianum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-scherzerianum-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-subsignatum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-subsignatum-care",
+      "title": "Anthurium subsignatum: Care and Form",
+      "category": "Anthurium",
+      "description": "A grower's guide to Anthurium subsignatum — its lobed juvenile leaves, substrate needs, and how it differs from look-alikes in the pedatoradiatum group.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-subsignatum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-subsignatum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-subsignatum-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-warocqueanum-x-magnificum",
