@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-06-27",
-  "count": 166,
+  "updated": "2026-06-28",
+  "count": 168,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2070,6 +2070,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care",
       "data_url": "https://leafpeople.app/field-guide/anthurium-ovatifolium-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-ovatifolium-care-hero.jpg"
+    },
+    {
+      "id": "field-guide/anthurium-pentaphyllum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-pentaphyllum-care",
+      "title": "Anthurium pentaphyllum and the Strange Case of the Compound Leaf",
+      "category": "Anthurium",
+      "description": "How to grow Anthurium pentaphyllum, the climbing anthurium with palmate compound leaves, plus four related species worth a slot on your rack.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-pentaphyllum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-pentaphyllum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-pentaphyllum-care-hero.jpg"
     },
     {
       "id": "field-guide/anthurium-warocqueanum-x-magnificum",
