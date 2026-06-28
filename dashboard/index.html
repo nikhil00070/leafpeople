@@ -27,7 +27,7 @@ h1 { font-family:'Geologica',sans-serif; font-weight:900; font-size:clamp(2.2rem
 .bigbtn:disabled { opacity:.55; cursor:default; }
 .bstatus { font-size:.78rem; margin-top:.4rem; text-align:right; }
 
-.kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:.9rem; margin-top:1.2rem; }
+.kpis { display:grid; grid-template-columns:repeat(6,1fr); gap:.9rem; margin-top:1.2rem; }
 @media (max-width:820px){ .kpis { grid-template-columns:repeat(2,1fr); } }
 
 /* tabs */
@@ -117,6 +117,7 @@ a { color:var(--blue); }
     <div class="card kpi"><h3>Downloads · all-time</h3><div class="big" id="kpi-downloads">—</div></div>
     <div class="card kpi"><h3>Install taps</h3><div class="big" id="kpi-taps">—</div></div>
     <div class="card kpi"><h3>Subscribers</h3><div class="big" id="kpi-subs">—</div></div>
+    <div class="card kpi"><h3>Proceeds · all-time</h3><div class="big" id="kpi-proceeds">—</div></div>
   </div>
 
   <div class="tabs" id="tabs">
@@ -455,6 +456,7 @@ function renderKPIs(ga, asc, subs, an){
   const ft = (an&&an.connected&&an.firstTimeDownloads!=null) ? an.firstTimeDownloads : (asc&&asc.connected?asc.total:null);
   if(ft!=null) setBig("kpi-downloads", fmt(ft)+' <small>first-time installs</small>', true);
   if(subs&&subs.connected) setBig("kpi-subs", fmt(subs.active)+' <small>active</small>', true);
+  if(asc&&asc.connected&&asc.proceeds) setBig("kpi-proceeds", '$'+fmt(asc.proceeds.total||0)+' <small>since launch</small>', true);
 }
 
 function renderSpikes(ga, asc, posts){
