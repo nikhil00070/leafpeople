@@ -1708,6 +1708,19 @@
       "image": "https://leafpeople.app/images/plants/profiles/monstera-thai-constellation.jpg"
     },
     {
+      "id": "the-leaf/begonia-rex-escargot",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "begonia-rex-escargot",
+      "title": "A Spiral You Can Grow",
+      "category": "Begonia",
+      "description": "Rex begonias are painterly, obsessive, and humidity-dependent. Start with the snail-shell cultivars and work outward.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/begonia-rex-escargot",
+      "data_url": "https://leafpeople.app/the-leaf/begonia-rex-escargot/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/begonia-rex-escargot.jpg"
+    },
+    {
       "id": "the-leaf/hoya-linearis",
       "section": "the-leaf",
       "section_label": "Understory",
