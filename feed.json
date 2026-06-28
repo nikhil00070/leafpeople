@@ -2241,6 +2241,19 @@
       "image": "https://leafpeople.app/images/source/stock/anthurium-pedatoradiatum-care-hero.jpg"
     },
     {
+      "id": "field-guide/anthurium-polydactylum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "anthurium-polydactylum-care",
+      "title": "Growing Anthurium polydactylum, the Many-Fingered Climber",
+      "category": "Anthurium",
+      "description": "A field guide to Anthurium polydactylum: substrate, humidity, and the other palmate-leafed climbers worth a place on the pole.",
+      "date": "2026-06-27",
+      "url": "https://leafpeople.app/field-guide/anthurium-polydactylum-care",
+      "data_url": "https://leafpeople.app/field-guide/anthurium-polydactylum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/anthurium-polydactylum-care-hero.jpg"
+    },
+    {
       "id": "the-leaf/anthurium-leaf-shape-change",
       "section": "the-leaf",
       "section_label": "Understory",
