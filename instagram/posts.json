@@ -745,7 +745,7 @@
     "date": "2026-06-28",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Cutucuense \u2014 the drape",
     "image": "/images/instagram/anthurium-cutucuence.jpeg",
     "caption": "Velvet that drapes.\n\nAnthurium cutucuense unrolls long, rippling, suede-dark leaves that hang like fabric from the stem. The texture stops people mid-sentence \u2014 you don't display this plant, you introduce it.",
@@ -773,7 +773,9 @@
     "reel": true,
     "hook": "The anthurium that drapes like silk",
     "img_ready": "/images/ig_ready/d16.jpg",
-    "video": "/videos/instagram/d16.mp4"
+    "video": "/videos/instagram/d16.mp4",
+    "posted_at": "2026-06-28",
+    "ig_media_id": "17968637823084589"
   },
   {
     "id": "b3-02",
