@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-06-28",
-  "count": 179,
+  "count": 180,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1693,6 +1693,19 @@
       "url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned",
       "data_url": "https://leafpeople.app/the-leaf/buying-a-rare-plant-without-getting-burned/_data.json",
       "image": "https://leafpeople.app/images/source/stock/buying-a-rare-plant-without-getting-burned-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-thai-constellation",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-thai-constellation",
+      "title": "A Galaxy Grown in a Lab",
+      "category": "Monstera",
+      "description": "How tissue-cultured variegated Monstera deliciosa from Thailand's TC labs broke the market, stabilized the pattern, and changed what collectors value.",
+      "date": "2026-06-02",
+      "url": "https://leafpeople.app/the-leaf/monstera-thai-constellation",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-thai-constellation/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-thai-constellation.jpg"
     },
     {
       "id": "the-leaf/hoya-linearis",
