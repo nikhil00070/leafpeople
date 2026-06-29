@@ -782,7 +782,7 @@
     "date": "2026-06-29",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "The Amazon",
     "image": "/images/instagram/b3-02-cover.jpg",
     "img_ready": "/images/instagram/b3-02-cover.jpg",
@@ -809,7 +809,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-29",
+    "ig_media_id": "17977761807022985"
   },
   {
     "id": "b2-02",
