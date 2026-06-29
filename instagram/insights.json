@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-28T21:22:21+00:00",
+  "updated": "2026-06-29T00:38:20+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 62,
-    "posts": 21
+    "posts": 22
   },
   "summary": {
     "reels": {
-      "count": 11,
-      "avg_reach": 67,
-      "avg_eng_pct": 6.9,
-      "avg_watch_s": 5.3,
-      "avg_plays": 82
+      "count": 12,
+      "avg_reach": 69,
+      "avg_eng_pct": 6.5,
+      "avg_watch_s": 5.1,
+      "avg_plays": 87
     },
     "images": {
       "count": 10,
@@ -21,6 +21,22 @@
   },
   "posts": [
     {
+      "date": "2026-06-28",
+      "type": "REEL",
+      "reach": 100,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 1,
+      "watch_ms": 3096,
+      "plays": 138,
+      "label": "d22 Cutucuense \u2014 chicken feet",
+      "hook": "The anthurium they call 'chicken feet'",
+      "is_reel": true,
+      "eng_pct": 1.0
+    },
+    {
       "date": "2026-06-27",
       "type": "REEL",
       "reach": 150,
@@ -29,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3516,
+      "watch_ms": 3505,
       "plays": 169,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
