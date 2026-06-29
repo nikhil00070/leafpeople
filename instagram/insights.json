@@ -1,17 +1,17 @@
 {
-  "updated": "2026-06-29T17:11:41+00:00",
+  "updated": "2026-06-29T22:14:31+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 66,
-    "posts": 22
+    "followers": 67,
+    "posts": 23
   },
   "summary": {
     "reels": {
-      "count": 12,
-      "avg_reach": 72,
-      "avg_eng_pct": 7.7,
-      "avg_watch_s": 5.2,
-      "avg_plays": 90
+      "count": 13,
+      "avg_reach": 67,
+      "avg_eng_pct": 7.2,
+      "avg_watch_s": 5.3,
+      "avg_plays": 83
     },
     "images": {
       "count": 10,
@@ -21,20 +21,36 @@
   },
   "posts": [
     {
-      "date": "2026-06-28",
+      "date": "2026-06-29",
       "type": "REEL",
-      "reach": 110,
-      "likes": 2,
+      "reach": 6,
+      "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 2,
-      "watch_ms": 3783,
-      "plays": 150,
+      "total_interactions": 0,
+      "watch_ms": 6903,
+      "plays": 7,
+      "label": "d23 The Amazon",
+      "hook": "The Amazon \u00b7 Peru",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-06-28",
+      "type": "REEL",
+      "reach": 112,
+      "likes": 3,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 3,
+      "watch_ms": 3766,
+      "plays": 153,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
       "is_reel": true,
-      "eng_pct": 1.8
+      "eng_pct": 2.7
     },
     {
       "date": "2026-06-27",
@@ -205,7 +221,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 6604,
+      "watch_ms": 6555,
       "plays": 54,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
