@@ -803,9 +803,10 @@
     "category": "Monstera",
     "slug": "monstera-standleyana-variegata",
     "title_hint": "Not even a true Monstera question: the dark glossy climber with paint-splatter variegation, the albo-versus-aurea split, and an underrated easy variegate.",
-    "status": "queued",
+    "status": "pending_review",
     "hero": "/images/plants/profiles/monstera-standleyana-variegata.png",
-    "body_fallback": "/images/plants/profiles/monstera-standleyana-variegata.png"
+    "body_fallback": "/images/plants/profiles/monstera-standleyana-variegata.png",
+    "published_at": "2026-06-29"
   },
   {
     "category": "Hoya",
