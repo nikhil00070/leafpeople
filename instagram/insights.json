@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T00:38:20+00:00",
+  "updated": "2026-06-29T04:53:02+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 62,
@@ -8,10 +8,10 @@
   "summary": {
     "reels": {
       "count": 12,
-      "avg_reach": 69,
-      "avg_eng_pct": 6.5,
-      "avg_watch_s": 5.1,
-      "avg_plays": 87
+      "avg_reach": 70,
+      "avg_eng_pct": 6.4,
+      "avg_watch_s": 5.2,
+      "avg_plays": 88
     },
     "images": {
       "count": 10,
@@ -23,16 +23,16 @@
     {
       "date": "2026-06-28",
       "type": "REEL",
-      "reach": 100,
+      "reach": 105,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 3096,
-      "plays": 138,
-      "label": "d22 Cutucuense \u2014 chicken feet",
-      "hook": "The anthurium they call 'chicken feet'",
+      "watch_ms": 3631,
+      "plays": 144,
+      "label": "Nope, those look like chicken feet.  Anthu",
+      "hook": null,
       "is_reel": true,
       "eng_pct": 1.0
     },
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3505,
+      "watch_ms": 3635,
       "plays": 169,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
@@ -173,7 +173,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 7341,
+      "watch_ms": 7287,
       "plays": 119,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
@@ -205,7 +205,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 6242,
+      "watch_ms": 6278,
       "plays": 52,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
@@ -221,7 +221,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 3,
-      "watch_ms": 5335,
+      "watch_ms": 5333,
       "plays": 62,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
