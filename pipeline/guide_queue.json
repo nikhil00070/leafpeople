@@ -843,7 +843,8 @@
     "slug": "philodendron-micans-velvet",
     "genus": "Philodendron",
     "title_hint": "Philodendron hederaceum micans, the velvet heartleaf",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-06-30"
   },
   {
     "slug": "philodendron-grazielae-care",
