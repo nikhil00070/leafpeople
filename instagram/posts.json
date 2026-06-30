@@ -819,7 +819,7 @@
     "date": "2026-06-30",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Room for more",
     "image": "/images/instagram/b2-02-cover.jpg",
     "img_ready": "/images/instagram/b2-02-cover.jpg",
@@ -844,7 +844,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-06-30",
+    "ig_media_id": "18097689953267426"
   },
   {
     "id": "d17",
