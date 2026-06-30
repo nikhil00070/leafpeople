@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-30T04:28:03+00:00",
+  "updated": "2026-06-30T05:35:01+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 68,
+    "followers": 69,
     "posts": 23
   },
   "summary": {
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 3716,
+      "watch_ms": 3764,
       "plays": 159,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
@@ -173,7 +173,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5186,
+      "watch_ms": 5107,
       "plays": 31,
       "label": "d14 Went in for one",
       "hook": "POV: you went in for ONE plant.",
@@ -189,7 +189,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 7286,
+      "watch_ms": 7248,
       "plays": 122,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
@@ -221,7 +221,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 6489,
+      "watch_ms": 6459,
       "plays": 54,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
