@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T05:51:29+00:00",
+  "updated": "2026-07-01T06:38:48+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 72,
@@ -23,18 +23,18 @@
     {
       "date": "2026-06-30",
       "type": "REEL",
-      "reach": 9,
+      "reach": 10,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 10484,
-      "plays": 12,
+      "watch_ms": 9845,
+      "plays": 13,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
       "is_reel": true,
-      "eng_pct": 11.1
+      "eng_pct": 10.0
     },
     {
       "date": "2026-06-29",
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6754,
+      "watch_ms": 6745,
       "plays": 18,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
@@ -61,7 +61,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 4197,
+      "watch_ms": 4190,
       "plays": 164,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
