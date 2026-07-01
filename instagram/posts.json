@@ -854,7 +854,7 @@
     "date": "2026-07-01",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Siltepecana \u2014 silver",
     "image": "/images/instagram/monstera-siltepecana.jpg",
     "caption": "Silver in the shade.\n\nMonstera siltepecana climbs the understory in dusty, blue-silver leaves, fenestrating as it matures. A little piece of the canopy's edge, on your wall.",
@@ -879,7 +879,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d17.jpg"
+    "img_ready": "/images/ig_ready/d17.jpg",
+    "posted_at": "2026-07-01",
+    "ig_media_id": "17882990457446974"
   },
   {
     "id": "model-05",
