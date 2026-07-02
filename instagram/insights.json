@@ -1,22 +1,22 @@
 {
-  "updated": "2026-07-02T04:02:38+00:00",
+  "updated": "2026-07-02T14:43:31+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 74,
+    "followers": 80,
     "posts": 25
   },
   "summary": {
     "reels": {
       "count": 14,
       "avg_reach": 66,
-      "avg_eng_pct": 8.2,
-      "avg_watch_s": 5.7,
+      "avg_eng_pct": 9.0,
+      "avg_watch_s": 5.6,
       "avg_plays": 83
     },
     "images": {
       "count": 11,
       "avg_reach": 15,
-      "avg_eng_pct": 17.0
+      "avg_eng_pct": 16.9
     }
   },
   "posts": [
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 7428,
+      "watch_ms": 7340,
       "plays": 18,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
@@ -55,23 +55,23 @@
     {
       "date": "2026-06-29",
       "type": "REEL",
-      "reach": 17,
-      "likes": 2,
+      "reach": 18,
+      "likes": 3,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 2,
-      "watch_ms": 10623,
-      "plays": 24,
+      "total_interactions": 4,
+      "watch_ms": 10472,
+      "plays": 26,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
       "is_reel": true,
-      "eng_pct": 11.8
+      "eng_pct": 22.2
     },
     {
       "date": "2026-06-28",
       "type": "REEL",
-      "reach": 122,
+      "reach": 123,
       "likes": 5,
       "comments": 0,
       "saved": 0,
@@ -93,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 4033,
+      "watch_ms": 4025,
       "plays": 176,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
@@ -125,7 +125,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 2437,
+      "watch_ms": 2426,
       "plays": 212,
       "label": "d19 Your pocket of jungle",
       "hook": "A jungle, two feet from your couch",
@@ -141,7 +141,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 8399,
+      "watch_ms": 8409,
       "plays": 38,
       "label": "d18 Color of life",
       "hook": "Green is the color of life.",
@@ -157,7 +157,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 6801,
+      "watch_ms": 6795,
       "plays": 23,
       "label": "d17 The Choc\u00f3",
       "hook": "The Choc\u00f3 \u00b7 Colombia",
@@ -253,7 +253,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 6267,
+      "watch_ms": 6216,
       "plays": 55,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
@@ -391,7 +391,7 @@
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 19,
+      "reach": 20,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -402,12 +402,12 @@
       "label": "d2 Breathe in",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 5.3
+      "eng_pct": 5.0
     },
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 18,
+      "reach": 19,
       "likes": 3,
       "comments": 0,
       "saved": 0,
@@ -418,7 +418,7 @@
       "label": "d1 Welcome home",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 16.7
+      "eng_pct": 15.8
     }
   ],
   "diag": null
