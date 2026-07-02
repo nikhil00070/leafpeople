@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-01T23:19:15+00:00",
+  "updated": "2026-07-02T03:04:21+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 72,
+    "followers": 74,
     "posts": 25
   },
   "summary": {
     "reels": {
       "count": 14,
       "avg_reach": 66,
-      "avg_eng_pct": 8.3,
-      "avg_watch_s": 5.3,
-      "avg_plays": 82
+      "avg_eng_pct": 8.2,
+      "avg_watch_s": 5.6,
+      "avg_plays": 83
     },
     "images": {
       "count": 11,
@@ -39,7 +39,7 @@
     {
       "date": "2026-06-30",
       "type": "REEL",
-      "reach": 15,
+      "reach": 16,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -50,35 +50,35 @@
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
       "is_reel": true,
-      "eng_pct": 6.7
+      "eng_pct": 6.2
     },
     {
       "date": "2026-06-29",
       "type": "REEL",
-      "reach": 16,
+      "reach": 17,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 6213,
-      "plays": 19,
+      "watch_ms": 10607,
+      "plays": 24,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
       "is_reel": true,
-      "eng_pct": 12.5
+      "eng_pct": 11.8
     },
     {
       "date": "2026-06-28",
       "type": "REEL",
-      "reach": 121,
+      "reach": 122,
       "likes": 5,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 4106,
-      "plays": 165,
+      "watch_ms": 4155,
+      "plays": 170,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
       "is_reel": true,
@@ -87,14 +87,14 @@
     {
       "date": "2026-06-27",
       "type": "REEL",
-      "reach": 155,
+      "reach": 156,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 4074,
-      "plays": 175,
+      "watch_ms": 4051,
+      "plays": 176,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
       "is_reel": true,
