@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T03:04:21+00:00",
+  "updated": "2026-07-02T04:02:38+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 74,
@@ -10,7 +10,7 @@
       "count": 14,
       "avg_reach": 66,
       "avg_eng_pct": 8.2,
-      "avg_watch_s": 5.6,
+      "avg_watch_s": 5.7,
       "avg_plays": 83
     },
     "images": {
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 7389,
+      "watch_ms": 7428,
       "plays": 18,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
@@ -61,7 +61,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 10607,
+      "watch_ms": 10623,
       "plays": 24,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
@@ -77,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 4155,
+      "watch_ms": 4189,
       "plays": 170,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
@@ -93,7 +93,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 4051,
+      "watch_ms": 4033,
       "plays": 176,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
