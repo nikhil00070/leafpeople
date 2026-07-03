@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T14:15:55+00:00",
+  "updated": "2026-07-03T15:09:57+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 90,
@@ -23,13 +23,13 @@
     {
       "date": "2026-07-02",
       "type": "REEL",
-      "reach": 22,
+      "reach": 23,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3049,
+      "watch_ms": 2979,
       "plays": 25,
       "label": "d26 Don't need much",
       "hook": "Coffee, quiet, a new leaf. I don't need much else.",
