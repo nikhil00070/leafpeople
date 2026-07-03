@@ -864,7 +864,8 @@
     "slug": "philodendron-martianum-fat-boy",
     "genus": "Philodendron",
     "title_hint": "Philodendron martianum 'Fat Boy' and its swollen petioles",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-07-03"
   },
   {
     "slug": "philodendron-goeldii-care",
