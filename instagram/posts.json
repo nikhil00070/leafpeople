@@ -925,7 +925,7 @@
     "date": "2026-07-03",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Callistophylla \u2014 stained glass",
     "image": "/images/instagram/hoya-callistophylla.png",
     "caption": "Stained glass.\n\nThe veins on Hoya callistophylla are pressed into the leaf like dark leading in stained glass \u2014 a map you could trace for hours. Texture is the whole event.",
@@ -953,7 +953,9 @@
     "reel": true,
     "hook": "A leaf like stained glass",
     "img_ready": "/images/ig_ready/d18.jpg",
-    "video": "/videos/instagram/d18.mp4"
+    "video": "/videos/instagram/d18.mp4",
+    "posted_at": "2026-07-03",
+    "ig_media_id": "18096128198244254"
   },
   {
     "id": "d19",
