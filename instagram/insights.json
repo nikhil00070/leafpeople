@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-04T17:45:18+00:00",
+  "updated": "2026-07-04T19:24:01+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 108,
-    "posts": 27
+    "posts": 28
   },
   "summary": {
     "reels": {
@@ -14,12 +14,28 @@
       "avg_plays": 82
     },
     "images": {
-      "count": 11,
-      "avg_reach": 20,
-      "avg_eng_pct": 12.4
+      "count": 12,
+      "avg_reach": 18,
+      "avg_eng_pct": 11.4
     }
   },
   "posts": [
+    {
+      "date": "2026-07-04",
+      "type": "IMAGE",
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d28 Thai Constellation",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-07-03",
       "type": "REEL",
@@ -29,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2326,
+      "watch_ms": 2262,
       "plays": 18,
       "label": "d27 Callistophylla \u2014 stained glass",
       "hook": "A leaf like stained glass",
@@ -93,7 +109,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 8220,
+      "watch_ms": 8140,
       "plays": 31,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
