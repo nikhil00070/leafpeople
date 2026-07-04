@@ -963,7 +963,7 @@
     "date": "2026-07-04",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Thai Constellation",
     "image": "/images/instagram/monstera-thai-constellation.jpg",
     "caption": "Painted by chance.\n\nMonstera 'Thai Constellation' is splattered with creamy variegation no two plants share \u2014 stable, slow, and coveted. A galaxy on a leaf, priced like one.",
@@ -988,7 +988,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d19.jpg"
+    "img_ready": "/images/ig_ready/d19.jpg",
+    "posted_at": "2026-07-04",
+    "ig_media_id": "18114264451786449"
   },
   {
     "id": "b3-03",
