@@ -998,7 +998,7 @@
     "date": "2026-07-05",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Monteverde",
     "image": "/images/instagram/b3-03-cover.jpg",
     "img_ready": "/images/instagram/b3-03-cover.jpg",
@@ -1025,7 +1025,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-05",
+    "ig_media_id": "17904365310286032"
   },
   {
     "id": "model-06",
