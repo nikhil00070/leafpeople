@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T22:23:20+00:00",
+  "updated": "2026-07-06T00:15:21+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 112,
@@ -16,7 +16,7 @@
     "images": {
       "count": 12,
       "avg_reach": 18,
-      "avg_eng_pct": 16.6
+      "avg_eng_pct": 16.5
     }
   },
   "posts": [
@@ -30,7 +30,7 @@
       "shares": 0,
       "total_interactions": 0,
       "watch_ms": 9883,
-      "plays": 3,
+      "plays": 4,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
@@ -77,7 +77,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 3318,
+      "watch_ms": 3259,
       "plays": 32,
       "label": "d26 Don't need much",
       "hook": "Coffee, quiet, a new leaf. I don't need much else.",
@@ -231,7 +231,7 @@
     {
       "date": "2026-06-22",
       "type": "IMAGE",
-      "reach": 21,
+      "reach": 22,
       "likes": 3,
       "comments": 0,
       "saved": 0,
@@ -242,7 +242,7 @@
       "label": "d16 You're not the only one",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 14.3
+      "eng_pct": 13.6
     },
     {
       "date": "2026-06-21",
