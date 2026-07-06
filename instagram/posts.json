@@ -1035,7 +1035,7 @@
     "date": "2026-07-06",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "No words before coffee",
     "image": "/images/instagram/model-06-cover.jpg",
     "img_ready": "/images/instagram/model-06-cover.jpg",
@@ -1061,7 +1061,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-06",
+    "ig_media_id": "18070263758391455"
   },
   {
     "id": "d20",
