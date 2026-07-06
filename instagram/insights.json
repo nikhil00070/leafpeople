@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T03:58:54+00:00",
+  "updated": "2026-07-06T05:19:14+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 112,
@@ -23,14 +23,14 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 8,
+      "reach": 9,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 5246,
-      "plays": 8,
+      "watch_ms": 4892,
+      "plays": 10,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
