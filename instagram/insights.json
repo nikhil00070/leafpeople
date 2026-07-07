@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-07T07:11:12+00:00",
+  "updated": "2026-07-07T15:09:22+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 125,
+    "followers": 126,
     "posts": 30
   },
   "summary": {
@@ -23,14 +23,14 @@
     {
       "date": "2026-07-06",
       "type": "REEL",
-      "reach": 11,
+      "reach": 15,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4320,
-      "plays": 13,
+      "watch_ms": 4725,
+      "plays": 18,
       "label": "d30 No words before coffee",
       "hook": "No words before coffee. Just me and the plants.",
       "is_reel": true,
