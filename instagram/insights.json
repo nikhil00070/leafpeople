@@ -1,36 +1,36 @@
 {
-  "updated": "2026-07-07T00:28:51+00:00",
+  "updated": "2026-07-07T04:57:41+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 119,
+    "followers": 124,
     "posts": 30
   },
   "summary": {
     "reels": {
       "count": 18,
-      "avg_reach": 60,
-      "avg_eng_pct": 7.0,
-      "avg_watch_s": 4.9,
-      "avg_plays": 75
+      "avg_reach": 61,
+      "avg_eng_pct": 6.9,
+      "avg_watch_s": 4.8,
+      "avg_plays": 76
     },
     "images": {
       "count": 12,
       "avg_reach": 19,
-      "avg_eng_pct": 14.4
+      "avg_eng_pct": 13.8
     }
   },
   "posts": [
     {
       "date": "2026-07-06",
       "type": "REEL",
-      "reach": 3,
+      "reach": 8,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 6627,
-      "plays": 4,
+      "watch_ms": 4856,
+      "plays": 10,
       "label": "d30 No words before coffee",
       "hook": "No words before coffee. Just me and the plants.",
       "is_reel": true,
@@ -39,14 +39,14 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 19,
+      "reach": 20,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3193,
-      "plays": 19,
+      "watch_ms": 3490,
+      "plays": 20,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
@@ -55,7 +55,7 @@
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 4,
+      "reach": 5,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -66,44 +66,44 @@
       "label": "d28 Thai Constellation",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 25.0
+      "eng_pct": 20.0
     },
     {
       "date": "2026-07-03",
       "type": "REEL",
-      "reach": 18,
+      "reach": 20,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 2431,
-      "plays": 21,
+      "watch_ms": 2344,
+      "plays": 22,
       "label": "d27 Callistophylla \u2014 stained glass",
       "hook": "A leaf like stained glass",
       "is_reel": true,
-      "eng_pct": 5.6
+      "eng_pct": 5.0
     },
     {
       "date": "2026-07-02",
       "type": "REEL",
-      "reach": 30,
+      "reach": 31,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 3259,
-      "plays": 32,
+      "watch_ms": 3192,
+      "plays": 33,
       "label": "d26 Don't need much",
       "hook": "Coffee, quiet, a new leaf. I don't need much else.",
       "is_reel": true,
-      "eng_pct": 3.3
+      "eng_pct": 3.2
     },
     {
       "date": "2026-07-01",
       "type": "IMAGE",
-      "reach": 7,
+      "reach": 8,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -114,7 +114,7 @@
       "label": "d25 Siltepecana \u2014 silver",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 14.3
+      "eng_pct": 12.5
     },
     {
       "date": "2026-06-30",
@@ -125,7 +125,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 5791,
+      "watch_ms": 6144,
       "plays": 28,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
@@ -135,18 +135,18 @@
     {
       "date": "2026-06-29",
       "type": "REEL",
-      "reach": 25,
+      "reach": 26,
       "likes": 3,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 7847,
-      "plays": 34,
+      "watch_ms": 7950,
+      "plays": 35,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
       "is_reel": true,
-      "eng_pct": 16.0
+      "eng_pct": 15.4
     },
     {
       "date": "2026-06-28",
@@ -157,7 +157,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 4119,
+      "watch_ms": 4124,
       "plays": 181,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
@@ -173,7 +173,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 3876,
+      "watch_ms": 3867,
       "plays": 183,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
@@ -205,7 +205,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 2424,
+      "watch_ms": 2421,
       "plays": 223,
       "label": "d19 Your pocket of jungle",
       "hook": "A jungle, two feet from your couch",
@@ -221,7 +221,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 7384,
+      "watch_ms": 7395,
       "plays": 43,
       "label": "d18 Color of life",
       "hook": "Green is the color of life.",
@@ -237,7 +237,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 6309,
+      "watch_ms": 6363,
       "plays": 32,
       "label": "d17 The Choc\u00f3",
       "hook": "The Choc\u00f3 \u00b7 Colombia",
