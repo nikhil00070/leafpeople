@@ -878,7 +878,8 @@
     "slug": "philodendron-warszewiczii-care",
     "genus": "Philodendron",
     "title_hint": "Philodendron warszewiczii, the dissected dry-season dormant",
-    "status": "queued"
+    "status": "pending_review",
+    "published_at": "2026-07-07"
   },
   {
     "slug": "philodendron-stenolobum-care",
