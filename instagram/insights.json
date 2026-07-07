@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-06T16:42:09+00:00",
+  "updated": "2026-07-07T00:24:58+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 114,
-    "posts": 29
+    "followers": 119,
+    "posts": 30
   },
   "summary": {
     "reels": {
-      "count": 17,
-      "avg_reach": 63,
-      "avg_eng_pct": 7.3,
-      "avg_watch_s": 4.8,
-      "avg_plays": 79
+      "count": 18,
+      "avg_reach": 60,
+      "avg_eng_pct": 7.0,
+      "avg_watch_s": 4.9,
+      "avg_plays": 75
     },
     "images": {
       "count": 12,
@@ -21,16 +21,32 @@
   },
   "posts": [
     {
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "type": "REEL",
-      "reach": 15,
+      "reach": 3,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3633,
-      "plays": 16,
+      "watch_ms": 6627,
+      "plays": 4,
+      "label": "d30 No words before coffee",
+      "hook": "No words before coffee. Just me and the plants.",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-07-05",
+      "type": "REEL",
+      "reach": 19,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 3193,
+      "plays": 19,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
@@ -119,18 +135,18 @@
     {
       "date": "2026-06-29",
       "type": "REEL",
-      "reach": 24,
+      "reach": 25,
       "likes": 3,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 7956,
-      "plays": 33,
+      "watch_ms": 7847,
+      "plays": 34,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
       "is_reel": true,
-      "eng_pct": 16.7
+      "eng_pct": 16.0
     },
     {
       "date": "2026-06-28",
@@ -215,18 +231,18 @@
     {
       "date": "2026-06-23",
       "type": "REEL",
-      "reach": 24,
-      "likes": 6,
+      "reach": 25,
+      "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 6,
-      "watch_ms": 6335,
-      "plays": 31,
+      "total_interactions": 7,
+      "watch_ms": 6309,
+      "plays": 32,
       "label": "d17 The Choc\u00f3",
       "hook": "The Choc\u00f3 \u00b7 Colombia",
       "is_reel": true,
-      "eng_pct": 25.0
+      "eng_pct": 28.0
     },
     {
       "date": "2026-06-22",
@@ -247,7 +263,7 @@
     {
       "date": "2026-06-21",
       "type": "REEL",
-      "reach": 25,
+      "reach": 26,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -258,19 +274,19 @@
       "label": "d15 The deep end",
       "hook": "The ones collectors whisper about",
       "is_reel": true,
-      "eng_pct": 8.0
+      "eng_pct": 7.7
     },
     {
       "date": "2026-06-20",
       "type": "REEL",
-      "reach": 30,
+      "reach": 31,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4720,
-      "plays": 37,
+      "watch_ms": 4686,
+      "plays": 38,
       "label": "d14 Went in for one",
       "hook": "POV: you went in for ONE plant.",
       "is_reel": true,
@@ -279,14 +295,14 @@
     {
       "date": "2026-06-19",
       "type": "REEL",
-      "reach": 103,
+      "reach": 104,
       "likes": 6,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 6895,
-      "plays": 131,
+      "watch_ms": 6863,
+      "plays": 132,
       "label": "d13 7am check",
       "hook": "The 7am plant check. Before I've spoken to a soul.",
       "is_reel": true,
@@ -295,7 +311,7 @@
     {
       "date": "2026-06-18",
       "type": "IMAGE",
-      "reach": 25,
+      "reach": 26,
       "likes": 3,
       "comments": 0,
       "saved": 0,
@@ -306,23 +322,23 @@
       "label": "d12 Morning mist",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 12.0
+      "eng_pct": 11.5
     },
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 45,
+      "reach": 46,
       "likes": 6,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 6351,
-      "plays": 68,
+      "watch_ms": 6352,
+      "plays": 69,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 13.3
+      "eng_pct": 13.0
     },
     {
       "date": "2026-06-16",
