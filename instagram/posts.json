@@ -1071,7 +1071,7 @@
     "date": "2026-07-07",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "The hunt",
     "image": "/images/plants/field-skills.jpg",
     "caption": "The hunt is half the fun.\n\nLearning to read a petiole, a cataphyll, a new leaf unfurling \u2014 the skills that turn a buyer into a grower. Nobody's born knowing this. You pick it up, one plant at a time.",
@@ -1099,7 +1099,9 @@
     "reel": true,
     "hook": "Plants people cross oceans for",
     "img_ready": "/images/ig_ready/d20.jpg",
-    "video": "/videos/instagram/d20.mp4"
+    "video": "/videos/instagram/d20.mp4",
+    "posted_at": "2026-07-07",
+    "ig_media_id": "18106806641004432"
   },
   {
     "id": "d21",
