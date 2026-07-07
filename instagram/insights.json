@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-07T04:57:41+00:00",
+  "updated": "2026-07-07T07:03:33+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 124,
+    "followers": 125,
     "posts": 30
   },
   "summary": {
@@ -23,14 +23,14 @@
     {
       "date": "2026-07-06",
       "type": "REEL",
-      "reach": 8,
+      "reach": 11,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4856,
-      "plays": 10,
+      "watch_ms": 4320,
+      "plays": 12,
       "label": "d30 No words before coffee",
       "hook": "No words before coffee. Just me and the plants.",
       "is_reel": true,
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3490,
+      "watch_ms": 3440,
       "plays": 20,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
