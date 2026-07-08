@@ -1109,7 +1109,7 @@
     "date": "2026-07-08",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Vittariifolium \u2014 the ribbon",
     "image": "/images/instagram/anthurium-vittariifolium.jpg",
     "caption": "The ribbon.\n\nAnthurium vittariifolium drops pendant, strap-thin leaves up to a metre long \u2014 a living green curtain. Strange, elegant, unmistakably rare.",
@@ -1134,7 +1134,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d21.jpg"
+    "img_ready": "/images/ig_ready/d21.jpg",
+    "posted_at": "2026-07-08",
+    "ig_media_id": "17978665881104467"
   },
   {
     "id": "b2-03",
