@@ -1144,7 +1144,7 @@
     "date": "2026-07-09",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Just looking",
     "image": "/images/instagram/b2-03-cover.jpg",
     "img_ready": "/images/instagram/b2-03-cover.jpg",
@@ -1169,7 +1169,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-09",
+    "ig_media_id": "18107543044816812"
   },
   {
     "id": "model-07",
