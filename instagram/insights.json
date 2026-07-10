@@ -1,25 +1,41 @@
 {
-  "updated": "2026-07-09T16:34:49+00:00",
+  "updated": "2026-07-10T02:42:11+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 129,
-    "posts": 32
+    "followers": 131,
+    "posts": 33
   },
   "summary": {
     "reels": {
-      "count": 19,
-      "avg_reach": 60,
+      "count": 20,
+      "avg_reach": 57,
       "avg_eng_pct": 6.4,
-      "avg_watch_s": 4.6,
-      "avg_plays": 74
+      "avg_watch_s": 4.5,
+      "avg_plays": 71
     },
     "images": {
       "count": 13,
       "avg_reach": 19,
-      "avg_eng_pct": 11.8
+      "avg_eng_pct": 11.7
     }
   },
   "posts": [
+    {
+      "date": "2026-07-09",
+      "type": "REEL",
+      "reach": 9,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 2594,
+      "plays": 9,
+      "label": "d33 Just looking",
+      "hook": "Me: I'm just looking.",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
     {
       "date": "2026-07-08",
       "type": "IMAGE",
@@ -151,46 +167,46 @@
     {
       "date": "2026-06-30",
       "type": "REEL",
-      "reach": 26,
+      "reach": 27,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 5947,
-      "plays": 29,
+      "watch_ms": 5829,
+      "plays": 30,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
       "is_reel": true,
-      "eng_pct": 3.8
+      "eng_pct": 3.7
     },
     {
       "date": "2026-06-29",
       "type": "REEL",
-      "reach": 28,
-      "likes": 3,
+      "reach": 29,
+      "likes": 4,
       "comments": 0,
       "saved": 0,
-      "shares": 0,
-      "total_interactions": 4,
-      "watch_ms": 7830,
-      "plays": 37,
+      "shares": 1,
+      "total_interactions": 6,
+      "watch_ms": 8011,
+      "plays": 41,
       "label": "d23 The Amazon",
       "hook": "The Amazon \u00b7 Peru",
       "is_reel": true,
-      "eng_pct": 14.3
+      "eng_pct": 20.7
     },
     {
       "date": "2026-06-28",
       "type": "REEL",
-      "reach": 132,
+      "reach": 133,
       "likes": 6,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 4109,
-      "plays": 182,
+      "watch_ms": 4092,
+      "plays": 183,
       "label": "Nope, those look like chicken feet.  Anthu",
       "hook": null,
       "is_reel": true,
@@ -199,14 +215,14 @@
     {
       "date": "2026-06-27",
       "type": "REEL",
-      "reach": 164,
+      "reach": 165,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 3835,
-      "plays": 185,
+      "watch_ms": 3824,
+      "plays": 186,
       "label": "d21 Chaos vs green",
       "hook": "The world feels chaotic. Green doesn't.",
       "is_reel": true,
@@ -215,7 +231,7 @@
     {
       "date": "2026-06-26",
       "type": "IMAGE",
-      "reach": 15,
+      "reach": 16,
       "likes": 2,
       "comments": 2,
       "saved": 0,
@@ -226,19 +242,19 @@
       "label": "d20 Welcome home (bridge)",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 26.7
+      "eng_pct": 25.0
     },
     {
       "date": "2026-06-25",
       "type": "REEL",
-      "reach": 187,
+      "reach": 188,
       "likes": 4,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 2424,
-      "plays": 224,
+      "watch_ms": 2450,
+      "plays": 226,
       "label": "d19 Your pocket of jungle",
       "hook": "A jungle, two feet from your couch",
       "is_reel": true,
@@ -247,7 +263,7 @@
     {
       "date": "2026-06-24",
       "type": "REEL",
-      "reach": 35,
+      "reach": 36,
       "likes": 4,
       "comments": 1,
       "saved": 0,
@@ -258,7 +274,7 @@
       "label": "d18 Color of life",
       "hook": "Green is the color of life.",
       "is_reel": true,
-      "eng_pct": 17.1
+      "eng_pct": 16.7
     },
     {
       "date": "2026-06-23",
@@ -365,7 +381,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 6289,
+      "watch_ms": 6256,
       "plays": 70,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
