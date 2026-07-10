@@ -1,36 +1,52 @@
 {
-  "updated": "2026-07-10T02:42:11+00:00",
+  "updated": "2026-07-10T20:38:48+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 131,
-    "posts": 33
+    "followers": 145,
+    "posts": 34
   },
   "summary": {
     "reels": {
-      "count": 20,
-      "avg_reach": 57,
-      "avg_eng_pct": 6.4,
-      "avg_watch_s": 4.5,
-      "avg_plays": 71
+      "count": 21,
+      "avg_reach": 59,
+      "avg_eng_pct": 6.1,
+      "avg_watch_s": 4.4,
+      "avg_plays": 72
     },
     "images": {
       "count": 13,
       "avg_reach": 19,
-      "avg_eng_pct": 11.7
+      "avg_eng_pct": 11.4
     }
   },
   "posts": [
     {
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "type": "REEL",
-      "reach": 9,
+      "reach": 21,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2594,
-      "plays": 9,
+      "watch_ms": 2156,
+      "plays": 20,
+      "label": "d34 The part I want",
+      "hook": "This is the part I actually want.",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-07-09",
+      "type": "REEL",
+      "reach": 66,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 1924,
+      "plays": 73,
       "label": "d33 Just looking",
       "hook": "Me: I'm just looking.",
       "is_reel": true,
@@ -39,7 +55,7 @@
     {
       "date": "2026-07-08",
       "type": "IMAGE",
-      "reach": 6,
+      "reach": 7,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -55,14 +71,14 @@
     {
       "date": "2026-07-07",
       "type": "REEL",
-      "reach": 11,
+      "reach": 13,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 1977,
-      "plays": 11,
+      "watch_ms": 2309,
+      "plays": 15,
       "label": "d31 The hunt",
       "hook": "Plants people cross oceans for",
       "is_reel": true,
@@ -71,14 +87,14 @@
     {
       "date": "2026-07-06",
       "type": "REEL",
-      "reach": 16,
+      "reach": 18,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 4583,
-      "plays": 20,
+      "watch_ms": 4251,
+      "plays": 22,
       "label": "d30 No words before coffee",
       "hook": "No words before coffee. Just me and the plants.",
       "is_reel": true,
@@ -87,14 +103,14 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 21,
+      "reach": 24,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 3771,
-      "plays": 24,
+      "watch_ms": 3624,
+      "plays": 27,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
@@ -103,7 +119,7 @@
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 7,
+      "reach": 9,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -114,44 +130,44 @@
       "label": "d28 Thai Constellation",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 14.3
+      "eng_pct": 11.1
     },
     {
       "date": "2026-07-03",
       "type": "REEL",
-      "reach": 21,
+      "reach": 22,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 2562,
-      "plays": 24,
+      "watch_ms": 2494,
+      "plays": 25,
       "label": "d27 Callistophylla \u2014 stained glass",
       "hook": "A leaf like stained glass",
       "is_reel": true,
-      "eng_pct": 4.8
+      "eng_pct": 4.5
     },
     {
       "date": "2026-07-02",
       "type": "REEL",
-      "reach": 33,
+      "reach": 34,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 3178,
-      "plays": 34,
+      "watch_ms": 3148,
+      "plays": 36,
       "label": "d26 Don't need much",
       "hook": "Coffee, quiet, a new leaf. I don't need much else.",
       "is_reel": true,
-      "eng_pct": 3.0
+      "eng_pct": 2.9
     },
     {
       "date": "2026-07-01",
       "type": "IMAGE",
-      "reach": 11,
+      "reach": 12,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -162,23 +178,23 @@
       "label": "d25 Siltepecana \u2014 silver",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 9.1
+      "eng_pct": 8.3
     },
     {
       "date": "2026-06-30",
       "type": "REEL",
-      "reach": 27,
+      "reach": 28,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 5829,
+      "watch_ms": 5733,
       "plays": 30,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
       "is_reel": true,
-      "eng_pct": 3.7
+      "eng_pct": 3.6
     },
     {
       "date": "2026-06-29",
@@ -375,18 +391,18 @@
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 47,
+      "reach": 48,
       "likes": 6,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 6256,
-      "plays": 70,
+      "watch_ms": 6202,
+      "plays": 72,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 12.8
+      "eng_pct": 12.5
     },
     {
       "date": "2026-06-16",
@@ -397,7 +413,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 5068,
+      "watch_ms": 5028,
       "plays": 71,
       "label": "d10 Morning green",
       "hook": "Some mornings you just need to see something green.",
@@ -455,23 +471,23 @@
     {
       "date": "2026-06-12",
       "type": "REEL",
-      "reach": 135,
+      "reach": 136,
       "likes": 2,
       "comments": 0,
-      "saved": 0,
+      "saved": 1,
       "shares": 0,
-      "total_interactions": 2,
-      "watch_ms": 2822,
-      "plays": 153,
+      "total_interactions": 3,
+      "watch_ms": 2829,
+      "plays": 154,
       "label": "d6 Blackest leaf",
       "hook": null,
       "is_reel": true,
-      "eng_pct": 1.5
+      "eng_pct": 2.2
     },
     {
       "date": "2026-06-11",
       "type": "IMAGE",
-      "reach": 23,
+      "reach": 24,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -482,7 +498,7 @@
       "label": "d5 Find the light",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 4.3
+      "eng_pct": 4.2
     },
     {
       "date": "2026-06-10",
