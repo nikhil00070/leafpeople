@@ -1179,7 +1179,7 @@
     "date": "2026-07-10",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "The part I want",
     "image": "/images/instagram/model-07-cover.jpg",
     "img_ready": "/images/instagram/model-07-cover.jpg",
@@ -1205,7 +1205,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-10",
+    "ig_media_id": "17997731123977872"
   },
   {
     "id": "b3-04",
