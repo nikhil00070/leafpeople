@@ -1,36 +1,36 @@
 {
-  "updated": "2026-07-11T05:06:56+00:00",
+  "updated": "2026-07-11T17:42:24+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 149,
+    "followers": 152,
     "posts": 34
   },
   "summary": {
     "reels": {
       "count": 21,
-      "avg_reach": 60,
-      "avg_eng_pct": 6.1,
+      "avg_reach": 61,
+      "avg_eng_pct": 6.3,
       "avg_watch_s": 4.4,
-      "avg_plays": 74
+      "avg_plays": 76
     },
     "images": {
       "count": 13,
       "avg_reach": 19,
-      "avg_eng_pct": 11.4
+      "avg_eng_pct": 11.3
     }
   },
   "posts": [
     {
       "date": "2026-07-10",
       "type": "REEL",
-      "reach": 41,
+      "reach": 73,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2648,
-      "plays": 44,
+      "watch_ms": 2619,
+      "plays": 81,
       "label": "d34 The part I want",
       "hook": "This is the part I actually want.",
       "is_reel": true,
@@ -103,23 +103,23 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 24,
+      "reach": 25,
       "likes": 0,
       "comments": 0,
-      "saved": 0,
+      "saved": 1,
       "shares": 0,
-      "total_interactions": 0,
-      "watch_ms": 3624,
-      "plays": 27,
+      "total_interactions": 1,
+      "watch_ms": 4011,
+      "plays": 30,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
-      "eng_pct": 0.0
+      "eng_pct": 4.0
     },
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 9,
+      "reach": 10,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -130,7 +130,7 @@
       "label": "d28 Thai Constellation",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 11.1
+      "eng_pct": 10.0
     },
     {
       "date": "2026-07-03",
