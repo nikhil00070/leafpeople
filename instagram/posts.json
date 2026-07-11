@@ -1215,7 +1215,7 @@
     "date": "2026-07-11",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Borneo",
     "image": "/images/instagram/b3-04-cover.jpg",
     "img_ready": "/images/instagram/b3-04-cover.jpg",
@@ -1242,7 +1242,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-11",
+    "ig_media_id": "17950084677014694"
   },
   {
     "id": "d22",
