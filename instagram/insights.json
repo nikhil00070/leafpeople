@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-12T17:35:19+00:00",
+  "updated": "2026-07-12T20:28:29+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 169,
-    "posts": 35
+    "followers": 171,
+    "posts": 36
   },
   "summary": {
     "reels": {
-      "count": 22,
-      "avg_reach": 76,
-      "avg_eng_pct": 8.6,
-      "avg_watch_s": 4.5,
-      "avg_plays": 94
+      "count": 23,
+      "avg_reach": 73,
+      "avg_eng_pct": 8.2,
+      "avg_watch_s": 4.3,
+      "avg_plays": 91
     },
     "images": {
       "count": 13,
@@ -21,16 +21,32 @@
   },
   "posts": [
     {
+      "date": "2026-07-12",
+      "type": "REEL",
+      "reach": 10,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 917,
+      "plays": 11,
+      "label": "d36 Squamiferum \u2014 fuzzy petioles",
+      "hook": "The philodendron with velvet-red stems",
+      "is_reel": true,
+      "eng_pct": 0.0
+    },
+    {
       "date": "2026-07-11",
       "type": "REEL",
-      "reach": 269,
+      "reach": 270,
       "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3017,
-      "plays": 311,
+      "watch_ms": 3012,
+      "plays": 312,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
@@ -61,8 +77,8 @@
       "saved": 1,
       "shares": 0,
       "total_interactions": 3,
-      "watch_ms": 2512,
-      "plays": 92,
+      "watch_ms": 2531,
+      "plays": 93,
       "label": "d33 Just looking",
       "hook": "Me: I'm just looking.",
       "is_reel": true,
