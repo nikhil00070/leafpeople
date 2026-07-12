@@ -1252,7 +1252,7 @@
     "date": "2026-07-12",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Squamiferum \u2014 fuzzy petioles",
     "image": "/images/instagram/philodendron-squamiferum.png",
     "caption": "Look at that stem.\n\nPhilodendron squamiferum grows fuzzy, red-bristled petioles you'll want to touch, holding up oak-leaf foliage. Half the beauty of an aroid is the parts that aren't the leaf.",
@@ -1280,7 +1280,9 @@
     "reel": true,
     "hook": "The philodendron with velvet-red stems",
     "img_ready": "/images/ig_ready/d22.jpg",
-    "video": "/videos/instagram/d22.mp4"
+    "video": "/videos/instagram/d22.mp4",
+    "posted_at": "2026-07-12",
+    "ig_media_id": "18001925261957651"
   },
   {
     "id": "d23",
