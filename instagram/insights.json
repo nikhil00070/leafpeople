@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T04:45:57+00:00",
+  "updated": "2026-07-13T06:23:01+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 172,
@@ -30,7 +30,7 @@
       "shares": 0,
       "total_interactions": 0,
       "watch_ms": 2873,
-      "plays": 23,
+      "plays": 24,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
@@ -45,7 +45,7 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 2996,
+      "watch_ms": 2994,
       "plays": 313,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
@@ -429,7 +429,7 @@
       "saved": 0,
       "shares": 1,
       "total_interactions": 10,
-      "watch_ms": 6231,
+      "watch_ms": 6195,
       "plays": 78,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
