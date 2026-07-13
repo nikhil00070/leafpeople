@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 214,
+  "count": 215,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2629,6 +2629,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-hederaceum-brasil",
       "data_url": "https://leafpeople.app/field-guide/philodendron-hederaceum-brasil/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-hederaceum-brasil-hero.jpg"
+    },
+    {
+      "id": "the-leaf/monstera-standleyana-variegata",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "monstera-standleyana-variegata",
+      "title": "Rhaphidophora tetrasperma and the Variegation Question Nobody Asks",
+      "category": "Monstera",
+      "description": "The albo vs. aurea split, what paint-splatter variegation actually is, and why Rhaphidophora tetrasperma is the underrated easy variegate.",
+      "date": "2026-06-29",
+      "url": "https://leafpeople.app/the-leaf/monstera-standleyana-variegata",
+      "data_url": "https://leafpeople.app/the-leaf/monstera-standleyana-variegata/_data.json",
+      "image": "https://leafpeople.app/images/plants/profiles/monstera-standleyana-variegata.png"
     },
     {
       "id": "field-guide/philodendron-micans-velvet",
