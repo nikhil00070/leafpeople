@@ -2696,6 +2696,19 @@
       "image": "https://leafpeople.app/images/source/stock/philodendron-goeldii-care-hero.jpg"
     },
     {
+      "id": "field-guide/philodendron-warszewiczii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-warszewiczii-care",
+      "title": "Philodendron warszewiczii: The Dissected Dry-Season Dormant",
+      "category": "Philodendron",
+      "description": "A field guide to growing Philodendron warszewiczii and four related dissected-leaf species — substrate, water cycles, and what's worth chasing.",
+      "date": "2026-07-07",
+      "url": "https://leafpeople.app/field-guide/philodendron-warszewiczii-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-warszewiczii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-warszewiczii-care-hero.jpg"
+    },
+    {
       "id": "field-guide/philodendron-stenolobum-care",
       "section": "field-guide",
       "section_label": "Field Guide",
