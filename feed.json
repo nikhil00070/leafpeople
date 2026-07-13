@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 211,
+  "count": 214,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2759,6 +2759,19 @@
       "url": "https://leafpeople.app/the-leaf/philodendron-vs-anthurium",
       "data_url": "https://leafpeople.app/the-leaf/philodendron-vs-anthurium/_data.json",
       "image": "https://leafpeople.app/images/source/inat/philodendron-vs-anthurium-hero.jpg"
+    },
+    {
+      "id": "the-leaf/getting-to-know-begonia",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "getting-to-know-begonia",
+      "title": "The Lopsided Empire: Getting to Know the Genus Begonia",
+      "category": "Begonia",
+      "description": "A plain-spoken primer on Begonia — the asymmetric leaf, the three growth forms, why collectors grow them for foliage, and how to keep them alive.",
+      "date": "2026-07-12",
+      "url": "https://leafpeople.app/the-leaf/getting-to-know-begonia",
+      "data_url": "https://leafpeople.app/the-leaf/getting-to-know-begonia/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/getting-to-know-begonia-hero.jpg"
     },
     {
       "id": "the-leaf/getting-to-know-hoya",
