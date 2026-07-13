@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 207,
+  "count": 208,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2681,6 +2681,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-stenolobum-care-hero.jpg"
+    },
+    {
+      "id": "the-leaf/getting-to-know-monstera",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "getting-to-know-monstera",
+      "title": "The Genus That Grew Windows",
+      "category": "Monstera",
+      "description": "A field primer on the Monstera genus: fenestration, the juvenile-to-adult shift, the famous species, variegation mania, and honest care.",
+      "date": "2026-07-12",
+      "url": "https://leafpeople.app/the-leaf/getting-to-know-monstera",
+      "data_url": "https://leafpeople.app/the-leaf/getting-to-know-monstera/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/getting-to-know-monstera-hero.jpg"
     },
     {
       "id": "the-leaf/getting-to-know-philodendron",
