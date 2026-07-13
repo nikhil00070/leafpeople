@@ -2631,6 +2631,19 @@
       "image": "https://leafpeople.app/images/source/stock/philodendron-grazielae-care-hero.jpg"
     },
     {
+      "id": "field-guide/philodendron-bernardopazii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-bernardopazii-care",
+      "title": "Silver Lines: Growing Philodendron bernardopazii and Its Kin",
+      "category": "Philodendron",
+      "description": "How to grow Philodendron bernardopazii: substrate, light, humidity, and the best silver-veined philodendrons worth collecting.",
+      "date": "2026-07-02",
+      "url": "https://leafpeople.app/field-guide/philodendron-bernardopazii-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-bernardopazii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-bernardopazii-care-hero.jpg"
+    },
+    {
       "id": "field-guide/philodendron-martianum-fat-boy",
       "section": "field-guide",
       "section_label": "Field Guide",
