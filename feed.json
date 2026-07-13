@@ -2787,6 +2787,19 @@
       "image": "https://leafpeople.app/images/source/stock/getting-to-know-begonia-hero.jpg"
     },
     {
+      "id": "the-leaf/getting-to-know-anthurium",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "getting-to-know-anthurium",
+      "title": "The Velvet Continent: Getting to Know Anthurium",
+      "category": "Anthurium",
+      "description": "Beyond the red flamingo flower lies the largest genus of aroids: velvet leaves, corrugated giants, and the tells that separate Anthurium from Philodendron.",
+      "date": "2026-07-12",
+      "url": "https://leafpeople.app/the-leaf/getting-to-know-anthurium",
+      "data_url": "https://leafpeople.app/the-leaf/getting-to-know-anthurium/_data.json",
+      "image": "https://leafpeople.app/images/source/inat/getting-to-know-anthurium-hero.jpg"
+    },
+    {
       "id": "the-leaf/getting-to-know-hoya",
       "section": "the-leaf",
       "section_label": "Understory",
