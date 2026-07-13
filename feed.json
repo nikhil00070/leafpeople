@@ -2631,6 +2631,19 @@
       "image": "https://leafpeople.app/images/source/stock/philodendron-hederaceum-brasil-hero.jpg"
     },
     {
+      "id": "field-guide/philodendron-micans-velvet",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-micans-velvet",
+      "title": "Philodendron hederaceum micans, the Velvet Heartleaf",
+      "category": "Philodendron",
+      "description": "Care guide for Philodendron hederaceum micans — substrate, light, humidity, and the best velvet-leaf philodendrons worth growing.",
+      "date": "2026-06-30",
+      "url": "https://leafpeople.app/field-guide/philodendron-micans-velvet",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-micans-velvet/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-micans-velvet-hero.jpg"
+    },
+    {
       "id": "field-guide/philodendron-grazielae-care",
       "section": "field-guide",
       "section_label": "Field Guide",
