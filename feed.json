@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 205,
+  "count": 207,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2681,6 +2681,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care",
       "data_url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-stenolobum-care-hero.jpg"
+    },
+    {
+      "id": "the-leaf/getting-to-know-philodendron",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "getting-to-know-philodendron",
+      "title": "The Genus That Teaches You to Grow Aroids",
+      "category": "Philodendron",
+      "description": "A field guide to the Philodendron genus: climbers vs. crawlers, velvet grails, variegation, and how to actually keep them alive.",
+      "date": "2026-07-12",
+      "url": "https://leafpeople.app/the-leaf/getting-to-know-philodendron",
+      "data_url": "https://leafpeople.app/the-leaf/getting-to-know-philodendron/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/getting-to-know-philodendron-hero.jpg"
     }
   ]
 }
