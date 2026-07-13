@@ -148,17 +148,23 @@ def main() -> int:
 
     hero = imgs["hero"]
     body_image = imgs["body_image"]
-    html = render("leaf-canonical.html", hero=hero, og_image=hero, body_image=body_image,
-                  slug=item["slug"],  # drives canonical + JSON-LD URLs
-                  hero_attribution=imgs.get("hero_attribution", ""),
-                  body_image_attribution=imgs.get("body_image_attribution", ""), **article)
+    render_kwargs = dict(hero=hero, og_image=hero, body_image=body_image,
+                         slug=item["slug"],  # drives canonical + JSON-LD URLs
+                         hero_attribution=imgs.get("hero_attribution", ""),
+                         body_image_attribution=imgs.get("body_image_attribution", ""), **article)
     out_dir = common.SITE_ROOT / "the-leaf" / item["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / "index.html").write_text(html, encoding="utf-8")
+    # Full article (subscribers) + gated preview (public + crawlers). The public edge
+    # middleware serves preview.html, so BOTH must exist or the live page 404s for
+    # visitors. (See rerender_articles.py, which regenerates both the same way.)
+    (out_dir / "index.html").write_text(
+        render("leaf-canonical.html", gated=False, **render_kwargs), encoding="utf-8")
+    (out_dir / "preview.html").write_text(
+        render("leaf-canonical.html", gated=True, **render_kwargs), encoding="utf-8")
     (out_dir / "_data.json").write_text(
         json.dumps({**article, "slug": item["slug"], **imgs}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
-    print(f"[leaf] wrote {out_dir / 'index.html'}")
+    print(f"[leaf] wrote {out_dir / 'index.html'} + preview.html")
 
     # Manifest — LP_DATE env var allows back-dating during bulk backfill.
     # New articles enter with status="pending" — they live on disk but DON'T
