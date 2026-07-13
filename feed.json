@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 203,
+  "count": 204,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2616,6 +2616,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-crystallinum-x-magnificum",
       "data_url": "https://leafpeople.app/field-guide/anthurium-crystallinum-x-magnificum/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-crystallinum-x-magnificum-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-grazielae-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-grazielae-care",
+      "title": "Philodendron grazielae Care: The Glossy Heart Climber",
+      "category": "Philodendron",
+      "description": "Care guide for Philodendron grazielae — substrate, light, humidity, and what makes this compact glossy climber worth growing.",
+      "date": "2026-07-01",
+      "url": "https://leafpeople.app/field-guide/philodendron-grazielae-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-grazielae-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-grazielae-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-martianum-fat-boy",
