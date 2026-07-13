@@ -2263,7 +2263,7 @@
     "url": "/field-guide/philodendron-goeldii-care",
     "thumb": "/images/source/stock/philodendron-goeldii-care-hero.jpg",
     "date": "2026-07-06",
-    "status": "pending"
+    "status": "published"
   },
   {
     "slug": "philodendron-warszewiczii-care",
@@ -2286,5 +2286,71 @@
     "thumb": "/images/source/stock/philodendron-stenolobum-care-hero.jpg",
     "date": "2026-07-08",
     "status": "published"
+  },
+  {
+    "slug": "getting-to-know-monstera",
+    "title": "The Genus That Grew Windows",
+    "category": "Monstera",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/getting-to-know-monstera",
+    "thumb": "/images/source/stock/getting-to-know-monstera-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-philodendron",
+    "title": "The Genus That Teaches You to Grow Aroids",
+    "category": "Philodendron",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/getting-to-know-philodendron",
+    "thumb": "/images/source/stock/getting-to-know-philodendron-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "philodendron-vs-anthurium",
+    "title": "The Knee, the Sheath, and the Bloom",
+    "category": "Field Skills",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/philodendron-vs-anthurium",
+    "thumb": "/images/source/inat/philodendron-vs-anthurium-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-begonia",
+    "title": "The Lopsided Empire: Getting to Know the Genus Begonia",
+    "category": "Begonia",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/getting-to-know-begonia",
+    "thumb": "/images/source/stock/getting-to-know-begonia-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-anthurium",
+    "title": "The Velvet Continent: Getting to Know Anthurium",
+    "category": "Anthurium",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/getting-to-know-anthurium",
+    "thumb": "/images/source/stock/getting-to-know-anthurium-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-hoya",
+    "title": "The Wax Plant Rulebook: Getting to Know Hoya",
+    "category": "Hoya",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/getting-to-know-hoya",
+    "thumb": "/images/source/stock/getting-to-know-hoya-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
   }
 ]

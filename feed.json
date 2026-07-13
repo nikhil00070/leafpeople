@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 204,
+  "count": 205,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2642,6 +2642,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy",
       "data_url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-martianum-fat-boy-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-goeldii-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-goeldii-care",
+      "title": "Philodendron goeldii Care: The Finger-Leaf Whorl",
+      "category": "Philodendron",
+      "description": "Grow Philodendron goeldii well with the right substrate, humidity, and light. Plus four more whorled and architectural philodendrons worth growing.",
+      "date": "2026-07-06",
+      "url": "https://leafpeople.app/field-guide/philodendron-goeldii-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-goeldii-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-goeldii-care-hero.jpg"
     },
     {
       "id": "field-guide/philodendron-stenolobum-care",
