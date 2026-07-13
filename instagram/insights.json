@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-12T20:28:29+00:00",
+  "updated": "2026-07-13T04:31:01+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 171,
+    "followers": 172,
     "posts": 36
   },
   "summary": {
@@ -10,7 +10,7 @@
       "count": 23,
       "avg_reach": 73,
       "avg_eng_pct": 8.2,
-      "avg_watch_s": 4.3,
+      "avg_watch_s": 4.4,
       "avg_plays": 91
     },
     "images": {
@@ -23,14 +23,14 @@
     {
       "date": "2026-07-12",
       "type": "REEL",
-      "reach": 10,
+      "reach": 22,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 917,
-      "plays": 11,
+      "watch_ms": 2873,
+      "plays": 23,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
@@ -39,14 +39,14 @@
     {
       "date": "2026-07-11",
       "type": "REEL",
-      "reach": 270,
+      "reach": 271,
       "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3012,
-      "plays": 312,
+      "watch_ms": 2996,
+      "plays": 313,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
