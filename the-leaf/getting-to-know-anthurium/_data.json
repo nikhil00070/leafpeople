@@ -81,10 +81,10 @@
     }
   ],
   "slug": "getting-to-know-anthurium",
-  "hero": "/images/source/stock/getting-to-know-anthurium-hero.jpg",
-  "hero_attribution": "no rights reserved / iNaturalist (CC0)",
+  "hero": "/images/source/inat/getting-to-know-anthurium-hero.jpg",
+  "hero_attribution": "col_sa_pilarmorunoizurieta / iNaturalist (CC-BY-NC)",
   "hero_inat_id": "inat-238016891",
-  "body_image": "/images/source/stock/getting-to-know-anthurium-body.jpg",
-  "body_image_attribution": "no rights reserved / iNaturalist (CC0)",
+  "body_image": "/images/plants/profiles/anthurium-crystalanium.jpeg",
+  "body_image_attribution": "Leaf People",
   "body_image_inat_id": "inat-502430041"
 }
