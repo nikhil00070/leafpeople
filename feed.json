@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-07-08",
-  "count": 201,
+  "updated": "2026-07-13",
+  "count": 202,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2616,6 +2616,19 @@
       "url": "https://leafpeople.app/field-guide/anthurium-crystallinum-x-magnificum",
       "data_url": "https://leafpeople.app/field-guide/anthurium-crystallinum-x-magnificum/_data.json",
       "image": "https://leafpeople.app/images/source/stock/anthurium-crystallinum-x-magnificum-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-martianum-fat-boy",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-martianum-fat-boy",
+      "title": "Philodendron martianum 'Fat Boy' and Its Swollen Petioles",
+      "category": "Philodendron",
+      "description": "A collector's guide to Philodendron martianum 'Fat Boy' — care, substrate, humidity, and the best swollen-petiole philodendrons worth growing.",
+      "date": "2026-07-03",
+      "url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-martianum-fat-boy-hero.jpg"
     }
   ]
 }
