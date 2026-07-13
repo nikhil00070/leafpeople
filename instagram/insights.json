@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T06:23:01+00:00",
+  "updated": "2026-07-13T15:35:47+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 172,
@@ -8,10 +8,10 @@
   "summary": {
     "reels": {
       "count": 23,
-      "avg_reach": 73,
-      "avg_eng_pct": 8.2,
+      "avg_reach": 74,
+      "avg_eng_pct": 8.4,
       "avg_watch_s": 4.4,
-      "avg_plays": 91
+      "avg_plays": 92
     },
     "images": {
       "count": 13,
@@ -23,30 +23,30 @@
     {
       "date": "2026-07-12",
       "type": "REEL",
-      "reach": 22,
-      "likes": 0,
+      "reach": 35,
+      "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 0,
-      "watch_ms": 2873,
-      "plays": 24,
+      "total_interactions": 1,
+      "watch_ms": 2850,
+      "plays": 39,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
-      "eng_pct": 0.0
+      "eng_pct": 2.9
     },
     {
       "date": "2026-07-11",
       "type": "REEL",
-      "reach": 271,
+      "reach": 272,
       "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 2994,
-      "plays": 313,
+      "watch_ms": 2990,
+      "plays": 314,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
@@ -55,30 +55,30 @@
     {
       "date": "2026-07-10",
       "type": "REEL",
-      "reach": 106,
+      "reach": 108,
       "likes": 2,
       "comments": 0,
       "saved": 2,
       "shares": 0,
       "total_interactions": 4,
       "watch_ms": 3026,
-      "plays": 124,
+      "plays": 126,
       "label": "d34 The part I want",
       "hook": "This is the part I actually want.",
       "is_reel": true,
-      "eng_pct": 3.8
+      "eng_pct": 3.7
     },
     {
       "date": "2026-07-09",
       "type": "REEL",
-      "reach": 76,
+      "reach": 77,
       "likes": 2,
       "comments": 0,
       "saved": 1,
       "shares": 0,
       "total_interactions": 3,
-      "watch_ms": 2531,
-      "plays": 93,
+      "watch_ms": 2519,
+      "plays": 94,
       "label": "d33 Just looking",
       "hook": "Me: I'm just looking.",
       "is_reel": true,
