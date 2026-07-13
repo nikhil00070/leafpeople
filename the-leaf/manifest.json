@@ -1,5 +1,65 @@
 [
   {
+    "slug": "philodendron-vs-anthurium",
+    "title": "The Knee, the Sheath, and the Bloom",
+    "category": "Field Skills",
+    "description": "The two genera collectors confuse most look nothing alike once you know the knee, the sheath, and the bloom. A plain-language field method that never lies.",
+    "url": "/the-leaf/philodendron-vs-anthurium",
+    "date": "2026-07-12",
+    "thumb": "/images/source/inat/philodendron-vs-anthurium-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-philodendron",
+    "title": "The Genus That Teaches You to Grow Aroids",
+    "category": "Philodendron",
+    "description": "A field guide to the Philodendron genus: climbers vs. crawlers, velvet grails, variegation, and how to actually keep them alive.",
+    "url": "/the-leaf/getting-to-know-philodendron",
+    "date": "2026-07-12",
+    "thumb": "/images/source/stock/getting-to-know-philodendron-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-anthurium",
+    "title": "The Velvet Continent: Getting to Know Anthurium",
+    "category": "Anthurium",
+    "description": "Beyond the red flamingo flower lies the largest genus of aroids: velvet leaves, corrugated giants, and the tells that separate Anthurium from Philodendron.",
+    "url": "/the-leaf/getting-to-know-anthurium",
+    "date": "2026-07-12",
+    "thumb": "/images/source/stock/getting-to-know-anthurium-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-monstera",
+    "title": "The Genus That Grew Windows",
+    "category": "Monstera",
+    "description": "A field primer on the Monstera genus: fenestration, the juvenile-to-adult shift, the famous species, variegation mania, and honest care.",
+    "url": "/the-leaf/getting-to-know-monstera",
+    "date": "2026-07-12",
+    "thumb": "/images/source/stock/getting-to-know-monstera-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-hoya",
+    "title": "The Wax Plant Rulebook: Getting to Know Hoya",
+    "category": "Hoya",
+    "description": "A field primer on Hoya: what makes a wax plant, the star-shaped flowers, the one spur rule everyone breaks once, and how to actually grow them.",
+    "url": "/the-leaf/getting-to-know-hoya",
+    "date": "2026-07-12",
+    "thumb": "/images/source/stock/getting-to-know-hoya-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "getting-to-know-begonia",
+    "title": "The Lopsided Empire: Getting to Know the Genus Begonia",
+    "category": "Begonia",
+    "description": "A plain-spoken primer on Begonia — the asymmetric leaf, the three growth forms, why collectors grow them for foliage, and how to keep them alive.",
+    "url": "/the-leaf/getting-to-know-begonia",
+    "date": "2026-07-12",
+    "thumb": "/images/source/stock/getting-to-know-begonia-hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "monstera-standleyana-variegata",
     "title": "Rhaphidophora tetrasperma and the Variegation Question Nobody Asks",
     "category": "Monstera",

@@ -1493,5 +1493,47 @@
     "title_hint": "Running high humidity for aroids without inviting mold",
     "category": "Field Skills",
     "status": "queued"
+  },
+  {
+    "slug": "philodendron-vs-anthurium",
+    "title_hint": "How to tell a Philodendron from an Anthurium",
+    "category": "Field Skills",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
+  },
+  {
+    "slug": "getting-to-know-philodendron",
+    "title_hint": "Getting to know the genus Philodendron",
+    "category": "Philodendron",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
+  },
+  {
+    "slug": "getting-to-know-anthurium",
+    "title_hint": "Getting to know the genus Anthurium",
+    "category": "Anthurium",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
+  },
+  {
+    "slug": "getting-to-know-monstera",
+    "title_hint": "Getting to know the genus Monstera",
+    "category": "Monstera",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
+  },
+  {
+    "slug": "getting-to-know-hoya",
+    "title_hint": "Getting to know the genus Hoya",
+    "category": "Hoya",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
+  },
+  {
+    "slug": "getting-to-know-begonia",
+    "title_hint": "Getting to know the genus Begonia",
+    "category": "Begonia",
+    "status": "pending_review",
+    "published_at": "2026-07-12"
   }
 ]
