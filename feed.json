@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-13",
-  "count": 202,
+  "count": 203,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2629,6 +2629,19 @@
       "url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy",
       "data_url": "https://leafpeople.app/field-guide/philodendron-martianum-fat-boy/_data.json",
       "image": "https://leafpeople.app/images/source/stock/philodendron-martianum-fat-boy-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-stenolobum-care",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-stenolobum-care",
+      "title": "Philodendron stenolobum Care Guide: The Strap-Lobed Collector's Pick",
+      "category": "Philodendron",
+      "description": "Care guide for Philodendron stenolobum — substrate, light, humidity, and what makes its narrow-lobed leaves worth the chase.",
+      "date": "2026-07-08",
+      "url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-stenolobum-care/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-stenolobum-care-hero.jpg"
     }
   ]
 }
