@@ -1290,7 +1290,7 @@
     "date": "2026-07-13",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Forgetii \u2014 bone-white rim",
     "image": "/images/instagram/anthurium-forgetii.png",
     "caption": "Bone-white, edge to edge.\n\nAnthurium forgetii rounds its dark leaves into near-perfect ovals, rimmed and veined in pale bone-white. No lobes, no drama \u2014 just a clean, gleaming disc.",
@@ -1315,7 +1315,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d23.jpg"
+    "img_ready": "/images/ig_ready/d23.jpg",
+    "posted_at": "2026-07-13",
+    "ig_media_id": "18109697861052877"
   },
   {
     "id": "model-08",
