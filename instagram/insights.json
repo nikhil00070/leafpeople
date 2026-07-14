@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-14T06:12:28+00:00",
+  "updated": "2026-07-14T06:40:29+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 199,
+    "followers": 204,
     "posts": 37
   },
   "summary": {
     "reels": {
       "count": 23,
-      "avg_reach": 74,
+      "avg_reach": 75,
       "avg_eng_pct": 8.5,
       "avg_watch_s": 4.4,
-      "avg_plays": 92
+      "avg_plays": 93
     },
     "images": {
       "count": 14,
@@ -23,7 +23,7 @@
     {
       "date": "2026-07-13",
       "type": "IMAGE",
-      "reach": 4,
+      "reach": 5,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -39,30 +39,30 @@
     {
       "date": "2026-07-12",
       "type": "REEL",
-      "reach": 35,
+      "reach": 36,
       "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 2,
-      "watch_ms": 3365,
-      "plays": 44,
+      "watch_ms": 3328,
+      "plays": 45,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
-      "eng_pct": 5.7
+      "eng_pct": 5.6
     },
     {
       "date": "2026-07-11",
       "type": "REEL",
-      "reach": 272,
+      "reach": 273,
       "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 2972,
-      "plays": 314,
+      "watch_ms": 2962,
+      "plays": 315,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
@@ -327,23 +327,23 @@
     {
       "date": "2026-06-24",
       "type": "REEL",
-      "reach": 38,
+      "reach": 39,
       "likes": 5,
       "comments": 1,
-      "saved": 0,
+      "saved": 1,
       "shares": 0,
-      "total_interactions": 7,
-      "watch_ms": 7037,
-      "plays": 48,
+      "total_interactions": 8,
+      "watch_ms": 7025,
+      "plays": 49,
       "label": "d18 Color of life",
       "hook": "Green is the color of life.",
       "is_reel": true,
-      "eng_pct": 18.4
+      "eng_pct": 20.5
     },
     {
       "date": "2026-06-23",
       "type": "REEL",
-      "reach": 29,
+      "reach": 30,
       "likes": 8,
       "comments": 0,
       "saved": 1,
@@ -354,7 +354,7 @@
       "label": "d17 The Choc\u00f3",
       "hook": "The Choc\u00f3 \u00b7 Colombia",
       "is_reel": true,
-      "eng_pct": 31.0
+      "eng_pct": 30.0
     },
     {
       "date": "2026-06-22",
@@ -439,18 +439,18 @@
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 52,
+      "reach": 53,
       "likes": 8,
       "comments": 0,
       "saved": 0,
       "shares": 1,
       "total_interactions": 10,
-      "watch_ms": 6156,
-      "plays": 78,
+      "watch_ms": 6189,
+      "plays": 81,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 19.2
+      "eng_pct": 18.9
     },
     {
       "date": "2026-06-16",
@@ -487,18 +487,18 @@
     {
       "date": "2026-06-14",
       "type": "REEL",
-      "reach": 31,
+      "reach": 32,
       "likes": 4,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 5,
-      "watch_ms": 4225,
-      "plays": 57,
+      "watch_ms": 4187,
+      "plays": 58,
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
       "is_reel": true,
-      "eng_pct": 16.1
+      "eng_pct": 15.6
     },
     {
       "date": "2026-06-13",
@@ -535,23 +535,23 @@
     {
       "date": "2026-06-11",
       "type": "IMAGE",
-      "reach": 27,
+      "reach": 28,
       "likes": 1,
       "comments": 0,
-      "saved": 0,
+      "saved": 1,
       "shares": 0,
-      "total_interactions": 1,
+      "total_interactions": 2,
       "watch_ms": 0,
       "plays": 0,
       "label": "d5 Find the light",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 3.7
+      "eng_pct": 7.1
     },
     {
       "date": "2026-06-10",
       "type": "IMAGE",
-      "reach": 27,
+      "reach": 28,
       "likes": 4,
       "comments": 0,
       "saved": 0,
@@ -562,12 +562,12 @@
       "label": "d4 What is Leaf People",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 14.8
+      "eng_pct": 14.3
     },
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 24,
+      "reach": 25,
       "likes": 3,
       "comments": 2,
       "saved": 0,
@@ -578,12 +578,12 @@
       "label": "d3 Meet the Queen",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 20.8
+      "eng_pct": 20.0
     },
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 25,
+      "reach": 26,
       "likes": 2,
       "comments": 0,
       "saved": 0,
@@ -594,12 +594,12 @@
       "label": "d2 Breathe in",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 8.0
+      "eng_pct": 7.7
     },
     {
       "date": "2026-06-09",
       "type": "IMAGE",
-      "reach": 22,
+      "reach": 23,
       "likes": 4,
       "comments": 0,
       "saved": 0,
@@ -610,7 +610,7 @@
       "label": "d1 Welcome home",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 18.2
+      "eng_pct": 17.4
     }
   ],
   "diag": null
