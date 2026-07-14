@@ -1325,7 +1325,7 @@
     "date": "2026-07-14",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "New leaf priorities",
     "image": "/images/instagram/model-08-cover.jpg",
     "img_ready": "/images/instagram/model-08-cover.jpg",
@@ -1351,7 +1351,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-14",
+    "ig_media_id": "17936794356291430"
   },
   {
     "id": "d24",
