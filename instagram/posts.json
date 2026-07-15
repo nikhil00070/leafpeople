@@ -1361,7 +1361,7 @@
     "date": "2026-07-15",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "White Knight",
     "image": "/images/instagram/philodendron-white-knight.jpg",
     "caption": "Half-and-half.\n\nPhilodendron 'White Knight' throws near-black stems against crisp white-variegated leaves. High contrast, high demand, slow to climb \u2014 the collector's tax.",
@@ -1389,7 +1389,9 @@
     "reel": true,
     "hook": "When one leaf costs $500",
     "img_ready": "/images/ig_ready/d24.jpg",
-    "video": "/videos/instagram/d24.mp4"
+    "video": "/videos/instagram/d24.mp4",
+    "posted_at": "2026-07-15",
+    "ig_media_id": "18143521192529020"
   },
   {
     "id": "d25",
