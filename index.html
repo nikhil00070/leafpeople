@@ -59,8 +59,8 @@
 <style>
   /* ---- Hero ---- */
   .hero { min-height: 100vh; display: flex; align-items: center; padding: 3.25rem 2rem 0; }
-  .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 2.5rem; align-items: center; max-width: 1280px; margin: 0 auto; width: 100%; }
-  .hero-text { max-width: 720px; }
+  .hero-grid { display: grid; grid-template-columns: 1.5fr .7fr; gap: 2.5rem; align-items: center; max-width: 1280px; margin: 0 auto; width: 100%; }
+  .hero-text { max-width: 800px; }
   .hero h1 { font-size: clamp(2.6rem, 6.5vw, 5rem); font-weight: 900; letter-spacing: -.04em; line-height: .98; margin: 1rem 0; }
   .hero .sub { font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 500; line-height: 1.5; color: var(--text-dim); max-width: none; margin-bottom: 1.6rem; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; }
@@ -79,7 +79,7 @@
   .qr-sub { font-size: .7rem; color: var(--text-faint); }
 
   /* ---- Phone mockup (device frame baked into the screenshot; corners transparent) ---- */
-  .phone-stage { display: flex; justify-content: center; align-items: center; position: relative; perspective: 1500px; }
+  .phone-stage { display: flex; justify-content: flex-end; align-items: center; position: relative; perspective: 1500px; }
   .phone-stage::before {
     content: ""; position: absolute; width: 112%; height: 112%; z-index: 0;
     background: radial-gradient(ellipse at center, rgba(91,209,122,.20) 0%, rgba(46,125,246,.12) 38%, transparent 66%);
@@ -247,6 +247,7 @@
     .metrics { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .glass-chip { display: none; }
     .hero-text { margin: 0 auto; }
+    .phone-stage { justify-content: center; }
   }
 </style>
 </head>
@@ -276,7 +277,7 @@
   <div class="hero-grid">
     <div class="hero-text reveal">
       <span class="badge"><span class="dot"></span> Now on the App Store · iOS</span>
-      <h1>Identify it. Care for it. Collect it. <span class="accent">The complete app for rare aroids.</span></h1>
+      <h1>Identify it. Care for it. Collect it. <span class="accent">The complete app for rare rainforest plants.</span></h1>
       <p class="sub">Four tools in one: a plant-ID engine tuned for rare aroids, a care tracker that keeps them alive, a collector's field guide of deep-dive stories, and a marketplace of trusted growers — for the rainforest plants like velvet philodendrons, anthuriums, hoyas, monsteras &amp; begonias.</p>
       <div class="hero-cta">
         <a class="btn-appstore" href="https://apps.apple.com/us/app/leaf-people-rare-plant-guide/id6760627345" target="_blank" rel="noopener">
