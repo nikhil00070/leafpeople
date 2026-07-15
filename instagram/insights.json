@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T05:53:44+00:00",
+  "updated": "2026-07-15T06:18:07+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 314,
@@ -23,18 +23,18 @@
     {
       "date": "2026-07-14",
       "type": "REEL",
-      "reach": 148,
+      "reach": 150,
       "likes": 9,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 9,
-      "watch_ms": 3582,
-      "plays": 166,
+      "watch_ms": 3533,
+      "plays": 169,
       "label": "d38 New leaf priorities",
       "hook": "200 unread emails. Me: is that a new leaf?",
       "is_reel": true,
-      "eng_pct": 6.1
+      "eng_pct": 6.0
     },
     {
       "date": "2026-07-13",
