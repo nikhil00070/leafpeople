@@ -1399,7 +1399,7 @@
     "date": "2026-07-16",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "First rare plant",
     "image": "/images/plants/plant-10.jpg",
     "caption": "Remember your first 'real' rare plant?\n\nThe one you saved for, tracked down, unboxed with your heart in your throat \u2014 then checked on six times a day for a week.\n\nDrop it in the comments. \ud83d\udc47",
@@ -1424,7 +1424,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d25.jpg"
+    "img_ready": "/images/ig_ready/d25.jpg",
+    "posted_at": "2026-07-16",
+    "ig_media_id": "18115127944926897"
   },
   {
     "id": "b3-05",
