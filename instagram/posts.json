@@ -1434,7 +1434,7 @@
     "date": "2026-07-17",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "The Atlantic Forest",
     "image": "/images/instagram/b3-05-cover.jpg",
     "img_ready": "/images/instagram/b3-05-cover.jpg",
@@ -1461,7 +1461,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-17",
+    "ig_media_id": "17895826689552440"
   },
   {
     "id": "model-09",
