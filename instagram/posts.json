@@ -1507,7 +1507,7 @@
     "date": "2026-07-19",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "One small plant",
     "image": "/images/instagram/b2-04-cover.jpg",
     "img_ready": "/images/instagram/b2-04-cover.jpg",
@@ -1532,7 +1532,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-19",
+    "ig_media_id": "18071497652393444"
   },
   {
     "id": "d26",
