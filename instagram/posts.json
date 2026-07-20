@@ -1542,7 +1542,7 @@
     "date": "2026-07-20",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Wendlingeri \u2014 pendant velvet",
     "image": "/images/source/inat/anthurium-wendlingeri-inat.jpg",
     "caption": "Velvet, but make it alive.\n\nAnthurium wendlingeri hangs in long, quilted, light-eating ribbons \u2014 matte enough to read as shadow. Feels like suede, photographs like a void. No filter.",
@@ -1570,7 +1570,9 @@
     "reel": true,
     "hook": "Velvet straps a metre long",
     "img_ready": "/images/ig_ready/d26.jpg",
-    "video": "/videos/instagram/d26.mp4"
+    "video": "/videos/instagram/d26.mp4",
+    "posted_at": "2026-07-20",
+    "ig_media_id": "17936249586309370"
   },
   {
     "id": "d27",
