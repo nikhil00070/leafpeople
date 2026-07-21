@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-21",
-  "count": 178,
+  "count": 179,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1030,6 +1030,19 @@
       "url": "https://leafpeople.app/field-guide/hoya-kerrii-beyond-novelty",
       "data_url": "https://leafpeople.app/field-guide/hoya-kerrii-beyond-novelty/_data.json",
       "image": "https://leafpeople.app/images/source/stock/hoya-kerrii-beyond-novelty-hero.jpg"
+    },
+    {
+      "id": "the-leaf/visiting-the-glasshouse",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "visiting-the-glasshouse",
+      "title": "The Glasshouse Visit",
+      "category": "Collector Culture",
+      "description": "What to look for, what to ask, and what to bring when a serious collector opens the glasshouse door for an afternoon.",
+      "date": "2026-01-31",
+      "url": "https://leafpeople.app/the-leaf/visiting-the-glasshouse",
+      "data_url": "https://leafpeople.app/the-leaf/visiting-the-glasshouse/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/visiting-the-glasshouse-hero.jpg"
     },
     {
       "id": "the-leaf/collector-burnout",
