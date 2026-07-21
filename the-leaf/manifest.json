@@ -1,5 +1,65 @@
 [
   {
+    "slug": "rainforest-western-amazon",
+    "title": "Rainforest: The Western Amazon — Pink-Leaf Country",
+    "category": "Rainforest",
+    "description": "The plants collectors chase don't come from one forest. They come from the Andean foothills and blackwater rivers of Peru and Ecuador — here's why.",
+    "url": "/the-leaf/rainforest-western-amazon",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-choco",
+    "title": "Rainforest: The Chocó — The Wettest Forest on Earth",
+    "category": "Rainforest",
+    "description": "The Colombian Choco gets 13 metres of rain a year and almost no dry season. It is where Anthurium warocqueanum, veitchii, and gloriosum evolved.",
+    "url": "/the-leaf/rainforest-choco",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-atlantic-forest",
+    "title": "Rainforest: The Atlantic Forest — The 7% That's Left",
+    "category": "Rainforest",
+    "description": "The Mata Atlântica is nearly gone — and that's precisely why it produced Philodendron spiritus-sancti, Begonia listada, and some of the most endemic plants on earth.",
+    "url": "/the-leaf/rainforest-atlantic-forest",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-darien",
+    "title": "Rainforest: The Darién — Where the Black Velvets Begin",
+    "category": "Rainforest",
+    "description": "The dark-velvet anthuriums on collectors' shelves trace back to one roadless strip of Panamanian rainforest. Here's the origin story.",
+    "url": "/the-leaf/rainforest-darien",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-ecuadorian-cloud-forest",
+    "title": "Rainforest: The Ecuadorian Cloud Forest — The Species Still Being Named",
+    "category": "Rainforest",
+    "description": "From Mindo to the Cordillera de Cutucu, Ecuador's Andean slopes produce new aroid species almost every year. Here's why the forest works that way.",
+    "url": "/the-leaf/rainforest-ecuadorian-cloud-forest",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-borneo",
+    "title": "Rainforest: Borneo — The Island That Grows Its Own Rules",
+    "category": "Rainforest",
+    "description": "Borneo's ancient rainforest — limestone karst, ultramafic soils, 130 million years of isolation — shaped the hoyas, begonias, and alocasias collectors chase.",
+    "url": "/the-leaf/rainforest-borneo",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "philodendron-vs-anthurium",
     "title": "Philodendron vs. Anthurium: How to Tell Them Apart",
     "category": "Field Skills",
