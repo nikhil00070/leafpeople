@@ -1006,6 +1006,19 @@
       "image": "https://leafpeople.app/images/source/stock/hoya-carnosa-compacta-hero.jpg"
     },
     {
+      "id": "the-leaf/sourcing-from-southeast-asia",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "sourcing-from-southeast-asia",
+      "title": "The Long Way Home: Buying Rare Aroids from Southeast Asia",
+      "category": "The Market",
+      "description": "How serious collectors source rare aroids from Indonesia, Thailand and the Philippines — the sellers, the shipping, and the paperwork that makes it legal.",
+      "date": "2026-01-17",
+      "url": "https://leafpeople.app/the-leaf/sourcing-from-southeast-asia",
+      "data_url": "https://leafpeople.app/the-leaf/sourcing-from-southeast-asia/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/sourcing-from-southeast-asia-hero.jpg"
+    },
+    {
       "id": "the-leaf/instagram-after-the-fomo",
       "section": "the-leaf",
       "section_label": "Understory",
