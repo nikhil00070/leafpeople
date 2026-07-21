@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T17:54:31+00:00",
+  "updated": "2026-07-21T17:59:52+00:00",
   "account": {
     "username": "leafpeople.app",
     "followers": 2223,
@@ -71,13 +71,13 @@
     {
       "date": "2026-07-18",
       "type": "REEL",
-      "reach": 224,
+      "reach": 225,
       "likes": 8,
       "comments": 2,
       "saved": 1,
       "shares": 0,
       "total_interactions": 11,
-      "watch_ms": 3684,
+      "watch_ms": 3683,
       "plays": 264,
       "label": "d42 The reset",
       "hook": "Just need to see something green and alive.",
@@ -87,13 +87,13 @@
     {
       "date": "2026-07-17",
       "type": "REEL",
-      "reach": 214,
+      "reach": 215,
       "likes": 6,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3031,
+      "watch_ms": 3018,
       "plays": 251,
       "label": "d41 The Atlantic Forest",
       "hook": "The Atlantic Forest \u00b7 Brazil",
@@ -151,7 +151,7 @@
     {
       "date": "2026-07-13",
       "type": "IMAGE",
-      "reach": 184,
+      "reach": 185,
       "likes": 7,
       "comments": 0,
       "saved": 3,
@@ -162,7 +162,7 @@
       "label": "d37 Forgetii \u2014 bone-white rim",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 6.0
+      "eng_pct": 5.9
     },
     {
       "date": "2026-07-12",
@@ -215,13 +215,13 @@
     {
       "date": "2026-07-09",
       "type": "REEL",
-      "reach": 250,
+      "reach": 251,
       "likes": 7,
       "comments": 0,
       "saved": 3,
       "shares": 1,
       "total_interactions": 11,
-      "watch_ms": 3376,
+      "watch_ms": 3372,
       "plays": 298,
       "label": "d33 Just looking",
       "hook": "Me: I'm just looking.",
@@ -279,23 +279,23 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 156,
+      "reach": 157,
       "likes": 3,
       "comments": 0,
       "saved": 1,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 3426,
+      "watch_ms": 3410,
       "plays": 178,
       "label": "d29 Monteverde",
       "hook": "Monteverde Cloud Forest \u00b7 Costa Rica",
       "is_reel": true,
-      "eng_pct": 2.6
+      "eng_pct": 2.5
     },
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 115,
+      "reach": 116,
       "likes": 6,
       "comments": 0,
       "saved": 0,
