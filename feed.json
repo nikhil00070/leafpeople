@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-21",
-  "count": 216,
+  "count": 217,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2811,6 +2811,19 @@
       "url": "https://leafpeople.app/the-leaf/getting-to-know-hoya",
       "data_url": "https://leafpeople.app/the-leaf/getting-to-know-hoya/_data.json",
       "image": "https://leafpeople.app/images/source/stock/getting-to-know-hoya-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-choco",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-choco",
+      "title": "Rainforest: The Chocó — The Wettest Forest on Earth",
+      "category": "Rainforest",
+      "description": "The Colombian Choco gets 13 metres of rain a year and almost no dry season. It is where Anthurium warocqueanum, veitchii, and gloriosum evolved.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-choco",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-choco/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-choco-hero.jpg"
     }
   ]
 }
