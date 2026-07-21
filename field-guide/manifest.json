@@ -86,7 +86,8 @@
     "description": "A working guide to rhizomatous and rex Begonias: substrate, humidity, light, and the cultivars worth the trouble.",
     "url": "/field-guide/begonia-rex-care",
     "date": "2026-06-27",
-    "thumb": "/images/source/stock/begonia-rex-care-hero.jpg"
+    "thumb": "/images/source/stock/begonia-rex-care-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "alocasia-spider-mites-and-corms",
@@ -95,7 +96,8 @@
     "description": "A practical Alocasia field guide: mite control, dormancy recovery, substrate, light, and the species worth the trouble.",
     "url": "/field-guide/alocasia-spider-mites-and-corms",
     "date": "2026-06-16",
-    "thumb": "/images/source/stock/alocasia-spider-mites-and-corms-hero.jpg"
+    "thumb": "/images/source/stock/alocasia-spider-mites-and-corms-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "aglaonema-collector-cultivars",
@@ -104,7 +106,8 @@
     "description": "A collector's guide to the pink, red, and silver Aglaonema cultivars worth growing — plus the rarer Pictum complex from Sumatra.",
     "url": "/field-guide/aglaonema-collector-cultivars",
     "date": "2026-06-06",
-    "thumb": "/images/source/stock/aglaonema-collector-cultivars-hero.jpg"
+    "thumb": "/images/source/stock/aglaonema-collector-cultivars-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "calathea-survival-guide",
@@ -113,7 +116,8 @@
     "description": "A field guide to keeping Calathea and Goeppertia alive: water chemistry, humidity floors, substrate, and what leaf curl actually means.",
     "url": "/field-guide/calathea-survival-guide",
     "date": "2026-05-26",
-    "thumb": "/images/source/stock/calathea-survival-guide-hero.jpg"
+    "thumb": "/images/source/stock/calathea-survival-guide-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "scindapsus-pictus-family",
@@ -122,7 +126,8 @@
     "description": "A working guide to Exotica, Silvery Ann, Trebii, and Treubii Moonlight — what each one is, how to keep it, and which is worth your shelf space.",
     "url": "/field-guide/scindapsus-pictus-family",
     "date": "2026-05-16",
-    "thumb": "/images/source/stock/scindapsus-pictus-family-hero.jpg"
+    "thumb": "/images/source/stock/scindapsus-pictus-family-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "rhaphidophora-tetrasperma-versus-monstera",
@@ -131,7 +136,8 @@
     "description": "How to tell Rhaphidophora tetrasperma from a juvenile Monstera deliciosa — leaf shape, habit, roots, and what each plant actually wants from you.",
     "url": "/field-guide/rhaphidophora-tetrasperma-versus-monstera",
     "date": "2026-05-05",
-    "thumb": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-hero.jpg"
+    "thumb": "/images/source/stock/rhaphidophora-tetrasperma-versus-monstera-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "syngonium-rare-cultivars",
@@ -140,7 +146,8 @@
     "description": "A working collector's take on Albo, Strawberry, Confetti and Mottled Syngonium — what holds variegation, what reverts, and what's worth the shelf space.",
     "url": "/field-guide/syngonium-rare-cultivars",
     "date": "2026-04-24",
-    "thumb": "/images/source/stock/syngonium-rare-cultivars-hero.jpg"
+    "thumb": "/images/source/stock/syngonium-rare-cultivars-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "ctenanthe-never-never",
@@ -159,7 +166,8 @@
     "description": "A field guide to Homalomena — Selby, 'Camouflage', sumatrana, and the species serious aroid collectors should be tracking down now.",
     "url": "/field-guide/homalomena-under-collected",
     "date": "2026-04-03",
-    "thumb": "/images/source/stock/homalomena-under-collected-hero.jpg"
+    "thumb": "/images/source/stock/homalomena-under-collected-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "caladium-dormancy-window",
@@ -168,7 +176,8 @@
     "description": "How to read Caladium tuber dormancy, time the wake-up window, and coax a second flush of leaves from the same pot.",
     "url": "/field-guide/caladium-dormancy-window",
     "date": "2026-03-24",
-    "thumb": "/images/source/stock/caladium-dormancy-window-hero.jpg"
+    "thumb": "/images/source/stock/caladium-dormancy-window-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "amydrium-medium-care",
@@ -177,7 +186,8 @@
     "description": "How to pick a totem, light, and substrate that actually pushes Amydrium medium and A. 'Silver' into their fenestrated adult form.",
     "url": "/field-guide/amydrium-medium-care",
     "date": "2026-03-13",
-    "thumb": "/images/source/stock/amydrium-medium-care-hero.jpg"
+    "thumb": "/images/source/stock/amydrium-medium-care-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "schismatoglottis-jewel-aroid",
@@ -216,7 +226,8 @@
     "description": "A field guide to fuzzy-leaved begonias — B. listada, dietrichiana, masoniana — how their trichomes work and how to grow them well.",
     "url": "/field-guide/begonia-hairy-leaf-types",
     "date": "2026-01-29",
-    "thumb": "/images/source/stock/begonia-hairy-leaf-types-hero.jpg"
+    "thumb": "/images/source/stock/begonia-hairy-leaf-types-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "monstera-adansonii-archipelago",
@@ -235,7 +246,8 @@
     "description": "Telling carnosa from obovata, kerrii from callistophylla, and parsing the splash-leaf complex — a collector's field key for Hoya identification.",
     "url": "/field-guide/hoya-leaf-based-id",
     "date": "2026-01-08",
-    "thumb": "/images/source/stock/hoya-leaf-based-id-hero.jpg"
+    "thumb": "/images/source/stock/hoya-leaf-based-id-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "epipremnum-fenestration-timeline",
@@ -244,7 +256,8 @@
     "description": "How long it really takes Epipremnum pinnatum to fenestrate, why climbing structure changes everything, and the cultivars worth growing up a slab.",
     "url": "/field-guide/epipremnum-fenestration-timeline",
     "date": "2025-12-29",
-    "thumb": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg"
+    "thumb": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "rhaphidophora-decursiva",
@@ -693,7 +706,8 @@
     "description": "Five Hoyas that forgive new growers without looking like grocery-store filler — picks, substrate, light, and the mistakes that kill them.",
     "url": "/field-guide/hoya-for-beginners",
     "date": "2024-09-07",
-    "thumb": "/images/source/stock/hoya-for-beginners-hero.jpg"
+    "thumb": "/images/source/stock/hoya-for-beginners-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-beginners",
@@ -702,7 +716,8 @@
     "description": "Five approachable philodendrons that teach you the genus — from a bulletproof heartleaf to a velvet climber worth chasing.",
     "url": "/field-guide/philodendron-beginners",
     "date": "2024-08-28",
-    "thumb": "/images/source/stock/philodendron-beginners-hero.jpg"
+    "thumb": "/images/source/stock/philodendron-beginners-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "monstera-variegated-worth-it",
@@ -711,7 +726,8 @@
     "description": "Not every variegated Monstera earns its price tag. Here's which cultivars deliver on leaf, growth habit, and long-term value.",
     "url": "/field-guide/monstera-variegated-worth-it",
     "date": "2024-08-17",
-    "thumb": "/images/source/stock/monstera-variegated-worth-it-hero.jpg"
+    "thumb": "/images/source/stock/monstera-variegated-worth-it-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "monstera-obliqua-real-versus-fake",
@@ -720,7 +736,8 @@
     "description": "How to tell a true Monstera obliqua from adansonii sold under its name — and what keeping one actually demands.",
     "url": "/field-guide/monstera-obliqua-real-versus-fake",
     "date": "2024-08-06",
-    "thumb": "/images/source/stock/monstera-obliqua-real-versus-fake-hero.jpg"
+    "thumb": "/images/source/stock/monstera-obliqua-real-versus-fake-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-billietiae",
@@ -749,7 +766,8 @@
     "description": "A collector's key to four creeping velvet philodendrons that confuse even seasoned growers — by leaf, petiole, and crawl.",
     "url": "/field-guide/philodendron-gloriosum-versus-mamei",
     "date": "2024-07-05",
-    "thumb": "/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg"
+    "thumb": "/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-spiritus-sancti-expectations",
@@ -798,7 +816,8 @@
     "description": "Species, substrate, humidity, and common mistakes for growing velvet-leaf anthuriums — a practical guide for serious collectors.",
     "url": "/field-guide/anthurium-velvet-care",
     "date": "2024-05-13",
-    "thumb": "/images/source/book/anthurium-velvet-care-hero.jpg"
+    "thumb": "/images/source/book/anthurium-velvet-care-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "anthurium-regale",
@@ -827,7 +846,8 @@
     "description": "How to distinguish Anthurium warocqueanum, clarinervium, magnificum and crystallinum — and grow the dark velvets without losing leaves.",
     "url": "/field-guide/anthurium-warocqueanum-and-clarinervium",
     "date": "2024-04-12",
-    "thumb": "/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg"
+    "thumb": "/images/source/book/anthurium-warocqueanum-and-clarinervium-hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "anthurium-clarinervium-id-gold-standard",
