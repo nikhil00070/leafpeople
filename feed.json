@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-21",
-  "count": 217,
+  "count": 218,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2824,6 +2824,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-choco",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-choco/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-choco-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-western-amazon",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-western-amazon",
+      "title": "Rainforest: The Western Amazon — Pink-Leaf Country",
+      "category": "Rainforest",
+      "description": "The plants collectors chase don't come from one forest. They come from the Andean foothills and blackwater rivers of Peru and Ecuador — here's why.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-western-amazon",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-western-amazon/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-western-amazon-hero.jpg"
     }
   ]
 }
