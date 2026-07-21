@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-21",
-  "count": 179,
+  "count": 182,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -1043,6 +1043,19 @@
       "url": "https://leafpeople.app/the-leaf/instagram-after-the-fomo",
       "data_url": "https://leafpeople.app/the-leaf/instagram-after-the-fomo/_data.json",
       "image": "https://leafpeople.app/images/source/inat/instagram-after-the-fomo-hero.jpg"
+    },
+    {
+      "id": "field-guide/philodendron-gloriosum-versus-mamei",
+      "section": "field-guide",
+      "section_label": "Field Guide",
+      "slug": "philodendron-gloriosum-versus-mamei",
+      "title": "Telling Gloriosum from Mamei, Dean McDowell, and Pastazanum",
+      "category": "Philodendron",
+      "description": "A collector's key to four creeping velvet philodendrons that confuse even seasoned growers — by leaf, petiole, and crawl.",
+      "date": "2024-07-05",
+      "url": "https://leafpeople.app/field-guide/philodendron-gloriosum-versus-mamei",
+      "data_url": "https://leafpeople.app/field-guide/philodendron-gloriosum-versus-mamei/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/philodendron-gloriosum-versus-mamei-hero.jpg"
     },
     {
       "id": "field-guide/hoya-kerrii-beyond-novelty",
