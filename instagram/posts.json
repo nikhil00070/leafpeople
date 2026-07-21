@@ -1580,7 +1580,7 @@
     "date": "2026-07-21",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Tortum \u2014 living sculpture",
     "image": "/images/instagram/philodendron-tortum.jpg",
     "caption": "Almost not there.\n\nPhilodendron tortum splits its leaves into thin, twisting, skeletal fingers \u2014 more sculpture than foliage. The jungle's idea of minimalism.",
@@ -1605,7 +1605,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d27.jpg"
+    "img_ready": "/images/ig_ready/d27.jpg",
+    "posted_at": "2026-07-21",
+    "ig_media_id": "17943344490253089"
   },
   {
     "id": "model-10",
