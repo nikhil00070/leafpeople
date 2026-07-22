@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 226,
+  "count": 227,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2928,6 +2928,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-sumatra",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-sumatra/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-sumatra-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-philippines",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-philippines",
+      "title": "Rainforest: The Philippines — 7,000 Islands, 7,000 Experiments",
+      "category": "Rainforest (Paleotropics)",
+      "description": "How island isolation across the Philippine archipelago drove wild speciation in Hoya, Alocasia, and Medinilla — and how little of it remains.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-philippines",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-philippines/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-philippines-hero.jpg?v=2"
     },
     {
       "id": "the-leaf/rainforest-western-ghats",
