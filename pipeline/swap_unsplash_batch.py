@@ -45,6 +45,21 @@ SWAPS = {
    "body_file": "zoshua-colah-yCkFdegGv4M-unsplash.jpg", "body_attr": "Zoshua Colah / Unsplash",
    "body_caption": "Forested Western Ghats hills at golden hour.",
  },
+ "rainforest-monteverde-costa-rica": {
+   "hero_file": "leslie-cross-qrNjBApCZBM-unsplash.jpg", "hero_attr": "Leslie Cross / Unsplash",
+   "body_file": "frames-for-your-heart-vrSJKeOiLbE-unsplash.jpg", "body_attr": "Frames For Your Heart / Unsplash",
+   "body_caption": "Cloud forest blankets the hills above Monteverde, Costa Rica.",
+ },
+ "rainforest-guiana-shield": {
+   "hero_file": "edgardo-ibarra-eTDBAGfFQzw-unsplash.jpg", "hero_attr": "Edgardo Ibarra / Unsplash",
+   "body_file": "jorge-brito-XkdjiaMnz14-unsplash.jpg", "body_attr": "Jorge Brito / Unsplash",
+   "body_caption": "A trail winds through the forest of the Guiana Shield.",
+ },
+ "rainforest-northwest-amazon": {
+   "hero_file": "filippo-cesarini-RyKnhwO7wMw-unsplash.jpg", "hero_attr": "Filippo Cesarini / Unsplash",
+   "body_file": "waren-brasse-IzCUWUi_j8I-unsplash.jpg", "body_attr": "Waren Brasse / Unsplash",
+   "body_caption": "Unbroken rainforest canopy across the northwest Amazon.",
+ },
 }
 
 def resize_into(src_name, dest):
