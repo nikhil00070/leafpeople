@@ -77,6 +77,9 @@ def main() -> int:
     subprocess.run([sys.executable, str(ROOT / "generate_sitemap.py")], check=False)
     subprocess.run([sys.executable, str(ROOT / "articledrip_seed.py")], check=False)
     subprocess.run([sys.executable, str(ROOT / "generate_feed.py")], check=False)
+    # llms.txt (AEO index for AI answer engines) reads feed.json, so refresh it LAST —
+    # otherwise newly-published articles never make it into the AI-citable index.
+    subprocess.run([sys.executable, str(ROOT / "generate_llms.py")], check=False)
     return 0
 
 
