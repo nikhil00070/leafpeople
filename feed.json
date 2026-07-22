@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-07-21",
-  "count": 218,
+  "updated": "2026-07-22",
+  "count": 220,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2837,6 +2837,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-choco",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-choco/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-choco-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-ecuadorian-cloud-forest",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-ecuadorian-cloud-forest",
+      "title": "Rainforest: The Ecuadorian Cloud Forest — The Species Still Being Named",
+      "category": "Rainforest",
+      "description": "From Mindo to the Cordillera de Cutucu, Ecuador's Andean slopes produce new aroid species almost every year. Here's why the forest works that way.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-ecuadorian-cloud-forest",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-ecuadorian-cloud-forest/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-ecuadorian-cloud-forest-hero.jpg"
     },
     {
       "id": "the-leaf/rainforest-western-amazon",
