@@ -17,6 +17,22 @@ service firebase.storage {
         && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
     }
 
+    // Jungle Rhythm chat photos — a member uploads under their own uid; any signed-in member reads.
+    match /crewPhotos/{uid}/{image} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 8 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // Member avatars — own uid only; public read (shown next to messages everywhere).
+    match /crewAvatars/{uid}/{image} {
+      allow read:  if true;
+      allow write: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
     // Everything else: no client access.
     match /{allPaths=**} {
       allow read, write: if false;

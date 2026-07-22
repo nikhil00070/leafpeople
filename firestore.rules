@@ -38,6 +38,14 @@ service cloud.firestore {
         && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
     }
 
+    // In-app update prompt config (latestVersion / minVersion / storeURL / message).
+    // READ is public (checked on launch, before login; no sensitive data). WRITE admin-only.
+    match /appConfig/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
     // Cloud CORRECTIONS to the bundled built-in plants (matched by scientific name,
     // applied in place by PlantLibrarySync.applyBundledOverrides). Separate collection
     // from plantLibrary so older builds never read it. READ public; WRITE admin-only.
@@ -45,6 +53,86 @@ service cloud.firestore {
       allow read: if true;
       allow write: if request.auth != null
         && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+
+    // ── Jungle Crew chat (build spec §16) ───────────────────────────────────
+    // Any signed-in member reads crew content and posts/reacts. A member may only
+    // create messages authored as themselves (never flagged as Kimi), and only
+    // edit/delete their OWN messages; anyone may toggle reactions or add themselves
+    // to readBy on any message. Crew + channel docs and Kimi's messages are written
+    // by the seed/kimiReply Cloud Function via the Admin SDK, which bypasses rules.
+    function isCrewAdmin() {
+      return request.auth != null
+        && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+    }
+    // Non-authors may only touch reactions, read receipts, or cast a poll vote (the whole
+    // `poll` map — members are trusted, same posture as reactions).
+    function onlyReactionsOrReads() {
+      return request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['reactions', 'readBy', 'readAt', 'openedAt', 'poll', 'trivia', 'pinned']);
+    }
+
+    match /crews/{crewId} {
+      allow read:  if request.auth != null;
+      allow write: if isCrewAdmin();
+
+      match /channels/{channelId} {
+        allow read:  if request.auth != null;
+        allow write: if isCrewAdmin();
+
+        match /messages/{messageId} {
+          allow read:   if request.auth != null;
+          allow create: if request.auth != null
+            && request.resource.data.authorId == request.auth.uid
+            && request.resource.data.isKimiGenerated == false;
+          // Author edits/soft-deletes own message, OR anyone toggling a reaction /
+          // adding a read receipt on someone else's message.
+          allow update: if request.auth != null
+            && ( resource.data.authorId == request.auth.uid || onlyReactionsOrReads() );
+          allow delete: if false;                 // soft-delete via update only
+        }
+
+        // Ephemeral "… is typing" — a member writes only their own doc; Kimi's is Admin-SDK.
+        match /typing/{uid} {
+          allow read:  if request.auth != null;
+          allow write: if request.auth != null && request.auth.uid == uid;
+        }
+      }
+
+      // A member manages only their OWN member doc (Roots/metrics awarded across
+      // members move to a Firestore trigger in Phase 4; own-doc writes work now).
+      match /members/{uid} {
+        allow read:  if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == uid;
+      }
+
+      // Events: any member reads; the creator owns edit/delete; anyone may RSVP (rsvps only).
+      match /events/{eventId} {
+        allow read:   if request.auth != null;
+        allow create: if request.auth != null && request.resource.data.createdBy == request.auth.uid;
+        allow update: if request.auth != null && (
+                         resource.data.createdBy == request.auth.uid
+                         || request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rsvps']));
+        allow delete: if request.auth != null && resource.data.createdBy == request.auth.uid;
+      }
+    }
+
+    // Private community insights — founder-only read; written by the server (admin SDK) only.
+    match /communityInsights/{doc} {
+      allow read:  if request.auth != null && request.auth.uid == 'VFVYI2Gbo2hU4gmRpdZ1QAUcBlG3';
+      allow write: if false;
+    }
+
+    // Moderation queue (spec §12): members file reports; only admin reads/acts.
+    match /reports/{reportId} {
+      allow create: if request.auth != null;
+      allow read, update, delete: if isCrewAdmin();
+    }
+
+    // Kimi over-post/rotation state — Admin SDK (Cloud Function) only.
+    match /kimiState/{crewId} {
+      allow read:  if request.auth != null;
+      allow write: if false;
     }
 
     // Everything else: NO direct client access. The RevenueCat webhook writes
