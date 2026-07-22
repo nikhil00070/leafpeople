@@ -9,7 +9,7 @@
     "The island separated from the Indian subcontinent roughly 88 million years ago, after an earlier split from Africa around 165 million years ago. What remained on that drifting fragment was a sample of Gondwanan life — incomplete, accidental — and whatever managed to cross the Mozambique Channel on rafts of vegetation in the millions of years since. From those founder populations, Madagascar assembled an entirely new biota. Approximately 90 percent of its terrestrial wildlife is found nowhere else on Earth. That figure is not a conservation talking point. It is the arithmetic of deep isolation, and it shapes every organism you see, from the ground up."
   ],
   "pull_quote": "Darwin predicted the moth before anyone had seen it — a single orchid spur, twelve inches deep, forced his hand.",
-  "body_image_caption": "Eastern Madagascar rainforest canopy, Masoala Peninsula.",
+  "body_image_caption": "A brown lemur in eastern Madagascar's rainforest.",
   "sections": [
     {
       "heading": "A Raft Across Deep Time",
@@ -85,8 +85,9 @@
     }
   ],
   "slug": "rainforest-madagascar",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/hero.jpg",
+  "hero": "/images/source/stock/rainforest-madagascar-hero.jpg",
+  "body_image": "/images/source/stock/rainforest-madagascar-body.jpg",
   "status": "pending",
-  "body_image_attribution": ""
+  "body_image_attribution": "Sandy Ravaloniaina / Unsplash",
+  "hero_attribution": "Sandy Ravaloniaina / Unsplash"
 }

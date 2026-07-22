@@ -29,6 +29,11 @@ SWAPS = {
    "body_file": "irfannur-diah-PquBsLA8tKM-unsplash.jpg", "body_attr": "Irfannur Diah / Unsplash",
    "body_caption": "Lake Toba fills an ancient volcanic caldera, northern Sumatra.",
  },
+ "rainforest-madagascar": {
+   "hero_file": "sandy-ravaloniaina-xFlKOFnxIIo-unsplash.jpg", "hero_attr": "Sandy Ravaloniaina / Unsplash",
+   "body_file": "sandy-ravaloniaina-PQ4a3wTeF9s-unsplash.jpg", "body_attr": "Sandy Ravaloniaina / Unsplash",
+   "body_caption": "A brown lemur in eastern Madagascar's rainforest.",
+ },
 }
 
 def resize_into(src_name, dest):
@@ -79,6 +84,12 @@ def apply(slug, cfg):
     print(f"  {slug}: hero={cfg['hero_file'][:28]}  body={'(kept)' if cfg.get('keep_body') else cfg.get('body_file','')[:28]}")
 
 if __name__ == "__main__":
-    for slug, cfg in SWAPS.items():
-        apply(slug, cfg)
+    import sys
+    # keep_body swaps are NOT idempotent (re-running copies the new hero over the body),
+    # so default to nothing and require explicit slugs.
+    want = sys.argv[1:]
+    if not want:
+        raise SystemExit("pass slug(s) to swap, e.g. rainforest-madagascar")
+    for slug in want:
+        apply(slug, SWAPS[slug])
     print("done.")
