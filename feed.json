@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 228,
+  "count": 230,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2904,6 +2904,19 @@
       "image": "https://leafpeople.app/images/source/stock/rainforest-madagascar-hero.jpg"
     },
     {
+      "id": "the-leaf/rainforest-monteverde-costa-rica",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-monteverde-costa-rica",
+      "title": "Rainforest: Monteverde, Costa Rica — The Cloud Forest You Can Actually Visit",
+      "category": "Rainforest (Neotropics)",
+      "description": "Monteverde's cloud forest drips with epiphytes and rare anthuriums. A field guide to the place — and why collectors should book the flight.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-monteverde-costa-rica",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-monteverde-costa-rica/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-monteverde-costa-rica-hero.jpg"
+    },
+    {
       "id": "the-leaf/rainforest-new-guinea",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -2941,6 +2954,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-guiana-shield",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-guiana-shield/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-guiana-shield-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-northwest-amazon",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-northwest-amazon",
+      "title": "Rainforest: The Northwest Amazon (Colombia & Peru) — Blackwater Country",
+      "category": "Rainforest (Neotropics)",
+      "description": "The Rio Negro's tannin-dark rivers and white-sand forests produce some of the Amazon's most specialized plants. A field portrait of blackwater Amazonia.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-northwest-amazon",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-northwest-amazon/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-northwest-amazon-hero.jpg"
     },
     {
       "id": "the-leaf/rainforest-philippines",
