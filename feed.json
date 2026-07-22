@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 224,
+  "count": 225,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2889,6 +2889,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-western-amazon",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-western-amazon/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-western-amazon-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-madagascar",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-madagascar",
+      "title": "Rainforest: Madagascar — Evolution's Island Laboratory",
+      "category": "Rainforest (Paleotropics)",
+      "description": "Madagascar's eastern rainforest spent 88 million years inventing its own rules. A field report on the planet's strangest evolutionary laboratory.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-madagascar",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-madagascar/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-madagascar-hero.jpg"
     },
     {
       "id": "the-leaf/rainforest-new-guinea",
