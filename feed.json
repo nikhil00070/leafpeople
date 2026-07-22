@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 227,
+  "count": 228,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2928,6 +2928,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-sumatra",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-sumatra/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-sumatra-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-guiana-shield",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-guiana-shield",
+      "title": "Rainforest: The Guiana Shield (Venezuela & the Guianas) — The Lost World of the Tepuis",
+      "category": "Rainforest (Neotropics)",
+      "description": "The Guiana Shield's tepuis are isolated tabletop mountains two billion years old — breeding grounds for carnivorous plants, ancient endemics, and collector aroids.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-guiana-shield",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-guiana-shield/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-guiana-shield-hero.jpg"
     },
     {
       "id": "the-leaf/rainforest-philippines",
