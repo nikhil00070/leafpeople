@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 225,
+  "count": 226,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2928,6 +2928,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-sumatra",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-sumatra/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-sumatra-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-western-ghats",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-western-ghats",
+      "title": "Rainforest: The Western Ghats, India — The Monsoon Mountains",
+      "category": "Rainforest (Paleotropics)",
+      "description": "The Western Ghats catch the full southwest monsoon and wrung it into one of Asia's wettest, most endemic-rich forests. A field portrait.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-western-ghats",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-western-ghats/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-western-ghats-hero.jpg"
     }
   ]
 }
