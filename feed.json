@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-22",
-  "count": 221,
+  "count": 222,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2811,6 +2811,19 @@
       "url": "https://leafpeople.app/the-leaf/getting-to-know-hoya",
       "data_url": "https://leafpeople.app/the-leaf/getting-to-know-hoya/_data.json",
       "image": "https://leafpeople.app/images/source/stock/getting-to-know-hoya-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-borneo",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-borneo",
+      "title": "Rainforest: Borneo, Malaysia & Indonesia — The Island That Grows Its Own Rules",
+      "category": "Rainforest",
+      "description": "Borneo's ancient rainforest — limestone karst, ultramafic soils, 130 million years of isolation — shaped the hoyas, begonias, and alocasias collectors chase.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-borneo",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-borneo/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-borneo-hero.jpg"
     },
     {
       "id": "the-leaf/rainforest-atlantic-forest",
