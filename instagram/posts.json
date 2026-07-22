@@ -1615,7 +1615,7 @@
     "date": "2026-07-22",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "More than most people",
     "image": "/images/instagram/model-10-cover.jpg",
     "img_ready": "/images/instagram/model-10-cover.jpg",
@@ -1641,7 +1641,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-22",
+    "ig_media_id": "17957379573186989"
   },
   {
     "id": "b3-06",
