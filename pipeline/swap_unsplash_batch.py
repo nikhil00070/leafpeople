@@ -34,6 +34,11 @@ SWAPS = {
    "body_file": "sandy-ravaloniaina-PQ4a3wTeF9s-unsplash.jpg", "body_attr": "Sandy Ravaloniaina / Unsplash",
    "body_caption": "A brown lemur in eastern Madagascar's rainforest.",
  },
+ "rainforest-western-ghats": {
+   "keep_hero": True,   # keep the PJeganathan Commons hero, only swap the body inset
+   "body_file": "zoshua-colah-yCkFdegGv4M-unsplash.jpg", "body_attr": "Zoshua Colah / Unsplash",
+   "body_caption": "Forested Western Ghats hills at golden hour.",
+ },
 }
 
 def resize_into(src_name, dest):
@@ -62,9 +67,12 @@ def apply(slug, cfg):
         if cfg.get("body_caption"):
             art["body_image_caption"] = cfg["body_caption"]
 
-    resize_into(cfg["hero_file"], STOCK / f"{slug}-hero.jpg")
-    art["hero"] = hero_rel
-    art["hero_attribution"] = cfg["hero_attr"]
+    if cfg.get("keep_hero"):
+        hero_rel = art["hero"]   # leave the existing hero + attribution untouched
+    else:
+        resize_into(cfg["hero_file"], STOCK / f"{slug}-hero.jpg")
+        art["hero"] = hero_rel
+        art["hero_attribution"] = cfg["hero_attr"]
 
     content = {k: v for k, v in art.items()
                if k not in ("hero", "body_image", "status", "hero_attribution",
@@ -81,7 +89,9 @@ def apply(slug, cfg):
         if e["slug"] == slug:
             e["thumb"] = hero_rel
     json.dump(m, open(MANIFEST, "w"), indent=2, ensure_ascii=False)
-    print(f"  {slug}: hero={cfg['hero_file'][:28]}  body={'(kept)' if cfg.get('keep_body') else cfg.get('body_file','')[:28]}")
+    hero_note = "(kept)" if cfg.get("keep_hero") else cfg.get("hero_file", "")[:28]
+    body_note = "(kept)" if cfg.get("keep_body") else cfg.get("body_file", "")[:28]
+    print(f"  {slug}: hero={hero_note}  body={body_note}")
 
 if __name__ == "__main__":
     import sys
