@@ -34,6 +34,12 @@ SWAPS = {
    "body_file": "sandy-ravaloniaina-PQ4a3wTeF9s-unsplash.jpg", "body_attr": "Sandy Ravaloniaina / Unsplash",
    "body_caption": "A brown lemur in eastern Madagascar's rainforest.",
  },
+ "rainforest-philippines-body": {   # second pass: swap the body inset, keep jules-a hero
+   "slug": "rainforest-philippines",
+   "keep_hero": True,
+   "body_file": "rommel-paras-wrHnE3kMplg-unsplash.jpg", "body_attr": "Rommel Paras / Unsplash",
+   "body_caption": "Karst lagoon at El Nido, Palawan, the Philippines.",
+ },
  "rainforest-western-ghats": {
    "keep_hero": True,   # keep the PJeganathan Commons hero, only swap the body inset
    "body_file": "zoshua-colah-yCkFdegGv4M-unsplash.jpg", "body_attr": "Zoshua Colah / Unsplash",
@@ -50,6 +56,7 @@ def resize_into(src_name, dest):
                    check=True, capture_output=True)
 
 def apply(slug, cfg):
+    slug = cfg.get("slug", slug)   # allow a config keyed differently than its target slug
     ddir = common.SITE_ROOT / "the-leaf" / slug
     art = json.load(open(ddir / "_data.json"))
     hero_rel = f"/images/source/stock/{slug}-hero.jpg"
