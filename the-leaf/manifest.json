@@ -2,7 +2,7 @@
   {
     "slug": "rainforest-western-amazon",
     "title": "Rainforest: The Western Amazon, Peru — Pink-Leaf Country",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "description": "The plants collectors chase don't come from one forest. They come from the Andean foothills and blackwater rivers of Peru and Ecuador — here's why.",
     "url": "/the-leaf/rainforest-western-amazon",
     "date": "2026-07-21",
@@ -12,7 +12,7 @@
   {
     "slug": "rainforest-choco",
     "title": "Rainforest: The Chocó, Colombia — The Wettest Forest on Earth",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "description": "The Colombian Choco gets 13 metres of rain a year and almost no dry season. It is where Anthurium warocqueanum, veitchii, and gloriosum evolved.",
     "url": "/the-leaf/rainforest-choco",
     "date": "2026-07-21",
@@ -22,7 +22,7 @@
   {
     "slug": "rainforest-atlantic-forest",
     "title": "Rainforest: The Atlantic Forest, Brazil — The 7% That's Left",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "description": "The Mata Atlântica is nearly gone — and that's precisely why it produced Philodendron spiritus-sancti, Begonia listada, and some of the most endemic plants on earth.",
     "url": "/the-leaf/rainforest-atlantic-forest",
     "date": "2026-07-21",
@@ -32,7 +32,7 @@
   {
     "slug": "rainforest-darien",
     "title": "Rainforest: The Darién, Panama — Where the Black Velvets Begin",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "description": "The dark-velvet anthuriums on collectors' shelves trace back to one roadless strip of Panamanian rainforest. Here's the origin story.",
     "url": "/the-leaf/rainforest-darien",
     "date": "2026-07-21",
@@ -42,7 +42,7 @@
   {
     "slug": "rainforest-ecuadorian-cloud-forest",
     "title": "Rainforest: The Cloud Forest, Ecuador — The Species Still Being Named",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "description": "From Mindo to the Cordillera de Cutucu, Ecuador's Andean slopes produce new aroid species almost every year. Here's why the forest works that way.",
     "url": "/the-leaf/rainforest-ecuadorian-cloud-forest",
     "date": "2026-07-21",
@@ -52,12 +52,92 @@
   {
     "slug": "rainforest-borneo",
     "title": "Rainforest: Borneo, Malaysia & Indonesia — The Island That Grows Its Own Rules",
-    "category": "Rainforest",
+    "category": "Rainforest (Paleotropics)",
     "description": "Borneo's ancient rainforest — limestone karst, ultramafic soils, 130 million years of isolation — shaped the hoyas, begonias, and alocasias collectors chase.",
     "url": "/the-leaf/rainforest-borneo",
     "date": "2026-07-21",
     "thumb": "/images/source/stock/rainforest-borneo-hero.jpg",
     "status": "published"
+  },
+  {
+    "slug": "rainforest-guiana-shield",
+    "title": "Rainforest: The Guiana Shield (Venezuela & the Guianas) — The Lost World of the Tepuis",
+    "category": "Rainforest (Neotropics)",
+    "description": "The Guiana Shield's tepuis are isolated tabletop mountains two billion years old — breeding grounds for carnivorous plants, ancient endemics, and collector aroids.",
+    "url": "/the-leaf/rainforest-guiana-shield",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-guiana-shield-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-monteverde-costa-rica",
+    "title": "Rainforest: Monteverde, Costa Rica — The Cloud Forest You Can Actually Visit",
+    "category": "Rainforest (Neotropics)",
+    "description": "Monteverde's cloud forest drips with epiphytes and rare anthuriums. A field guide to the place — and why collectors should book the flight.",
+    "url": "/the-leaf/rainforest-monteverde-costa-rica",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-monteverde-costa-rica-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-northwest-amazon",
+    "title": "Rainforest: The Northwest Amazon (Colombia & Peru) — Blackwater Country",
+    "category": "Rainforest (Neotropics)",
+    "description": "The Rio Negro's tannin-dark rivers and white-sand forests produce some of the Amazon's most specialized plants. A field portrait of blackwater Amazonia.",
+    "url": "/the-leaf/rainforest-northwest-amazon",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-northwest-amazon-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-sumatra",
+    "title": "Rainforest: Sumatra, Indonesia — Giants and Corpse Flowers",
+    "category": "Rainforest (Paleotropics)",
+    "description": "Sumatra's ancient lowland rainforest bred the biggest flower on Earth, the tallest bloom, and some of the most extreme aroids alive. A field report before it's gone.",
+    "url": "/the-leaf/rainforest-sumatra",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-sumatra-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-new-guinea",
+    "title": "Rainforest: New Guinea (Indonesia & PNG) — The Last Unmapped Forest",
+    "category": "Rainforest (Paleotropics)",
+    "description": "New Guinea holds over 13,000 plant species, extraordinary Hoya and aroid diversity, and a frontier that botanists haven't fully mapped. Here's why it matters.",
+    "url": "/the-leaf/rainforest-new-guinea",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-new-guinea-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-philippines",
+    "title": "Rainforest: The Philippines — 7,000 Islands, 7,000 Experiments",
+    "category": "Rainforest (Paleotropics)",
+    "description": "How island isolation across the Philippine archipelago drove wild speciation in Hoya, Alocasia, and Medinilla — and how little of it remains.",
+    "url": "/the-leaf/rainforest-philippines",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-philippines-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-western-ghats",
+    "title": "Rainforest: The Western Ghats, India — The Monsoon Mountains",
+    "category": "Rainforest (Paleotropics)",
+    "description": "The Western Ghats catch the full southwest monsoon and wrung it into one of Asia's wettest, most endemic-rich forests. A field portrait.",
+    "url": "/the-leaf/rainforest-western-ghats",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-western-ghats-hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-madagascar",
+    "title": "Rainforest: Madagascar — Evolution's Island Laboratory",
+    "category": "Rainforest (Paleotropics)",
+    "description": "Madagascar's eastern rainforest spent 88 million years inventing its own rules. A field report on the planet's strangest evolutionary laboratory.",
+    "url": "/the-leaf/rainforest-madagascar",
+    "date": "2026-07-21",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
   },
   {
     "slug": "philodendron-vs-anthurium",
