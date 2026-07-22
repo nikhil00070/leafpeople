@@ -1,40 +1,56 @@
 {
-  "updated": "2026-07-21T17:59:52+00:00",
+  "updated": "2026-07-22T04:49:47+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 2223,
-    "posts": 45
+    "followers": 2234,
+    "posts": 46
   },
   "summary": {
     "reels": {
-      "count": 30,
-      "avg_reach": 174,
-      "avg_eng_pct": 5.6,
-      "avg_watch_s": 4.0,
-      "avg_plays": 216
+      "count": 29,
+      "avg_reach": 175,
+      "avg_eng_pct": 5.7,
+      "avg_watch_s": 4.1,
+      "avg_plays": 218
     },
     "images": {
-      "count": 10,
-      "avg_reach": 94,
-      "avg_eng_pct": 5.6
+      "count": 11,
+      "avg_reach": 87,
+      "avg_eng_pct": 5.0
     }
   },
   "posts": [
     {
-      "date": "2026-07-20",
-      "type": "REEL",
-      "reach": 162,
-      "likes": 6,
+      "date": "2026-07-21",
+      "type": "IMAGE",
+      "reach": 9,
+      "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 6,
-      "watch_ms": 3105,
-      "plays": 226,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d45 Tortum \u2014 living sculpture",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
+    {
+      "date": "2026-07-20",
+      "type": "REEL",
+      "reach": 165,
+      "likes": 7,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 7,
+      "watch_ms": 3102,
+      "plays": 231,
       "label": "Velvet, but alive.  Anthurium wendlingeri ",
       "hook": null,
       "is_reel": true,
-      "eng_pct": 3.7
+      "eng_pct": 4.2
     },
     {
       "date": "2026-07-19",
@@ -45,8 +61,8 @@
       "saved": 0,
       "shares": 0,
       "total_interactions": 10,
-      "watch_ms": 2434,
-      "plays": 191,
+      "watch_ms": 2537,
+      "plays": 192,
       "label": "d43 One small plant",
       "hook": "When you said you'd get 'one small plant.'",
       "is_reel": true,
@@ -55,14 +71,14 @@
     {
       "date": "2026-07-18",
       "type": "REEL",
-      "reach": 121,
+      "reach": 123,
       "likes": 1,
       "comments": 0,
       "saved": 1,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 3541,
-      "plays": 150,
+      "watch_ms": 3509,
+      "plays": 154,
       "label": "85.5K views in 30 days. We never imagined ",
       "hook": null,
       "is_reel": true,
@@ -71,23 +87,23 @@
     {
       "date": "2026-07-18",
       "type": "REEL",
-      "reach": 225,
+      "reach": 227,
       "likes": 8,
       "comments": 2,
       "saved": 1,
       "shares": 0,
       "total_interactions": 11,
-      "watch_ms": 3683,
-      "plays": 264,
+      "watch_ms": 3717,
+      "plays": 266,
       "label": "d42 The reset",
       "hook": "Just need to see something green and alive.",
       "is_reel": true,
-      "eng_pct": 4.9
+      "eng_pct": 4.8
     },
     {
       "date": "2026-07-17",
       "type": "REEL",
-      "reach": 215,
+      "reach": 216,
       "likes": 6,
       "comments": 0,
       "saved": 0,
@@ -98,12 +114,12 @@
       "label": "d41 The Atlantic Forest",
       "hook": "The Atlantic Forest \u00b7 Brazil",
       "is_reel": true,
-      "eng_pct": 3.3
+      "eng_pct": 3.2
     },
     {
       "date": "2026-07-16",
       "type": "IMAGE",
-      "reach": 116,
+      "reach": 120,
       "likes": 2,
       "comments": 0,
       "saved": 0,
@@ -119,39 +135,39 @@
     {
       "date": "2026-07-15",
       "type": "REEL",
-      "reach": 212,
+      "reach": 216,
       "likes": 6,
       "comments": 1,
       "saved": 3,
       "shares": 0,
       "total_interactions": 10,
-      "watch_ms": 3878,
-      "plays": 328,
+      "watch_ms": 3897,
+      "plays": 334,
       "label": "d39 White Knight",
       "hook": "When one leaf costs $500",
       "is_reel": true,
-      "eng_pct": 4.7
+      "eng_pct": 4.6
     },
     {
       "date": "2026-07-14",
       "type": "REEL",
-      "reach": 349,
+      "reach": 352,
       "likes": 16,
       "comments": 0,
       "saved": 4,
       "shares": 2,
       "total_interactions": 22,
-      "watch_ms": 4227,
-      "plays": 428,
+      "watch_ms": 4276,
+      "plays": 432,
       "label": "d38 New leaf priorities",
       "hook": "200 unread emails. Me: is that a new leaf?",
       "is_reel": true,
-      "eng_pct": 6.3
+      "eng_pct": 6.2
     },
     {
       "date": "2026-07-13",
       "type": "IMAGE",
-      "reach": 185,
+      "reach": 188,
       "likes": 7,
       "comments": 0,
       "saved": 3,
@@ -167,14 +183,14 @@
     {
       "date": "2026-07-12",
       "type": "REEL",
-      "reach": 223,
+      "reach": 224,
       "likes": 5,
       "comments": 0,
       "saved": 2,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3698,
-      "plays": 318,
+      "watch_ms": 3691,
+      "plays": 319,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
@@ -189,8 +205,8 @@
       "saved": 2,
       "shares": 0,
       "total_interactions": 16,
-      "watch_ms": 7224,
-      "plays": 546,
+      "watch_ms": 7231,
+      "plays": 548,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
@@ -199,14 +215,14 @@
     {
       "date": "2026-07-10",
       "type": "REEL",
-      "reach": 281,
+      "reach": 283,
       "likes": 7,
       "comments": 2,
       "saved": 7,
       "shares": 0,
       "total_interactions": 16,
-      "watch_ms": 3978,
-      "plays": 339,
+      "watch_ms": 3995,
+      "plays": 341,
       "label": "d34 The part I want",
       "hook": "This is the part I actually want.",
       "is_reel": true,
@@ -215,7 +231,7 @@
     {
       "date": "2026-07-09",
       "type": "REEL",
-      "reach": 251,
+      "reach": 252,
       "likes": 7,
       "comments": 0,
       "saved": 3,
@@ -279,7 +295,7 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 157,
+      "reach": 158,
       "likes": 3,
       "comments": 0,
       "saved": 1,
@@ -295,7 +311,7 @@
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 116,
+      "reach": 117,
       "likes": 6,
       "comments": 0,
       "saved": 0,
@@ -306,12 +322,12 @@
       "label": "d28 Thai Constellation",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 5.2
+      "eng_pct": 5.1
     },
     {
       "date": "2026-07-03",
       "type": "REEL",
-      "reach": 134,
+      "reach": 135,
       "likes": 4,
       "comments": 0,
       "saved": 0,
@@ -615,7 +631,7 @@
     {
       "date": "2026-06-14",
       "type": "REEL",
-      "reach": 69,
+      "reach": 70,
       "likes": 5,
       "comments": 0,
       "saved": 1,
@@ -626,12 +642,12 @@
       "label": "d8 Rain on leaves",
       "hook": "Rain on a leaf the size of your arm",
       "is_reel": true,
-      "eng_pct": 10.1
+      "eng_pct": 10.0
     },
     {
       "date": "2026-06-13",
       "type": "IMAGE",
-      "reach": 46,
+      "reach": 47,
       "likes": 3,
       "comments": 0,
       "saved": 0,
@@ -642,23 +658,7 @@
       "label": "d7 Why we built it",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 6.5
-    },
-    {
-      "date": "2026-06-12",
-      "type": "REEL",
-      "reach": 174,
-      "likes": 4,
-      "comments": 0,
-      "saved": 1,
-      "shares": 0,
-      "total_interactions": 5,
-      "watch_ms": 2780,
-      "plays": 196,
-      "label": "d6 Blackest leaf",
-      "hook": null,
-      "is_reel": true,
-      "eng_pct": 2.9
+      "eng_pct": 6.4
     }
   ],
   "diag": null
