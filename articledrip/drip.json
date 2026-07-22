@@ -2356,7 +2356,7 @@
   {
     "slug": "rainforest-borneo",
     "title": "Rainforest: Borneo, Malaysia & Indonesia \u2014 The Island That Grows Its Own Rules",
-    "category": "Rainforest",
+    "category": "Rainforest (Paleotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-borneo",
@@ -2367,7 +2367,7 @@
   {
     "slug": "rainforest-atlantic-forest",
     "title": "Rainforest: The Atlantic Forest, Brazil \u2014 The 7% That's Left",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-atlantic-forest",
@@ -2378,7 +2378,7 @@
   {
     "slug": "rainforest-choco",
     "title": "Rainforest: The Choc\u00f3, Colombia \u2014 The Wettest Forest on Earth",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-choco",
@@ -2389,7 +2389,7 @@
   {
     "slug": "rainforest-darien",
     "title": "Rainforest: The Dari\u00e9n, Panama \u2014 Where the Black Velvets Begin",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-darien",
@@ -2400,7 +2400,7 @@
   {
     "slug": "rainforest-ecuadorian-cloud-forest",
     "title": "Rainforest: The Cloud Forest, Ecuador \u2014 The Species Still Being Named",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-ecuadorian-cloud-forest",
@@ -2411,12 +2411,100 @@
   {
     "slug": "rainforest-western-amazon",
     "title": "Rainforest: The Western Amazon, Peru \u2014 Pink-Leaf Country",
-    "category": "Rainforest",
+    "category": "Rainforest (Neotropics)",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/rainforest-western-amazon",
     "thumb": "/images/source/stock/rainforest-western-amazon-hero.jpg",
     "date": "2026-07-21",
     "status": "published"
+  },
+  {
+    "slug": "rainforest-madagascar",
+    "title": "Rainforest: Madagascar \u2014 Evolution's Island Laboratory",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-madagascar",
+    "thumb": "/images/source/stock/rainforest-madagascar-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-monteverde-costa-rica",
+    "title": "Rainforest: Monteverde, Costa Rica \u2014 The Cloud Forest You Can Actually Visit",
+    "category": "Rainforest (Neotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-monteverde-costa-rica",
+    "thumb": "/images/source/stock/rainforest-monteverde-costa-rica-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-new-guinea",
+    "title": "Rainforest: New Guinea (Indonesia & PNG) \u2014 The Last Unmapped Forest",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-new-guinea",
+    "thumb": "/images/source/stock/rainforest-new-guinea-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-sumatra",
+    "title": "Rainforest: Sumatra, Indonesia \u2014 Giants and Corpse Flowers",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-sumatra",
+    "thumb": "/images/source/stock/rainforest-sumatra-hero.jpg",
+    "date": "2026-07-21",
+    "status": "published"
+  },
+  {
+    "slug": "rainforest-guiana-shield",
+    "title": "Rainforest: The Guiana Shield (Venezuela & the Guianas) \u2014 The Lost World of the Tepuis",
+    "category": "Rainforest (Neotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-guiana-shield",
+    "thumb": "/images/source/stock/rainforest-guiana-shield-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-northwest-amazon",
+    "title": "Rainforest: The Northwest Amazon (Colombia & Peru) \u2014 Blackwater Country",
+    "category": "Rainforest (Neotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-northwest-amazon",
+    "thumb": "/images/source/stock/rainforest-northwest-amazon-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-philippines",
+    "title": "Rainforest: The Philippines \u2014 7,000 Islands, 7,000 Experiments",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-philippines",
+    "thumb": "/images/source/stock/rainforest-philippines-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-western-ghats",
+    "title": "Rainforest: The Western Ghats, India \u2014 The Monsoon Mountains",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-western-ghats",
+    "thumb": "/images/source/stock/rainforest-western-ghats-hero.jpg",
+    "date": "2026-07-21",
+    "status": "pending"
   }
 ]
