@@ -1651,7 +1651,7 @@
     "date": "2026-07-23",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Mindo",
     "image": "/images/instagram/b3-06-cover.jpg",
     "img_ready": "/images/instagram/b3-06-cover.jpg",
@@ -1678,7 +1678,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-23",
+    "ig_media_id": "18062948162739789"
   },
   {
     "id": "d28",
