@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-22T21:30:15+00:00",
+  "updated": "2026-07-23T01:28:35+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 2238,
+    "followers": 2239,
     "posts": 47
   },
   "summary": {
@@ -11,7 +11,7 @@
       "avg_reach": 171,
       "avg_eng_pct": 5.5,
       "avg_watch_s": 4.0,
-      "avg_plays": 212
+      "avg_plays": 213
     },
     "images": {
       "count": 10,
@@ -23,14 +23,14 @@
     {
       "date": "2026-07-22",
       "type": "REEL",
-      "reach": 22,
+      "reach": 31,
       "likes": 0,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 0,
-      "watch_ms": 2197,
-      "plays": 24,
+      "watch_ms": 3562,
+      "plays": 40,
       "label": "d46 More than most people",
       "hook": "More joy in plants than in most people.",
       "is_reel": true,
@@ -39,7 +39,7 @@
     {
       "date": "2026-07-21",
       "type": "IMAGE",
-      "reach": 12,
+      "reach": 13,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -55,7 +55,7 @@
     {
       "date": "2026-07-20",
       "type": "REEL",
-      "reach": 167,
+      "reach": 168,
       "likes": 7,
       "comments": 0,
       "saved": 0,
