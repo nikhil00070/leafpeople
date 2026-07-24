@@ -1,45 +1,61 @@
 {
-  "updated": "2026-07-23T01:28:35+00:00",
+  "updated": "2026-07-24T02:14:29+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 2239,
-    "posts": 47
+    "followers": 2245,
+    "posts": 48
   },
   "summary": {
     "reels": {
       "count": 30,
-      "avg_reach": 171,
-      "avg_eng_pct": 5.5,
+      "avg_reach": 173,
+      "avg_eng_pct": 6.1,
       "avg_watch_s": 4.0,
-      "avg_plays": 213
+      "avg_plays": 214
     },
     "images": {
       "count": 10,
-      "avg_reach": 92,
+      "avg_reach": 93,
       "avg_eng_pct": 4.9
     }
   },
   "posts": [
     {
+      "date": "2026-07-23",
+      "type": "REEL",
+      "reach": 29,
+      "likes": 7,
+      "comments": 0,
+      "saved": 0,
+      "shares": 1,
+      "total_interactions": 8,
+      "watch_ms": 3584,
+      "plays": 42,
+      "label": "d47 Mindo",
+      "hook": "Mindo Cloud Forest \u00b7 Ecuador",
+      "is_reel": true,
+      "eng_pct": 27.6
+    },
+    {
       "date": "2026-07-22",
       "type": "REEL",
-      "reach": 31,
-      "likes": 0,
+      "reach": 110,
+      "likes": 3,
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "total_interactions": 0,
-      "watch_ms": 3562,
-      "plays": 40,
+      "total_interactions": 3,
+      "watch_ms": 2678,
+      "plays": 130,
       "label": "d46 More than most people",
       "hook": "More joy in plants than in most people.",
       "is_reel": true,
-      "eng_pct": 0.0
+      "eng_pct": 2.7
     },
     {
       "date": "2026-07-21",
       "type": "IMAGE",
-      "reach": 13,
+      "reach": 15,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -55,18 +71,18 @@
     {
       "date": "2026-07-20",
       "type": "REEL",
-      "reach": 168,
+      "reach": 169,
       "likes": 7,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3107,
-      "plays": 234,
+      "watch_ms": 3116,
+      "plays": 236,
       "label": "Velvet, but alive.  Anthurium wendlingeri ",
       "hook": null,
       "is_reel": true,
-      "eng_pct": 4.2
+      "eng_pct": 4.1
     },
     {
       "date": "2026-07-19",
@@ -103,18 +119,18 @@
     {
       "date": "2026-07-18",
       "type": "REEL",
-      "reach": 231,
+      "reach": 232,
       "likes": 8,
       "comments": 2,
       "saved": 1,
       "shares": 0,
       "total_interactions": 11,
-      "watch_ms": 3696,
-      "plays": 270,
+      "watch_ms": 3683,
+      "plays": 271,
       "label": "d42 The reset",
       "hook": "Just need to see something green and alive.",
       "is_reel": true,
-      "eng_pct": 4.8
+      "eng_pct": 4.7
     },
     {
       "date": "2026-07-17",
@@ -183,7 +199,7 @@
     {
       "date": "2026-07-13",
       "type": "IMAGE",
-      "reach": 192,
+      "reach": 193,
       "likes": 7,
       "comments": 0,
       "saved": 3,
@@ -199,14 +215,14 @@
     {
       "date": "2026-07-12",
       "type": "REEL",
-      "reach": 226,
+      "reach": 227,
       "likes": 5,
       "comments": 0,
       "saved": 2,
       "shares": 0,
       "total_interactions": 7,
-      "watch_ms": 3666,
-      "plays": 321,
+      "watch_ms": 3685,
+      "plays": 324,
       "label": "d36 Squamiferum \u2014 fuzzy petioles",
       "hook": "The philodendron with velvet-red stems",
       "is_reel": true,
@@ -215,14 +231,14 @@
     {
       "date": "2026-07-11",
       "type": "REEL",
-      "reach": 457,
+      "reach": 459,
       "likes": 13,
       "comments": 0,
       "saved": 2,
       "shares": 0,
       "total_interactions": 16,
-      "watch_ms": 7218,
-      "plays": 549,
+      "watch_ms": 7208,
+      "plays": 550,
       "label": "d35 Borneo",
       "hook": "The Rainforests of Borneo",
       "is_reel": true,
@@ -231,14 +247,14 @@
     {
       "date": "2026-07-10",
       "type": "REEL",
-      "reach": 285,
+      "reach": 286,
       "likes": 7,
       "comments": 2,
       "saved": 7,
       "shares": 0,
       "total_interactions": 16,
-      "watch_ms": 4014,
-      "plays": 344,
+      "watch_ms": 4027,
+      "plays": 347,
       "label": "d34 The part I want",
       "hook": "This is the part I actually want.",
       "is_reel": true,
@@ -247,14 +263,14 @@
     {
       "date": "2026-07-09",
       "type": "REEL",
-      "reach": 253,
+      "reach": 255,
       "likes": 7,
       "comments": 0,
       "saved": 3,
       "shares": 1,
       "total_interactions": 11,
-      "watch_ms": 3372,
-      "plays": 298,
+      "watch_ms": 3360,
+      "plays": 300,
       "label": "d33 Just looking",
       "hook": "Me: I'm just looking.",
       "is_reel": true,
@@ -263,7 +279,7 @@
     {
       "date": "2026-07-08",
       "type": "IMAGE",
-      "reach": 156,
+      "reach": 157,
       "likes": 3,
       "comments": 0,
       "saved": 0,
@@ -279,14 +295,14 @@
     {
       "date": "2026-07-07",
       "type": "REEL",
-      "reach": 162,
+      "reach": 163,
       "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 1,
-      "watch_ms": 2591,
-      "plays": 203,
+      "watch_ms": 2589,
+      "plays": 204,
       "label": "d31 The hunt",
       "hook": "Plants people cross oceans for",
       "is_reel": true,
@@ -295,14 +311,14 @@
     {
       "date": "2026-07-06",
       "type": "REEL",
-      "reach": 150,
+      "reach": 151,
       "likes": 9,
       "comments": 1,
       "saved": 1,
       "shares": 0,
       "total_interactions": 11,
-      "watch_ms": 3795,
-      "plays": 184,
+      "watch_ms": 3802,
+      "plays": 185,
       "label": "d30 No words before coffee",
       "hook": "No words before coffee. Just me and the plants.",
       "is_reel": true,
@@ -311,7 +327,7 @@
     {
       "date": "2026-07-05",
       "type": "REEL",
-      "reach": 158,
+      "reach": 159,
       "likes": 3,
       "comments": 0,
       "saved": 1,
@@ -327,7 +343,7 @@
     {
       "date": "2026-07-04",
       "type": "IMAGE",
-      "reach": 118,
+      "reach": 119,
       "likes": 6,
       "comments": 0,
       "saved": 0,
@@ -338,7 +354,7 @@
       "label": "d28 Thai Constellation",
       "hook": null,
       "is_reel": false,
-      "eng_pct": 5.1
+      "eng_pct": 5.0
     },
     {
       "date": "2026-07-03",
@@ -599,18 +615,18 @@
     {
       "date": "2026-06-17",
       "type": "REEL",
-      "reach": 97,
+      "reach": 98,
       "likes": 9,
       "comments": 0,
       "saved": 2,
       "shares": 1,
       "total_interactions": 13,
-      "watch_ms": 6037,
-      "plays": 146,
+      "watch_ms": 6058,
+      "plays": 148,
       "label": "d11 The House of Monstera",
       "hook": "A room that's only Monstera",
       "is_reel": true,
-      "eng_pct": 13.4
+      "eng_pct": 13.3
     },
     {
       "date": "2026-06-16",
@@ -643,22 +659,6 @@
       "hook": null,
       "is_reel": false,
       "eng_pct": 8.0
-    },
-    {
-      "date": "2026-06-14",
-      "type": "REEL",
-      "reach": 70,
-      "likes": 5,
-      "comments": 0,
-      "saved": 1,
-      "shares": 0,
-      "total_interactions": 7,
-      "watch_ms": 3942,
-      "plays": 109,
-      "label": "d8 Rain on leaves",
-      "hook": "Rain on a leaf the size of your arm",
-      "is_reel": true,
-      "eng_pct": 10.0
     }
   ],
   "diag": null
