@@ -1688,7 +1688,7 @@
     "date": "2026-07-24",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Corrugatum \u2014 quilted",
     "image": "/images/instagram/anthurium-corrugatum.jpeg",
     "caption": "Quilted.\n\nAnthurium corrugatum puckers between every vein \u2014 a three-dimensional, bullate surface that catches light in a dozen directions at once. Run your eyes over it slowly.",
@@ -1716,7 +1716,9 @@
     "reel": true,
     "hook": "Quilted like hammered leather",
     "img_ready": "/images/ig_ready/d28.jpg",
-    "video": "/videos/instagram/d28.mp4"
+    "video": "/videos/instagram/d28.mp4",
+    "posted_at": "2026-07-24",
+    "ig_media_id": "18141509131479958"
   },
   {
     "id": "d29",
