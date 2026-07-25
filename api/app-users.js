@@ -32,7 +32,7 @@ async function hog(host, pid, key, query) {
 // single query that fails resolves to [] so one bad query never sinks the whole panel.
 async function aggregateInsights(host, pid, key, W) {
   const q = (sql) => hog(host, pid, key, sql).catch(() => []);
-  const [funnel, retention, paywall, failures, identify, searches, plants, screens, shops] = await Promise.all([
+  const [funnel, retention, paywall, failures, identify, searches, plants, screens, shops, contentGaps] = await Promise.all([
     // Overall reach funnel — who does what, of everyone active.
     q(`SELECT count(DISTINCT person_id) AS users,
          count(DISTINCT if(event='identify_started', person_id, NULL)) AS identifiers,
@@ -57,9 +57,13 @@ async function aggregateInsights(host, pid, key, W) {
     q(`SELECT properties.reason AS reason, count() AS c, count(DISTINCT person_id) AS users
        FROM events WHERE ${W} AND event='purchase_failed' AND coalesce(toString(properties.reason),'') NOT IN ('','cancelled')
        GROUP BY reason ORDER BY c DESC LIMIT 8`),
-    // Identify feature health: start → complete vs error (high error = BUG/build).
+    // Identify feature health: start → matched vs not-in-library vs declined vs error.
+    // (completed = legacy value from builds before the richer outcomes shipped.)
     q(`SELECT countIf(event='identify_started') AS started,
-         countIf(event='identify_result' AND properties.outcome='completed') AS completed,
+         countIf(event='identify_result' AND properties.outcome='matched') AS matched,
+         countIf(event='identify_result' AND properties.outcome='not_in_library') AS not_in_library,
+         countIf(event='identify_result' AND properties.outcome='declined') AS declined,
+         countIf(event='identify_result' AND properties.outcome='completed') AS completed_legacy,
          countIf(event='identify_result' AND properties.outcome='error') AS errored
        FROM events WHERE ${W} AND event IN ('identify_started','identify_result')`),
     // Search demand — what people look for (content signal).
@@ -78,12 +82,19 @@ async function aggregateInsights(host, pid, key, W) {
     q(`SELECT properties.name AS seller, count() AS c, count(DISTINCT person_id) AS users
        FROM events WHERE ${W} AND event='outbound_shop_tap' AND coalesce(toString(properties.name),'') != ''
        GROUP BY seller ORDER BY c DESC LIMIT 10`),
+    // CONTENT-GAP GOLD: plants people photographed that we identified but DON'T carry
+    // (not_in_library) — each is a care guide / library entry worth adding, ranked by demand.
+    q(`SELECT lower(concat(coalesce(toString(properties.genus),''), ' ', coalesce(toString(properties.species),''))) AS taxon,
+         count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='identify_result' AND properties.outcome='not_in_library'
+       GROUP BY taxon ORDER BY c DESC LIMIT 15`),
   ]);
   const f = funnel[0] || [], ret = retention[0] || [], idf = identify[0] || [];
   return {
     funnel: { users: +f[0]||0, identifiers: +f[1]||0, collectors: +f[2]||0, paywalled: +f[3]||0, buyers: +f[4]||0, shoppers: +f[5]||0 },
     retention: { returning: +ret[0]||0, one_time: +ret[1]||0 },
-    identify: { started: +idf[0]||0, completed: +idf[1]||0, errored: +idf[2]||0 },
+    identify: { started: +idf[0]||0, matched: +idf[1]||0, not_in_library: +idf[2]||0, declined: +idf[3]||0, completed_legacy: +idf[4]||0, errored: +idf[5]||0 },
+    content_gaps: contentGaps.map((r) => ({ taxon: (r[0]||"").trim(), count: +r[1]||0, users: +r[2]||0 })).filter((x) => x.taxon),
     paywall_by_source: paywall.map((r) => ({ source: r[0], shown: +r[1]||0, sub_taps: +r[2]||0, purchases: +r[3]||0, users_shown: +r[4]||0 })),
     purchase_failures: failures.map((r) => ({ reason: r[0], count: +r[1]||0, users: +r[2]||0 })),
     top_searches: searches.map((r) => ({ q: r[0], count: +r[1]||0, users: +r[2]||0 })),
@@ -109,6 +120,7 @@ Rules:
 - The team specifically wants BUILD updates called out — if user behavior implies an app change, tag it BUILD and be concrete about the change.
 - purchase_failures with non-'cancelled' reasons are almost certainly BUGs — rank them near the top with the reason + count.
 - A high identify error rate (errored vs started) is a BUILD/BUG signal.
+- content_gaps = plants users PHOTOGRAPHED and we identified but DON'T carry in the library (identify outcome 'not_in_library'). Each is a strong CONTENT item — recommend adding the highest-demand ones by name. This is usually the highest-value content signal.
 - A paywall source with many shows but ~0 purchases is a PRICING/BUILD signal (gate placed wrong or wall too hard).
 - High-volume searches or plant views point to CONTENT to add.
 - If the whole dataset is thin (few users/events), say so via data_confidence and keep the list short and honest — do NOT pad it.
