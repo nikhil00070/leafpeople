@@ -1726,7 +1726,7 @@
     "date": "2026-07-25",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Pink Princess",
     "image": "/images/instagram/philodendron-pink-princess.png",
     "caption": "The variegation lottery.\n\nPhilodendron 'Pink Princess' can throw a leaf of pure bubblegum pink \u2014 or revert to plain green and break your heart. You can't farm luck. That's why collectors chase it.",
@@ -1751,7 +1751,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d29.jpg"
+    "img_ready": "/images/ig_ready/d29.jpg",
+    "posted_at": "2026-07-25",
+    "ig_media_id": "18101833903898363"
   },
   {
     "id": "d30",
