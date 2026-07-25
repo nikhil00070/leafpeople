@@ -196,6 +196,11 @@ a { color:var(--blue); }
   <!-- APP ANALYTICS (aggregate + per-user, all in one) -->
   <div class="panel" id="tab-app">
     <p class="sec-sub">In-app behavior (iOS): the aggregate picture (GA4) plus every user's moves with a one-line Claude read (PostHog). Full session recordings live in PostHog → Session Replay. Fills in once the build is live.</p>
+    <div class="card row-sp" id="recs-card"><h3>🎯 Insights &amp; Recommendations <span id="recs-conf" class="muted" style="font-size:.7rem;font-weight:400"></span></h3>
+      <div id="recs-headline" style="font-size:.95rem;margin:.15rem 0 .6rem;color:var(--text)">—</div>
+      <div id="recs-list" style="font-size:.9rem">—</div>
+      <div class="muted" style="font-size:.72rem;margin-top:.5rem">Ranked from 30-day PostHog behavior across all users. <b>BUILD</b>=ship in next app build · <b>BUG</b>=likely defect · <b>CONTENT</b>/<b>PRICING</b>/<b>MARKETING</b>/<b>DATA</b>. AI-generated from real events — verify before acting.</div>
+    </div>
     <div class="card row-sp"><h3>📈 Trend</h3><div id="users-trend" class="muted" style="font-size:.9rem">—</div></div>
     <div class="card row-sp" id="users-actions-card" style="display:none"><h3>✅ Take Action · top items</h3><div id="users-actions" style="font-size:.9rem">—</div></div>
     <div class="grid g3">
@@ -429,6 +434,7 @@ function renderAppUsers(d){
     return;
   }
   if($("users-count")) $("users-count").textContent = "· "+fm(d.count)+" recent";
+  renderRecs(d.recommendations, d.insights);
   if($("users-trend")) $("users-trend").textContent = d.trend || "Not enough data yet for a trend read.";
   const cohort = (d.actions||[]).filter(Boolean);
   if($("users-actions-card")){
@@ -461,6 +467,34 @@ function renderAppUsers(d){
       + actionRow
       + '</div>';
   }).join("") : '<span class="muted">No users with sessions in the last 30 days yet.</span>';
+}
+
+// Ranked, typed action list from the aggregate insights engine (all users, not the 25-row sample).
+function renderRecs(recs, insights){
+  const card = document.getElementById("recs-card"); if(!card) return;
+  const fm = (typeof fmt==="function")?fmt:(x=>x==null?"0":String(x));
+  const list = document.getElementById("recs-list"), head = document.getElementById("recs-headline"), conf = document.getElementById("recs-conf");
+  if(!recs || recs._error || !Array.isArray(recs.recommendations) || !recs.recommendations.length){
+    if(head) head.textContent = recs && recs._error ? ("Recommendations unavailable: "+recs._error) : "Not enough app activity yet to recommend actions — insights appear as usage grows.";
+    if(conf) conf.textContent = "";
+    if(list) list.innerHTML = "";
+    return;
+  }
+  const COLORS = { BUILD:"#2E7DF6", BUG:"#E5484D", CONTENT:"#3DA35D", PRICING:"#F4B72C", MARKETING:"#B458D6", DATA:"#8a8a8a" };
+  if(head) head.textContent = recs.headline || "";
+  if(conf) conf.textContent = recs.data_confidence ? ("· "+recs.data_confidence+" confidence") : "";
+  if(list) list.innerHTML = recs.recommendations.map((r,i)=>{
+    const t = (r.type||"").toUpperCase();
+    const col = COLORS[t] || "#8a8a8a";
+    const badge = '<span style="display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.03em;color:#fff;background:'+col+';padding:.08rem .4rem;border-radius:4px;vertical-align:middle">'+ (t||"—") +'</span>';
+    return '<div style="padding:.5rem 0;border-bottom:1px solid var(--border)">'
+      + '<div style="display:flex;gap:.5rem;align-items:baseline">'
+      +   '<span class="muted" style="font-size:.8rem;min-width:1.1rem">'+(i+1)+'.</span>'
+      +   badge+' <b style="color:var(--text)">'+(r.title||"")+'</b></div>'
+      + (r.detail?('<div style="margin:.2rem 0 .15rem 1.6rem;color:var(--text)">'+r.detail+'</div>'):'')
+      + (r.evidence?('<div class="muted" style="font-size:.78rem;margin-left:1.6rem">📊 '+r.evidence+'</div>'):'')
+      + '</div>';
+  }).join("");
 }
 
 function renderKPIs(ga, asc, subs, an){

@@ -1,9 +1,14 @@
-// /api/app-users — per-user view for the /dashboard "Users" tab.
+// /api/app-users — the /dashboard "App" tab data (per-user rows + aggregate insights).
 //
-// PostHog is the source (GA4 can't do per-user). Pulls each recent user's 30-day
-// activity via the HogQL Query API, then asks Claude for a one-line summary per user
-// + an overall trend summary. Read-only PostHog personal key + Anthropic key, both
-// server-side (Vercel env). Returns { connected:false } when unconfigured.
+// PostHog is the source (GA4 can't do per-user). Two layers:
+//  1) Per-user (25-row sample): each recent user's 30-day activity → Claude one-line
+//     summary + a per-user "Take Action" item.
+//  2) Aggregate insights (ALL users — the scale path): funnel, retention, paywall-by-gate,
+//     purchase failures, identify health, top searches/plants/screens → Claude turns them
+//     into a RANKED, typed action list (BUILD/BUG/CONTENT/PRICING/MARKETING/DATA), so
+//     customer behavior surfaces the next app-build changes to make.
+// Merged into ONE endpoint (Vercel 12-function cap). Read-only PostHog personal key +
+// Anthropic key, both server-side (Vercel env). Returns { connected:false } when unconfigured.
 //
 // Env: POSTHOG_PERSONAL_API_KEY, POSTHOG_PROJECT_ID, POSTHOG_HOST, ANTHROPIC_API_KEY
 
@@ -20,6 +25,108 @@ async function hog(host, pid, key, query) {
   if (!r.ok) throw new Error(`hogql ${r.status}: ${(await r.text()).slice(0, 200)}`);
   const j = await r.json();
   return j.results || [];
+}
+
+// Aggregate insight queries across ALL users (not the 25-user sample) — the scale path.
+// Every query is 30d + internal-excluded via the shared WHERE clause `W`. Defensive: any
+// single query that fails resolves to [] so one bad query never sinks the whole panel.
+async function aggregateInsights(host, pid, key, W) {
+  const q = (sql) => hog(host, pid, key, sql).catch(() => []);
+  const [funnel, retention, paywall, failures, identify, searches, plants, screens, shops] = await Promise.all([
+    // Overall reach funnel — who does what, of everyone active.
+    q(`SELECT count(DISTINCT person_id) AS users,
+         count(DISTINCT if(event='identify_started', person_id, NULL)) AS identifiers,
+         count(DISTINCT if(event='collection_add', person_id, NULL)) AS collectors,
+         count(DISTINCT if(event='paywall_shown', person_id, NULL)) AS paywalled,
+         count(DISTINCT if(event='purchase_completed', person_id, NULL)) AS buyers,
+         count(DISTINCT if(event='outbound_shop_tap', person_id, NULL)) AS shoppers
+       FROM events WHERE ${W}`),
+    // Retention: returning (2+ distinct days) vs one-and-done.
+    q(`SELECT countIf(d >= 2) AS returning, countIf(d = 1) AS one_time FROM
+         (SELECT person_id, count(DISTINCT toDate(timestamp)) AS d FROM events WHERE ${W} GROUP BY person_id)`),
+    // Paywall leak by gate: shown vs sub-taps vs purchases per source.
+    q(`SELECT properties.source AS source,
+         countIf(event='paywall_shown') AS shown,
+         countIf(event='subscribe_tapped') AS sub_taps,
+         countIf(event='purchase_completed') AS purchases,
+         count(DISTINCT if(event='paywall_shown', person_id, NULL)) AS users_shown
+       FROM events WHERE ${W} AND event IN ('paywall_shown','subscribe_tapped','purchase_completed')
+         AND coalesce(toString(properties.source),'') != ''
+       GROUP BY source ORDER BY shown DESC LIMIT 12`),
+    // Purchase failures by reason (cancelled = user choice, excluded) → likely BUGs.
+    q(`SELECT properties.reason AS reason, count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='purchase_failed' AND coalesce(toString(properties.reason),'') NOT IN ('','cancelled')
+       GROUP BY reason ORDER BY c DESC LIMIT 8`),
+    // Identify feature health: start → complete vs error (high error = BUG/build).
+    q(`SELECT countIf(event='identify_started') AS started,
+         countIf(event='identify_result' AND properties.outcome='completed') AS completed,
+         countIf(event='identify_result' AND properties.outcome='error') AS errored
+       FROM events WHERE ${W} AND event IN ('identify_started','identify_result')`),
+    // Search demand — what people look for (content signal).
+    q(`SELECT lower(trim(properties.q)) AS q, count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='library_searched' AND trim(coalesce(toString(properties.q),'')) != ''
+       GROUP BY q ORDER BY c DESC LIMIT 20`),
+    // Most-viewed plants (interest / content-gap signal).
+    q(`SELECT properties.plant AS plant, properties.genus AS genus, count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='plant_viewed' AND coalesce(toString(properties.plant),'') != ''
+       GROUP BY plant, genus ORDER BY c DESC LIMIT 20`),
+    // Screen attention (dead features surface as near-zero rows).
+    q(`SELECT properties.$screen_name AS screen, count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='$screen' AND coalesce(toString(properties.$screen_name),'') != ''
+       GROUP BY screen ORDER BY c DESC LIMIT 20`),
+    // Outbound shop taps (marketplace intent).
+    q(`SELECT properties.name AS seller, count() AS c, count(DISTINCT person_id) AS users
+       FROM events WHERE ${W} AND event='outbound_shop_tap' AND coalesce(toString(properties.name),'') != ''
+       GROUP BY seller ORDER BY c DESC LIMIT 10`),
+  ]);
+  const f = funnel[0] || [], ret = retention[0] || [], idf = identify[0] || [];
+  return {
+    funnel: { users: +f[0]||0, identifiers: +f[1]||0, collectors: +f[2]||0, paywalled: +f[3]||0, buyers: +f[4]||0, shoppers: +f[5]||0 },
+    retention: { returning: +ret[0]||0, one_time: +ret[1]||0 },
+    identify: { started: +idf[0]||0, completed: +idf[1]||0, errored: +idf[2]||0 },
+    paywall_by_source: paywall.map((r) => ({ source: r[0], shown: +r[1]||0, sub_taps: +r[2]||0, purchases: +r[3]||0, users_shown: +r[4]||0 })),
+    purchase_failures: failures.map((r) => ({ reason: r[0], count: +r[1]||0, users: +r[2]||0 })),
+    top_searches: searches.map((r) => ({ q: r[0], count: +r[1]||0, users: +r[2]||0 })),
+    top_plants: plants.map((r) => ({ plant: r[0], genus: r[1], count: +r[2]||0, users: +r[3]||0 })),
+    screens: screens.map((r) => ({ screen: r[0], count: +r[1]||0, users: +r[2]||0 })),
+    shop_taps: shops.map((r) => ({ seller: r[0], count: +r[1]||0, users: +r[2]||0 })),
+  };
+}
+
+// Turn the aggregates into a RANKED, typed action list — the "what should we do next" engine.
+// Explicitly asked to flag BUILD items (app changes) and BUGs (from purchase failures / high error rates).
+async function claudeRecommendations(apiKey, agg) {
+  const prompt = `You are the product lead for Leaf People, a rare-plant iOS app (identify, browse, per-plant care, marketplace; paywall at $0.99/mo gating the full experience). Below are 30-day usage aggregates from PostHog — REAL data, internal/admin sessions excluded.
+
+Produce a RANKED list of the most important, concrete actions the team should take next, MOST IMPACTFUL FIRST. For each recommendation:
+- "type": exactly one of BUILD (app code/feature/UX change to ship in the next build), CONTENT (add plant data / care guide / article), PRICING (paywall placement, price, plan), BUG (a likely defect to fix), MARKETING, DATA (instrumentation gap blocking a decision).
+- "title": the action, imperative, <10 words.
+- "evidence": the SPECIFIC numbers from the data that justify it (quote them).
+- "detail": 1-2 sentences on exactly what to do.
+
+Rules:
+- Base EVERYTHING on the numbers. Quote them. Never invent a mechanic or a problem the data doesn't show.
+- The team specifically wants BUILD updates called out — if user behavior implies an app change, tag it BUILD and be concrete about the change.
+- purchase_failures with non-'cancelled' reasons are almost certainly BUGs — rank them near the top with the reason + count.
+- A high identify error rate (errored vs started) is a BUILD/BUG signal.
+- A paywall source with many shows but ~0 purchases is a PRICING/BUILD signal (gate placed wrong or wall too hard).
+- High-volume searches or plant views point to CONTENT to add.
+- If the whole dataset is thin (few users/events), say so via data_confidence and keep the list short and honest — do NOT pad it.
+
+Return ONLY valid JSON, no prose: {"headline":"<one line on the single biggest takeaway>","data_confidence":"low|medium|high","recommendations":[{"type":"...","title":"...","evidence":"...","detail":"..."}]}
+
+Aggregates JSON:
+${JSON.stringify(agg)}`;
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    body: JSON.stringify({ model: "claude-haiku-4-5-20251001", max_tokens: 2500, messages: [{ role: "user", content: prompt }] }),
+  });
+  if (!r.ok) throw new Error(`anthropic ${r.status}: ${(await r.text()).slice(0, 160)}`);
+  const j = await r.json();
+  let text = (j.content || []).map((c) => c.text || "").join("");
+  text = text.replace(/^```json\s*/i, "").replace(/```\s*$/i, "").trim();
+  return JSON.parse(text);
 }
 
 async function claudeSummaries(apiKey, users) {
@@ -111,10 +218,17 @@ export default async function handler(req, res) {
       for (const r of searches) { const u = byId[r[0]]; if (u && r[1] && u.searches.length < 6) u.searches.push(r[1]); }
     }
 
-    let trend = "", actions = [];
+    // Aggregate insights run across EVERYONE (not the 25-user sample) — the scale path.
+    const agg = await aggregateInsights(host, pid, key, W).catch(() => null);
+
+    let trend = "", actions = [], recs = null;
     if (anthropic && users.length) {
       try {
-        const out = await claudeSummaries(anthropic, users);
+        // Per-user summaries and cohort recommendations in parallel — two cheap Haiku calls, 1h-cached.
+        const [out, recOut] = await Promise.all([
+          claudeSummaries(anthropic, users),
+          agg ? claudeRecommendations(anthropic, agg).catch((e) => ({ _error: String(e.message).slice(0, 100) })) : Promise.resolve(null),
+        ]);
         trend = out.trend || "";
         actions = Array.isArray(out.actions) ? out.actions.filter(Boolean).slice(0, 3) : [];
         const byShortId = Object.fromEntries((out.users || []).map((u) => [u.id, u]));
@@ -123,10 +237,12 @@ export default async function handler(req, res) {
           u.summary = o.summary || "";
           u.action = o.action || "None";   // default: nothing to do
         }
+        recs = recOut;
       } catch (e) { trend = "(summary unavailable: " + String(e.message).slice(0, 80) + ")"; }
     }
 
-    cache = { connected: true, updated: new Date().toISOString(), count: users.length, trend, actions, users };
+    cache = { connected: true, updated: new Date().toISOString(), count: users.length,
+              trend, actions, users, insights: agg, recommendations: recs };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
