@@ -197,6 +197,7 @@ a { color:var(--blue); }
   <div class="panel" id="tab-app">
     <p class="sec-sub">In-app behavior (iOS): the aggregate picture (GA4) plus every user's moves with a one-line Claude read (PostHog). Full session recordings live in PostHog → Session Replay. Fills in once the build is live.</p>
     <div class="card row-sp"><h3>📈 Trend</h3><div id="users-trend" class="muted" style="font-size:.9rem">—</div></div>
+    <div class="card row-sp" id="users-actions-card" style="display:none"><h3>✅ Take Action · top items</h3><div id="users-actions" style="font-size:.9rem">—</div></div>
     <div class="grid g3">
       <div class="card"><h3>Active users · 30d</h3><div class="big" id="app-users">—</div><div id="app-eng" class="muted" style="font-size:.85rem;margin-top:.4rem">—</div></div>
       <div class="card"><h3>Paywall funnel · 30d</h3><div id="app-funnel" class="muted" style="font-size:.85rem">—</div></div>
@@ -429,6 +430,13 @@ function renderAppUsers(d){
   }
   if($("users-count")) $("users-count").textContent = "· "+fm(d.count)+" recent";
   if($("users-trend")) $("users-trend").textContent = d.trend || "Not enough data yet for a trend read.";
+  const cohort = (d.actions||[]).filter(Boolean);
+  if($("users-actions-card")){
+    if(cohort.length){
+      $("users-actions-card").style.display = "";
+      $("users-actions").innerHTML = cohort.map(a=>'<div style="padding:.3rem 0;color:var(--text)">→ '+a+'</div>').join("");
+    } else { $("users-actions-card").style.display = "none"; }
+  }
   const users = d.users || [];
   if($("users-list")) $("users-list").innerHTML = users.length ? users.map(u=>{
     const taps = (u.top_taps||[]).map(t=>t.event+"·"+fm(t.n)).join(", ") || "—";
@@ -437,6 +445,11 @@ function renderAppUsers(d){
     const searches = (u.searches||[]).slice(0,4).join(", ");
     const funnel = u.paywall_shown ? (" · paywall×"+fm(u.paywall_shown)+(u.purchases?(" → bought"):(u.subscribe_tapped?" → tapped, no buy":" → no sub"))) : "";
     const badge = (u.membership==="premium") ? '<span style="color:#2E7DF6">●&nbsp;premium</span>' : '<span class="muted">○&nbsp;free</span>';
+    const act = (u.action||"None").trim();
+    const noAction = /^none[.!]?$/i.test(act);
+    const actionRow = noAction
+      ? '<div style="font-size:.82rem;margin-top:.35rem;color:var(--muted,#8a8a8a)"><b>Take Action:</b> None</div>'
+      : '<div style="font-size:.82rem;margin-top:.35rem;padding:.35rem .55rem;border-left:3px solid #F4B72C;background:rgba(244,183,44,.08);border-radius:0 6px 6px 0;color:var(--text)"><b style="color:#F4B72C">Take Action:</b> '+act+'</div>';
     return '<div style="padding:.55rem 0;border-bottom:1px solid var(--border)">'
       + '<div style="display:flex;justify-content:space-between;gap:1rem"><span><b>'+u.pid.slice(0,8)+'</b> &nbsp;'+badge+'</span>'
       + '<span class="muted">'+fm(u.events)+' events · '+fm(u.sessions)+' sess · '+fm(u.days_active)+'d</span></div>'
@@ -445,6 +458,7 @@ function renderAppUsers(d){
       + (plants?('<div class="muted" style="font-size:.8rem">plants: '+plants+'</div>'):'')
       + (searches?('<div class="muted" style="font-size:.8rem">searched: '+searches+'</div>'):'')
       + '<div class="muted" style="font-size:.8rem">screens: '+screens+funnel+'</div>'
+      + actionRow
       + '</div>';
   }).join("") : '<span class="muted">No users with sessions in the last 30 days yet.</span>';
 }

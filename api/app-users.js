@@ -33,9 +33,11 @@ async function claudeSummaries(apiKey, users) {
     days_active: u.days_active,
   }));
   const prompt = `You are analyzing users of a rare-plant iOS app (identify, browse, care, marketplace, paywall at $0.99/mo).
-For EACH user below, write a punchy one-line behavioral summary (max ~18 words) — naming the SPECIFIC plants they viewed and terms they searched when notable, where they lingered, and (if they hit a paywall) why they likely didn't subscribe.
-Also write a 2-sentence overall TREND summary across all users.
-Return ONLY valid JSON, no prose: {"trend":"...","users":[{"id":"<id>","summary":"..."}]}
+For EACH user below:
+1. "summary" — a punchy one-line behavioral read (max ~18 words), naming the SPECIFIC plants they viewed and terms they searched when notable, where they lingered, and (if they hit a paywall) why they likely didn't subscribe.
+2. "action" — ONE concrete, product-focused action item WE (the team) could take to better serve THIS user / users like them, based on what the data shows (max ~16 words). Be specific and doable — e.g. "Add a care guide for Philodendron melanochrysum — 3 views, none exists", "Paywall hit on identify with high intent; test a free first-ID". If the user's behavior is healthy and reveals nothing to act on, return exactly "None". Do NOT invent problems just to fill it — "None" is a valid, common answer.
+Also write a 2-sentence overall TREND summary across all users, and a top-level "actions" array of the 1-3 highest-leverage action items across the WHOLE cohort (patterns seen in multiple users). If nothing stands out, return an empty array.
+Return ONLY valid JSON, no prose: {"trend":"...","actions":["..."],"users":[{"id":"<id>","summary":"...","action":"..."}]}
 Users JSON:
 ${JSON.stringify(compact)}`;
   const r = await fetch("https://api.anthropic.com/v1/messages", {
@@ -78,7 +80,7 @@ export default async function handler(req, res) {
       pid: r[0], membership: r[1], events: Number(r[2]) || 0, sessions: Number(r[3]) || 0,
       days_active: Number(r[4]) || 0, first_seen: r[5], last_seen: r[6],
       paywall_shown: Number(r[7]) || 0, subscribe_tapped: Number(r[8]) || 0, purchases: Number(r[9]) || 0,
-      top_taps: [], top_screens: [], top_plants: [], searches: [], summary: "",
+      top_taps: [], top_screens: [], top_plants: [], searches: [], summary: "", action: "",
     }));
     const byId = Object.fromEntries(users.map((u) => [u.pid, u]));
 
@@ -109,17 +111,22 @@ export default async function handler(req, res) {
       for (const r of searches) { const u = byId[r[0]]; if (u && r[1] && u.searches.length < 6) u.searches.push(r[1]); }
     }
 
-    let trend = "";
+    let trend = "", actions = [];
     if (anthropic && users.length) {
       try {
         const out = await claudeSummaries(anthropic, users);
         trend = out.trend || "";
-        const sm = Object.fromEntries((out.users || []).map((u) => [u.id, u.summary]));
-        for (const u of users) u.summary = sm[u.pid.slice(0, 8)] || "";
+        actions = Array.isArray(out.actions) ? out.actions.filter(Boolean).slice(0, 3) : [];
+        const byShortId = Object.fromEntries((out.users || []).map((u) => [u.id, u]));
+        for (const u of users) {
+          const o = byShortId[u.pid.slice(0, 8)] || {};
+          u.summary = o.summary || "";
+          u.action = o.action || "None";   // default: nothing to do
+        }
       } catch (e) { trend = "(summary unavailable: " + String(e.message).slice(0, 80) + ")"; }
     }
 
-    cache = { connected: true, updated: new Date().toISOString(), count: users.length, trend, users };
+    cache = { connected: true, updated: new Date().toISOString(), count: users.length, trend, actions, users };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
