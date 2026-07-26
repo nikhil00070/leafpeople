@@ -2506,5 +2506,181 @@
     "thumb": "/images/source/stock/rainforest-western-ghats-hero.jpg",
     "date": "2026-07-21",
     "status": "published"
+  },
+  {
+    "slug": "conservatory-bogor",
+    "title": "Botanical Tour: Bogor Botanical Gardens, Java, Indonesia \u2014 Two Centuries of Tropical Obsession",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-bogor",
+    "thumb": "/images/source/stock/conservatory-bogor-hero.jpg",
+    "date": "2026-07-05",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-copenhagen",
+    "title": "Botanical Tour: Copenhagen's Palm House, Denmark \u2014 Iron, Glass, and a Spiral Into the Canopy",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-copenhagen",
+    "thumb": "/images/source/stock/conservatory-copenhagen-hero.jpg",
+    "date": "2026-07-06",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-adelaide",
+    "title": "Botanical Tour: The Bicentennial Conservatory, Adelaide, Australia \u2014 The Southern Hemisphere's Great Span",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-adelaide",
+    "thumb": "/images/source/stock/conservatory-adelaide-hero.jpg",
+    "date": "2026-07-07",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-rio-de-janeiro",
+    "title": "Botanical Tour: Jardim Bot\u00e2nico do Rio de Janeiro, Brazil \u2014 Imperial Palms and the Atlantic Forest",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-rio-de-janeiro",
+    "thumb": "/images/source/stock/conservatory-rio-de-janeiro-hero.jpg",
+    "date": "2026-07-08",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-nong-nooch",
+    "title": "Botanical Tour: Nong Nooch Tropical Botanical Garden, Pattaya, Thailand \u2014 Cycads, Palms, and Spectacle",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-nong-nooch",
+    "thumb": "/images/source/stock/conservatory-nong-nooch-hero.jpg",
+    "date": "2026-07-09",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-hawaii-tropical",
+    "title": "Botanical Tour: Hawaii Tropical Botanical Garden, Big Island, USA \u2014 A Rainforest Valley on the Sea",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-hawaii-tropical",
+    "thumb": "/images/source/stock/conservatory-hawaii-tropical-hero.jpg",
+    "date": "2026-07-10",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-ntbg-kauai",
+    "title": "Botanical Tour: The National Tropical Botanical Garden, Kauai, USA \u2014 America's Rarest Tropical Plants",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-ntbg-kauai",
+    "thumb": "/images/source/stock/conservatory-ntbg-kauai-hero.jpg",
+    "date": "2026-07-11",
+    "status": "published"
+  },
+  {
+    "slug": "conservatory-flowers-sf",
+    "title": "Botanical Tour: The Conservatory of Flowers, San Francisco, USA \u2014 The Grand Old Glasshouse of the West",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-flowers-sf",
+    "thumb": "/images/source/stock/conservatory-flowers-sf-hero.jpg",
+    "date": "2026-07-12",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-haupt-nybg",
+    "title": "Botanical Tour: The Enid A. Haupt Conservatory, New York, USA \u2014 A Crystal Palace of the Tropics",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-haupt-nybg",
+    "thumb": "/images/source/stock/conservatory-haupt-nybg-hero.jpg",
+    "date": "2026-07-13",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-climatron",
+    "title": "Botanical Tour: The Climatron, St. Louis, USA \u2014 A Geodesic Rainforest",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-climatron",
+    "thumb": "/images/source/stock/conservatory-climatron-hero.jpg",
+    "date": "2026-07-14",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-marie-selby",
+    "title": "Botanical Tour: Marie Selby Botanical Gardens, Sarasota, USA \u2014 The World Capital of Epiphytes",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-marie-selby",
+    "thumb": "/images/source/stock/conservatory-marie-selby-hero.jpg",
+    "date": "2026-07-15",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-amazon-spheres",
+    "title": "Botanical Tour: The Amazon Spheres, Seattle, USA \u2014 A Collector's Cathedral in the City",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-amazon-spheres",
+    "thumb": "/images/source/stock/conservatory-amazon-spheres-hero.jpg",
+    "date": "2026-07-16",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-cloud-forest-singapore",
+    "title": "Botanical Tour: Gardens by the Bay \u2014 Cloud Forest, Singapore \u2014 A Mountain of Mist and Epiphytes",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-cloud-forest-singapore",
+    "thumb": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg",
+    "date": "2026-07-17",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-berlin-tropenhaus",
+    "title": "Botanical Tour: Berlin's Gro\u00dfes Tropenhaus, Germany \u2014 One of the Tallest Glass Jungles on Earth",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-berlin-tropenhaus",
+    "thumb": "/images/source/stock/conservatory-berlin-tropenhaus-hero.jpg",
+    "date": "2026-07-18",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-eden-project",
+    "title": "Botanical Tour: The Eden Project Biomes, Cornwall, UK \u2014 The Largest Rainforest Under a Roof",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-eden-project",
+    "thumb": "/images/source/stock/conservatory-eden-project-hero.jpg",
+    "date": "2026-07-19",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-kew",
+    "title": "Botanical Tour: Kew's Palm House & Princess of Wales Conservatory, London, UK \u2014 Where Glasshouse Botany Was Born",
+    "category": "Botanical Tour",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/conservatory-kew",
+    "thumb": "/images/source/stock/conservatory-kew-hero.jpg",
+    "date": "2026-07-20",
+    "status": "pending"
   }
 ]

@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-07-22",
-  "count": 230,
+  "updated": "2026-07-26",
+  "count": 231,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -2993,6 +2993,19 @@
       "url": "https://leafpeople.app/the-leaf/rainforest-western-ghats",
       "data_url": "https://leafpeople.app/the-leaf/rainforest-western-ghats/_data.json",
       "image": "https://leafpeople.app/images/source/stock/rainforest-western-ghats-hero.jpg"
+    },
+    {
+      "id": "the-leaf/conservatory-ntbg-kauai",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-ntbg-kauai",
+      "title": "Botanical Tour: The National Tropical Botanical Garden, Kauai, USA — America's Rarest Tropical Plants",
+      "category": "Botanical Tour",
+      "description": "A collector's guide to the National Tropical Botanical Garden on Kauai — its history, Allerton's fig, conservation mission, and the rare aroids within.",
+      "date": "2026-07-11",
+      "url": "https://leafpeople.app/the-leaf/conservatory-ntbg-kauai",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-ntbg-kauai/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-ntbg-kauai-hero.jpg"
     }
   ]
 }
