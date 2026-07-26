@@ -9,7 +9,7 @@
     "What collectors rarely pause to appreciate, standing there with their phones raised toward a massive _Anthurium_ or a curtain of roots descending from an epiphytic perch, is the institution behind the glass. The Missouri Botanical Garden is not merely a pretty conservatory. It is the oldest botanical garden in continuous operation in the United States, founded in 1859 by a Sheffield-born merchant named Henry Shaw. More specifically for our purposes, it is the world capital of aroid taxonomy — the place where, over decades of careful, grinding herbarium science, more species of _Philodendron_ and _Anthurium_ were described and named than anywhere else on earth. The plants people argue about on collector forums, the ones that command eye-watering prices in private sales, very often trace their formal scientific identity back to a building a short walk from the dome."
   ],
   "pull_quote": "The philodendrons and anthuriums people chase across the internet were, more often than not, formally named right here in St. Louis.",
-  "body_image_caption": "Anthurium leaves catching diffused light inside the Climatron.",
+  "body_image_caption": "The geodesic dome arching over the Climatron's rainforest canopy.",
   "sections": [
     {
       "heading": "Fuller's Structure, Shaw's Vision",
@@ -86,9 +86,9 @@
     }
   ],
   "slug": "conservatory-climatron",
-  "hero": "/images/source/stock/conservatory-climatron-hero.jpg",
-  "body_image": "/images/source/stock/conservatory-climatron-body.jpg",
+  "hero": "/images/source/stock/conservatory-climatron-hero.jpg?v=2",
+  "body_image": "/images/source/stock/conservatory-climatron-body.jpg?v=2",
   "status": "pending",
-  "hero_attribution": "Wikimedia Commons / CC BY-SA 3.0 · Wikimedia Commons",
-  "body_image_attribution": "BluedarkArt / CC BY-SA 2.0 · Wikimedia Commons"
+  "hero_attribution": "Wikimedia Commons",
+  "body_image_attribution": "Wikimedia Commons"
 }
