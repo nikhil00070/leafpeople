@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 241,
+  "count": 242,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3071,6 +3071,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-climatron",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-climatron/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-climatron-hero.jpg?v=2"
+    },
+    {
+      "id": "the-leaf/conservatory-marie-selby",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-marie-selby",
+      "title": "Botanical Tour: Marie Selby Botanical Gardens, Sarasota, USA — The World Capital of Epiphytes",
+      "category": "Botanical Tour",
+      "description": "Marie Selby Botanical Gardens in Sarasota is the world's only botanical garden devoted to epiphytes. Here's what collectors need to know before they visit.",
+      "date": "2026-07-15",
+      "url": "https://leafpeople.app/the-leaf/conservatory-marie-selby",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-marie-selby/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-marie-selby-hero.jpg?v=2"
     },
     {
       "id": "the-leaf/conservatory-amazon-spheres",
