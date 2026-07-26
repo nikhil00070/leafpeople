@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 237,
+  "count": 238,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3058,6 +3058,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-cloud-forest-singapore",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-cloud-forest-singapore/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg?v=2"
+    },
+    {
+      "id": "the-leaf/conservatory-berlin-tropenhaus",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-berlin-tropenhaus",
+      "title": "Botanical Tour: Berlin's Großes Tropenhaus, Germany — One of the Tallest Glass Jungles on Earth",
+      "category": "Botanical Tour",
+      "description": "A collector's guide to the Großes Tropenhaus at Botanischer Garten Berlin — its 26-metre glass vault, rare aroids, and why it still astonishes.",
+      "date": "2026-07-18",
+      "url": "https://leafpeople.app/the-leaf/conservatory-berlin-tropenhaus",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-berlin-tropenhaus/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-berlin-tropenhaus-hero.jpg?v=3"
     },
     {
       "id": "the-leaf/conservatory-eden-project",

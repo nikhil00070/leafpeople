@@ -2558,7 +2558,7 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-nong-nooch",
-    "thumb": "/images/source/stock/conservatory-nong-nooch-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-nong-nooch-hero.jpg?v=2",
     "date": "2026-07-09",
     "status": "pending"
   },
@@ -2657,9 +2657,9 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-berlin-tropenhaus",
-    "thumb": "/images/source/stock/conservatory-berlin-tropenhaus-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-berlin-tropenhaus-hero.jpg?v=3",
     "date": "2026-07-18",
-    "status": "pending"
+    "status": "published"
   },
   {
     "slug": "conservatory-eden-project",
