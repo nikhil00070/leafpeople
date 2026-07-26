@@ -231,7 +231,8 @@ export default async function handler(req, res) {
     }
 
     // Aggregate insights run across EVERYONE (not the 25-user sample) — the scale path.
-    const agg = await aggregateInsights(host, pid, key, W).catch(() => null);
+    // NOTE: distinct name from the per-user `agg` above — same scope, must not collide.
+    const insights = await aggregateInsights(host, pid, key, W).catch(() => null);
 
     let trend = "", actions = [], recs = null;
     if (anthropic && users.length) {
@@ -239,7 +240,7 @@ export default async function handler(req, res) {
         // Per-user summaries and cohort recommendations in parallel — two cheap Haiku calls, 1h-cached.
         const [out, recOut] = await Promise.all([
           claudeSummaries(anthropic, users),
-          agg ? claudeRecommendations(anthropic, agg).catch((e) => ({ _error: String(e.message).slice(0, 100) })) : Promise.resolve(null),
+          insights ? claudeRecommendations(anthropic, insights).catch((e) => ({ _error: String(e.message).slice(0, 100) })) : Promise.resolve(null),
         ]);
         trend = out.trend || "";
         actions = Array.isArray(out.actions) ? out.actions.filter(Boolean).slice(0, 3) : [];
@@ -254,7 +255,7 @@ export default async function handler(req, res) {
     }
 
     cache = { connected: true, updated: new Date().toISOString(), count: users.length,
-              trend, actions, users, insights: agg, recommendations: recs };
+              trend, actions, users, insights, recommendations: recs };
     cacheAt = Date.now();
     res.setHeader("cache-control", "no-store");
     return res.status(200).json(cache);
