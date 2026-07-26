@@ -9,7 +9,7 @@
     "The Amazon Spheres opened in January 2018 as part of Amazon's sprawling downtown headquarters campus. Architecture firm NBBJ designed them, but calling these domes a corporate amenity is like calling a _Monstera deliciosa_ a houseplant — technically accurate, entirely inadequate. Inside is a cloud-forest conservatory holding on the order of 40,000 plants drawn from dozens of countries, with a dedicated horticulture team that grows, rotates, and curates the collection from an off-site greenhouse. It is, without much exaggeration, the kind of place serious plant collectors describe when they try to explain to non-collectors what the obsession is actually about."
   ],
   "pull_quote": "A living wall of epiphytes and rare aroids is not an amenity. It is an argument — for what a building can be.",
-  "body_image_caption": "Epiphytic orchids colonizing mossy branches inside the Spheres.",
+  "body_image_caption": "The glass geodesic Spheres in downtown Seattle.",
   "sections": [
     {
       "heading": "Why a Tech Company Built a Rainforest",
@@ -71,9 +71,9 @@
     }
   ],
   "slug": "conservatory-amazon-spheres",
-  "hero": "/images/source/stock/conservatory-amazon-spheres-hero.jpg",
-  "body_image": "/images/source/stock/conservatory-amazon-spheres-body.jpg",
+  "hero": "/images/source/stock/conservatory-amazon-spheres-hero.jpg?v=2",
+  "body_image": "/images/source/stock/conservatory-amazon-spheres-body.jpg?v=2",
   "status": "pending",
-  "hero_attribution": "Steven Pavlov / CC BY-SA 4.0 · Wikimedia Commons",
-  "body_image_attribution": "Yercaud-elango / CC BY-SA 4.0 · Wikimedia Commons"
+  "hero_attribution": "Doctor Tinieblas / Unsplash",
+  "body_image_attribution": "Hiroko Nishimura / Unsplash"
 }
