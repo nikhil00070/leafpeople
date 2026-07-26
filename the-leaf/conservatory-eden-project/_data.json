@@ -9,7 +9,7 @@
     "The Eden Project opened in 2001. The idea came from Tim Smit — who had earlier helped restore the Lost Gardens of Heligan, also in Cornwall — and the biomes were designed by architect Nicholas Grimshaw. The structural logic was straightforward in conception and staggering in execution: rather than glass, which would have been prohibitively heavy for the irregular geometry involved, the domes are clad in ETFE foil cushions. ETFE — ethylene tetrafluoroethylene — is a transparent polymer that weighs a fraction of glass, admits ultraviolet light effectively, and can be inflated to form a rigid, self-cleaning panel. The hexagonal cushions vary in size as the dome curves, but together they create an envelope that traps heat and humidity while flooding the interior with diffuse natural light. It is the kind of engineering that looks inevitable only after someone has already done it."
   ],
   "pull_quote": "A whole tropical forest, self-sustaining and humid, rising out of a china-clay crater in the far southwest of England — that is still a genuinely strange thing to stand inside.",
-  "body_image_caption": "Monstera deliciosa climbing a biome tree toward ETFE panels.",
+  "body_image_caption": "The canopy walkway beneath the Rainforest Biome's ETFE dome.",
   "sections": [
     {
       "heading": "What the Pit Became",
@@ -85,9 +85,9 @@
     }
   ],
   "slug": "conservatory-eden-project",
-  "hero": "/images/source/stock/conservatory-eden-project-hero.jpg",
-  "body_image": "/images/source/stock/conservatory-eden-project-body.jpg",
+  "hero": "/images/source/stock/conservatory-eden-project-hero.jpg?v=2",
+  "body_image": "/images/source/stock/conservatory-eden-project-body.jpg?v=2",
   "status": "pending",
-  "hero_attribution": "Jürgen Matern / CC BY-SA 2.5 · Wikimedia Commons",
-  "body_image_attribution": "Agnieszka Kwiecień, Nova / CC BY-SA 4.0 · Wikimedia Commons"
+  "hero_attribution": "Ben Elliott / Unsplash",
+  "body_image_attribution": "Jack Young / Unsplash"
 }
