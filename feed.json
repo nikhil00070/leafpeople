@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 242,
+  "count": 243,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3032,6 +3032,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-nong-nooch",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-nong-nooch/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-nong-nooch-hero.jpg?v=2"
+    },
+    {
+      "id": "the-leaf/conservatory-hawaii-tropical",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-hawaii-tropical",
+      "title": "Botanical Tour: Hawaii Tropical Botanical Garden, Big Island, USA — A Rainforest Valley on the Sea",
+      "category": "Botanical Tour",
+      "description": "Inside the Hawaii Tropical Botanical Garden on the Big Island's Hamakua Coast — its history, its plant collections, and what serious collectors need to see.",
+      "date": "2026-07-10",
+      "url": "https://leafpeople.app/the-leaf/conservatory-hawaii-tropical",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-hawaii-tropical/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-hawaii-tropical-hero.jpg?v=3"
     },
     {
       "id": "the-leaf/conservatory-ntbg-kauai",
