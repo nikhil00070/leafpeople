@@ -1761,7 +1761,7 @@
     "date": "2026-07-26",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Morona \u2014 the bridge",
     "image": "/images/instagram/anthurium-morona.jpeg",
     "caption": "If you've made it this far, you're one of us. \ud83c\udf3f\n\nThere's a whole world of rare aroids \u2014 and almost nothing built for the people who love them. So we built it. Leaf People: identify to the species, track care, learn from a real field guide, trade with collectors. All in the link in bio.",
@@ -1789,7 +1789,9 @@
     "reel": true,
     "hook": "Rare even among rare anthuriums",
     "img_ready": "/images/ig_ready/d30.jpg",
-    "video": "/videos/instagram/d30.mp4"
+    "video": "/videos/instagram/d30.mp4",
+    "posted_at": "2026-07-26",
+    "ig_media_id": "17936596107318007"
   },
   {
     "id": "d31",
