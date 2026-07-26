@@ -2,14 +2,14 @@
   "meta_title": "Inside Cloud Forest: Singapore's Indoor Mountain for Epiphyte Obsessives",
   "meta_description": "A collector's field guide to Cloud Forest at Gardens by the Bay — the cool-mist conservatory built around a 35-metre indoor mountain draped in epiphytes.",
   "category": "Botanical Tour",
-  "title": "Botanical Tour: Gardens by the Bay — Cloud Forest, Singapore — A Mountain of Mist and Epiphytes",
+  "title": "Botanical Tour: Gardens by the Bay — Cloud Forest, Singapore — A Man-Made Cloud Mountain Under Glass",
   "deck": "Singapore's Cloud Forest puts a cool, misted, epiphyte-draped peak inside a glass dome on the equator — and everything growing on it is something collectors chase.",
   "intro": [
     "Step off the equatorial pavement outside Gardens by the Bay and into the Cloud Forest conservatory, and the air changes before your eyes adjust. It drops several degrees. Mist drifts across the path. The scent is green and mineral, the smell of wet moss on stone. Then the mountain resolves out of the haze: a roughly 35-metre planted tower rising through the centre of the dome, its flanks dark with ferns, club mosses, begonias, and orchids, a sheet of water falling the full height of its face in one of the world's tallest indoor waterfalls. For a moment the scale is hard to parse. You are inside a glass building in Singapore, which sits barely one degree north of the equator, and you are looking at a cold cloud forest.",
     "The Cloud Forest opened in 2012 alongside the adjacent Flower Dome, and the pairing was deliberate: the Flower Dome holds the dry, temperate Mediterranean world, while the Cloud Forest holds its opposite — the perpetually damp upper elevations of the tropics, the 1,000-to-3,000-metre band where clouds stall against mountain ridges and never quite leave. Architects Wilkinson Eyre designed the enclosing shell, a faceted glass-and-steel structure of considerable elegance. Landscape architects Grant Associates worked out what to do with the interior — which is, in essence, to build a mountain and fur it with the epiphyte community that such a mountain would naturally support. The result is less like a greenhouse and more like an argument: that the most extreme plant environments on earth can be made walkable, and that people will show up by the millions to walk them."
   ],
   "pull_quote": "A cold, misted indoor mountain in equatorial Singapore — the epiphyte lifestyle made walkable, one aerial platform at a time.",
-  "body_image_caption": "_Nepenthes_ pitcher plant trailing from Cloud Mountain's misted upper flanks.",
+  "body_image_caption": "The Cloud Forest and Flower Dome from above, Gardens by the Bay.",
   "sections": [
     {
       "heading": "What a Cloud Forest Actually Is",
@@ -79,9 +79,9 @@
     }
   ],
   "slug": "conservatory-cloud-forest-singapore",
-  "hero": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg",
-  "body_image": "/images/source/stock/conservatory-cloud-forest-singapore-body.jpg",
+  "hero": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg?v=2",
+  "body_image": "/images/source/stock/conservatory-cloud-forest-singapore-body.jpg?v=2",
   "status": "pending",
-  "hero_attribution": "Kuroczynski / CC BY-SA 4.0 · Wikimedia Commons",
-  "body_image_attribution": "geoff mckay from Palmerston North, New Zealand / CC BY 2.0 · Wikimedia Commons"
+  "hero_attribution": "Ezra Ulanday / Unsplash",
+  "body_image_attribution": "Joshua Kettle / Unsplash"
 }

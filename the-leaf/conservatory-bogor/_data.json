@@ -86,9 +86,9 @@
     }
   ],
   "slug": "conservatory-bogor",
-  "hero": "/images/source/stock/conservatory-bogor-hero.jpg",
+  "hero": "/images/source/stock/conservatory-bogor-hero.jpg?v=2",
   "body_image": "/images/source/stock/conservatory-bogor-body.jpg",
   "status": "pending",
-  "hero_attribution": "Ilham Mufti Laksono / CC BY 4.0 · Wikimedia Commons",
+  "hero_attribution": "",
   "body_image_attribution": "RahmadHimawan Photography / CC BY-SA 4.0 · Wikimedia Commons"
 }
