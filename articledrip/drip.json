@@ -2514,7 +2514,7 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-bogor",
-    "thumb": "/images/source/stock/conservatory-bogor-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-bogor-hero.jpg?v=2",
     "date": "2026-07-05",
     "status": "pending"
   },
@@ -2641,14 +2641,14 @@
   },
   {
     "slug": "conservatory-cloud-forest-singapore",
-    "title": "Botanical Tour: Gardens by the Bay \u2014 Cloud Forest, Singapore \u2014 A Mountain of Mist and Epiphytes",
+    "title": "Botanical Tour: Gardens by the Bay \u2014 Cloud Forest, Singapore \u2014 A Man-Made Cloud Mountain Under Glass",
     "category": "Botanical Tour",
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-cloud-forest-singapore",
-    "thumb": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg?v=2",
     "date": "2026-07-17",
-    "status": "pending"
+    "status": "published"
   },
   {
     "slug": "conservatory-berlin-tropenhaus",
@@ -2668,7 +2668,7 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-eden-project",
-    "thumb": "/images/source/stock/conservatory-eden-project-hero.jpg?v=2",
+    "thumb": "/images/source/stock/conservatory-eden-project-hero.jpg?v=3",
     "date": "2026-07-19",
     "status": "published"
   },

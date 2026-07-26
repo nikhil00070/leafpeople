@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 233,
+  "count": 235,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3021,6 +3021,19 @@
       "image": "https://leafpeople.app/images/source/stock/conservatory-ntbg-kauai-hero.jpg"
     },
     {
+      "id": "the-leaf/conservatory-cloud-forest-singapore",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-cloud-forest-singapore",
+      "title": "Botanical Tour: Gardens by the Bay — Cloud Forest, Singapore — A Man-Made Cloud Mountain Under Glass",
+      "category": "Botanical Tour",
+      "description": "A collector's field guide to Cloud Forest at Gardens by the Bay — the cool-mist conservatory built around a 35-metre indoor mountain draped in epiphytes.",
+      "date": "2026-07-17",
+      "url": "https://leafpeople.app/the-leaf/conservatory-cloud-forest-singapore",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-cloud-forest-singapore/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg?v=2"
+    },
+    {
       "id": "the-leaf/conservatory-eden-project",
       "section": "the-leaf",
       "section_label": "Understory",
@@ -3031,7 +3044,7 @@
       "date": "2026-07-19",
       "url": "https://leafpeople.app/the-leaf/conservatory-eden-project",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-eden-project/_data.json",
-      "image": "https://leafpeople.app/images/source/stock/conservatory-eden-project-hero.jpg?v=2"
+      "image": "https://leafpeople.app/images/source/stock/conservatory-eden-project-hero.jpg?v=3"
     },
     {
       "id": "the-leaf/conservatory-kew",
