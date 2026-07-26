@@ -2995,6 +2995,19 @@
       "image": "https://leafpeople.app/images/source/stock/rainforest-western-ghats-hero.jpg"
     },
     {
+      "id": "the-leaf/conservatory-bogor",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-bogor",
+      "title": "Botanical Tour: Bogor Botanical Gardens, Java, Indonesia — Two Centuries of Tropical Obsession",
+      "category": "Botanical Tour",
+      "description": "Kebun Raya Bogor, founded 1817 in West Java, is a living archive of equatorial flora — aroids, orchids, palms — and the birthplace of Southeast Asian tropical science.",
+      "date": "2026-07-05",
+      "url": "https://leafpeople.app/the-leaf/conservatory-bogor",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-bogor/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-bogor-hero.jpg?v=2"
+    },
+    {
       "id": "the-leaf/conservatory-copenhagen",
       "section": "the-leaf",
       "section_label": "Understory",
