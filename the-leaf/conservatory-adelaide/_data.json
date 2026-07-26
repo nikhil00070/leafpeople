@@ -9,7 +9,7 @@
     "The Bicentennial Conservatory opened in 1989, designed by architect Guy Maron to mark the two hundredth anniversary of European settlement in Australia. The brief was ambitious: build the largest single-span glasshouse in the Southern Hemisphere, fill it with lowland tropical rainforest, and make it a serious conservation collection — not merely a spectacle. More than three decades later, it remains both. For collectors who grow aroids, epiphytes, and the increasingly sought-after plants of Australasia and the Melanesian arc, a visit is less a tourist trip than a field study."
   ],
   "pull_quote": "A rainforest planted in a desert city, inside a glass wave — the Bicentennial Conservatory is conservation wearing the clothes of architecture.",
-  "body_image_caption": "Monstera deliciosa climbing a mossy column inside the conservatory.",
+  "body_image_caption": "The conservatory's great glass arc above the Adelaide Botanic Garden.",
   "sections": [
     {
       "heading": "A Single Span, One Climate",
@@ -93,9 +93,9 @@
     }
   ],
   "slug": "conservatory-adelaide",
-  "hero": "/images/source/stock/conservatory-adelaide-hero.jpg",
-  "body_image": "/images/source/stock/conservatory-adelaide-body.jpg",
+  "hero": "/images/source/stock/conservatory-adelaide-hero.jpg?v=2",
+  "body_image": "/images/source/stock/conservatory-adelaide-body.jpg?v=2",
   "status": "pending",
-  "hero_attribution": "Travellers travel photobook from Melbourne, Australia, Austr / CC BY 2.0 · Wikimedia Commons",
-  "body_image_attribution": "Agnieszka Kwiecień, Nova / CC BY-SA 4.0 · Wikimedia Commons"
+  "hero_attribution": "",
+  "body_image_attribution": ""
 }
