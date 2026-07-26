@@ -120,9 +120,10 @@ Rules:
 - The team specifically wants BUILD updates called out — if user behavior implies an app change, tag it BUILD and be concrete about the change.
 - purchase_failures with non-'cancelled' reasons are almost certainly BUGs — rank them near the top with the reason + count.
 - A high identify error rate (errored vs started) is a BUILD/BUG signal.
-- content_gaps = plants users PHOTOGRAPHED and we identified but DON'T carry in the library (identify outcome 'not_in_library'). Each is a strong CONTENT item — recommend adding the highest-demand ones by name. This is usually the highest-value content signal.
+- CRITICAL — you do NOT know what content already exists. top_plants are plants users VIEWED, and a view happens ON that plant's detail/care-guide screen — so every plant in top_plants ALREADY HAS a care guide. NEVER recommend "build/add a care guide" for a plant in top_plants, and NEVER claim a plant has "no content"/"zero content"/"missing care guide". A high view count means the EXISTING guide is popular (a CONTENT signal to EXPAND/improve it, or a MARKETING/interest signal), not that it's missing.
+- The ONLY data-backed content-GAP signal is content_gaps (identify outcome 'not_in_library') — plants users photographed that we could NOT match to the library. Recommend adding those by name. If content_gaps is empty, do NOT invent content gaps from any other field.
+- top_searches can suggest CONTENT/UX only if a term looks like it would return nothing; frame it as "verify search returns results for X", never as a confirmed gap.
 - A paywall source with many shows but ~0 purchases is a PRICING/BUILD signal (gate placed wrong or wall too hard).
-- High-volume searches or plant views point to CONTENT to add.
 - If the whole dataset is thin (few users/events), say so via data_confidence and keep the list short and honest — do NOT pad it.
 
 Return ONLY valid JSON, no prose: {"headline":"<one line on the single biggest takeaway>","data_confidence":"low|medium|high","recommendations":[{"type":"...","title":"...","evidence":"...","detail":"..."}]}
