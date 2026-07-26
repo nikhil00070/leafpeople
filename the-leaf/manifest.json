@@ -140,6 +140,166 @@
     "status": "published"
   },
   {
+    "slug": "conservatory-kew",
+    "title": "Botanical Tour: Kew's Palm House & Princess of Wales Conservatory, London, UK — Where Glasshouse Botany Was Born",
+    "category": "Botanical Tour",
+    "description": "Inside the Palm House and Princess of Wales Conservatory at Kew — the Victorian iron cathedral where the tropics were collected, named, and still thrive.",
+    "url": "/the-leaf/conservatory-kew",
+    "date": "2026-07-20",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-eden-project",
+    "title": "Botanical Tour: The Eden Project, Cornwall, UK — The Largest Rainforest Under a Roof",
+    "category": "Botanical Tour",
+    "description": "A collector's guide to the Eden Project — the geodesic rainforest biome in Cornwall where aroids, epiphytes, and canopy plants grow under an ETFE sky.",
+    "url": "/the-leaf/conservatory-eden-project",
+    "date": "2026-07-19",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-berlin-tropenhaus",
+    "title": "Botanical Tour: Berlin's Großes Tropenhaus, Germany — One of the Tallest Glass Jungles on Earth",
+    "category": "Botanical Tour",
+    "description": "A collector's guide to the Großes Tropenhaus at Botanischer Garten Berlin — its 26-metre glass vault, rare aroids, and why it still astonishes.",
+    "url": "/the-leaf/conservatory-berlin-tropenhaus",
+    "date": "2026-07-18",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-cloud-forest-singapore",
+    "title": "Botanical Tour: Gardens by the Bay — Cloud Forest, Singapore — A Mountain of Mist and Epiphytes",
+    "category": "Botanical Tour",
+    "description": "A collector's field guide to Cloud Forest at Gardens by the Bay — the cool-mist conservatory built around a 35-metre indoor mountain draped in epiphytes.",
+    "url": "/the-leaf/conservatory-cloud-forest-singapore",
+    "date": "2026-07-17",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-amazon-spheres",
+    "title": "Botanical Tour: The Amazon Spheres, Seattle, USA — A Collector's Cathedral in the City",
+    "category": "Botanical Tour",
+    "description": "The Amazon Spheres hold 40,000 plants — rare aroids, epiphytes, orchids — in three glass domes at Amazon's Seattle HQ. Here's what makes them worth visiting.",
+    "url": "/the-leaf/conservatory-amazon-spheres",
+    "date": "2026-07-16",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-marie-selby",
+    "title": "Botanical Tour: Marie Selby Botanical Gardens, Sarasota, USA — The World Capital of Epiphytes",
+    "category": "Botanical Tour",
+    "description": "Marie Selby Botanical Gardens in Sarasota is the world's only botanical garden devoted to epiphytes. Here's what collectors need to know before they visit.",
+    "url": "/the-leaf/conservatory-marie-selby",
+    "date": "2026-07-15",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-climatron",
+    "title": "Botanical Tour: The Climatron, St. Louis, USA — A Geodesic Rainforest",
+    "category": "Botanical Tour",
+    "description": "The Climatron dome at Missouri Botanical Garden is the world's center of aroid taxonomy. Here's why every collector should make the pilgrimage.",
+    "url": "/the-leaf/conservatory-climatron",
+    "date": "2026-07-14",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-haupt-nybg",
+    "title": "Botanical Tour: The Enid A. Haupt Conservatory, New York, USA — A Crystal Palace of the Tropics",
+    "category": "Botanical Tour",
+    "description": "The Enid A. Haupt Conservatory at NYBG is America's grandest Victorian glasshouse. Here's what collectors need to see inside.",
+    "url": "/the-leaf/conservatory-haupt-nybg",
+    "date": "2026-07-13",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-flowers-sf",
+    "title": "Botanical Tour: The Conservatory of Flowers, San Francisco, USA — The Grand Old Glasshouse of the West",
+    "category": "Botanical Tour",
+    "description": "Inside Golden Gate Park's Conservatory of Flowers, the oldest wood-and-glass conservatory in North America, lives a highland tropics gallery built for serious plant people.",
+    "url": "/the-leaf/conservatory-flowers-sf",
+    "date": "2026-07-12",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-ntbg-kauai",
+    "title": "Botanical Tour: The National Tropical Botanical Garden, Kauai, USA — America's Rarest Tropical Plants",
+    "category": "Botanical Tour",
+    "description": "A collector's guide to the National Tropical Botanical Garden on Kauai — its history, Allerton's fig, conservation mission, and the rare aroids within.",
+    "url": "/the-leaf/conservatory-ntbg-kauai",
+    "date": "2026-07-11",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-hawaii-tropical",
+    "title": "Botanical Tour: Hawaii Tropical Botanical Garden, Big Island, USA — A Rainforest Valley on the Sea",
+    "category": "Botanical Tour",
+    "description": "Inside the Hawaii Tropical Botanical Garden on the Big Island's Hamakua Coast — its history, its plant collections, and what serious collectors need to see.",
+    "url": "/the-leaf/conservatory-hawaii-tropical",
+    "date": "2026-07-10",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-nong-nooch",
+    "title": "Botanical Tour: Nong Nooch Tropical Botanical Garden, Pattaya, Thailand — Cycads, Palms, and Spectacle",
+    "category": "Botanical Tour",
+    "description": "Nong Nooch Botanical Garden near Pattaya holds one of the world's great cycad collections. Here's why it matters to serious plant collectors.",
+    "url": "/the-leaf/conservatory-nong-nooch",
+    "date": "2026-07-09",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-rio-de-janeiro",
+    "title": "Botanical Tour: Jardim Botânico do Rio de Janeiro, Brazil — Imperial Palms and the Atlantic Forest",
+    "category": "Botanical Tour",
+    "description": "Inside Rio's 1808 botanical garden: royal palms, Atlantic Forest fragments, and the Neotropical origins of the aroids collectors prize.",
+    "url": "/the-leaf/conservatory-rio-de-janeiro",
+    "date": "2026-07-08",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-adelaide",
+    "title": "Botanical Tour: The Bicentennial Conservatory, Adelaide, Australia — The Southern Hemisphere's Great Span",
+    "category": "Botanical Tour",
+    "description": "Inside the Southern Hemisphere's largest single-span glasshouse — why Adelaide's Bicentennial Conservatory matters to collectors and conservationists alike.",
+    "url": "/the-leaf/conservatory-adelaide",
+    "date": "2026-07-07",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-copenhagen",
+    "title": "Botanical Tour: Copenhagen's Palm House, Denmark — Iron, Glass, and a Spiral Into the Canopy",
+    "category": "Botanical Tour",
+    "description": "The 1874 Palm House at Copenhagen's Botanical Garden puts you inside the palm canopy. A guide for collectors and serious plant lovers.",
+    "url": "/the-leaf/conservatory-copenhagen",
+    "date": "2026-07-06",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
+    "slug": "conservatory-bogor",
+    "title": "Botanical Tour: Bogor Botanical Gardens, Java, Indonesia — Two Centuries of Tropical Obsession",
+    "category": "Botanical Tour",
+    "description": "Kebun Raya Bogor, founded 1817 in West Java, is a living archive of equatorial flora — aroids, orchids, palms — and the birthplace of Southeast Asian tropical science.",
+    "url": "/the-leaf/conservatory-bogor",
+    "date": "2026-07-05",
+    "thumb": "/images/hero.jpg",
+    "status": "pending"
+  },
+  {
     "slug": "philodendron-vs-anthurium",
     "title": "Philodendron vs. Anthurium: How to Tell Them Apart",
     "category": "Field Skills",
