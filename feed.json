@@ -2995,6 +2995,19 @@
       "image": "https://leafpeople.app/images/source/stock/rainforest-western-ghats-hero.jpg"
     },
     {
+      "id": "the-leaf/conservatory-copenhagen",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-copenhagen",
+      "title": "Botanical Tour: Copenhagen's Palm House, Denmark — Iron, Glass, and a Spiral Into the Canopy",
+      "category": "Botanical Tour",
+      "description": "The 1874 Palm House at Copenhagen's Botanical Garden puts you inside the palm canopy. A guide for collectors and serious plant lovers.",
+      "date": "2026-07-06",
+      "url": "https://leafpeople.app/the-leaf/conservatory-copenhagen",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-copenhagen/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-copenhagen-hero.jpg"
+    },
+    {
       "id": "the-leaf/conservatory-ntbg-kauai",
       "section": "the-leaf",
       "section_label": "Understory",
