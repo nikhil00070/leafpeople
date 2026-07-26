@@ -78,7 +78,9 @@
     }
   ],
   "slug": "conservatory-flowers-sf",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-flowers-sf-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-flowers-sf-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Kefr4000 / CC BY-SA 4.0 · Wikimedia Commons",
+  "body_image_attribution": "Aureonatal / CC BY-SA 4.0 · Wikimedia Commons"
 }

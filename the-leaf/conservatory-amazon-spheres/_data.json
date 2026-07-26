@@ -71,7 +71,9 @@
     }
   ],
   "slug": "conservatory-amazon-spheres",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-amazon-spheres-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-amazon-spheres-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Steven Pavlov / CC BY-SA 4.0 · Wikimedia Commons",
+  "body_image_attribution": "Yercaud-elango / CC BY-SA 4.0 · Wikimedia Commons"
 }

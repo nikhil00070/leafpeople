@@ -88,7 +88,9 @@
     }
   ],
   "slug": "conservatory-ntbg-kauai",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-ntbg-kauai-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-ntbg-kauai-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Daderot. / CC BY-SA 3.0 · Wikimedia Commons",
+  "body_image_attribution": "Yercaud-elango / CC BY-SA 4.0 · Wikimedia Commons"
 }

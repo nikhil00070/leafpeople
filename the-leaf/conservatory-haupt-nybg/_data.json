@@ -87,7 +87,9 @@
     }
   ],
   "slug": "conservatory-haupt-nybg",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-haupt-nybg-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-haupt-nybg-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Acroterion / CC BY-SA 4.0 · Wikimedia Commons",
+  "body_image_attribution": "Photo by David J. Stang / CC BY-SA 4.0 · Wikimedia Commons"
 }

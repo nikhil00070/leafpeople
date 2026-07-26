@@ -87,7 +87,9 @@
     }
   ],
   "slug": "conservatory-berlin-tropenhaus",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-berlin-tropenhaus-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-berlin-tropenhaus-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Muns / CC BY 3.0 · Wikimedia Commons",
+  "body_image_attribution": "Daderot / CC0 · Wikimedia Commons"
 }

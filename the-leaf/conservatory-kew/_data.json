@@ -87,7 +87,9 @@
     }
   ],
   "slug": "conservatory-kew",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-kew-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-kew-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Daderot / CC0 · Wikimedia Commons",
+  "body_image_attribution": "Orbicule / CC0 · Wikimedia Commons"
 }

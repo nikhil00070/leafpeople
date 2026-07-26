@@ -93,7 +93,9 @@
     }
   ],
   "slug": "conservatory-adelaide",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-adelaide-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-adelaide-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Travellers travel photobook from Melbourne, Australia, Austr / CC BY 2.0 · Wikimedia Commons",
+  "body_image_attribution": "Agnieszka Kwiecień, Nova / CC BY-SA 4.0 · Wikimedia Commons"
 }

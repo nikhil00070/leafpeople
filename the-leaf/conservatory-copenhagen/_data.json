@@ -79,7 +79,9 @@
     }
   ],
   "slug": "conservatory-copenhagen",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-copenhagen-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-copenhagen-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Bärbel Miemietz / CC BY-SA 4.0 · Wikimedia Commons",
+  "body_image_attribution": "John Tann from Sydney, Australia / CC BY 2.0 · Wikimedia Commons"
 }

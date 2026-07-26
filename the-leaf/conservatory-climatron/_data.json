@@ -86,7 +86,9 @@
     }
   ],
   "slug": "conservatory-climatron",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-climatron-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-climatron-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Wikimedia Commons / CC BY-SA 3.0 · Wikimedia Commons",
+  "body_image_attribution": "BluedarkArt / CC BY-SA 2.0 · Wikimedia Commons"
 }

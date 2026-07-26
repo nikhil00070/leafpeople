@@ -89,7 +89,9 @@
     }
   ],
   "slug": "conservatory-rio-de-janeiro",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-rio-de-janeiro-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-rio-de-janeiro-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Núcleo de digitalização / IMS / Public domain · Wikimedia Commons",
+  "body_image_attribution": "juggadery / CC BY-SA 2.0 · Wikimedia Commons"
 }

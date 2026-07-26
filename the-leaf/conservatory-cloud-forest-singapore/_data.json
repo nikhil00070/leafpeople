@@ -79,7 +79,9 @@
     }
   ],
   "slug": "conservatory-cloud-forest-singapore",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-cloud-forest-singapore-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-cloud-forest-singapore-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Kuroczynski / CC BY-SA 4.0 · Wikimedia Commons",
+  "body_image_attribution": "geoff mckay from Palmerston North, New Zealand / CC BY 2.0 · Wikimedia Commons"
 }

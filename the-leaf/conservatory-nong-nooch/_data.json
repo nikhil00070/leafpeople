@@ -88,7 +88,9 @@
     }
   ],
   "slug": "conservatory-nong-nooch",
-  "hero": "/images/hero.jpg",
-  "body_image": "/images/cta.jpg",
-  "status": "pending"
+  "hero": "/images/source/stock/conservatory-nong-nooch-hero.jpg",
+  "body_image": "/images/source/stock/conservatory-nong-nooch-body.jpg",
+  "status": "pending",
+  "hero_attribution": "Wayne77 / CC BY-SA 3.0 · Wikimedia Commons",
+  "body_image_attribution": "Esin Üstün from Istanbul, Turkey / CC BY 2.0 · Wikimedia Commons"
 }
