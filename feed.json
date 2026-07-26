@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 240,
+  "count": 241,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3071,6 +3071,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-climatron",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-climatron/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-climatron-hero.jpg?v=2"
+    },
+    {
+      "id": "the-leaf/conservatory-amazon-spheres",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-amazon-spheres",
+      "title": "Botanical Tour: The Amazon Spheres, Seattle, USA — A Collector's Cathedral in the City",
+      "category": "Botanical Tour",
+      "description": "The Amazon Spheres hold 40,000 plants — rare aroids, epiphytes, orchids — in three glass domes at Amazon's Seattle HQ. Here's what makes them worth visiting.",
+      "date": "2026-07-16",
+      "url": "https://leafpeople.app/the-leaf/conservatory-amazon-spheres",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-amazon-spheres/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-amazon-spheres-hero.jpg?v=2"
     },
     {
       "id": "the-leaf/conservatory-cloud-forest-singapore",
