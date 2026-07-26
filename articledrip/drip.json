@@ -2536,7 +2536,7 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-adelaide",
-    "thumb": "/images/source/stock/conservatory-adelaide-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-adelaide-hero.jpg?v=2",
     "date": "2026-07-07",
     "status": "pending"
   },
@@ -2547,9 +2547,9 @@
     "section": "the-leaf",
     "section_label": "Understory",
     "url": "/the-leaf/conservatory-rio-de-janeiro",
-    "thumb": "/images/source/stock/conservatory-rio-de-janeiro-hero.jpg",
+    "thumb": "/images/source/stock/conservatory-rio-de-janeiro-hero.jpg?v=2",
     "date": "2026-07-08",
-    "status": "pending"
+    "status": "published"
   },
   {
     "slug": "conservatory-nong-nooch",
