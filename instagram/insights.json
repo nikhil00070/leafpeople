@@ -1,56 +1,72 @@
 {
-  "updated": "2026-07-25T15:31:18+00:00",
+  "updated": "2026-07-26T00:36:30+00:00",
   "account": {
     "username": "leafpeople.app",
-    "followers": 2483,
-    "posts": 49
+    "followers": 2515,
+    "posts": 50
   },
   "summary": {
     "reels": {
-      "count": 31,
-      "avg_reach": 175,
-      "avg_eng_pct": 5.7,
+      "count": 30,
+      "avg_reach": 178,
+      "avg_eng_pct": 5.5,
       "avg_watch_s": 3.9,
-      "avg_plays": 216
+      "avg_plays": 219
     },
     "images": {
-      "count": 9,
-      "avg_reach": 100,
-      "avg_eng_pct": 4.5
+      "count": 10,
+      "avg_reach": 90,
+      "avg_eng_pct": 4.0
     }
   },
   "posts": [
     {
+      "date": "2026-07-25",
+      "type": "IMAGE",
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "total_interactions": 0,
+      "watch_ms": 0,
+      "plays": 0,
+      "label": "d49 Pink Princess",
+      "hook": null,
+      "is_reel": false,
+      "eng_pct": 0.0
+    },
+    {
       "date": "2026-07-24",
       "type": "REEL",
-      "reach": 54,
+      "reach": 62,
       "likes": 4,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 4,
-      "watch_ms": 1986,
-      "plays": 61,
+      "watch_ms": 1898,
+      "plays": 68,
       "label": "d48 Corrugatum \u2014 quilted",
       "hook": "Quilted like hammered leather",
       "is_reel": true,
-      "eng_pct": 7.4
+      "eng_pct": 6.5
     },
     {
       "date": "2026-07-23",
       "type": "REEL",
-      "reach": 142,
+      "reach": 143,
       "likes": 14,
       "comments": 0,
       "saved": 1,
       "shares": 5,
       "total_interactions": 20,
-      "watch_ms": 4114,
-      "plays": 166,
+      "watch_ms": 4091,
+      "plays": 167,
       "label": "d47 Mindo",
       "hook": "Mindo Cloud Forest \u00b7 Ecuador",
       "is_reel": true,
-      "eng_pct": 14.1
+      "eng_pct": 14.0
     },
     {
       "date": "2026-07-22",
@@ -103,14 +119,14 @@
     {
       "date": "2026-07-19",
       "type": "REEL",
-      "reach": 172,
+      "reach": 173,
       "likes": 11,
       "comments": 0,
       "saved": 0,
       "shares": 0,
       "total_interactions": 11,
-      "watch_ms": 2569,
-      "plays": 201,
+      "watch_ms": 2593,
+      "plays": 203,
       "label": "d43 One small plant",
       "hook": "When you said you'd get 'one small plant.'",
       "is_reel": true,
@@ -423,18 +439,18 @@
     {
       "date": "2026-06-30",
       "type": "REEL",
-      "reach": 114,
+      "reach": 115,
       "likes": 5,
       "comments": 0,
       "saved": 1,
       "shares": 0,
       "total_interactions": 6,
-      "watch_ms": 4562,
-      "plays": 134,
+      "watch_ms": 4538,
+      "plays": 135,
       "label": "d24 Room for more",
       "hook": "The plants heard there was room for more.",
       "is_reel": true,
-      "eng_pct": 5.3
+      "eng_pct": 5.2
     },
     {
       "date": "2026-06-29",
@@ -643,22 +659,6 @@
       "hook": "A room that's only Monstera",
       "is_reel": true,
       "eng_pct": 13.1
-    },
-    {
-      "date": "2026-06-16",
-      "type": "REEL",
-      "reach": 100,
-      "likes": 9,
-      "comments": 0,
-      "saved": 1,
-      "shares": 0,
-      "total_interactions": 10,
-      "watch_ms": 4611,
-      "plays": 123,
-      "label": "d10 Morning green",
-      "hook": "Some mornings you just need to see something green.",
-      "is_reel": true,
-      "eng_pct": 10.0
     }
   ],
   "diag": null
