@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-26",
-  "count": 235,
+  "count": 237,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3032,6 +3032,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-ntbg-kauai",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-ntbg-kauai/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-ntbg-kauai-hero.jpg"
+    },
+    {
+      "id": "the-leaf/conservatory-climatron",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "conservatory-climatron",
+      "title": "Botanical Tour: The Climatron, St. Louis, USA — A Geodesic Rainforest",
+      "category": "Botanical Tour",
+      "description": "The Climatron dome at Missouri Botanical Garden is the world's center of aroid taxonomy. Here's why every collector should make the pilgrimage.",
+      "date": "2026-07-14",
+      "url": "https://leafpeople.app/the-leaf/conservatory-climatron",
+      "data_url": "https://leafpeople.app/the-leaf/conservatory-climatron/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/conservatory-climatron-hero.jpg?v=2"
     },
     {
       "id": "the-leaf/conservatory-cloud-forest-singapore",
