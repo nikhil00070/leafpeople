@@ -4,9 +4,11 @@
 //  1) Per-user (25-row sample): each recent user's 30-day activity → Claude one-line
 //     summary + a per-user "Take Action" item.
 //  2) Aggregate insights (ALL users — the scale path): funnel, retention, paywall-by-gate,
-//     purchase failures, identify health, top searches/plants/screens → Claude turns them
-//     into a RANKED, typed action list (BUILD/BUG/CONTENT/PRICING/MARKETING/DATA), so
-//     customer behavior surfaces the next app-build changes to make.
+//     purchase failures, identify health, top searches/plants/screens. These feed a
+//     DETERMINISTIC recommendation builder (buildRecommendations) — ranked, typed action
+//     items (BUG/PRICING/CONTENT/BUILD) computed from the numbers with fixed thresholds.
+//     No LLM authors recommendations (it once fabricated a content gap); if nothing clears a
+//     threshold, none are produced. The LLM is used ONLY for the descriptive per-user summaries.
 // Merged into ONE endpoint (Vercel 12-function cap). Read-only PostHog personal key +
 // Anthropic key, both server-side (Vercel env). Returns { connected:false } when unconfigured.
 //
@@ -104,42 +106,78 @@ async function aggregateInsights(host, pid, key, W) {
   };
 }
 
-// Turn the aggregates into a RANKED, typed action list — the "what should we do next" engine.
-// Explicitly asked to flag BUILD items (app changes) and BUGs (from purchase failures / high error rates).
-async function claudeRecommendations(apiKey, agg) {
-  const prompt = `You are the product lead for Leaf People, a rare-plant iOS app (identify, browse, per-plant care, marketplace; paywall at $0.99/mo gating the full experience). Below are 30-day usage aggregates from PostHog — REAL data, internal/admin sessions excluded.
+// DETERMINISTIC recommendations — computed from the real numbers with fixed thresholds.
+// No LLM authors these (it fabricated a content gap once from view counts). Every item is a
+// direct consequence of the data + a threshold; if nothing clears its threshold, NO item is
+// produced. Silence over filler. The worst case is "no recommendation", never "a wrong one".
+function buildRecommendations(a) {
+  if (!a) return null;
+  const recs = [];
+  const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
+  const s = (n) => (n === 1 ? "" : "s");
 
-Produce a RANKED list of the most important, concrete actions the team should take next, MOST IMPACTFUL FIRST. For each recommendation:
-- "type": exactly one of BUILD (app code/feature/UX change to ship in the next build), CONTENT (add plant data / care guide / article), PRICING (paywall placement, price, plan), BUG (a likely defect to fix), MARKETING, DATA (instrumentation gap blocking a decision).
-- "title": the action, imperative, <10 words.
-- "evidence": the SPECIFIC numbers from the data that justify it (quote them).
-- "detail": 1-2 sentences on exactly what to do.
+  // BUG — real purchase failures (user cancellations already excluded in the query).
+  for (const f of (a.purchase_failures || [])) {
+    if (f.count >= 1) recs.push({ _score: 1000 + f.count, type: "BUG",
+      title: `Fix purchase failures: "${f.reason}"`,
+      evidence: `${f.count} failed purchase${s(f.count)} · ${f.users} user${s(f.users)} · reason="${f.reason}" (cancellations excluded)`,
+      detail: "A non-cancellation StoreKit failure is almost always a real defect in the purchase flow. Reproduce with this reason and fix it before it keeps costing conversions." });
+  }
 
-Rules:
-- Base EVERYTHING on the numbers. Quote them. Never invent a mechanic or a problem the data doesn't show.
-- The team specifically wants BUILD updates called out — if user behavior implies an app change, tag it BUILD and be concrete about the change.
-- purchase_failures with non-'cancelled' reasons are almost certainly BUGs — rank them near the top with the reason + count.
-- A high identify error rate (errored vs started) is a BUILD/BUG signal.
-- CRITICAL — you do NOT know what content already exists. top_plants are plants users VIEWED, and a view happens ON that plant's detail/care-guide screen — so every plant in top_plants ALREADY HAS a care guide. NEVER recommend "build/add a care guide" for a plant in top_plants, and NEVER claim a plant has "no content"/"zero content"/"missing care guide". A high view count means the EXISTING guide is popular (a CONTENT signal to EXPAND/improve it, or a MARKETING/interest signal), not that it's missing.
-- The ONLY data-backed content-GAP signal is content_gaps (identify outcome 'not_in_library') — plants users photographed that we could NOT match to the library. Recommend adding those by name. If content_gaps is empty, do NOT invent content gaps from any other field.
-- top_searches can suggest CONTENT/UX only if a term looks like it would return nothing; frame it as "verify search returns results for X", never as a confirmed gap.
-- A paywall source with many shows but ~0 purchases is a PRICING/BUILD signal (gate placed wrong or wall too hard).
-- If the whole dataset is thin (few users/events), say so via data_confidence and keep the list short and honest — do NOT pad it.
+  // BUG vs PRICING — paywall gates shown often that convert nobody.
+  for (const p of (a.paywall_by_source || [])) {
+    if (p.shown >= 8 && p.purchases === 0) {
+      const brokenCheckout = p.sub_taps > 0;   // they tried to buy but nothing completed → checkout, not placement
+      recs.push({ _score: (brokenCheckout ? 900 : 500) + p.shown,
+        type: brokenCheckout ? "BUG" : "PRICING",
+        title: brokenCheckout ? `Subscribe fails at "${p.source}" gate` : `"${p.source}" paywall converts 0 of ${p.shown}`,
+        evidence: `${p.source}: ${p.shown} shown · ${p.sub_taps} tapped subscribe · ${p.purchases} purchased · ${p.users_shown} user${s(p.users_shown)}`,
+        detail: brokenCheckout
+          ? "Users tapped subscribe here but none completed — the checkout likely breaks at this entry point. Test a purchase starting from this gate."
+          : "This gate is shown often but nobody even taps subscribe — placement or value framing isn't landing. Reconsider when it fires and what it offers." });
+    }
+  }
 
-Return ONLY valid JSON, no prose: {"headline":"<one line on the single biggest takeaway>","data_confidence":"low|medium|high","recommendations":[{"type":"...","title":"...","evidence":"...","detail":"..."}]}
+  // BUG — identify erroring out (needs enough attempts to be meaningful).
+  const idf = a.identify || {};
+  if ((idf.started || 0) >= 5) {
+    const rate = pct(idf.errored || 0, idf.started);
+    if (rate >= 20) recs.push({ _score: 700 + rate, type: "BUG",
+      title: `Identify errors ${rate}% of the time`,
+      evidence: `${idf.errored} error${s(idf.errored)} of ${idf.started} identify attempts`,
+      detail: "A high identify error rate points to a failing ID service or network path. Check the identify endpoint, timeouts, and error handling." });
+  }
 
-Aggregates JSON:
-${JSON.stringify(agg)}`;
-  const r = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: "claude-haiku-4-5-20251001", max_tokens: 2500, messages: [{ role: "user", content: prompt }] }),
-  });
-  if (!r.ok) throw new Error(`anthropic ${r.status}: ${(await r.text()).slice(0, 160)}`);
-  const j = await r.json();
-  let text = (j.content || []).map((c) => c.text || "").join("");
-  text = text.replace(/^```json\s*/i, "").replace(/```\s*$/i, "").trim();
-  return JSON.parse(text);
+  // CONTENT — genuine gaps only: photographed, genus/species identified, NOT in the library.
+  // Verified app-side at identify time (outcome 'not_in_library') — never inferred from views.
+  for (const g of (a.content_gaps || [])) {
+    if (g.count >= 3) recs.push({ _score: 300 + g.count, type: "CONTENT",
+      title: `Add to library: ${g.taxon}`,
+      evidence: `${g.count} identif${g.count===1?"y":"ies"} returned not-in-library · ${g.users} user${s(g.users)}`,
+      detail: "Users photographed this and Identify placed it, but we don't carry it. Adding it closes a real, demand-backed gap." });
+  }
+
+  // BUILD/UX — weak return rate (activation problem), only with enough users to mean something.
+  const ret = a.retention || {}, totalRet = (ret.returning || 0) + (ret.one_time || 0);
+  if (totalRet >= 15) {
+    const back = pct(ret.returning || 0, totalRet);
+    if (back < 25) recs.push({ _score: 200 + (25 - back), type: "BUILD",
+      title: `Only ${back}% of users return`,
+      evidence: `${ret.returning} returning vs ${ret.one_time} one-and-done · ${totalRet} users · 30d`,
+      detail: "Most installs never come back for a second day — a first-session activation problem. Find what returning users do that one-timers don't (first ID, first save) and pull it earlier." });
+  }
+
+  recs.sort((x, y) => y._score - x._score);
+  const out = recs.map(({ _score, ...r }) => r);
+  const users = (a.funnel && a.funnel.users) || 0;
+  return {
+    generated: "deterministic",
+    data_confidence: users < 5 ? "low" : users < 20 ? "medium" : "high",
+    headline: out.length
+      ? `${out.length} data-backed action item${s(out.length)} from 30-day behavior`
+      : "No action items clear the data threshold yet — nothing to fix or add right now.",
+    recommendations: out,
+  };
 }
 
 async function claudeSummaries(apiKey, users) {
@@ -235,14 +273,15 @@ export default async function handler(req, res) {
     // NOTE: distinct name from the per-user `agg` above — same scope, must not collide.
     const insights = await aggregateInsights(host, pid, key, W).catch(() => null);
 
-    let trend = "", actions = [], recs = null;
+    // Recommendations are DETERMINISTIC — computed from the numbers, not authored by an LLM.
+    // (An LLM once fabricated a "missing care guide" from view counts.) No network, can't fail,
+    // never invents. The LLM is used ONLY for the descriptive per-user summaries + trend below.
+    const recs = buildRecommendations(insights);
+
+    let trend = "", actions = [];
     if (anthropic && users.length) {
       try {
-        // Per-user summaries and cohort recommendations in parallel — two cheap Haiku calls, 1h-cached.
-        const [out, recOut] = await Promise.all([
-          claudeSummaries(anthropic, users),
-          insights ? claudeRecommendations(anthropic, insights).catch((e) => ({ _error: String(e.message).slice(0, 100) })) : Promise.resolve(null),
-        ]);
+        const out = await claudeSummaries(anthropic, users);
         trend = out.trend || "";
         actions = Array.isArray(out.actions) ? out.actions.filter(Boolean).slice(0, 3) : [];
         const byShortId = Object.fromEntries((out.users || []).map((u) => [u.id, u]));
@@ -251,7 +290,6 @@ export default async function handler(req, res) {
           u.summary = o.summary || "";
           u.action = o.action || "None";   // default: nothing to do
         }
-        recs = recOut;
       } catch (e) { trend = "(summary unavailable: " + String(e.message).slice(0, 80) + ")"; }
     }
 
