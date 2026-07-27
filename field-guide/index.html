@@ -288,7 +288,7 @@
       .map(
         (a) => `
       <a class="article-card" href="${a.url}">
-        <div class="thumb" style="background-image:url('${a.thumb}')"></div>
+        <img class="thumb" loading="lazy" decoding="async" alt="" src="/images/thumbs/${a.slug}.jpg" onerror="this.onerror=null;this.src='${a.thumb}'">
         <div class="body">
           <div class="tag">${a.category || "Field Guide"}</div>
           <h3>${a.title}</h3>

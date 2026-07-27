@@ -232,7 +232,7 @@ section { position: relative; padding: 6rem 0; }
   overflow: hidden; transition: transform .25s, border-color .25s;
 }
 .article-card:hover { transform: translateY(-3px); border-color: var(--green); }
-.article-card .thumb { aspect-ratio: 16/10; background: var(--card-2) center/cover no-repeat; }
+.article-card .thumb { aspect-ratio: 16/10; background: var(--card-2) center/cover no-repeat; width: 100%; object-fit: cover; display: block; }
 .article-card .body { padding: 1.1rem 1.2rem 1.3rem; }
 .article-card .tag { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
 .article-card h3 { font-size: 1.1rem; margin: .5rem 0 .4rem; line-height: 1.25; }
