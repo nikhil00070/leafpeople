@@ -1799,7 +1799,7 @@
     "date": "2026-07-27",
     "phase": "concept",
     "branch": "app-identify",
-    "status": "draft",
+    "status": "posted",
     "title": "Point, shoot, know",
     "image": "/images/source/stock/philodendron-pastazanum-care-hero.jpg",
     "caption": "Point your camera at any leaf. Get the species \u2014 not 'it's a houseplant,' the actual species. That's the whole idea behind Leaf People.",
@@ -1819,7 +1819,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d31.jpg"
+    "img_ready": "/images/ig_ready/d31.jpg",
+    "posted_at": "2026-07-27",
+    "ig_media_id": "17939970384279260"
   },
   {
     "id": "b2-05",
