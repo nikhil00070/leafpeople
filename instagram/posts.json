@@ -1864,7 +1864,7 @@
     "date": "2026-07-29",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "The Daintree",
     "image": "/images/instagram/b3-07-cover.jpg",
     "img_ready": "/images/instagram/b3-07-cover.jpg",
@@ -1891,7 +1891,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-07-29",
+    "ig_media_id": "17939511321280538"
   },
   {
     "id": "d32",
