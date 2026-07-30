@@ -1901,7 +1901,7 @@
     "date": "2026-07-30",
     "phase": "concept",
     "branch": "app-track-care",
-    "status": "draft",
+    "status": "posted",
     "title": "Never miss a watering",
     "image": "/images/source/atmo/atmo-d32.jpg",
     "caption": "Velvet anthuriums don't forgive a missed week. Leaf People tracks water, food, foliar feed and more \u2014 and nudges you before it becomes a problem.",
@@ -1924,7 +1924,9 @@
     "reel": true,
     "hook": "Never lose a plant to bad timing",
     "img_ready": "/images/ig_ready/d32.jpg",
-    "video": "/videos/instagram/d32.mp4"
+    "video": "/videos/instagram/d32.mp4",
+    "posted_at": "2026-07-30",
+    "ig_media_id": "18050206451796119"
   },
   {
     "id": "d33",
