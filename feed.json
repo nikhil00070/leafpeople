@@ -2,7 +2,7 @@
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
   "updated": "2026-07-30",
-  "count": 247,
+  "count": 248,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3201,6 +3201,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-kew",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-kew/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-kew-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-congo-basin",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-congo-basin",
+      "title": "Rainforest: The Congo Basin, Central Africa — The Second Lung of the Planet",
+      "category": "Rainforest (Paleotropics)",
+      "description": "The Congo Basin is the world's least-known great rainforest — and the native home of Anubias, Cercestis mirabilis, and African aroids collectors grow.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-congo-basin",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-congo-basin/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-congo-basin-hero.jpg?v=2"
     },
     {
       "id": "the-leaf/rainforest-daintree",
