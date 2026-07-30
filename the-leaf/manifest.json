@@ -140,6 +140,26 @@
     "status": "published"
   },
   {
+    "slug": "rainforest-daintree",
+    "title": "Rainforest: The Daintree, Australia — The Oldest Rainforest on Earth",
+    "category": "Rainforest (Paleotropics)",
+    "description": "The Daintree rainforest holds the oldest flowering-plant lineages on Earth. Here's what that means for the aroids and Hoyas our readers grow.",
+    "url": "/the-leaf/rainforest-daintree",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-daintree-hero.jpg?v=2",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-congo-basin",
+    "title": "Rainforest: The Congo Basin, Central Africa — The Second Lung of the Planet",
+    "category": "Rainforest (Paleotropics)",
+    "description": "The Congo Basin is the world's least-known great rainforest — and the native home of Anubias, Cercestis mirabilis, and African aroids collectors grow.",
+    "url": "/the-leaf/rainforest-congo-basin",
+    "date": "2026-07-21",
+    "thumb": "/images/source/stock/rainforest-congo-basin-hero.jpg?v=2",
+    "status": "pending"
+  },
+  {
     "slug": "conservatory-kew",
     "title": "Botanical Tour: Kew's Palm House & Princess of Wales Conservatory, London, UK — Where Glasshouse Botany Was Born",
     "category": "Botanical Tour",
