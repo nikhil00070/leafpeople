@@ -1,8 +1,8 @@
 {
   "site": "https://leafpeople.app",
   "title": "Leaf People — Stories",
-  "updated": "2026-07-27",
-  "count": 246,
+  "updated": "2026-07-30",
+  "count": 247,
   "items": [
     {
       "id": "the-leaf/anthurium-warocqueanum",
@@ -3201,6 +3201,19 @@
       "url": "https://leafpeople.app/the-leaf/conservatory-kew",
       "data_url": "https://leafpeople.app/the-leaf/conservatory-kew/_data.json",
       "image": "https://leafpeople.app/images/source/stock/conservatory-kew-hero.jpg"
+    },
+    {
+      "id": "the-leaf/rainforest-daintree",
+      "section": "the-leaf",
+      "section_label": "Understory",
+      "slug": "rainforest-daintree",
+      "title": "Rainforest: The Daintree, Australia — The Oldest Rainforest on Earth",
+      "category": "Rainforest (Paleotropics)",
+      "description": "The Daintree rainforest holds the oldest flowering-plant lineages on Earth. Here's what that means for the aroids and Hoyas our readers grow.",
+      "date": "2026-07-21",
+      "url": "https://leafpeople.app/the-leaf/rainforest-daintree",
+      "data_url": "https://leafpeople.app/the-leaf/rainforest-daintree/_data.json",
+      "image": "https://leafpeople.app/images/source/stock/rainforest-daintree-hero.jpg?v=2"
     }
   ]
 }

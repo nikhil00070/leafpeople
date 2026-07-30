@@ -2682,5 +2682,27 @@
     "thumb": "/images/source/stock/conservatory-kew-hero.jpg",
     "date": "2026-07-20",
     "status": "published"
+  },
+  {
+    "slug": "rainforest-congo-basin",
+    "title": "Rainforest: The Congo Basin, Central Africa \u2014 The Second Lung of the Planet",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-congo-basin",
+    "thumb": "/images/source/stock/rainforest-congo-basin-hero.jpg?v=2",
+    "date": "2026-07-21",
+    "status": "pending"
+  },
+  {
+    "slug": "rainforest-daintree",
+    "title": "Rainforest: The Daintree, Australia \u2014 The Oldest Rainforest on Earth",
+    "category": "Rainforest (Paleotropics)",
+    "section": "the-leaf",
+    "section_label": "Understory",
+    "url": "/the-leaf/rainforest-daintree",
+    "thumb": "/images/source/stock/rainforest-daintree-hero.jpg?v=2",
+    "date": "2026-07-21",
+    "status": "published"
   }
 ]
