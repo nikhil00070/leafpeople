@@ -1934,7 +1934,7 @@
     "date": "2026-07-31",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "Field guide in your pocket",
     "image": "/images/app/shot-04.png",
     "caption": "Every plant in the app comes with a real care guide \u2014 light, humidity, substrate, the lot. No more twelve open tabs at 1am.",
@@ -1954,7 +1954,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d33.jpg"
+    "img_ready": "/images/ig_ready/d33.jpg",
+    "posted_at": "2026-07-31",
+    "ig_media_id": "18333781060287292"
   },
   {
     "id": "d34",
