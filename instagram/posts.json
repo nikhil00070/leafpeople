@@ -1964,7 +1964,7 @@
     "date": "2026-08-01",
     "phase": "concept",
     "branch": "app-identify",
-    "status": "draft",
+    "status": "posted",
     "title": "We name what others can't",
     "image": "/images/compare/lp-warocqueanum.png",
     "caption": "Other apps see a rare anthurium and shrug: 'Laceleaf.' Leaf People names the species. We tested it head-to-head \u2014 it isn't close.",
@@ -1987,7 +1987,9 @@
     "reel": true,
     "hook": "We name what other apps can't",
     "img_ready": "/images/ig_ready/d34.jpg",
-    "video": "/videos/instagram/d34.mp4"
+    "video": "/videos/instagram/d34.mp4",
+    "posted_at": "2026-08-01",
+    "ig_media_id": "18011642738927780"
   },
   {
     "id": "d35",
