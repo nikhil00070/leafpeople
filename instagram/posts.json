@@ -1997,7 +1997,7 @@
     "date": "2026-08-02",
     "phase": "concept",
     "branch": "app-collect",
-    "status": "draft",
+    "status": "posted",
     "title": "Your jungle, catalogued",
     "image": "/images/app/shot-05.png",
     "caption": "Every plant you own, in one place \u2014 what it is, how to care for it, when you last watered. Your collection, finally organized.",
@@ -2017,7 +2017,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d35.jpg"
+    "img_ready": "/images/ig_ready/d35.jpg",
+    "posted_at": "2026-08-02",
+    "ig_media_id": "17975049588116391"
   },
   {
     "id": "d36",
