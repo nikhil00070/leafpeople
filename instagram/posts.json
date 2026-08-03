@@ -2027,7 +2027,7 @@
     "date": "2026-08-03",
     "phase": "concept",
     "branch": "app-track-care",
-    "status": "draft",
+    "status": "posted",
     "title": "Care that knows your climate",
     "image": "/images/source/atmo/atmo-d36.jpg",
     "caption": "Phoenix isn't Singapore. Leaf People tunes its care guidance to where you actually grow \u2014 not one-size-fits-all.",
@@ -2050,7 +2050,9 @@
     "reel": true,
     "hook": "Care tuned to your climate",
     "img_ready": "/images/ig_ready/d36.jpg",
-    "video": "/videos/instagram/d36.mp4"
+    "video": "/videos/instagram/d36.mp4",
+    "posted_at": "2026-08-03",
+    "ig_media_id": "18093499010454349"
   },
   {
     "id": "b3-08",
