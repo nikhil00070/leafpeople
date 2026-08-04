@@ -2060,7 +2060,7 @@
     "date": "2026-08-04",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "The Congo Basin",
     "image": "/images/instagram/b3-08-cover.jpg",
     "img_ready": "/images/instagram/b3-08-cover.jpg",
@@ -2087,7 +2087,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-08-04",
+    "ig_media_id": "18118967527906235"
   },
   {
     "id": "d37",
