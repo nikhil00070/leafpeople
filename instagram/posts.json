@@ -2097,7 +2097,7 @@
     "date": "2026-08-05",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "A new story every day",
     "image": "/images/instagram/philodendron-spiritus-sancti.jpg",
     "caption": "Open the app to a fresh rare-plant story daily \u2014 field notes, deep dives, collector culture. Get sharper with every leaf.",
@@ -2117,7 +2117,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d37.jpg"
+    "img_ready": "/images/ig_ready/d37.jpg",
+    "posted_at": "2026-08-05",
+    "ig_media_id": "18140014618571605"
   },
   {
     "id": "d38",
