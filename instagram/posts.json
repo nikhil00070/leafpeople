@@ -2158,7 +2158,7 @@
     "date": "2026-08-07",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Unboxing day",
     "image": "/images/instagram/b2-06-cover.jpg",
     "img_ready": "/images/instagram/b2-06-cover.jpg",
@@ -2183,7 +2183,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-08-07",
+    "ig_media_id": "18124768072754569"
   },
   {
     "id": "d39",
