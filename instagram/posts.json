@@ -2193,7 +2193,7 @@
     "date": "2026-08-08",
     "phase": "concept",
     "branch": "app-collect",
-    "status": "draft",
+    "status": "posted",
     "title": "Trade with people who get it",
     "image": "/images/app/shot-09.png",
     "caption": "Buy, sell and trade in a marketplace built for collectors \u2014 not a yard sale. Secure, and plant-people only.",
@@ -2213,7 +2213,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d39.jpg"
+    "img_ready": "/images/ig_ready/d39.jpg",
+    "posted_at": "2026-08-08",
+    "ig_media_id": "18060653801769975"
   },
   {
     "id": "d40",
