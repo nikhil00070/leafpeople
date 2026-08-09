@@ -2223,7 +2223,7 @@
     "date": "2026-08-09",
     "phase": "concept",
     "branch": "app-track-care",
-    "status": "draft",
+    "status": "posted",
     "title": "Six kinds of care, one timeline",
     "image": "/images/source/atmo/atmo-d40.jpg",
     "caption": "Water, fertilize, foliar feed, root check, substrate check, propagate \u2014 each on its own schedule, all on one timeline.",
@@ -2246,7 +2246,9 @@
     "reel": true,
     "hook": "Every plant's care, one timeline",
     "img_ready": "/images/ig_ready/d40.jpg",
-    "video": "/videos/instagram/d40.mp4"
+    "video": "/videos/instagram/d40.mp4",
+    "posted_at": "2026-08-09",
+    "ig_media_id": "18631432240035822"
   },
   {
     "id": "b3-09",
