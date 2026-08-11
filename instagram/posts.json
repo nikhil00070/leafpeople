@@ -2293,7 +2293,7 @@
     "date": "2026-08-11",
     "phase": "concept",
     "branch": "app-identify",
-    "status": "draft",
+    "status": "posted",
     "title": "crystallinum or clarinervium?",
     "image": "/images/source/stock/anthurium-crystallinum-vs-clarinervium-hero.jpg",
     "caption": "The question that starts fights. Leaf People settles it \u2014 to the species \u2014 in about a second.",
@@ -2313,7 +2313,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d41.jpg"
+    "img_ready": "/images/ig_ready/d41.jpg",
+    "posted_at": "2026-08-11",
+    "ig_media_id": "18103345238178757"
   },
   {
     "id": "d42",
