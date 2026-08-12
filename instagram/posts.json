@@ -2323,7 +2323,7 @@
     "date": "2026-08-12",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "Know why it's doing that",
     "image": "/images/instagram/philodendron-verrucosum.png",
     "caption": "Yellow leaf? Crispy edge? Slow growth? The app's guides tell you why \u2014 and what to change \u2014 for the exact plants you own.",
@@ -2346,7 +2346,9 @@
     "reel": true,
     "hook": "Finally know why it's doing that",
     "img_ready": "/images/ig_ready/d42.jpg",
-    "video": "/videos/instagram/d42.mp4"
+    "video": "/videos/instagram/d42.mp4",
+    "posted_at": "2026-08-12",
+    "ig_media_id": "18113637265755797"
   },
   {
     "id": "d43",
