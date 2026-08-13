@@ -2356,7 +2356,7 @@
     "date": "2026-08-13",
     "phase": "concept",
     "branch": "app-collect",
-    "status": "draft",
+    "status": "posted",
     "title": "Log every new leaf",
     "image": "/images/app/shot-03.png",
     "caption": "Watch your collection grow, literally. Track new leaves, milestones and progress on every plant you keep.",
@@ -2376,7 +2376,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d43.jpg"
+    "img_ready": "/images/ig_ready/d43.jpg",
+    "posted_at": "2026-08-13",
+    "ig_media_id": "18093465596634024"
   },
   {
     "id": "d44",
