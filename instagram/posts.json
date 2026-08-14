@@ -2386,7 +2386,7 @@
     "date": "2026-08-14",
     "phase": "concept",
     "branch": "app-identify",
-    "status": "draft",
+    "status": "posted",
     "title": "Mystery to named species",
     "image": "/images/source/atmo/atmo-d44.jpg",
     "caption": "That unlabeled plant from the sale table? Point, shoot, and finally know exactly what you brought home.",
@@ -2409,7 +2409,9 @@
     "reel": true,
     "hook": "From mystery to named species",
     "img_ready": "/images/ig_ready/d44.jpg",
-    "video": "/videos/instagram/d44.mp4"
+    "video": "/videos/instagram/d44.mp4",
+    "posted_at": "2026-08-14",
+    "ig_media_id": "17953613394232997"
   },
   {
     "id": "d45",
