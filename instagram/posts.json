@@ -2419,7 +2419,7 @@
     "date": "2026-08-15",
     "phase": "concept",
     "branch": "app-collect",
-    "status": "draft",
+    "status": "posted",
     "title": "The collection in your pocket",
     "image": "/images/app/shot-10.png",
     "caption": "Identify it, learn it, track it, trade it. Everything a collector needs \u2014 and nothing leaves your phone.",
@@ -2439,7 +2439,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d45.jpg"
+    "img_ready": "/images/ig_ready/d45.jpg",
+    "posted_at": "2026-08-15",
+    "ig_media_id": "18086325602668372"
   },
   {
     "id": "b3-10",
