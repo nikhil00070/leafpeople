@@ -2449,7 +2449,7 @@
     "date": "2026-08-16",
     "phase": "lifestyle",
     "branch": "model-reels",
-    "status": "draft",
+    "status": "posted",
     "title": "Kaua\u02bbi",
     "image": "/images/instagram/b3-10-cover.jpg",
     "img_ready": "/images/instagram/b3-10-cover.jpg",
@@ -2476,7 +2476,9 @@
       "saves": 0,
       "follows": 0,
       "reach": 0
-    }
+    },
+    "posted_at": "2026-08-16",
+    "ig_media_id": "18126704137738214"
   },
   {
     "id": "d46",
