@@ -2486,7 +2486,7 @@
     "date": "2026-08-17",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "The Queen, in full",
     "image": "/images/instagram/anthurium-warocqueanum.jpeg",
     "caption": "The complete story of the Queen Anthurium \u2014 where she grows, why she's coveted, how to keep her alive. Full guide, link in bio.",
@@ -2509,7 +2509,9 @@
     "reel": true,
     "hook": "The one collectors call the Queen",
     "img_ready": "/images/ig_ready/d46.jpg",
-    "video": "/videos/instagram/d46.mp4"
+    "video": "/videos/instagram/d46.mp4",
+    "posted_at": "2026-08-17",
+    "ig_media_id": "18117804955901926"
   },
   {
     "id": "d47",
