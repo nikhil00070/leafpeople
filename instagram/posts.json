@@ -2519,7 +2519,7 @@
     "date": "2026-08-18",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "All of it. $0.99/mo",
     "image": "/images/app/shot-01.png",
     "caption": "The ID engine, the field guide, the care tracker, the marketplace \u2014 one subscription, $0.99 a month, 7-day free trial. Link in bio.",
@@ -2539,7 +2539,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d47.jpg"
+    "img_ready": "/images/ig_ready/d47.jpg",
+    "posted_at": "2026-08-18",
+    "ig_media_id": "17858590308693198"
   },
   {
     "id": "d48",
