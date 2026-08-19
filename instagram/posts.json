@@ -2549,7 +2549,7 @@
     "date": "2026-08-19",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "Ghost of Esp\u00edrito Santo",
     "image": "/images/source/stock/philodendron-luxurians-body.jpg",
     "caption": "A philodendron down to a handful of wild plants, and the most coveted leaf in the hobby. We told its story \u2014 read it, link in bio.",
@@ -2571,7 +2571,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d48.jpg",
-    "video": "/videos/instagram/d48.mp4"
+    "video": "/videos/instagram/d48.mp4",
+    "posted_at": "2026-08-19",
+    "ig_media_id": "17904034467519183"
   },
   {
     "id": "d49",
