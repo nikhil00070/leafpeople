@@ -2581,7 +2581,7 @@
     "date": "2026-08-20",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "Show us your grail",
     "image": "/images/plants/plant-09.jpg",
     "caption": "What's the one plant you'd save in a fire? Show us. Tag @leafpeople.app and we'll reshare our favorites. \ud83c\udf3f",
@@ -2601,7 +2601,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d49.jpg"
+    "img_ready": "/images/ig_ready/d49.jpg",
+    "posted_at": "2026-08-20",
+    "ig_media_id": "18162561271473625"
   },
   {
     "id": "d50",
