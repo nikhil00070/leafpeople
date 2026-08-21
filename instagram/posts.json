@@ -2611,7 +2611,7 @@
     "date": "2026-08-21",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Velvets, demystified",
     "image": "/images/source/stock/treating-leaf-spot-on-velvets-hero.jpg",
     "caption": "Why velvet anthuriums are so hard to tell apart \u2014 and how to actually do it. Full guide, link in bio.",
@@ -2631,7 +2631,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d50.jpg"
+    "img_ready": "/images/ig_ready/d50.jpg",
+    "posted_at": "2026-08-21",
+    "ig_media_id": "17987151231058183"
   },
   {
     "id": "d51",
