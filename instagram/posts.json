@@ -2641,7 +2641,7 @@
     "date": "2026-08-22",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "Less than a coffee",
     "image": "/images/plants/profiles/begonia-rex-mclauchlan.jpg",
     "caption": "Seven days free. Then $0.99 a month \u2014 less than one coffee \u2014 for the whole collector's toolkit. Link in bio.",
@@ -2661,7 +2661,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d51.jpg"
+    "img_ready": "/images/ig_ready/d51.jpg",
+    "posted_at": "2026-08-22",
+    "ig_media_id": "18006400970958639"
   },
   {
     "id": "d52",
