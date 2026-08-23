@@ -2671,7 +2671,7 @@
     "date": "2026-08-23",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "Why a leaf costs $5k",
     "image": "/images/plants/profiles/philodendron-lynnhannoniae.jpg",
     "caption": "How does a single leaf cost more than a flight? Scarcity, slow growth, and a wall of demand. We broke down the economics \u2014 link in bio.",
@@ -2693,7 +2693,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d52.jpg",
-    "video": "/videos/instagram/d52.mp4"
+    "video": "/videos/instagram/d52.mp4",
+    "posted_at": "2026-08-23",
+    "ig_media_id": "17958509076196515"
   },
   {
     "id": "d53",
