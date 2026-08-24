@@ -2703,7 +2703,7 @@
     "date": "2026-08-24",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Crystallinum vs clarinervium",
     "image": "/images/source/stock/anthurium-clarinervium-id-gold-standard-hero.jpg",
     "caption": "Two famous velvet hearts, endlessly confused. Our guide settles which is which, for good. Read it \u2014 link in bio.",
@@ -2723,7 +2723,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d53.jpg"
+    "img_ready": "/images/ig_ready/d53.jpg",
+    "posted_at": "2026-08-24",
+    "ig_media_id": "18132421996712542"
   },
   {
     "id": "d54",
