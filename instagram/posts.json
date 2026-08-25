@@ -2733,7 +2733,7 @@
     "date": "2026-08-25",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "Your first rare plant",
     "image": "/images/plants/plant-17.jpg",
     "caption": "Everyone remembers their first 'real' rare plant. Drop yours in the comments \ud83d\udc47 \u2014 the saga, the price, the panic.",
@@ -2755,7 +2755,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d54.jpg",
-    "video": "/videos/instagram/d54.mp4"
+    "video": "/videos/instagram/d54.mp4",
+    "posted_at": "2026-08-25",
+    "ig_media_id": "18112775137990351"
   },
   {
     "id": "d55",
