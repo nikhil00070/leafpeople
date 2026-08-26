@@ -2765,7 +2765,7 @@
     "date": "2026-08-26",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "The collector's app",
     "image": "/images/plants/profiles/monstera-adansonii-variegata.jpg",
     "caption": "Identify, track, learn, trade \u2014 built only for rare plants, by people who grow them. Free to try. Link in bio",
@@ -2785,7 +2785,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d55.jpg"
+    "img_ready": "/images/ig_ready/d55.jpg",
+    "posted_at": "2026-08-26",
+    "ig_media_id": "18127860835688395"
   },
   {
     "id": "d56",
