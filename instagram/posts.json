@@ -2855,7 +2855,7 @@
     "date": "2026-08-29",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "Identify. Track. Trade.",
     "image": "/images/instagram/anthurium-cupulispathum.jpeg",
     "caption": "Three taps from 'what is this?' to a named, tracked, traded plant. The whole loop lives in Leaf People. Link in bio.",
@@ -2877,7 +2877,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d58.jpg",
-    "video": "/videos/instagram/d58.mp4"
+    "video": "/videos/instagram/d58.mp4",
+    "posted_at": "2026-08-29",
+    "ig_media_id": "18104653577600156"
   },
   {
     "id": "d59",
