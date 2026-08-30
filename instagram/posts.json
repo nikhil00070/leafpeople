@@ -2887,7 +2887,7 @@
     "date": "2026-08-30",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "Tag us in your jungle",
     "image": "/images/plants/plant-15.jpg",
     "caption": "Building a jungle? Tag @leafpeople.app \u2014 we reshare the best corners of the community every week. \ud83c\udf3f",
@@ -2907,7 +2907,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d59.jpg"
+    "img_ready": "/images/ig_ready/d59.jpg",
+    "posted_at": "2026-08-30",
+    "ig_media_id": "18064558823775972"
   },
   {
     "id": "d60",
