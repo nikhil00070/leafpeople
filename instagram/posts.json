@@ -2917,7 +2917,7 @@
     "date": "2026-08-31",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "Start your collection",
     "image": "/images/source/stock/mounting-mature-aroids-on-wood-hero.jpg",
     "caption": "However many plants you've got, Leaf People makes them a collection. Start today \u2014 7 days free. Link in bio",
@@ -2937,7 +2937,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d60.jpg"
+    "img_ready": "/images/ig_ready/d60.jpg",
+    "posted_at": "2026-08-31",
+    "ig_media_id": "18094904495085939"
   },
   {
     "id": "d61",
