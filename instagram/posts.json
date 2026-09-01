@@ -2947,7 +2947,7 @@
     "date": "2026-09-01",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Begonia 'Fireworks'",
     "image": "/images/plants/profiles/begonia-rex-fireworks.jpg",
     "caption": "Silver and plum, set off like a firework. Rex begonias are painted by structure, not pigment \u2014 the leaf itself scatters light into colour.",
@@ -2972,7 +2972,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d61.jpg"
+    "img_ready": "/images/ig_ready/d61.jpg",
+    "posted_at": "2026-09-01",
+    "ig_media_id": "18132875500728051"
   },
   {
     "id": "d62",
