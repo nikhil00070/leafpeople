@@ -2982,7 +2982,7 @@
     "date": "2026-09-02",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera obliqua",
     "image": "/images/plants/profiles/monstera-obliqua.png",
     "caption": "More hole than leaf. The real M. obliqua is mostly air \u2014 and so rare that 99% of plants sold as 'obliqua' are actually adansonii. The ghost of the genus.",
@@ -3009,7 +3009,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d62.jpg",
-    "video": "/videos/instagram/d62.mp4"
+    "video": "/videos/instagram/d62.mp4",
+    "posted_at": "2026-09-02",
+    "ig_media_id": "18438352033133202"
   },
   {
     "id": "d63",
