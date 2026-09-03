@@ -3019,7 +3019,7 @@
     "date": "2026-09-03",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Anthurium dressleri",
     "image": "/images/plants/profiles/anthurium-dressleri.jpg",
     "caption": "The Panama grail. Bullet-dark, velvet, and so tied to provenance that collectors trade its lineage like baseball cards.",
@@ -3044,7 +3044,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d63.jpg"
+    "img_ready": "/images/ig_ready/d63.jpg",
+    "posted_at": "2026-09-03",
+    "ig_media_id": "18108117833595824"
   },
   {
     "id": "d64",
