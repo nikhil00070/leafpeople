@@ -3054,7 +3054,7 @@
     "date": "2026-09-04",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera 'Aurea'",
     "image": "/images/plants/profiles/monstera-aurea.jpg",
     "caption": "Variegation in gold. Where albo splits white, aurea marbles mustard-yellow \u2014 rarer, moodier, and a nightmare to keep balanced. Collector catnip.",
@@ -3081,7 +3081,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d64.jpg",
-    "video": "/videos/instagram/d64.mp4"
+    "video": "/videos/instagram/d64.mp4",
+    "posted_at": "2026-09-04",
+    "ig_media_id": "18026340617884523"
   },
   {
     "id": "d65",
