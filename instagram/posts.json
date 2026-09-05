@@ -3091,7 +3091,7 @@
     "date": "2026-09-05",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "The plant I lost",
     "image": "/images/source/stock/aglaonema-collector-cultivars-hero.jpg",
     "caption": "Every collector has one \u2014 the plant they killed and still think about. Rot, shock, a missed week. What did yours teach you? \ud83d\udc47",
@@ -3116,7 +3116,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d65.jpg"
+    "img_ready": "/images/ig_ready/d65.jpg",
+    "posted_at": "2026-09-05",
+    "ig_media_id": "18471029209112003"
   },
   {
     "id": "d66",
