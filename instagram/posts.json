@@ -3126,7 +3126,7 @@
     "date": "2026-09-06",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Begonia ferox",
     "image": "/images/plants/profiles/begonia-ferox.jpg",
     "caption": "The fierce one. Black-tipped bullate spikes across a puckered leaf \u2014 discovered shockingly recently in China. A begonia that looks armored.",
@@ -3153,7 +3153,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d66.jpg",
-    "video": "/videos/instagram/d66.mp4"
+    "video": "/videos/instagram/d66.mp4",
+    "posted_at": "2026-09-06",
+    "ig_media_id": "17988660321059218"
   },
   {
     "id": "d67",
