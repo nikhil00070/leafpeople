@@ -3163,7 +3163,7 @@
     "date": "2026-09-07",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera dubia",
     "image": "/images/plants/profiles/monstera-dubia.jpg",
     "caption": "The great shapeshifter. A juvenile that shingles flat against bark like coins, then matures into something unrecognizable. The best glow-up in aroids.",
@@ -3188,7 +3188,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d67.jpg"
+    "img_ready": "/images/ig_ready/d67.jpg",
+    "posted_at": "2026-09-07",
+    "ig_media_id": "17875139625631668"
   },
   {
     "id": "d68",
