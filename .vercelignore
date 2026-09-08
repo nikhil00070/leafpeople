@@ -6,3 +6,17 @@ firebase.json
 
 # Internal setup doc — version-controlled, but not served on the public site.
 IG_AUTOMATION_SETUP.md
+
+# ------------------------------------------------------------------------
+# Deployment-storage hygiene: version-controlled working material the PUBLIC
+# site never references (verified: no path hits in served HTML/JS/JSON — the
+# only "Plant ID" hits are the marketing phrase "AI Plant ID", not the folder).
+# Keeping these out of the upload shrinks every deployment so we stop hitting
+# Vercel's free deployment-storage cap.
+# NOTE: images/source/inat, images/source/book, and images/ig_ready are NOT
+# excluded — they ARE served (article heroes/bodies + the Instagram page).
+# ------------------------------------------------------------------------
+Plant ID                    # Internal plant-ID working material (70MB) — not served
+pipeline                    # Python/JS article+image generators — build tooling, not served
+_reel_masters               # Raw reel masters (also gitignored)
+Facebook Devloper Options
