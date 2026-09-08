@@ -3198,7 +3198,7 @@
     "date": "2026-09-08",
     "phase": "concept",
     "branch": "app-identify",
-    "status": "draft",
+    "status": "posted",
     "title": "What is that?",
     "image": "/images/instagram/philodendron-melanochrysum.jpeg",
     "caption": "Found an unlabeled velvet at a sale? Point Leaf People at it \u2014 it names the species other apps just call 'Laceleaf.'",
@@ -3220,7 +3220,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d68.jpg",
-    "video": "/videos/instagram/d68.mp4"
+    "video": "/videos/instagram/d68.mp4",
+    "posted_at": "2026-09-08",
+    "ig_media_id": "17918291622431252"
   },
   {
     "id": "d69",
