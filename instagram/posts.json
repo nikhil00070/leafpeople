@@ -3230,7 +3230,7 @@
     "date": "2026-09-09",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Anthurium kunayalense",
     "image": "/images/plants/profiles/anthurium-kunayalense.png",
     "caption": "Named for Guna Yala, the indigenous comarca in Panama it comes from. Every rare plant has a homeland \u2014 and a name that carries it.",
@@ -3255,7 +3255,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d69.jpg"
+    "img_ready": "/images/ig_ready/d69.jpg",
+    "posted_at": "2026-09-09",
+    "ig_media_id": "18615685213041391"
   },
   {
     "id": "d70",
