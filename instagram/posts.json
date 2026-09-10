@@ -3265,7 +3265,7 @@
     "date": "2026-09-10",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera 'Mint'",
     "image": "/images/plants/profiles/monstera-mint.jpg",
     "caption": "The mint unicorn. Green-on-green variegation so rare and unstable it's nearly myth \u2014 and priced like one. Most people will only see it on a screen.",
@@ -3292,7 +3292,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d70.jpg",
-    "video": "/videos/instagram/d70.mp4"
+    "video": "/videos/instagram/d70.mp4",
+    "posted_at": "2026-09-10",
+    "ig_media_id": "18119959966900508"
   },
   {
     "id": "d71",
