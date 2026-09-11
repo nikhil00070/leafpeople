@@ -3302,7 +3302,7 @@
     "date": "2026-09-11",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Keep a velvet alive",
     "image": "/images/plants/profiles/begonia-caravan.jpg",
     "caption": "Want to actually keep a velvet anthurium alive? Our guide covers light, humidity, substrate and the mistakes that kill them. Link in bio.",
@@ -3322,7 +3322,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d71.jpg"
+    "img_ready": "/images/ig_ready/d71.jpg",
+    "posted_at": "2026-09-11",
+    "ig_media_id": "18214597354354782"
   },
   {
     "id": "d72",
