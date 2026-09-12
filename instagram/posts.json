@@ -3332,7 +3332,7 @@
     "date": "2026-09-12",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Begonia paulensis",
     "image": "/images/plants/profiles/begonia-paulensis.jpg",
     "caption": "Seersucker leaves \u2014 heavily puckered, glossy, ruffle-edged. A Brazilian begonia grown entirely for texture. One touch and you're hooked.",
@@ -3359,7 +3359,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d72.jpg",
-    "video": "/videos/instagram/d72.mp4"
+    "video": "/videos/instagram/d72.mp4",
+    "posted_at": "2026-09-12",
+    "ig_media_id": "18106620137609491"
   },
   {
     "id": "d73",
