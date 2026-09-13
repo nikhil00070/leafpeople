@@ -3369,7 +3369,7 @@
     "date": "2026-09-13",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera pinnatipartita",
     "image": "/images/plants/profiles/monstera-pinnatipartita.jpg",
     "caption": "The climber that splits. Solid juvenile leaves tear into deep pinnate fingers once it catches a pole. Patience isn't a bug \u2014 it's the show.",
@@ -3394,7 +3394,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d73.jpg"
+    "img_ready": "/images/ig_ready/d73.jpg",
+    "posted_at": "2026-09-13",
+    "ig_media_id": "17965342443195503"
   },
   {
     "id": "d74",
