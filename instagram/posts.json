@@ -3404,7 +3404,7 @@
     "date": "2026-09-14",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "Your jungle wall",
     "image": "/images/plants/profiles/philodendron-heartleaf.jpg",
     "caption": "Show us your plant wall \ud83c\udf3f The greener and messier the better. Tag @leafpeople.app \u2014 we reshare favorites every week.",
@@ -3426,7 +3426,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d74.jpg",
-    "video": "/videos/instagram/d74.mp4"
+    "video": "/videos/instagram/d74.mp4",
+    "posted_at": "2026-09-14",
+    "ig_media_id": "17905227552332232"
   },
   {
     "id": "d75",
