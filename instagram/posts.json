@@ -3436,7 +3436,7 @@
     "date": "2026-09-15",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Philodendron 'Jose Buono'",
     "image": "/images/plants/profiles/philodendron-jose-buono.png",
     "caption": "Big paddles, bold cream splashes \u2014 and refreshingly stable. Jose Buono is the variegated philodendron that won't betray you by reverting to green.",
@@ -3461,7 +3461,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d75.jpg"
+    "img_ready": "/images/ig_ready/d75.jpg",
+    "posted_at": "2026-09-15",
+    "ig_media_id": "18075378311418927"
   },
   {
     "id": "d76",
