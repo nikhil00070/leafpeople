@@ -3471,7 +3471,7 @@
     "date": "2026-09-16",
     "phase": "concept",
     "branch": "app-collect",
-    "status": "draft",
+    "status": "posted",
     "title": "Catalogue it all",
     "image": "/images/instagram/anthurium-dark-mama.jpg",
     "caption": "Twenty plants? Two hundred? Leaf People keeps every one \u2014 what it is, how to care for it, when you last watered. Your whole jungle, in your pocket.",
@@ -3493,7 +3493,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d76.jpg",
-    "video": "/videos/instagram/d76.mp4"
+    "video": "/videos/instagram/d76.mp4",
+    "posted_at": "2026-09-16",
+    "ig_media_id": "18171387322456640"
   },
   {
     "id": "d77",
