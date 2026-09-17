@@ -3503,7 +3503,7 @@
     "date": "2026-09-17",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Begonia listada",
     "image": "/images/plants/profiles/begonia-listada.jpg",
     "caption": "One bright stripe down deep green velvet. Begonia listada keeps it simple \u2014 herringbone texture, a chartreuse chevron, quiet confidence.",
@@ -3528,7 +3528,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d77.jpg"
+    "img_ready": "/images/ig_ready/d77.jpg",
+    "posted_at": "2026-09-17",
+    "ig_media_id": "18153173014517196"
   },
   {
     "id": "d78",
