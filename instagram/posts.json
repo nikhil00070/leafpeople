@@ -3538,7 +3538,7 @@
     "date": "2026-09-18",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Burle Marx Flame",
     "image": "/images/plants/profiles/monstera-burle-marx-flame.jpg",
     "caption": "Fenestration like fire. The flame-shaped windows set this one apart \u2014 named, like so much great planting, for Roberto Burle Marx.",
@@ -3565,7 +3565,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d78.jpg",
-    "video": "/videos/instagram/d78.mp4"
+    "video": "/videos/instagram/d78.mp4",
+    "posted_at": "2026-09-18",
+    "ig_media_id": "18124493215897256"
   },
   {
     "id": "d79",
