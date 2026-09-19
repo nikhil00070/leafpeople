@@ -3575,7 +3575,7 @@
     "date": "2026-09-19",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "Why a leaf costs a car",
     "image": "/images/plants/profiles/philodendron-green-congo-nuclear.jpg",
     "caption": "Scarcity, slow growth, and a wall of demand. How a single leaf ends up worth more than a used car \u2014 the full breakdown, link in bio.",
@@ -3595,7 +3595,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d79.jpg"
+    "img_ready": "/images/ig_ready/d79.jpg",
+    "posted_at": "2026-09-19",
+    "ig_media_id": "18105519167247673"
   },
   {
     "id": "d80",
