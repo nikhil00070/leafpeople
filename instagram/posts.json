@@ -3605,7 +3605,7 @@
     "date": "2026-09-20",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Strawberry Shake",
     "image": "/images/plants/profiles/philodendron-strawberry-shake.jpg",
     "caption": "Pink, cream and green confetti on every new leaf. Strawberry Shake sells itself on the flush \u2014 then settles. Chasing the perfect leaf is the game.",
@@ -3632,7 +3632,9 @@
     },
     "reel": true,
     "img_ready": "/images/ig_ready/d80.jpg",
-    "video": "/videos/instagram/d80.mp4"
+    "video": "/videos/instagram/d80.mp4",
+    "posted_at": "2026-09-20",
+    "ig_media_id": "17965557222188328"
   },
   {
     "id": "d81",
