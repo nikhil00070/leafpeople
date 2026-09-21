@@ -3642,7 +3642,7 @@
     "date": "2026-09-21",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "Unboxing day",
     "image": "/images/source/stock/when-same-plant-three-prices-hero.jpg",
     "caption": "Nothing beats unboxing day \u2014 bubble wrap, a heat pack, and a leaf you've wanted for a year. Best box you ever opened? \ud83d\udce6\ud83c\udf3f",
@@ -3667,7 +3667,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d81.jpg"
+    "img_ready": "/images/ig_ready/d81.jpg",
+    "posted_at": "2026-09-21",
+    "ig_media_id": "18625943158003779"
   },
   {
     "id": "d82",
