@@ -3677,7 +3677,7 @@
     "date": "2026-09-22",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Hoya 'Hindu Rope'",
     "image": "/images/plants/profiles/hoya-hindu-rope.jpg",
     "caption": "The curled classic your grandmother grew. A mutation twists every leaf into a contorted rope \u2014 proof a 'common' plant can still be deeply strange.",
@@ -3702,7 +3702,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d82.jpg"
+    "img_ready": "/images/ig_ready/d82.jpg",
+    "posted_at": "2026-09-22",
+    "ig_media_id": "18056662781581253"
   },
   {
     "id": "d83",
