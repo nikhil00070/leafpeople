@@ -3712,7 +3712,7 @@
     "date": "2026-09-23",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Philodendron 'Florida Ghost'",
     "image": "/images/plants/profiles/philodendron-florida-ghost.jpg",
     "caption": "Ghost leaves. New growth emerges spectral white and ages to deep green \u2014 a living before-and-after on one plant. Half the fun is the wait.",
@@ -3737,7 +3737,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d83.jpg"
+    "img_ready": "/images/ig_ready/d83.jpg",
+    "posted_at": "2026-09-23",
+    "ig_media_id": "17882838657652508"
   },
   {
     "id": "d84",
