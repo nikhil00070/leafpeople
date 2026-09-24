@@ -3747,7 +3747,7 @@
     "date": "2026-09-24",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "A story for every plant",
     "image": "/images/instagram/begonia-rex-escargot.jpg",
     "caption": "We're publishing a story for all 68 plants in the app \u2014 origins, lore, the hunt. Open Leaf People to a fresh one every day. \ud83c\udf3f",
@@ -3767,7 +3767,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d84.jpg"
+    "img_ready": "/images/ig_ready/d84.jpg",
+    "posted_at": "2026-09-24",
+    "ig_media_id": "18089589890205700"
   },
   {
     "id": "d85",
