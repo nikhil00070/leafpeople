@@ -3777,7 +3777,7 @@
     "date": "2026-09-25",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Philodendron billietiae",
     "image": "/images/plants/profiles/philodendron-billietiae.png",
     "caption": "Tangerine petioles, strap leaves, and a variegated form that broke the bank. The orange-stemmed climber that made everyone fall for petioles.",
@@ -3802,7 +3802,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d85.jpg"
+    "img_ready": "/images/ig_ready/d85.jpg",
+    "posted_at": "2026-09-25",
+    "ig_media_id": "17935679733125967"
   },
   {
     "id": "d86",
