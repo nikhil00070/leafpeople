@@ -3812,7 +3812,7 @@
     "date": "2026-09-26",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Hoya linearis",
     "image": "/images/plants/profiles/hoya-linearis.jpg",
     "caption": "A waterfall of soft green needles. Linearis grows like hair off a Himalayan cliff \u2014 and hates exactly what most hoyas love. Cool, bright, a little spoiled.",
@@ -3837,7 +3837,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d86.jpg"
+    "img_ready": "/images/ig_ready/d86.jpg",
+    "posted_at": "2026-09-26",
+    "ig_media_id": "18129117580819395"
   },
   {
     "id": "d87",
