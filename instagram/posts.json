@@ -3847,7 +3847,7 @@
     "date": "2026-09-27",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "Name your grail",
     "image": "/images/plants/profiles/hoya-kerrii.jpg",
     "caption": "Quick: the one plant you'd sell a kidney for. No wrong answers \ud83d\udc47 \u2014 we're building the ultimate Leaf People wishlist.",
@@ -3867,7 +3867,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d87.jpg"
+    "img_ready": "/images/ig_ready/d87.jpg",
+    "posted_at": "2026-09-27",
+    "ig_media_id": "17963849138982797"
   },
   {
     "id": "d88",
