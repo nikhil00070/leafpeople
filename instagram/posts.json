@@ -3877,7 +3877,7 @@
     "date": "2026-09-28",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Hoya obovata",
     "image": "/images/plants/profiles/hoya-obovata.jpg",
     "caption": "Round, silver-splashed, forgiving \u2014 obovata flowers like clockwork and turns houseplant people into hoya people. The friendliest gateway in the genus.",
@@ -3902,7 +3902,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d88.jpg"
+    "img_ready": "/images/ig_ready/d88.jpg",
+    "posted_at": "2026-09-28",
+    "ig_media_id": "18131494669801101"
   },
   {
     "id": "d89",
