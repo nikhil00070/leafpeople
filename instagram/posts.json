@@ -3912,7 +3912,7 @@
     "date": "2026-09-29",
     "phase": "showcase",
     "branch": "velvet-anthurium",
-    "status": "draft",
+    "status": "posted",
     "title": "Anthurium cupulispathum",
     "image": "/images/plants/profiles/anthurium-cupulispathum.jpeg",
     "caption": "Deep-cut rarity. The cup-spathe anthurium you only meet far down the rabbit hole \u2014 the kind nobody at the party will recognize. That's the appeal.",
@@ -3937,7 +3937,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d89.jpg"
+    "img_ready": "/images/ig_ready/d89.jpg",
+    "posted_at": "2026-09-29",
+    "ig_media_id": "17904389568484455"
   },
   {
     "id": "d90",
