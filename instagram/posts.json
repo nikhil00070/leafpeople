@@ -3947,7 +3947,7 @@
     "date": "2026-09-30",
     "phase": "convert",
     "branch": "app-cta",
-    "status": "draft",
+    "status": "posted",
     "title": "All of it, $0.99",
     "image": "/images/instagram/begonia-venosa.jpg",
     "caption": "Identify, track, learn, trade \u2014 every plant in this feed, and the tools to keep them. One subscription, $0.99/month, 7 days free. Link in bio",
@@ -3967,7 +3967,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d90.jpg"
+    "img_ready": "/images/ig_ready/d90.jpg",
+    "posted_at": "2026-09-30",
+    "ig_media_id": "18150850702547786"
   },
   {
     "id": "d91",
