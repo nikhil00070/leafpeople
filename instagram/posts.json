@@ -3977,7 +3977,7 @@
     "date": "2026-10-01",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Five Philodendrons Worth Starting With",
     "image": "/images/source/stock/philodendron-beginners-hero.jpg",
     "caption": "These five species will teach you how philodendrons think before you spend serious money on the ones that punish mistakes.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4002,7 +4002,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d91.jpg"
+    "img_ready": "/images/ig_ready/d91.jpg",
+    "posted_at": "2026-10-01",
+    "ig_media_id": "18118934140950042"
   },
   {
     "id": "d92",
