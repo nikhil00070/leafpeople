@@ -4012,7 +4012,7 @@
     "date": "2026-10-02",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "The Anthurium Boom and the Cooling After",
     "image": "/images/source/stock/anthurium-price-history-body.jpg",
     "caption": "For three feverish years, velvet-leaved anthuriums behaved like a speculative asset \u2014 then the leaf market remembered it was a leaf market.\n\nThe economics, in full \u2014 link in bio.",
@@ -4037,7 +4037,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d92.jpg"
+    "img_ready": "/images/ig_ready/d92.jpg",
+    "posted_at": "2026-10-02",
+    "ig_media_id": "18143675182579124"
   },
   {
     "id": "d93",
