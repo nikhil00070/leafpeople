@@ -4047,7 +4047,7 @@
     "date": "2026-10-03",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Golden Hours: The Case for Hoya australis 'Lisa'",
     "image": "/images/source/inat/hoya-australis-lisa-hero.jpg",
     "caption": "The variegated australis grows faster than almost anything in the genus and looks better doing it \u2014 so why do collectors treat it like a consolation prize?\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4072,7 +4072,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d93.jpg"
+    "img_ready": "/images/ig_ready/d93.jpg",
+    "posted_at": "2026-10-03",
+    "ig_media_id": "18105841619192919"
   },
   {
     "id": "d94",
