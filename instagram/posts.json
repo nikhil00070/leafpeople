@@ -4082,7 +4082,7 @@
     "date": "2026-10-04",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "The Quiet After the Chase",
     "image": "/images/source/inat/collector-burnout-hero.jpg",
     "caption": "What happens to a collector after the want list is finished, the grow tent is full, and the camera roll has stopped feeling urgent.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -4107,7 +4107,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d94.jpg"
+    "img_ready": "/images/ig_ready/d94.jpg",
+    "posted_at": "2026-10-04",
+    "ig_media_id": "18501487798098839"
   },
   {
     "id": "d95",
