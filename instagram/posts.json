@@ -4117,7 +4117,7 @@
     "date": "2026-10-05",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Gavel and the Whisper",
     "image": "/images/source/inat/auctions-versus-dm-sales-hero.jpg",
     "caption": "Two ways to buy a rare aroid, two completely different theories of what a plant is worth.\n\nThe economics, in full \u2014 link in bio.",
@@ -4137,7 +4137,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d95.jpg"
+    "img_ready": "/images/ig_ready/d95.jpg",
+    "posted_at": "2026-10-05",
+    "ig_media_id": "17909685576302773"
   },
   {
     "id": "d96",
