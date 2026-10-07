@@ -4182,7 +4182,7 @@
     "date": "2026-10-07",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Spadix, Spathe, and Peduncle: Inside an Aroid Bloom",
     "image": "/images/source/stock/anatomy-of-an-aroid-inflorescence-hero.jpg",
     "caption": "An aroid flower is not a flower. It is a machine for trapping beetles, and learning to work it is mostly a matter of staying up late.\n\nThe complete how-to \u2014 link in bio.",
@@ -4202,7 +4202,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d97.jpg"
+    "img_ready": "/images/ig_ready/d97.jpg",
+    "posted_at": "2026-10-07",
+    "ig_media_id": "18091132325666159"
   },
   {
     "id": "d98",
