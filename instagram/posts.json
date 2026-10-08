@@ -4212,7 +4212,7 @@
     "date": "2026-10-08",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Out of Vietnam",
     "image": "/images/source/stock/begonia-dinhdui-body.jpg",
     "caption": "In the karst forests of northern Vietnam, botanists keep finding begonias that stop you cold \u2014 and collectors are finally paying attention.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4237,7 +4237,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d98.jpg"
+    "img_ready": "/images/ig_ready/d98.jpg",
+    "posted_at": "2026-10-08",
+    "ig_media_id": "18008134998001187"
   },
   {
     "id": "d99",
