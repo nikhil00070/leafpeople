@@ -4247,7 +4247,7 @@
     "date": "2026-10-09",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "The Anthurium besseae aff. complex \u2014 the long-leaf clade and where it actually came from",
     "image": "/images/source/stock/anthurium-besseae-aff-complex-hero.jpg",
     "caption": "A field guide to the most misunderstood group in modern anthurium collecting, with picks that earn their keep.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4272,7 +4272,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d99.jpg"
+    "img_ready": "/images/ig_ready/d99.jpg",
+    "posted_at": "2026-10-09",
+    "ig_media_id": "18125066221932940"
   },
   {
     "id": "d100",
