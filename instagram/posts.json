@@ -4282,7 +4282,7 @@
     "date": "2026-10-10",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "How to Vet a Seller and a Plant Before You Pay",
     "image": "/images/source/stock/buying-a-rare-plant-without-getting-burned-body.jpg",
     "caption": "Before the wire transfer clears, there are a dozen quiet ways to tell whether the cutting in the photo is the cutting you'll actually receive.\n\nThe economics, in full \u2014 link in bio.",
@@ -4307,7 +4307,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d100.jpg"
+    "img_ready": "/images/ig_ready/d100.jpg",
+    "posted_at": "2026-10-10",
+    "ig_media_id": "18139221901549854"
   },
   {
     "id": "d101",
