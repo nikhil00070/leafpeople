@@ -4317,7 +4317,7 @@
     "date": "2026-10-11",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "Spider Mites, Corm Dormancy, and How to Keep an Alocasia From Quitting on You",
     "image": "/images/source/stock/alocasia-spider-mites-and-corms-hero.jpg",
     "caption": "The genus that drops leaves like a grudge \u2014 and the handful of species worth that grudge.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4343,7 +4343,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d101.jpg"
+    "img_ready": "/images/ig_ready/d101.jpg",
+    "posted_at": "2026-10-11",
+    "ig_media_id": "17880718731628395"
   },
   {
     "id": "d102",
