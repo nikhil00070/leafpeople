@@ -4353,7 +4353,7 @@
     "date": "2026-10-12",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Cult of the Mother Plant",
     "image": "/images/source/inat/heritage-clones-and-provenance-hero.jpg",
     "caption": "Two Anthurium luxurians sit on the same shelf, in the same mix, under the same light \u2014 and one is worth twice the other. The difference is paperwork.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -4373,7 +4373,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d102.jpg"
+    "img_ready": "/images/ig_ready/d102.jpg",
+    "posted_at": "2026-10-12",
+    "ig_media_id": "18447000658121146"
   },
   {
     "id": "d103",
