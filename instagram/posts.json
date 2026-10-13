@@ -4383,7 +4383,7 @@
     "date": "2026-10-13",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "Why Calatheas and Goeppertias Crash",
     "image": "/images/source/stock/calathea-survival-guide-hero.jpg",
     "caption": "Most prayer plants don't die of neglect \u2014 they die of tap water, dry air, and the wrong substrate, in roughly that order.\n\nThe complete how-to \u2014 link in bio.",
@@ -4403,7 +4403,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d103.jpg"
+    "img_ready": "/images/ig_ready/d103.jpg",
+    "posted_at": "2026-10-13",
+    "ig_media_id": "18099455921542337"
   },
   {
     "id": "d104",
