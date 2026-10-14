@@ -4413,7 +4413,7 @@
     "date": "2026-10-14",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "The Marxii Problem: Variegation, Restraint, and a Legend's Legacy",
     "image": "/images/instagram/philodendron-burle-marx-variegata.jpg",
     "caption": "The variegated form of Philodendron 'Burle Marx' is not the loudest plant in the room \u2014 and that's exactly why it matters.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4438,7 +4438,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d104.jpg"
+    "img_ready": "/images/ig_ready/d104.jpg",
+    "posted_at": "2026-10-14",
+    "ig_media_id": "18594295771069691"
   },
   {
     "id": "d105",
