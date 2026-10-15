@@ -4448,7 +4448,7 @@
     "date": "2026-10-15",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Paper Trail",
     "image": "/images/source/stock/customs-phyto-certs-paperwork-hero.jpg",
     "caption": "Every imported plant carries a folder thicker than its rootball \u2014 and the collectors who learn to read it stop losing shipments.\n\nThe economics, in full \u2014 link in bio.",
@@ -4468,7 +4468,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d105.jpg"
+    "img_ready": "/images/ig_ready/d105.jpg",
+    "posted_at": "2026-10-15",
+    "ig_media_id": "18130525697499729"
   },
   {
     "id": "d106",
