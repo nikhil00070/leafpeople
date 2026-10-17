@@ -4513,7 +4513,7 @@
     "date": "2026-10-17",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Amorphophallus at Home: Growing the Bloom Giants Without Losing the Corm",
     "image": "/images/source/stock/amorphophallus-bloom-giants-hero.jpg",
     "caption": "The carrion lilies are easier than their reputation suggests \u2014 until the leaf collapses and you have to keep a sleeping corm alive in the dark.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4538,7 +4538,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d107.jpg"
+    "img_ready": "/images/ig_ready/d107.jpg",
+    "posted_at": "2026-10-17",
+    "ig_media_id": "17969641407186849"
   },
   {
     "id": "d108",
