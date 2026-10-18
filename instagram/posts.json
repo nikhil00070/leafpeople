@@ -4548,7 +4548,7 @@
     "date": "2026-10-18",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "The Shadow Market on Rare-Plant Instagram",
     "image": "/images/source/stock/how-rare-plant-instagram-works-as-a-market-hero.jpg",
     "caption": "The serious money in rare aroids moves through stories and DMs, on a price ladder no spreadsheet will ever publish.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -4573,7 +4573,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d108.jpg"
+    "img_ready": "/images/ig_ready/d108.jpg",
+    "posted_at": "2026-10-18",
+    "ig_media_id": "18110014898216092"
   },
   {
     "id": "d109",
