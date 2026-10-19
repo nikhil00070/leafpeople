@@ -4583,7 +4583,7 @@
     "date": "2026-10-19",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Reading an Aroid's Age: Cataphylls, Juvenile Foliage and the Long Climb to Maturity",
     "image": "/images/source/stock/cataphylls-and-maturity-hero.jpg",
     "caption": "A field reader's guide to cataphylls, juvenile leaves and the slow tells of an aroid coming of age.\n\nThe complete how-to \u2014 link in bio.",
@@ -4603,7 +4603,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d109.jpg"
+    "img_ready": "/images/ig_ready/d109.jpg",
+    "posted_at": "2026-10-19",
+    "ig_media_id": "18152984563554767"
   },
   {
     "id": "d110",
