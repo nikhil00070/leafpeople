@@ -4613,7 +4613,7 @@
     "date": "2026-10-20",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Hairy-Leaf Begonias: The Trichome Specialists",
     "image": "/images/source/stock/begonia-hairy-leaf-types-hero.jpg",
     "caption": "The fuzzy ones break the usual begonia rules \u2014 here's how to read their leaves and keep them in good condition.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4638,7 +4638,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d110.jpg"
+    "img_ready": "/images/ig_ready/d110.jpg",
+    "posted_at": "2026-10-20",
+    "ig_media_id": "17996964569833752"
   },
   {
     "id": "d111",
