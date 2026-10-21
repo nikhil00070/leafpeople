@@ -4648,7 +4648,7 @@
     "date": "2026-10-21",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Reading the Code: A Field Linguist's Guide to Aroid Listings",
     "image": "/images/source/stock/decoding-listing-abbreviations-hero.jpg",
     "caption": "The shorthand on a Sunday-night drop post is half pedigree, half dialect \u2014 and learning to parse it changes what you're willing to pay.\n\nThe economics, in full \u2014 link in bio.",
@@ -4673,7 +4673,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d111.jpg"
+    "img_ready": "/images/ig_ready/d111.jpg",
+    "posted_at": "2026-10-21",
+    "ig_media_id": "17947150227355885"
   },
   {
     "id": "d112",
