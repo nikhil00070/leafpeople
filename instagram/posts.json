@@ -4683,7 +4683,7 @@
     "date": "2026-10-22",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Beginner-Friendly Hoyas That Still Impress",
     "image": "/images/source/stock/hoya-for-beginners-hero.jpg",
     "caption": "Forgiving vines that still earn their place on a serious shelf \u2014 splash, sheen, wax, and bloom.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4708,7 +4708,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d112.jpg"
+    "img_ready": "/images/ig_ready/d112.jpg",
+    "posted_at": "2026-10-22",
+    "ig_media_id": "18040879493838803"
   },
   {
     "id": "d113",
