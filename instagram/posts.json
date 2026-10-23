@@ -4718,7 +4718,7 @@
     "date": "2026-10-23",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Amydrium medium and silver: climbing for fenestrations",
     "image": "/images/source/stock/amydrium-medium-care-hero.jpg",
     "caption": "The quiet Southeast Asian shingler that refuses to mature unless you give it something real to climb.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4743,7 +4743,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d113.jpg"
+    "img_ready": "/images/ig_ready/d113.jpg",
+    "posted_at": "2026-10-23",
+    "ig_media_id": "18015528980755525"
   },
   {
     "id": "d114",
