@@ -4753,7 +4753,7 @@
     "date": "2026-10-24",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "After the Gold Rush",
     "image": "/images/source/inat/instagram-after-the-fomo-hero.jpg",
     "caption": "The rare aroid bubble cooled, the resellers cashed out, and the collectors who actually liked the plants are still potting up warocqueanum on a Tuesday night.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -4773,7 +4773,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d114.jpg"
+    "img_ready": "/images/ig_ready/d114.jpg",
+    "posted_at": "2026-10-24",
+    "ig_media_id": "18181638943427668"
   },
   {
     "id": "d115",
