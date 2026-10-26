@@ -4813,7 +4813,7 @@
     "date": "2026-10-26",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "The Giant of Panama",
     "image": "/images/source/stock/philodendron-gigas-body.jpg",
     "caption": "A velvet leaf that opens copper and darkens toward obsidian \u2014 and what giving it space to become itself actually requires.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4838,7 +4838,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d116.jpg"
+    "img_ready": "/images/ig_ready/d116.jpg",
+    "posted_at": "2026-10-26",
+    "ig_media_id": "17979170139152133"
   },
   {
     "id": "d117",
