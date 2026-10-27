@@ -4848,7 +4848,7 @@
     "date": "2026-10-27",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Paper Forest",
     "image": "/images/source/inat/export-licenses-what-they-protect-hero.jpg",
     "caption": "Every rare aroid that crosses a border carries a stack of paper almost as fragile as its roots \u2014 and the protection it offers is narrower than most collectors think.\n\nThe economics, in full \u2014 link in bio.",
@@ -4868,7 +4868,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d117.jpg"
+    "img_ready": "/images/ig_ready/d117.jpg",
+    "posted_at": "2026-10-27",
+    "ig_media_id": "18634418620030258"
   },
   {
     "id": "d118",
