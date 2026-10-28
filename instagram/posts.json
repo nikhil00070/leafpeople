@@ -4878,7 +4878,7 @@
     "date": "2026-10-28",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "Caladium Dormancy and the Wake-Up Window",
     "image": "/images/source/stock/caladium-dormancy-window-hero.jpg",
     "caption": "Read the tuber, time the wake-up, and you can pull two flushes of painted leaves from a single season.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4904,7 +4904,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d118.jpg"
+    "img_ready": "/images/ig_ready/d118.jpg",
+    "posted_at": "2026-10-28",
+    "ig_media_id": "18125518213898436"
   },
   {
     "id": "d119",
