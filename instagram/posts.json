@@ -4914,7 +4914,7 @@
     "date": "2026-10-29",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "What You Learn About a Grower Only by Standing in Their Greenhouse",
     "image": "/images/source/inat/meeting-the-grower-in-person-hero.jpg",
     "caption": "A year of DMs cannot teach you what ten minutes under the shade cloth will.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -4934,7 +4934,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d119.jpg"
+    "img_ready": "/images/ig_ready/d119.jpg",
+    "posted_at": "2026-10-29",
+    "ig_media_id": "18390942904231431"
   },
   {
     "id": "d120",
