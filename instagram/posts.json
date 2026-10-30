@@ -4944,7 +4944,7 @@
     "date": "2026-10-30",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Monstera deliciosa albo-borsigiana: Top Cuts vs. Flips",
     "image": "/images/source/stock/monstera-deliciosa-albo-hero.jpg",
     "caption": "What separates a $400 keeper from a $400 mistake comes down to nodes, sectoring, and the mother plant behind the cut.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -4969,7 +4969,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d120.jpg"
+    "img_ready": "/images/ig_ready/d120.jpg",
+    "posted_at": "2026-10-30",
+    "ig_media_id": "17979912888131032"
   },
   {
     "id": "d121",
