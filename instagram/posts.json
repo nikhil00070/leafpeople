@@ -4979,7 +4979,7 @@
     "date": "2026-10-31",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Feeding a Plant That Gives You Two Leaves a Year",
     "image": "/images/source/inat/fertilizer-for-slow-growers-hero.jpg",
     "caption": "How to fertilize the collector species that grow on geological time without burning the roots you've waited eighteen months to see.\n\nThe complete how-to \u2014 link in bio.",
@@ -4999,7 +4999,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d121.jpg"
+    "img_ready": "/images/ig_ready/d121.jpg",
+    "posted_at": "2026-10-31",
+    "ig_media_id": "18134424538732237"
   },
   {
     "id": "d122",
