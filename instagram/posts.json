@@ -5009,7 +5009,7 @@
     "date": "2026-11-01",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Begonia luxurians \u2014 the palm-leaf Begonia for aroid-style collectors",
     "image": "/images/source/stock/begonia-luxurians-palm-leaf-hero.jpg",
     "caption": "The palm-leaf Begonia behaves like a cane-stemmed houseguest from the Atlantic Forest, and it slots neatly between your Philodendron shelves.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5034,7 +5034,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d122.jpg"
+    "img_ready": "/images/ig_ready/d122.jpg",
+    "posted_at": "2026-11-01",
+    "ig_media_id": "18133469878826611"
   },
   {
     "id": "d123",
