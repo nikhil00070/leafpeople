@@ -5044,7 +5044,7 @@
     "date": "2026-11-02",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "The Crawler",
     "image": "/images/source/inat/philodendron-gloriosum-hero.jpg",
     "caption": "A velvet heart with white veins that refuses to climb, and the planting mistake almost everyone makes.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5069,7 +5069,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d123.jpg"
+    "img_ready": "/images/ig_ready/d123.jpg",
+    "posted_at": "2026-11-02",
+    "ig_media_id": "17991000063074270"
   },
   {
     "id": "d124",
