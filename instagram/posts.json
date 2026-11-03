@@ -5079,7 +5079,7 @@
     "date": "2026-11-03",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "F1, F2 and Selfing: What Hybrid Generation Labels Really Mean for What You're Buying",
     "image": "/images/source/stock/filial-generations-explained-hero.jpg",
     "caption": "Three letters on a listing carry a surprising amount of weight \u2014 and a fair amount of fog.\n\nThe economics, in full \u2014 link in bio.",
@@ -5104,7 +5104,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d124.jpg"
+    "img_ready": "/images/ig_ready/d124.jpg",
+    "posted_at": "2026-11-03",
+    "ig_media_id": "18128705293850447"
   },
   {
     "id": "d125",
