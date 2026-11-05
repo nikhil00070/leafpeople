@@ -5149,7 +5149,7 @@
     "date": "2026-11-05",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Epipremnum pinnatum and the fenestration timeline",
     "image": "/images/source/stock/epipremnum-fenestration-timeline-hero.jpg",
     "caption": "The leaves don't split because the plant is old. They split because it finally believes it's climbing a tree.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5174,7 +5174,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d126.jpg"
+    "img_ready": "/images/ig_ready/d126.jpg",
+    "posted_at": "2026-11-05",
+    "ig_media_id": "18340890289272206"
   },
   {
     "id": "d127",
