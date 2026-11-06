@@ -5184,7 +5184,7 @@
     "date": "2026-11-06",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "Geogenanthus ciliatus and the pewter-plant velvet \u2014 a humidity-loving understory perennial that earns the bell jar",
     "image": "/images/source/stock/geogenanthus-pewter-plant-hero.jpg",
     "caption": "A small genus of slow, broad-leafed Commelinaceae from the Amazon basin that reward patient growers with iridescent, pewter-and-aubergine foliage.\n\nThe complete how-to \u2014 link in bio.",
@@ -5204,7 +5204,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d127.jpg"
+    "img_ready": "/images/ig_ready/d127.jpg",
+    "posted_at": "2026-11-06",
+    "ig_media_id": "18078862733569959"
   },
   {
     "id": "d128",
