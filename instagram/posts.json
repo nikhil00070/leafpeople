@@ -5214,7 +5214,7 @@
     "date": "2026-11-07",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "What to Look For Before You Wire Money on a Cutting",
     "image": "/images/source/stock/inspecting-a-stem-cut-hero.jpg",
     "caption": "The photo a seller sends you contains nearly everything you need to decide \u2014 if you know how to read it.\n\nThe economics, in full \u2014 link in bio.",
@@ -5234,7 +5234,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d128.jpg"
+    "img_ready": "/images/ig_ready/d128.jpg",
+    "posted_at": "2026-11-07",
+    "ig_media_id": "18091780955251897"
   },
   {
     "id": "d129",
