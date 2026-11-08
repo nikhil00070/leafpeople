@@ -5244,7 +5244,7 @@
     "date": "2026-11-08",
     "phase": "showcase",
     "branch": "leaf-texture",
-    "status": "draft",
+    "status": "posted",
     "title": "Homalomena: the under-collected aroid genus",
     "image": "/images/source/stock/homalomena-under-collected-hero.jpg",
     "caption": "While the market chases velvet Philodendron, a quieter genus of forest-floor aroids hides anise-scented leaves, gunmetal patterns, and real botanical history.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5269,7 +5269,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d129.jpg"
+    "img_ready": "/images/ig_ready/d129.jpg",
+    "posted_at": "2026-11-08",
+    "ig_media_id": "18415089133093805"
   },
   {
     "id": "d130",
