@@ -5307,7 +5307,7 @@
     "date": "2026-11-10",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Cabinets, Tents, and the Rig in Between",
     "image": "/images/source/stock/humidity-cabinets-versus-tents-hero.jpg",
     "caption": "Two enclosures, two philosophies, and the quietly obvious hybrid most velvet growers eventually build by accident.\n\nThe complete how-to \u2014 link in bio.",
@@ -5327,7 +5327,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d131.jpg"
+    "img_ready": "/images/ig_ready/d131.jpg",
+    "posted_at": "2026-11-10",
+    "ig_media_id": "18111798859900572"
   },
   {
     "id": "d132",
