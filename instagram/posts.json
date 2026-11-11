@@ -5337,7 +5337,7 @@
     "date": "2026-11-11",
     "phase": "showcase",
     "branch": "rarity-value",
-    "status": "draft",
+    "status": "posted",
     "title": "Pricing a Plant Nobody Else Has",
     "image": "/images/source/stock/pricing-a-plant-nobody-else-has-hero.jpg",
     "caption": "When the comp set is empty, the price isn't discovered \u2014 it's built, slowly, from provenance, scarcity, and the patience of one right buyer.\n\nThe economics, in full \u2014 link in bio.",
@@ -5362,7 +5362,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d132.jpg"
+    "img_ready": "/images/ig_ready/d132.jpg",
+    "posted_at": "2026-11-11",
+    "ig_media_id": "18648977995012657"
   },
   {
     "id": "d133",
