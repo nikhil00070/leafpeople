@@ -5408,7 +5408,7 @@
     "date": "2026-11-13",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Plants I Almost Bought",
     "image": "/images/source/stock/plants-i-almost-bought-hero.jpg",
     "caption": "A confession about the rare aroids I came within minutes of wiring money for, and the quiet voice that stopped me each time.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -5428,7 +5428,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d134.jpg"
+    "img_ready": "/images/ig_ready/d134.jpg",
+    "posted_at": "2026-11-13",
+    "ig_media_id": "18337051570302807"
   },
   {
     "id": "d135",
