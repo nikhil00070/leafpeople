@@ -5438,7 +5438,7 @@
     "date": "2026-11-14",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "Reading the Velvet",
     "image": "/images/source/stock/light-for-velvet-aroids-body.jpg",
     "caption": "Matte-leaf aroids don't shout when the light is wrong \u2014 they whisper, in petiole angles and pigment shifts, and you have to learn to listen.\n\nThe complete how-to \u2014 link in bio.",
@@ -5458,7 +5458,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d135.jpg"
+    "img_ready": "/images/ig_ready/d135.jpg",
+    "posted_at": "2026-11-14",
+    "ig_media_id": "18648256699009126"
   },
   {
     "id": "d136",
