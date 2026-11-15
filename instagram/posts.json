@@ -5468,7 +5468,7 @@
     "date": "2026-11-15",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Long Way Home: Buying Rare Aroids from Southeast Asia",
     "image": "/images/source/stock/sourcing-from-southeast-asia-hero.jpg",
     "caption": "Inside the slow, careful, paperwork-heavy economy that moves velvet philodendrons and ghost anthuriums across the Pacific.\n\nThe economics, in full \u2014 link in bio.",
@@ -5488,7 +5488,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d136.jpg"
+    "img_ready": "/images/ig_ready/d136.jpg",
+    "posted_at": "2026-11-15",
+    "ig_media_id": "18131096350865475"
   },
   {
     "id": "d137",
