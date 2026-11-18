@@ -5566,7 +5566,7 @@
     "date": "2026-11-18",
     "phase": "showcase",
     "branch": "collector-culture",
-    "status": "draft",
+    "status": "posted",
     "title": "The Quiet Vocabulary of the Rare Plant Room",
     "image": "/images/source/stock/the-collectors-lexicon-hero.jpg",
     "caption": "Thirty terms that separate a working collector from a hobbyist with a wishlist \u2014 and what each one actually means.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -5591,7 +5591,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d139.jpg"
+    "img_ready": "/images/ig_ready/d139.jpg",
+    "posted_at": "2026-11-18",
+    "ig_media_id": "17997977330844068"
   },
   {
     "id": "d140",
