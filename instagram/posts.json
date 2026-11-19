@@ -5601,7 +5601,7 @@
     "date": "2026-11-19",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "Mounting Mature Aroids on Wood",
     "image": "/images/source/stock/mounting-mature-aroids-on-wood-body.jpg",
     "caption": "After six years of failures, breakages, and one cork slab that pulled out of the wall at 3 a.m., a working theory of how to put a heavy aroid on a board.\n\nThe complete how-to \u2014 link in bio.",
@@ -5621,7 +5621,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d140.jpg"
+    "img_ready": "/images/ig_ready/d140.jpg",
+    "posted_at": "2026-11-19",
+    "ig_media_id": "18027320129707071"
   },
   {
     "id": "d141",
