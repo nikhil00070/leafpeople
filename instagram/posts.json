@@ -5666,7 +5666,7 @@
     "date": "2026-11-21",
     "phase": "convert",
     "branch": "community-ugc",
-    "status": "draft",
+    "status": "posted",
     "title": "The Grower I Trust Most, and Why",
     "image": "/images/source/stock/the-grower-i-trust-most-hero.jpg",
     "caption": "Trust in this hobby is built one honest invoice, one careful unboxing, and one returned email at a time.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -5686,7 +5686,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d142.jpg"
+    "img_ready": "/images/ig_ready/d142.jpg",
+    "posted_at": "2026-11-21",
+    "ig_media_id": "18127866037703894"
   },
   {
     "id": "d143",
