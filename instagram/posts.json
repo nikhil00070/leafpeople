@@ -5696,7 +5696,7 @@
     "date": "2026-11-22",
     "phase": "concept",
     "branch": "app-learn",
-    "status": "draft",
+    "status": "posted",
     "title": "The Anatomy of a Cutting",
     "image": "/images/source/stock/node-cuttings-what-survives-hero.jpg",
     "caption": "A node is not a node is not a node \u2014 and the cleanest length of stem on the mother plant is often the worst piece to take.\n\nThe complete how-to \u2014 link in bio.",
@@ -5716,7 +5716,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d143.jpg"
+    "img_ready": "/images/ig_ready/d143.jpg",
+    "posted_at": "2026-11-22",
+    "ig_media_id": "18109826387256788"
   },
   {
     "id": "d144",
