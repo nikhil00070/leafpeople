@@ -5789,7 +5789,7 @@
     "date": "2026-11-25",
     "phase": "welcome",
     "branch": "jungle-escape",
-    "status": "draft",
+    "status": "posted",
     "title": "The Scindapsus pictus family, sorted",
     "image": "/images/source/stock/scindapsus-pictus-family-hero.jpg",
     "caption": "Four silver-flecked climbers that get lumped together, separated by leaf shape, sheen, and how they actually behave in a pot.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5815,7 +5815,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d146.jpg"
+    "img_ready": "/images/ig_ready/d146.jpg",
+    "posted_at": "2026-11-25",
+    "ig_media_id": "17959785243081787"
   },
   {
     "id": "d147",
