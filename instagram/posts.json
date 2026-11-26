@@ -5825,7 +5825,7 @@
     "date": "2026-11-26",
     "phase": "convert",
     "branch": "article-understory",
-    "status": "draft",
+    "status": "posted",
     "title": "The Myth of the Perfect Leaf",
     "image": "/images/source/stock/the-myth-of-the-perfect-leaf-hero.jpg",
     "caption": "Collectors chase unblemished foliage like saints chase relics \u2014 but a flawless leaf is often the least honest thing a plant will ever show you.\n\nThe full story's in bio. \ud83c\udf3f",
@@ -5845,7 +5845,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d147.jpg"
+    "img_ready": "/images/ig_ready/d147.jpg",
+    "posted_at": "2026-11-26",
+    "ig_media_id": "17894104911623362"
   },
   {
     "id": "d148",
