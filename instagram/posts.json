@@ -5855,7 +5855,7 @@
     "date": "2026-11-27",
     "phase": "convert",
     "branch": "article-fieldguide",
-    "status": "draft",
+    "status": "posted",
     "title": "The Petiole Doesn't Lie",
     "image": "/images/source/stock/petiole-tells-the-truth-body.jpg",
     "caption": "The stem between leaf and plant tells you more about species identity, health, and provenance than any seller's label ever will.\n\nThe complete how-to \u2014 link in bio.",
@@ -5875,7 +5875,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d148.jpg"
+    "img_ready": "/images/ig_ready/d148.jpg",
+    "posted_at": "2026-11-27",
+    "ig_media_id": "18139305772733788"
   },
   {
     "id": "d149",
