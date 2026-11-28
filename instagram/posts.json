@@ -5885,7 +5885,7 @@
     "date": "2026-11-28",
     "phase": "showcase",
     "branch": "rainforest-beauty",
-    "status": "draft",
+    "status": "posted",
     "title": "Philodendron mamei: Which Clones Hold the Silver",
     "image": "/images/source/stock/philodendron-mamei-silver-hero.jpg",
     "caption": "The silver isn't a guarantee \u2014 it's a negotiation between clone, light, and humidity, and most growers lose it without knowing why.\n\nFull field guide on Leaf People \u2014 link in bio. \ud83c\udf3f",
@@ -5910,7 +5910,9 @@
       "follows": 0,
       "reach": 0
     },
-    "img_ready": "/images/ig_ready/d149.jpg"
+    "img_ready": "/images/ig_ready/d149.jpg",
+    "posted_at": "2026-11-28",
+    "ig_media_id": "18122296337004894"
   },
   {
     "id": "d150",
